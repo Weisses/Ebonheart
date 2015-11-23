@@ -9,6 +9,7 @@ import net.minecraftforge.fml.common.event.FMLPreInitializationEvent;
 
 import com.ebonheart.EbonArtsMod.init.EbonArtsBlocks;
 import com.ebonheart.EbonArtsMod.init.EbonArtsItems;
+import com.ebonheart.EbonArtsMod.init.EbonArtsRecipes;
 import com.ebonheart.EbonArtsMod.proxy.CommonProxy;
 
 @Mod(modid = Reference.MOD_ID, name = Reference.MOD_NAME, version = Reference.MOD_VERSION)
@@ -34,6 +35,8 @@ public class EbonArtsMod {
 	public void init(FMLInitializationEvent event)
 	{
 		proxy.registerRenders();
+		EbonArtsRecipes.init();
+		
 	}
 	
 	@EventHandler

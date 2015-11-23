@@ -11,6 +11,7 @@ item.ebon_leggings.name=Ebon Leggings
 item.ebon_boots.name=Ebon Boots
 
 tile.mystic_ore.name=Mystic Ore
+tile.mystic_block.name=Mystic Block
 tile.ebon_alter.name=Ebon Alter
 
 itemGroup.tabEbonArts=Ebon Arts

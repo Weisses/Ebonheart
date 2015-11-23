@@ -12,19 +12,20 @@ public class EbonArtsItems {
 
 	public static Item mystic_dust;
 	public static Item ebon_sigil;
+	//public static Item dragons_catalyst;
 	
-	public static Item ebon_pickaxe;
-	public static Item ebon_axe;
-	public static Item ebon_shovel;
-	public static Item ebon_hoe;
-	public static Item ebon_sword;
+	//public static Item ebon_pickaxe;
+	//public static Item ebon_axe;
+	//public static Item ebon_shovel;
+	//public static Item ebon_hoe;
+	//public static Item ebon_sword;
 	
-	public static Item ebon_helmet;
-	public static Item ebon_chestplate;
-	public static Item ebon_leggings;
-	public static Item ebon_boots;
+	//public static Item ebon_helmet;
+	//public static Item ebon_chestplate;
+	//public static Item ebon_leggings;
+	//public static Item ebon_boots;
 	
-	public static Item mans_steak;
+	//public static Item mans_steak;
 	
 	
 	

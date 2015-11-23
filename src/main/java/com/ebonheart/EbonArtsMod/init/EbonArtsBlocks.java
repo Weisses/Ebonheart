@@ -14,12 +14,13 @@ import com.ebonheart.EbonArtsMod.blocks.GeneralModBlocks;
 public class EbonArtsBlocks {
 	
 	public static Block mystic_ore;
+	public static Block mystic_block;
 
 	public static void init()
 	{
 		
 		mystic_ore = new GeneralModBlocks(Material.rock).setUnlocalizedName("mystic_ore").setCreativeTab(EbonArtsMod.tabEbonArts);
-		
+		mystic_block = new GeneralModBlocks(Material.rock).setUnlocalizedName("mystic_block").setCreativeTab(EbonArtsMod.tabEbonArts);
 	
 	}
 	
@@ -28,6 +29,7 @@ public class EbonArtsBlocks {
 	{
 		
 		GameRegistry.registerBlock(mystic_ore, mystic_ore.getUnlocalizedName().substring(5));
+		GameRegistry.registerBlock(mystic_block, mystic_block.getUnlocalizedName().substring(5));
 		
 	}
 	
@@ -35,6 +37,7 @@ public class EbonArtsBlocks {
 	{
 		
 		registerRender(mystic_ore);
+		registerRender(mystic_block);
 	}
 	
 	public static void registerRender(Block block)
