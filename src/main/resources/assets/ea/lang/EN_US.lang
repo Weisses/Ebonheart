@@ -1,0 +1,16 @@
+item.mystic_dust.name=Mystical Dust
+item.ebon_sigil.name=Ebon Sigil
+item.ebon_pickaxe.name=Ebon Pickaxe
+item.ebon_axe.name=Ebon Axe
+item.ebon_shovel.name=Ebon Shovel
+item.ebon_hoe.name=Ebon Hoe
+item.ebon_sword.name=Ebon Sword
+item.ebon_helmet.name=Ebon Helmet
+item.ebon_chestplate.name=Ebon Chestplate
+item.ebon_leggings.name=Ebon Leggings
+item.ebon_boots.name=Ebon Boots
+
+tile.mystic_ore.name=Mystic Ore
+tile.ebon_alter.name=Ebon Alter
+
+itemGroup.tabEbonArts=Ebon Arts
