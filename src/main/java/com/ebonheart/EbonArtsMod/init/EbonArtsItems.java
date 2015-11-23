@@ -11,6 +11,7 @@ import com.ebonheart.EbonArtsMod.Reference;
 public class EbonArtsItems {
 
 	public static Item mystic_dust;
+	public static Item purified_mystic_dust;
 	public static Item ebon_sigil;
 	//public static Item dragons_catalyst;
 	
@@ -32,18 +33,21 @@ public class EbonArtsItems {
 	public static void init()
 	{
 		mystic_dust = new Item().setUnlocalizedName("mystic_dust").setCreativeTab(EbonArtsMod.tabEbonArts);
+		purified_mystic_dust = new Item().setUnlocalizedName("purified_mystic_dust").setCreativeTab(EbonArtsMod.tabEbonArts);
 		ebon_sigil = new Item().setUnlocalizedName("ebon_sigil").setCreativeTab(EbonArtsMod.tabEbonArts);
 	}
 	
 	public static void register()
 	{
 		GameRegistry.registerItem(mystic_dust, mystic_dust.getUnlocalizedName().substring(5));
+		GameRegistry.registerItem(purified_mystic_dust, purified_mystic_dust.getUnlocalizedName().substring(5));
 		GameRegistry.registerItem(ebon_sigil, ebon_sigil.getUnlocalizedName().substring(5));
 	}
 	
 	public static void registerRenders()
 	{
 		registerRender(mystic_dust);
+		registerRender(purified_mystic_dust);
 		registerRender(ebon_sigil);
 	}
 	

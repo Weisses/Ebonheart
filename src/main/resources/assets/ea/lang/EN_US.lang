@@ -1,5 +1,7 @@
-item.mystic_dust.name=Mystical Dust
+item.mystic_dust.name=Mystic Dust
+item.purified_mystic_dust.name=Purified Mystic Dust
 item.ebon_sigil.name=Ebon Sigil
+
 item.ebon_pickaxe.name=Ebon Pickaxe
 item.ebon_axe.name=Ebon Axe
 item.ebon_shovel.name=Ebon Shovel
@@ -12,6 +14,7 @@ item.ebon_boots.name=Ebon Boots
 
 tile.mystic_ore.name=Mystic Ore
 tile.mystic_block.name=Mystic Block
+tile.purified_mystic_block.name=Purified Mystic Block
 tile.ebon_alter.name=Ebon Alter
 
 itemGroup.tabEbonArts=Ebon Arts
