@@ -5,6 +5,7 @@ import net.minecraft.client.resources.model.ModelResourceLocation;
 import net.minecraft.item.Item;
 import net.minecraftforge.fml.common.registry.GameRegistry;
 
+import com.ebonheart.EbonArtsMod.EbonArtsMod;
 import com.ebonheart.EbonArtsMod.Reference;
 
 public class EbonArtsItems {
@@ -29,18 +30,20 @@ public class EbonArtsItems {
 	
 	public static void init()
 	{
-		mystic_dust = new Item().setUnlocalizedName("mystic_dust");
+		mystic_dust = new Item().setUnlocalizedName("mystic_dust").setCreativeTab(EbonArtsMod.tabEbonArts);
+		ebon_sigil = new Item().setUnlocalizedName("ebon_sigil").setCreativeTab(EbonArtsMod.tabEbonArts);
 	}
 	
 	public static void register()
 	{
 		GameRegistry.registerItem(mystic_dust, mystic_dust.getUnlocalizedName().substring(5));
-		
+		GameRegistry.registerItem(ebon_sigil, ebon_sigil.getUnlocalizedName().substring(5));
 	}
 	
 	public static void registerRenders()
 	{
 		registerRender(mystic_dust);
+		registerRender(ebon_sigil);
 	}
 	
 	public static void registerRender(Item item)

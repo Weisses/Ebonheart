@@ -17,6 +17,8 @@ public class EbonArtsMod {
 	@SidedProxy(clientSide = Reference.CLIENT_PROXY_CLASS, serverSide = Reference.SERVER_PROXY_CLASS)
 	public static CommonProxy proxy;
 	
+	public static final EbonArtsTab tabEbonArts = new EbonArtsTab("tabEbonArts");
+	
 	@EventHandler
 	public void preInit(FMLPreInitializationEvent event)
 	{

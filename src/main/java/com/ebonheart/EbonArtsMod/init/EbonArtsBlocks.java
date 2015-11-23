@@ -7,6 +7,7 @@ import net.minecraft.client.resources.model.ModelResourceLocation;
 import net.minecraft.item.Item;
 import net.minecraftforge.fml.common.registry.GameRegistry;
 
+import com.ebonheart.EbonArtsMod.EbonArtsMod;
 import com.ebonheart.EbonArtsMod.Reference;
 import com.ebonheart.EbonArtsMod.blocks.GeneralModBlocks;
 
@@ -17,7 +18,7 @@ public class EbonArtsBlocks {
 	public static void init()
 	{
 		
-		mystic_ore = new GeneralModBlocks(Material.rock).setUnlocalizedName("mystic_ore");
+		mystic_ore = new GeneralModBlocks(Material.rock).setUnlocalizedName("mystic_ore").setCreativeTab(EbonArtsMod.tabEbonArts);
 		
 	
 	}
