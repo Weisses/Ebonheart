@@ -10,5 +10,6 @@ public class ClientProxy extends CommonProxy {
 	{
 		EbonArtsBlocks.registerRenders();
 		EbonArtsItems.registerRenders();
+		
 	}
 }

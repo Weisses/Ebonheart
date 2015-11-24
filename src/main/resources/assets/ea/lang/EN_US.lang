@@ -20,3 +20,6 @@ tile.purified_mystic_block.name=Purified Mystic Block
 tile.ebon_alter.name=Ebon Alter
 
 itemGroup.tabEbonArts=Ebon Arts
+
+achievement.mineMysticDust=I found Mystic Dust!
+achievement.mineMysticDust.desc=Keeping it real.

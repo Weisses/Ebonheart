@@ -7,6 +7,7 @@ import net.minecraftforge.fml.common.event.FMLInitializationEvent;
 import net.minecraftforge.fml.common.event.FMLPostInitializationEvent;
 import net.minecraftforge.fml.common.event.FMLPreInitializationEvent;
 
+import com.ebonheart.EbonArtsMod.init.EbonArtsAchievements;
 import com.ebonheart.EbonArtsMod.init.EbonArtsBlocks;
 import com.ebonheart.EbonArtsMod.init.EbonArtsItems;
 import com.ebonheart.EbonArtsMod.init.EbonArtsRecipes;
@@ -29,6 +30,7 @@ public class EbonArtsMod {
 		EbonArtsItems.register();
 		
 		
+		
 	}
 	
 	@EventHandler
@@ -36,7 +38,7 @@ public class EbonArtsMod {
 	{
 		proxy.registerRenders();
 		EbonArtsRecipes.init();
-		
+		EbonArtsAchievements.init();
 	}
 	
 	@EventHandler

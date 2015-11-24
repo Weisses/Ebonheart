@@ -9,6 +9,7 @@ import net.minecraftforge.fml.common.registry.GameRegistry;
 
 import com.ebonheart.EbonArtsMod.EbonArtsMod;
 import com.ebonheart.EbonArtsMod.Reference;
+import com.ebonheart.EbonArtsMod.blocks.BlockMysticOre;
 import com.ebonheart.EbonArtsMod.blocks.GeneralModBlocks;
 
 public class EbonArtsBlocks {

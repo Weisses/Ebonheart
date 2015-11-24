@@ -11,26 +11,24 @@ import net.minecraft.block.state.IBlockState;
 import net.minecraft.init.Blocks;
 import net.minecraft.init.Items;
 import net.minecraft.item.Item;
+import net.minecraft.util.MathHelper;
 
-public class GeneralModBlocks extends Block{
+public class BlockMysticOre extends Block {
 
-	public GeneralModBlocks(Material materialIn) {
+	public BlockMysticOre(Material materialIn) {
 		super(materialIn);
-		this.setHardness(4.5F);
-
+		
+		
+		
+		
 	}
 	
     public Item getItemDropped(IBlockState state, Random rand, int fortune)
     {
-    	
         return this == EbonArtsBlocks.mystic_ore ? EbonArtsItems.mystic_dust : (this == Blocks.diamond_ore ? Items.diamond : (this == Blocks.lapis_ore ? Items.dye : (this == Blocks.emerald_ore ? Items.emerald : (this == Blocks.quartz_ore ? Items.quartz : Item.getItemFromBlock(this)))));
 
+        //return this == EbonArtsBlocks.mystic_ore ? EbonArtsItems.mystic_dust : (this == Blocks.diamond_ore ? Items.diamond : (this == Blocks.lapis_ore ? Items.dye : (this == Blocks.emerald_ore ? Items.emerald : (this == Blocks.quartz_ore ? Items.quartz : Item.getItemFromBlock(this)))));
         
-    }
-    
-    public int quantityDropped(Random random)
-    {
-        return this == EbonArtsBlocks.mystic_ore ? 1 + random.nextInt(4) : 1;
     }
 
     public int quantityDroppedWithBonus(int fortune, Random random)
@@ -51,4 +49,8 @@ public class GeneralModBlocks extends Block{
             return this.quantityDropped(random);
         }
     }
+    
+    
+    
+
 }
