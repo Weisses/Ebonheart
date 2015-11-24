@@ -12,6 +12,12 @@ public class EbonArtsItems {
 
 	public static Item mystic_dust;
 	public static Item purified_mystic_dust;
+	
+	//public static Item iron_catalyst;
+	//public static Item gold_catalyst;
+	//public static Item diamond_catalyst;
+	//public static Item emerald_catalyst;
+	
 	public static Item ebon_sigil;
 	//public static Item dragons_catalyst;
 	
