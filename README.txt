@@ -57,3 +57,112 @@ https://www.youtube.com/watch?v=8VEdtQLuLO0&feature=youtu.be
 
 For more details update more often refer to the Forge Forums:
 http://www.minecraftforge.net/forum/index.php/topic,14048.0.html
+
+
+================================================================================================================================
+
+Alchemy mod?
+
+
+potions
+
+weapon enchanting?
+
+armor enchanting?
+
+ether
+
+elixer(battle flask wow?)
+
+
+
+--------------------------------------------
+
+
+
+//	dust + coal = _____ catalyst
+//	dust + iron = _____ catalyst
+//	dust + redstone = _____ catalyst
+//	dust + lapis = _____ catalyst
+//	dust + gold = _____ catalyst
+//	dust + emerald = _____ catalyst
+//	dust + diamond = _____ catalyst
+//	dust + glowstone = _____ catalyst
+
+dust + iron = _____ catalyst
+dust + gold = _____ catalyst
+dust + emerald = _____ catalyst
+dust + diamond = _____ catalyst
+
+----------------------------------------------
+Transmutation
+-------------
+
+-use stones to power alchemy, maybe make from catalysts?  If stone's are depleted, they just stay and can be recharged.
+
+power Stone - recharges with using dust
+
+Sun Stone - put in (alter) to recharge only in daytime like ars magica stuff.
+
+Moon Stone - put in (alter) to recharge only in nighttime like ars magica stuff.
+
+Water stone - put in (alter) to recharge only in water like ars magica stuff.
+
+Storm Stone - put in (alter) to recharge only in storms like ars magica stuff.
+
+Philosopher's Stone - charges while held, must kill mobs.  If used up 100%, disappears.
+
+
+
+----------------------------------------------
+Transmutation furnace
+---------------
+
+fueled by dust
+
+
+
+----------------------------------------------
+Weapon coloring
+----------------
+
+Create a new sword, better than diamond. weapon is rechargable
+
+use a unique model.  make the weapon dyable into all colors in mc.
+
+
+----------------------------------------------
+morter and pestle
+-----------------
+
+
+?
+
+
+
+------------------------------------------------
+potions
+------------------
+
+dust + nether wart = Ebon wart
+
+Ebonwart used to brew potions.
+
+
+bone meal potion.
+
+
+
+------------------------------------------------
+Ebon Research book
+-------------------
+
+how to guide for the mod.
+
+
+
+
+------------------------------------------------
+
+
+Dust is like ars magica dust.
