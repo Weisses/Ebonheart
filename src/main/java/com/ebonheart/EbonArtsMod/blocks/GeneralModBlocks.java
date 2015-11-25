@@ -22,8 +22,9 @@ public class GeneralModBlocks extends Block{
 	
     public Item getItemDropped(IBlockState state, Random rand, int fortune)
     {
-    	
-        return this == EbonArtsBlocks.arcanite_ore ? EbonArtsItems.mystic_dust : (this == Blocks.diamond_ore ? Items.diamond : (this == Blocks.lapis_ore ? Items.dye : (this == Blocks.emerald_ore ? Items.emerald : (this == Blocks.quartz_ore ? Items.quartz : Item.getItemFromBlock(this)))));
+    	return this == EbonArtsBlocks.arcanite_ore ? EbonArtsItems.arcanite_shard : Item.getItemFromBlock(this);
+
+        //return this == EbonArtsBlocks.arcanite_ore ? EbonArtsItems.arcanite_shard : (this == Blocks.diamond_ore ? Items.diamond : (this == Blocks.lapis_ore ? Items.dye : (this == Blocks.emerald_ore ? Items.emerald : (this == Blocks.quartz_ore ? Items.quartz : Item.getItemFromBlock(this)))));
 
         
     }

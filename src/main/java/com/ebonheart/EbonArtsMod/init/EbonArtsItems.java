@@ -10,6 +10,7 @@ import com.ebonheart.EbonArtsMod.Reference;
 
 public class EbonArtsItems {
 
+	public static Item arcanite_shard;
 	public static Item mystic_dust;
 	public static Item purified_mystic_dust;
 	
@@ -42,6 +43,7 @@ public class EbonArtsItems {
 	
 	public static void init()
 	{
+		arcanite_shard = new Item().setUnlocalizedName("arcanite_shard").setCreativeTab(EbonArtsMod.tabEbonArts);
 		mystic_dust = new Item().setUnlocalizedName("mystic_dust").setCreativeTab(EbonArtsMod.tabEbonArts);
 		purified_mystic_dust = new Item().setUnlocalizedName("purified_mystic_dust").setCreativeTab(EbonArtsMod.tabEbonArts);
 		ebon_sigil = new Item().setUnlocalizedName("ebon_sigil").setCreativeTab(EbonArtsMod.tabEbonArts);
@@ -53,6 +55,8 @@ public class EbonArtsItems {
 	
 	public static void register()
 	{
+		GameRegistry.registerItem(arcanite_shard, arcanite_shard.getUnlocalizedName().substring(5));
+		
 		GameRegistry.registerItem(mystic_dust, mystic_dust.getUnlocalizedName().substring(5));
 		GameRegistry.registerItem(purified_mystic_dust, purified_mystic_dust.getUnlocalizedName().substring(5));
 		GameRegistry.registerItem(ebon_sigil, ebon_sigil.getUnlocalizedName().substring(5));
@@ -64,6 +68,7 @@ public class EbonArtsItems {
 	
 	public static void registerRenders()
 	{
+		registerRender(arcanite_shard);
 		registerRender(mystic_dust);
 		registerRender(purified_mystic_dust);
 		registerRender(ebon_sigil);
