@@ -19,8 +19,12 @@ item.ebon_chestplate.name=Ebon Chestplate
 item.ebon_leggings.name=Ebon Leggings
 item.ebon_boots.name=Ebon Boots
 
-tile.arcanite_ore.name=Mystic Ore
-tile.arcanite_block.name=Mystic Block
+tile.arcanite_block.name=Arcanite Block
+tile.arcanite_column.name=Arcanite Column
+tile.arcanite_double_slab.name=Arcanite Double Slab
+tile.arcanite_ore.name=Arcanite Ore
+tile.arcanite_slab.name=Arcanite Slab
+tile.arcanite_stairs.name=Arcanite Stairs
 tile.purified_mystic_block.name=Purified Mystic Block
 tile.ebon_alter.name=Ebon Alter
 

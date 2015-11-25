@@ -1,0 +1,6 @@
+{
+    "variants": {
+        "normal": { "model": "ea:arcanite_normal" },
+        "all":    { "model": "ea:arcanite_top" }
+    }
+}

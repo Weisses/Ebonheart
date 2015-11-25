@@ -1,5 +1,5 @@
 {
-    "parent": "ea:blocks/arcanite_normal",
+    "parent": "ea:block/half_slab_arcanite",
     "display": {
         "thirdperson": {
             "rotation": [ 10, -45, 170 ],

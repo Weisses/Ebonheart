@@ -40,13 +40,13 @@ public class BlockArcaniteBlock extends Block {
 
 
 	public static final PropertyEnum VARIANT = PropertyEnum.create("variant", BlockArcaniteBlock.EnumType.class);
-    private static final String __OBFID = "CL_00000292";
+    //private static final String __OBFID = "CL_00000292";
 
     public BlockArcaniteBlock()
     {
         super(Material.rock);
         this.setDefaultState(this.blockState.getBaseState().withProperty(VARIANT, BlockArcaniteBlock.EnumType.DEFAULT));
-        this.setCreativeTab(CreativeTabs.tabBlock);
+        //this.setCreativeTab(CreativeTabs.tabBlock);
     }
 
     public IBlockState onBlockPlaced(World worldIn, BlockPos pos, EnumFacing facing, float hitX, float hitY, float hitZ, int meta, EntityLivingBase placer)
@@ -99,10 +99,10 @@ public class BlockArcaniteBlock extends Block {
     /**
      * Get the MapColor for this Block and the given BlockState
      */
-    public MapColor getMapColor(IBlockState state)
-    {
-        return MapColor.quartzColor;
-    }
+    //public MapColor getMapColor(IBlockState state)
+    // {
+    //     return MapColor.quartzColor;
+    // }
 
     /**
      * Convert the given metadata into a BlockState for this Block
@@ -157,7 +157,7 @@ public class BlockArcaniteBlock extends Block {
         private final String field_176805_h;
         private final String unlocalizedName;
 
-        private static final String __OBFID = "CL_00002074";
+        //private static final String __OBFID = "CL_00002074";
 
         private EnumType(int meta, String name, String unlocalizedName)
         {
@@ -207,7 +207,7 @@ public class BlockArcaniteBlock extends Block {
     static final class SwitchAxis
         {
             static final int[] AXIS_LOOKUP = new int[EnumFacing.Axis.values().length];
-            private static final String __OBFID = "CL_00002075";
+            //private static final String __OBFID = "CL_00002075";
 
             static
             {

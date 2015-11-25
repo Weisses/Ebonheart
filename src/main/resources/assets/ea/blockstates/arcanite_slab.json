@@ -1,0 +1,6 @@
+{
+    "variants": {
+        "half=bottom": { "model": "ea:half_slab_arcanite" },
+        "half=top": { "model": "ea:upper_slab_arcanite" }
+    }
+}
