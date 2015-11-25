@@ -30,7 +30,7 @@ public class AchievementHelper {
 	}
 	@SubscribeEvent
 	public void onCraft(PlayerEvent.ItemCraftedEvent event) {
-		if(event.crafting.getItem() == Item.getItemFromBlock(EbonArtsBlocks.mystic_block)) {
+		if(event.crafting.getItem() == EbonArtsItems.ebon_sigil) {
 		
 			event.player.triggerAchievement(EbonArtsAchievements.craftEbonSigil);
 		
