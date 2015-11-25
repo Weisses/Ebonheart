@@ -14,15 +14,15 @@ import com.ebonheart.EbonArtsMod.blocks.GeneralModBlocks;
 
 public class EbonArtsBlocks {
 	
-	public static Block mystic_ore;
-	public static Block mystic_block;
+	public static Block arcanite_ore;
+	public static Block arcanite_block;
 	public static Block purified_mystic_block;
 
 	public static void init()
 	{
 		
-		mystic_ore = new GeneralModBlocks(Material.rock).setUnlocalizedName("mystic_ore").setCreativeTab(EbonArtsMod.tabEbonArts);
-		mystic_block = new GeneralModBlocks(Material.rock).setUnlocalizedName("mystic_block").setCreativeTab(EbonArtsMod.tabEbonArts);
+		arcanite_ore = new GeneralModBlocks(Material.rock).setUnlocalizedName("arcanite_ore").setCreativeTab(EbonArtsMod.tabEbonArts);
+		arcanite_block = new GeneralModBlocks(Material.rock).setUnlocalizedName("arcanite_block").setCreativeTab(EbonArtsMod.tabEbonArts);
 		purified_mystic_block = new GeneralModBlocks(Material.rock).setUnlocalizedName("purified_mystic_block").setCreativeTab(EbonArtsMod.tabEbonArts);
 		
 	}
@@ -31,8 +31,8 @@ public class EbonArtsBlocks {
 	public static void register()
 	{
 		
-		GameRegistry.registerBlock(mystic_ore, mystic_ore.getUnlocalizedName().substring(5));
-		GameRegistry.registerBlock(mystic_block, mystic_block.getUnlocalizedName().substring(5));
+		GameRegistry.registerBlock(arcanite_ore, arcanite_ore.getUnlocalizedName().substring(5));
+		GameRegistry.registerBlock(arcanite_block, arcanite_block.getUnlocalizedName().substring(5));
 		GameRegistry.registerBlock(purified_mystic_block, purified_mystic_block.getUnlocalizedName().substring(5));
 		
 	}
@@ -40,8 +40,8 @@ public class EbonArtsBlocks {
 	public static void registerRenders()
 	{
 		
-		registerRender(mystic_ore);
-		registerRender(mystic_block);
+		registerRender(arcanite_ore);
+		registerRender(arcanite_block);
 		registerRender(purified_mystic_block);
 		
 	}

@@ -1,5 +1,5 @@
 {
-    "parent": "ea:block/mystic_ore",
+    "parent": "ea:block/arcanite_ore",
     "display": {
         "thirdperson": {
             "rotation": [ 10, -45, 170 ],

@@ -1,6 +1,6 @@
 {
     "parent": "block/cube_all",
     "textures": {
-        "all": "ea:blocks/mystic_block"
+        "all": "ea:blocks/arcanite_block"
     }
 }

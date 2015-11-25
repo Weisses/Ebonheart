@@ -13,7 +13,7 @@ public class AchievementHelper {
 
 	@SubscribeEvent
 	public void onPickup(PlayerEvent.ItemPickupEvent event) {
-		if(event.pickedUp.getEntityItem().isItemEqual(new ItemStack(Item.getItemFromBlock(EbonArtsBlocks.mystic_ore)))) {
+		if(event.pickedUp.getEntityItem().isItemEqual(new ItemStack(Item.getItemFromBlock(EbonArtsBlocks.arcanite_ore)))) {
 		
 			event.player.triggerAchievement(EbonArtsAchievements.mineMysticDust);
 		

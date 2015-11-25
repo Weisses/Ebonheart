@@ -1,8 +1,12 @@
 item.mystic_dust.name=Mystic Dust
 item.purified_mystic_dust.name=Purified Mystic Dust
 
-
 item.ebon_sigil.name=Ebon Sigil
+
+item.tier_1_catalyst.name=Catalyst (Tier 1)
+item.tier_2_catalyst.name=Catalyst (Tier 2)
+item.tier_3_catalyst.name=Catalyst (Tier 3)
+item.tier_4_catalyst.name=Catalyst (Tier 4)
 
 item.ebon_pickaxe.name=Ebon Pickaxe
 item.ebon_axe.name=Ebon Axe
@@ -14,8 +18,8 @@ item.ebon_chestplate.name=Ebon Chestplate
 item.ebon_leggings.name=Ebon Leggings
 item.ebon_boots.name=Ebon Boots
 
-tile.mystic_ore.name=Mystic Ore
-tile.mystic_block.name=Mystic Block
+tile.arcanite_ore.name=Mystic Ore
+tile.arcanite_block.name=Mystic Block
 tile.purified_mystic_block.name=Purified Mystic Block
 tile.ebon_alter.name=Ebon Alter
 
