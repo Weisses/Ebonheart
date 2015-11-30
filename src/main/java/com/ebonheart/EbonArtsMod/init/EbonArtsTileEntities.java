@@ -49,7 +49,7 @@ public class EbonArtsTileEntities {
 	public static void registerRender(Block block)
 	{
 		Item item = Item.getItemFromBlock(block);
+		//Minecraft.getMinecraft().getRenderItem().getItemModelMesher().register(item, 0, new ModelResourceLocation(Reference.MOD_ID + ":" + "bananaplant", "inventory"));
 		Minecraft.getMinecraft().getRenderItem().getItemModelMesher().register(item, 0, new ModelResourceLocation(Reference.MOD_ID + ":" + item.getUnlocalizedName().substring(5), "inventory"));
-		
 	}
 }

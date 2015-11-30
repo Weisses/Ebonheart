@@ -3,6 +3,7 @@ package com.ebonheart.EbonArtsMod.init;
 import net.minecraft.block.Block;
 import net.minecraft.block.BlockFence;
 import net.minecraft.block.BlockFenceGate;
+import net.minecraft.block.BlockFurnace;
 import net.minecraft.block.BlockLog;
 import net.minecraft.block.BlockQuartz;
 import net.minecraft.block.BlockRotatedPillar;
@@ -46,6 +47,8 @@ public class EbonArtsBlocks {
 	//public static Block arcanite_stairs;
 	public static Block purified_mystic_block;
 	
+	public static Block test_furnace;
+	
 	
 
 	public static void init()
@@ -60,6 +63,7 @@ public class EbonArtsBlocks {
 		
 		innate_arcanite_block = new BlockOreEA(Material.rock).setUnlocalizedName("gem/innate_arcanite_block").setCreativeTab(EbonArtsMod.tabEbonArtsBlocks);
 		
+		//test_furnace = new BlockFurnace().setUnlocalizedName("test_furnace").setCreativeTab(EbonArtsMod.tabEbonArtsBlocks);
 		
 		
 		arcanite_column = new Block(Material.rock).setUnlocalizedName("gem/arcanite_column").setCreativeTab(EbonArtsMod.tabEbonArts);
@@ -85,6 +89,7 @@ public class EbonArtsBlocks {
 		
 		GameRegistry.registerBlock(innate_arcanite_block, innate_arcanite_block.getUnlocalizedName().substring(5));
 		
+		//GameRegistry.registerBlock(test_furnace, test_furnace.getUnlocalizedName().substring(5));
 		
 		
 		
@@ -95,8 +100,7 @@ public class EbonArtsBlocks {
 		
 		GameRegistry.registerBlock(purified_mystic_block, purified_mystic_block.getUnlocalizedName().substring(5));
 		
-		//For Tile Entities
-		//GameRegistry.registerTileEntity(TileEntityBananaPlant.class, "TileEntityBananaPlant");
+
 	}
 	
 	public static void registerRenders()
@@ -110,6 +114,9 @@ public class EbonArtsBlocks {
 		//registerRender(arcanite_wall_gate);
 		
 		registerRender(innate_arcanite_block);
+		
+		//registerRender(test_furnace);
+		
 		
 		registerRender(arcanite_column);
 		//registerRender(arcanite_double_slab);

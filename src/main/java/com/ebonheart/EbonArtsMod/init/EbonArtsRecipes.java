@@ -22,5 +22,6 @@ public class EbonArtsRecipes {
 		GameRegistry.addShapedRecipe(new ItemStack(EbonArtsItems.ebon_sigil), new Object[]{"MMM", "MBM", "MDM", 'M', EbonArtsItems.mystic_dust, 'B', Items.book, 'D', Items.diamond});
 		
 		GameRegistry.addSmelting(new ItemStack(EbonArtsItems.mystic_dust), new ItemStack(EbonArtsItems.purified_mystic_dust), 10);
+	
 	}
 }

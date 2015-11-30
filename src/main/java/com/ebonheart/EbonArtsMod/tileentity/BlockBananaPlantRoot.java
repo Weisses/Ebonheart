@@ -2,6 +2,7 @@ package com.ebonheart.EbonArtsMod.tileentity;
 
 import java.util.Random;
 
+import com.ebonheart.EbonArtsMod.EbonArtsMod;
 import com.ebonheart.EbonArtsMod.Reference;
 
 import net.minecraft.block.Block;
@@ -52,7 +53,7 @@ public class BlockBananaPlantRoot extends Block implements ITileEntityProvider
 		this.setHardness(PlantHardness);
 		this.setResistance(PlantResistance);
 		this.setStepSound(soundTypeGrass);
-		this.setCreativeTab(CreativeTabs.tabDecorations);
+		this.setCreativeTab(EbonArtsMod.tabEbonArtsBlocks);
 		this.setHarvestLevel(HarvestToolEnum.AXE, HarvestLevelEnum.WOOD);
 		
 		this.fruit = Fruit;
@@ -84,7 +85,7 @@ public class BlockBananaPlantRoot extends Block implements ITileEntityProvider
 	
 	public void RegisterRenderers()
 	{
-		Minecraft.getMinecraft().getRenderItem().getItemModelMesher().register(Item.getItemFromBlock(this), 0, new ModelResourceLocation(Reference.MOD_ID +":bananaplant", "inventory"));
+		Minecraft.getMinecraft().getRenderItem().getItemModelMesher().register(Item.getItemFromBlock(this), 0, new ModelResourceLocation(Reference.MOD_ID +":" + "bananaplant", "inventory"));
 	}
 	
 	public int tickRate(World world)

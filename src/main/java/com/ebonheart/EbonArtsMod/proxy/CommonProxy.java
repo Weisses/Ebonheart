@@ -17,23 +17,4 @@ public class CommonProxy {
 	}
 	
 
-	//public void preInit(FMLPreInitializationEvent e) 
-	//{
-		
-	//}
-
-	//public void init(FMLInitializationEvent e) 
-	//{
-		//Main.banana = new ItemFood(3, 0.3F, false);
-		//Main.banana.setUnlocalizedName("banana");
-		//GameRegistry.registerItem(Main.banana, "banana");
-		
-	//	EbonArtsTileEntities.bananaplant = new BlockBananaPlantRoot(EbonArtsItems.banana, 3, 1, 5, 2, 2, 12, 10, 30, 40, 100, 5, 10, 3, 1, null);
-	//}
-
-	//public void postInit(FMLPostInitializationEvent e) 
-	//{
-		
-	//}
-	
 }

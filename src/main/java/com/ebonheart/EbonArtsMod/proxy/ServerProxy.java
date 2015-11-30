@@ -11,7 +11,7 @@ import com.ebonheart.EbonArtsMod.init.EbonArtsBlocks;
 import com.ebonheart.EbonArtsMod.init.EbonArtsItems;
 import com.ebonheart.EbonArtsMod.init.EbonArtsTileEntities;
 
-public class ClientProxy extends CommonProxy {
+public class ServerProxy extends CommonProxy {
 	
 	@Override
 	public void registerRenders()
