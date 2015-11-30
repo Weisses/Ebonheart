@@ -1,4 +1,15 @@
-item.arcanite_shard.name=Arcanite Shard
+item.gem/item_arcanite.name=Arcanite
+item.gem/arcanite_shard.name=Arcanite Shard
+item.gem/innate_arcanite.name=Innate Arcanite
+
+tile.ore/arcanite_ore.name=Arcanite Ore
+
+tile.gem/arcanite_block.name=Arcanite Block
+tile.gem/innate_arcanite_block.name=Innate Arcanite Block
+tile.fence/arcanite_fence.name=Arcanite Fence
+tile.fence/innate_arcanite_fence.name=Innate Arcanite Fence
+
+
 item.mystic_dust.name=Mystic Dust
 item.purified_mystic_dust.name=Purified Mystic Dust
 
@@ -9,26 +20,32 @@ item.tier_2_catalyst.name=Catalyst (Tier 2)
 item.tier_3_catalyst.name=Catalyst (Tier 3)
 item.tier_4_catalyst.name=Catalyst (Tier 4)
 
-item.ebon_pickaxe.name=Ebon Pickaxe
-item.ebon_axe.name=Ebon Axe
-item.ebon_shovel.name=Ebon Shovel
-item.ebon_hoe.name=Ebon Hoe
-item.ebon_sword.name=Ebon Sword
-item.ebon_helmet.name=Ebon Helmet
-item.ebon_chestplate.name=Ebon Chestplate
-item.ebon_leggings.name=Ebon Leggings
-item.ebon_boots.name=Ebon Boots
+item.arcanite_pickaxe.name=Arcanite Pickaxe
+item.arcanite_axe.name=Arcanite Axe
+item.arcanite_shovel.name=Arcanite Shovel
+item.arcanite_hoe.name=Arcanite Hoe
+item.arcanite_sword.name=Arcanite Sword
+item.arcanite_helmet.name=Arcanite Helmet
+item.arcanite_chestplate.name=Arcanite Chestplate
+item.arcanite_leggings.name=Arcanite Leggings
+item.arcanite_boots.name=Arcanite Boots
 
-tile.arcanite_block.name=Arcanite Block
+item.banana.name=Banana
+tile.bananaplant.name=Banana Plant
+
+tile.fence/arcanite_fence_gate.name=Arcanite Fence Gate
+tile.wall/arcanite_wall.name=Arcanite Wall
 tile.arcanite_column.name=Arcanite Column
 tile.arcanite_double_slab.name=Arcanite Double Slab
-tile.arcanite_ore.name=Arcanite Ore
+
 tile.arcanite_slab.name=Arcanite Slab
 tile.arcanite_stairs.name=Arcanite Stairs
 tile.purified_mystic_block.name=Purified Mystic Block
 tile.ebon_alter.name=Ebon Alter
 
 itemGroup.tabEbonArts=Ebon Arts
+itemGroup.tabEbonArtsBlocks=Ebon Arts Blocks
+itemGroup.tabEbonArtsItems=Ebon Arts Items
 
 achievement.mineMysticDust=I found Mystic Dust!
 achievement.mineMysticDust.desc=Keeping it real.
