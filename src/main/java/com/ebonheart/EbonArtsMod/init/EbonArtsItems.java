@@ -10,6 +10,7 @@ import net.minecraftforge.fml.common.registry.GameRegistry;
 
 import com.ebonheart.EbonArtsMod.EbonArtsMod;
 import com.ebonheart.EbonArtsMod.Reference;
+import com.ebonheart.EbonArtsMod.items.ItemArcanite;
 import com.ebonheart.EbonArtsMod.items.ItemArcaniteAxe;
 import com.ebonheart.EbonArtsMod.items.ItemArcaniteHoe;
 import com.ebonheart.EbonArtsMod.items.ItemArcanitePickaxe;
@@ -61,7 +62,7 @@ public class EbonArtsItems {
 	public static void init()
 	{
 		
-		item_arcanite = new Item().setUnlocalizedName("gem/item_arcanite").setCreativeTab(EbonArtsMod.tabEbonArtsItems);
+		item_arcanite = new ItemArcanite().setUnlocalizedName("gem/item_arcanite").setCreativeTab(EbonArtsMod.tabEbonArtsItems);
 		arcanite_shard = new Item().setUnlocalizedName("gem/arcanite_shard").setCreativeTab(EbonArtsMod.tabEbonArtsItems);
 		innate_arcanite = new Item().setUnlocalizedName("gem/innate_arcanite").setCreativeTab(EbonArtsMod.tabEbonArtsItems);
 		

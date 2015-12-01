@@ -1,9 +1,11 @@
 package com.ebonheart.EbonArtsMod.init;
 
 import net.minecraft.block.Block;
+import net.minecraft.block.BlockDoubleStoneSlab;
 import net.minecraft.block.BlockFence;
 import net.minecraft.block.BlockFenceGate;
 import net.minecraft.block.BlockFurnace;
+import net.minecraft.block.BlockHalfStoneSlab;
 import net.minecraft.block.BlockLog;
 import net.minecraft.block.BlockQuartz;
 import net.minecraft.block.BlockRotatedPillar;
@@ -14,6 +16,7 @@ import net.minecraft.block.material.Material;
 import net.minecraft.client.Minecraft;
 import net.minecraft.client.renderer.block.model.ModelBlock;
 import net.minecraft.client.resources.model.ModelResourceLocation;
+import net.minecraft.creativetab.CreativeTabs;
 import net.minecraft.init.Blocks;
 import net.minecraft.item.Item;
 import net.minecraftforge.fml.common.registry.GameRegistry;
@@ -21,6 +24,7 @@ import net.minecraftforge.fml.common.registry.GameRegistry;
 import com.ebonheart.EbonArtsMod.EbonArtsMod;
 import com.ebonheart.EbonArtsMod.Reference;
 import com.ebonheart.EbonArtsMod.blocks.BlockArcanite;
+import com.ebonheart.EbonArtsMod.blocks.BlockFurnaceEA;
 import com.ebonheart.EbonArtsMod.blocks.BlockLogEA;
 import com.ebonheart.EbonArtsMod.blocks.BlockRotatedPillarEA;
 import com.ebonheart.EbonArtsMod.blocks.BlockEA;
@@ -41,13 +45,15 @@ public class EbonArtsBlocks {
 	//public static Block arcanite_wall_gate;
 	
 	public static Block innate_arcanite_block;
-	public static Block arcanite_column;
+	
+	//public static Block arcanite_column;
 	//public static Block arcanite_double_slab;
 	//public static Block arcanite_slab;
 	//public static Block arcanite_stairs;
 	public static Block purified_mystic_block;
 	
-	public static Block test_furnace;
+	public static Block mystic_furnace;
+	public static Block lit_mystic_furnace;
 	
 	
 
@@ -63,12 +69,14 @@ public class EbonArtsBlocks {
 		
 		innate_arcanite_block = new BlockOreEA(Material.rock).setUnlocalizedName("gem/innate_arcanite_block").setCreativeTab(EbonArtsMod.tabEbonArtsBlocks);
 		
-		//test_furnace = new BlockFurnace().setUnlocalizedName("test_furnace").setCreativeTab(EbonArtsMod.tabEbonArtsBlocks);
+		mystic_furnace = new BlockFurnaceEA(false).setUnlocalizedName("machine/mystic_furnace").setCreativeTab(EbonArtsMod.tabEbonArtsBlocks);
+		lit_mystic_furnace = new BlockFurnaceEA(true).setUnlocalizedName("machine/lit_mystic_furnace").setCreativeTab(EbonArtsMod.tabEbonArtsBlocks);
 		
 		
-		arcanite_column = new Block(Material.rock).setUnlocalizedName("gem/arcanite_column").setCreativeTab(EbonArtsMod.tabEbonArts);
-		//arcanite_double_slab = new BlockArcaniteBlock(Material.rock).setUnlocalizedName("arcanite_double_slab").setCreativeTab(EbonArtsMod.tabEbonArts);
-		//arcanite_slab = new BlockSlabEA(EbonArtsBlocks.arcanite_block).setUnlocalizedName("arcanite_slab").setCreativeTab(EbonArtsMod.tabEbonArts);
+		
+		//arcanite_column = new Block(Material.rock).setUnlocalizedName("gem/arcanite_column").setCreativeTab(EbonArtsMod.tabEbonArts);
+		//arcanite_double_slab = new BlockDoubleStoneSlab().setUnlocalizedName("gem/arcanite_double_slab").setCreativeTab(EbonArtsMod.tabEbonArts);
+		//arcanite_slab = new BlockHalfStoneSlab().setUnlocalizedName("gem/arcanite_slab").setCreativeTab(EbonArtsMod.tabEbonArts);
 		//arcanite_stairs = new BlockStairs().setUnlocalizedName("arcanite_stairs").setCreativeTab(EbonArtsMod.tabEbonArts);
 		
 		purified_mystic_block = new GeneralModBlocks(Material.rock).setUnlocalizedName("purified_mystic_block").setCreativeTab(EbonArtsMod.tabEbonArtsBlocks);
@@ -89,11 +97,12 @@ public class EbonArtsBlocks {
 		
 		GameRegistry.registerBlock(innate_arcanite_block, innate_arcanite_block.getUnlocalizedName().substring(5));
 		
-		//GameRegistry.registerBlock(test_furnace, test_furnace.getUnlocalizedName().substring(5));
+		GameRegistry.registerBlock(mystic_furnace, mystic_furnace.getUnlocalizedName().substring(5));
+		GameRegistry.registerBlock(lit_mystic_furnace, lit_mystic_furnace.getUnlocalizedName().substring(5));
 		
 		
 		
-		GameRegistry.registerBlock(arcanite_column, arcanite_column.getUnlocalizedName().substring(5));
+		//GameRegistry.registerBlock(arcanite_column, arcanite_column.getUnlocalizedName().substring(5));
 		//GameRegistry.registerBlock(arcanite_double_slab, arcanite_double_slab.getUnlocalizedName().substring(5));
 		//GameRegistry.registerBlock(arcanite_slab, arcanite_slab.getUnlocalizedName().substring(5));
 		//GameRegistry.registerBlock(arcanite_stairs, arcanite_stairs.getUnlocalizedName().substring(5));
@@ -115,10 +124,11 @@ public class EbonArtsBlocks {
 		
 		registerRender(innate_arcanite_block);
 		
-		//registerRender(test_furnace);
+		registerRender(mystic_furnace);
+		registerRender(lit_mystic_furnace);
 		
 		
-		registerRender(arcanite_column);
+		//registerRender(arcanite_column);
 		//registerRender(arcanite_double_slab);
 		//registerRender(arcanite_slab);
 		//registerRender(arcanite_stairs);

@@ -1,7 +1,0 @@
-{
-    "variants": {
-        "axis=y":   { "model": "ea:arcanite_lines" },
-        "axis=z":   { "model": "ea:arcanite_lines", "x": 90 },
-        "axis=x":   { "model": "ea:arcanite_lines", "x": 90, "y": 90 }
-    }
-}

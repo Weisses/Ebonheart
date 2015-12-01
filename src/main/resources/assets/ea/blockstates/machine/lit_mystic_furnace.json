@@ -1,0 +1,8 @@
+{
+    "variants": {
+        "facing=north": { "model": "ea:machine/lit_mystic_furnace" },
+        "facing=south": { "model": "ea:machine/lit_mystic_furnace", "y": 180 },
+        "facing=west":  { "model": "ea:machine/lit_mystic_furnace", "y": 270 },
+        "facing=east":  { "model": "ea:machine/lit_mystic_furnace", "y": 90 }
+    }
+}

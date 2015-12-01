@@ -1,7 +1,0 @@
-{
-    "parent": "block/cube_column",
-    "textures": {
-        "side": "ea:blocks/arcanite_block_chiseled",
-        "end": "ea:blocks/arcanite_chiseled_top"
-    }
-}
