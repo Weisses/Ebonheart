@@ -1,9 +1,9 @@
-package com.ebonheart.EbonArtsMod;
+package com.ebonheart.EbonArtsMod.api;
 
 import net.minecraft.creativetab.CreativeTabs;
 import net.minecraft.item.Item;
 
-import com.ebonheart.EbonArtsMod.init.EbonArtsItems;
+import com.ebonheart.EbonArtsMod.init.InitItemsEA;
 
 public class EbonArtsTabItems extends CreativeTabs {
 
@@ -15,7 +15,7 @@ public class EbonArtsTabItems extends CreativeTabs {
 	@Override
 	public Item getTabIconItem() {
 		
-		return EbonArtsItems.ebon_sigil;
+		return InitItemsEA.ebon_sigil;
 	}
 
 }

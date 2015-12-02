@@ -19,14 +19,14 @@ import com.ebonheart.EbonArtsMod.blocks.GeneralModBlocks;
 import com.ebonheart.EbonArtsMod.tileentity.BlockBananaPlantRoot;
 import com.ebonheart.EbonArtsMod.tileentity.TileEntityBananaPlant;
 
-public class EbonArtsTileEntities {
+public class InitTileEntitiesEA {
 
 	public static BlockBananaPlantRoot bananaplant;
 	
 	public static void init()
 	{
 		
-		bananaplant = new BlockBananaPlantRoot(EbonArtsItems.banana, 3, 1, 5, 2, 2, 12, 10, 30, 40, 100, 5, 10, 3, 1, null);
+		bananaplant = new BlockBananaPlantRoot(InitItemsEA.banana, 3, 1, 5, 2, 2, 12, 10, 30, 40, 100, 5, 10, 3, 1, null);
 		
 		
 	}

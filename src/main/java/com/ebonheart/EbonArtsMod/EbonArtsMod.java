@@ -13,11 +13,14 @@ import net.minecraftforge.fml.common.eventhandler.SubscribeEvent;
 
 import org.apache.logging.log4j.Logger;
 
-import com.ebonheart.EbonArtsMod.init.EbonArtsAchievements;
-import com.ebonheart.EbonArtsMod.init.EbonArtsBlocks;
-import com.ebonheart.EbonArtsMod.init.EbonArtsItems;
-import com.ebonheart.EbonArtsMod.init.EbonArtsRecipes;
-import com.ebonheart.EbonArtsMod.init.EbonArtsTileEntities;
+import com.ebonheart.EbonArtsMod.api.EbonArtsTab;
+import com.ebonheart.EbonArtsMod.api.EbonArtsTabBlocks;
+import com.ebonheart.EbonArtsMod.api.EbonArtsTabItems;
+import com.ebonheart.EbonArtsMod.init.InitAchievementsEA;
+import com.ebonheart.EbonArtsMod.init.InitBlocksEA;
+import com.ebonheart.EbonArtsMod.init.InitItemsEA;
+import com.ebonheart.EbonArtsMod.init.InitRecipesEA;
+import com.ebonheart.EbonArtsMod.init.InitTileEntitiesEA;
 import com.ebonheart.EbonArtsMod.proxy.CommonProxy;
 
 @Mod(modid = Reference.MOD_ID, name = Reference.MOD_NAME, version = Reference.MOD_VERSION)
@@ -27,8 +30,8 @@ public class EbonArtsMod {
 	public static CommonProxy proxy;
 	
 	
-	public static final EbonArtsTab tabEbonArts = new EbonArtsTab("tabEbonArts");
-	public static final EbonArtsTabBlocks tabEbonArtsBlocks = new EbonArtsTabBlocks("tabEbonArtsBlocks");
+	//public static final EbonArtsTab tabEbonArts = new EbonArtsTab("tabEbonArts");
+	//public static final EbonArtsTabBlocks tabEbonArtsBlocks = new EbonArtsTabBlocks("tabEbonArtsBlocks");
 	public static final EbonArtsTabItems tabEbonArtsItems = new EbonArtsTabItems("tabEbonArtsItems");
 	
 	public static Configuration config;
@@ -36,16 +39,25 @@ public class EbonArtsMod {
 	
 	public static Logger log = FMLLog.getLogger();
 	
+	
+	
 	@EventHandler
 	public void preInit(FMLPreInitializationEvent event)
 	{
+		this.proxy.preInit(event);
 		log.info("Log PreInit");
+		
+		
+		
+		
+		
 		//config = new Configuration(event.getSuggestedConfigurationFile());
 		//EbonArtsConfiguration.syncConfig();
-		EbonArtsBlocks.init();
-		EbonArtsBlocks.register();
-		EbonArtsItems.init();
-		EbonArtsItems.register();
+		
+		//InitBlocksEA.init();
+		//InitBlocksEA.register();
+		//InitItemsEA.init();
+		//InitItemsEA.register();
 
 		
 		
@@ -66,11 +78,15 @@ public class EbonArtsMod {
 	@EventHandler
 	public void init(FMLInitializationEvent event)
 	{
+		this.proxy.init(event);
 		log.info("Log Init");
-		proxy.registerRenders();
-		EbonArtsRecipes.init();
-		EbonArtsAchievements.init();
-		EbonArtsTileEntities.init();
+		
+		
+		
+		//proxy.registerRenders();
+		//InitRecipesEA.init();
+		//InitAchievementsEA.init();
+		//InitTileEntitiesEA.init();
 
 		
 		
@@ -79,6 +95,7 @@ public class EbonArtsMod {
 	@EventHandler
 	public void postInit(FMLPostInitializationEvent event)
 	{
+		this.proxy.postInit(event);
 		log.info("Log PostInit");
 		
 		

@@ -35,7 +35,7 @@ import com.ebonheart.EbonArtsMod.blocks.BlockWallEA;
 import com.ebonheart.EbonArtsMod.blocks.GeneralModBlocks;
 import com.ebonheart.EbonArtsMod.tileentity.TileEntityBananaPlant;
 
-public class EbonArtsBlocks {
+public class InitBlocksEA {
 	
 	public static Block arcanite_ore;
 	public static Block arcanite_block;

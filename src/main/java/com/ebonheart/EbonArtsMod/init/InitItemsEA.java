@@ -18,7 +18,7 @@ import com.ebonheart.EbonArtsMod.items.ItemArcaniteShovel;
 import com.ebonheart.EbonArtsMod.items.ItemArcaniteSword;
 import com.ebonheart.EbonArtsMod.items.ItemArmorArcanite;
 
-public class EbonArtsItems {
+public class InitItemsEA {
 
 	public static Item item_arcanite;
 	public static Item arcanite_shard;
@@ -62,7 +62,7 @@ public class EbonArtsItems {
 	public static void init()
 	{
 		
-		item_arcanite = new ItemArcanite().setUnlocalizedName("gem/item_arcanite").setCreativeTab(EbonArtsMod.tabEbonArtsItems);
+		item_arcanite = new ItemArcanite("item_arcanite").setUnlocalizedName("gem/item_arcanite").setCreativeTab(EbonArtsMod.tabEbonArtsItems);
 		arcanite_shard = new Item().setUnlocalizedName("gem/arcanite_shard").setCreativeTab(EbonArtsMod.tabEbonArtsItems);
 		innate_arcanite = new Item().setUnlocalizedName("gem/innate_arcanite").setCreativeTab(EbonArtsMod.tabEbonArtsItems);
 		

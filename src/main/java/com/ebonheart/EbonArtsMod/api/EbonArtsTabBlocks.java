@@ -1,11 +1,11 @@
-package com.ebonheart.EbonArtsMod;
+package com.ebonheart.EbonArtsMod.api;
 
 import net.minecraft.block.Block;
 import net.minecraft.creativetab.CreativeTabs;
 import net.minecraft.item.Item;
 
-import com.ebonheart.EbonArtsMod.init.EbonArtsBlocks;
-import com.ebonheart.EbonArtsMod.init.EbonArtsItems;
+import com.ebonheart.EbonArtsMod.init.InitBlocksEA;
+import com.ebonheart.EbonArtsMod.init.InitItemsEA;
 
 public class EbonArtsTabBlocks extends CreativeTabs {
 
@@ -18,7 +18,7 @@ public class EbonArtsTabBlocks extends CreativeTabs {
 	@Override
 	public Item getTabIconItem() {
 		
-		return Item.getItemFromBlock(EbonArtsBlocks.arcanite_block);
+		return Item.getItemFromBlock(InitBlocksEA.arcanite_block);
 	
 	}
 

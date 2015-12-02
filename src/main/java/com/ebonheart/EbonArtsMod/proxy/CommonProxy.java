@@ -5,16 +5,33 @@ import net.minecraftforge.fml.common.event.FMLPostInitializationEvent;
 import net.minecraftforge.fml.common.event.FMLPreInitializationEvent;
 import net.minecraftforge.fml.common.registry.GameRegistry;
 
-import com.ebonheart.EbonArtsMod.init.EbonArtsItems;
-import com.ebonheart.EbonArtsMod.init.EbonArtsTileEntities;
+import com.ebonheart.EbonArtsMod.init.InitItemsEA;
+import com.ebonheart.EbonArtsMod.init.InitTileEntitiesEA;
+import com.ebonheart.EbonArtsMod.items.TestModItems;
 import com.ebonheart.EbonArtsMod.tileentity.BlockBananaPlantRoot;
 
 public class CommonProxy {
+	
+	
+    public void preInit(FMLPreInitializationEvent event) 
+    {
+    	//TestModItems.createItems();
+    	InitItemsEA.init();
+    	InitItemsEA.register();
+    }
 
+    public void init(FMLInitializationEvent event) 
+    {
+
+    }
+
+    public void postInit(FMLPostInitializationEvent event) 
+    {
+
+    }
+	
 	public void registerRenders()
 	{
 		
 	}
-	
-
 }

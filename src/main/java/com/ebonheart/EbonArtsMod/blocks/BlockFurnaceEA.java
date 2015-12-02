@@ -23,7 +23,7 @@ import net.minecraft.world.World;
 import net.minecraftforge.fml.relauncher.Side;
 import net.minecraftforge.fml.relauncher.SideOnly;
 
-import com.ebonheart.EbonArtsMod.init.EbonArtsBlocks;
+import com.ebonheart.EbonArtsMod.init.InitBlocksEA;
 import com.ebonheart.EbonArtsMod.tileentity.TileEntityFurnaceEA;
 
 public class BlockFurnaceEA extends BlockContainer {
@@ -51,7 +51,7 @@ public class BlockFurnaceEA extends BlockContainer {
      */
     public Item getItemDropped(IBlockState state, Random rand, int fortune)
     {
-        return Item.getItemFromBlock(EbonArtsBlocks.mystic_furnace);
+        return Item.getItemFromBlock(InitBlocksEA.mystic_furnace);
     }
 
     public void onBlockAdded(World worldIn, BlockPos pos, IBlockState state)
@@ -154,13 +154,13 @@ public class BlockFurnaceEA extends BlockContainer {
 
         if (active)
         {
-            worldIn.setBlockState(pos, EbonArtsBlocks.lit_mystic_furnace.getDefaultState().withProperty(FACING, iblockstate.getValue(FACING)), 3);
-            worldIn.setBlockState(pos, EbonArtsBlocks.lit_mystic_furnace.getDefaultState().withProperty(FACING, iblockstate.getValue(FACING)), 3);
+            worldIn.setBlockState(pos, InitBlocksEA.lit_mystic_furnace.getDefaultState().withProperty(FACING, iblockstate.getValue(FACING)), 3);
+            worldIn.setBlockState(pos, InitBlocksEA.lit_mystic_furnace.getDefaultState().withProperty(FACING, iblockstate.getValue(FACING)), 3);
         }
         else
         {
-            worldIn.setBlockState(pos, EbonArtsBlocks.mystic_furnace.getDefaultState().withProperty(FACING, iblockstate.getValue(FACING)), 3);
-            worldIn.setBlockState(pos, EbonArtsBlocks.mystic_furnace.getDefaultState().withProperty(FACING, iblockstate.getValue(FACING)), 3);
+            worldIn.setBlockState(pos, InitBlocksEA.mystic_furnace.getDefaultState().withProperty(FACING, iblockstate.getValue(FACING)), 3);
+            worldIn.setBlockState(pos, InitBlocksEA.mystic_furnace.getDefaultState().withProperty(FACING, iblockstate.getValue(FACING)), 3);
         }
 
         keepInventory = false;
@@ -229,7 +229,7 @@ public class BlockFurnaceEA extends BlockContainer {
     @SideOnly(Side.CLIENT)
     public Item getItem(World worldIn, BlockPos pos)
     {
-        return Item.getItemFromBlock(EbonArtsBlocks.mystic_furnace);
+        return Item.getItemFromBlock(InitBlocksEA.mystic_furnace);
     }
 
     /**

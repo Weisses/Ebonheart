@@ -7,17 +7,35 @@ import net.minecraftforge.fml.common.event.FMLPostInitializationEvent;
 import net.minecraftforge.fml.common.event.FMLPreInitializationEvent;
 
 import com.ebonheart.EbonArtsMod.Reference;
-import com.ebonheart.EbonArtsMod.init.EbonArtsBlocks;
-import com.ebonheart.EbonArtsMod.init.EbonArtsItems;
-import com.ebonheart.EbonArtsMod.init.EbonArtsTileEntities;
+import com.ebonheart.EbonArtsMod.init.InitBlocksEA;
+import com.ebonheart.EbonArtsMod.init.InitItemsEA;
+import com.ebonheart.EbonArtsMod.init.InitTileEntitiesEA;
 
 public class ServerProxy extends CommonProxy {
+	
+    @Override
+    public void preInit(FMLPreInitializationEvent e) {
+        super.preInit(e);
+    }
+
+    @Override
+    public void init(FMLInitializationEvent e) {
+        super.init(e);
+    }
+
+    @Override
+    public void postInit(FMLPostInitializationEvent e) {
+        super.postInit(e);
+    }
 	
 	@Override
 	public void registerRenders()
 	{
-		EbonArtsBlocks.registerRenders();
-		EbonArtsItems.registerRenders();
+		//InitBlocksEA.registerRenders();
+		//InitItemsEA.registerRenders();
+		
+		
+		
 		//EbonArtsTileEntities.registerRenders();
 	}
 	

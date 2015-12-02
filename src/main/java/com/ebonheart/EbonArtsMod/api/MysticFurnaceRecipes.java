@@ -1,4 +1,4 @@
-package com.ebonheart.EbonArtsMod.init;
+package com.ebonheart.EbonArtsMod.api;
 
 import java.util.Iterator;
 import java.util.Map;

@@ -5,10 +5,10 @@ import net.minecraft.stats.Achievement;
 import net.minecraft.stats.AchievementList;
 import net.minecraftforge.fml.common.FMLCommonHandler;
 
-import com.ebonheart.EbonArtsMod.AchievementHelper;
 import com.ebonheart.EbonArtsMod.EbonArtsMod;
+import com.ebonheart.EbonArtsMod.api.AchievementHelper;
 
-public class EbonArtsAchievements {
+public class InitAchievementsEA {
 	
 
 	
@@ -18,7 +18,7 @@ public class EbonArtsAchievements {
 	
 	public static void init(){
 
-	mine_arcanite_shard = new Achievement("achievement.mine_arcanite_shard", "mine_arcanite_shard", -1, -1, EbonArtsItems.arcanite_shard, (Achievement)null).func_180788_c();
+	mine_arcanite_shard = new Achievement("achievement.mine_arcanite_shard", "mine_arcanite_shard", -1, -1, InitItemsEA.arcanite_shard, (Achievement)null).func_180788_c();
 	//smeltMysticDust = new Achievement("achievement.smeltMysticDust", "smeltMysticDust", -3, -1, EbonArtsBlocks.arcanite_ore, mineMysticDust).func_180788_c();
 	//craftEbonSigil = new Achievement("achievement.craftEbonSigil", "craftEbonSigil", -5, -2, EbonArtsBlocks.arcanite_ore, mineMysticDust).func_180788_c();
 	

@@ -1,8 +1,8 @@
 package com.ebonheart.EbonArtsMod.tileentity;
 
+import com.ebonheart.EbonArtsMod.api.MysticFurnaceRecipes;
 import com.ebonheart.EbonArtsMod.blocks.BlockFurnaceEA;
-import com.ebonheart.EbonArtsMod.init.EbonArtsItems;
-import com.ebonheart.EbonArtsMod.init.MysticFurnaceRecipes;
+import com.ebonheart.EbonArtsMod.init.InitItemsEA;
 
 import net.minecraft.block.Block;
 import net.minecraft.block.BlockFurnace;

@@ -1,4 +1,4 @@
-package com.ebonheart.EbonArtsMod;
+package com.ebonheart.EbonArtsMod.api;
 
 import net.minecraft.block.Block;
 import net.minecraft.item.Item;
@@ -8,9 +8,9 @@ import net.minecraft.stats.AchievementList;
 import net.minecraftforge.fml.common.eventhandler.SubscribeEvent;
 import net.minecraftforge.fml.common.gameevent.PlayerEvent;
 
-import com.ebonheart.EbonArtsMod.init.EbonArtsAchievements;
-import com.ebonheart.EbonArtsMod.init.EbonArtsBlocks;
-import com.ebonheart.EbonArtsMod.init.EbonArtsItems;
+import com.ebonheart.EbonArtsMod.init.InitAchievementsEA;
+import com.ebonheart.EbonArtsMod.init.InitBlocksEA;
+import com.ebonheart.EbonArtsMod.init.InitItemsEA;
 
 public class AchievementHelper {
 	
@@ -18,9 +18,9 @@ public class AchievementHelper {
 
 	@SubscribeEvent
 	public void onPickup(PlayerEvent.ItemPickupEvent event) {
-		if(event.pickedUp.getEntityItem().isItemEqual(new ItemStack(Block.getBlockFromItem(EbonArtsItems.arcanite_shard)))) {
+		if(event.pickedUp.getEntityItem().isItemEqual(new ItemStack(Block.getBlockFromItem(InitItemsEA.arcanite_shard)))) {
 		
-			event.player.triggerAchievement(EbonArtsAchievements.mine_arcanite_shard);
+			event.player.triggerAchievement(InitAchievementsEA.mine_arcanite_shard);
 		
 		}
 	}

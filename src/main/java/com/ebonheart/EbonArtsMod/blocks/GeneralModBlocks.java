@@ -2,8 +2,8 @@ package com.ebonheart.EbonArtsMod.blocks;
 
 import java.util.Random;
 
-import com.ebonheart.EbonArtsMod.init.EbonArtsBlocks;
-import com.ebonheart.EbonArtsMod.init.EbonArtsItems;
+import com.ebonheart.EbonArtsMod.init.InitBlocksEA;
+import com.ebonheart.EbonArtsMod.init.InitItemsEA;
 
 import net.minecraft.block.Block;
 import net.minecraft.block.material.Material;
@@ -22,7 +22,7 @@ public class GeneralModBlocks extends Block{
 	
     public Item getItemDropped(IBlockState state, Random rand, int fortune)
     {
-    	return this == EbonArtsBlocks.arcanite_ore ? EbonArtsItems.arcanite_shard : Item.getItemFromBlock(this);
+    	return this == InitBlocksEA.arcanite_ore ? InitItemsEA.arcanite_shard : Item.getItemFromBlock(this);
 
         //return this == EbonArtsBlocks.arcanite_ore ? EbonArtsItems.arcanite_shard : (this == Blocks.diamond_ore ? Items.diamond : (this == Blocks.lapis_ore ? Items.dye : (this == Blocks.emerald_ore ? Items.emerald : (this == Blocks.quartz_ore ? Items.quartz : Item.getItemFromBlock(this)))));
 
@@ -31,7 +31,7 @@ public class GeneralModBlocks extends Block{
     
     public int quantityDropped(Random random)
     {
-        return this == EbonArtsBlocks.arcanite_ore ? 1 + random.nextInt(4) : 1;
+        return this == InitBlocksEA.arcanite_ore ? 1 + random.nextInt(4) : 1;
     }
 
     public int quantityDroppedWithBonus(int fortune, Random random)
