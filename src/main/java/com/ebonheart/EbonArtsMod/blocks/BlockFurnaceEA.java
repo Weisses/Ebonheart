@@ -2,11 +2,8 @@ package com.ebonheart.EbonArtsMod.blocks;
 
 import java.util.Random;
 
-import com.ebonheart.EbonArtsMod.init.EbonArtsBlocks;
-
 import net.minecraft.block.Block;
 import net.minecraft.block.BlockContainer;
-import net.minecraft.block.BlockFurnace;
 import net.minecraft.block.material.Material;
 import net.minecraft.block.properties.IProperty;
 import net.minecraft.block.properties.PropertyDirection;
@@ -14,19 +11,20 @@ import net.minecraft.block.state.BlockState;
 import net.minecraft.block.state.IBlockState;
 import net.minecraft.entity.EntityLivingBase;
 import net.minecraft.entity.player.EntityPlayer;
-import net.minecraft.init.Blocks;
 import net.minecraft.inventory.Container;
 import net.minecraft.inventory.InventoryHelper;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
 import net.minecraft.tileentity.TileEntity;
-import net.minecraft.tileentity.TileEntityFurnace;
 import net.minecraft.util.BlockPos;
 import net.minecraft.util.EnumFacing;
 import net.minecraft.util.EnumParticleTypes;
 import net.minecraft.world.World;
 import net.minecraftforge.fml.relauncher.Side;
 import net.minecraftforge.fml.relauncher.SideOnly;
+
+import com.ebonheart.EbonArtsMod.init.EbonArtsBlocks;
+import com.ebonheart.EbonArtsMod.tileentity.TileEntityFurnaceEA;
 
 public class BlockFurnaceEA extends BlockContainer {
 
@@ -109,22 +107,22 @@ public class BlockFurnaceEA extends BlockContainer {
                 case 1:
                     worldIn.spawnParticle(EnumParticleTypes.SMOKE_NORMAL, d0 - d3, d1, d2 + d4, 0.0D, 0.0D, 0.0D, new int[0]);
                     worldIn.spawnParticle(EnumParticleTypes.PORTAL, d0 - d3, d1, d2 + d4, 0.0D, 0.0D, 0.0D, new int[0]);
-                    worldIn.spawnParticle(EnumParticleTypes.VILLAGER_HAPPY, d0 - d3, d1, d2 + d4, 0.0D, 0.0D, 0.0D, new int[0]);
+                    //worldIn.spawnParticle(EnumParticleTypes.VILLAGER_HAPPY, d0 - d3, d1, d2 + d4, 0.0D, 0.0D, 0.0D, new int[0]);
                     break;
                 case 2:
                     worldIn.spawnParticle(EnumParticleTypes.SMOKE_NORMAL, d0 + d3, d1, d2 + d4, 0.0D, 0.0D, 0.0D, new int[0]);
                     worldIn.spawnParticle(EnumParticleTypes.PORTAL, d0 + d3, d1, d2 + d4, 0.0D, 0.0D, 0.0D, new int[0]);
-                    worldIn.spawnParticle(EnumParticleTypes.VILLAGER_HAPPY, d0 - d3, d1, d2 + d4, 0.0D, 0.0D, 0.0D, new int[0]);
+                    //worldIn.spawnParticle(EnumParticleTypes.VILLAGER_HAPPY, d0 - d3, d1, d2 + d4, 0.0D, 0.0D, 0.0D, new int[0]);
                     break;
                 case 3:
                     worldIn.spawnParticle(EnumParticleTypes.SMOKE_NORMAL, d0 + d4, d1, d2 - d3, 0.0D, 0.0D, 0.0D, new int[0]);
                     worldIn.spawnParticle(EnumParticleTypes.PORTAL, d0 + d4, d1, d2 - d3, 0.0D, 0.0D, 0.0D, new int[0]);
-                    worldIn.spawnParticle(EnumParticleTypes.VILLAGER_HAPPY, d0 - d3, d1, d2 + d4, 0.0D, 0.0D, 0.0D, new int[0]);
+                    //worldIn.spawnParticle(EnumParticleTypes.VILLAGER_HAPPY, d0 - d3, d1, d2 + d4, 0.0D, 0.0D, 0.0D, new int[0]);
                     break;
                 case 4:
                     worldIn.spawnParticle(EnumParticleTypes.SMOKE_NORMAL, d0 + d4, d1, d2 + d3, 0.0D, 0.0D, 0.0D, new int[0]);
                     worldIn.spawnParticle(EnumParticleTypes.PORTAL, d0 + d4, d1, d2 + d3, 0.0D, 0.0D, 0.0D, new int[0]);
-                    worldIn.spawnParticle(EnumParticleTypes.VILLAGER_HAPPY, d0 - d3, d1, d2 + d4, 0.0D, 0.0D, 0.0D, new int[0]);
+                    //worldIn.spawnParticle(EnumParticleTypes.VILLAGER_HAPPY, d0 - d3, d1, d2 + d4, 0.0D, 0.0D, 0.0D, new int[0]);
             }
         }
     }
@@ -139,9 +137,9 @@ public class BlockFurnaceEA extends BlockContainer {
         {
             TileEntity tileentity = worldIn.getTileEntity(pos);
 
-            if (tileentity instanceof TileEntityFurnace)
+            if (tileentity instanceof TileEntityFurnaceEA)
             {
-                playerIn.displayGUIChest((TileEntityFurnace)tileentity);
+                playerIn.displayGUIChest((TileEntityFurnaceEA)tileentity);
             }
 
             return true;
@@ -179,7 +177,7 @@ public class BlockFurnaceEA extends BlockContainer {
      */
     public TileEntity createNewTileEntity(World worldIn, int meta)
     {
-        return new TileEntityFurnace();
+        return new TileEntityFurnaceEA();
     }
 
     public IBlockState onBlockPlaced(World worldIn, BlockPos pos, EnumFacing facing, float hitX, float hitY, float hitZ, int meta, EntityLivingBase placer)
@@ -195,9 +193,9 @@ public class BlockFurnaceEA extends BlockContainer {
         {
             TileEntity tileentity = worldIn.getTileEntity(pos);
 
-            if (tileentity instanceof TileEntityFurnace)
+            if (tileentity instanceof TileEntityFurnaceEA)
             {
-                ((TileEntityFurnace)tileentity).setCustomInventoryName(stack.getDisplayName());
+                ((TileEntityFurnaceEA)tileentity).setCustomInventoryName(stack.getDisplayName());
             }
         }
     }
@@ -208,9 +206,9 @@ public class BlockFurnaceEA extends BlockContainer {
         {
             TileEntity tileentity = worldIn.getTileEntity(pos);
 
-            if (tileentity instanceof TileEntityFurnace)
+            if (tileentity instanceof TileEntityFurnaceEA)
             {
-                InventoryHelper.dropInventoryItems(worldIn, pos, (TileEntityFurnace)tileentity);
+                InventoryHelper.dropInventoryItems(worldIn, pos, (TileEntityFurnaceEA)tileentity);
                 worldIn.updateComparatorOutputLevel(pos, this);
             }
         }
@@ -284,7 +282,7 @@ public class BlockFurnaceEA extends BlockContainer {
     static final class SwitchEnumFacing
         {
             static final int[] FACING_LOOKUP = new int[EnumFacing.values().length];
-            //private static final String __OBFID = "CL_00002111";
+            
 
             static
             {

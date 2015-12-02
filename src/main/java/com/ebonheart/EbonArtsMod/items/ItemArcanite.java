@@ -12,9 +12,8 @@ public class ItemArcanite extends Item {
 
 	public ItemArcanite()
 	{
-		this.setHasSubtypes(true);
+		//this.setHasSubtypes(true);
         this.setMaxDamage(0);
-        //this.setCreativeTab(CreativeTabs.tabMaterials);
 		
 		
 	}
