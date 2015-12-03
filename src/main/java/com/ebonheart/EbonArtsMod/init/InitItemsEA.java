@@ -4,6 +4,7 @@ import net.minecraft.client.Minecraft;
 import net.minecraft.client.resources.model.ModelResourceLocation;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemArmor;
+import net.minecraft.item.ItemBucket;
 import net.minecraft.item.ItemFood;
 import net.minecraftforge.common.util.EnumHelper;
 import net.minecraftforge.fml.common.registry.GameRegistry;
@@ -55,6 +56,10 @@ public class InitItemsEA
 	
 	public static ItemFood banana;
 	
+	
+	//public static Item test_liquid_bucket;
+	
+	
 	//public static Item mans_steak;
 	
 	public static final Item.ToolMaterial arcaniteToolMaterial = EnumHelper.addToolMaterial("arcaniteToolMaterial", 2, 1500, 7.0F, 2.5F, 10);
@@ -79,6 +84,9 @@ public class InitItemsEA
 		arcanite_chestplate = new ItemArmorArcanite(arcaniteArmorMaterial, 0, 1).setUnlocalizedName("armor/arcanite_chestplate");
 		arcanite_leggings = new ItemArmorArcanite(arcaniteArmorMaterial, 0, 2).setUnlocalizedName("armor/arcanite_leggings");
 		arcanite_boots = new ItemArmorArcanite(arcaniteArmorMaterial, 0, 3).setUnlocalizedName("armor/arcanite_boots");
+		
+		
+		//test_liquid_bucket = new ItemBucket(InitBlocksEA.test_liquid).setUnlocalizedName("test_liquid_bucket").setCreativeTab(EbonArtsMod.tabEbonArtsItems).setContainerItem(test_liquid_bucket);
 		
 		
 		mystic_dust = new Item().setUnlocalizedName("mystic_dust").setCreativeTab(EbonArtsMod.tabEbonArtsItems);
@@ -113,6 +121,8 @@ public class InitItemsEA
 		GameRegistry.registerItem(arcanite_boots, arcanite_boots.getUnlocalizedName().substring(5));
 		
 		
+		//GameRegistry.registerItem(test_liquid_bucket, test_liquid_bucket.getUnlocalizedName().substring(5));
+		
 		
 		
 		GameRegistry.registerItem(mystic_dust, mystic_dust.getUnlocalizedName().substring(5));
@@ -144,6 +154,7 @@ public class InitItemsEA
 		registerRender(arcanite_leggings);
 		registerRender(arcanite_boots);
 		
+		//registerRender(test_liquid_bucket);
 		
 		registerRender(mystic_dust);
 		registerRender(purified_mystic_dust);

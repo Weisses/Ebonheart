@@ -1,24 +1,10 @@
 package com.ebonheart.EbonArtsMod.init;
 
 import net.minecraft.block.Block;
-import net.minecraft.block.BlockDoubleStoneSlab;
-import net.minecraft.block.BlockFence;
-import net.minecraft.block.BlockFenceGate;
-import net.minecraft.block.BlockFurnace;
-import net.minecraft.block.BlockHalfStoneSlab;
-import net.minecraft.block.BlockLog;
-import net.minecraft.block.BlockQuartz;
-import net.minecraft.block.BlockRotatedPillar;
-import net.minecraft.block.BlockSlab;
-import net.minecraft.block.BlockStairs;
-import net.minecraft.block.BlockWall;
 import net.minecraft.block.material.Material;
 import net.minecraft.client.Minecraft;
-import net.minecraft.client.renderer.block.model.ModelBlock;
 import net.minecraft.client.resources.model.ModelBakery;
 import net.minecraft.client.resources.model.ModelResourceLocation;
-import net.minecraft.creativetab.CreativeTabs;
-import net.minecraft.init.Blocks;
 import net.minecraft.item.Item;
 import net.minecraftforge.fml.common.registry.GameRegistry;
 
@@ -27,11 +13,12 @@ import com.ebonheart.EbonArtsMod.Reference;
 import com.ebonheart.EbonArtsMod.blocks.BlockArcaniteFenceNormal;
 import com.ebonheart.EbonArtsMod.blocks.BlockArcaniteMeta;
 import com.ebonheart.EbonArtsMod.blocks.BlockArcaniteNormal;
-import com.ebonheart.EbonArtsMod.blocks.TestBlockFurnaceEA;
 import com.ebonheart.EbonArtsMod.blocks.BlockInnateArcaniteNormal;
 import com.ebonheart.EbonArtsMod.blocks.BlockOreEA;
+import com.ebonheart.EbonArtsMod.blocks.TestBlockDynamicLiquidEA;
+import com.ebonheart.EbonArtsMod.blocks.TestBlockFurnaceEA;
+import com.ebonheart.EbonArtsMod.blocks.TestBlockStaticLiquidEA;
 import com.ebonheart.EbonArtsMod.items.ItemBlockMeta;
-import com.ebonheart.EbonArtsMod.tileentity.TileEntityBananaPlant;
 
 public class InitBlocksEA 
 {
@@ -54,6 +41,9 @@ public class InitBlocksEA
 	//public static Block arcanite_slab;
 	//public static Block arcanite_stairs;
 	public static Block purified_mystic_block;
+	
+	//public static Block test_liquid;
+	//public static Block flowing_test_liquid;
 	
 	public static Block mystic_furnace;
 	public static Block lit_mystic_furnace;
@@ -98,6 +88,8 @@ public class InitBlocksEA
 		mystic_furnace = new TestBlockFurnaceEA(false).setUnlocalizedName("machine/mystic_furnace").setCreativeTab(EbonArtsMod.tabEbonArtsBlocks);
 		lit_mystic_furnace = new TestBlockFurnaceEA(true).setUnlocalizedName("machine/lit_mystic_furnace").setCreativeTab(EbonArtsMod.tabEbonArtsBlocks);
 		
+		//test_liquid = new TestBlockStaticLiquidEA(Material.water);
+		//flowing_test_liquid = new TestBlockDynamicLiquidEA(Material.water);
 		
 		
 		//arcanite_column = new Block(Material.rock).setUnlocalizedName("gem/arcanite_column").setCreativeTab(EbonArtsMod.tabEbonArts);
@@ -129,6 +121,8 @@ public class InitBlocksEA
 		GameRegistry.registerBlock(mystic_furnace, mystic_furnace.getUnlocalizedName().substring(5));
 		GameRegistry.registerBlock(lit_mystic_furnace, lit_mystic_furnace.getUnlocalizedName().substring(5));
 		
+		//GameRegistry.registerBlock(test_liquid, test_liquid.getUnlocalizedName().substring(5));
+		//GameRegistry.registerBlock(flowing_test_liquid, flowing_test_liquid.getUnlocalizedName().substring(5));
 		
 		
 		//GameRegistry.registerBlock(arcanite_column, arcanite_column.getUnlocalizedName().substring(5));
@@ -194,6 +188,8 @@ public class InitBlocksEA
 		registerRender(mystic_furnace);
 		registerRender(lit_mystic_furnace);
 		
+		//registerRender(test_liquid);
+		//registerRender(flowing_test_liquid);
 		
 		//registerRender(arcanite_column);
 		//registerRender(arcanite_double_slab);
