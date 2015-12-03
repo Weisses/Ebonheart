@@ -31,7 +31,7 @@ public class EbonArtsMod {
 	
 	
 	//public static final EbonArtsTab tabEbonArts = new EbonArtsTab("tabEbonArts");
-	//public static final EbonArtsTabBlocks tabEbonArtsBlocks = new EbonArtsTabBlocks("tabEbonArtsBlocks");
+	public static final EbonArtsTabBlocks tabEbonArtsBlocks = new EbonArtsTabBlocks("tabEbonArtsBlocks");
 	public static final EbonArtsTabItems tabEbonArtsItems = new EbonArtsTabItems("tabEbonArtsItems");
 	
 	public static Configuration config;

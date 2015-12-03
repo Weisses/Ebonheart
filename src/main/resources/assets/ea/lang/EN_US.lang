@@ -1,34 +1,83 @@
+//-----Items-----
 item.gem/item_arcanite.name=Arcanite
 item.gem/arcanite_shard.name=Arcanite Shard
 item.gem/innate_arcanite.name=Innate Arcanite
+item.ebon_sigil.name=Ebon Sigil
 
+//-----Ores-----
 tile.ore/arcanite_ore.name=Arcanite Ore
 
-tile.gem/arcanite_block.name=Arcanite Block
-tile.gem/innate_arcanite_block.name=Innate Arcanite Block
+
+//-----Blocks-----
+tile.gem/arcanite_block_normal.name=Arcanite Block
+tile.gem/arcanite_block.white.name=White Arcanite Block
+tile.gem/arcanite_block.orange.name=Orange Arcanite Block
+tile.gem/arcanite_block.magenta.name=Magenta Arcanite Block
+tile.gem/arcanite_block.lightblue.name=Light Blue Arcanite Block
+tile.gem/arcanite_block.yellow.name=Yellow Arcanite Block
+tile.gem/arcanite_block.lime.name=Lime Arcanite Block
+tile.gem/arcanite_block.pink.name=Pink Arcanite Block
+tile.gem/arcanite_block.gray.name=Gray Arcanite Block
+tile.gem/arcanite_block.lightgray.name=Light Gray Arcanite Block
+tile.gem/arcanite_block.cyan.name=Cyan Arcanite Block
+tile.gem/arcanite_block.purple.name=Purple Arcanite Block
+tile.gem/arcanite_block.blue.name=Blue Arcanite Block
+tile.gem/arcanite_block.brown.name=Brown Arcanite Block
+tile.gem/arcanite_block.green.name=Green Arcanite Block
+tile.gem/arcanite_block.red.name=Red Arcanite Block
+tile.gem/arcanite_block.black.name=Black Arcanite Block
+
+
+tile.gem/innate_arcanite_block_normal.name=Innate Arcanite Block
+tile.gem/innate_arcanite_block.white.name=White Innate Arcanite Block
+tile.gem/innate_arcanite_block.orange.name=Orange Innate Arcanite Block
+tile.gem/innate_arcanite_block.magenta.name=Magenta Innate Arcanite Block
+tile.gem/innate_arcanite_block.lightblue.name=Light Blue Innate Arcanite Block
+tile.gem/innate_arcanite_block.yellow.name=Yellow Innate Arcanite Block
+tile.gem/innate_arcanite_block.lime.name=Lime Innate Arcanite Block
+tile.gem/innate_arcanite_block.pink.name=Pink Innate Arcanite Block
+tile.gem/innate_arcanite_block.gray.name=Gray Innate Arcanite Block
+tile.gem/innate_arcanite_block.lightgray.name=Light Gray Innate Arcanite Block
+tile.gem/innate_arcanite_block.cyan.name=Cyan Innate Arcanite Block
+tile.gem/innate_arcanite_block.purple.name=Purple Innate Arcanite Block
+tile.gem/innate_arcanite_block.blue.name=Blue Innate Arcanite Block
+tile.gem/innate_arcanite_block.brown.name=Brown Innate Arcanite Block
+tile.gem/innate_arcanite_block.green.name=Green Innate Arcanite Block
+tile.gem/innate_arcanite_block.red.name=Red Innate Arcanite Block
+tile.gem/innate_arcanite_block.black.name=Black Innate Arcanite Block
+
+
+
 tile.fence/arcanite_fence.name=Arcanite Fence
 tile.fence/innate_arcanite_fence.name=Innate Arcanite Fence
+
+//-----Tools-----
+item.tool/arcanite_pickaxe.name=Arcanite Pickaxe
+item.tool/arcanite_axe.name=Arcanite Axe
+item.tool/arcanite_shovel.name=Arcanite Shovel
+item.tool/arcanite_hoe.name=Arcanite Hoe
+item.tool/arcanite_sword.name=Arcanite Sword
+
+//-----Armor-----
+item.armor/arcanite_helmet.name=Arcanite Helmet
+item.armor/arcanite_chestplate.name=Arcanite Chestplate
+item.armor/arcanite_leggings.name=Arcanite Leggings
+item.armor/arcanite_boots.name=Arcanite Boots
+
 
 
 item.mystic_dust.name=Mystic Dust
 item.purified_mystic_dust.name=Purified Mystic Dust
 
-item.ebon_sigil.name=Ebon Sigil
+
 
 item.tier_1_catalyst.name=Catalyst (Tier 1)
 item.tier_2_catalyst.name=Catalyst (Tier 2)
 item.tier_3_catalyst.name=Catalyst (Tier 3)
 item.tier_4_catalyst.name=Catalyst (Tier 4)
 
-item.arcanite_pickaxe.name=Arcanite Pickaxe
-item.arcanite_axe.name=Arcanite Axe
-item.arcanite_shovel.name=Arcanite Shovel
-item.arcanite_hoe.name=Arcanite Hoe
-item.arcanite_sword.name=Arcanite Sword
-item.arcanite_helmet.name=Arcanite Helmet
-item.arcanite_chestplate.name=Arcanite Chestplate
-item.arcanite_leggings.name=Arcanite Leggings
-item.arcanite_boots.name=Arcanite Boots
+
+
 
 item.banana.name=Banana
 tile.bananaplant.name=Banana Plant

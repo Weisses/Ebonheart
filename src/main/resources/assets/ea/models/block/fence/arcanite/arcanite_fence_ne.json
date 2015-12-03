@@ -1,6 +1,6 @@
 {
 	"parent": "block/fence_ne",
 	"textures": {
-		"texture": "ea:blocks/gems/arcanite_block_side"
+		"texture": "ea:blocks/gems/arcanite_block_side_normal"
 	}
 }

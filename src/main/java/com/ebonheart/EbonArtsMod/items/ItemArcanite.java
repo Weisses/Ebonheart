@@ -15,9 +15,8 @@ public class ItemArcanite extends Item {
 	public ItemArcanite(String unlocalizedName)
 	{
 		super();
-		this.setUnlocalizedName(unlocalizedName);
+		this.setUnlocalizedName("gem/item_arcanite");
 		this.setCreativeTab(EbonArtsMod.tabEbonArtsItems);
-		
 	}
 	
 	

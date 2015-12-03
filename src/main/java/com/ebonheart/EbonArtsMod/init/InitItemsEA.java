@@ -14,9 +14,11 @@ import com.ebonheart.EbonArtsMod.items.ItemArcanite;
 import com.ebonheart.EbonArtsMod.items.ItemArcaniteAxe;
 import com.ebonheart.EbonArtsMod.items.ItemArcaniteHoe;
 import com.ebonheart.EbonArtsMod.items.ItemArcanitePickaxe;
+import com.ebonheart.EbonArtsMod.items.ItemArcaniteShard;
 import com.ebonheart.EbonArtsMod.items.ItemArcaniteShovel;
 import com.ebonheart.EbonArtsMod.items.ItemArcaniteSword;
 import com.ebonheart.EbonArtsMod.items.ItemArmorArcanite;
+import com.ebonheart.EbonArtsMod.items.ItemInnateArcanite;
 
 public class InitItemsEA {
 
@@ -62,20 +64,20 @@ public class InitItemsEA {
 	public static void init()
 	{
 		
-		item_arcanite = new ItemArcanite("item_arcanite").setUnlocalizedName("gem/item_arcanite").setCreativeTab(EbonArtsMod.tabEbonArtsItems);
-		arcanite_shard = new Item().setUnlocalizedName("gem/arcanite_shard").setCreativeTab(EbonArtsMod.tabEbonArtsItems);
-		innate_arcanite = new Item().setUnlocalizedName("gem/innate_arcanite").setCreativeTab(EbonArtsMod.tabEbonArtsItems);
+		item_arcanite = new ItemArcanite("item_arcanite");
+		arcanite_shard = new ItemArcaniteShard("arcanite_shard");
+		innate_arcanite = new ItemInnateArcanite("innate_arcanite");
 		
-		arcanite_pickaxe = new ItemArcanitePickaxe(arcaniteToolMaterial).setUnlocalizedName("arcanite_pickaxe").setCreativeTab(EbonArtsMod.tabEbonArtsItems);
-		arcanite_axe = new ItemArcaniteAxe(arcaniteToolMaterial).setUnlocalizedName("arcanite_axe").setCreativeTab(EbonArtsMod.tabEbonArtsItems);
-		arcanite_shovel = new ItemArcaniteShovel(arcaniteToolMaterial).setUnlocalizedName("arcanite_shovel").setCreativeTab(EbonArtsMod.tabEbonArtsItems);
-		arcanite_hoe = new ItemArcaniteHoe(arcaniteToolMaterial).setUnlocalizedName("arcanite_hoe").setCreativeTab(EbonArtsMod.tabEbonArtsItems);
-		arcanite_sword = new ItemArcaniteSword(arcaniteToolMaterial).setUnlocalizedName("arcanite_sword").setCreativeTab(EbonArtsMod.tabEbonArtsItems);
+		arcanite_pickaxe = new ItemArcanitePickaxe(arcaniteToolMaterial);
+		arcanite_axe = new ItemArcaniteAxe(arcaniteToolMaterial);
+		arcanite_shovel = new ItemArcaniteShovel(arcaniteToolMaterial);
+		arcanite_hoe = new ItemArcaniteHoe(arcaniteToolMaterial);
+		arcanite_sword = new ItemArcaniteSword(arcaniteToolMaterial);
 		
-		arcanite_helmet = new ItemArmorArcanite(arcaniteArmorMaterial, 0, 0).setUnlocalizedName("arcanite_helmet").setCreativeTab(EbonArtsMod.tabEbonArtsItems);
-		arcanite_chestplate = new ItemArmorArcanite(arcaniteArmorMaterial, 0, 1).setUnlocalizedName("arcanite_chestplate").setCreativeTab(EbonArtsMod.tabEbonArtsItems);
-		arcanite_leggings = new ItemArmorArcanite(arcaniteArmorMaterial, 0, 2).setUnlocalizedName("arcanite_leggings").setCreativeTab(EbonArtsMod.tabEbonArtsItems);
-		arcanite_boots = new ItemArmorArcanite(arcaniteArmorMaterial, 0, 3).setUnlocalizedName("arcanite_boots").setCreativeTab(EbonArtsMod.tabEbonArtsItems);
+		arcanite_helmet = new ItemArmorArcanite(arcaniteArmorMaterial, 0, 0).setUnlocalizedName("armor/arcanite_helmet");
+		arcanite_chestplate = new ItemArmorArcanite(arcaniteArmorMaterial, 0, 1).setUnlocalizedName("armor/arcanite_chestplate");
+		arcanite_leggings = new ItemArmorArcanite(arcaniteArmorMaterial, 0, 2).setUnlocalizedName("armor/arcanite_leggings");
+		arcanite_boots = new ItemArmorArcanite(arcaniteArmorMaterial, 0, 3).setUnlocalizedName("armor/arcanite_boots");
 		
 		
 		mystic_dust = new Item().setUnlocalizedName("mystic_dust").setCreativeTab(EbonArtsMod.tabEbonArtsItems);

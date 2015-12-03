@@ -1,0 +1,12 @@
+{
+    "parent": "block/cube",
+    "textures": {
+        "particle": "ea:blocks/gems/innate_arcanite_block_bottom_orange",
+        "down": "ea:blocks/gems/innate_arcanite_block_bottom_orange",
+        "up": "ea:blocks/gems/innate_arcanite_block_top_orange",
+        "north": "ea:blocks/gems/innate_arcanite_block_side_orange",
+        "east": "ea:blocks/gems/innate_arcanite_block_side_orange",
+        "south": "ea:blocks/gems/innate_arcanite_block_side_orange",
+        "west": "ea:blocks/gems/innate_arcanite_block_side_orange"
+    }
+}

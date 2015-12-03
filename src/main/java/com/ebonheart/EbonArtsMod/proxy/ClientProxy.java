@@ -10,13 +10,14 @@ import com.ebonheart.EbonArtsMod.Reference;
 import com.ebonheart.EbonArtsMod.init.InitBlocksEA;
 import com.ebonheart.EbonArtsMod.init.InitItemsEA;
 import com.ebonheart.EbonArtsMod.init.InitTileEntitiesEA;
-import com.ebonheart.EbonArtsMod.items.TestModItems;
 
 public class ClientProxy extends CommonProxy {
 	
     @Override
     public void preInit(FMLPreInitializationEvent e) {
         super.preInit(e);
+        
+        InitBlocksEA.preInit();
     }
 
     @Override
@@ -25,7 +26,9 @@ public class ClientProxy extends CommonProxy {
         
         
         InitItemsEA.registerRenders();
-        //TestModItems.registerRenders();
+        InitBlocksEA.registerRenders();
+        //InitBlocksEA.registerMetaRenders();
+        
     }
 
     @Override

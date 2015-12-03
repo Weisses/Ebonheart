@@ -5,8 +5,12 @@ import java.util.Random;
 import net.minecraft.block.Block;
 import net.minecraft.block.material.Material;
 import net.minecraft.block.state.IBlockState;
+import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.item.Item;
+import net.minecraft.util.BlockPos;
+import net.minecraft.world.World;
 
+import com.ebonheart.EbonArtsMod.EbonArtsMod;
 import com.ebonheart.EbonArtsMod.init.InitBlocksEA;
 import com.ebonheart.EbonArtsMod.init.InitItemsEA;
 
@@ -14,13 +18,17 @@ public class BlockOreEA extends Block {
 	
 	public BlockOreEA(Material materialIn) {
 		super(materialIn);
-		this.setHardness(4.5F);
+		this.setCreativeTab(EbonArtsMod.tabEbonArtsBlocks);
+		this.setHarvestLevel("pickaxe", 2);
+		this.setHardness(5F);
+		this.setResistance(1000F);
+		this.setStepSound(soundTypeStone);
 
 	}
 	
     public Item getItemDropped(IBlockState state, Random rand, int fortune)
     {
-    	return this == InitBlocksEA.arcanite_ore ? InitItemsEA.arcanite_shard : Item.getItemFromBlock(this);
+    	return this == InitBlocksEA.arcanite_ore ? InitItemsEA.item_arcanite : Item.getItemFromBlock(this);
 
         //return this == EbonArtsBlocks.arcanite_ore ? EbonArtsItems.arcanite_shard : (this == Blocks.diamond_ore ? Items.diamond : (this == Blocks.lapis_ore ? Items.dye : (this == Blocks.emerald_ore ? Items.emerald : (this == Blocks.quartz_ore ? Items.quartz : Item.getItemFromBlock(this)))));
 
@@ -49,5 +57,11 @@ public class BlockOreEA extends Block {
         {
             return this.quantityDropped(random);
         }
+    }
+    
+    public boolean canSilkHarvest(World world, BlockPos pos, IBlockState state, EntityPlayer player) 
+    {
+		return true;
+    	
     }
 }
