@@ -1,0 +1,6 @@
+{
+	"parent": "block/fence_inventory",
+	"textures": {
+		"texture": "ea:blocks/gems/arcanite/arcanite_block_side_normal"
+	}
+}

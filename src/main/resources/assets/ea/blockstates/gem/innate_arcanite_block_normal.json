@@ -1,5 +1,5 @@
 {
     "variants": {
-        "normal":   { "model": "ea:gem/innate_arcanite_block_normal" }
+        "normal":   { "model": "ea:gem/arcanite/innate_arcanite_block_normal" }
     }
 }

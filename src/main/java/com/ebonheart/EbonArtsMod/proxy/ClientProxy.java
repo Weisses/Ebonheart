@@ -11,41 +11,30 @@ import com.ebonheart.EbonArtsMod.init.InitBlocksEA;
 import com.ebonheart.EbonArtsMod.init.InitItemsEA;
 import com.ebonheart.EbonArtsMod.init.InitTileEntitiesEA;
 
-public class ClientProxy extends CommonProxy {
+public class ClientProxy extends CommonProxy 
+{
 	
-    @Override
-    public void preInit(FMLPreInitializationEvent e) {
-        super.preInit(e);
-        
-        InitBlocksEA.preInit();
-    }
-
-    @Override
-    public void init(FMLInitializationEvent e) {
-        super.init(e);
-        
-        
-        InitItemsEA.registerRenders();
-        InitBlocksEA.registerRenders();
-        //InitBlocksEA.registerMetaRenders();
-        
-    }
-
-    @Override
-    public void postInit(FMLPostInitializationEvent e) {
-        super.postInit(e);
-    }
-    
 	@Override
-	public void registerRenders()
+	public void preInit(FMLPreInitializationEvent e) 
 	{
-		//InitBlocksEA.registerRenders();
-		//InitItemsEA.registerRenders();
+		super.preInit(e);
 		
-		
-		
-		//EbonArtsTileEntities.registerRenders();
+		InitBlocksEA.preInit();
 	}
 	
+	@Override
+	public void init(FMLInitializationEvent e) 
+	{
+		super.init(e);
+		
+		InitItemsEA.registerRenders();
+		InitBlocksEA.registerRenders();
+		//InitBlocksEA.registerMetaRenders();
+	}
 	
+	@Override
+	public void postInit(FMLPostInitializationEvent e) 
+	{
+		super.postInit(e);
+	}
 }

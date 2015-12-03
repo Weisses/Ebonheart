@@ -12,7 +12,8 @@ import net.minecraftforge.fml.relauncher.SideOnly;
 
 public class BlockInnateArcaniteNormal extends Block {
 
-	public BlockInnateArcaniteNormal(Material materialIn) {
+	public BlockInnateArcaniteNormal(Material materialIn) 
+	{
 		super(materialIn);
 		this.setUnlocalizedName("gem/innate_arcanite_block_normal");
 		this.setCreativeTab(EbonArtsMod.tabEbonArtsBlocks);
@@ -20,10 +21,5 @@ public class BlockInnateArcaniteNormal extends Block {
 		this.setHardness(5F);
 		this.setResistance(1000F);
 		this.setStepSound(soundTypeStone);
-		
-		
-		
 	}
-
-	
 }

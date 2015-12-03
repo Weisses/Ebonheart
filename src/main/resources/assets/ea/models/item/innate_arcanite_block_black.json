@@ -1,5 +1,5 @@
 {
-    "parent": "ea:block/gem/innate_arcanite_block_black",
+    "parent": "ea:block/gem/arcanite/innate_arcanite_block_black",
     "display": {
         "thirdperson": {
             "rotation": [ 10, -45, 170 ],

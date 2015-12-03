@@ -2,7 +2,8 @@ package com.ebonheart.EbonArtsMod;
 
 import net.minecraftforge.fml.common.FMLCommonHandler;
 
-public class EbonArtsConfiguration {
+public class EbonArtsConfiguration 
+{
 
 	public static boolean cheapRecipe;
 	public static final boolean CHEAPRECIPE_DEFAULT = false;
@@ -19,6 +20,5 @@ public class EbonArtsConfiguration {
 		{
 			EbonArtsMod.config.save();
 		}
-		
 	}
 }

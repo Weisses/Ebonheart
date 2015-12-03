@@ -13,7 +13,6 @@ import net.minecraftforge.fml.common.eventhandler.SubscribeEvent;
 
 import org.apache.logging.log4j.Logger;
 
-import com.ebonheart.EbonArtsMod.api.EbonArtsTab;
 import com.ebonheart.EbonArtsMod.api.EbonArtsTabBlocks;
 import com.ebonheart.EbonArtsMod.api.EbonArtsTabItems;
 import com.ebonheart.EbonArtsMod.init.InitAchievementsEA;
@@ -24,7 +23,8 @@ import com.ebonheart.EbonArtsMod.init.InitTileEntitiesEA;
 import com.ebonheart.EbonArtsMod.proxy.CommonProxy;
 
 @Mod(modid = Reference.MOD_ID, name = Reference.MOD_NAME, version = Reference.MOD_VERSION)
-public class EbonArtsMod {
+public class EbonArtsMod 
+{
 
 	@SidedProxy(clientSide = Reference.CLIENT_PROXY_CLASS, serverSide = Reference.SERVER_PROXY_CLASS)
 	public static CommonProxy proxy;
@@ -100,7 +100,4 @@ public class EbonArtsMod {
 		
 		
 	}
-	
-	
-	
 }

@@ -1,5 +1,5 @@
 {
-    "parent": "ea:block/gem/arcanite_block_lightblue",
+    "parent": "ea:block/gem/arcanite/arcanite_block_lightblue",
     "display": {
         "thirdperson": {
             "rotation": [ 10, -45, 170 ],

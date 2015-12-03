@@ -1,0 +1,12 @@
+{
+    "parent": "block/cube",
+    "textures": {
+        "particle": "ea:blocks/gems/arcanite/arcanite_block_bottom_lime",
+        "down": "ea:blocks/gems/arcanite/arcanite_block_bottom_lime",
+        "up": "ea:blocks/gems/arcanite/arcanite_block_top_lime",
+        "north": "ea:blocks/gems/arcanite/arcanite_block_side_lime",
+        "east": "ea:blocks/gems/arcanite/arcanite_block_side_lime",
+        "south": "ea:blocks/gems/arcanite/arcanite_block_side_lime",
+        "west": "ea:blocks/gems/arcanite/arcanite_block_side_lime"
+    }
+}

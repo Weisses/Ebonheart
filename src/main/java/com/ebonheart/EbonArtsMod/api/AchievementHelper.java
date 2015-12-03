@@ -13,18 +13,19 @@ import com.ebonheart.EbonArtsMod.init.InitBlocksEA;
 import com.ebonheart.EbonArtsMod.init.InitItemsEA;
 
 public class AchievementHelper {
-	
-  
 
 	@SubscribeEvent
-	public void onPickup(PlayerEvent.ItemPickupEvent event) {
-		if(event.pickedUp.getEntityItem().isItemEqual(new ItemStack(Block.getBlockFromItem(InitItemsEA.arcanite_shard)))) {
-		
+	public void onPickup(PlayerEvent.ItemPickupEvent event) 
+	{
+		if(event.pickedUp.getEntityItem().isItemEqual(new ItemStack(Block.getBlockFromItem(InitItemsEA.arcanite_shard)))) 
+		{
 			event.player.triggerAchievement(InitAchievementsEA.mine_arcanite_shard);
-		
 		}
 	}
 	
+	
+	
+	//Pickup an item achievement
 	//@SubscribeEvent
 	//public void onPickup(PlayerEvent.ItemPickupEvent event) {
 	//	if(event.pickedUp.getEntityItem().isItemEqual(new ItemStack(Item.getItemFromBlock(EbonArtsBlocks.arcanite_ore)))) {
@@ -34,6 +35,9 @@ public class AchievementHelper {
 	//	}
 	//}
 		
+	
+	
+	//Smelt an item achievement
 	//@SubscribeEvent
 	//public void onSmelt(PlayerEvent.ItemSmeltedEvent event) {
 	//	if(event.smelting.getItem() == EbonArtsItems.purified_mystic_dust) {
@@ -42,6 +46,10 @@ public class AchievementHelper {
 		
 	//	}
 	//}
+	
+	
+	
+	//Craft an item achievement
 	//@SubscribeEvent
 	//public void onCraft(PlayerEvent.ItemCraftedEvent event) {
 	//	if(event.crafting.getItem() == EbonArtsItems.ebon_sigil) {
@@ -50,7 +58,4 @@ public class AchievementHelper {
 		
 	//	}
 	//}
-				
-		
-
 }

@@ -48,8 +48,8 @@ tile.gem/innate_arcanite_block.black.name=Black Innate Arcanite Block
 
 
 
-tile.fence/arcanite_fence.name=Arcanite Fence
-tile.fence/innate_arcanite_fence.name=Innate Arcanite Fence
+tile.fence/arcanite_fence_normal.name=Arcanite Fence
+tile.fence/innate_arcanite_fence_normal.name=Innate Arcanite Fence
 
 //-----Tools-----
 item.tool/arcanite_pickaxe.name=Arcanite Pickaxe

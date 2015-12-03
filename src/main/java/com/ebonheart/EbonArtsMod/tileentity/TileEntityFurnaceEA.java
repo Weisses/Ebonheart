@@ -1,7 +1,7 @@
 package com.ebonheart.EbonArtsMod.tileentity;
 
 import com.ebonheart.EbonArtsMod.api.MysticFurnaceRecipes;
-import com.ebonheart.EbonArtsMod.blocks.BlockFurnaceEA;
+import com.ebonheart.EbonArtsMod.blocks.TestBlockFurnaceEA;
 import com.ebonheart.EbonArtsMod.init.InitItemsEA;
 
 import net.minecraft.block.Block;
@@ -301,7 +301,7 @@ public class TileEntityFurnaceEA extends TileEntityLockable implements IUpdatePl
             if (flag != this.isBurning())
             {
                 flag1 = true;
-                BlockFurnaceEA.setState(this.isBurning(), this.worldObj, this.pos);
+                TestBlockFurnaceEA.setState(this.isBurning(), this.worldObj, this.pos);
             }
         }
 

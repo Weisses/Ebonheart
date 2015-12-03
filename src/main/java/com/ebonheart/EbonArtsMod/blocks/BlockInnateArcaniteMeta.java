@@ -35,28 +35,21 @@ public class BlockInnateArcaniteMeta extends Block implements IMetaBlockName {
 		this.setResistance(1000F);
 		this.setStepSound(soundTypeStone);
 		this.setDefaultState(this.blockState.getBaseState().withProperty(TYPE, EnumType.WHITE));
-
 	}
-	
-	
-	
+
 	//This methods returns a BlockState which contains every property the block has.
 	@Override
 	protected BlockState createBlockState() 
 	{
 	    return new BlockState(this, new IProperty[] { TYPE });
 	}
-	
-	
-	
+
 	//These 2 methods are used to convert a IBlocState into metadata and the other way around.
 	@Override
 	public IBlockState getStateFromMeta(int meta) 
 	{
-		
 		switch(meta)
 		{
-			
 		case 0:
 			return getDefaultState().withProperty(TYPE, EnumType.WHITE);
 			
@@ -104,15 +97,8 @@ public class BlockInnateArcaniteMeta extends Block implements IMetaBlockName {
 			
 		case 15:
 			return getDefaultState().withProperty(TYPE, EnumType.BLACK);
-
-
-
-			
-			
 		}
-
 		return getDefaultState().withProperty(TYPE, EnumType.WHITE);
-	
 	}
 
 	@Override
@@ -121,19 +107,18 @@ public class BlockInnateArcaniteMeta extends Block implements IMetaBlockName {
 	    EnumType type = (EnumType) state.getValue(TYPE);
 	    return type.getID();
 	}
-	
-	
+
 	//Override the method damageDropped so that the block drops the item with the corresponding metadata.
 	@Override
-	public int damageDropped(IBlockState state) {
+	public int damageDropped(IBlockState state) 
+	{
 	    return getMetaFromState(state);
 	}
-	
-	
-	
+
 	//Add the ItemStacks with the different metadata values to the list of itemstacks that is finally displayed in the creative tab
 	@Override
-	public void getSubBlocks(Item itemIn, CreativeTabs tab, List list) {
+	public void getSubBlocks(Item itemIn, CreativeTabs tab, List list) 
+	{
 	    list.add(new ItemStack(itemIn, 1, 0)); //Meta 0
 	    list.add(new ItemStack(itemIn, 1, 1)); //Meta 1
 	    list.add(new ItemStack(itemIn, 1, 2)); //Meta 2
@@ -150,19 +135,14 @@ public class BlockInnateArcaniteMeta extends Block implements IMetaBlockName {
 	    list.add(new ItemStack(itemIn, 1, 13)); //Meta 13
 	    list.add(new ItemStack(itemIn, 1, 14)); //Meta 14
 	    list.add(new ItemStack(itemIn, 1, 15)); //Meta 15
-	    
 	}
-	
-	
-	
-	
+
 	//get the type name from the metadata
 	@Override
-	public String getSpecialName(ItemStack stack) {
-		
+	public String getSpecialName(ItemStack stack) 
+	{
 		switch(stack.getItemDamage())
 		{
-			
 		case 0:
 			return "white";
 			
@@ -210,29 +190,17 @@ public class BlockInnateArcaniteMeta extends Block implements IMetaBlockName {
 			
 		case 15:
 			return "black";
-			
-		
 		}
 		return "white";
 	}
-	
+
 	//define which ItemStack we'll get when we pick the block in creative mode
 	@Override
-	public ItemStack getPickBlock(MovingObjectPosition target, World world, BlockPos pos) {
+	public ItemStack getPickBlock(MovingObjectPosition target, World world, BlockPos pos) 
+	{
 	    return new ItemStack(Item.getItemFromBlock(this), 1, this.getMetaFromState(world.getBlockState(pos)));
 	}
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
+
 	//Simple Enum enclosed class.
 	public enum EnumType implements IStringSerializable 
 	{
@@ -278,10 +246,5 @@ public class BlockInnateArcaniteMeta extends Block implements IMetaBlockName {
 	    {
 	        return getName();
 	    }
-	    
 	}
-	
-	
-
-	
 }

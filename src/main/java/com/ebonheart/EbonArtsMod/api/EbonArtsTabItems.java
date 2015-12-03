@@ -7,15 +7,15 @@ import com.ebonheart.EbonArtsMod.init.InitItemsEA;
 
 public class EbonArtsTabItems extends CreativeTabs {
 
-	public EbonArtsTabItems(String label) {
+	public EbonArtsTabItems(String label) 
+	{
 		super(label);
 		this.setBackgroundImageName("ebonarts.png");
 	}
 
 	@Override
-	public Item getTabIconItem() {
-		
+	public Item getTabIconItem() 
+	{
 		return InitItemsEA.ebon_sigil;
 	}
-
 }

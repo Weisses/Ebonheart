@@ -1,5 +1,5 @@
 {
-	"parent": "ea:block/fence/arcanite/arcanite_fence_inventory",
+	"parent": "ea:block/fence/arcanite/arcanite_fence_inventory_normal",
 	"display": {
 		"thirdperson": {
 			"rotation": [ 0, 0, 180],

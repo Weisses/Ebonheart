@@ -11,33 +11,24 @@ import com.ebonheart.EbonArtsMod.init.InitBlocksEA;
 import com.ebonheart.EbonArtsMod.init.InitItemsEA;
 import com.ebonheart.EbonArtsMod.init.InitTileEntitiesEA;
 
-public class ServerProxy extends CommonProxy {
-	
-    @Override
-    public void preInit(FMLPreInitializationEvent e) {
-        super.preInit(e);
-    }
-
-    @Override
-    public void init(FMLInitializationEvent e) {
-        super.init(e);
-    }
-
-    @Override
-    public void postInit(FMLPostInitializationEvent e) {
-        super.postInit(e);
-    }
+public class ServerProxy extends CommonProxy 
+{
 	
 	@Override
-	public void registerRenders()
+	public void preInit(FMLPreInitializationEvent e) 
 	{
-		//InitBlocksEA.registerRenders();
-		//InitItemsEA.registerRenders();
-		
-		
-		
-		//EbonArtsTileEntities.registerRenders();
+		super.preInit(e);
 	}
 	
+	@Override
+	public void init(FMLInitializationEvent e) 
+	{
+		super.init(e);
+	}
 	
+	@Override
+	public void postInit(FMLPostInitializationEvent e) 
+	{
+		super.postInit(e);
+	}
 }

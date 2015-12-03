@@ -20,7 +20,8 @@ import com.ebonheart.EbonArtsMod.items.ItemArcaniteSword;
 import com.ebonheart.EbonArtsMod.items.ItemArmorArcanite;
 import com.ebonheart.EbonArtsMod.items.ItemInnateArcanite;
 
-public class InitItemsEA {
+public class InitItemsEA 
+{
 
 	public static Item item_arcanite;
 	public static Item arcanite_shard;
@@ -159,6 +160,4 @@ public class InitItemsEA {
 	{
 		Minecraft.getMinecraft().getRenderItem().getItemModelMesher().register(item, 0, new ModelResourceLocation(Reference.MOD_ID + ":" + item.getUnlocalizedName().substring(5), "inventory"));
 	}
-	
-	
 }

@@ -16,25 +16,23 @@ import com.ebonheart.EbonArtsMod.init.InitItemsEA;
 
 public class BlockOreEA extends Block {
 	
-	public BlockOreEA(Material materialIn) {
+	public BlockOreEA(Material materialIn) 
+	{
 		super(materialIn);
 		this.setCreativeTab(EbonArtsMod.tabEbonArtsBlocks);
 		this.setHarvestLevel("pickaxe", 2);
 		this.setHardness(5F);
 		this.setResistance(1000F);
 		this.setStepSound(soundTypeStone);
-
 	}
-	
+
     public Item getItemDropped(IBlockState state, Random rand, int fortune)
     {
     	return this == InitBlocksEA.arcanite_ore ? InitItemsEA.item_arcanite : Item.getItemFromBlock(this);
 
         //return this == EbonArtsBlocks.arcanite_ore ? EbonArtsItems.arcanite_shard : (this == Blocks.diamond_ore ? Items.diamond : (this == Blocks.lapis_ore ? Items.dye : (this == Blocks.emerald_ore ? Items.emerald : (this == Blocks.quartz_ore ? Items.quartz : Item.getItemFromBlock(this)))));
-
-        
     }
-    
+
     public int quantityDropped(Random random)
     {
         return this == InitBlocksEA.arcanite_ore ? 1 + random.nextInt(4) : 1;
@@ -58,10 +56,9 @@ public class BlockOreEA extends Block {
             return this.quantityDropped(random);
         }
     }
-    
+
     public boolean canSilkHarvest(World world, BlockPos pos, IBlockState state, EntityPlayer player) 
     {
 		return true;
-    	
     }
 }

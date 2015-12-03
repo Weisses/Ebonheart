@@ -24,15 +24,17 @@ import net.minecraftforge.fml.common.registry.GameRegistry;
 
 import com.ebonheart.EbonArtsMod.EbonArtsMod;
 import com.ebonheart.EbonArtsMod.Reference;
+import com.ebonheart.EbonArtsMod.blocks.BlockArcaniteFenceNormal;
 import com.ebonheart.EbonArtsMod.blocks.BlockArcaniteMeta;
 import com.ebonheart.EbonArtsMod.blocks.BlockArcaniteNormal;
-import com.ebonheart.EbonArtsMod.blocks.BlockFurnaceEA;
+import com.ebonheart.EbonArtsMod.blocks.TestBlockFurnaceEA;
 import com.ebonheart.EbonArtsMod.blocks.BlockInnateArcaniteNormal;
 import com.ebonheart.EbonArtsMod.blocks.BlockOreEA;
 import com.ebonheart.EbonArtsMod.items.ItemBlockMeta;
 import com.ebonheart.EbonArtsMod.tileentity.TileEntityBananaPlant;
 
-public class InitBlocksEA {
+public class InitBlocksEA 
+{
 	
 	public static Block arcanite_ore;
 	
@@ -56,24 +58,9 @@ public class InitBlocksEA {
 	public static Block mystic_furnace;
 	public static Block lit_mystic_furnace;
 	
-	public static void preInit() {
-		ModelBakery.addVariantName(Item.getItemFromBlock(InitBlocksEA.arcanite_block), 
-				"ea:arcanite_block_white", 
-				"ea:arcanite_block_orange", 
-				"ea:arcanite_block_magenta", 
-				"ea:arcanite_block_lightblue", 
-				"ea:arcanite_block_yellow", 
-				"ea:arcanite_block_lime", 
-				"ea:arcanite_block_pink", 
-				"ea:arcanite_block_gray", 
-				"ea:arcanite_block_lightgray", 
-				"ea:arcanite_block_cyan", 
-				"ea:arcanite_block_purple", 
-				"ea:arcanite_block_blue", 
-				"ea:arcanite_block_brown", 
-				"ea:arcanite_block_green", 
-				"ea:arcanite_block_red", 
-				"ea:arcanite_block_black");
+	public static void preInit() 
+	{
+		ModelBakery.addVariantName(Item.getItemFromBlock(InitBlocksEA.arcanite_block), "ea:arcanite_block_white", "ea:arcanite_block_orange", "ea:arcanite_block_magenta", "ea:arcanite_block_lightblue", "ea:arcanite_block_yellow", "ea:arcanite_block_lime", "ea:arcanite_block_pink", "ea:arcanite_block_gray", "ea:arcanite_block_lightgray", "ea:arcanite_block_cyan", "ea:arcanite_block_purple", "ea:arcanite_block_blue", "ea:arcanite_block_brown", "ea:arcanite_block_green", "ea:arcanite_block_red", "ea:arcanite_block_black");
 		
 		ModelBakery.addVariantName(Item.getItemFromBlock(InitBlocksEA.innate_arcanite_block), 
 				"ea:innate_arcanite_block_white", 
@@ -101,15 +88,15 @@ public class InitBlocksEA {
 		
 		
 		arcanite_block_normal = new BlockArcaniteNormal(Material.rock);
-		arcanite_fence_normal = new BlockFence(Material.rock).setUnlocalizedName("fence/arcanite_fence_normal").setCreativeTab(EbonArtsMod.tabEbonArtsBlocks);
+		arcanite_fence_normal = new BlockArcaniteFenceNormal(Material.rock);
 		//arcanite_fence_gate = new BlockFenceGate().setUnlocalizedName("fence/arcanite_fence_gate").setCreativeTab(EbonArtsMod.tabEbonArtsBlocks);
 		//arcanite_wall = new BlockWall(EbonArtsBlocks.arcanite_block).setUnlocalizedName("wall/arcanite_wall").setCreativeTab(EbonArtsMod.tabEbonArtsBlocks);
 		//arcanite_wall_gate = new BlockFenceGate().setUnlocalizedName("wall/arcanite_wall_gate").setCreativeTab(EbonArtsMod.tabEbonArtsBlocks);
 		
 		innate_arcanite_block_normal = new BlockInnateArcaniteNormal(Material.rock);
 		
-		mystic_furnace = new BlockFurnaceEA(false).setUnlocalizedName("machine/mystic_furnace").setCreativeTab(EbonArtsMod.tabEbonArtsBlocks);
-		lit_mystic_furnace = new BlockFurnaceEA(true).setUnlocalizedName("machine/lit_mystic_furnace").setCreativeTab(EbonArtsMod.tabEbonArtsBlocks);
+		mystic_furnace = new TestBlockFurnaceEA(false).setUnlocalizedName("machine/mystic_furnace").setCreativeTab(EbonArtsMod.tabEbonArtsBlocks);
+		lit_mystic_furnace = new TestBlockFurnaceEA(true).setUnlocalizedName("machine/lit_mystic_furnace").setCreativeTab(EbonArtsMod.tabEbonArtsBlocks);
 		
 		
 		
@@ -221,30 +208,10 @@ public class InitBlocksEA {
 	{
 		Item item = Item.getItemFromBlock(block);
 		Minecraft.getMinecraft().getRenderItem().getItemModelMesher().register(item, 0, new ModelResourceLocation(Reference.MOD_ID + ":" + item.getUnlocalizedName().substring(5), "inventory"));
-		
 	}
 	
-	public static void registerRender(Block block, int meta, String file) {
+	public static void registerRender(Block block, int meta, String file) 
+	{
 		Minecraft.getMinecraft().getRenderItem().getItemModelMesher().register(Item.getItemFromBlock(block), meta, new ModelResourceLocation(Reference.MOD_ID + ":" + file, "inventory"));
 	}
-	
-	
-	//Register metadata blocks
-	//public static void registerMetaRenders() {
-	//    reg(InitBlocksEA.arcanite_block);
-	//	registerMetaRender(InitBlocksEA.arcanite_block, 0, "ea:arcanite_block_black");
-	//	registerMetaRender(InitBlocksEA.arcanite_block, 1, "ea:gem/arcanite_block_white");
-	    
-	//}
-	
-	
-
-	
-	//public static void registerMetaRender(Block block, int meta, String file) {
-	//    Minecraft.getMinecraft().getRenderItem().getItemModelMesher()
-	//    .register(Item.getItemFromBlock(block), meta, new ModelResourceLocation(Reference.MOD_ID + ":" + file, "inventory"));
-	//}
-	
-	
-	
 }

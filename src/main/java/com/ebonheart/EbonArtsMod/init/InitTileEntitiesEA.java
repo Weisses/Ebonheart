@@ -18,7 +18,8 @@ import com.ebonheart.EbonArtsMod.blocks.BlockOreEA;
 import com.ebonheart.EbonArtsMod.tileentity.BlockBananaPlantRoot;
 import com.ebonheart.EbonArtsMod.tileentity.TileEntityBananaPlant;
 
-public class InitTileEntitiesEA {
+public class InitTileEntitiesEA 
+{
 
 	public static BlockBananaPlantRoot bananaplant;
 	

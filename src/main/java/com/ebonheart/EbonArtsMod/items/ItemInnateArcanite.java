@@ -10,7 +10,8 @@ import net.minecraft.item.ItemStack;
 import net.minecraftforge.fml.relauncher.Side;
 import net.minecraftforge.fml.relauncher.SideOnly;
 
-public class ItemInnateArcanite extends Item {
+public class ItemInnateArcanite extends Item 
+{
 
 	public ItemInnateArcanite(String unlocalizedName)
 	{
