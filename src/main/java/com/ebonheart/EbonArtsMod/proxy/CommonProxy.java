@@ -3,17 +3,11 @@ package com.ebonheart.EbonArtsMod.proxy;
 import net.minecraftforge.fml.common.event.FMLInitializationEvent;
 import net.minecraftforge.fml.common.event.FMLPostInitializationEvent;
 import net.minecraftforge.fml.common.event.FMLPreInitializationEvent;
-import net.minecraftforge.fml.common.network.NetworkRegistry;
 import net.minecraftforge.fml.common.registry.GameRegistry;
 
-
-
-import com.ebonheart.EbonArtsMod.EbonArtsMod;
-import com.ebonheart.EbonArtsMod.api.GuiHandler;
 import com.ebonheart.EbonArtsMod.init.InitBlocksEA;
 import com.ebonheart.EbonArtsMod.init.InitItemsEA;
-import com.ebonheart.EbonArtsMod.init.InitTileEntitiesEA;
-import com.ebonheart.EbonArtsMod.tileentity.BlockBananaPlantRoot;
+import com.ebonheart.EbonArtsMod.tileentity.TestTileEntities;
 import com.ebonheart.EbonArtsMod.world.WorldGeneratorEA;
 
 public class CommonProxy 
@@ -25,13 +19,14 @@ public class CommonProxy
 		InitItemsEA.register();
 		InitBlocksEA.init();
 		InitBlocksEA.register();
+		TestTileEntities.init();
 		
 	}
 	
 	public void init(FMLInitializationEvent event) 
 	{
 		GameRegistry.registerWorldGenerator(new WorldGeneratorEA(), 0);
-		NetworkRegistry.INSTANCE.registerGuiHandler(EbonArtsMod.instance, new GuiHandler());
+		//NetworkRegistry.INSTANCE.registerGuiHandler(EbonArtsMod.instance, new GuiHandler());
 	}
 	
 	public void postInit(FMLPostInitializationEvent event) 
