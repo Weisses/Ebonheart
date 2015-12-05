@@ -29,7 +29,8 @@ public class ClientProxy extends CommonProxy
 		
 		InitItemsEA.registerRenders();
 		InitBlocksEA.registerRenders();
-		//InitBlocksEA.registerMetaRenders();
+		
+		
 	}
 	
 	@Override

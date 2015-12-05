@@ -22,8 +22,30 @@ import com.ebonheart.EbonArtsMod.items.ItemBlockMeta;
 
 public class InitBlocksEA 
 {
-	
+	//basic ore dust; gem; ingot; ingot
+	public static Block draconium_ore;
+	public static Block velious_ore;
 	public static Block arcanite_ore;
+	public static Block katchin_ore;
+	public static Block ebon_ore;
+	
+	//advanced ore gem; gem
+	public static Block necrocite_ore;
+	public static Block soularite_ore;
+		
+	//public static Block onyxius_ore;
+	//public static Block carnelian_ore;
+	//public static Block velium_ore;
+	//public static Block amplimet_ore;
+	//public static Block enstatite_ore;
+	//public static Block velium_ore;
+	//public static Block infernus_ore;
+	//public static Block norn_stone;
+	//public static Block mystalite_ore;
+	
+	
+	
+	
 	
 	public static Block arcanite_block;
 	public static Block arcanite_block_normal;
@@ -74,7 +96,15 @@ public class InitBlocksEA
 	public static void init()
 	{
 		
-		arcanite_ore = new BlockOreEA(Material.rock).setUnlocalizedName("ore/arcanite_ore");
+		draconium_ore = new BlockOreEA(Material.rock, "pickaxe", 2, 0.4f).setUnlocalizedName("ore/draconium_ore");
+		velious_ore = new BlockOreEA(Material.rock, "pickaxe", 2, 0.4f).setUnlocalizedName("ore/velious_ore");
+		arcanite_ore = new BlockOreEA(Material.rock, "pickaxe", 3, 0f).setUnlocalizedName("ore/arcanite_ore");
+		katchin_ore = new BlockOreEA(Material.rock, "pickaxe", 3, 0f).setUnlocalizedName("ore/katchin_ore");
+		necrocite_ore = new BlockOreEA(Material.rock, "pickaxe", 3, 0f).setUnlocalizedName("ore/necrocite_ore");
+		soularite_ore = new BlockOreEA(Material.rock, "pickaxe", 3, 0f).setUnlocalizedName("ore/soularite_ore");
+		ebon_ore = new BlockOreEA(Material.rock, "pickaxe", 3, 0f).setUnlocalizedName("ore/ebon_ore");
+		
+		//carnelian_ore = new BlockOreEA(Material.rock).setUnlocalizedName("ore/carnelian_ore");
 		
 		
 		arcanite_block_normal = new BlockArcaniteNormal(Material.rock);
@@ -106,10 +136,20 @@ public class InitBlocksEA
 	public static void register()
 	{
 		
+		GameRegistry.registerBlock(draconium_ore, draconium_ore.getUnlocalizedName().substring(5));
+		GameRegistry.registerBlock(velious_ore, velious_ore.getUnlocalizedName().substring(5));
+		GameRegistry.registerBlock(arcanite_ore, arcanite_ore.getUnlocalizedName().substring(5));
+		GameRegistry.registerBlock(katchin_ore, katchin_ore.getUnlocalizedName().substring(5));
+		GameRegistry.registerBlock(necrocite_ore, necrocite_ore.getUnlocalizedName().substring(5));
+		GameRegistry.registerBlock(soularite_ore, soularite_ore.getUnlocalizedName().substring(5));
+		GameRegistry.registerBlock(ebon_ore, ebon_ore.getUnlocalizedName().substring(5));
+		
+		//GameRegistry.registerBlock(carnelian_ore, carnelian_ore.getUnlocalizedName().substring(5));
+		
+		
 		GameRegistry.registerBlock(arcanite_block = new BlockArcaniteMeta("gem/arcanite_block", Material.rock), ItemBlockMeta.class, "gem/arcanite_block");
 		GameRegistry.registerBlock(innate_arcanite_block = new BlockArcaniteMeta("gem/innate_arcanite_block", Material.rock), ItemBlockMeta.class, "gem/innate_arcanite_block");
 		
-		GameRegistry.registerBlock(arcanite_ore, arcanite_ore.getUnlocalizedName().substring(5));
 		GameRegistry.registerBlock(arcanite_block_normal, arcanite_block_normal.getUnlocalizedName().substring(5));
 		GameRegistry.registerBlock(arcanite_fence_normal, arcanite_fence_normal.getUnlocalizedName().substring(5));
 		//GameRegistry.registerBlock(arcanite_fence_gate, arcanite_fence_gate.getUnlocalizedName().substring(5));
@@ -138,7 +178,15 @@ public class InitBlocksEA
 	public static void registerRenders()
 	{
 		
+		registerRender(draconium_ore);
+		registerRender(velious_ore);
 		registerRender(arcanite_ore);
+		registerRender(katchin_ore);
+		registerRender(necrocite_ore);
+		registerRender(soularite_ore);
+		registerRender(ebon_ore);
+		
+		//registerRender(carnelian_ore);
 		
 		registerRender(arcanite_block_normal);
 		registerRender(arcanite_block);

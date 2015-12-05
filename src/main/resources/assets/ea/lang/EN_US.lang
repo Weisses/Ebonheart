@@ -6,6 +6,7 @@ item.ebon_sigil.name=Ebon Sigil
 
 //-----Ores-----
 tile.ore/arcanite_ore.name=Arcanite Ore
+tile.ore/draconium_ore.name=Draconium Ore
 
 
 //-----Blocks-----

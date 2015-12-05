@@ -13,17 +13,19 @@ import net.minecraft.world.World;
 import com.ebonheart.EbonArtsMod.EbonArtsMod;
 import com.ebonheart.EbonArtsMod.init.InitBlocksEA;
 import com.ebonheart.EbonArtsMod.init.InitItemsEA;
+import com.ebonheart.EbonArtsMod.tileentity.BlockBananaPlantRoot.HarvestLevelEnum;
 
 public class BlockOreEA extends Block {
 	
-	public BlockOreEA(Material materialIn) 
+	public BlockOreEA(Material materialIn, String harvesttool, int harvestlevel, float lightlevel) 
 	{
 		super(materialIn);
 		this.setCreativeTab(EbonArtsMod.tabEbonArtsBlocks);
-		this.setHarvestLevel("pickaxe", 2);
+		this.setHarvestLevel(harvesttool, harvestlevel); //("pickaxe", 2) is default
 		this.setHardness(5F);
 		this.setResistance(1000F);
 		this.setStepSound(soundTypeStone);
+		this.setLightLevel(lightlevel);
 	}
 
     public Item getItemDropped(IBlockState state, Random rand, int fortune)
