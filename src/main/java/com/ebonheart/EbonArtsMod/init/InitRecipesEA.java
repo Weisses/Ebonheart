@@ -13,8 +13,9 @@ public class InitRecipesEA
 
 	public static void init()
 	{
-		GameRegistry.addShapedRecipe(new ItemStack(InitBlocksEA.arcanite_block), new Object[]{"MMM", "MMM", "MMM", 'M', InitItemsEA.item_arcanite});
-		GameRegistry.addShapedRecipe(new ItemStack(InitItemsEA.item_arcanite, 9), new Object[]{"B", 'B', InitBlocksEA.arcanite_block});
+		
+		GameRegistry.addShapedRecipe(new ItemStack(InitBlocksEA.arcanite_block), new Object[]{"AAA", "AAA", "AAA", 'A', InitItemsEA.item_arcanite});
+		GameRegistry.addShapedRecipe(new ItemStack(InitItemsEA.item_arcanite, 9), new Object[]{"A", 'A', InitBlocksEA.arcanite_block});
 		
 		
 		
@@ -22,8 +23,10 @@ public class InitRecipesEA
 		GameRegistry.addShapedRecipe(new ItemStack(InitItemsEA.purified_mystic_dust, 9), new Object[]{"B", 'B', InitBlocksEA.purified_mystic_block});
 		GameRegistry.addShapedRecipe(new ItemStack(InitItemsEA.ebon_sigil), new Object[]{"MMM", "MBM", "MDM", 'M', InitItemsEA.mystic_dust, 'B', Items.book, 'D', Items.diamond});
 		
-		GameRegistry.addSmelting(new ItemStack(InitItemsEA.mystic_dust), new ItemStack(InitItemsEA.purified_mystic_dust), 10);
-	
+		
+		
+		GameRegistry.addSmelting(new ItemStack(InitBlocksEA.draconium_ore), new ItemStack(InitItemsEA.draconium_dust), 10f);
+		
 		
 		
 		

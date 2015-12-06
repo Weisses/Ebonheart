@@ -13,10 +13,10 @@ import net.minecraftforge.fml.common.registry.GameRegistry;
 
 import com.ebonheart.EbonArtsMod.EbonArtsMod;
 import com.ebonheart.EbonArtsMod.Reference;
-import com.ebonheart.EbonArtsMod.blocks.BlockArcaniteMeta;
-import com.ebonheart.EbonArtsMod.blocks.BlockOreEA;
-import com.ebonheart.EbonArtsMod.tileentity.BlockBananaPlantRoot;
-import com.ebonheart.EbonArtsMod.tileentity.TileEntityBananaPlant;
+import com.ebonheart.EbonArtsMod.common.blocks.basic.BlockArcaniteMeta;
+import com.ebonheart.EbonArtsMod.common.blocks.world.BlockOreEA;
+import com.ebonheart.EbonArtsMod.common.tileentities.plants.BlockBananaPlantRoot;
+import com.ebonheart.EbonArtsMod.common.tileentities.plants.TileEntityBananaPlant;
 
 public class InitTileEntitiesEA 
 {

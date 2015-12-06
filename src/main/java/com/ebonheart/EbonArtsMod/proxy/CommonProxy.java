@@ -5,10 +5,10 @@ import net.minecraftforge.fml.common.event.FMLPostInitializationEvent;
 import net.minecraftforge.fml.common.event.FMLPreInitializationEvent;
 import net.minecraftforge.fml.common.registry.GameRegistry;
 
+import com.ebonheart.EbonArtsMod.common.tileentities.TestTileEntities;
+import com.ebonheart.EbonArtsMod.common.world.WorldGeneratorEA;
 import com.ebonheart.EbonArtsMod.init.InitBlocksEA;
 import com.ebonheart.EbonArtsMod.init.InitItemsEA;
-import com.ebonheart.EbonArtsMod.tileentity.TestTileEntities;
-import com.ebonheart.EbonArtsMod.world.WorldGeneratorEA;
 
 public class CommonProxy 
 {

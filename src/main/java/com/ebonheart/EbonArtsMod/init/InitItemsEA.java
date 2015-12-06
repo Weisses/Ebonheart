@@ -11,19 +11,26 @@ import net.minecraftforge.fml.common.registry.GameRegistry;
 
 import com.ebonheart.EbonArtsMod.EbonArtsMod;
 import com.ebonheart.EbonArtsMod.Reference;
-import com.ebonheart.EbonArtsMod.items.ItemArcanite;
-import com.ebonheart.EbonArtsMod.items.ItemArcaniteAxe;
-import com.ebonheart.EbonArtsMod.items.ItemArcaniteHoe;
-import com.ebonheart.EbonArtsMod.items.ItemArcanitePickaxe;
-import com.ebonheart.EbonArtsMod.items.ItemArcaniteShard;
-import com.ebonheart.EbonArtsMod.items.ItemArcaniteShovel;
-import com.ebonheart.EbonArtsMod.items.ItemArcaniteSword;
-import com.ebonheart.EbonArtsMod.items.ItemArmorArcanite;
-import com.ebonheart.EbonArtsMod.items.ItemInnateArcanite;
+import com.ebonheart.EbonArtsMod.common.items.armor.ItemArmorArcanite;
+import com.ebonheart.EbonArtsMod.common.items.resources.ItemArcanite;
+import com.ebonheart.EbonArtsMod.common.items.resources.ItemArcaniteShard;
+import com.ebonheart.EbonArtsMod.common.items.resources.ItemInnateArcanite;
+import com.ebonheart.EbonArtsMod.common.items.tools.ItemArcaniteAxe;
+import com.ebonheart.EbonArtsMod.common.items.tools.ItemArcaniteHoe;
+import com.ebonheart.EbonArtsMod.common.items.tools.ItemArcanitePickaxe;
+import com.ebonheart.EbonArtsMod.common.items.tools.ItemArcaniteShovel;
+import com.ebonheart.EbonArtsMod.common.items.tools.ItemArcaniteSword;
 
 public class InitItemsEA 
 {
 
+	public static Item draconium_dust;
+	public static Item velious_gem;
+	public static Item arcanite_ingot;
+	public static Item katchin_ingot;
+	
+	
+	
 	public static Item item_arcanite;
 	public static Item arcanite_shard;
 	public static Item innate_arcanite;

@@ -10,15 +10,14 @@ import net.minecraftforge.fml.common.registry.GameRegistry;
 
 import com.ebonheart.EbonArtsMod.EbonArtsMod;
 import com.ebonheart.EbonArtsMod.Reference;
-import com.ebonheart.EbonArtsMod.blocks.BlockArcaniteFenceNormal;
-import com.ebonheart.EbonArtsMod.blocks.BlockArcaniteMeta;
-import com.ebonheart.EbonArtsMod.blocks.BlockArcaniteNormal;
-import com.ebonheart.EbonArtsMod.blocks.BlockInnateArcaniteNormal;
-import com.ebonheart.EbonArtsMod.blocks.BlockOreEA;
-import com.ebonheart.EbonArtsMod.blocks.TestBlockDynamicLiquidEA;
-import com.ebonheart.EbonArtsMod.blocks.TestBlockFurnaceEA;
-import com.ebonheart.EbonArtsMod.blocks.TestBlockStaticLiquidEA;
-import com.ebonheart.EbonArtsMod.items.ItemBlockMeta;
+import com.ebonheart.EbonArtsMod.api.meta.ItemBlockMeta;
+import com.ebonheart.EbonArtsMod.common.blocks.basic.BlockArcaniteFenceNormal;
+import com.ebonheart.EbonArtsMod.common.blocks.basic.BlockArcaniteMeta;
+import com.ebonheart.EbonArtsMod.common.blocks.basic.BlockArcaniteNormal;
+import com.ebonheart.EbonArtsMod.common.blocks.basic.BlockInnateArcaniteNormal;
+import com.ebonheart.EbonArtsMod.common.blocks.devices.TestBlockFurnaceEA;
+import com.ebonheart.EbonArtsMod.common.blocks.world.BlockOreEA;
+import com.ebonheart.EbonArtsMod.common.blocks.world.BlockMultiOre;
 
 public class InitBlocksEA 
 {
@@ -96,13 +95,13 @@ public class InitBlocksEA
 	public static void init()
 	{
 		
-		draconium_ore = new BlockOreEA(Material.rock, "pickaxe", 2, 0.4f).setUnlocalizedName("ore/draconium_ore");
-		velious_ore = new BlockOreEA(Material.rock, "pickaxe", 2, 0.4f).setUnlocalizedName("ore/velious_ore");
-		arcanite_ore = new BlockOreEA(Material.rock, "pickaxe", 3, 0f).setUnlocalizedName("ore/arcanite_ore");
-		katchin_ore = new BlockOreEA(Material.rock, "pickaxe", 3, 0f).setUnlocalizedName("ore/katchin_ore");
-		necrocite_ore = new BlockOreEA(Material.rock, "pickaxe", 3, 0f).setUnlocalizedName("ore/necrocite_ore");
-		soularite_ore = new BlockOreEA(Material.rock, "pickaxe", 3, 0f).setUnlocalizedName("ore/soularite_ore");
-		ebon_ore = new BlockOreEA(Material.rock, "pickaxe", 3, 0f).setUnlocalizedName("ore/ebon_ore");
+		draconium_ore = new BlockOreEA(Material.rock, "pickaxe", 2, 0.4f, 5f).setUnlocalizedName("ore/draconium_ore");
+		velious_ore = new BlockOreEA(Material.rock, "pickaxe", 2, 0.4f, 7f).setUnlocalizedName("ore/velious_ore");
+		arcanite_ore = new BlockOreEA(Material.rock, "pickaxe", 3, 0f, 10f).setUnlocalizedName("ore/arcanite_ore");
+		katchin_ore = new BlockOreEA(Material.rock, "pickaxe", 3, 0f, 18f).setUnlocalizedName("ore/katchin_ore");
+		necrocite_ore = new BlockOreEA(Material.rock, "pickaxe", 3, 0f, 15f).setUnlocalizedName("ore/necrocite_ore");
+		soularite_ore = new BlockOreEA(Material.rock, "pickaxe", 3, 0f, 15f).setUnlocalizedName("ore/soularite_ore");
+		ebon_ore = new BlockMultiOre(Material.rock);
 		
 		//carnelian_ore = new BlockOreEA(Material.rock).setUnlocalizedName("ore/carnelian_ore");
 		

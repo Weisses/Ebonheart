@@ -5,8 +5,14 @@ item.gem/innate_arcanite.name=Innate Arcanite
 item.ebon_sigil.name=Ebon Sigil
 
 //-----Ores-----
-tile.ore/arcanite_ore.name=Arcanite Ore
+
 tile.ore/draconium_ore.name=Draconium Ore
+tile.ore/velious_ore.name=Velious Ore
+tile.ore/arcanite_ore.name=Arcanite Ore
+tile.ore/katchin_ore.name=Katchin Ore
+tile.ore/ebon_ore.name=Ebon Ore
+tile.ore/necrocite_ore.name=Necrocite Ore
+tile.ore/soularite_ore.name=Soularite Ore
 
 
 //-----Blocks-----
