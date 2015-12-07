@@ -14,8 +14,8 @@ public class InitRecipesEA
 	public static void init()
 	{
 		
-		GameRegistry.addShapedRecipe(new ItemStack(InitBlocksEA.arcanite_block), new Object[]{"AAA", "AAA", "AAA", 'A', InitItemsEA.item_arcanite});
-		GameRegistry.addShapedRecipe(new ItemStack(InitItemsEA.item_arcanite, 9), new Object[]{"A", 'A', InitBlocksEA.arcanite_block});
+		GameRegistry.addShapedRecipe(new ItemStack(InitBlocksEA.arcanite_block), new Object[]{"AAA", "AAA", "AAA", 'A', InitItemsEA.arcanite});
+		GameRegistry.addShapedRecipe(new ItemStack(InitItemsEA.arcanite, 9), new Object[]{"A", 'A', InitBlocksEA.arcanite_block});
 		
 		
 		

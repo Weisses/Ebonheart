@@ -4,13 +4,13 @@ import com.ebonheart.EbonArtsMod.EbonArtsMod;
 
 import net.minecraft.item.ItemSword;
 
-public class ItemArcaniteSword extends ItemSword 
+public class ItemSwordEA extends ItemSword 
 {
 
-	public ItemArcaniteSword(ToolMaterial material) 
+	public ItemSwordEA(ToolMaterial material, String unlocalizedName) 
 	{
 		super(material);
-		this.setUnlocalizedName("tool/arcanite_sword");
+		this.setUnlocalizedName(unlocalizedName);
 		this.setCreativeTab(EbonArtsMod.tabEbonArtsItems);
 	}
 

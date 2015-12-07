@@ -4,13 +4,13 @@ import com.ebonheart.EbonArtsMod.EbonArtsMod;
 
 import net.minecraft.item.ItemPickaxe;
 
-public class ItemArcanitePickaxe extends ItemPickaxe 
+public class ItemPickaxeEA extends ItemPickaxe 
 {
 
-	public ItemArcanitePickaxe(ToolMaterial material) 
+	public ItemPickaxeEA(ToolMaterial material, String unlocalizedName) 
 	{
 		super(material);
-		this.setUnlocalizedName("tool/arcanite_pickaxe");
+		this.setUnlocalizedName(unlocalizedName);
 		this.setCreativeTab(EbonArtsMod.tabEbonArtsItems);
 
 	}

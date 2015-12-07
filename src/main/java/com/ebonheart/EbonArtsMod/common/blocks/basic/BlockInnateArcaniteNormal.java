@@ -15,7 +15,7 @@ public class BlockInnateArcaniteNormal extends Block {
 	public BlockInnateArcaniteNormal(Material materialIn) 
 	{
 		super(materialIn);
-		this.setUnlocalizedName("gem/innate_arcanite_block_normal");
+		this.setUnlocalizedName("gem/arcanite/innate_arcanite_block_normal");
 		this.setCreativeTab(EbonArtsMod.tabEbonArtsBlocks);
 		this.setHarvestLevel("pickaxe", 2);
 		this.setHardness(5F);

@@ -1,7 +1,7 @@
 {
     "parent": "builtin/generated",
     "textures": {
-        "layer0": "ea:items/tools/arcanite_pickaxe"
+        "layer0": "ea:items/tools/katchin_hoe"
     },
     "display": {
         "thirdperson": {

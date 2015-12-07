@@ -1,0 +1,7 @@
+{
+    "variants": {
+        "axis=y":  { "model": "ea:gem/arcanite_column_normal" },
+        "axis=z":   { "model": "ea:gem/arcanite_column_normal", "x": 90 },
+        "axis=x":   { "model": "ea:gem/arcanite_column_normal", "x": 90, "y": 90 }
+    }
+}

@@ -13,7 +13,7 @@ import net.minecraftforge.fml.common.registry.GameRegistry;
 
 import com.ebonheart.EbonArtsMod.EbonArtsMod;
 import com.ebonheart.EbonArtsMod.Reference;
-import com.ebonheart.EbonArtsMod.common.blocks.basic.BlockArcaniteMeta;
+import com.ebonheart.EbonArtsMod.common.blocks.basic.EABlockMeta;
 import com.ebonheart.EbonArtsMod.common.blocks.world.BlockOreEA;
 import com.ebonheart.EbonArtsMod.common.tileentities.plants.BlockBananaPlantRoot;
 import com.ebonheart.EbonArtsMod.common.tileentities.plants.TileEntityBananaPlant;

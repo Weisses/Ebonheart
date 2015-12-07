@@ -1,7 +1,7 @@
 {
     "parent": "builtin/generated",
     "textures": {
-        "layer0": "ea:items/arcanite_hoe"
+        "layer0": "ea:items/tools/arcanite_hoe"
     },
     "display": {
         "thirdperson": {

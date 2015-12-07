@@ -17,9 +17,10 @@ import com.ebonheart.EbonArtsMod.init.InitItemsEA;
 
 public class BlockOreEA extends Block {
 	
-	public BlockOreEA(Material materialIn, String harvesttool, int harvestlevel, float lightlevel, float hardness) 
+	public BlockOreEA(Material materialIn, String unlocalizedName, String harvesttool, int harvestlevel, float lightlevel, float hardness) 
 	{
 		super(materialIn);
+		this.setUnlocalizedName(unlocalizedName);
 		this.setCreativeTab(EbonArtsMod.tabEbonArtsBlocks);
 		this.setHarvestLevel(harvesttool, harvestlevel); //("pickaxe", 2) is default
 		this.setHardness(hardness);
@@ -30,8 +31,9 @@ public class BlockOreEA extends Block {
 
     public Item getItemDropped(IBlockState state, Random rand, int fortune)
     {
-    	return this == InitBlocksEA.arcanite_ore ? InitItemsEA.item_arcanite : Item.getItemFromBlock(this);
-
+    	//return this == InitBlocksEA.arcanite_ore ? InitItemsEA.arcanite : Item.getItemFromBlock(this);
+    	return this == InitBlocksEA.arcanite_ore ? InitItemsEA.arcanite : (this == InitBlocksEA.velious_ore ? InitItemsEA.velious : (this == InitBlocksEA.katchin_ore ? InitItemsEA.katchin : (this == InitBlocksEA.necrocite_ore ? InitItemsEA.necrocite : (this == InitBlocksEA.soularite_ore ? InitItemsEA.soularite : Item.getItemFromBlock(this)))));
+        
         //return this == EbonArtsBlocks.arcanite_ore ? EbonArtsItems.arcanite_shard : (this == Blocks.diamond_ore ? Items.diamond : (this == Blocks.lapis_ore ? Items.dye : (this == Blocks.emerald_ore ? Items.emerald : (this == Blocks.quartz_ore ? Items.quartz : Item.getItemFromBlock(this)))));
     }
 

@@ -4,13 +4,13 @@ import com.ebonheart.EbonArtsMod.EbonArtsMod;
 
 import net.minecraft.item.ItemSpade;
 
-public class ItemArcaniteShovel extends ItemSpade 
+public class ItemShovelEA extends ItemSpade 
 {
 
-	public ItemArcaniteShovel(ToolMaterial material) 
+	public ItemShovelEA(ToolMaterial material, String unlocalizedName) 
 	{
 		super(material);
-		this.setUnlocalizedName("tool/arcanite_shovel");
+		this.setUnlocalizedName(unlocalizedName);
 		this.setCreativeTab(EbonArtsMod.tabEbonArtsItems);
 	}
 

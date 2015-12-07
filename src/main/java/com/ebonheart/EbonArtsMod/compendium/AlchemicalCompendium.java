@@ -1,10 +1,12 @@
 package com.ebonheart.EbonArtsMod.compendium;
 
-import com.ebonheart.EbonArtsMod.api.CompendiumHelper;
-
+import net.minecraft.item.Item;
+import net.minecraft.item.ItemBlock;
 import net.minecraft.item.ItemStack;
 import net.minecraftforge.fml.relauncher.Side;
 import net.minecraftforge.fml.relauncher.SideOnly;
+
+import com.ebonheart.EbonArtsMod.api.CompendiumHelper;
 
 @SideOnly(Side.CLIENT)
 public class AlchemicalCompendium  implements CompendiumHelper {

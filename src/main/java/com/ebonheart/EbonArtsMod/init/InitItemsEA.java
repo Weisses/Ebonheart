@@ -12,28 +12,30 @@ import net.minecraftforge.fml.common.registry.GameRegistry;
 import com.ebonheart.EbonArtsMod.EbonArtsMod;
 import com.ebonheart.EbonArtsMod.Reference;
 import com.ebonheart.EbonArtsMod.common.items.armor.ItemArmorArcanite;
-import com.ebonheart.EbonArtsMod.common.items.resources.ItemArcanite;
+import com.ebonheart.EbonArtsMod.common.items.resources.ItemEA;
 import com.ebonheart.EbonArtsMod.common.items.resources.ItemArcaniteShard;
 import com.ebonheart.EbonArtsMod.common.items.resources.ItemInnateArcanite;
-import com.ebonheart.EbonArtsMod.common.items.tools.ItemArcaniteAxe;
-import com.ebonheart.EbonArtsMod.common.items.tools.ItemArcaniteHoe;
-import com.ebonheart.EbonArtsMod.common.items.tools.ItemArcanitePickaxe;
-import com.ebonheart.EbonArtsMod.common.items.tools.ItemArcaniteShovel;
-import com.ebonheart.EbonArtsMod.common.items.tools.ItemArcaniteSword;
+import com.ebonheart.EbonArtsMod.common.items.tools.ItemAxeEA;
+import com.ebonheart.EbonArtsMod.common.items.tools.ItemHoeEA;
+import com.ebonheart.EbonArtsMod.common.items.tools.ItemPickaxeEA;
+import com.ebonheart.EbonArtsMod.common.items.tools.ItemShovelEA;
+import com.ebonheart.EbonArtsMod.common.items.tools.ItemSwordEA;
 
 public class InitItemsEA 
 {
 
 	public static Item draconium_dust;
-	public static Item velious_gem;
-	public static Item arcanite_ingot;
-	public static Item katchin_ingot;
-	
-	
-	
-	public static Item item_arcanite;
-	public static Item arcanite_shard;
+	public static Item velious;
+	public static Item arcanite;
+	public static Item katchin;
+	public static Item necrocite;
+	public static Item soularite;
 	public static Item innate_arcanite;
+	
+	
+	//public static Item item_arcanite;
+	public static Item arcanite_shard;
+	
 	
 	public static Item mystic_dust;
 	public static Item purified_mystic_dust;
@@ -56,6 +58,12 @@ public class InitItemsEA
 	public static Item arcanite_hoe;
 	public static Item arcanite_sword;
 	
+	public static Item katchin_pickaxe;
+	public static Item katchin_axe;
+	public static Item katchin_shovel;
+	public static Item katchin_hoe;
+	public static Item katchin_sword;
+	
 	public static Item arcanite_helmet;
 	public static Item arcanite_chestplate;
 	public static Item arcanite_leggings;
@@ -69,7 +77,8 @@ public class InitItemsEA
 	
 	//public static Item mans_steak;
 	
-	public static final Item.ToolMaterial arcaniteToolMaterial = EnumHelper.addToolMaterial("arcaniteToolMaterial", 2, 1500, 7.0F, 2.5F, 10);
+	public static final Item.ToolMaterial arcaniteToolMaterial = EnumHelper.addToolMaterial("arcaniteToolMaterial", 2, 500, 7.0F, 2.5F, 15);
+	public static final Item.ToolMaterial katchinToolMaterial = EnumHelper.addToolMaterial("katchinToolMaterial", 3, 2000, 9.0F, 3.5F, 20);
 	public static final Item.ToolMaterial innatearcaniteToolMaterial = EnumHelper.addToolMaterial("innatearcaniteToolMaterial", 3, 1700, 8.5F, 3.5F, 10);
 	public static final ItemArmor.ArmorMaterial arcaniteArmorMaterial = EnumHelper.addArmorMaterial("arcaniteArmorMaterial", "ea:arcanite", 1500, new int[]{2, 7, 5, 3}, 10);
 	//public static final ItemArmor.ArmorMaterial arcaniteArmorMaterial = EnumHelper.addArmorMaterial(name, textureName, durability, reductionAmounts, enchantability);
@@ -77,15 +86,28 @@ public class InitItemsEA
 	public static void init()
 	{
 		
-		item_arcanite = new ItemArcanite("item_arcanite");
-		arcanite_shard = new ItemArcaniteShard("arcanite_shard");
-		innate_arcanite = new ItemInnateArcanite("innate_arcanite");
+		draconium_dust = new ItemEA("gem/draconium_dust");
+		velious = new ItemEA("gem/velious");
+		arcanite = new ItemEA("gem/arcanite");
+		katchin = new ItemEA("gem/katchin");
+		necrocite = new ItemEA("gem/necrocite");
+		soularite = new ItemEA("gem/soularite");
+		innate_arcanite = new ItemInnateArcanite("gem/innate_arcanite");
 		
-		arcanite_pickaxe = new ItemArcanitePickaxe(arcaniteToolMaterial);
-		arcanite_axe = new ItemArcaniteAxe(arcaniteToolMaterial);
-		arcanite_shovel = new ItemArcaniteShovel(arcaniteToolMaterial);
-		arcanite_hoe = new ItemArcaniteHoe(arcaniteToolMaterial);
-		arcanite_sword = new ItemArcaniteSword(arcaniteToolMaterial);
+		
+		arcanite_shard = new ItemArcaniteShard("arcanite_shard");
+		
+		arcanite_pickaxe = new ItemPickaxeEA(arcaniteToolMaterial, "tool/arcanite_pickaxe");
+		arcanite_axe = new ItemAxeEA(arcaniteToolMaterial, "tool/arcanite_axe");
+		arcanite_shovel = new ItemShovelEA(arcaniteToolMaterial, "tool/arcanite_shovel");
+		arcanite_hoe = new ItemHoeEA(arcaniteToolMaterial, "tool/arcanite_hoe");
+		arcanite_sword = new ItemSwordEA(arcaniteToolMaterial, "tool/arcanite_sword");
+		
+		katchin_pickaxe = new ItemPickaxeEA(katchinToolMaterial, "tool/katchin_pickaxe");
+		katchin_axe = new ItemAxeEA(katchinToolMaterial, "tool/katchin_axe");
+		katchin_shovel = new ItemShovelEA(katchinToolMaterial, "tool/katchin_shovel");
+		katchin_hoe = new ItemHoeEA(katchinToolMaterial, "tool/katchin_hoe");
+		katchin_sword = new ItemSwordEA(katchinToolMaterial, "tool/katchin_sword");
 		
 		arcanite_helmet = new ItemArmorArcanite(arcaniteArmorMaterial, 0, 0).setUnlocalizedName("armor/arcanite_helmet");
 		arcanite_chestplate = new ItemArmorArcanite(arcaniteArmorMaterial, 0, 1).setUnlocalizedName("armor/arcanite_chestplate");
@@ -112,15 +134,27 @@ public class InitItemsEA
 	public static void register()
 	{
 		
-		GameRegistry.registerItem(item_arcanite, item_arcanite.getUnlocalizedName().substring(5));
-		GameRegistry.registerItem(arcanite_shard, arcanite_shard.getUnlocalizedName().substring(5));
+		GameRegistry.registerItem(draconium_dust, draconium_dust.getUnlocalizedName().substring(5));
+		GameRegistry.registerItem(velious, velious.getUnlocalizedName().substring(5));
+		GameRegistry.registerItem(arcanite, arcanite.getUnlocalizedName().substring(5));
+		GameRegistry.registerItem(katchin, katchin.getUnlocalizedName().substring(5));
+		GameRegistry.registerItem(necrocite, necrocite.getUnlocalizedName().substring(5));
+		GameRegistry.registerItem(soularite, soularite.getUnlocalizedName().substring(5));
 		GameRegistry.registerItem(innate_arcanite, innate_arcanite.getUnlocalizedName().substring(5));
+		
+		GameRegistry.registerItem(arcanite_shard, arcanite_shard.getUnlocalizedName().substring(5));
 		
 		GameRegistry.registerItem(arcanite_pickaxe, arcanite_pickaxe.getUnlocalizedName().substring(5));
 		GameRegistry.registerItem(arcanite_axe, arcanite_axe.getUnlocalizedName().substring(5));
 		GameRegistry.registerItem(arcanite_shovel, arcanite_shovel.getUnlocalizedName().substring(5));
 		GameRegistry.registerItem(arcanite_hoe, arcanite_hoe.getUnlocalizedName().substring(5));
 		GameRegistry.registerItem(arcanite_sword, arcanite_sword.getUnlocalizedName().substring(5));
+		
+		GameRegistry.registerItem(katchin_pickaxe, katchin_pickaxe.getUnlocalizedName().substring(5));
+		GameRegistry.registerItem(katchin_axe, katchin_axe.getUnlocalizedName().substring(5));
+		GameRegistry.registerItem(katchin_shovel, katchin_shovel.getUnlocalizedName().substring(5));
+		GameRegistry.registerItem(katchin_hoe, katchin_hoe.getUnlocalizedName().substring(5));
+		GameRegistry.registerItem(katchin_sword, katchin_sword.getUnlocalizedName().substring(5));
 		
 		GameRegistry.registerItem(arcanite_helmet, arcanite_helmet.getUnlocalizedName().substring(5));
 		GameRegistry.registerItem(arcanite_chestplate, arcanite_chestplate.getUnlocalizedName().substring(5));
@@ -146,15 +180,29 @@ public class InitItemsEA
 	public static void registerRenders()
 	{
 		
-		registerRender(item_arcanite);
-		registerRender(arcanite_shard);
+		registerRender(draconium_dust);
+		registerRender(velious);
+		registerRender(arcanite);
+		registerRender(katchin);
+		registerRender(necrocite);
+		registerRender(soularite);
 		registerRender(innate_arcanite);
+		
+		
+		registerRender(arcanite_shard);
+		
 		
 		registerRender(arcanite_pickaxe);
 		registerRender(arcanite_axe);
 		registerRender(arcanite_shovel);
 		registerRender(arcanite_hoe);
 		registerRender(arcanite_sword);
+		
+		registerRender(katchin_pickaxe);
+		registerRender(katchin_axe);
+		registerRender(katchin_shovel);
+		registerRender(katchin_hoe);
+		registerRender(katchin_sword);
 		
 		registerRender(arcanite_helmet);
 		registerRender(arcanite_chestplate);

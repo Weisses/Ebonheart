@@ -4,13 +4,13 @@ import com.ebonheart.EbonArtsMod.EbonArtsMod;
 
 import net.minecraft.item.ItemAxe;
 
-public class ItemArcaniteAxe extends ItemAxe 
+public class ItemAxeEA extends ItemAxe 
 {
 
-	public ItemArcaniteAxe(ToolMaterial material) 
+	public ItemAxeEA(ToolMaterial material, String unlocalizedName) 
 	{
 		super(material);
-		this.setUnlocalizedName("tool/arcanite_axe");
+		this.setUnlocalizedName(unlocalizedName);
 		this.setCreativeTab(EbonArtsMod.tabEbonArtsItems);
 	}
 

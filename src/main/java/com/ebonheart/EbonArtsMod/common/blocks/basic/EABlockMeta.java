@@ -21,11 +21,11 @@ import com.ebonheart.EbonArtsMod.EbonArtsMod;
 import com.ebonheart.EbonArtsMod.api.meta.IMetaBlockName;
 
 
-public class BlockInnateArcaniteMeta extends Block implements IMetaBlockName {
+public class EABlockMeta extends Block implements IMetaBlockName {
 
-	public static final PropertyEnum TYPE = PropertyEnum.create("type", BlockInnateArcaniteMeta.EnumType.class);
+	public static final PropertyEnum TYPE = PropertyEnum.create("type", EABlockMeta.EnumType.class);
 	
-	public BlockInnateArcaniteMeta(String unlocalizedName, Material materialIn) 
+	public EABlockMeta(String unlocalizedName, Material materialIn) 
 	{
 		super(materialIn);
 		this.setUnlocalizedName(unlocalizedName);

@@ -4,13 +4,13 @@ import com.ebonheart.EbonArtsMod.EbonArtsMod;
 
 import net.minecraft.item.ItemHoe;
 
-public class ItemArcaniteHoe extends ItemHoe 
+public class ItemHoeEA extends ItemHoe 
 {
 
-	public ItemArcaniteHoe(ToolMaterial material) 
+	public ItemHoeEA(ToolMaterial material, String unlocalizedName) 
 	{
 		super(material);
-		this.setUnlocalizedName("tool/arcanite_hoe");
+		this.setUnlocalizedName(unlocalizedName);
 		this.setCreativeTab(EbonArtsMod.tabEbonArtsItems);
 	}
 

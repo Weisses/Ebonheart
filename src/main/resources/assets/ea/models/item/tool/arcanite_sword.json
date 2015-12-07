@@ -1,7 +1,7 @@
 {
     "parent": "builtin/generated",
     "textures": {
-        "layer0": "ea:items/arcanite_sword"
+        "layer0": "ea:items/tools/arcanite_sword"
     },
     "display": {
         "thirdperson": {

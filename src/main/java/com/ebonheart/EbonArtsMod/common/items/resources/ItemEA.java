@@ -10,13 +10,13 @@ import net.minecraft.item.ItemStack;
 import net.minecraftforge.fml.relauncher.Side;
 import net.minecraftforge.fml.relauncher.SideOnly;
 
-public class ItemArcanite extends Item 
+public class ItemEA extends Item 
 {
 
-	public ItemArcanite(String unlocalizedName)
+	public ItemEA(String unlocalizedName)
 	{
 		super();
-		this.setUnlocalizedName("gem/item_arcanite");
+		this.setUnlocalizedName(unlocalizedName);
 		this.setCreativeTab(EbonArtsMod.tabEbonArtsItems);
 	}
 	
