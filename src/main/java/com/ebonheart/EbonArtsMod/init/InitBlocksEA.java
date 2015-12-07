@@ -1,6 +1,7 @@
 package com.ebonheart.EbonArtsMod.init;
 
 import net.minecraft.block.Block;
+import net.minecraft.block.BlockFenceGate;
 import net.minecraft.block.BlockLog;
 import net.minecraft.block.material.Material;
 import net.minecraft.client.Minecraft;
@@ -14,6 +15,8 @@ import com.ebonheart.EbonArtsMod.EbonArtsMod;
 import com.ebonheart.EbonArtsMod.Reference;
 import com.ebonheart.EbonArtsMod.api.meta.ItemBlockMeta;
 import com.ebonheart.EbonArtsMod.common.blocks.basic.BlockArcaniteFenceNormal;
+import com.ebonheart.EbonArtsMod.common.blocks.basic.BlockStairsMetaEA;
+import com.ebonheart.EbonArtsMod.common.blocks.basic.EABlockFence;
 import com.ebonheart.EbonArtsMod.common.blocks.basic.EABlockMeta;
 import com.ebonheart.EbonArtsMod.common.blocks.basic.BlockArcaniteNormal;
 import com.ebonheart.EbonArtsMod.common.blocks.basic.BlockInnateArcaniteNormal;
@@ -54,7 +57,7 @@ public class InitBlocksEA
 	public static Block arcanite_block_normal;
 	
 	public static Block arcanite_fence_normal;
-	//public static Block arcanite_fence_gate;
+	//public static Block arcanite_fence_gate_normal;
 	//public static Block arcanite_wall;
 	//public static Block arcanite_wall_gate;
 	
@@ -65,7 +68,7 @@ public class InitBlocksEA
 	//public static Block arcanite_double_slab;
 	//public static Block arcanite_slab;
 	
-	public static Block arcanite_stairs;
+	//public static Block arcanite_stairs;
 	public static Block arcanite_stairs_normal;
 	
 	
@@ -100,23 +103,23 @@ public class InitBlocksEA
 				"ea:gem/arcanite/innate_arcanite_block_black");
 		
 		
-		ModelBakery.addVariantName(Item.getItemFromBlock(InitBlocksEA.arcanite_stairs), 
-				"ea:gem/arcanite/arcanite_stairs_white", 
-				"ea:gem/arcanite/arcanite_stairs_orange", 
-				"ea:gem/arcanite/arcanite_stairs_magenta", 
-				"ea:gem/arcanite/arcanite_stairs_lightblue", 
-				"ea:gem/arcanite/arcanite_stairs_yellow", 
-				"ea:gem/arcanite/arcanite_stairs_lime", 
-				"ea:gem/arcanite/arcanite_stairs_pink", 
-				"ea:gem/arcanite/arcanite_stairs_gray", 
-				"ea:gem/arcanite/arcanite_stairs_lightgray", 
-				"ea:gem/arcanite/arcanite_stairs_cyan", 
-				"ea:gem/arcanite/arcanite_stairs_purple", 
-				"ea:gem/arcanite/arcanite_stairs_blue", 
-				"ea:gem/arcanite/arcanite_stairs_brown", 
-				"ea:gem/arcanite/arcanite_stairs_green", 
-				"ea:gem/arcanite/arcanite_stairs_red", 
-				"ea:gem/arcanite/arcanite_stairs_black");
+		//ModelBakery.addVariantName(Item.getItemFromBlock(InitBlocksEA.arcanite_stairs), 
+		//		"ea:gem/arcanite/arcanite_stairs_white", 
+		//		"ea:gem/arcanite/arcanite_stairs_orange", 
+		//		"ea:gem/arcanite/arcanite_stairs_magenta", 
+		//		"ea:gem/arcanite/arcanite_stairs_lightblue", 
+		//		"ea:gem/arcanite/arcanite_stairs_yellow", 
+		//		"ea:gem/arcanite/arcanite_stairs_lime", 
+		//		"ea:gem/arcanite/arcanite_stairs_pink", 
+		//		"ea:gem/arcanite/arcanite_stairs_gray", 
+		//		"ea:gem/arcanite/arcanite_stairs_lightgray", 
+		//		"ea:gem/arcanite/arcanite_stairs_cyan", 
+		//		"ea:gem/arcanite/arcanite_stairs_purple", 
+		//		"ea:gem/arcanite/arcanite_stairs_blue", 
+		//		"ea:gem/arcanite/arcanite_stairs_brown", 
+		//		"ea:gem/arcanite/arcanite_stairs_green", 
+		//		"ea:gem/arcanite/arcanite_stairs_red", 
+		//		"ea:gem/arcanite/arcanite_stairs_black");
 		
 	}
 
@@ -143,7 +146,8 @@ public class InitBlocksEA
 		
 		
 		arcanite_fence_normal = new BlockArcaniteFenceNormal(Material.rock);
-		//arcanite_fence_gate = new BlockFenceGate().setUnlocalizedName("fence/arcanite_fence_gate").setCreativeTab(EbonArtsMod.tabEbonArtsBlocks);
+		//arcanite_fence_gate_normal = new EABlockFence("fence/arcanite_fence_gate_normal", Material.rock);
+		
 		//arcanite_wall = new BlockWall(EbonArtsBlocks.arcanite_block).setUnlocalizedName("wall/arcanite_wall").setCreativeTab(EbonArtsMod.tabEbonArtsBlocks);
 		//arcanite_wall_gate = new BlockFenceGate().setUnlocalizedName("wall/arcanite_wall_gate").setCreativeTab(EbonArtsMod.tabEbonArtsBlocks);
 		
@@ -181,14 +185,15 @@ public class InitBlocksEA
 		
 		GameRegistry.registerBlock(arcanite_block = new EABlockMeta("gem/arcanite/arcanite_block", Material.rock), ItemBlockMeta.class, "gem/arcanite/arcanite_block");
 		GameRegistry.registerBlock(innate_arcanite_block = new EABlockMeta("gem/arcanite/innate_arcanite_block", Material.rock), ItemBlockMeta.class, "gem/arcanite/innate_arcanite_block");
-		GameRegistry.registerBlock(arcanite_stairs = new EABlockMeta("gem/arcanite/arcanite_stairs", Material.rock), ItemBlockMeta.class, "gem/arcanite/arcanite_stairs");
+		//GameRegistry.registerBlock(arcanite_stairs = new BlockStairsMetaEA(Blocks.oak_stairs.getStateFromMeta(0), "gem/arcanite/arcanite_stairs", Material.rock), ItemBlockMeta.class, "gem/arcanite/arcanite_stairs");
+		
 		
 		GameRegistry.registerBlock(arcanite_block_normal, arcanite_block_normal.getUnlocalizedName().substring(5));
 		GameRegistry.registerBlock(innate_arcanite_block_normal, innate_arcanite_block_normal.getUnlocalizedName().substring(5));
 		GameRegistry.registerBlock(arcanite_stairs_normal, arcanite_stairs_normal.getUnlocalizedName().substring(5));
 		
 		GameRegistry.registerBlock(arcanite_fence_normal, arcanite_fence_normal.getUnlocalizedName().substring(5));
-		//GameRegistry.registerBlock(arcanite_fence_gate, arcanite_fence_gate.getUnlocalizedName().substring(5));
+		//GameRegistry.registerBlock(arcanite_fence_gate_normal, arcanite_fence_gate_normal.getUnlocalizedName().substring(5));
 		//GameRegistry.registerBlock(arcanite_wall, arcanite_wall.getUnlocalizedName().substring(5));
 		//GameRegistry.registerBlock(arcanite_wall_gate, arcanite_wall_gate.getUnlocalizedName().substring(5));
 		
@@ -245,7 +250,8 @@ public class InitBlocksEA
 		
 		
 		registerRender(arcanite_fence_normal);
-		//registerRender(arcanite_fence_gate);
+		//registerRender(arcanite_fence_gate_normal);
+		
 		//registerRender(arcanite_wall);
 		//registerRender(arcanite_wall_gate);
 		
@@ -277,23 +283,23 @@ public class InitBlocksEA
 		//registerRender(arcanite_double_slab);
 		//registerRender(arcanite_slab);
 		registerRender(arcanite_stairs_normal);
-		registerRender(arcanite_stairs);
-		registerRender(InitBlocksEA.arcanite_stairs, 0, "gem/arcanite/arcanite_stairs_white");
-		registerRender(InitBlocksEA.arcanite_stairs, 1, "gem/arcanite/arcanite_stairs_orange");
-		registerRender(InitBlocksEA.arcanite_stairs, 2, "gem/arcanite/arcanite_stairs_magenta");
-		registerRender(InitBlocksEA.arcanite_stairs, 3, "gem/arcanite/arcanite_stairs_lightblue");
-		registerRender(InitBlocksEA.arcanite_stairs, 4, "gem/arcanite/arcanite_stairs_yellow");
-		registerRender(InitBlocksEA.arcanite_stairs, 5, "gem/arcanite/arcanite_stairs_lime");
-		registerRender(InitBlocksEA.arcanite_stairs, 6, "gem/arcanite/arcanite_stairs_pink");
-		registerRender(InitBlocksEA.arcanite_stairs, 7, "gem/arcanite/arcanite_stairs_gray");
-		registerRender(InitBlocksEA.arcanite_stairs, 8, "gem/arcanite/arcanite_stairs_lightgray");
-		registerRender(InitBlocksEA.arcanite_stairs, 9, "gem/arcanite/arcanite_stairs_cyan");
-		registerRender(InitBlocksEA.arcanite_stairs, 10, "gem/arcanite/arcanite_stairs_purple");
-		registerRender(InitBlocksEA.arcanite_stairs, 11, "gem/arcanite/arcanite_stairs_blue");
-		registerRender(InitBlocksEA.arcanite_stairs, 12, "gem/arcanite/arcanite_stairs_brown");
-		registerRender(InitBlocksEA.arcanite_stairs, 13, "gem/arcanite/arcanite_stairs_green");
-		registerRender(InitBlocksEA.arcanite_stairs, 14, "gem/arcanite/arcanite_stairs_red");
-		registerRender(InitBlocksEA.arcanite_stairs, 15, "gem/arcanite/arcanite_stairs_black");
+		//registerRender(arcanite_stairs);
+		//registerRender(InitBlocksEA.arcanite_stairs, 0, "gem/arcanite/arcanite_stairs_white");
+		//registerRender(InitBlocksEA.arcanite_stairs, 1, "gem/arcanite/arcanite_stairs_orange");
+		//registerRender(InitBlocksEA.arcanite_stairs, 2, "gem/arcanite/arcanite_stairs_magenta");
+		//registerRender(InitBlocksEA.arcanite_stairs, 3, "gem/arcanite/arcanite_stairs_lightblue");
+		//registerRender(InitBlocksEA.arcanite_stairs, 4, "gem/arcanite/arcanite_stairs_yellow");
+		//registerRender(InitBlocksEA.arcanite_stairs, 5, "gem/arcanite/arcanite_stairs_lime");
+		//registerRender(InitBlocksEA.arcanite_stairs, 6, "gem/arcanite/arcanite_stairs_pink");
+		//registerRender(InitBlocksEA.arcanite_stairs, 7, "gem/arcanite/arcanite_stairs_gray");
+		//registerRender(InitBlocksEA.arcanite_stairs, 8, "gem/arcanite/arcanite_stairs_lightgray");
+		//registerRender(InitBlocksEA.arcanite_stairs, 9, "gem/arcanite/arcanite_stairs_cyan");
+		//registerRender(InitBlocksEA.arcanite_stairs, 10, "gem/arcanite/arcanite_stairs_purple");
+		//registerRender(InitBlocksEA.arcanite_stairs, 11, "gem/arcanite/arcanite_stairs_blue");
+		//registerRender(InitBlocksEA.arcanite_stairs, 12, "gem/arcanite/arcanite_stairs_brown");
+		//registerRender(InitBlocksEA.arcanite_stairs, 13, "gem/arcanite/arcanite_stairs_green");
+		//registerRender(InitBlocksEA.arcanite_stairs, 14, "gem/arcanite/arcanite_stairs_red");
+		//registerRender(InitBlocksEA.arcanite_stairs, 15, "gem/arcanite/arcanite_stairs_black");
 		
 		//registerRender(purified_mystic_block);
 		

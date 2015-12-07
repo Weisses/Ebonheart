@@ -1,55 +1,49 @@
 package com.ebonheart.EbonArtsMod.init;
 
 import net.minecraft.block.Block;
-import net.minecraft.block.BlockFence;
-import net.minecraft.block.material.Material;
 import net.minecraft.client.Minecraft;
 import net.minecraft.client.resources.model.ModelResourceLocation;
-import net.minecraft.init.Blocks;
-import net.minecraft.init.Items;
 import net.minecraft.item.Item;
-import net.minecraft.item.ItemStack;
 import net.minecraftforge.fml.common.registry.GameRegistry;
 
-import com.ebonheart.EbonArtsMod.EbonArtsMod;
 import com.ebonheart.EbonArtsMod.Reference;
-import com.ebonheart.EbonArtsMod.common.blocks.basic.EABlockMeta;
-import com.ebonheart.EbonArtsMod.common.blocks.world.BlockOreEA;
-import com.ebonheart.EbonArtsMod.common.tileentities.plants.BlockBananaPlantRoot;
-import com.ebonheart.EbonArtsMod.common.tileentities.plants.TileEntityBananaPlant;
+import com.ebonheart.EbonArtsMod.common.tileentities.TestBlockTileEntity;
+import com.ebonheart.EbonArtsMod.common.tileentities.TestTileEntity;
 
-public class InitTileEntitiesEA 
-{
 
-	public static BlockBananaPlantRoot bananaplant;
+
+public final class InitTileEntitiesEA {
 	
-	public static void init()
-	{
+	public static Block Test_Block_Tile_Entity;
+	
+	public static void init() {
 		
-		bananaplant = new BlockBananaPlantRoot(InitItemsEA.banana, 3, 1, 5, 2, 2, 12, 10, 30, 40, 100, 5, 10, 3, 1, null);
+		GameRegistry.registerBlock(Test_Block_Tile_Entity = new TestBlockTileEntity("tile_entity"), "tile_entity");
 		
 		
 	}
-	
+
 	
 	public static void register()
 	{
 		
-		GameRegistry.registerTileEntity(TileEntityBananaPlant.class, "TileEntityBananaPlant");
-		
+		GameRegistry.registerTileEntity(TestTileEntity.class, "tile_entity");
+	
 	}
+	
 	
 	public static void registerRenders()
 	{
-
-		bananaplant.RegisterRenderers();
+		
+		registerRender(Test_Block_Tile_Entity);
 		
 	}
 	
 	public static void registerRender(Block block)
 	{
 		Item item = Item.getItemFromBlock(block);
-		//Minecraft.getMinecraft().getRenderItem().getItemModelMesher().register(item, 0, new ModelResourceLocation(Reference.MOD_ID + ":" + "bananaplant", "inventory"));
 		Minecraft.getMinecraft().getRenderItem().getItemModelMesher().register(item, 0, new ModelResourceLocation(Reference.MOD_ID + ":" + item.getUnlocalizedName().substring(5), "inventory"));
 	}
+	
+	
 }

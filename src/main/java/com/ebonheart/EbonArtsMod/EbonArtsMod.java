@@ -5,6 +5,7 @@ import net.minecraftforge.fml.client.event.ConfigChangedEvent;
 import net.minecraftforge.fml.common.FMLLog;
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.common.Mod.EventHandler;
+import net.minecraftforge.fml.common.Mod.Instance;
 import net.minecraftforge.fml.common.SidedProxy;
 import net.minecraftforge.fml.common.event.FMLInitializationEvent;
 import net.minecraftforge.fml.common.event.FMLPostInitializationEvent;
@@ -13,6 +14,7 @@ import net.minecraftforge.fml.common.eventhandler.SubscribeEvent;
 
 import org.apache.logging.log4j.Logger;
 
+
 import com.ebonheart.EbonArtsMod.api.creative.EbonArtsTabBlocks;
 import com.ebonheart.EbonArtsMod.api.creative.EbonArtsTabItems;
 import com.ebonheart.EbonArtsMod.configs.EbonArtsConfiguration;
@@ -20,7 +22,7 @@ import com.ebonheart.EbonArtsMod.init.InitAchievementsEA;
 import com.ebonheart.EbonArtsMod.init.InitBlocksEA;
 import com.ebonheart.EbonArtsMod.init.InitItemsEA;
 import com.ebonheart.EbonArtsMod.init.InitRecipesEA;
-import com.ebonheart.EbonArtsMod.init.InitTileEntitiesEA;
+import com.ebonheart.EbonArtsMod.init.InitTileEntitiesEAbanana;
 import com.ebonheart.EbonArtsMod.proxy.CommonProxy;
 
 @Mod(modid = Reference.MOD_ID, name = Reference.MOD_NAME, version = Reference.MOD_VERSION)
@@ -36,11 +38,12 @@ public class EbonArtsMod
 	public static final EbonArtsTabItems tabEbonArtsItems = new EbonArtsTabItems("tabEbonArtsItems");
 	
 	public static Configuration config;
-	public static EbonArtsMod instance;
+	//public static EbonArtsMod instance;
 	
 	public static Logger log = FMLLog.getLogger();
 	
-	
+	@Instance
+	public static EbonArtsMod instance = new EbonArtsMod();
 	
 	@EventHandler
 	public void preInit(FMLPreInitializationEvent event)
