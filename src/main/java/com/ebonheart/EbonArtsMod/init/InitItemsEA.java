@@ -11,6 +11,7 @@ import net.minecraftforge.fml.common.registry.GameRegistry;
 
 import com.ebonheart.EbonArtsMod.EbonArtsMod;
 import com.ebonheart.EbonArtsMod.Reference;
+import com.ebonheart.EbonArtsMod.common.items.ItemAlchemicalCompendium;
 import com.ebonheart.EbonArtsMod.common.items.armor.ItemArmorArcanite;
 import com.ebonheart.EbonArtsMod.common.items.resources.ItemEA;
 import com.ebonheart.EbonArtsMod.common.items.resources.ItemArcaniteShard;
@@ -23,7 +24,8 @@ import com.ebonheart.EbonArtsMod.common.items.tools.ItemSwordEA;
 
 public class InitItemsEA 
 {
-
+	public static Item alchemical_compendium;
+	
 	public static Item draconium_dust;
 	public static Item velious;
 	public static Item arcanite;
@@ -69,6 +71,8 @@ public class InitItemsEA
 	public static Item arcanite_leggings;
 	public static Item arcanite_boots;
 	
+	
+	
 	public static ItemFood banana;
 	
 	
@@ -85,6 +89,7 @@ public class InitItemsEA
 
 	public static void init()
 	{
+		alchemical_compendium = new ItemAlchemicalCompendium("alchemical_compendium");
 		
 		draconium_dust = new ItemEA("gem/draconium_dust");
 		velious = new ItemEA("gem/velious");
@@ -133,6 +138,7 @@ public class InitItemsEA
 	
 	public static void register()
 	{
+		GameRegistry.registerItem(alchemical_compendium, alchemical_compendium.getUnlocalizedName().substring(5));
 		
 		GameRegistry.registerItem(draconium_dust, draconium_dust.getUnlocalizedName().substring(5));
 		GameRegistry.registerItem(velious, velious.getUnlocalizedName().substring(5));
@@ -179,6 +185,7 @@ public class InitItemsEA
 	
 	public static void registerRenders()
 	{
+		registerRender(alchemical_compendium);
 		
 		registerRender(draconium_dust);
 		registerRender(velious);

@@ -15,12 +15,20 @@ public class EbonArtsConfiguration
 	{
 		FMLCommonHandler.instance().bus().register(EbonArtsMod.instance);
 		
+		
+		//actual config
 		final String RECIPES = EbonArtsMod.config.CATEGORY_GENERAL + EbonArtsMod.config.CATEGORY_SPLITTER + "Recipes";
+		
 		EbonArtsMod.config.addCustomCategoryComment(RECIPES, "Enable or disable recipes TEST");
 		cheapRecipe = EbonArtsMod.config.get(RECIPES, CHEAPRECIPE_NAME, CHEAPRECIPE_DEFAULT).getBoolean(CHEAPRECIPE_DEFAULT);
+		
+		//saves the config
 		if(EbonArtsMod.config.hasChanged())
 		{
 			EbonArtsMod.config.save();
 		}
+		
+		
+		
 	}
 }

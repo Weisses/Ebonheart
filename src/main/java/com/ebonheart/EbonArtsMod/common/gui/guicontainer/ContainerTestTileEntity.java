@@ -1,6 +1,5 @@
 package com.ebonheart.EbonArtsMod.common.gui.guicontainer;
 
-
 import com.ebonheart.EbonArtsMod.common.tileentities.TestTileEntity;
 
 import net.minecraft.entity.player.EntityPlayer;
@@ -11,7 +10,6 @@ import net.minecraft.item.ItemStack;
 
 public class ContainerTestTileEntity extends Container {
 
-	
 	private TestTileEntity te;
 
 	/*

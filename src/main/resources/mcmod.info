@@ -1,15 +1,16 @@
 [
 {
-  "modid": "examplemod",
-  "name": "Example Mod",
-  "description": "Example placeholder mod.",
+  "modid": "ea",
+  "name": "Ebon Arts Mod",
+  "description": "Alchemical exploration!",
   "version": "${version}",
   "mcversion": "${mcversion}",
-  "url": "",
+  "logoFile": "assets/ea/textures/logo.png",
+  "url": "http://ebonheart.us",
   "updateUrl": "",
-  "authorList": ["ExampleDude"],
-  "credits": "The Forge and FML guys, for making this example",
-  "logoFile": "",
+  "authorList": ["Viesis"],
+  "credits": "Ebon Arts is a trademark of the Ebonheart community. Some textures created using brushes from www.obsidiandawn.com.  Icons used include Painterly Spell Packs 1 through 4, courtesy of J. W. Bjerk (eleazzaar) at opengameart.com.",
+  "parent": "",
   "screenshots": [],
   "dependencies": []
 }

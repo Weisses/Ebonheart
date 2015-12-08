@@ -5,13 +5,16 @@ import net.minecraftforge.fml.common.event.FMLPostInitializationEvent;
 import net.minecraftforge.fml.common.event.FMLPreInitializationEvent;
 import net.minecraftforge.fml.common.network.NetworkRegistry;
 import net.minecraftforge.fml.common.registry.GameRegistry;
+import net.minecraftforge.fml.relauncher.Side;
 
 import com.ebonheart.EbonArtsMod.EbonArtsMod;
 import com.ebonheart.EbonArtsMod.api.GuiHandler;
 import com.ebonheart.EbonArtsMod.common.world.WorldGeneratorEA;
 import com.ebonheart.EbonArtsMod.init.InitBlocksEA;
 import com.ebonheart.EbonArtsMod.init.InitItemsEA;
+import com.ebonheart.EbonArtsMod.init.InitRecipesEA;
 import com.ebonheart.EbonArtsMod.init.InitTileEntitiesEA;
+import com.ebonheart.EbonArtsMod.network.packets.EAPacket;
 
 public class CommonProxy 
 {
@@ -25,10 +28,23 @@ public class CommonProxy
 		InitTileEntitiesEA.init();
 		InitTileEntitiesEA.register();
 		
+		
+		
 	}
 	
 	public void init(FMLInitializationEvent event) 
 	{
+		InitRecipesEA.initShapedRecipe();
+		InitRecipesEA.initShapelessRecipe();
+		InitRecipesEA.initSmeltingRecipe();
+		//InitAchievementsEA.init();
+		
+		
+		
+		//EbonArtsMod.packetHandler = MinersbasicAPI.createPacketHandler("tutorial");
+		//EbonArtsMod.packetHandler.registerPacket(EAPacket.class, new EAPacket.Handler(), Side.SERVER);
+		
+		
 		GameRegistry.registerWorldGenerator(new WorldGeneratorEA(), 0);
 		NetworkRegistry.INSTANCE.registerGuiHandler(EbonArtsMod.instance, new GuiHandler());
 	}

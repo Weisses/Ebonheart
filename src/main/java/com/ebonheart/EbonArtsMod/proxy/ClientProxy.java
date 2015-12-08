@@ -17,6 +17,7 @@ public class ClientProxy extends CommonProxy
 		super.preInit(e);
 		
 		InitBlocksEA.preInit();
+		
 	}
 	
 	@Override
