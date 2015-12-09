@@ -1,4 +1,4 @@
-package com.ebonheart.EbonArtsMod.common.tileentities;
+package com.ebonheart.EbonArtsMod.common.tileentities.crafting;
 
 import com.ebonheart.EbonArtsMod.api.recipes.MysticFurnaceRecipes;
 import com.ebonheart.EbonArtsMod.common.blocks.devices.TestBlockFurnaceEA;

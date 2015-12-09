@@ -23,7 +23,7 @@ import net.minecraft.world.World;
 import net.minecraftforge.fml.relauncher.Side;
 import net.minecraftforge.fml.relauncher.SideOnly;
 
-import com.ebonheart.EbonArtsMod.common.tileentities.TileEntityFurnaceEA;
+import com.ebonheart.EbonArtsMod.common.tileentities.crafting.TileEntityFurnaceEA;
 import com.ebonheart.EbonArtsMod.init.InitBlocksEA;
 
 public class TestBlockFurnaceEA extends BlockContainer {
