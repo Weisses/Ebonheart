@@ -56,6 +56,8 @@ public class BlockBananaPlantRoot extends Block implements ITileEntityProvider
 		this.setCreativeTab(EbonArtsMod.tabEbonArtsBlocks);
 		this.setHarvestLevel(HarvestToolEnum.AXE, HarvestLevelEnum.WOOD);
 		
+		
+		
 		this.fruit = Fruit;
     	this.fruitfallheight = FruitFallHeight;
     	this.fruitminamount = FruitMinAmount;
@@ -68,9 +70,9 @@ public class BlockBananaPlantRoot extends Block implements ITileEntityProvider
     	
     	this.bananaplantsection = new BlockBananaPlantSection(this, Fruit, FruitFallHeight, FruitMinAmount, FruitMaxAmount, PlantHardness, PlantResistance, BlockBananaPlantRoot.HarvestToolEnum.AXE, BlockBananaPlantRoot.HarvestLevelEnum.WOOD);
     	
-    	GameRegistry.registerBlock(this, "bananaplant");
-    	ClientRegistry.bindTileEntitySpecialRenderer(TileEntityBananaPlant.class, new TileEntityBananaPlantRenderer());
-    	GameRegistry.registerTileEntity(TileEntityBananaPlant.class, "TileEntityBananaPlant");
+    	//GameRegistry.registerBlock(this, "bananaplant");
+    	//ClientRegistry.bindTileEntitySpecialRenderer(TileEntityBananaPlant.class, new TileEntityBananaPlantRenderer());
+    	//GameRegistry.registerTileEntity(TileEntityBananaPlant.class, "TileEntityBananaPlant");
 	}
 	
 	public boolean hasTileEntity()

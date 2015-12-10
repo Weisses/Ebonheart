@@ -15,6 +15,7 @@ import com.ebonheart.EbonArtsMod.EbonArtsMod;
 import com.ebonheart.EbonArtsMod.Reference;
 import com.ebonheart.EbonArtsMod.api.meta.ItemBlockMeta;
 import com.ebonheart.EbonArtsMod.common.blocks.basic.BlockArcaniteFenceNormal;
+import com.ebonheart.EbonArtsMod.common.blocks.basic.BlockKatchin;
 import com.ebonheart.EbonArtsMod.common.blocks.basic.BlockStairsMetaEA;
 import com.ebonheart.EbonArtsMod.common.blocks.basic.EABlockFence;
 import com.ebonheart.EbonArtsMod.common.blocks.basic.EABlockMeta;
@@ -71,6 +72,7 @@ public class InitBlocksEA
 	//public static Block arcanite_stairs;
 	public static Block arcanite_stairs_normal;
 	
+	public static Block katchin_block;
 	
 	public static Block purified_mystic_block;
 	
@@ -151,6 +153,10 @@ public class InitBlocksEA
 		//arcanite_wall = new BlockWall(EbonArtsBlocks.arcanite_block).setUnlocalizedName("wall/arcanite_wall").setCreativeTab(EbonArtsMod.tabEbonArtsBlocks);
 		//arcanite_wall_gate = new BlockFenceGate().setUnlocalizedName("wall/arcanite_wall_gate").setCreativeTab(EbonArtsMod.tabEbonArtsBlocks);
 		
+		katchin_block = new BlockKatchin(Material.rock);
+		
+		
+		
 		
 		mystic_furnace = new TestBlockFurnaceEA(false).setUnlocalizedName("machine/mystic_furnace").setCreativeTab(EbonArtsMod.tabEbonArtsBlocks);
 		lit_mystic_furnace = new TestBlockFurnaceEA(true).setUnlocalizedName("machine/lit_mystic_furnace").setCreativeTab(EbonArtsMod.tabEbonArtsBlocks);
@@ -196,6 +202,8 @@ public class InitBlocksEA
 		//GameRegistry.registerBlock(arcanite_fence_gate_normal, arcanite_fence_gate_normal.getUnlocalizedName().substring(5));
 		//GameRegistry.registerBlock(arcanite_wall, arcanite_wall.getUnlocalizedName().substring(5));
 		//GameRegistry.registerBlock(arcanite_wall_gate, arcanite_wall_gate.getUnlocalizedName().substring(5));
+		
+		GameRegistry.registerBlock(katchin_block, katchin_block.getUnlocalizedName().substring(5));
 		
 		
 		GameRegistry.registerBlock(mystic_furnace, mystic_furnace.getUnlocalizedName().substring(5));
@@ -278,6 +286,9 @@ public class InitBlocksEA
 		
 		//registerRender(test_liquid);
 		//registerRender(flowing_test_liquid);
+		
+		registerRender(katchin_block);
+		
 		
 		//registerRender(arcanite_column_normal);
 		//registerRender(arcanite_double_slab);

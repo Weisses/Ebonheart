@@ -1,4 +1,5 @@
 //-----Items-----
+item.alchemical_compendium.name=Alchemical Compendium
 item.gem/draconium_dust.name=Draconium Dust
 item.gem/velious.name=Velious
 item.gem/arcanite.name=Arcanite
@@ -112,9 +113,42 @@ tile.arcanite_stairs.name=Arcanite Stairs
 tile.purified_mystic_block.name=Purified Mystic Block
 tile.ebon_alter.name=Ebon Alter
 
+
+
 itemGroup.tabEbonArts=Ebon Arts
 itemGroup.tabEbonArtsBlocks=Ebon Arts Blocks
 itemGroup.tabEbonArtsItems=Ebon Arts Items
 
-achievement.mineMysticDust=I found Mystic Dust!
-achievement.mineMysticDust.desc=Keeping it real.
+
+
+death.attack.electric=%1$s was roasted by electric current.
+death.attack.electric.player=%1$s was roasted by electric current while fighting %2$s.
+
+
+
+achievement.ea:alchemical_compendium=And so it begins!
+achievement.ea:alchemical_compendium.desc=Obtain an Alchemical Compendium.
+
+achievement.ea:mine_draconium_ore=A touch of Dragon!
+achievement.ea:mine_draconium_ore.desc=Mine some Draconium Ore.
+
+achievement.ea:mine_velious_ore=Discovery of Velious!
+achievement.ea:mine_velious_ore.desc=Mine some Velious Ore.
+
+achievement.ea:mine_arcanite_ore=Might of Arcanite!
+achievement.ea:mine_arcanite_ore.desc=Mine some Arcanite Ore.
+
+achievement.ea:mine_katchin_ore=What Diamonds should be!
+achievement.ea:mine_katchin_ore.desc=Mine some Katchin Ore.
+
+achievement.ea:mine_necrocite_ore=Blight of Necrocite!
+achievement.ea:mine_necrocite_ore.desc=Mine some Necrocite Ore.
+
+achievement.ea:mine_soularite_ore=Reap the Soularite!
+achievement.ea:mine_soularite_ore.desc=Mine some Soularite Ore.
+
+achievement.ea:mine_ebon_ore=Ore's level is over 9000!
+achievement.ea:mine_ebon_ore.desc=Mine some Ebon Ore.
+
+achievement.ea:smelt_draconium_dust=From dragons to dust!
+achievement.ea:smelt_draconium_dust.desc=Smelt Draconium Dust.

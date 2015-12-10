@@ -10,6 +10,7 @@ import net.minecraftforge.fml.relauncher.Side;
 import com.ebonheart.EbonArtsMod.EbonArtsMod;
 import com.ebonheart.EbonArtsMod.api.GuiHandler;
 import com.ebonheart.EbonArtsMod.common.world.WorldGeneratorEA;
+import com.ebonheart.EbonArtsMod.init.InitAchievementsEA;
 import com.ebonheart.EbonArtsMod.init.InitBlocksEA;
 import com.ebonheart.EbonArtsMod.init.InitItemsEA;
 import com.ebonheart.EbonArtsMod.init.InitRecipesEA;
@@ -37,8 +38,7 @@ public class CommonProxy
 		InitRecipesEA.initShapedRecipe();
 		InitRecipesEA.initShapelessRecipe();
 		InitRecipesEA.initSmeltingRecipe();
-		//InitAchievementsEA.init();
-		
+		InitAchievementsEA.init();
 		
 		
 		//EbonArtsMod.packetHandler = MinersbasicAPI.createPacketHandler("tutorial");

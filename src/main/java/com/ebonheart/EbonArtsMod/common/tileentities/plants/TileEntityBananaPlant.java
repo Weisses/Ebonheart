@@ -77,5 +77,6 @@ public class TileEntityBananaPlant extends TileEntity
 		readFromNBT(pkt.getNbtCompound());
 	}
 	
-
+	
+	
 }

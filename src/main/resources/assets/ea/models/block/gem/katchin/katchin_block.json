@@ -1,0 +1,12 @@
+{
+    "parent": "block/cube",
+    "textures": {
+        "particle": "ea:blocks/gems/katchin/katchin_block",
+        "down": "ea:blocks/gems/katchin/katchin_block",
+        "up": "ea:blocks/gems/katchin/katchin_block",
+        "north": "ea:blocks/gems/katchin/katchin_block",
+        "east": "ea:blocks/gems/katchin/katchin_block",
+        "south": "ea:blocks/gems/katchin/katchin_block",
+        "west": "ea:blocks/gems/katchin/katchin_block"
+    }
+}
