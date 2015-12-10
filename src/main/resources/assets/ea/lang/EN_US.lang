@@ -8,12 +8,12 @@ item.gem/necrocite.name=Necrocite
 item.gem/soularite.name=Soularite
 item.gem/innate_arcanite.name=Innate Arcanite
 
+
 item.gem/arcanite_shard.name=Arcanite Shard
 
 item.ebon_sigil.name=Ebon Sigil
 
 //-----Ores-----
-
 tile.ore/draconium_ore.name=Draconium Ore
 tile.ore/velious_ore.name=Velious Ore
 tile.ore/arcanite_ore.name=Arcanite Ore
@@ -21,56 +21,75 @@ tile.ore/katcheen_ore.name=Katcheen Ore
 tile.ore/ebon_ore.name=Ebon Ore
 tile.ore/necrocite_ore.name=Necrocite Ore
 tile.ore/soularite_ore.name=Soularite Ore
+tile.ore/ebon_ore_nether.name=Ebon Ore
 
 
 //-----Blocks-----
-tile.gem/arcanite/arcanite_block_normal.name=Arcanite Block
-tile.gem/arcanite/arcanite_block.white.name=White Arcanite Block
-tile.gem/arcanite/arcanite_block.orange.name=Orange Arcanite Block
-tile.gem/arcanite/arcanite_block.magenta.name=Magenta Arcanite Block
-tile.gem/arcanite/arcanite_block.lightblue.name=Light Blue Arcanite Block
-tile.gem/arcanite/arcanite_block.yellow.name=Yellow Arcanite Block
-tile.gem/arcanite/arcanite_block.lime.name=Lime Arcanite Block
-tile.gem/arcanite/arcanite_block.pink.name=Pink Arcanite Block
-tile.gem/arcanite/arcanite_block.gray.name=Gray Arcanite Block
-tile.gem/arcanite/arcanite_block.lightgray.name=Light Gray Arcanite Block
-tile.gem/arcanite/arcanite_block.cyan.name=Cyan Arcanite Block
-tile.gem/arcanite/arcanite_block.purple.name=Purple Arcanite Block
-tile.gem/arcanite/arcanite_block.blue.name=Blue Arcanite Block
-tile.gem/arcanite/arcanite_block.brown.name=Brown Arcanite Block
-tile.gem/arcanite/arcanite_block.green.name=Green Arcanite Block
-tile.gem/arcanite/arcanite_block.red.name=Red Arcanite Block
-tile.gem/arcanite/arcanite_block.black.name=Black Arcanite Block
+tile.gem/mystic/mystic_block_normal.name=Mystic Block
+tile.gem/mystic/mystic_block.white.name=White Mystic Block
+tile.gem/mystic/mystic_block.orange.name=Orange Mystic Block
+tile.gem/mystic/mystic_block.magenta.name=Magenta Mystic Block
+tile.gem/mystic/mystic_block.lightblue.name=Light Blue Mystic Block
+tile.gem/mystic/mystic_block.yellow.name=Yellow Mystic Block
+tile.gem/mystic/mystic_block.lime.name=Lime Mystic Block
+tile.gem/mystic/mystic_block.pink.name=Pink Mystic Block
+tile.gem/mystic/mystic_block.gray.name=Gray Mystic Block
+tile.gem/mystic/mystic_block.lightgray.name=Light Gray Mystic Block
+tile.gem/mystic/mystic_block.cyan.name=Cyan Mystic Block
+tile.gem/mystic/mystic_block.purple.name=Purple Mystic Block
+tile.gem/mystic/mystic_block.blue.name=Blue Mystic Block
+tile.gem/mystic/mystic_block.brown.name=Brown Mystic Block
+tile.gem/mystic/mystic_block.green.name=Green Mystic Block
+tile.gem/mystic/mystic_block.red.name=Red Mystic Block
+tile.gem/mystic/mystic_block.black.name=Black Mystic Block
 
-
-tile.gem/arcanite/innate_arcanite_block_normal.name=Innate Arcanite Block
-tile.gem/arcanite/innate_arcanite_block.white.name=White Innate Arcanite Block
-tile.gem/arcanite/innate_arcanite_block.orange.name=Orange Innate Arcanite Block
-tile.gem/arcanite/innate_arcanite_block.magenta.name=Magenta Innate Arcanite Block
-tile.gem/arcanite/innate_arcanite_block.lightblue.name=Light Blue Innate Arcanite Block
-tile.gem/arcanite/innate_arcanite_block.yellow.name=Yellow Innate Arcanite Block
-tile.gem/arcanite/innate_arcanite_block.lime.name=Lime Innate Arcanite Block
-tile.gem/arcanite/innate_arcanite_block.pink.name=Pink Innate Arcanite Block
-tile.gem/arcanite/innate_arcanite_block.gray.name=Gray Innate Arcanite Block
-tile.gem/arcanite/innate_arcanite_block.lightgray.name=Light Gray Innate Arcanite Block
-tile.gem/arcanite/innate_arcanite_block.cyan.name=Cyan Innate Arcanite Block
-tile.gem/arcanite/innate_arcanite_block.purple.name=Purple Innate Arcanite Block
-tile.gem/arcanite/innate_arcanite_block.blue.name=Blue Innate Arcanite Block
-tile.gem/arcanite/innate_arcanite_block.brown.name=Brown Innate Arcanite Block
-tile.gem/arcanite/innate_arcanite_block.green.name=Green Innate Arcanite Block
-tile.gem/arcanite/innate_arcanite_block.red.name=Red Innate Arcanite Block
-tile.gem/arcanite/innate_arcanite_block.black.name=Black Innate Arcanite Block
-
-
-
-tile.fence/arcanite_fence_normal.name=Arcanite Fence
-tile.fence/innate_arcanite_fence_normal.name=Innate Arcanite Fence
+tile.gem/mystic/innate_mystic_block_normal.name=Innate Mystic Block
+tile.gem/mystic/innate_mystic_block.white.name=White Innate Mystic Block
+tile.gem/mystic/innate_mystic_block.orange.name=Orange Innate Mystic Block
+tile.gem/mystic/innate_mystic_block.magenta.name=Magenta Innate Mystic Block
+tile.gem/mystic/innate_mystic_block.lightblue.name=Light Blue Innate Mystic Block
+tile.gem/mystic/innate_mystic_block.yellow.name=Yellow Innate Mystic Block
+tile.gem/mystic/innate_mystic_block.lime.name=Lime Innate Mystic Block
+tile.gem/mystic/innate_mystic_block.pink.name=Pink Innate Mystic Block
+tile.gem/mystic/innate_mystic_block.gray.name=Gray Innate Mystic Block
+tile.gem/mystic/innate_mystic_block.lightgray.name=Light Gray Innate Mystic Block
+tile.gem/mystic/innate_mystic_block.cyan.name=Cyan Innate Mystic Block
+tile.gem/mystic/innate_mystic_block.purple.name=Purple Innate Mystic Block
+tile.gem/mystic/innate_mystic_block.blue.name=Blue Innate Mystic Block
+tile.gem/mystic/innate_mystic_block.brown.name=Brown Innate Mystic Block
+tile.gem/mystic/innate_mystic_block.green.name=Green Innate Mystic Block
+tile.gem/mystic/innate_mystic_block.red.name=Red Innate Mystic Block
+tile.gem/mystic/innate_mystic_block.black.name=Black Innate Mystic Block
 
 tile.gem/draconium/draconium_block.name=Draconium Block
 tile.gem/velious/velious_block.name=Velious Block
+tile.gem/arcanite/arcanite_block.name=Arcanite Block
 tile.gem/katcheen/katcheen_block.name=Katcheen Block
 tile.gem/necrocite/necrocite_block.name=Necrocite Block
 tile.gem/soularite/soularite_block.name=Soularite Block
+
+tile.fence/draconium_fence.name=Draconium Fence
+tile.fence/velious_fence.name=Velious Fence
+tile.fence/arcanite_fence.name=Arcanite Fence
+tile.fence/katcheen_fence.name=Katcheen Fence
+tile.fence/necrocite_fence.name=Necrocite Fence
+tile.fence/soularite_fence.name=Soularite Fence
+
+tile.fence/innate_arcanite_fence_normal.name=Innate Arcanite Fence
+
+tile.wall/draconium_wall.name=Draconium Wall
+tile.wall/velious_wall.name=Velious Wall
+tile.wall/arcanite_wall.name=Arcanite Wall
+tile.wall/katcheen_wall.name=Katcheen Wall
+tile.wall/necrocite_wall.name=Necrocite Wall
+tile.wall/soularite_wall.name=Soularite Wall
+
+tile.stairs/draconium_stairs.name=Draconium Stairs
+tile.stairs/velious_stairs.name=Velious Stairs
+tile.stairs/arcanite_stairs.name=Arcanite Stairs
+tile.stairs/katcheen_stairs.name=Katcheen Stairs
+tile.stairs/necrocite_stairs.name=Necrocite Stairs
+tile.stairs/soularite_stairs.name=Soularite Stairs
 
 //-----Tools-----
 item.tool/arcanite_pickaxe.name=Arcanite Pickaxe
@@ -110,18 +129,17 @@ item.banana.name=Banana
 tile.bananaplant.name=Banana Plant
 
 tile.fence/arcanite_fence_gate.name=Arcanite Fence Gate
-tile.wall/arcanite_wall.name=Arcanite Wall
+
 tile.arcanite_column.name=Arcanite Column
 tile.arcanite_double_slab.name=Arcanite Double Slab
 
 tile.arcanite_slab.name=Arcanite Slab
-tile.arcanite_stairs.name=Arcanite Stairs
+
 tile.purified_mystic_block.name=Purified Mystic Block
 tile.ebon_alter.name=Ebon Alter
 
 
 
-itemGroup.tabEbonArts=Ebon Arts
 itemGroup.tabEbonArtsBlocks=Ebon Arts Blocks
 itemGroup.tabEbonArtsItems=Ebon Arts Items
 

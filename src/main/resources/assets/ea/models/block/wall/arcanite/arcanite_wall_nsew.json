@@ -1,6 +1,6 @@
 {
-    "parent": "ea:block/wall/wall_nsew",
+    "parent": "block/wall_nsew",
     "textures": {
-        "wall": "ea:blocks/gems/arcanite_block_side"
+        "wall": "ea:blocks/gems/arcanite/arcanite_block_side"
     }
 }

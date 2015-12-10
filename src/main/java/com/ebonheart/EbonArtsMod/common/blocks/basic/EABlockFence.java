@@ -8,15 +8,14 @@ import net.minecraft.block.material.Material;
 
 public class EABlockFence extends BlockFence {
 
-	public EABlockFence(String unlocalizedName, Material materialIn) {
-		super(materialIn);
+	public EABlockFence(String unlocalizedName) 
+	{
+		super(Material.rock);
 		this.setUnlocalizedName(unlocalizedName);
 		this.setCreativeTab(EbonArtsMod.tabEbonArtsBlocks);
 		this.setHarvestLevel("pickaxe", 2);
-		this.setHardness(5F);
-		this.setResistance(1000F);
+		this.setHardness(5f);
+		this.setResistance(1000f);
 		this.setStepSound(soundTypeStone);
-	
 	}
-
 }

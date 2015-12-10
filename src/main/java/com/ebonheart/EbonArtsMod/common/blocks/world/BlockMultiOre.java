@@ -11,14 +11,15 @@ import net.minecraft.item.ItemStack;
 import net.minecraft.util.BlockPos;
 import net.minecraft.world.IBlockAccess;
 
+import com.ebonheart.EbonArtsMod.EbonArtsMod;
 import com.ebonheart.EbonArtsMod.init.InitItemsEA;
 
 public class BlockMultiOre extends Block {
 
-	public BlockMultiOre(Material materialIn) {
+	public BlockMultiOre(Material materialIn, String unlocalizedName) {
 		super(materialIn);
-		this.setUnlocalizedName("ore/ebon_ore");
-		this.setCreativeTab(CreativeTabs.tabBlock);
+		this.setUnlocalizedName(unlocalizedName);
+		this.setCreativeTab(EbonArtsMod.tabEbonArtsBlocks);
 		this.setStepSound(soundTypeStone);
 		this.setHardness(40.0f);
 		this.setResistance(100.0f);

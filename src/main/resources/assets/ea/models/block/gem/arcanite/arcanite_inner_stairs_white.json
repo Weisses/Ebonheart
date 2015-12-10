@@ -1,8 +1,0 @@
-{
-    "parent": "block/inner_stairs",
-    "textures": {
-        "bottom": "ea:blocks/gems/arcanite/arcanite_block_bottom_normal",
-        "top": "ea:blocks/gems/arcanite/arcanite_block_top_normal",
-        "side": "ea:blocks/gems/arcanite/arcanite_block_side_normal"
-    }
-}

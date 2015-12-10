@@ -1,12 +1,12 @@
 {
     "parent": "block/cube",
     "textures": {
-        "particle": "ea:blocks/gems/necrocite/necrocite_block",
-        "down": "ea:blocks/gems/necrocite/necrocite_block",
-        "up": "ea:blocks/gems/necrocite/necrocite_block",
-        "north": "ea:blocks/gems/necrocite/necrocite_block",
-        "east": "ea:blocks/gems/necrocite/necrocite_block",
-        "south": "ea:blocks/gems/necrocite/necrocite_block",
-        "west": "ea:blocks/gems/necrocite/necrocite_block"
+        "particle": "ea:blocks/gems/necrocite/necrocite_block_side",
+        "down": "ea:blocks/gems/necrocite/necrocite_block_top",
+        "up": "ea:blocks/gems/necrocite/necrocite_block_top",
+        "north": "ea:blocks/gems/necrocite/necrocite_block_side",
+        "east": "ea:blocks/gems/necrocite/necrocite_block_side",
+        "south": "ea:blocks/gems/necrocite/necrocite_block_side",
+        "west": "ea:blocks/gems/necrocite/necrocite_block_side"
     }
 }

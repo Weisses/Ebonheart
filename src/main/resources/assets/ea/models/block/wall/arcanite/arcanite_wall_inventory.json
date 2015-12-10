@@ -1,6 +1,0 @@
-{
-    "parent": "ea:block/wall/wall_inventory",
-    "textures": {
-        "wall": "ea:blocks/gems/arcanite_block_side"
-    }
-}
