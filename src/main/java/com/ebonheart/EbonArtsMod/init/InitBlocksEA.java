@@ -1,8 +1,6 @@
 package com.ebonheart.EbonArtsMod.init;
 
 import net.minecraft.block.Block;
-import net.minecraft.block.BlockFenceGate;
-import net.minecraft.block.BlockLog;
 import net.minecraft.block.material.Material;
 import net.minecraft.client.Minecraft;
 import net.minecraft.client.resources.model.ModelBakery;
@@ -15,13 +13,14 @@ import com.ebonheart.EbonArtsMod.EbonArtsMod;
 import com.ebonheart.EbonArtsMod.Reference;
 import com.ebonheart.EbonArtsMod.api.meta.ItemBlockMeta;
 import com.ebonheart.EbonArtsMod.common.blocks.basic.BlockArcaniteFenceNormal;
-import com.ebonheart.EbonArtsMod.common.blocks.basic.BlockKatchin;
-import com.ebonheart.EbonArtsMod.common.blocks.basic.BlockStairsMetaEA;
-import com.ebonheart.EbonArtsMod.common.blocks.basic.EABlockFence;
-import com.ebonheart.EbonArtsMod.common.blocks.basic.EABlockMeta;
 import com.ebonheart.EbonArtsMod.common.blocks.basic.BlockArcaniteNormal;
+import com.ebonheart.EbonArtsMod.common.blocks.basic.BlockDraconium;
 import com.ebonheart.EbonArtsMod.common.blocks.basic.BlockInnateArcaniteNormal;
-import com.ebonheart.EbonArtsMod.common.blocks.basic.EABlockPillar;
+import com.ebonheart.EbonArtsMod.common.blocks.basic.BlockKatcheen;
+import com.ebonheart.EbonArtsMod.common.blocks.basic.BlockNecrocite;
+import com.ebonheart.EbonArtsMod.common.blocks.basic.BlockSoularite;
+import com.ebonheart.EbonArtsMod.common.blocks.basic.BlockVelious;
+import com.ebonheart.EbonArtsMod.common.blocks.basic.EABlockMeta;
 import com.ebonheart.EbonArtsMod.common.blocks.basic.EABlockStairs;
 import com.ebonheart.EbonArtsMod.common.blocks.devices.TestBlockFurnaceEA;
 import com.ebonheart.EbonArtsMod.common.blocks.world.BlockMultiOre;
@@ -33,7 +32,7 @@ public class InitBlocksEA
 	public static Block draconium_ore;
 	public static Block velious_ore;
 	public static Block arcanite_ore;
-	public static Block katchin_ore;
+	public static Block katcheen_ore;
 	public static Block ebon_ore;
 	
 	//advanced ore gem; gem
@@ -72,7 +71,12 @@ public class InitBlocksEA
 	//public static Block arcanite_stairs;
 	public static Block arcanite_stairs_normal;
 	
-	public static Block katchin_block;
+	public static Block draconium_block;
+	public static Block velious_block;
+	public static Block katcheen_block;
+	public static Block necrocite_block;
+	public static Block soularite_block;
+	
 	
 	public static Block purified_mystic_block;
 	
@@ -131,7 +135,7 @@ public class InitBlocksEA
 		draconium_ore = new BlockOreEA(Material.rock, "ore/draconium_ore", "pickaxe", 2, 0.4f, 5f);
 		velious_ore = new BlockOreEA(Material.rock, "ore/velious_ore", "pickaxe", 2, 0.4f, 7f);
 		arcanite_ore = new BlockOreEA(Material.rock, "ore/arcanite_ore", "pickaxe", 3, 0f, 10f);
-		katchin_ore = new BlockOreEA(Material.rock, "ore/katchin_ore", "pickaxe", 3, 0f, 18f);
+		katcheen_ore = new BlockOreEA(Material.rock, "ore/katcheen_ore", "pickaxe", 3, 0f, 18f);
 		necrocite_ore = new BlockOreEA(Material.rock, "ore/necrocite_ore", "pickaxe", 3, 0f, 15f);
 		soularite_ore = new BlockOreEA(Material.rock, "ore/soularite_ore", "pickaxe", 3, 0f, 15f);
 		ebon_ore = new BlockMultiOre(Material.rock);
@@ -153,7 +157,11 @@ public class InitBlocksEA
 		//arcanite_wall = new BlockWall(EbonArtsBlocks.arcanite_block).setUnlocalizedName("wall/arcanite_wall").setCreativeTab(EbonArtsMod.tabEbonArtsBlocks);
 		//arcanite_wall_gate = new BlockFenceGate().setUnlocalizedName("wall/arcanite_wall_gate").setCreativeTab(EbonArtsMod.tabEbonArtsBlocks);
 		
-		katchin_block = new BlockKatchin(Material.rock);
+		draconium_block = new BlockDraconium(Material.rock);
+		velious_block = new BlockVelious(Material.rock);
+		katcheen_block = new BlockKatcheen(Material.rock);
+		necrocite_block = new BlockNecrocite(Material.rock);
+		soularite_block = new BlockSoularite(Material.rock);
 		
 		
 		
@@ -181,7 +189,7 @@ public class InitBlocksEA
 		GameRegistry.registerBlock(draconium_ore, draconium_ore.getUnlocalizedName().substring(5));
 		GameRegistry.registerBlock(velious_ore, velious_ore.getUnlocalizedName().substring(5));
 		GameRegistry.registerBlock(arcanite_ore, arcanite_ore.getUnlocalizedName().substring(5));
-		GameRegistry.registerBlock(katchin_ore, katchin_ore.getUnlocalizedName().substring(5));
+		GameRegistry.registerBlock(katcheen_ore, katcheen_ore.getUnlocalizedName().substring(5));
 		GameRegistry.registerBlock(necrocite_ore, necrocite_ore.getUnlocalizedName().substring(5));
 		GameRegistry.registerBlock(soularite_ore, soularite_ore.getUnlocalizedName().substring(5));
 		GameRegistry.registerBlock(ebon_ore, ebon_ore.getUnlocalizedName().substring(5));
@@ -203,7 +211,11 @@ public class InitBlocksEA
 		//GameRegistry.registerBlock(arcanite_wall, arcanite_wall.getUnlocalizedName().substring(5));
 		//GameRegistry.registerBlock(arcanite_wall_gate, arcanite_wall_gate.getUnlocalizedName().substring(5));
 		
-		GameRegistry.registerBlock(katchin_block, katchin_block.getUnlocalizedName().substring(5));
+		GameRegistry.registerBlock(draconium_block, draconium_block.getUnlocalizedName().substring(5));
+		GameRegistry.registerBlock(velious_block, velious_block.getUnlocalizedName().substring(5));
+		GameRegistry.registerBlock(katcheen_block, katcheen_block.getUnlocalizedName().substring(5));
+		GameRegistry.registerBlock(necrocite_block, necrocite_block.getUnlocalizedName().substring(5));
+		GameRegistry.registerBlock(soularite_block, soularite_block.getUnlocalizedName().substring(5));
 		
 		
 		GameRegistry.registerBlock(mystic_furnace, mystic_furnace.getUnlocalizedName().substring(5));
@@ -228,7 +240,7 @@ public class InitBlocksEA
 		registerRender(draconium_ore);
 		registerRender(velious_ore);
 		registerRender(arcanite_ore);
-		registerRender(katchin_ore);
+		registerRender(katcheen_ore);
 		registerRender(necrocite_ore);
 		registerRender(soularite_ore);
 		registerRender(ebon_ore);
@@ -287,7 +299,11 @@ public class InitBlocksEA
 		//registerRender(test_liquid);
 		//registerRender(flowing_test_liquid);
 		
-		registerRender(katchin_block);
+		registerRender(draconium_block);
+		registerRender(velious_block);
+		registerRender(katcheen_block);
+		registerRender(necrocite_block);
+		registerRender(soularite_block);
 		
 		
 		//registerRender(arcanite_column_normal);

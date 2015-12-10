@@ -48,9 +48,9 @@ public class AchievementsEA {
 			event.player.triggerAchievement(InitAchievementsEA.mine_arcanite_ore);
 		}
 		
-		if(event.pickedUp.getEntityItem().isItemEqual(new ItemStack(Item.getItemFromBlock(InitBlocksEA.katchin_ore))))
+		if(event.pickedUp.getEntityItem().isItemEqual(new ItemStack(Item.getItemFromBlock(InitBlocksEA.katcheen_ore))))
 		{
-			event.player.triggerAchievement(InitAchievementsEA.mine_katchin_ore);
+			event.player.triggerAchievement(InitAchievementsEA.mine_katcheen_ore);
 		}
 		
 		if(event.pickedUp.getEntityItem().isItemEqual(new ItemStack(Item.getItemFromBlock(InitBlocksEA.necrocite_ore))))

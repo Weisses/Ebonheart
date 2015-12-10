@@ -3,7 +3,7 @@ item.alchemical_compendium.name=Alchemical Compendium
 item.gem/draconium_dust.name=Draconium Dust
 item.gem/velious.name=Velious
 item.gem/arcanite.name=Arcanite
-item.gem/katchin.name=Katchin
+item.gem/katcheen.name=Katcheen
 item.gem/necrocite.name=Necrocite
 item.gem/soularite.name=Soularite
 item.gem/innate_arcanite.name=Innate Arcanite
@@ -17,7 +17,7 @@ item.ebon_sigil.name=Ebon Sigil
 tile.ore/draconium_ore.name=Draconium Ore
 tile.ore/velious_ore.name=Velious Ore
 tile.ore/arcanite_ore.name=Arcanite Ore
-tile.ore/katchin_ore.name=Katchin Ore
+tile.ore/katcheen_ore.name=Katcheen Ore
 tile.ore/ebon_ore.name=Ebon Ore
 tile.ore/necrocite_ore.name=Necrocite Ore
 tile.ore/soularite_ore.name=Soularite Ore
@@ -66,6 +66,12 @@ tile.gem/arcanite/innate_arcanite_block.black.name=Black Innate Arcanite Block
 tile.fence/arcanite_fence_normal.name=Arcanite Fence
 tile.fence/innate_arcanite_fence_normal.name=Innate Arcanite Fence
 
+tile.gem/draconium/draconium_block.name=Draconium Block
+tile.gem/velious/velious_block.name=Velious Block
+tile.gem/katcheen/katcheen_block.name=Katcheen Block
+tile.gem/necrocite/necrocite_block.name=Necrocite Block
+tile.gem/soularite/soularite_block.name=Soularite Block
+
 //-----Tools-----
 item.tool/arcanite_pickaxe.name=Arcanite Pickaxe
 item.tool/arcanite_axe.name=Arcanite Axe
@@ -73,11 +79,11 @@ item.tool/arcanite_shovel.name=Arcanite Shovel
 item.tool/arcanite_hoe.name=Arcanite Hoe
 item.tool/arcanite_sword.name=Arcanite Sword
 
-item.tool/katchin_pickaxe.name=Katchin Pickaxe
-item.tool/katchin_axe.name=Katchin Axe
-item.tool/katchin_shovel.name=Katchin Shovel
-item.tool/katchin_hoe.name=Katchin Hoe
-item.tool/katchin_sword.name=Katchin Sword
+item.tool/katcheen_pickaxe.name=Katcheen Pickaxe
+item.tool/katcheen_axe.name=Katcheen Axe
+item.tool/katcheen_shovel.name=Katcheen Shovel
+item.tool/katcheen_hoe.name=Katcheen Hoe
+item.tool/katcheen_sword.name=Katcheen Sword
 
 //-----Armor-----
 item.armor/arcanite_helmet.name=Arcanite Helmet
@@ -138,8 +144,8 @@ achievement.ea:mine_velious_ore.desc=Mine some Velious Ore.
 achievement.ea:mine_arcanite_ore=Might of Arcanite!
 achievement.ea:mine_arcanite_ore.desc=Mine some Arcanite Ore.
 
-achievement.ea:mine_katchin_ore=What Diamonds should be!
-achievement.ea:mine_katchin_ore.desc=Mine some Katchin Ore.
+achievement.ea:mine_katcheen_ore=What Diamonds should be!
+achievement.ea:mine_katcheen_ore.desc=Mine some Katcheen Ore.
 
 achievement.ea:mine_necrocite_ore=Blight of Necrocite!
 achievement.ea:mine_necrocite_ore.desc=Mine some Necrocite Ore.

@@ -18,7 +18,7 @@ public class BlockArcaniteNormal extends Block {
 		this.setUnlocalizedName("gem/arcanite/arcanite_block_normal");
 		this.setCreativeTab(EbonArtsMod.tabEbonArtsBlocks);
 		this.setHarvestLevel("pickaxe", 2);
-		this.setHardness(5F);
+		this.setHardness(20F);
 		this.setResistance(1000F);
 		this.setStepSound(soundTypeStone);
 	}

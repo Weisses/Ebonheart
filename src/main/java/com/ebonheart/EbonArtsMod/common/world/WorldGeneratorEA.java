@@ -19,7 +19,7 @@ public class WorldGeneratorEA implements IWorldGenerator
 	private WorldGenerator gen_draconium_ore; //Generates Draconium Ore (used in Overworld)
 	private WorldGenerator gen_velious_ore; //Generates Velious Ore (used in Overworld)
 	private WorldGenerator gen_arcanite_ore; //Generates Arcanite Ore (used in Overworld)
-	private WorldGenerator gen_katchin_ore; //Generates Katchin Ore (used in Overworld)
+	private WorldGenerator gen_katcheen_ore; //Generates katcheen Ore (used in Overworld)
 	private WorldGenerator gen_ebon_ore; //Generates Ebon Ore (used in Overworld and Nether)
 	private WorldGenerator gen_necrocite_ore; //Generates Necrocite Ore (used in Nether)
 	private WorldGenerator gen_soularite_ore; //Generates Soularite Ore (used in Nether)
@@ -33,7 +33,7 @@ public class WorldGeneratorEA implements IWorldGenerator
 		this.gen_draconium_ore = new WorldGenMinable(InitBlocksEA.draconium_ore.getDefaultState(), 8, BlockHelper.forBlock(Blocks.stone)); //the 8 is the max vein size
 		this.gen_velious_ore = new WorldGenMinable(InitBlocksEA.velious_ore.getDefaultState(), 6, BlockHelper.forBlock(Blocks.stone));
 		this.gen_arcanite_ore = new WorldGenMinable(InitBlocksEA.arcanite_ore.getDefaultState(), 5, BlockHelper.forBlock(Blocks.stone));
-		this.gen_katchin_ore = new WorldGenMinable(InitBlocksEA.katchin_ore.getDefaultState(), 4, BlockHelper.forBlock(Blocks.stone));
+		this.gen_katcheen_ore = new WorldGenMinable(InitBlocksEA.katcheen_ore.getDefaultState(), 4, BlockHelper.forBlock(Blocks.stone));
 		this.gen_necrocite_ore = new WorldGenMinable(InitBlocksEA.necrocite_ore.getDefaultState(), 3, BlockHelper.forBlock(Blocks.stone));
 		this.gen_soularite_ore = new WorldGenMinable(InitBlocksEA.soularite_ore.getDefaultState(), 3, BlockHelper.forBlock(Blocks.stone));
 		
@@ -54,7 +54,7 @@ public class WorldGeneratorEA implements IWorldGenerator
 			this.runGenerator(this.gen_draconium_ore, world, random, chunkX, chunkZ, 16, 32, 64);//# of veins per chunk; height min; height max
 			this.runGenerator(this.gen_velious_ore, world, random, chunkX, chunkZ, 8, 24, 48);
 			this.runGenerator(this.gen_arcanite_ore, world, random, chunkX, chunkZ, 4, 2, 32);
-			this.runGenerator(this.gen_katchin_ore, world, random, chunkX, chunkZ, 2, 2, 16);
+			this.runGenerator(this.gen_katcheen_ore, world, random, chunkX, chunkZ, 2, 2, 16);
 			
 			//for single ore gen
 			this.runGenerator(this.gen_ebon_ore, world, random, chunkX, chunkZ, 1, 2, 16);

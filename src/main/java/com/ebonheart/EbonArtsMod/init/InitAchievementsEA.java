@@ -26,7 +26,7 @@ public class InitAchievementsEA
 	public static Achievement mine_draconium_ore;
 	public static Achievement mine_velious_ore;
 	public static Achievement mine_arcanite_ore;
-	public static Achievement mine_katchin_ore;
+	public static Achievement mine_katcheen_ore;
 	public static Achievement mine_necrocite_ore;
 	public static Achievement mine_soularite_ore;
 	public static Achievement mine_ebon_ore;
@@ -41,7 +41,7 @@ public class InitAchievementsEA
 		mine_draconium_ore = new AchievementHelper(Reference.MINE_DRACONIUM_ORE, -2, -1, InitBlocksEA.draconium_ore, (Achievement)null);//.func_180788_c();
 		mine_velious_ore = new AchievementHelper(Reference.MINE_VELIOUS_ORE, -3, 0, InitBlocksEA.velious_ore, (Achievement)null);//.func_180788_c();
 		mine_arcanite_ore = new AchievementHelper(Reference.MINE_ARCANITE_ORE, 2, -1, InitBlocksEA.arcanite_ore, (Achievement)null);//.func_180788_c();
-		mine_katchin_ore = new AchievementHelper(Reference.MINE_KATCHIN_ORE, 3, 0, InitBlocksEA.katchin_ore, (Achievement)null);//.func_180788_c();
+		mine_katcheen_ore = new AchievementHelper(Reference.MINE_KATCHEEN_ORE, 3, 0, InitBlocksEA.katcheen_ore, (Achievement)null);//.func_180788_c();
 		mine_necrocite_ore = new AchievementHelper(Reference.MINE_NECROCITE_ORE, -2, 1, InitBlocksEA.necrocite_ore, (Achievement)null);//.func_180788_c();
 		mine_soularite_ore = new AchievementHelper(Reference.MINE_SOULARITE_ORE, 2, 1, InitBlocksEA.soularite_ore, (Achievement)null);//.func_180788_c();
 		
