@@ -12,6 +12,10 @@ import net.minecraftforge.fml.common.registry.GameRegistry;
 import com.ebonheart.EbonArtsMod.EbonArtsMod;
 import com.ebonheart.EbonArtsMod.Reference;
 import com.ebonheart.EbonArtsMod.api.meta.ItemBlockMeta;
+import com.ebonheart.EbonArtsMod.common.blocks.BlockDoubleStainedBrickSlab;
+import com.ebonheart.EbonArtsMod.common.blocks.BlockHalfStainedBrickSlab;
+import com.ebonheart.EbonArtsMod.common.blocks.BlockStainedBrickSlab;
+import com.ebonheart.EbonArtsMod.common.blocks.ItemBlockStainedBrickSlab;
 import com.ebonheart.EbonArtsMod.common.blocks.basic.BlockArcanite;
 import com.ebonheart.EbonArtsMod.common.blocks.basic.BlockDraconium;
 import com.ebonheart.EbonArtsMod.common.blocks.basic.BlockInnateMysticNormal;
@@ -53,8 +57,8 @@ public class InitBlocksEA
 	//public static Block mystalite_ore;
 	
 	
-	
-	
+	public static Block double_slab;
+	public static Block slab;
 	
 	
 	
@@ -179,6 +183,33 @@ public class InitBlocksEA
 		soularite_stairs = new EABlockStairs("stairs/soularite_stairs");
 		
 		
+		double_slab = new BlockDoubleStainedBrickSlab();
+		slab = new BlockHalfStainedBrickSlab();
+		
+		
+		
+		BlockStainedBrickSlab slab = new BlockHalfStainedBrickSlab();
+        BlockStainedBrickSlab doubleSlab =
+            new BlockDoubleStainedBrickSlab();
+        GameRegistry.registerBlock(
+            slab,
+            ItemBlockStainedBrickSlab.class,
+            slab.getId(),
+            slab,
+            doubleSlab,
+            false);
+        GameRegistry.registerBlock(
+            doubleSlab,
+            ItemBlockStainedBrickSlab.class,
+            doubleSlab.getId(),
+            slab,
+            doubleSlab,
+            true);
+		
+		
+		
+		
+		
 		
 		
 		
@@ -239,6 +270,12 @@ public class InitBlocksEA
 		GameRegistry.registerBlock(soularite_ore, soularite_ore.getUnlocalizedName().substring(5));
 		GameRegistry.registerBlock(ebon_ore, ebon_ore.getUnlocalizedName().substring(5));
 		GameRegistry.registerBlock(ebon_ore_nether, ebon_ore_nether.getUnlocalizedName().substring(5));
+		
+		
+		//GameRegistry.registerBlock(double_slab, double_slab.getUnlocalizedName().substring(5));
+		//GameRegistry.registerBlock(slab, slab.getUnlocalizedName().substring(5));
+		
+		
 		
 		//GameRegistry.registerBlock(carnelian_ore, carnelian_ore.getUnlocalizedName().substring(5));
 		
@@ -310,6 +347,11 @@ public class InitBlocksEA
 		registerRender(soularite_ore);
 		registerRender(ebon_ore);
 		registerRender(ebon_ore_nether);
+		
+		
+		//registerRender(double_slab);
+		//registerRender(slab);
+		
 		
 		//registerRender(carnelian_ore);
 		registerRender(mystic_block_normal);

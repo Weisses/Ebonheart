@@ -20,9 +20,10 @@ public class WorldGeneratorEA implements IWorldGenerator
 	private WorldGenerator gen_velious_ore; //Generates Velious Ore (used in Overworld)
 	private WorldGenerator gen_arcanite_ore; //Generates Arcanite Ore (used in Overworld)
 	private WorldGenerator gen_katcheen_ore; //Generates katcheen Ore (used in Overworld)
-	private WorldGenerator gen_ebon_ore; //Generates Ebon Ore (used in Overworld and Nether)
+	private WorldGenerator gen_ebon_ore; //Generates Ebon Ore (used in Overworld)
 	private WorldGenerator gen_necrocite_ore; //Generates Necrocite Ore (used in Nether)
 	private WorldGenerator gen_soularite_ore; //Generates Soularite Ore (used in Nether)
+	private WorldGenerator gen_ebon_ore_nether; //Generates Ebon Ore (used in Nether)
 	
 	//private WorldGenerator gen_multi_ore; //Generates Multi Ore (used in Overworld)
 	
@@ -39,6 +40,8 @@ public class WorldGeneratorEA implements IWorldGenerator
 		
 		//for single ore gens
 		this.gen_ebon_ore = new WorldGenSingleMinable(InitBlocksEA.ebon_ore.getDefaultState());
+		this.gen_ebon_ore_nether = new WorldGenSingleMinable(InitBlocksEA.ebon_ore_nether.getDefaultState());
+		
 	}
 	
 	
@@ -62,9 +65,12 @@ public class WorldGeneratorEA implements IWorldGenerator
 	        
 	    //Nether
 		case -1: 
-			this.runGenerator(this.gen_arcanite_ore, world, random, chunkX, chunkZ, 8, 2, 126);
-			this.runGenerator(this.gen_arcanite_ore, world, random, chunkX, chunkZ, 8, 2, 126);
-			this.runGenerator(this.gen_ebon_ore, world, random, chunkX, chunkZ, 1, 2, 126);
+			//for multi ore gen
+			this.runGenerator(this.gen_necrocite_ore, world, random, chunkX, chunkZ, 4, 2, 126);
+			this.runGenerator(this.gen_soularite_ore, world, random, chunkX, chunkZ, 4, 2, 126);
+			
+			//for single ore gen
+			this.runGenerator(this.gen_ebon_ore_nether, world, random, chunkX, chunkZ, 1, 2, 126);
 			
 	        break;
 	        

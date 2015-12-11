@@ -15,14 +15,74 @@ public class InitRecipesEA
 	{
 		if(!EbonArtsConfiguration.cheapRecipe)
 		{
+			GameRegistry.addShapedRecipe(new ItemStack(InitBlocksEA.draconium_block), new Object[]{"DDD", "DDD", "DDD", 'D', InitItemsEA.draconium_dust});
+			GameRegistry.addShapedRecipe(new ItemStack(InitItemsEA.draconium_dust, 9), new Object[]{"D", 'D', InitBlocksEA.draconium_block});
+			
+			
+			GameRegistry.addShapedRecipe(new ItemStack(InitBlocksEA.velious_block), new Object[]{"VVV", "VVV", "VVV", 'V', InitItemsEA.velious});
+			GameRegistry.addShapedRecipe(new ItemStack(InitItemsEA.velious, 9), new Object[]{"V", 'V', InitBlocksEA.velious_block});
+			
+			
 			GameRegistry.addShapedRecipe(new ItemStack(InitBlocksEA.arcanite_block), new Object[]{"AAA", "AAA", "AAA", 'A', InitItemsEA.arcanite});
+			GameRegistry.addShapedRecipe(new ItemStack(InitItemsEA.arcanite, 9), new Object[]{"A", 'A', InitBlocksEA.arcanite_block});
+			
+			
+			GameRegistry.addShapedRecipe(new ItemStack(InitBlocksEA.katcheen_block), new Object[]{"KKK", "KKK", "KKK", 'K', InitItemsEA.katcheen});
+			GameRegistry.addShapedRecipe(new ItemStack(InitItemsEA.katcheen, 9), new Object[]{"K", 'K', InitBlocksEA.katcheen_block});
+			
+			
+			GameRegistry.addShapedRecipe(new ItemStack(InitBlocksEA.necrocite_block), new Object[]{"NNN", "NNN", "NNN", 'N', InitItemsEA.necrocite});
+			GameRegistry.addShapedRecipe(new ItemStack(InitItemsEA.necrocite, 9), new Object[]{"N", 'N', InitBlocksEA.necrocite_block});
+			
+			
+			GameRegistry.addShapedRecipe(new ItemStack(InitBlocksEA.soularite_block), new Object[]{"SSS", "SSS", "SSS", 'S', InitItemsEA.soularite});
+			GameRegistry.addShapedRecipe(new ItemStack(InitItemsEA.soularite, 9), new Object[]{"S", 'S', InitBlocksEA.soularite_block});
+			
+			
 		}
 		else
 		{
-			GameRegistry.addShapedRecipe(new ItemStack(InitBlocksEA.arcanite_block), new Object[]{"A", "A", "A", 'A', InitItemsEA.arcanite});
+			GameRegistry.addShapedRecipe(new ItemStack(InitBlocksEA.draconium_block), new Object[]{"DD", "DD", 'D', InitItemsEA.draconium_dust});
+			GameRegistry.addShapedRecipe(new ItemStack(InitItemsEA.draconium_dust, 4), new Object[]{"D", 'D', InitBlocksEA.draconium_block});
+			
+			GameRegistry.addShapedRecipe(new ItemStack(InitBlocksEA.velious_block), new Object[]{"VV", "VV", 'V', InitItemsEA.velious});
+			GameRegistry.addShapedRecipe(new ItemStack(InitItemsEA.velious, 4), new Object[]{"V", 'V', InitBlocksEA.velious_block});
+			
+			GameRegistry.addShapedRecipe(new ItemStack(InitBlocksEA.arcanite_block), new Object[]{"AA", "AA", 'A', InitItemsEA.arcanite});
+			GameRegistry.addShapedRecipe(new ItemStack(InitItemsEA.arcanite, 4), new Object[]{"A", 'A', InitBlocksEA.arcanite_block});
+			
+			GameRegistry.addShapedRecipe(new ItemStack(InitBlocksEA.katcheen_block), new Object[]{"KK", "KK", 'K', InitItemsEA.katcheen});
+			GameRegistry.addShapedRecipe(new ItemStack(InitItemsEA.katcheen, 4), new Object[]{"K", 'K', InitBlocksEA.katcheen_block});
+			
+			GameRegistry.addShapedRecipe(new ItemStack(InitBlocksEA.necrocite_block), new Object[]{"NN", "NN", 'N', InitItemsEA.necrocite});
+			GameRegistry.addShapedRecipe(new ItemStack(InitItemsEA.necrocite, 4), new Object[]{"N", 'N', InitBlocksEA.necrocite_block});
+			
+			GameRegistry.addShapedRecipe(new ItemStack(InitBlocksEA.soularite_block), new Object[]{"SS", "SS", 'S', InitItemsEA.soularite});
+			GameRegistry.addShapedRecipe(new ItemStack(InitItemsEA.soularite, 4), new Object[]{"S", 'S', InitBlocksEA.soularite_block});
+			
+			
 		}
 		
-		GameRegistry.addShapedRecipe(new ItemStack(InitItemsEA.arcanite, 9), new Object[]{"A", 'A', InitBlocksEA.arcanite_block});
+		
+		
+		if(!EbonArtsConfiguration.toolRecipe)
+		{
+			GameRegistry.addShapedRecipe(new ItemStack(InitItemsEA.arcanite_pickaxe), new Object[]{"AAA", " S ", " S ", 'A', InitItemsEA.arcanite, 'S', Items.stick});
+			GameRegistry.addShapedRecipe(new ItemStack(InitItemsEA.arcanite_axe), new Object[]{"AA ", "AS ", " S ", 'A', InitItemsEA.arcanite, 'S', Items.stick});
+			GameRegistry.addShapedRecipe(new ItemStack(InitItemsEA.arcanite_shovel), new Object[]{"A", "S", "S", 'A', InitItemsEA.arcanite, 'S', Items.stick});
+			GameRegistry.addShapedRecipe(new ItemStack(InitItemsEA.arcanite_hoe), new Object[]{"AA", " S", " S", 'A', InitItemsEA.arcanite, 'S', Items.stick});
+			GameRegistry.addShapedRecipe(new ItemStack(InitItemsEA.arcanite_sword), new Object[]{"A", "A", "S", 'A', InitItemsEA.arcanite, 'S', Items.stick});
+			
+			
+		}
+		else
+		{
+			
+			
+		}
+		
+		
+		//GameRegistry.addShapedRecipe(new ItemStack(InitItemsEA.arcanite, 9), new Object[]{"A", 'A', InitBlocksEA.arcanite_block});
 		
 		
 	}
@@ -36,6 +96,7 @@ public class InitRecipesEA
 
 	public static void initSmeltingRecipe()
 	{
+		GameRegistry.addSmelting(new ItemStack(InitBlocksEA.draconium_ore), new ItemStack(InitItemsEA.draconium_dust), 10f);
 		
 		
 		
