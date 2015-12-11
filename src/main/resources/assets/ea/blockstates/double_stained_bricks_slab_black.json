@@ -1,0 +1,6 @@
+{
+    "variants": {
+        "variant=false": { "model": "ea:stained_bricks_block_black" },
+        "variant=true":    { "model": "ea:stained_bricks_block_black" }
+    }
+}

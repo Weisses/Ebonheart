@@ -1,0 +1,8 @@
+{
+    "parent": "block/half_slab",
+    "textures": {
+        "bottom": "ea:blocks/stainedbricks_black",
+        "top": "ea:blocks/stainedbricks_black",
+        "side": "ea:blocks/stainedbricks_black"
+    }
+}

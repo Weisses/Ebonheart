@@ -12,6 +12,10 @@ import net.minecraftforge.fml.common.registry.GameRegistry;
 import com.ebonheart.EbonArtsMod.EbonArtsMod;
 import com.ebonheart.EbonArtsMod.Reference;
 import com.ebonheart.EbonArtsMod.api.meta.ItemBlockMeta;
+import com.ebonheart.EbonArtsMod.common.blocks.BlockStainedBrickSlab;
+import com.ebonheart.EbonArtsMod.common.blocks.ItemBlockSlab;
+import com.ebonheart.EbonArtsMod.common.blocks.TestDoubleSlab;
+import com.ebonheart.EbonArtsMod.common.blocks.TestSlab;
 import com.ebonheart.EbonArtsMod.common.blocks.basic.BlockArcanite;
 import com.ebonheart.EbonArtsMod.common.blocks.basic.BlockDraconium;
 import com.ebonheart.EbonArtsMod.common.blocks.basic.BlockInnateMysticNormal;
@@ -55,8 +59,8 @@ public class InitBlocksEA
 	
 	
 	
-	
-	
+	public static Block double_slab;
+	public static Block slab;
 	
 	
 	public static Block draconium_fence;
@@ -180,6 +184,8 @@ public class InitBlocksEA
 		
 		
 		
+		//double_slab = new ItemBlockSlab();
+		//slab = new TestSlab();
 		
 		
 		
@@ -296,6 +302,13 @@ public class InitBlocksEA
 		
 		//GameRegistry.registerBlock(purified_mystic_block, purified_mystic_block.getUnlocalizedName().substring(5));
 		
+		
+		
+		GameRegistry.registerBlock(double_slab, double_slab.getUnlocalizedName().substring(5));
+		GameRegistry.registerBlock(slab, slab.getUnlocalizedName().substring(5));
+		
+		
+		
 
 	}
 	
@@ -411,6 +424,12 @@ public class InitBlocksEA
 		//registerRender(InitBlocksEA.arcanite_stairs, 15, "gem/arcanite/arcanite_stairs_black");
 		
 		//registerRender(purified_mystic_block);
+		
+		
+		registerRender(double_slab);
+		registerRender(slab);
+		
+		
 		
 	}
 	

@@ -8,6 +8,7 @@ import net.minecraftforge.fml.client.registry.ClientRegistry;
 import net.minecraftforge.fml.common.registry.GameRegistry;
 
 import com.ebonheart.EbonArtsMod.Reference;
+import com.ebonheart.EbonArtsMod.common.blocks.BlockStainedBrickSlab;
 import com.ebonheart.EbonArtsMod.common.tileentities.TestBlockTileEntity;
 import com.ebonheart.EbonArtsMod.common.tileentities.TestTileEntity;
 import com.ebonheart.EbonArtsMod.common.tileentities.plants.BlockBananaPlantRoot;
@@ -20,6 +21,7 @@ public final class InitTileEntitiesEA {
 	
 	public static Block Test_Block_Tile_Entity;
 	public static Block Banana_Plant;
+	public static Block Test_slab;
 	
 	public static void init() {
 		
@@ -27,6 +29,7 @@ public final class InitTileEntitiesEA {
 		GameRegistry.registerBlock(Banana_Plant = new BlockBananaPlantRoot(InitItemsEA.banana, 3, 1, 5, 2, 2, 12, 10, 30, 40, 100, 5, 10, 3, 1, null), "bananaplant");
 		//Banana_Plant = new BlockBananaPlantRoot(InitItemsEA.banana, 3, 1, 5, 2, 2, 12, 10, 30, 40, 100, 5, 10, 3, 1, null);
 		
+		//GameRegistry.registerBlock(Test_slab = new BlockStainedBrickSlab(), "Test_slab");
 		
 	}
 
@@ -37,6 +40,7 @@ public final class InitTileEntitiesEA {
 		GameRegistry.registerTileEntity(TestTileEntity.class, "tile_entity");
 		GameRegistry.registerTileEntity(TileEntityBananaPlant.class, "bananaplant");
 	
+		//GameRegistry.registerTileEntity(BlockStainedBrickSlab.class, "Test_slab");
 	}
 	
 	
