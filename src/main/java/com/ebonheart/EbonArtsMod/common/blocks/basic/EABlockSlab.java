@@ -1,9 +1,9 @@
 /**
  * Copyright (C) Jon Rowlett. All rights reserved.
  */
-package com.ebonheart.EbonArtsMod.common.blocks;
+package com.ebonheart.EbonArtsMod.common.blocks.basic;
 
-import com.ebonheart.EbonArtsMod.proxy.CommonProxy;
+import com.ebonheart.EbonArtsMod.EbonArtsMod;
 
 import net.minecraft.block.BlockSlab;
 import net.minecraft.block.material.Material;
@@ -14,87 +14,52 @@ import net.minecraft.block.state.IBlockState;
 import net.minecraft.creativetab.CreativeTabs;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
+import net.minecraftforge.fml.common.registry.GameRegistry;
 import net.minecraftforge.fml.relauncher.Side;
 import net.minecraftforge.fml.relauncher.SideOnly;
 
 /**
  * A slab or double slab of stained bricks of a certain color.
- * @author jrowlett
- *
  */
-public abstract class BlockStainedBrickSlab extends BlockSlab {
-    /**
-     * The property used for the variant.
-     * Needed for interactions with ItemSlab.
-     */
+public abstract class EABlockSlab extends BlockSlab {
+	
+	//The property used for the variant. Needed for interactions with ItemSlab.
     private static final PropertyBool VARIANT_PROPERTY =
         PropertyBool.create("variant");
 
-    /**
-     * The ID for the registry.
-     */
-    private static final String ID = "stained_bricks_slab";
+	//The ID for the registry.
+    private static final String ID = "slab";
 
-    /**
-     * The unlocalized name.
-     */
-    private static final String NAME = "stained_bricks_slab";
-
-    /**
-     * Hardness value for the material.
-     */
+    //Hardness value for the material.
     private static final float HARDNESS = 2.0f;
 
-    /**
-     * Resistance value for the material.
-     */
+    //Resistance value for the material.
     private static final float RESISTANCE = 10.0f;
 
-    /**
-     * The bit in metadata used by the half property.
-     */
+    //The bit in metadata used by the half property.
     private static final int HALF_META_BIT = 8;
 
-    /**
-     * Color - normally stored in metadata, but slabs need the meta.
-     */
-    private int color;
-
-    /**
-     * Initializes a new instance of the BlockStainedBrickSlab class.
-     * @param brickColor the color of the stain from 0-15.
-     */
-    public BlockStainedBrickSlab(
-    		//final int brickColor
-    		) {
+    public EABlockSlab() {
         super(Material.rock);
-        //this.color = brickColor;
         this.useNeighborBrightness = !this.isDouble();
-        setHardness(HARDNESS);
-        setResistance(RESISTANCE);
-        setStepSound(soundTypePiston);
-        setUnlocalizedName("stained_bricks_slab_black");
-        //setUnlocalizedName(NAME + '_' + ColorUtility.COLOR_NAMES[this.color]);
-        if (!this.isDouble()) {
-            setCreativeTab(CreativeTabs.tabBlock);
+        this.setHardness(HARDNESS);
+        this.setResistance(RESISTANCE);
+        this.setStepSound(soundTypePiston);
+        
+        if (!this.isDouble()) 
+        {
+            setCreativeTab(EbonArtsMod.tabEbonArtsBlocks);
         }
 
         IBlockState blockState = this.blockState.getBaseState();
         blockState = blockState.withProperty(VARIANT_PROPERTY, false);
-        if (!this.isDouble()) {
+        if (!this.isDouble()) 
+        {
             blockState = blockState.withProperty(HALF, EnumBlockHalf.BOTTOM);
         }
-
-        setDefaultState(blockState);
+        this.setDefaultState(blockState);
     }
 
-    /**
-     * Gets the ID for the game registry.
-     * @return the unique id for the registry.
-     */
-    public final String getId() {
-        return this.innerGetId(this.isDouble());
-    }
 
     /**
      * Gets the unlocalized name based on metadata/damage.
@@ -174,6 +139,9 @@ public abstract class BlockStainedBrickSlab extends BlockSlab {
         return 0;
     }
 
+    
+    
+    
     /**
      * Gets the item dropped when the block is broken.
      * @param blockState the block's state.
@@ -182,10 +150,8 @@ public abstract class BlockStainedBrickSlab extends BlockSlab {
      * @return the half slab item.
      */
     @Override
-    public final Item getItemDropped(
-        final IBlockState blockState,
-        final java.util.Random random,
-        final int unused) {
+    public final Item getItemDropped(final IBlockState blockState, final java.util.Random random, final int unused) 
+    {
         String blockId = this.innerGetId(false);
         return GameUtility.getItemFromBlock(blockId);
     }
@@ -206,37 +172,18 @@ public abstract class BlockStainedBrickSlab extends BlockSlab {
     }
 
     
-    public abstract void registerInventoryModel(
-            final Item item,
-            final String id,
-            final int metadata);
+    //public abstract void registerInventoryModel(final Item item, final String id, final int metadata);
 
         /**
          * Helper to add a model variant in the ModelBakery.
          * @param item the main item.
          * @param variantName the variant name.
          */
-        public abstract void addModelBakeryVariant(
-            final Item item,
-            final String variantName);
+        //public abstract void addModelBakeryVariant(final Item item, final String variantName);
     
     
     
-    /**
-     * Call on init to register the icons for inventory.
-     * @param proxy the proxy to register the models.
-     */
-    public final void registerModels(final CommonProxy proxy) {
-        Item itemBlock = GameUtility.getItemFromBlock(
-            this.getId());
-        addModelBakeryVariant(
-            itemBlock,
-            "morematerials:" + this.getId());
-        registerInventoryModel(
-            itemBlock,
-            this.getId(),
-            0);
-    }
+
 
     /**
      * Creates the block state object.
@@ -264,6 +211,7 @@ public abstract class BlockStainedBrickSlab extends BlockSlab {
             result = "double_";
         }
 
-        return result + ID + '_' + ColorUtility.COLOR_IDS[this.color];
+        //return result + ID + '_' + ColorUtility.COLOR_IDS[this.color];
+        return result + ID;
     }
 }

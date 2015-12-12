@@ -12,12 +12,10 @@ import net.minecraftforge.fml.common.registry.GameRegistry;
 import com.ebonheart.EbonArtsMod.EbonArtsMod;
 import com.ebonheart.EbonArtsMod.Reference;
 import com.ebonheart.EbonArtsMod.api.meta.ItemBlockMeta;
-import com.ebonheart.EbonArtsMod.common.blocks.BlockDoubleStainedBrickSlab;
-import com.ebonheart.EbonArtsMod.common.blocks.BlockHalfStainedBrickSlab;
-import com.ebonheart.EbonArtsMod.common.blocks.BlockStainedBrickSlab;
-import com.ebonheart.EbonArtsMod.common.blocks.ItemBlockStainedBrickSlab;
 import com.ebonheart.EbonArtsMod.common.blocks.basic.BlockArcanite;
+import com.ebonheart.EbonArtsMod.common.blocks.basic.BlockDoubleSlab;
 import com.ebonheart.EbonArtsMod.common.blocks.basic.BlockDraconium;
+import com.ebonheart.EbonArtsMod.common.blocks.basic.BlockHalfSlab;
 import com.ebonheart.EbonArtsMod.common.blocks.basic.BlockInnateMysticNormal;
 import com.ebonheart.EbonArtsMod.common.blocks.basic.BlockKatcheen;
 import com.ebonheart.EbonArtsMod.common.blocks.basic.BlockMystic;
@@ -26,8 +24,10 @@ import com.ebonheart.EbonArtsMod.common.blocks.basic.BlockSoularite;
 import com.ebonheart.EbonArtsMod.common.blocks.basic.BlockVelious;
 import com.ebonheart.EbonArtsMod.common.blocks.basic.EABlockFence;
 import com.ebonheart.EbonArtsMod.common.blocks.basic.EABlockMeta;
+import com.ebonheart.EbonArtsMod.common.blocks.basic.EABlockSlab;
 import com.ebonheart.EbonArtsMod.common.blocks.basic.EABlockStairs;
 import com.ebonheart.EbonArtsMod.common.blocks.basic.EABlockWall;
+import com.ebonheart.EbonArtsMod.common.blocks.basic.ItemBlockSlab;
 import com.ebonheart.EbonArtsMod.common.blocks.devices.TestBlockFurnaceEA;
 import com.ebonheart.EbonArtsMod.common.blocks.world.BlockMultiOre;
 import com.ebonheart.EbonArtsMod.common.blocks.world.BlockOreEA;
@@ -56,11 +56,28 @@ public class InitBlocksEA
 	//public static Block norn_stone;
 	//public static Block mystalite_ore;
 	
+	public static Block double_draconium_slab;
+	public static Block double_velious_slab;
+	public static Block double_arcanite_slab;
+	public static Block double_katcheen_slab;
+	public static Block double_necrocite_slab;
+	public static Block double_soularite_slab;
 	
-	public static Block double_slab;
-	public static Block slab;
+	public static Block draconium_slab;
+	public static Block velious_slab;
+	public static Block arcanite_slab;
+	public static Block katcheen_slab;
+	public static Block necrocite_slab;
+	public static Block soularite_slab;
 	
 	
+	
+	
+	//public static Block double_slab;
+	//public static Block slab;
+	
+	
+
 	
 	
 	public static Block draconium_fence;
@@ -183,29 +200,33 @@ public class InitBlocksEA
 		soularite_stairs = new EABlockStairs("stairs/soularite_stairs");
 		
 		
-		double_slab = new BlockDoubleStainedBrickSlab();
-		slab = new BlockHalfStainedBrickSlab();
+		//double_slab = new BlockDoubleSlab("double_slab");
+		//slab = new BlockHalfSlab("slab");
+		
+		
+		double_draconium_slab = new BlockDoubleSlab("slab/draconium/double_draconium_slab");
+		double_velious_slab = new BlockDoubleSlab("slab/velious/double_velious_slab");
+		double_arcanite_slab = new BlockDoubleSlab("slab/arcanite/double_arcanite_slab");
+		double_katcheen_slab = new BlockDoubleSlab("slab/katcheen/double_katcheen_slab");
+		double_necrocite_slab = new BlockDoubleSlab("slab/necrocite/double_necrocite_slab");
+		double_soularite_slab = new BlockDoubleSlab("slab/soularite/double_soularite_slab");
+		
+		draconium_slab = new BlockHalfSlab("slab/draconium/draconium_slab");
+		velious_slab = new BlockHalfSlab("slab/velious/velious_slab");
+		arcanite_slab = new BlockHalfSlab("slab/arcanite/arcanite_slab");
+		katcheen_slab = new BlockHalfSlab("slab/katcheen/katcheen_slab");
+		necrocite_slab = new BlockHalfSlab("slab/necrocite/necrocite_slab");
+		soularite_slab = new BlockHalfSlab("slab/soularite/soularite_slab");
 		
 		
 		
-		BlockStainedBrickSlab slab = new BlockHalfStainedBrickSlab();
-        BlockStainedBrickSlab doubleSlab =
-            new BlockDoubleStainedBrickSlab();
-        GameRegistry.registerBlock(
-            slab,
-            ItemBlockStainedBrickSlab.class,
-            slab.getId(),
-            slab,
-            doubleSlab,
-            false);
-        GameRegistry.registerBlock(
-            doubleSlab,
-            ItemBlockStainedBrickSlab.class,
-            doubleSlab.getId(),
-            slab,
-            doubleSlab,
-            true);
 		
+		
+		//EABlockSlab slab = new BlockHalfSlab();
+        //EABlockSlab doubleSlab = new BlockDoubleSlab();
+        
+		//GameRegistry.registerBlock(slab, ItemBlockSlab.class, slab.getId(), slab, doubleSlab, false);
+        //GameRegistry.registerBlock(doubleSlab, ItemBlockSlab.class, doubleSlab.getId(), slab, doubleSlab, true);
 		
 		
 		
@@ -274,6 +295,43 @@ public class InitBlocksEA
 		
 		//GameRegistry.registerBlock(double_slab, double_slab.getUnlocalizedName().substring(5));
 		//GameRegistry.registerBlock(slab, slab.getUnlocalizedName().substring(5));
+		
+		
+		
+		
+		GameRegistry.registerBlock(double_draconium_slab, ItemBlockSlab.class, "slab/draconium/double_draconium_slab", draconium_slab, double_draconium_slab, true);
+		GameRegistry.registerBlock(double_velious_slab, ItemBlockSlab.class, "slab/velious/double_velious_slab", velious_slab, double_velious_slab, true);
+		GameRegistry.registerBlock(double_arcanite_slab, ItemBlockSlab.class, "slab/arcanite/double_arcanite_slab", arcanite_slab, double_arcanite_slab, true);
+		GameRegistry.registerBlock(double_katcheen_slab, ItemBlockSlab.class, "slab/katcheen/double_katcheen_slab", katcheen_slab, double_katcheen_slab, true);
+		GameRegistry.registerBlock(double_necrocite_slab, ItemBlockSlab.class, "slab/necrocite/double_necrocite_slab", necrocite_slab, double_necrocite_slab, true);
+		GameRegistry.registerBlock(double_soularite_slab, ItemBlockSlab.class, "slab/soularite/double_soularite_slab", soularite_slab, double_soularite_slab, true);
+		
+		
+		GameRegistry.registerBlock(draconium_slab, ItemBlockSlab.class, "slab/draconium/draconium_slab", draconium_slab, double_draconium_slab, false);
+		GameRegistry.registerBlock(velious_slab, ItemBlockSlab.class, "slab/velious/velious_slab", velious_slab, double_velious_slab, false);
+		GameRegistry.registerBlock(arcanite_slab, ItemBlockSlab.class, "slab/arcanite/arcanite_slab", arcanite_slab, double_arcanite_slab, false);
+		GameRegistry.registerBlock(katcheen_slab, ItemBlockSlab.class, "slab/katcheen/katcheen_slab", katcheen_slab, double_katcheen_slab, false);
+		GameRegistry.registerBlock(necrocite_slab, ItemBlockSlab.class, "slab/necrocite/necrocite_slab", necrocite_slab, double_necrocite_slab, false);
+		GameRegistry.registerBlock(soularite_slab, ItemBlockSlab.class, "slab/soularite/soularite_slab", soularite_slab, double_soularite_slab, false);
+		
+		//GameRegistry.registerBlock(slab, ItemBlockSlab.class, "slab", slab, double_slab, false);
+		//GameRegistry.registerBlock(slab, ItemBlockSlab.class, "slab", slab, double_slab, false);
+		//GameRegistry.registerBlock(slab, ItemBlockSlab.class, "slab", slab, double_slab, false);
+		//GameRegistry.registerBlock(slab, ItemBlockSlab.class, "slab", slab, double_slab, false);
+		//GameRegistry.registerBlock(slab, ItemBlockSlab.class, "slab", slab, double_slab, false);
+		
+		
+		
+		
+		
+		//GameRegistry.registerBlock(slab, ItemBlockSlab.class, "slab", slab, double_slab, false);
+        //GameRegistry.registerBlock(double_slab, ItemBlockSlab.class, "double_slab", slab, double_slab, true);
+		
+		
+		
+		
+		
+		
 		
 		
 		
@@ -430,6 +488,23 @@ public class InitBlocksEA
 		registerRender(katcheen_stairs);
 		registerRender(necrocite_stairs);
 		registerRender(soularite_stairs);
+		
+		
+		
+		
+		
+		
+		registerRender(draconium_slab);
+		registerRender(velious_slab);
+		registerRender(arcanite_slab);
+		registerRender(katcheen_slab);
+		registerRender(necrocite_slab);
+		registerRender(soularite_slab);
+		
+		
+		
+		//registerRender(slab);
+		//registerRender(InitBlocksEA.slab, 0, "slab");
 		
 		//registerRender(arcanite_column_normal);
 		//registerRender(arcanite_double_slab);

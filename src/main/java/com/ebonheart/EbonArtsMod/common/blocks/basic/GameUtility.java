@@ -1,7 +1,7 @@
 /**
  * Copyright (C) Jon Rowlett. All rights reserved.
  */
-package com.ebonheart.EbonArtsMod.common.blocks;
+package com.ebonheart.EbonArtsMod.common.blocks.basic;
 
 import net.minecraft.item.Item;
 import net.minecraftforge.fml.common.registry.GameRegistry;
@@ -19,7 +19,7 @@ public final class GameUtility {
      * @return the matching item.
      */
     public static Item getItemFromBlock(final String name) {
-        return GameRegistry.findItem("morematerials", name);
+        return GameRegistry.findItem("ea", name);
     }
 
     /**

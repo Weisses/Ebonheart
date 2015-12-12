@@ -1,6 +1,0 @@
-{
-    "variants": {
-        "half=bottom,variant=false": { "model": "ea:half_slab_stained_bricks_black" },
-        "half=top,variant=false": { "model": "ea:upper_slab_stained_bricks_black" }
-    }
-}

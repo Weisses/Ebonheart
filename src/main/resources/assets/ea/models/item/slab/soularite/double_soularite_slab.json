@@ -1,5 +1,5 @@
 {
-    "parent": "ea:block/half_slab_stained_bricks_black",
+    "parent": "ea:block/slab/soularite/half_soularite_slab",
     "display": {
         "thirdperson": {
             "rotation": [ 10, -45, 170 ],

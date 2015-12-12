@@ -91,6 +91,14 @@ tile.stairs/katcheen_stairs.name=Katcheen Stairs
 tile.stairs/necrocite_stairs.name=Necrocite Stairs
 tile.stairs/soularite_stairs.name=Soularite Stairs
 
+tile.slab/draconium/draconium_slab.name=Draconium Slab
+tile.slab/velious/velious_slab.name=Velious Slab
+tile.slab/arcanite/arcanite_slab.name=Arcanite Slab
+tile.slab/katcheen/katcheen_slab.name=Katcheen Slab
+tile.slab/necrocite/necrocite_slab.name=Necrocite Slab
+tile.slab/soularite/soularite_slab.name=Soularite Slab
+
+
 //-----Tools-----
 item.tool/arcanite_pickaxe.name=Arcanite Pickaxe
 item.tool/arcanite_axe.name=Arcanite Axe

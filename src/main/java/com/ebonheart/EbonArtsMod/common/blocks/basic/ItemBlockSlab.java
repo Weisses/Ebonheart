@@ -1,7 +1,7 @@
 /**
  * Copyright (C) Jon Rowlett. All rights reserved.
  */
-package com.ebonheart.EbonArtsMod.common.blocks;
+package com.ebonheart.EbonArtsMod.common.blocks.basic;
 
 import net.minecraft.block.Block;
 import net.minecraft.item.ItemSlab;
@@ -11,7 +11,7 @@ import net.minecraft.item.ItemSlab;
  * @author jrowlett
  *
  */
-public class ItemBlockStainedBrickSlab extends ItemSlab {
+public class ItemBlockSlab extends ItemSlab {
     /**
      * Initializes a new instance of the ItemBlockStainedBrickSlab class.
      * @param block the block behind the item.
@@ -19,7 +19,7 @@ public class ItemBlockStainedBrickSlab extends ItemSlab {
      * @param doubleSlab the full height slab.
      * @param stacked whether or not the block is the stacked version.
      */
-    public ItemBlockStainedBrickSlab(final Block block, final BlockHalfStainedBrickSlab slab, final BlockDoubleStainedBrickSlab doubleSlab, final Boolean stacked) 
+    public ItemBlockSlab(final Block block, final BlockHalfSlab slab, final BlockDoubleSlab doubleSlab, final Boolean stacked) 
     {
         super(block, slab, doubleSlab);
     }
