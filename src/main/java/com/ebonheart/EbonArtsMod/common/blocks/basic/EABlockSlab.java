@@ -1,10 +1,9 @@
-/**
- * Copyright (C) Jon Rowlett. All rights reserved.
- */
 package com.ebonheart.EbonArtsMod.common.blocks.basic;
 
 import com.ebonheart.EbonArtsMod.EbonArtsMod;
+import com.ebonheart.EbonArtsMod.init.InitBlocksEA;
 
+import net.minecraft.block.Block;
 import net.minecraft.block.BlockSlab;
 import net.minecraft.block.material.Material;
 import net.minecraft.block.properties.IProperty;
@@ -12,15 +11,17 @@ import net.minecraft.block.properties.PropertyBool;
 import net.minecraft.block.state.BlockState;
 import net.minecraft.block.state.IBlockState;
 import net.minecraft.creativetab.CreativeTabs;
+import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
+import net.minecraft.util.BlockPos;
+import net.minecraft.util.MovingObjectPosition;
+import net.minecraft.world.World;
 import net.minecraftforge.fml.common.registry.GameRegistry;
 import net.minecraftforge.fml.relauncher.Side;
 import net.minecraftforge.fml.relauncher.SideOnly;
 
-/**
- * A slab or double slab of stained bricks of a certain color.
- */
+//A slab or double slab main class.
 public abstract class EABlockSlab extends BlockSlab {
 	
 	//The property used for the variant. Needed for interactions with ItemSlab.
@@ -60,6 +61,11 @@ public abstract class EABlockSlab extends BlockSlab {
         this.setDefaultState(blockState);
     }
 
+    
+    public ItemStack getPickBlock(MovingObjectPosition target, World world, BlockPos pos, EntityPlayer player)
+    {
+    	return new ItemStack(InitBlocksEA.draconium_slab);
+    }
 
     /**
      * Gets the unlocalized name based on metadata/damage.
@@ -89,6 +95,8 @@ public abstract class EABlockSlab extends BlockSlab {
     public final IProperty getVariantProperty() {
         return VARIANT_PROPERTY;
     }
+    
+    
 
     /**
      * Gets a block state from metadata.

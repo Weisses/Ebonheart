@@ -18,8 +18,8 @@ public class BlockDraconium extends Block {
 		this.setUnlocalizedName("gem/draconium/draconium_block");
 		this.setCreativeTab(EbonArtsMod.tabEbonArtsBlocks);
 		this.setHarvestLevel("pickaxe", 3);
-		this.setHardness(10F);
-		this.setResistance(1500F);
+		this.setHardness(10f);
+		this.setResistance(1500f);
 		this.setStepSound(soundTypeStone);
 	}
 }

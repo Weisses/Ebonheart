@@ -1,16 +1,9 @@
-/**
- * Copyright (C) Jon Rowlett. All rights reserved.
- */
 package com.ebonheart.EbonArtsMod.common.blocks.basic;
 
 import net.minecraft.block.Block;
 import net.minecraft.item.ItemSlab;
 
-/**
- * Wrapper around ItemSlab to allow init from GameRegistry.
- * @author jrowlett
- *
- */
+//Wrapper around ItemSlab to allow init from GameRegistry.
 public class ItemBlockSlab extends ItemSlab {
     /**
      * Initializes a new instance of the ItemBlockStainedBrickSlab class.

@@ -10,6 +10,7 @@ import net.minecraft.block.state.IBlockState;
 import net.minecraft.util.BlockPos;
 import net.minecraft.world.IBlockAccess;
 
+
 public abstract class EABlockGenericWall extends BlockFence {
 	
 	//The UP property to render the wall at full height.
@@ -28,7 +29,7 @@ public abstract class EABlockGenericWall extends BlockFence {
 	private static final float WALL_MAX = 0.6875f;
 	
 	//Wall height without post.
-	private static final float WALL_HEIGHT = 0.8125F;
+	private static final float WALL_HEIGHT = 0.8125f;
 	
 	//The block on which the wall is based.
 	private Block sourceBlock;
@@ -60,26 +61,26 @@ public abstract class EABlockGenericWall extends BlockFence {
 		float f1 = POST_MAX;
 		float f2 = POST_MIN;
 		float f3 = POST_MAX;
-		float f4 = 1.0F;
+		float f4 = 1.0f;
 		
 		if (north) 
 		{
-			f2 = 0.0F;
+			f2 = 0.0f;
 		}
 		
 		if (south) 
 		{
-			f3 = 1.0F;
+			f3 = 1.0f;
 		}
 		
 		if (west) 
 		{
-			f = 0.0F;
+			f = 0.0f;
 		}
 		
 		if (east) 
 		{
-			f1 = 1.0F;
+			f1 = 1.0f;
 		}
 		
 		if (north && south && !west && !east) 
@@ -112,7 +113,7 @@ public abstract class EABlockGenericWall extends BlockFence {
 				f3 = WALL_MAX;
 			}
 		}
-		this.setBlockBounds(f, 0.0F, f2, f1, f4, f3);
+		this.setBlockBounds(f, 0.0f, f2, f1, f4, f3);
 	}
 	
 	@Override

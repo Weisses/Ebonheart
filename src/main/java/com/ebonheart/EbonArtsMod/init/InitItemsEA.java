@@ -12,6 +12,7 @@ import net.minecraftforge.fml.common.registry.GameRegistry;
 import com.ebonheart.EbonArtsMod.EbonArtsMod;
 import com.ebonheart.EbonArtsMod.Reference;
 import com.ebonheart.EbonArtsMod.common.items.ItemAlchemicalCompendium;
+import com.ebonheart.EbonArtsMod.common.items.Omniplex;
 import com.ebonheart.EbonArtsMod.common.items.armor.ItemArmorArcanite;
 import com.ebonheart.EbonArtsMod.common.items.resources.ItemEA;
 import com.ebonheart.EbonArtsMod.common.items.resources.ItemArcaniteShard;
@@ -125,7 +126,7 @@ public class InitItemsEA
 		
 		mystic_dust = new Item().setUnlocalizedName("mystic_dust").setCreativeTab(EbonArtsMod.tabEbonArtsItems);
 		purified_mystic_dust = new Item().setUnlocalizedName("purified_mystic_dust").setCreativeTab(EbonArtsMod.tabEbonArtsItems);
-		ebon_sigil = new Item().setUnlocalizedName("ebon_sigil").setCreativeTab(EbonArtsMod.tabEbonArtsItems);
+		ebon_sigil = new Omniplex().setUnlocalizedName("ebon_sigil");
 		tier_1_catalyst = new Item().setUnlocalizedName("tier_1_catalyst").setCreativeTab(EbonArtsMod.tabEbonArtsItems);
 		tier_2_catalyst = new Item().setUnlocalizedName("tier_2_catalyst").setCreativeTab(EbonArtsMod.tabEbonArtsItems);
 		tier_3_catalyst = new Item().setUnlocalizedName("tier_3_catalyst").setCreativeTab(EbonArtsMod.tabEbonArtsItems);

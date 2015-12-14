@@ -18,8 +18,8 @@ public class BlockVelious extends Block {
 		this.setUnlocalizedName("gem/velious/velious_block");
 		this.setCreativeTab(EbonArtsMod.tabEbonArtsBlocks);
 		this.setHarvestLevel("pickaxe", 3);
-		this.setHardness(15F);
-		this.setResistance(1500F);
+		this.setHardness(15f);
+		this.setResistance(1500f);
 		this.setStepSound(soundTypeStone);
 	}
 }

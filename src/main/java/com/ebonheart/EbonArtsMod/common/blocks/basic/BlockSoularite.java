@@ -18,8 +18,8 @@ public class BlockSoularite extends Block {
 		this.setUnlocalizedName("gem/soularite/soularite_block");
 		this.setCreativeTab(EbonArtsMod.tabEbonArtsBlocks);
 		this.setHarvestLevel("pickaxe", 3);
-		this.setHardness(25F);
-		this.setResistance(1500F);
+		this.setHardness(25f);
+		this.setResistance(1500f);
 		this.setStepSound(soundTypeStone);
 	}
 }

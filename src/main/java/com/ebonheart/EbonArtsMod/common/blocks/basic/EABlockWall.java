@@ -7,6 +7,7 @@ import net.minecraftforge.fml.common.registry.GameRegistry;
 import com.ebonheart.EbonArtsMod.EbonArtsMod;
 import com.ebonheart.EbonArtsMod.proxy.CommonProxy;
 
+
 public class EABlockWall extends EABlockGenericWall {
 	
 	public EABlockWall(String unlocalizedName) 

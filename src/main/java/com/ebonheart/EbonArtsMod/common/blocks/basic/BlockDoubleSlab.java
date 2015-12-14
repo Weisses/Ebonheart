@@ -1,13 +1,8 @@
-/**
- * Copyright (C) Jon Rowlett. All rights reserved.
- */
 package com.ebonheart.EbonArtsMod.common.blocks.basic;
 
 import net.minecraft.item.Item;
 
-/**
- * Double slab of stained bricks.
- */
+//Double slab.
 public class BlockDoubleSlab extends EABlockSlab {
 	
     public BlockDoubleSlab(String setUnlocalizedName) 

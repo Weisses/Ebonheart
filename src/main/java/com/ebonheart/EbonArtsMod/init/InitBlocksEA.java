@@ -20,10 +20,12 @@ import com.ebonheart.EbonArtsMod.common.blocks.basic.BlockInnateMysticNormal;
 import com.ebonheart.EbonArtsMod.common.blocks.basic.BlockKatcheen;
 import com.ebonheart.EbonArtsMod.common.blocks.basic.BlockMystic;
 import com.ebonheart.EbonArtsMod.common.blocks.basic.BlockNecrocite;
+import com.ebonheart.EbonArtsMod.common.blocks.basic.BlockPurifiedGlowstone;
 import com.ebonheart.EbonArtsMod.common.blocks.basic.BlockSoularite;
 import com.ebonheart.EbonArtsMod.common.blocks.basic.BlockVelious;
 import com.ebonheart.EbonArtsMod.common.blocks.basic.EABlockFence;
 import com.ebonheart.EbonArtsMod.common.blocks.basic.EABlockMeta;
+import com.ebonheart.EbonArtsMod.common.blocks.basic.EABlockPillar;
 import com.ebonheart.EbonArtsMod.common.blocks.basic.EABlockSlab;
 import com.ebonheart.EbonArtsMod.common.blocks.basic.EABlockStairs;
 import com.ebonheart.EbonArtsMod.common.blocks.basic.EABlockWall;
@@ -75,7 +77,7 @@ public class InitBlocksEA
 	
 	//public static Block double_slab;
 	//public static Block slab;
-	
+	//public static Block pillar;
 	
 
 	
@@ -122,6 +124,13 @@ public class InitBlocksEA
 	
 	public static Block mystic_block;
 	public static Block mystic_block_normal;
+	
+	public static Block purified_glowstone;
+	
+	
+	
+	
+	
 	
 	public static Block purified_mystic_block;
 	
@@ -221,6 +230,8 @@ public class InitBlocksEA
 		
 		
 		
+		//pillar = new EABlockPillar().setUnlocalizedName("pillar");
+		
 		
 		//EABlockSlab slab = new BlockHalfSlab();
         //EABlockSlab doubleSlab = new BlockDoubleSlab();
@@ -261,6 +272,7 @@ public class InitBlocksEA
 		soularite_block = new BlockSoularite(Material.rock);
 		
 		
+		purified_glowstone = new BlockPurifiedGlowstone(Material.rock);
 		
 		
 		mystic_furnace = new TestBlockFurnaceEA(false).setUnlocalizedName("machine/mystic_furnace").setCreativeTab(EbonArtsMod.tabEbonArtsBlocks);
@@ -321,6 +333,7 @@ public class InitBlocksEA
 		//GameRegistry.registerBlock(slab, ItemBlockSlab.class, "slab", slab, double_slab, false);
 		
 		
+		//GameRegistry.registerBlock(pillar, pillar.getUnlocalizedName().substring(5));
 		
 		
 		
@@ -330,6 +343,7 @@ public class InitBlocksEA
 		
 		
 		
+		GameRegistry.registerBlock(purified_glowstone, purified_glowstone.getUnlocalizedName().substring(5));
 		
 		
 		
@@ -406,6 +420,9 @@ public class InitBlocksEA
 		registerRender(ebon_ore);
 		registerRender(ebon_ore_nether);
 		
+		
+		
+		//registerRender(pillar);
 		
 		//registerRender(double_slab);
 		//registerRender(slab);
@@ -501,6 +518,10 @@ public class InitBlocksEA
 		registerRender(necrocite_slab);
 		registerRender(soularite_slab);
 		
+		
+		
+		
+		registerRender(purified_glowstone);
 		
 		
 		//registerRender(slab);

@@ -85,11 +85,13 @@ public class InitRecipesEA
 		//GameRegistry.addShapedRecipe(new ItemStack(InitItemsEA.arcanite, 9), new Object[]{"A", 'A', InitBlocksEA.arcanite_block});
 		
 		
+		
 	}
 	
 	public static void initShapelessRecipe()
 	{
-		
+		GameRegistry.addShapelessRecipe(new ItemStack(InitBlocksEA.purified_glowstone), InitItemsEA.draconium_dust, Blocks.glowstone);
+				
 		
 		
 	}

@@ -1,13 +1,16 @@
-/**
- * Copyright (C) Jon Rowlett. All rights reserved.
- */
 package com.ebonheart.EbonArtsMod.common.blocks.basic;
 
-import net.minecraft.item.Item;
+import com.ebonheart.EbonArtsMod.init.InitBlocksEA;
 
-/**
- * Regular slab of stained bricks.
- */
+import net.minecraft.block.Block;
+import net.minecraft.entity.player.EntityPlayer;
+import net.minecraft.item.Item;
+import net.minecraft.item.ItemStack;
+import net.minecraft.util.BlockPos;
+import net.minecraft.util.MovingObjectPosition;
+import net.minecraft.world.World;
+
+//Regular slab.
 public class BlockHalfSlab extends EABlockSlab {
 	
     public BlockHalfSlab(String unlocalizedName) 
@@ -21,4 +24,7 @@ public class BlockHalfSlab extends EABlockSlab {
     {
         return false;
     }
+    
+
+    
 }

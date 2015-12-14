@@ -6,6 +6,7 @@ import net.minecraft.block.BlockStairs;
 import net.minecraft.block.state.IBlockState;
 import net.minecraft.init.Blocks;
 
+
 public class EABlockStairs extends BlockStairs {
 
 	public EABlockStairs(String unlocalizedName) {

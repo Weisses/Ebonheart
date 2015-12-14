@@ -6,6 +6,7 @@ import com.ebonheart.EbonArtsMod.common.blocks.basic.EABlockMeta.EnumType;
 import net.minecraft.block.BlockFence;
 import net.minecraft.block.material.Material;
 
+
 public class EABlockFence extends BlockFence {
 
 	public EABlockFence(String unlocalizedName) 
