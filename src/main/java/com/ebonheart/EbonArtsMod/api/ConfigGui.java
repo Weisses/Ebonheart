@@ -9,6 +9,7 @@ import net.minecraftforge.fml.client.config.GuiConfig;
 
 import com.ebonheart.EbonArtsMod.EbonArtsMod;
 import com.ebonheart.EbonArtsMod.Reference;
+import com.ebonheart.EbonArtsMod.init.InitRecipesEA;
 
 public class ConfigGui extends GuiConfig {
 
@@ -42,6 +43,7 @@ public class ConfigGui extends GuiConfig {
 	        if(EbonArtsMod.config.hasChanged())
 			{
 				EbonArtsMod.config.save();
+				
 			}
 	    }
 	

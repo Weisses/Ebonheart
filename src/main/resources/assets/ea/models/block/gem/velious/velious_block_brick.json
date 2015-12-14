@@ -1,0 +1,6 @@
+{
+    "parent": "block/cube_all",
+    "textures": {
+        "all": "ea:blocks/gems/velious/velious_block_brick"
+    }
+}

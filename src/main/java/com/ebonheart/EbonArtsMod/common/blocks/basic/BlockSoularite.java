@@ -12,13 +12,13 @@ import net.minecraftforge.fml.relauncher.SideOnly;
 
 public class BlockSoularite extends Block {
 
-	public BlockSoularite(Material materialIn) 
+	public BlockSoularite(String unlocalizedName) 
 	{
-		super(materialIn);
-		this.setUnlocalizedName("gem/soularite/soularite_block");
+		super(Material.rock);
+		this.setUnlocalizedName(unlocalizedName);
 		this.setCreativeTab(EbonArtsMod.tabEbonArtsBlocks);
 		this.setHarvestLevel("pickaxe", 3);
-		this.setHardness(25f);
+		this.setHardness(30f);
 		this.setResistance(1500f);
 		this.setStepSound(soundTypeStone);
 	}

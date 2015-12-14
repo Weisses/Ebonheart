@@ -36,6 +36,10 @@ public class InitItemsEA
 	public static Item innate_arcanite;
 	
 	
+	
+	public static Item shimmering_disc;
+	
+	
 	//public static Item item_arcanite;
 	public static Item arcanite_shard;
 	
@@ -101,6 +105,12 @@ public class InitItemsEA
 		innate_arcanite = new ItemInnateArcanite("gem/innate_arcanite");
 		
 		
+		
+		shimmering_disc = new Item().setUnlocalizedName("shimmering_disc");
+		
+		
+		
+		
 		arcanite_shard = new ItemArcaniteShard("arcanite_shard");
 		
 		arcanite_pickaxe = new ItemPickaxeEA(arcaniteToolMaterial, "tool/arcanite_pickaxe");
@@ -151,6 +161,10 @@ public class InitItemsEA
 		
 		GameRegistry.registerItem(arcanite_shard, arcanite_shard.getUnlocalizedName().substring(5));
 		
+		GameRegistry.registerItem(shimmering_disc, shimmering_disc.getUnlocalizedName().substring(5));
+		
+		
+		
 		GameRegistry.registerItem(arcanite_pickaxe, arcanite_pickaxe.getUnlocalizedName().substring(5));
 		GameRegistry.registerItem(arcanite_axe, arcanite_axe.getUnlocalizedName().substring(5));
 		GameRegistry.registerItem(arcanite_shovel, arcanite_shovel.getUnlocalizedName().substring(5));
@@ -199,12 +213,19 @@ public class InitItemsEA
 		
 		registerRender(arcanite_shard);
 		
+		registerRender(shimmering_disc);
+		
+		
 		
 		registerRender(arcanite_pickaxe);
 		registerRender(arcanite_axe);
 		registerRender(arcanite_shovel);
 		registerRender(arcanite_hoe);
 		registerRender(arcanite_sword);
+		
+		
+		
+		
 		
 		registerRender(katcheen_pickaxe);
 		registerRender(katcheen_axe);

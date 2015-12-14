@@ -12,12 +12,12 @@ import net.minecraftforge.fml.relauncher.SideOnly;
 
 public class BlockDraconium extends Block {
 
-	public BlockDraconium(Material materialIn) 
+	public BlockDraconium(String unlocalizedName) 
 	{
-		super(materialIn);
-		this.setUnlocalizedName("gem/draconium/draconium_block");
+		super(Material.rock);
+		this.setUnlocalizedName(unlocalizedName);
 		this.setCreativeTab(EbonArtsMod.tabEbonArtsBlocks);
-		this.setHarvestLevel("pickaxe", 3);
+		this.setHarvestLevel("pickaxe", 2);
 		this.setHardness(10f);
 		this.setResistance(1500f);
 		this.setStepSound(soundTypeStone);

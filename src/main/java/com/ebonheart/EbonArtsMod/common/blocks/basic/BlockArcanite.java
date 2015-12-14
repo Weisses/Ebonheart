@@ -12,10 +12,10 @@ import net.minecraftforge.fml.relauncher.SideOnly;
 
 public class BlockArcanite extends Block {
 
-	public BlockArcanite(Material materialIn) 
+	public BlockArcanite(String unlocalizedName) 
 	{
-		super(materialIn);
-		this.setUnlocalizedName("gem/arcanite/arcanite_block");
+		super(Material.rock);
+		this.setUnlocalizedName(unlocalizedName);
 		this.setCreativeTab(EbonArtsMod.tabEbonArtsBlocks);
 		this.setHarvestLevel("pickaxe", 2);
 		this.setHardness(20f);

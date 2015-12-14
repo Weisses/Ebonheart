@@ -10,10 +10,13 @@ public class EbonArtsConfiguration
 
 	public static boolean cheapRecipe;
 	public static boolean toolRecipe;
+	public static boolean musicRecipe;
 	public static final boolean CHEAPRECIPE_DEFAULT = false;
 	public static final String CHEAPRECIPE_NAME = "Enable cheap crafted blocks?";
 	public static final boolean TOOLRECIPE_DEFAULT = false;
 	public static final String TOOLRECIPE_NAME = "Disable crafting tools?";
+	public static final boolean MUSICRECIPE_DEFAULT = false;
+	public static final String MUSICRECIPE_NAME = "Disable crafting music discs?";
 	
 	public static void syncConfig()
 	{
@@ -26,6 +29,7 @@ public class EbonArtsConfiguration
 		EbonArtsMod.config.addCustomCategoryComment(RECIPES, "Enable, disable, or modify item and block recipes.");
 		cheapRecipe = EbonArtsMod.config.get(RECIPES, CHEAPRECIPE_NAME, CHEAPRECIPE_DEFAULT).getBoolean(CHEAPRECIPE_DEFAULT);
 		toolRecipe = EbonArtsMod.config.get(RECIPES, TOOLRECIPE_NAME, TOOLRECIPE_DEFAULT).getBoolean(TOOLRECIPE_DEFAULT);
+		musicRecipe = EbonArtsMod.config.get(RECIPES, MUSICRECIPE_NAME, MUSICRECIPE_DEFAULT).getBoolean(MUSICRECIPE_DEFAULT);
 		
 		//saves the config
 		if(EbonArtsMod.config.hasChanged())

@@ -12,13 +12,13 @@ import net.minecraftforge.fml.relauncher.SideOnly;
 
 public class BlockKatcheen extends Block {
 
-	public BlockKatcheen(Material materialIn) 
+	public BlockKatcheen(String unlocalizedName) 
 	{
-		super(materialIn);
-		this.setUnlocalizedName("gem/katcheen/katcheen_block");
+		super(Material.rock);
+		this.setUnlocalizedName(unlocalizedName);
 		this.setCreativeTab(EbonArtsMod.tabEbonArtsBlocks);
 		this.setHarvestLevel("pickaxe", 3);
-		this.setHardness(25f);
+		this.setHardness(30f);
 		this.setResistance(1500f);
 		this.setStepSound(soundTypeStone);
 	}

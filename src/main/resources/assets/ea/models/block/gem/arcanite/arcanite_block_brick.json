@@ -1,0 +1,6 @@
+{
+    "parent": "block/cube_all",
+    "textures": {
+        "all": "ea:blocks/gems/arcanite/arcanite_block_brick"
+    }
+}

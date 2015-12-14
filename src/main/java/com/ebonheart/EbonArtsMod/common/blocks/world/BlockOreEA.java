@@ -17,12 +17,12 @@ import com.ebonheart.EbonArtsMod.init.InitItemsEA;
 
 public class BlockOreEA extends Block {
 	
-	public BlockOreEA(Material materialIn, String unlocalizedName, String harvesttool, int harvestlevel, float lightlevel, float hardness) 
+	public BlockOreEA(String unlocalizedName, int harvestlevel, float lightlevel, float hardness) 
 	{
-		super(materialIn);
+		super(Material.rock);
 		this.setUnlocalizedName(unlocalizedName);
 		this.setCreativeTab(EbonArtsMod.tabEbonArtsBlocks);
-		this.setHarvestLevel(harvesttool, harvestlevel); //("pickaxe", 2) is default
+		this.setHarvestLevel("pickaxe", harvestlevel); //("pickaxe", 2) is iron
 		this.setHardness(hardness);
 		this.setResistance(1000f);
 		this.setStepSound(soundTypeStone);

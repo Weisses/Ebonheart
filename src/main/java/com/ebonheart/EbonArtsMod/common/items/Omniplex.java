@@ -26,7 +26,7 @@ import net.minecraftforge.fml.common.registry.GameRegistry;
 public class Omniplex extends Item {
 	
 	
-	public static int NOTE_EMPTY = -1;
+	//public static int NOTE_EMPTY = -1;
 	private static final String KEY_SIGN0 = "sign_0";
 	private static final String KEY_SIGN1 = "sign_1";
 	private static final String KEY_SIGN2 = "sign_2";
@@ -69,7 +69,7 @@ public class Omniplex extends Item {
 		setItemStackNBT(held, KEY_SIGN2, sign.signText[2].getUnformattedText());
 		setItemStackNBT(held, KEY_SIGN3, sign.signText[3].getUnformattedText());
 
-		held.getTagCompound().setByte(KEY_NOTE,(byte)NOTE_EMPTY); 
+		//held.getTagCompound().setByte(KEY_NOTE,(byte)NOTE_EMPTY); 
 		
 		entityPlayer.swingItem(); 
 	}
@@ -87,24 +87,24 @@ public class Omniplex extends Item {
 		entityPlayer.swingItem();
 	}
 
-	public static void copyNote(World world, EntityPlayer entityPlayer,TileEntityNote noteblock, ItemStack held) 
-	{ 
-		if(held.getTagCompound() == null) held.setTagCompound(new NBTTagCompound());
+	//public static void copyNote(World world, EntityPlayer entityPlayer,TileEntityNote noteblock, ItemStack held) 
+	//{ 
+	//	if(held.getTagCompound() == null) held.setTagCompound(new NBTTagCompound());
 		
-		held.getTagCompound().setByte(KEY_NOTE, noteblock.note); 
-	}
+	//	held.getTagCompound().setByte(KEY_NOTE, noteblock.note); 
+	//}
 	
-	public static void pasteNote(World world, EntityPlayer entityPlayer,TileEntityNote noteblock, ItemStack held) 
-	{ 
-		if(held.getTagCompound() == null)  {return;}//nothing ot paste
-		if(held.getTagCompound().getByte(KEY_NOTE) == NOTE_EMPTY){return;}
+	//public static void pasteNote(World world, EntityPlayer entityPlayer,TileEntityNote noteblock, ItemStack held) 
+	//{ 
+	//	if(held.getTagCompound() == null)  {return;}//nothing ot paste
+	//	if(held.getTagCompound().getByte(KEY_NOTE) == NOTE_EMPTY){return;}
 		
-		noteblock.note = held.getTagCompound().getByte(KEY_NOTE);
+	//	noteblock.note = held.getTagCompound().getByte(KEY_NOTE);
 		
-		world.markBlockForUpdate(noteblock.getPos());//so update is refreshed on client side
+	//	world.markBlockForUpdate(noteblock.getPos());//so update is refreshed on client side
 
-		entityPlayer.swingItem();
-	} 
+	//	entityPlayer.swingItem();
+	//} 
   
 	@SuppressWarnings({ "unchecked", "rawtypes" })
 	@Override
@@ -113,7 +113,7 @@ public class Omniplex extends Item {
 		boolean isEmpty = (held.getTagCompound() == null);
 		if(isEmpty)
 		{
-			list.add("Click to copy a sign or noteblock"); 
+			list.add("Click to copy a sign"); 
 			return;
 		}
 		 
@@ -122,20 +122,20 @@ public class Omniplex extends Item {
 				+ getItemStackNBT(held, KEY_SIGN2)
 				+ getItemStackNBT(held, KEY_SIGN3);
 		
-		if(sign.length() > 0)
-		{ 
-			list.add(getItemStackNBT(held, KEY_SIGN0));
-			list.add(getItemStackNBT(held, KEY_SIGN1));
-			list.add(getItemStackNBT(held, KEY_SIGN2));
-			list.add(getItemStackNBT(held, KEY_SIGN3));
-		}
+		//if(sign.length() > 0)
+		//{ 
+		//	list.add(getItemStackNBT(held, KEY_SIGN0));
+		//	list.add(getItemStackNBT(held, KEY_SIGN1));
+		//	list.add(getItemStackNBT(held, KEY_SIGN2));
+		//	list.add(getItemStackNBT(held, KEY_SIGN3));
+		//}
  
-		String s = noteToString(held.getTagCompound().getByte(KEY_NOTE));
+		//String s = noteToString(held.getTagCompound().getByte(KEY_NOTE));
 
-		if(s != null)
-		{
-			list.add("Note: " + s);
-		} 
+		//if(s != null)
+		//{
+		//	list.add("Note: " + s);
+		//} 
 	}
  
 	public static void rightClickBlock(PlayerInteractEvent event) 
@@ -168,23 +168,23 @@ public class Omniplex extends Item {
 			
 			isValid = true; 
 		}
-		if(blockClicked == Blocks.noteblock && container instanceof TileEntityNote)
-		{
-			TileEntityNote noteblock = (TileEntityNote)container;
+		//if(blockClicked == Blocks.noteblock && container instanceof TileEntityNote)
+		//{
+		//	TileEntityNote noteblock = (TileEntityNote)container;
 			 
-			if(isEmpty)
-			{ 
-				Omniplex.copyNote(world,entityPlayer,noteblock,held);
-				wasCopy = true; 
-			}
-			else
-			{
-				Omniplex.pasteNote(world,entityPlayer,noteblock,held); 
-				wasCopy = false;
-			} 
+		//	if(isEmpty)
+		//	{ 
+		//		Omniplex.copyNote(world,entityPlayer,noteblock,held);
+		//		wasCopy = true; 
+		//	}
+		//	else
+		//	{
+		//		Omniplex.pasteNote(world,entityPlayer,noteblock,held); 
+		//		wasCopy = false;
+		//	} 
 			
-			isValid = true; 
-		} 
+		//	isValid = true; 
+		//} 
 		
 		if(isValid)
 		{

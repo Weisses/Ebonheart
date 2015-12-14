@@ -6,7 +6,7 @@ import net.minecraft.item.ItemSlab;
 //Wrapper around ItemSlab to allow init from GameRegistry.
 public class ItemBlockSlab extends ItemSlab {
     /**
-     * Initializes a new instance of the ItemBlockStainedBrickSlab class.
+     * Initializes a new instance of the ItemBlockSlab class.
      * @param block the block behind the item.
      * @param slab the half height slab.
      * @param doubleSlab the full height slab.

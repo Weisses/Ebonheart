@@ -2,6 +2,7 @@ package com.ebonheart.EbonArtsMod.common.blocks.basic;
 
 import com.ebonheart.EbonArtsMod.EbonArtsMod;
 import com.ebonheart.EbonArtsMod.init.InitBlocksEA;
+import com.ebonheart.EbonArtsMod.init.InitItemsEA;
 
 import net.minecraft.block.Block;
 import net.minecraft.block.BlockSlab;
@@ -15,6 +16,7 @@ import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
 import net.minecraft.util.BlockPos;
+import net.minecraft.util.EnumFacing;
 import net.minecraft.util.MovingObjectPosition;
 import net.minecraft.world.World;
 import net.minecraftforge.fml.common.registry.GameRegistry;
@@ -61,7 +63,11 @@ public abstract class EABlockSlab extends BlockSlab {
         this.setDefaultState(blockState);
     }
 
+    public static Item getItemFromBlock(final String name) {
+        return GameRegistry.findItem("ea", name);
+    }
     
+
     public ItemStack getPickBlock(MovingObjectPosition target, World world, BlockPos pos, EntityPlayer player)
     {
     	return new ItemStack(InitBlocksEA.draconium_slab);
@@ -95,6 +101,10 @@ public abstract class EABlockSlab extends BlockSlab {
     public final IProperty getVariantProperty() {
         return VARIANT_PROPERTY;
     }
+    
+    
+    
+    
     
     
 
@@ -161,7 +171,7 @@ public abstract class EABlockSlab extends BlockSlab {
     public final Item getItemDropped(final IBlockState blockState, final java.util.Random random, final int unused) 
     {
         String blockId = this.innerGetId(false);
-        return GameUtility.getItemFromBlock(blockId);
+        return getItemFromBlock(blockId);
     }
 
     /**
@@ -176,7 +186,7 @@ public abstract class EABlockSlab extends BlockSlab {
         final net.minecraft.world.World world,
         final net.minecraft.util.BlockPos blockPos) {
         String blockId = this.innerGetId(false);
-        return GameUtility.getItemFromBlock(blockId);
+        return getItemFromBlock(blockId);
     }
 
     

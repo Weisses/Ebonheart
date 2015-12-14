@@ -12,12 +12,12 @@ import net.minecraftforge.fml.relauncher.SideOnly;
 
 public class BlockVelious extends Block {
 
-	public BlockVelious(Material materialIn) 
+	public BlockVelious(String unlocalizedName) 
 	{
-		super(materialIn);
-		this.setUnlocalizedName("gem/velious/velious_block");
+		super(Material.rock);
+		this.setUnlocalizedName(unlocalizedName);
 		this.setCreativeTab(EbonArtsMod.tabEbonArtsBlocks);
-		this.setHarvestLevel("pickaxe", 3);
+		this.setHarvestLevel("pickaxe", 2);
 		this.setHardness(15f);
 		this.setResistance(1500f);
 		this.setStepSound(soundTypeStone);

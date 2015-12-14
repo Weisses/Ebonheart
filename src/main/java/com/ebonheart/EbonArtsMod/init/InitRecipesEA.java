@@ -2,6 +2,7 @@ package com.ebonheart.EbonArtsMod.init;
 
 import net.minecraft.init.Blocks;
 import net.minecraft.init.Items;
+import net.minecraft.item.EnumDyeColor;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
 import net.minecraftforge.fml.common.registry.GameRegistry;
@@ -17,50 +18,31 @@ public class InitRecipesEA
 		{
 			GameRegistry.addShapedRecipe(new ItemStack(InitBlocksEA.draconium_block), new Object[]{"DDD", "DDD", "DDD", 'D', InitItemsEA.draconium_dust});
 			GameRegistry.addShapedRecipe(new ItemStack(InitItemsEA.draconium_dust, 9), new Object[]{"D", 'D', InitBlocksEA.draconium_block});
-			
-			
 			GameRegistry.addShapedRecipe(new ItemStack(InitBlocksEA.velious_block), new Object[]{"VVV", "VVV", "VVV", 'V', InitItemsEA.velious});
 			GameRegistry.addShapedRecipe(new ItemStack(InitItemsEA.velious, 9), new Object[]{"V", 'V', InitBlocksEA.velious_block});
-			
-			
 			GameRegistry.addShapedRecipe(new ItemStack(InitBlocksEA.arcanite_block), new Object[]{"AAA", "AAA", "AAA", 'A', InitItemsEA.arcanite});
 			GameRegistry.addShapedRecipe(new ItemStack(InitItemsEA.arcanite, 9), new Object[]{"A", 'A', InitBlocksEA.arcanite_block});
-			
-			
 			GameRegistry.addShapedRecipe(new ItemStack(InitBlocksEA.katcheen_block), new Object[]{"KKK", "KKK", "KKK", 'K', InitItemsEA.katcheen});
 			GameRegistry.addShapedRecipe(new ItemStack(InitItemsEA.katcheen, 9), new Object[]{"K", 'K', InitBlocksEA.katcheen_block});
-			
-			
 			GameRegistry.addShapedRecipe(new ItemStack(InitBlocksEA.necrocite_block), new Object[]{"NNN", "NNN", "NNN", 'N', InitItemsEA.necrocite});
 			GameRegistry.addShapedRecipe(new ItemStack(InitItemsEA.necrocite, 9), new Object[]{"N", 'N', InitBlocksEA.necrocite_block});
-			
-			
 			GameRegistry.addShapedRecipe(new ItemStack(InitBlocksEA.soularite_block), new Object[]{"SSS", "SSS", "SSS", 'S', InitItemsEA.soularite});
 			GameRegistry.addShapedRecipe(new ItemStack(InitItemsEA.soularite, 9), new Object[]{"S", 'S', InitBlocksEA.soularite_block});
-			
-			
 		}
-		else
+		else 
 		{
 			GameRegistry.addShapedRecipe(new ItemStack(InitBlocksEA.draconium_block), new Object[]{"DD", "DD", 'D', InitItemsEA.draconium_dust});
 			GameRegistry.addShapedRecipe(new ItemStack(InitItemsEA.draconium_dust, 4), new Object[]{"D", 'D', InitBlocksEA.draconium_block});
-			
 			GameRegistry.addShapedRecipe(new ItemStack(InitBlocksEA.velious_block), new Object[]{"VV", "VV", 'V', InitItemsEA.velious});
 			GameRegistry.addShapedRecipe(new ItemStack(InitItemsEA.velious, 4), new Object[]{"V", 'V', InitBlocksEA.velious_block});
-			
 			GameRegistry.addShapedRecipe(new ItemStack(InitBlocksEA.arcanite_block), new Object[]{"AA", "AA", 'A', InitItemsEA.arcanite});
 			GameRegistry.addShapedRecipe(new ItemStack(InitItemsEA.arcanite, 4), new Object[]{"A", 'A', InitBlocksEA.arcanite_block});
-			
 			GameRegistry.addShapedRecipe(new ItemStack(InitBlocksEA.katcheen_block), new Object[]{"KK", "KK", 'K', InitItemsEA.katcheen});
 			GameRegistry.addShapedRecipe(new ItemStack(InitItemsEA.katcheen, 4), new Object[]{"K", 'K', InitBlocksEA.katcheen_block});
-			
 			GameRegistry.addShapedRecipe(new ItemStack(InitBlocksEA.necrocite_block), new Object[]{"NN", "NN", 'N', InitItemsEA.necrocite});
 			GameRegistry.addShapedRecipe(new ItemStack(InitItemsEA.necrocite, 4), new Object[]{"N", 'N', InitBlocksEA.necrocite_block});
-			
 			GameRegistry.addShapedRecipe(new ItemStack(InitBlocksEA.soularite_block), new Object[]{"SS", "SS", 'S', InitItemsEA.soularite});
 			GameRegistry.addShapedRecipe(new ItemStack(InitItemsEA.soularite, 4), new Object[]{"S", 'S', InitBlocksEA.soularite_block});
-			
-			
 		}
 		
 		
@@ -82,8 +64,15 @@ public class InitRecipesEA
 		}
 		
 		
-		//GameRegistry.addShapedRecipe(new ItemStack(InitItemsEA.arcanite, 9), new Object[]{"A", 'A', InitBlocksEA.arcanite_block});
 		
+		if(!EbonArtsConfiguration.musicRecipe)
+		{
+			GameRegistry.addShapedRecipe(new ItemStack(InitItemsEA.shimmering_disc, 1), new Object[]{"CCC", "CSC", "CCC", 'C', Blocks.cobblestone,'S', InitItemsEA.velious});
+		}
+		else
+		{
+			
+		}
 		
 		
 	}
@@ -91,15 +80,40 @@ public class InitRecipesEA
 	public static void initShapelessRecipe()
 	{
 		GameRegistry.addShapelessRecipe(new ItemStack(InitBlocksEA.purified_glowstone), InitItemsEA.draconium_dust, Blocks.glowstone);
-				
+		
+		
+		if(!EbonArtsConfiguration.musicRecipe)
+		{
+			GameRegistry.addShapelessRecipe(new ItemStack(Items.record_13), InitItemsEA.shimmering_disc, new ItemStack(Items.dye, 1, 11));
+			GameRegistry.addShapelessRecipe(new ItemStack(Items.record_cat), InitItemsEA.shimmering_disc, new ItemStack(Items.dye, 1, 2));
+			GameRegistry.addShapelessRecipe(new ItemStack(Items.record_blocks), InitItemsEA.shimmering_disc, new ItemStack(Items.dye, 1, 14));
+			GameRegistry.addShapelessRecipe(new ItemStack(Items.record_chirp), InitItemsEA.shimmering_disc, new ItemStack(Items.dye, 1, 1));
+			GameRegistry.addShapelessRecipe(new ItemStack(Items.record_far), InitItemsEA.shimmering_disc, new ItemStack(Items.dye, 1, 10));
+			GameRegistry.addShapelessRecipe(new ItemStack(Items.record_mall), InitItemsEA.shimmering_disc, new ItemStack(Items.dye, 1, 4));
+			GameRegistry.addShapelessRecipe(new ItemStack(Items.record_mellohi), InitItemsEA.shimmering_disc, new ItemStack(Items.dye, 1, 5));
+			GameRegistry.addShapelessRecipe(new ItemStack(Items.record_stal), InitItemsEA.shimmering_disc, new ItemStack(Items.dye, 1, 0));
+			GameRegistry.addShapelessRecipe(new ItemStack(Items.record_strad), InitItemsEA.shimmering_disc, new ItemStack(Items.dye, 1, 15));
+			GameRegistry.addShapelessRecipe(new ItemStack(Items.record_ward), InitItemsEA.shimmering_disc, new ItemStack(Items.dye, 1, 6));
+			GameRegistry.addShapelessRecipe(new ItemStack(Items.record_11), InitItemsEA.shimmering_disc, new ItemStack(Items.dye, 1, 8));
+			GameRegistry.addShapelessRecipe(new ItemStack(Items.record_wait), InitItemsEA.shimmering_disc, new ItemStack(Items.dye, 1, 12));
+		}
+		else
+		{
+			
+			
+			
+		}
 		
 		
 	}
-
+	
 	public static void initSmeltingRecipe()
 	{
 		GameRegistry.addSmelting(new ItemStack(InitBlocksEA.draconium_ore), new ItemStack(InitItemsEA.draconium_dust), 10f);
 		
+		
+		//smelting stone back into cobblestone.
+		GameRegistry.addSmelting(new ItemStack(Blocks.cobblestone), new ItemStack(Blocks.stone), 0.1f);
 		
 		
 	}

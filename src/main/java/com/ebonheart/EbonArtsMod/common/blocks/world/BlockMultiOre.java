@@ -16,13 +16,13 @@ import com.ebonheart.EbonArtsMod.init.InitItemsEA;
 
 public class BlockMultiOre extends Block {
 
-	public BlockMultiOre(Material materialIn, String unlocalizedName) {
-		super(materialIn);
+	public BlockMultiOre(String unlocalizedName) {
+		super(Material.rock);
 		this.setUnlocalizedName(unlocalizedName);
 		this.setCreativeTab(EbonArtsMod.tabEbonArtsBlocks);
 		this.setStepSound(soundTypeStone);
 		this.setHardness(40.0f);
-		this.setResistance(100.0f);
+		this.setResistance(1500f);
 		this.setHarvestLevel("pickaxe", 3);
 	}
 
