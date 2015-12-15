@@ -290,6 +290,12 @@ public class InitBlocksEA
 		GameRegistry.registerBlock(ebon_ore, ebon_ore.getUnlocalizedName().substring(5));
 		GameRegistry.registerBlock(ebon_ore_nether, ebon_ore_nether.getUnlocalizedName().substring(5));
 		
+		GameRegistry.registerBlock(mystic_block_normal, mystic_block_normal.getUnlocalizedName().substring(5));
+		GameRegistry.registerBlock(mystic_block = new EABlockMeta("gem/mystic/mystic_block", Material.rock), ItemBlockMeta.class, "gem/mystic/mystic_block");
+		
+		GameRegistry.registerBlock(innate_mystic_block_normal, innate_mystic_block_normal.getUnlocalizedName().substring(5));
+		GameRegistry.registerBlock(innate_mystic_block = new EABlockMeta("gem/mystic/innate_mystic_block", Material.rock), ItemBlockMeta.class, "gem/mystic/innate_mystic_block");
+		
 		GameRegistry.registerBlock(draconium_block, draconium_block.getUnlocalizedName().substring(5));
 		GameRegistry.registerBlock(velious_block, velious_block.getUnlocalizedName().substring(5));
 		GameRegistry.registerBlock(arcanite_block, arcanite_block.getUnlocalizedName().substring(5));
@@ -353,13 +359,6 @@ public class InitBlocksEA
 		
 		
 		
-		GameRegistry.registerBlock(mystic_block_normal, mystic_block_normal.getUnlocalizedName().substring(5));
-		GameRegistry.registerBlock(mystic_block = new EABlockMeta("gem/mystic/mystic_block", Material.rock), ItemBlockMeta.class, "gem/mystic/mystic_block");
-		
-		
-		GameRegistry.registerBlock(innate_mystic_block_normal, innate_mystic_block_normal.getUnlocalizedName().substring(5));
-		GameRegistry.registerBlock(innate_mystic_block = new EABlockMeta("gem/mystic/innate_mystic_block", Material.rock), ItemBlockMeta.class, "gem/mystic/innate_mystic_block");
-
 		
 		
 		
@@ -399,6 +398,44 @@ public class InitBlocksEA
 		registerRender(soularite_ore);
 		registerRender(ebon_ore);
 		registerRender(ebon_ore_nether);
+		
+		registerRender(mystic_block_normal);
+		registerRender(mystic_block);
+		registerRender(InitBlocksEA.mystic_block, 0, "gem/mystic/mystic_block_white");
+		registerRender(InitBlocksEA.mystic_block, 1, "gem/mystic/mystic_block_orange");
+		registerRender(InitBlocksEA.mystic_block, 2, "gem/mystic/mystic_block_magenta");
+		registerRender(InitBlocksEA.mystic_block, 3, "gem/mystic/mystic_block_lightblue");
+		registerRender(InitBlocksEA.mystic_block, 4, "gem/mystic/mystic_block_yellow");
+		registerRender(InitBlocksEA.mystic_block, 5, "gem/mystic/mystic_block_lime");
+		registerRender(InitBlocksEA.mystic_block, 6, "gem/mystic/mystic_block_pink");
+		registerRender(InitBlocksEA.mystic_block, 7, "gem/mystic/mystic_block_gray");
+		registerRender(InitBlocksEA.mystic_block, 8, "gem/mystic/mystic_block_lightgray");
+		registerRender(InitBlocksEA.mystic_block, 9, "gem/mystic/mystic_block_cyan");
+		registerRender(InitBlocksEA.mystic_block, 10, "gem/mystic/mystic_block_purple");
+		registerRender(InitBlocksEA.mystic_block, 11, "gem/mystic/mystic_block_blue");
+		registerRender(InitBlocksEA.mystic_block, 12, "gem/mystic/mystic_block_brown");
+		registerRender(InitBlocksEA.mystic_block, 13, "gem/mystic/mystic_block_green");
+		registerRender(InitBlocksEA.mystic_block, 14, "gem/mystic/mystic_block_red");
+		registerRender(InitBlocksEA.mystic_block, 15, "gem/mystic/mystic_block_black");
+		
+		registerRender(innate_mystic_block_normal);
+		registerRender(innate_mystic_block);
+		registerRender(InitBlocksEA.innate_mystic_block, 0, "gem/mystic/innate_mystic_block_white");
+		registerRender(InitBlocksEA.innate_mystic_block, 1, "gem/mystic/innate_mystic_block_orange");
+		registerRender(InitBlocksEA.innate_mystic_block, 2, "gem/mystic/innate_mystic_block_magenta");
+		registerRender(InitBlocksEA.innate_mystic_block, 3, "gem/mystic/innate_mystic_block_lightblue");
+		registerRender(InitBlocksEA.innate_mystic_block, 4, "gem/mystic/innate_mystic_block_yellow");
+		registerRender(InitBlocksEA.innate_mystic_block, 5, "gem/mystic/innate_mystic_block_lime");
+		registerRender(InitBlocksEA.innate_mystic_block, 6, "gem/mystic/innate_mystic_block_pink");
+		registerRender(InitBlocksEA.innate_mystic_block, 7, "gem/mystic/innate_mystic_block_gray");
+		registerRender(InitBlocksEA.innate_mystic_block, 8, "gem/mystic/innate_mystic_block_lightgray");
+		registerRender(InitBlocksEA.innate_mystic_block, 9, "gem/mystic/innate_mystic_block_cyan");
+		registerRender(InitBlocksEA.innate_mystic_block, 10, "gem/mystic/innate_mystic_block_purple");
+		registerRender(InitBlocksEA.innate_mystic_block, 11, "gem/mystic/innate_mystic_block_blue");
+		registerRender(InitBlocksEA.innate_mystic_block, 12, "gem/mystic/innate_mystic_block_brown");
+		registerRender(InitBlocksEA.innate_mystic_block, 13, "gem/mystic/innate_mystic_block_green");
+		registerRender(InitBlocksEA.innate_mystic_block, 14, "gem/mystic/innate_mystic_block_red");
+		registerRender(InitBlocksEA.innate_mystic_block, 15, "gem/mystic/innate_mystic_block_black");
 		
 		registerRender(draconium_block);
 		registerRender(velious_block);
@@ -462,53 +499,15 @@ public class InitBlocksEA
 		
 		
 		
-		registerRender(mystic_block_normal);
-		registerRender(mystic_block);
-		registerRender(InitBlocksEA.mystic_block, 0, "gem/mystic/mystic_block_white");
-		registerRender(InitBlocksEA.mystic_block, 1, "gem/mystic/mystic_block_orange");
-		registerRender(InitBlocksEA.mystic_block, 2, "gem/mystic/mystic_block_magenta");
-		registerRender(InitBlocksEA.mystic_block, 3, "gem/mystic/mystic_block_lightblue");
-		registerRender(InitBlocksEA.mystic_block, 4, "gem/mystic/mystic_block_yellow");
-		registerRender(InitBlocksEA.mystic_block, 5, "gem/mystic/mystic_block_lime");
-		registerRender(InitBlocksEA.mystic_block, 6, "gem/mystic/mystic_block_pink");
-		registerRender(InitBlocksEA.mystic_block, 7, "gem/mystic/mystic_block_gray");
-		registerRender(InitBlocksEA.mystic_block, 8, "gem/mystic/mystic_block_lightgray");
-		registerRender(InitBlocksEA.mystic_block, 9, "gem/mystic/mystic_block_cyan");
-		registerRender(InitBlocksEA.mystic_block, 10, "gem/mystic/mystic_block_purple");
-		registerRender(InitBlocksEA.mystic_block, 11, "gem/mystic/mystic_block_blue");
-		registerRender(InitBlocksEA.mystic_block, 12, "gem/mystic/mystic_block_brown");
-		registerRender(InitBlocksEA.mystic_block, 13, "gem/mystic/mystic_block_green");
-		registerRender(InitBlocksEA.mystic_block, 14, "gem/mystic/mystic_block_red");
-		registerRender(InitBlocksEA.mystic_block, 15, "gem/mystic/mystic_block_black");
-		
-
-		
-		
-		
 		//registerRender(arcanite_fence_gate_normal);
 		
 		
 		
 		//registerRender(arcanite_wall_gate);
 		
-		registerRender(innate_mystic_block_normal);
-		registerRender(innate_mystic_block);
-		registerRender(InitBlocksEA.innate_mystic_block, 0, "gem/mystic/innate_mystic_block_white");
-		registerRender(InitBlocksEA.innate_mystic_block, 1, "gem/mystic/innate_mystic_block_orange");
-		registerRender(InitBlocksEA.innate_mystic_block, 2, "gem/mystic/innate_mystic_block_magenta");
-		registerRender(InitBlocksEA.innate_mystic_block, 3, "gem/mystic/innate_mystic_block_lightblue");
-		registerRender(InitBlocksEA.innate_mystic_block, 4, "gem/mystic/innate_mystic_block_yellow");
-		registerRender(InitBlocksEA.innate_mystic_block, 5, "gem/mystic/innate_mystic_block_lime");
-		registerRender(InitBlocksEA.innate_mystic_block, 6, "gem/mystic/innate_mystic_block_pink");
-		registerRender(InitBlocksEA.innate_mystic_block, 7, "gem/mystic/innate_mystic_block_gray");
-		registerRender(InitBlocksEA.innate_mystic_block, 8, "gem/mystic/innate_mystic_block_lightgray");
-		registerRender(InitBlocksEA.innate_mystic_block, 9, "gem/mystic/innate_mystic_block_cyan");
-		registerRender(InitBlocksEA.innate_mystic_block, 10, "gem/mystic/innate_mystic_block_purple");
-		registerRender(InitBlocksEA.innate_mystic_block, 11, "gem/mystic/innate_mystic_block_blue");
-		registerRender(InitBlocksEA.innate_mystic_block, 12, "gem/mystic/innate_mystic_block_brown");
-		registerRender(InitBlocksEA.innate_mystic_block, 13, "gem/mystic/innate_mystic_block_green");
-		registerRender(InitBlocksEA.innate_mystic_block, 14, "gem/mystic/innate_mystic_block_red");
-		registerRender(InitBlocksEA.innate_mystic_block, 15, "gem/mystic/innate_mystic_block_black");
+		
+		
+		
 		
 		
 		

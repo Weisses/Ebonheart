@@ -23,9 +23,8 @@ public final class InitTileEntitiesEA {
 	
 	public static void init() {
 		
-		GameRegistry.registerBlock(Test_Block_Tile_Entity = new TestBlockTileEntity("tile_entity"), "tile_entity");
+		//GameRegistry.registerBlock(Test_Block_Tile_Entity = new TestBlockTileEntity("tile_entity"), "tile_entity");
 		GameRegistry.registerBlock(Banana_Plant = new BlockBananaPlantRoot(InitItemsEA.banana, 3, 1, 5, 2, 2, 12, 10, 30, 40, 100, 5, 10, 3, 1, null), "bananaplant");
-		//Banana_Plant = new BlockBananaPlantRoot(InitItemsEA.banana, 3, 1, 5, 2, 2, 12, 10, 30, 40, 100, 5, 10, 3, 1, null);
 		
 		
 	}
@@ -34,7 +33,7 @@ public final class InitTileEntitiesEA {
 	public static void register()
 	{
 		
-		GameRegistry.registerTileEntity(TestTileEntity.class, "tile_entity");
+		//GameRegistry.registerTileEntity(TestTileEntity.class, "tile_entity");
 		GameRegistry.registerTileEntity(TileEntityBananaPlant.class, "bananaplant");
 	
 	}
@@ -43,7 +42,7 @@ public final class InitTileEntitiesEA {
 	public static void registerRenders()
 	{
 		
-		registerRender(Test_Block_Tile_Entity);
+		//registerRender(Test_Block_Tile_Entity);
 		registerRender(Banana_Plant);
 		
 	}

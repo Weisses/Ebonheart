@@ -16,7 +16,7 @@ public class ItemSwordEA extends ItemSword
 	{
 		super(material);
 		this.setUnlocalizedName(unlocalizedName);
-		this.setCreativeTab(EbonArtsMod.tabEbonArtsItems);
+		//this.setCreativeTab(EbonArtsMod.tabEbonArtsItems);
 		
 	}
 	

@@ -4,7 +4,6 @@ import net.minecraft.client.Minecraft;
 import net.minecraft.client.resources.model.ModelResourceLocation;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemArmor;
-import net.minecraft.item.ItemBucket;
 import net.minecraft.item.ItemFood;
 import net.minecraftforge.common.util.EnumHelper;
 import net.minecraftforge.fml.common.registry.GameRegistry;
@@ -12,11 +11,14 @@ import net.minecraftforge.fml.common.registry.GameRegistry;
 import com.ebonheart.EbonArtsMod.EbonArtsMod;
 import com.ebonheart.EbonArtsMod.Reference;
 import com.ebonheart.EbonArtsMod.common.items.ItemAlchemicalCompendium;
-import com.ebonheart.EbonArtsMod.common.items.Omniplex;
+import com.ebonheart.EbonArtsMod.common.items.ItemShimmeringDisc;
 import com.ebonheart.EbonArtsMod.common.items.armor.ItemArmorArcanite;
-import com.ebonheart.EbonArtsMod.common.items.resources.ItemEA;
-import com.ebonheart.EbonArtsMod.common.items.resources.ItemArcaniteShard;
-import com.ebonheart.EbonArtsMod.common.items.resources.ItemInnateArcanite;
+import com.ebonheart.EbonArtsMod.common.items.resources.ItemArcanite;
+import com.ebonheart.EbonArtsMod.common.items.resources.ItemDraconiumDust;
+import com.ebonheart.EbonArtsMod.common.items.resources.ItemKatcheen;
+import com.ebonheart.EbonArtsMod.common.items.resources.ItemNecrocite;
+import com.ebonheart.EbonArtsMod.common.items.resources.ItemSoularite;
+import com.ebonheart.EbonArtsMod.common.items.resources.ItemVelious;
 import com.ebonheart.EbonArtsMod.common.items.tools.ItemAxeEA;
 import com.ebonheart.EbonArtsMod.common.items.tools.ItemHoeEA;
 import com.ebonheart.EbonArtsMod.common.items.tools.ItemPickaxeEA;
@@ -33,19 +35,18 @@ public class InitItemsEA
 	public static Item katcheen;
 	public static Item necrocite;
 	public static Item soularite;
-	public static Item innate_arcanite;
+	//public static Item innate_arcanite;
 	
 	
 	
 	public static Item shimmering_disc;
 	
 	
-	//public static Item item_arcanite;
-	public static Item arcanite_shard;
+	//public static Item arcanite_shard;
 	
 	
-	public static Item mystic_dust;
-	public static Item purified_mystic_dust;
+	//public static Item mystic_dust;
+	//public static Item purified_mystic_dust;
 	
 	public static Item tier_1_catalyst;
 	public static Item tier_2_catalyst;
@@ -56,7 +57,7 @@ public class InitItemsEA
 	//public static Item diamond_catalyst;
 	//public static Item emerald_catalyst;
 	
-	public static Item ebon_sigil;
+	//public static Item ebon_sigil;
 	//public static Item dragons_catalyst;
 	
 	public static Item arcanite_pickaxe;
@@ -96,22 +97,22 @@ public class InitItemsEA
 	{
 		alchemical_compendium = new ItemAlchemicalCompendium("alchemical_compendium");
 		
-		draconium_dust = new ItemEA("gem/draconium_dust");
-		velious = new ItemEA("gem/velious");
-		arcanite = new ItemEA("gem/arcanite");
-		katcheen = new ItemEA("gem/katcheen");
-		necrocite = new ItemEA("gem/necrocite");
-		soularite = new ItemEA("gem/soularite");
-		innate_arcanite = new ItemInnateArcanite("gem/innate_arcanite");
+		draconium_dust = new ItemDraconiumDust();
+		velious = new ItemVelious();
+		arcanite = new ItemArcanite();
+		katcheen = new ItemKatcheen();
+		necrocite = new ItemNecrocite();
+		soularite = new ItemSoularite();
+		//innate_arcanite = new ItemInnateArcanite("gem/innate_arcanite");
 		
 		
 		
-		shimmering_disc = new Item().setUnlocalizedName("shimmering_disc");
+		shimmering_disc = new ItemShimmeringDisc();
 		
 		
 		
 		
-		arcanite_shard = new ItemArcaniteShard("arcanite_shard");
+		//arcanite_shard = new ItemArcaniteShard("arcanite_shard");
 		
 		arcanite_pickaxe = new ItemPickaxeEA(arcaniteToolMaterial, "tool/arcanite_pickaxe");
 		arcanite_axe = new ItemAxeEA(arcaniteToolMaterial, "tool/arcanite_axe");
@@ -134,13 +135,13 @@ public class InitItemsEA
 		//test_liquid_bucket = new ItemBucket(InitBlocksEA.test_liquid).setUnlocalizedName("test_liquid_bucket").setCreativeTab(EbonArtsMod.tabEbonArtsItems).setContainerItem(test_liquid_bucket);
 		
 		
-		mystic_dust = new Item().setUnlocalizedName("mystic_dust").setCreativeTab(EbonArtsMod.tabEbonArtsItems);
-		purified_mystic_dust = new Item().setUnlocalizedName("purified_mystic_dust").setCreativeTab(EbonArtsMod.tabEbonArtsItems);
-		ebon_sigil = new Omniplex().setUnlocalizedName("ebon_sigil");
-		tier_1_catalyst = new Item().setUnlocalizedName("tier_1_catalyst").setCreativeTab(EbonArtsMod.tabEbonArtsItems);
-		tier_2_catalyst = new Item().setUnlocalizedName("tier_2_catalyst").setCreativeTab(EbonArtsMod.tabEbonArtsItems);
-		tier_3_catalyst = new Item().setUnlocalizedName("tier_3_catalyst").setCreativeTab(EbonArtsMod.tabEbonArtsItems);
-		tier_4_catalyst = new Item().setUnlocalizedName("tier_4_catalyst").setCreativeTab(EbonArtsMod.tabEbonArtsItems);
+		//mystic_dust = new Item().setUnlocalizedName("mystic_dust").setCreativeTab(EbonArtsMod.tabEbonArtsItems);
+		//purified_mystic_dust = new Item().setUnlocalizedName("purified_mystic_dust").setCreativeTab(EbonArtsMod.tabEbonArtsItems);
+		//ebon_sigil = new Omniplex().setUnlocalizedName("ebon_sigil");
+		tier_1_catalyst = new Item().setUnlocalizedName("tier_1_catalyst");
+		tier_2_catalyst = new Item().setUnlocalizedName("tier_2_catalyst");
+		tier_3_catalyst = new Item().setUnlocalizedName("tier_3_catalyst");
+		tier_4_catalyst = new Item().setUnlocalizedName("tier_4_catalyst");
 	
 	
 		banana = (ItemFood) new ItemFood(3, 0.3F, false).setUnlocalizedName("banana").setCreativeTab(EbonArtsMod.tabEbonArtsItems);;
@@ -157,9 +158,9 @@ public class InitItemsEA
 		GameRegistry.registerItem(katcheen, katcheen.getUnlocalizedName().substring(5));
 		GameRegistry.registerItem(necrocite, necrocite.getUnlocalizedName().substring(5));
 		GameRegistry.registerItem(soularite, soularite.getUnlocalizedName().substring(5));
-		GameRegistry.registerItem(innate_arcanite, innate_arcanite.getUnlocalizedName().substring(5));
+		//GameRegistry.registerItem(innate_arcanite, innate_arcanite.getUnlocalizedName().substring(5));
 		
-		GameRegistry.registerItem(arcanite_shard, arcanite_shard.getUnlocalizedName().substring(5));
+		//GameRegistry.registerItem(arcanite_shard, arcanite_shard.getUnlocalizedName().substring(5));
 		
 		GameRegistry.registerItem(shimmering_disc, shimmering_disc.getUnlocalizedName().substring(5));
 		
@@ -187,9 +188,9 @@ public class InitItemsEA
 		
 		
 		
-		GameRegistry.registerItem(mystic_dust, mystic_dust.getUnlocalizedName().substring(5));
-		GameRegistry.registerItem(purified_mystic_dust, purified_mystic_dust.getUnlocalizedName().substring(5));
-		GameRegistry.registerItem(ebon_sigil, ebon_sigil.getUnlocalizedName().substring(5));
+		//GameRegistry.registerItem(mystic_dust, mystic_dust.getUnlocalizedName().substring(5));
+		//GameRegistry.registerItem(purified_mystic_dust, purified_mystic_dust.getUnlocalizedName().substring(5));
+		//GameRegistry.registerItem(ebon_sigil, ebon_sigil.getUnlocalizedName().substring(5));
 		GameRegistry.registerItem(tier_1_catalyst, tier_1_catalyst.getUnlocalizedName().substring(5));
 		GameRegistry.registerItem(tier_2_catalyst, tier_2_catalyst.getUnlocalizedName().substring(5));
 		GameRegistry.registerItem(tier_3_catalyst, tier_3_catalyst.getUnlocalizedName().substring(5));
@@ -208,10 +209,10 @@ public class InitItemsEA
 		registerRender(katcheen);
 		registerRender(necrocite);
 		registerRender(soularite);
-		registerRender(innate_arcanite);
+		//registerRender(innate_arcanite);
 		
 		
-		registerRender(arcanite_shard);
+		//registerRender(arcanite_shard);
 		
 		registerRender(shimmering_disc);
 		
@@ -240,9 +241,9 @@ public class InitItemsEA
 		
 		//registerRender(test_liquid_bucket);
 		
-		registerRender(mystic_dust);
-		registerRender(purified_mystic_dust);
-		registerRender(ebon_sigil);
+		//registerRender(mystic_dust);
+		//registerRender(purified_mystic_dust);
+		//registerRender(ebon_sigil);
 		registerRender(tier_1_catalyst);
 		registerRender(tier_2_catalyst);
 		registerRender(tier_3_catalyst);

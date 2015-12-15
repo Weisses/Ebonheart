@@ -75,6 +75,30 @@ public class InitRecipesEA
 		}
 		
 		
+		
+		GameRegistry.addShapedRecipe(new ItemStack(InitBlocksEA.draconium_block), new Object[]{"DD", "DD", 'D', InitItemsEA.draconium_dust});
+		GameRegistry.addShapedRecipe(new ItemStack(InitBlocksEA.draconium_slab, 6), new Object[]{"DDD", 'D', InitBlocksEA.draconium_block});
+		GameRegistry.addShapedRecipe(new ItemStack(InitBlocksEA.draconium_stairs, 3), new Object[]{"  D", " DD", "DDD", 'D', InitBlocksEA.draconium_block});
+		GameRegistry.addShapedRecipe(new ItemStack(InitBlocksEA.draconium_stairs, 3), new Object[]{"D  ", "DD ", "DDD", 'D', InitBlocksEA.draconium_block});
+		GameRegistry.addShapedRecipe(new ItemStack(InitBlocksEA.draconium_stairs, 3), new Object[]{"DDD", " DD", "  D", 'D', InitBlocksEA.draconium_block});
+		GameRegistry.addShapedRecipe(new ItemStack(InitBlocksEA.draconium_stairs, 3), new Object[]{"DDD", "DD ", "D  ", 'D', InitBlocksEA.draconium_block});
+		GameRegistry.addShapedRecipe(new ItemStack(InitBlocksEA.draconium_fence, 4), new Object[]{"D#D", "D#D", 'D', InitBlocksEA.draconium_block, '#', InitItemsEA.draconium_dust});
+		GameRegistry.addShapedRecipe(new ItemStack(InitBlocksEA.draconium_wall, 3), new Object[]{"DDD", "DDD", 'D', InitBlocksEA.draconium_block});
+		GameRegistry.addShapedRecipe(new ItemStack(InitBlocksEA.draconium_block_brick, 4), new Object[]{"DD", "DD", 'D', InitBlocksEA.draconium_block});
+		
+		GameRegistry.addShapedRecipe(new ItemStack(InitBlocksEA.velious_block), new Object[]{"VV", "VV", 'V', InitItemsEA.velious});
+		GameRegistry.addShapedRecipe(new ItemStack(InitBlocksEA.velious_slab, 6), new Object[]{"VVV", 'V', InitBlocksEA.velious_block});
+		GameRegistry.addShapedRecipe(new ItemStack(InitBlocksEA.velious_stairs, 3), new Object[]{"  V", " VV", "VVV", 'V', InitBlocksEA.velious_block});
+		GameRegistry.addShapedRecipe(new ItemStack(InitBlocksEA.velious_stairs, 3), new Object[]{"V  ", "VV ", "VVV", 'V', InitBlocksEA.velious_block});
+		GameRegistry.addShapedRecipe(new ItemStack(InitBlocksEA.velious_stairs, 3), new Object[]{"VVV", " VV", "  V", 'V', InitBlocksEA.velious_block});
+		GameRegistry.addShapedRecipe(new ItemStack(InitBlocksEA.velious_stairs, 3), new Object[]{"VVV", "VV ", "V  ", 'V', InitBlocksEA.velious_block});
+		GameRegistry.addShapedRecipe(new ItemStack(InitBlocksEA.velious_fence, 4), new Object[]{"V#V", "V#V", 'V', InitBlocksEA.velious_block, '#', InitItemsEA.velious});
+		GameRegistry.addShapedRecipe(new ItemStack(InitBlocksEA.velious_wall, 3), new Object[]{"VVV", "VVV", 'V', InitBlocksEA.velious_block});
+		GameRegistry.addShapedRecipe(new ItemStack(InitBlocksEA.velious_block_brick, 4), new Object[]{"VV", "VV", 'V', InitBlocksEA.velious_block});
+		
+		
+		
+		
 	}
 	
 	public static void initShapelessRecipe()
@@ -100,10 +124,71 @@ public class InitRecipesEA
 		else
 		{
 			
+		}
+		
+		if(!EbonArtsConfiguration.decraftRecipe)
+		{
+			
+			
+			
+			
+			GameRegistry.addShapelessRecipe(new ItemStack(Items.quartz, 4), new ItemStack(Blocks.quartz_block, 1, 0));
+			GameRegistry.addShapelessRecipe(new ItemStack(Items.quartz, 4), new ItemStack(Blocks.quartz_block, 1, 1));
+			GameRegistry.addShapelessRecipe(new ItemStack(Items.quartz, 2), new ItemStack(Blocks.stone_slab, 1, 7));
+			GameRegistry.addShapelessRecipe(new ItemStack(Blocks.quartz_block, 2), new ItemStack(Blocks.quartz_block, 1, 2));
+			GameRegistry.addShapelessRecipe(new ItemStack(Blocks.quartz_block, 6), Blocks.quartz_stairs);
+			
+			
+			
+			
+			
+			GameRegistry.addShapelessRecipe(new ItemStack(Items.clay_ball, 4), Blocks.clay);
+			GameRegistry.addShapelessRecipe(new ItemStack(Items.snowball, 4), Blocks.snow);
+			
+			
+			GameRegistry.addShapelessRecipe(new ItemStack(Blocks.planks, 4), Blocks.crafting_table);
+			GameRegistry.addShapelessRecipe(new ItemStack(Blocks.planks, 8), Blocks.chest);
+			GameRegistry.addShapelessRecipe(new ItemStack(Blocks.cobblestone, 8), Blocks.furnace);
+			GameRegistry.addShapelessRecipe(new ItemStack(Items.iron_ingot, 5), Items.minecart);
+			GameRegistry.addShapelessRecipe(new ItemStack(Blocks.planks, 5), Items.boat);
+			
+			GameRegistry.addShapelessRecipe(new ItemStack(Blocks.planks, 1), Blocks.wooden_button);
+			GameRegistry.addShapelessRecipe(new ItemStack(Blocks.stone, 1), Blocks.stone_button);
+			
+			
+			
+			
+			GameRegistry.addShapelessRecipe(new ItemStack(Blocks.stone, 2), Blocks.stone_pressure_plate);
+			GameRegistry.addShapelessRecipe(new ItemStack(Blocks.planks, 2), Blocks.wooden_pressure_plate);
+			GameRegistry.addShapelessRecipe(new ItemStack(Items.iron_ingot, 2), Blocks.heavy_weighted_pressure_plate);
+			GameRegistry.addShapelessRecipe(new ItemStack(Items.gold_ingot, 2), Blocks.light_weighted_pressure_plate);
+			
+			
+			
+			
+			GameRegistry.addShapelessRecipe(new ItemStack(Blocks.planks, 3), Blocks.trapdoor);
+			GameRegistry.addShapelessRecipe(new ItemStack(Items.iron_ingot, 4), Blocks.iron_trapdoor);
+			
+			
+			
+			GameRegistry.addShapelessRecipe(new ItemStack(Blocks.planks, 2, 0), Items.oak_door);
+			GameRegistry.addShapelessRecipe(new ItemStack(Blocks.planks, 2, 1), Items.spruce_door);
+			GameRegistry.addShapelessRecipe(new ItemStack(Blocks.planks, 2, 2), Items.birch_door);
+			GameRegistry.addShapelessRecipe(new ItemStack(Blocks.planks, 2, 3), Items.jungle_door);
+			GameRegistry.addShapelessRecipe(new ItemStack(Blocks.planks, 2, 4), Items.acacia_door);
+			GameRegistry.addShapelessRecipe(new ItemStack(Blocks.planks, 2, 5), Items.dark_oak_door);
+			GameRegistry.addShapelessRecipe(new ItemStack(Items.iron_ingot, 2), Items.iron_door);
+			
+			
+			
+			GameRegistry.addShapelessRecipe(new ItemStack(Items.glowstone_dust, 4), Blocks.glowstone);
 			
 			
 		}
-		
+		else
+		{
+			
+		}
 		
 	}
 	
@@ -113,7 +198,7 @@ public class InitRecipesEA
 		
 		
 		//smelting stone back into cobblestone.
-		GameRegistry.addSmelting(new ItemStack(Blocks.cobblestone), new ItemStack(Blocks.stone), 0.1f);
+		//GameRegistry.addSmelting(new ItemStack(Blocks.cobblestone), new ItemStack(Blocks.stone), 0.1f);
 		
 		
 	}

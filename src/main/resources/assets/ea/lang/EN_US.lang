@@ -7,6 +7,7 @@ item.gem/katcheen.name=Katcheen
 item.gem/necrocite.name=Necrocite
 item.gem/soularite.name=Soularite
 item.gem/innate_arcanite.name=Innate Arcanite
+item.shimmering_disc.name=Shimmering Disc
 
 
 item.gem/arcanite_shard.name=Arcanite Shard
@@ -68,6 +69,13 @@ tile.gem/katcheen/katcheen_block.name=Katcheen Block
 tile.gem/necrocite/necrocite_block.name=Necrocite Block
 tile.gem/soularite/soularite_block.name=Soularite Block
 
+tile.gem/draconium/draconium_block_brick.name=Draconium Block Brick
+tile.gem/velious/velious_block_brick.name=Velious Block Brick
+tile.gem/arcanite/arcanite_block_brick.name=Arcanite Block Brick
+tile.gem/katcheen/katcheen_block_brick.name=Katcheen Block Brick
+tile.gem/necrocite/necrocite_block_brick.name=Necrocite Block Brick
+tile.gem/soularite/soularite_block_brick.name=Soularite Block Brick
+
 tile.fence/draconium_fence.name=Draconium Fence
 tile.fence/velious_fence.name=Velious Fence
 tile.fence/arcanite_fence.name=Arcanite Fence
@@ -75,7 +83,6 @@ tile.fence/katcheen_fence.name=Katcheen Fence
 tile.fence/necrocite_fence.name=Necrocite Fence
 tile.fence/soularite_fence.name=Soularite Fence
 
-tile.fence/innate_arcanite_fence_normal.name=Innate Arcanite Fence
 
 tile.wall/draconium_wall.name=Draconium Wall
 tile.wall/velious_wall.name=Velious Wall
@@ -97,6 +104,9 @@ tile.slab/arcanite/arcanite_slab.name=Arcanite Slab
 tile.slab/katcheen/katcheen_slab.name=Katcheen Slab
 tile.slab/necrocite/necrocite_slab.name=Necrocite Slab
 tile.slab/soularite/soularite_slab.name=Soularite Slab
+
+tile.fence/innate_arcanite_fence_normal.name=Innate Arcanite Fence
+tile.purified_glowstone.name=Purified Glowstone
 
 
 //-----Tools-----

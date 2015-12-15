@@ -16,6 +16,6 @@ public class EbonArtsTabItems extends CreativeTabs {
 	@Override
 	public Item getTabIconItem() 
 	{
-		return InitItemsEA.ebon_sigil;
+		return InitItemsEA.alchemical_compendium;
 	}
 }
