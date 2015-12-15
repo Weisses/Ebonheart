@@ -11,6 +11,7 @@ public class EABlockStairs extends BlockStairs {
 
 	public EABlockStairs(String unlocalizedName) {
 		super(Blocks.oak_stairs.getStateFromMeta(0));
+		this.useNeighborBrightness = true;
 		this.setUnlocalizedName(unlocalizedName);
 		this.setCreativeTab(EbonArtsMod.tabEbonArtsBlocks);
 		this.setHarvestLevel("pickaxe", 2);
