@@ -5,6 +5,7 @@ import java.util.Random;
 import net.minecraft.block.Block;
 import net.minecraft.block.ITileEntityProvider;
 import net.minecraft.block.material.Material;
+import net.minecraft.block.state.BlockState;
 import net.minecraft.block.state.IBlockState;
 import net.minecraft.entity.EntityLivingBase;
 import net.minecraft.entity.player.EntityPlayer;
@@ -123,6 +124,8 @@ public class BlockBananaPlantSection extends Block implements ITileEntityProvide
     {
     	return ground == this.RootBlock || ground == this;
     }
+	
+
 	
 	public void setPlantAge(World world, BlockPos pos, int age)
 	{		

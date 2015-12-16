@@ -248,6 +248,7 @@ public class BlockBananaPlantRoot extends Block implements ITileEntityProvider
 	
 	public void setPlantAge(World world, BlockPos pos, int age)
 	{				
+		
 		if(this.hasRoomForAge(world, pos, age))
 		{
 			for (int i = 1; i < 4; i++)

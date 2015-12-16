@@ -98,13 +98,13 @@ public class BlockMysticForge {
                     if (type == '*')
                         continue;
                     if (type == ' ') {
-                        if (!world.isAirBlock(x + rowPos, y + layerPos, z + depth))
-                            return false;
+                        //if (!world.isAirBlock(x + rowPos, y + layerPos, z + depth))
+                        //    return false;
                         continue;
                     }
                     BlockState blockState = comparisonMap.get(Character.valueOf(type));
-                    if (blockState == null || !blockState.isMatched(world, x + rowPos, y + layerPos, z + depth))
-                        return false;
+                    //if (blockState == null || !blockState.isMatched(world, x + rowPos, y + layerPos, z + depth))
+                    //    return false;
                 }
                 rowPos++;
             }
@@ -130,7 +130,7 @@ public class BlockMysticForge {
                         continue;
                     if (type == ' ') {
                         if (flag.isIgnoring())
-                            world.setBlockToAir(x + rowPos, y + layerPos, z + depth);
+                           // world.setBlockToAir(x + rowPos, y + layerPos, z + depth);
                         continue;
                     }
                     BlockState blockState = comparisonMap.get(Character.valueOf(type));
@@ -138,17 +138,17 @@ public class BlockMysticForge {
                     if (blockState == null)
                         return false;
 
-                    switch (flag) {
-                        case AIR:
-                            if (world.isAirBlock(x + rowPos, y + layerPos, z + depth))
-                                world.setBlock(x + rowPos, y + layerPos, z + depth, blockState.block, blockState.meta, 3);
-                            break;
-                        case IGNORE:
-                            world.setBlock(x + rowPos, y + layerPos, z + depth, blockState.block, blockState.meta, 3);
-                            break;
-                        default:
-                            break;
-                    }
+                    //switch (flag) {
+                        //case AIR:
+                            //if (world.isAirBlock(x + rowPos, y + layerPos, z + depth))
+                            //    world.setBlock(x + rowPos, y + layerPos, z + depth, blockState.block, blockState.meta, 3);
+                            //break;
+                        //case IGNORE:
+                           // world.setBlock(x + rowPos, y + layerPos, z + depth, blockState.block, blockState.meta, 3);
+                            //break;
+                        //default:
+                        //    break;
+                    //}
                 }
                 rowPos++;
             }
@@ -247,9 +247,9 @@ public class BlockMysticForge {
             return type;
         }
 
-        public boolean isMatched(IBlockAccess world, int x, int y, int z) {
-            return world.getBlock(x, y, z).equals(block) && world.getBlockMetadata(x, y, z) == meta;
-        }
+        //public boolean isMatched(IBlockAccess world, int x, int y, int z) {
+            //return world.getBlock(x, y, z).equals(block) && world.getBlockMetadata(x, y, z) == meta;
+        //}
     }
 
     public static enum Flag {
