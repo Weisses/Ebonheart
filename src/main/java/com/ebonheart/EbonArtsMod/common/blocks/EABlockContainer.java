@@ -6,7 +6,6 @@ import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.tileentity.TileEntity;
 import net.minecraft.world.World;
 
-import com.ebonheart.EbonArtsMod.compendium.CompendiumUnlockHandler;
 
 public class EABlockContainer extends BlockContainer {
 

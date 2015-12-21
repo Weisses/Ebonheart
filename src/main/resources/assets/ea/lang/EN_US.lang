@@ -1,5 +1,6 @@
+< en_US.lang - English localization file for the Ebon Arts Mod >
 //-----Items-----
-item.alchemical_compendium.name=Alchemical Compendium
+item.ebon_tome.name=Ebon Tome-WIP
 item.gem/draconium_dust.name=Draconium Dust
 item.gem/velious.name=Velious
 item.gem/arcanite.name=Arcanite
@@ -128,6 +129,10 @@ item.armor/arcanite_chestplate.name=Arcanite Chestplate
 item.armor/arcanite_leggings.name=Arcanite Leggings
 item.armor/arcanite_boots.name=Arcanite Boots
 
+item.armor/katcheen_helmet.name=Katcheen Helmet
+item.armor/katcheen_chestplate.name=Katcheen Chestplate
+item.armor/katcheen_leggings.name=Katcheen Leggings
+item.armor/katcheen_boots.name=Katcheen Boots
 
 
 item.mystic_dust.name=Mystic Dust
@@ -144,7 +149,10 @@ item.tier_4_catalyst.name=Catalyst (Tier 4)
 
 
 item.banana.name=Banana
-tile.bananaplant.name=Banana Plant
+item.gem/ebonheart.name=Ebonheart Gemstone
+
+item.dragon_fruit.name=Dragon Fruit
+tile.dragonwoodplant.name=Dragonwood Sapling
 
 tile.fence/arcanite_fence_gate.name=Arcanite Fence Gate
 

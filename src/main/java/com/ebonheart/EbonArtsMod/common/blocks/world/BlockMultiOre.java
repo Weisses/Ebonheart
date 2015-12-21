@@ -36,6 +36,7 @@ public class BlockMultiOre extends Block {
 		drops.add(new ItemStack(Items.gold_ingot, RANDOM.nextInt(2) + 1));
 		drops.add(new ItemStack(Items.dye, RANDOM.nextInt(3) + 2, 4));
 		drops.add(new ItemStack(Items.redstone, RANDOM.nextInt(2) + 2));
+		drops.add(new ItemStack(InitItemsEA.ebonheart));
 		//drops.add(new ItemStack(InitItemsEA.item_arcanite, RANDOM.nextInt(2) + 1));
 		if (RANDOM.nextFloat() < 0.5F)
 			drops.add(new ItemStack(Items.diamond));

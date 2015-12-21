@@ -1,7 +1,7 @@
 {
     "parent": "builtin/generated",
     "textures": {
-        "layer0": "ea:items/arcanite_leggings"
+        "layer0": "ea:items/armor/arcanite_leggings"
     },
     "display": {
         "thirdperson": {

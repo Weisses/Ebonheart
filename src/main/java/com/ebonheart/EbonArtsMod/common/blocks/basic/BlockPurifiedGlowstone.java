@@ -12,6 +12,8 @@ public class BlockPurifiedGlowstone extends Block {
 		this.setLightLevel(1.0f);
 		this.setUnlocalizedName("purified_glowstone");
 		this.setCreativeTab(EbonArtsMod.tabEbonArtsBlocks);
+		this.setHardness(1f);
+		this.setResistance(1000f);
 	}
 
 }

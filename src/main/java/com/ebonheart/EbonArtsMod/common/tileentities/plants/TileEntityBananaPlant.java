@@ -1,8 +1,11 @@
 package com.ebonheart.EbonArtsMod.common.tileentities.plants;
 
+import java.util.List;
 import java.util.Random;
 
 import net.minecraft.block.state.IBlockState;
+import net.minecraft.entity.player.EntityPlayer;
+import net.minecraft.item.ItemStack;
 import net.minecraft.nbt.NBTTagCompound;
 import net.minecraft.network.NetworkManager;
 import net.minecraft.network.Packet;
@@ -11,6 +14,8 @@ import net.minecraft.server.gui.IUpdatePlayerListBox;
 import net.minecraft.tileentity.TileEntity;
 import net.minecraft.util.BlockPos;
 import net.minecraft.world.World;
+import net.minecraftforge.fml.relauncher.Side;
+import net.minecraftforge.fml.relauncher.SideOnly;
 
 public class TileEntityBananaPlant extends TileEntity
 {
@@ -82,9 +87,6 @@ public class TileEntityBananaPlant extends TileEntity
 		readFromNBT(pkt.getNbtCompound());
 	}
 	
-	public boolean canUseBonemeal(World worldIn, Random rand, BlockPos pos, IBlockState state)
-    {
-        return true;
-    }
+	
 	
 }

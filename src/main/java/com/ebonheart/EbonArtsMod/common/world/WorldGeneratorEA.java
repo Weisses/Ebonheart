@@ -35,12 +35,12 @@ public class WorldGeneratorEA implements IWorldGenerator
 		this.gen_velious_ore = new WorldGenMinable(InitBlocksEA.velious_ore.getDefaultState(), 6, BlockHelper.forBlock(Blocks.stone));
 		this.gen_arcanite_ore = new WorldGenMinable(InitBlocksEA.arcanite_ore.getDefaultState(), 5, BlockHelper.forBlock(Blocks.stone));
 		this.gen_katcheen_ore = new WorldGenMinable(InitBlocksEA.katcheen_ore.getDefaultState(), 4, BlockHelper.forBlock(Blocks.stone));
-		this.gen_necrocite_ore = new WorldGenMinable(InitBlocksEA.necrocite_ore.getDefaultState(), 3, BlockHelper.forBlock(Blocks.stone));
-		this.gen_soularite_ore = new WorldGenMinable(InitBlocksEA.soularite_ore.getDefaultState(), 3, BlockHelper.forBlock(Blocks.stone));
+		this.gen_necrocite_ore = new WorldGenMinable(InitBlocksEA.necrocite_ore.getDefaultState(), 3, BlockHelper.forBlock(Blocks.netherrack));
+		this.gen_soularite_ore = new WorldGenMinable(InitBlocksEA.soularite_ore.getDefaultState(), 3, BlockHelper.forBlock(Blocks.netherrack));
 		
 		//for single ore gens
-		this.gen_ebon_ore = new WorldGenSingleMinable(InitBlocksEA.ebon_ore.getDefaultState());
-		this.gen_ebon_ore_nether = new WorldGenSingleMinable(InitBlocksEA.ebon_ore_nether.getDefaultState());
+		this.gen_ebon_ore = new WorldGenSingleMinable(InitBlocksEA.ebon_ore.getDefaultState(), BlockHelper.forBlock(Blocks.netherrack));
+		this.gen_ebon_ore_nether = new WorldGenSingleMinable(InitBlocksEA.ebon_ore_nether.getDefaultState(), BlockHelper.forBlock(Blocks.netherrack));
 		
 	}
 	
@@ -66,11 +66,11 @@ public class WorldGeneratorEA implements IWorldGenerator
 	    //Nether
 		case -1: 
 			//for multi ore gen
-			this.runGenerator(this.gen_necrocite_ore, world, random, chunkX, chunkZ, 4, 2, 126);
-			this.runGenerator(this.gen_soularite_ore, world, random, chunkX, chunkZ, 4, 2, 126);
+			this.runGenerator(this.gen_necrocite_ore, world, random, chunkX, chunkZ, 32, 2, 126);
+			this.runGenerator(this.gen_soularite_ore, world, random, chunkX, chunkZ, 32, 2, 126);
 			
 			//for single ore gen
-			this.runGenerator(this.gen_ebon_ore_nether, world, random, chunkX, chunkZ, 1, 2, 126);
+			this.runGenerator(this.gen_ebon_ore_nether, world, random, chunkX, chunkZ, 4, 2, 126);
 			
 	        break;
 	        

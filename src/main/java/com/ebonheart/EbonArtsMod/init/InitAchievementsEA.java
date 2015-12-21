@@ -45,7 +45,7 @@ public class InitAchievementsEA
 		mine_necrocite_ore = new AchievementHelper(Reference.MINE_NECROCITE_ORE, -2, 1, InitBlocksEA.necrocite_ore, (Achievement)null);//.func_180788_c();
 		mine_soularite_ore = new AchievementHelper(Reference.MINE_SOULARITE_ORE, 2, 1, InitBlocksEA.soularite_ore, (Achievement)null);//.func_180788_c();
 		
-		mine_ebon_ore = new AchievementHelper(Reference.MINE_EBON_ORE, 0, 2, InitBlocksEA.ebon_ore, (Achievement)null).setSpecial();//.func_180788_c();
+		mine_ebon_ore = new AchievementHelper(Reference.MINE_EBON_ORE, 0, 2, InitItemsEA.ebonheart, (Achievement)null).setSpecial();//.func_180788_c();
 		
 	//mine_arcanite_ore = new Achievement("achievement.mine_arcanite_ore", "mine_arcanite_ore", -1, -1, InitItemsEA.arcanite, (Achievement)null).func_180788_c();
 	//smeltMysticDust = new Achievement("achievement.smeltMysticDust", "smeltMysticDust", -3, -1, EbonArtsBlocks.arcanite_ore, mineMysticDust).func_180788_c();

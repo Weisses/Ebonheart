@@ -12,7 +12,7 @@ public class ItemAlchemicalCompendium extends Item {
 	public ItemAlchemicalCompendium(String unlocalizedName)
 	{
 		super();
-		this.setUnlocalizedName("alchemical_compendium");
+		this.setUnlocalizedName(unlocalizedName);
 		this.setCreativeTab(EbonArtsMod.tabEbonArtsItems);
 	}
 

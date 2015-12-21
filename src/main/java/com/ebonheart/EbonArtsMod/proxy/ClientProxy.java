@@ -19,7 +19,9 @@ public class ClientProxy extends CommonProxy
 	{
 		super.preInit(e);
 		
-		InitBlocksEA.preInit();
+		InitBlocksEA.clientInit();
+		//InitTileEntitiesEA.init();
+		//InitTileEntitiesEA.register();
 		
 	}
 	
@@ -30,8 +32,8 @@ public class ClientProxy extends CommonProxy
 		
 		InitItemsEA.registerRenders();
 		InitBlocksEA.registerRenders();
-		InitTileEntitiesEA.registerRenders();
-		InitTileEntitiesEA.clientRegisterRenders();
+		//InitTileEntitiesEA.registerRenders();
+		//InitTileEntitiesEA.clientRegisterRenders();
 		
 	}
 	

@@ -25,7 +25,6 @@ import com.ebonheart.EbonArtsMod.init.InitAchievementsEA;
 import com.ebonheart.EbonArtsMod.init.InitBlocksEA;
 import com.ebonheart.EbonArtsMod.init.InitItemsEA;
 import com.ebonheart.EbonArtsMod.init.InitRecipesEA;
-import com.ebonheart.EbonArtsMod.init.InitTileEntitiesEAbanana;
 import com.ebonheart.EbonArtsMod.proxy.CommonProxy;
 
 @Mod(modid = Reference.MOD_ID, name = Reference.MOD_NAME, version = Reference.MOD_VERSION, guiFactory = Reference.CONFIG_GUI)

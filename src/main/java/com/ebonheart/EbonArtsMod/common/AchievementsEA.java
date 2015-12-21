@@ -28,45 +28,52 @@ public class AchievementsEA {
 	public void onPickup(PlayerEvent.ItemPickupEvent event) 
 	{
 		
-		if(event.pickedUp.getEntityItem().isItemEqual(new ItemStack(InitItemsEA.alchemical_compendium)))
+		if(event.pickedUp.getEntityItem().isItemEqual(new ItemStack(InitItemsEA.ebon_tome)))
 		{
 			event.player.triggerAchievement(InitAchievementsEA.alchemical_compendium);
 		}
 		
-		if(event.pickedUp.getEntityItem().isItemEqual(new ItemStack(Item.getItemFromBlock(InitBlocksEA.draconium_ore))))
+		if(event.pickedUp.getEntityItem().isItemEqual(new ItemStack(InitItemsEA.draconium_dust)))
 		{
 			event.player.triggerAchievement(InitAchievementsEA.mine_draconium_ore);
 		}
 		
-		if(event.pickedUp.getEntityItem().isItemEqual(new ItemStack(Item.getItemFromBlock(InitBlocksEA.velious_ore))))
+		if(event.pickedUp.getEntityItem().isItemEqual(new ItemStack(InitItemsEA.velious)))
 		{
 			event.player.triggerAchievement(InitAchievementsEA.mine_velious_ore);
 		}
 		
-		if(event.pickedUp.getEntityItem().isItemEqual(new ItemStack(Item.getItemFromBlock(InitBlocksEA.arcanite_ore))))
+		if(event.pickedUp.getEntityItem().isItemEqual(new ItemStack(InitItemsEA.arcanite)))
 		{
 			event.player.triggerAchievement(InitAchievementsEA.mine_arcanite_ore);
 		}
 		
-		if(event.pickedUp.getEntityItem().isItemEqual(new ItemStack(Item.getItemFromBlock(InitBlocksEA.katcheen_ore))))
+		if(event.pickedUp.getEntityItem().isItemEqual(new ItemStack(InitItemsEA.katcheen)))
 		{
 			event.player.triggerAchievement(InitAchievementsEA.mine_katcheen_ore);
 		}
 		
-		if(event.pickedUp.getEntityItem().isItemEqual(new ItemStack(Item.getItemFromBlock(InitBlocksEA.necrocite_ore))))
+		if(event.pickedUp.getEntityItem().isItemEqual(new ItemStack(InitItemsEA.necrocite)))
 		{
 			event.player.triggerAchievement(InitAchievementsEA.mine_necrocite_ore);
 		}
 		
-		if(event.pickedUp.getEntityItem().isItemEqual(new ItemStack(Item.getItemFromBlock(InitBlocksEA.soularite_ore))))
+		if(event.pickedUp.getEntityItem().isItemEqual(new ItemStack(InitItemsEA.soularite)))
 		{
 			event.player.triggerAchievement(InitAchievementsEA.mine_soularite_ore);
 		}
 		
-		if(event.pickedUp.getEntityItem().isItemEqual(new ItemStack(Item.getItemFromBlock(InitBlocksEA.ebon_ore))))
+		if(event.pickedUp.getEntityItem().isItemEqual(new ItemStack(InitItemsEA.ebonheart)))
 		{
 			event.player.triggerAchievement(InitAchievementsEA.mine_ebon_ore);
 		}
+		
+		
+		
+		//if(event.pickedUp.getEntityItem().isItemEqual(new ItemStack(Item.getItemFromBlock(InitBlocksEA.ebon_ore))))
+		//{
+		//	event.player.triggerAchievement(InitAchievementsEA.mine_ebon_ore);
+		//}
 		
 		
 		

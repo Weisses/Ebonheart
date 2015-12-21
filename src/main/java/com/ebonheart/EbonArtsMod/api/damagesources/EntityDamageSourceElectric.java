@@ -14,6 +14,7 @@ public class EntityDamageSourceElectric extends EntityDamageSourceIndirect {
 	{
 		super(name, transmitter, indirectSource);
 	    this.setDamageBypassesArmor();
+	    
 	}
 	
 	

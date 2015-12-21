@@ -7,11 +7,11 @@ import net.minecraft.item.ItemAxe;
 public class ItemAxeEA extends ItemAxe 
 {
 
-	public ItemAxeEA(ToolMaterial material, String unlocalizedName) 
+	public ItemAxeEA(String unlocalizedName, ToolMaterial material) 
 	{
 		super(material);
 		this.setUnlocalizedName(unlocalizedName);
-		//this.setCreativeTab(EbonArtsMod.tabEbonArtsItems);
+		this.setCreativeTab(EbonArtsMod.tabEbonArtsItems);
 	}
 
 }

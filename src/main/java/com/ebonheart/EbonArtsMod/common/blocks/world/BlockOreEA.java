@@ -32,15 +32,15 @@ public class BlockOreEA extends Block {
     public Item getItemDropped(IBlockState state, Random rand, int fortune)
     {
     	//return this == InitBlocksEA.arcanite_ore ? InitItemsEA.arcanite : Item.getItemFromBlock(this);
-    	return this == InitBlocksEA.arcanite_ore ? InitItemsEA.arcanite : (this == InitBlocksEA.velious_ore ? InitItemsEA.velious : (this == InitBlocksEA.katcheen_ore ? InitItemsEA.katcheen : (this == InitBlocksEA.necrocite_ore ? InitItemsEA.necrocite : (this == InitBlocksEA.soularite_ore ? InitItemsEA.soularite : Item.getItemFromBlock(this)))));
+    	return this == InitBlocksEA.arcanite_ore ? InitItemsEA.arcanite : (this == InitBlocksEA.draconium_ore ? InitItemsEA.draconium_dust : (this == InitBlocksEA.velious_ore ? InitItemsEA.velious : (this == InitBlocksEA.katcheen_ore ? InitItemsEA.katcheen : (this == InitBlocksEA.necrocite_ore ? InitItemsEA.necrocite : (this == InitBlocksEA.soularite_ore ? InitItemsEA.soularite : Item.getItemFromBlock(this))))));
         
         //return this == EbonArtsBlocks.arcanite_ore ? EbonArtsItems.arcanite_shard : (this == Blocks.diamond_ore ? Items.diamond : (this == Blocks.lapis_ore ? Items.dye : (this == Blocks.emerald_ore ? Items.emerald : (this == Blocks.quartz_ore ? Items.quartz : Item.getItemFromBlock(this)))));
     }
 
-    public int quantityDropped(Random random)
-    {
-        return this == InitBlocksEA.arcanite_ore ? 1 + random.nextInt(4) : 1;
-    }
+    //public int quantityDropped(Random random)
+    //{
+    //    return this == InitBlocksEA.velious_ore ? 1 + random.nextInt(4) : 1;
+    //}
 
     public int quantityDroppedWithBonus(int fortune, Random random)
     {

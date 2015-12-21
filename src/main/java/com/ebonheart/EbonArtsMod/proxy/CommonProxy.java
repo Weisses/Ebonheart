@@ -22,12 +22,13 @@ public class CommonProxy
 	
 	public void preInit(FMLPreInitializationEvent event) 
 	{
-		InitItemsEA.init();
+		//InitBlocksEA.preInit();
+		InitItemsEA.preInit();
 		InitItemsEA.register();
-		InitBlocksEA.init();
+		InitBlocksEA.preInit();
 		InitBlocksEA.register();
-		InitTileEntitiesEA.init();
-		InitTileEntitiesEA.register();
+		//InitTileEntitiesEA.init();
+		//InitTileEntitiesEA.register();
 		
 		
 		

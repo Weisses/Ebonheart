@@ -30,16 +30,16 @@ public class EAPacket implements IMessage {
 
 	// =========================================================================
 
-	public static class Handler extends MessageHandler.Server<EAPacket> {
+	//public static class Handler extends MessageHandler.Server<EAPacket> {
 
-		@Override
-		public IMessage handleServerMessage(EntityPlayer player, final EAPacket msg, MessageContext ctx) {
-			ServerUtils.addScheduledTask(new Runnable() {
-				@Override public void run() {
-					ServerUtils.mc().getConfigurationManager().sendChatMsg(new ChatComponentText(msg.message));
-				}
-			});
-			return null;
-		}
-	}
+	//	@Override
+	//	public IMessage handleServerMessage(EntityPlayer player, final EAPacket msg, MessageContext ctx) {
+	//		ServerUtils.addScheduledTask(new Runnable() {
+	//			@Override public void run() {
+	//				ServerUtils.mc().getConfigurationManager().sendChatMsg(new ChatComponentText(msg.message));
+	//			}
+	//		});
+	//		return null;
+	//	}
+	//}
 }

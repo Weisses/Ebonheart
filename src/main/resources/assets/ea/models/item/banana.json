@@ -1,7 +1,7 @@
 {
     "parent": "builtin/generated",
     "textures": {
-        "layer0": "ea:items/banana"
+        "layer0": "ea:items/food/banana"
     },
     "display": {
         "thirdperson": {

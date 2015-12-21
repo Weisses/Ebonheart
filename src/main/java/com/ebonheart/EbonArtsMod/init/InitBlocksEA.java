@@ -23,6 +23,7 @@ import com.ebonheart.EbonArtsMod.common.blocks.basic.BlockNecrocite;
 import com.ebonheart.EbonArtsMod.common.blocks.basic.BlockPurifiedGlowstone;
 import com.ebonheart.EbonArtsMod.common.blocks.basic.BlockSoularite;
 import com.ebonheart.EbonArtsMod.common.blocks.basic.BlockVelious;
+import com.ebonheart.EbonArtsMod.common.blocks.basic.BlockVeliousOre;
 import com.ebonheart.EbonArtsMod.common.blocks.basic.EABlockFence;
 import com.ebonheart.EbonArtsMod.common.blocks.basic.EABlockMeta;
 import com.ebonheart.EbonArtsMod.common.blocks.basic.EABlockPillar;
@@ -30,7 +31,6 @@ import com.ebonheart.EbonArtsMod.common.blocks.basic.EABlockSlab;
 import com.ebonheart.EbonArtsMod.common.blocks.basic.EABlockStairs;
 import com.ebonheart.EbonArtsMod.common.blocks.basic.EABlockWall;
 import com.ebonheart.EbonArtsMod.common.blocks.basic.ItemBlockSlab;
-import com.ebonheart.EbonArtsMod.common.blocks.devices.TestBlockFurnaceEA;
 import com.ebonheart.EbonArtsMod.common.blocks.world.BlockMultiOre;
 import com.ebonheart.EbonArtsMod.common.blocks.world.BlockOreEA;
 
@@ -75,8 +75,7 @@ public class InitBlocksEA
 	
 	
 	
-	//public static Block double_slab;
-	//public static Block slab;
+	
 	//public static Block pillar;
 	
 
@@ -147,7 +146,7 @@ public class InitBlocksEA
 	//public static Block mystic_furnace;
 	//public static Block lit_mystic_furnace;
 	
-	public static void preInit() 
+	public static void clientInit() 
 	{
 		ModelBakery.addVariantName(Item.getItemFromBlock(InitBlocksEA.mystic_block), "ea:gem/mystic/mystic_block_white", "ea:gem/mystic/mystic_block_orange", "ea:gem/mystic/mystic_block_magenta", "ea:gem/mystic/mystic_block_lightblue", "ea:gem/mystic/mystic_block_yellow", "ea:gem/mystic/mystic_block_lime", "ea:gem/mystic/mystic_block_pink", "ea:gem/mystic/mystic_block_gray", "ea:gem/mystic/mystic_block_lightgray", "ea:gem/mystic/mystic_block_cyan", "ea:gem/mystic/mystic_block_purple", "ea:gem/mystic/mystic_block_blue", "ea:gem/mystic/mystic_block_brown", "ea:gem/mystic/mystic_block_green", "ea:gem/mystic/mystic_block_red", "ea:gem/mystic/mystic_block_black");
 		
@@ -190,7 +189,7 @@ public class InitBlocksEA
 		
 	}
 
-	public static void init()
+	public static void preInit()
 	{
 		
 		draconium_ore = new BlockOreEA("ore/draconium_ore", 2, 0.4f, 10f);
@@ -260,7 +259,7 @@ public class InitBlocksEA
 		mystic_block_normal = new BlockMystic(Material.rock);
 		innate_mystic_block_normal = new BlockInnateMysticNormal(Material.rock);
 		
-		purified_glowstone = new BlockPurifiedGlowstone(Material.rock);
+		purified_glowstone = new BlockPurifiedGlowstone(Material.cloth);
 		
 		
 		//mystic_furnace = new TestBlockFurnaceEA(false).setUnlocalizedName("machine/mystic_furnace").setCreativeTab(EbonArtsMod.tabEbonArtsBlocks);

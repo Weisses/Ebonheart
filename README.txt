@@ -1,3 +1,11 @@
+
+
+
+ome textures created using brushes from www.obsidiandawn.com.  Icons used include Painterly Spell Packs 1 through 4, courtesy of J. W. Bjerk (eleazzaar) at opengameart.com.
+
+
+
+
 -------------------------------------------
 Source installation information for modders
 -------------------------------------------

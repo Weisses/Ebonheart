@@ -12,9 +12,11 @@ import com.ebonheart.EbonArtsMod.EbonArtsMod;
 import com.ebonheart.EbonArtsMod.Reference;
 import com.ebonheart.EbonArtsMod.common.items.ItemAlchemicalCompendium;
 import com.ebonheart.EbonArtsMod.common.items.ItemShimmeringDisc;
-import com.ebonheart.EbonArtsMod.common.items.armor.ItemArmorArcanite;
+import com.ebonheart.EbonArtsMod.common.items.armor.ItemArmorEA;
 import com.ebonheart.EbonArtsMod.common.items.resources.ItemArcanite;
 import com.ebonheart.EbonArtsMod.common.items.resources.ItemDraconiumDust;
+import com.ebonheart.EbonArtsMod.common.items.resources.ItemDragonFruit;
+import com.ebonheart.EbonArtsMod.common.items.resources.ItemEbonheart;
 import com.ebonheart.EbonArtsMod.common.items.resources.ItemKatcheen;
 import com.ebonheart.EbonArtsMod.common.items.resources.ItemNecrocite;
 import com.ebonheart.EbonArtsMod.common.items.resources.ItemSoularite;
@@ -27,7 +29,7 @@ import com.ebonheart.EbonArtsMod.common.items.tools.ItemSwordEA;
 
 public class InitItemsEA 
 {
-	public static Item alchemical_compendium;
+	public static Item ebon_tome;
 	
 	public static Item draconium_dust;
 	public static Item velious;
@@ -35,6 +37,8 @@ public class InitItemsEA
 	public static Item katcheen;
 	public static Item necrocite;
 	public static Item soularite;
+	public static Item ebonheart;
+	
 	//public static Item innate_arcanite;
 	
 	
@@ -66,20 +70,25 @@ public class InitItemsEA
 	public static Item arcanite_hoe;
 	public static Item arcanite_sword;
 	
+	public static Item arcanite_helmet;
+	public static Item arcanite_chestplate;
+	public static Item arcanite_leggings;
+	public static Item arcanite_boots;
+	
 	public static Item katcheen_pickaxe;
 	public static Item katcheen_axe;
 	public static Item katcheen_shovel;
 	public static Item katcheen_hoe;
 	public static Item katcheen_sword;
 	
-	public static Item arcanite_helmet;
-	public static Item arcanite_chestplate;
-	public static Item arcanite_leggings;
-	public static Item arcanite_boots;
-	
+	public static Item katcheen_helmet;
+	public static Item katcheen_chestplate;
+	public static Item katcheen_leggings;
+	public static Item katcheen_boots;
 	
 	
 	public static ItemFood banana;
+	public static ItemFood dragon_fruit;
 	
 	
 	//public static Item test_liquid_bucket;
@@ -87,15 +96,17 @@ public class InitItemsEA
 	
 	//public static Item mans_steak;
 	
-	public static final Item.ToolMaterial arcaniteToolMaterial = EnumHelper.addToolMaterial("arcaniteToolMaterial", 2, 500, 7.0F, 2.5F, 15);
-	public static final Item.ToolMaterial katcheenToolMaterial = EnumHelper.addToolMaterial("katcheenToolMaterial", 3, 2000, 9.0F, 3.5F, 20);
-	public static final Item.ToolMaterial innatearcaniteToolMaterial = EnumHelper.addToolMaterial("innatearcaniteToolMaterial", 3, 1700, 8.5F, 3.5F, 10);
-	public static final ItemArmor.ArmorMaterial arcaniteArmorMaterial = EnumHelper.addArmorMaterial("arcaniteArmorMaterial", "ea:arcanite", 1500, new int[]{2, 7, 5, 3}, 10);
+	public static final Item.ToolMaterial arcaniteToolMaterial = EnumHelper.addToolMaterial("arcaniteToolMaterial", 2, 1000, 7.0F, 2.5F, 15);
+	public static final Item.ToolMaterial katcheenToolMaterial = EnumHelper.addToolMaterial("katcheenToolMaterial", 3, 2000, 9.5F, 4.0F, 20);
+	//public static final Item.ToolMaterial innatearcaniteToolMaterial = EnumHelper.addToolMaterial("innatearcaniteToolMaterial", 3, 1700, 8.5F, 3.5F, 10);
+	public static final ItemArmor.ArmorMaterial arcaniteArmorMaterial = EnumHelper.addArmorMaterial("arcaniteArmorMaterial", "ea:arcanite", 33, new int[]{2, 7, 5, 2}, 10);
+	public static final ItemArmor.ArmorMaterial katcheenArmorMaterial = EnumHelper.addArmorMaterial("katcheenArmorMaterial", "ea:katcheen", 66, new int[]{3, 8, 6, 3}, 30);
+	
 	//public static final ItemArmor.ArmorMaterial arcaniteArmorMaterial = EnumHelper.addArmorMaterial(name, textureName, durability, reductionAmounts, enchantability);
 
-	public static void init()
+	public static void preInit()
 	{
-		alchemical_compendium = new ItemAlchemicalCompendium("alchemical_compendium");
+		ebon_tome = new ItemAlchemicalCompendium("ebon_tome");
 		
 		draconium_dust = new ItemDraconiumDust();
 		velious = new ItemVelious();
@@ -103,6 +114,7 @@ public class InitItemsEA
 		katcheen = new ItemKatcheen();
 		necrocite = new ItemNecrocite();
 		soularite = new ItemSoularite();
+		ebonheart = new ItemEbonheart();
 		//innate_arcanite = new ItemInnateArcanite("gem/innate_arcanite");
 		
 		
@@ -114,22 +126,28 @@ public class InitItemsEA
 		
 		//arcanite_shard = new ItemArcaniteShard("arcanite_shard");
 		
-		arcanite_pickaxe = new ItemPickaxeEA(arcaniteToolMaterial, "tool/arcanite_pickaxe");
-		arcanite_axe = new ItemAxeEA(arcaniteToolMaterial, "tool/arcanite_axe");
-		arcanite_shovel = new ItemShovelEA(arcaniteToolMaterial, "tool/arcanite_shovel");
-		arcanite_hoe = new ItemHoeEA(arcaniteToolMaterial, "tool/arcanite_hoe");
-		arcanite_sword = new ItemSwordEA(arcaniteToolMaterial, "tool/arcanite_sword");
+		arcanite_pickaxe = new ItemPickaxeEA("tool/arcanite_pickaxe", arcaniteToolMaterial);
+		arcanite_axe = new ItemAxeEA("tool/arcanite_axe", arcaniteToolMaterial);
+		arcanite_shovel = new ItemShovelEA("tool/arcanite_shovel", arcaniteToolMaterial);
+		arcanite_hoe = new ItemHoeEA("tool/arcanite_hoe", arcaniteToolMaterial);
+		arcanite_sword = new ItemSwordEA("tool/arcanite_sword", arcaniteToolMaterial);
 		
-		katcheen_pickaxe = new ItemPickaxeEA(katcheenToolMaterial, "tool/katcheen_pickaxe");
-		katcheen_axe = new ItemAxeEA(katcheenToolMaterial, "tool/katcheen_axe");
-		katcheen_shovel = new ItemShovelEA(katcheenToolMaterial, "tool/katcheen_shovel");
-		katcheen_hoe = new ItemHoeEA(katcheenToolMaterial, "tool/katcheen_hoe");
-		katcheen_sword = new ItemSwordEA(katcheenToolMaterial, "tool/katcheen_sword");
+		arcanite_helmet = new ItemArmorEA("armor/arcanite_helmet", arcaniteArmorMaterial, 0, 0);
+		arcanite_chestplate = new ItemArmorEA("armor/arcanite_chestplate", arcaniteArmorMaterial, 0, 1);
+		arcanite_leggings = new ItemArmorEA("armor/arcanite_leggings", arcaniteArmorMaterial, 0, 2);
+		arcanite_boots = new ItemArmorEA("armor/arcanite_boots", arcaniteArmorMaterial, 0, 3);
 		
-		arcanite_helmet = new ItemArmorArcanite(arcaniteArmorMaterial, 0, 0).setUnlocalizedName("armor/arcanite_helmet");
-		arcanite_chestplate = new ItemArmorArcanite(arcaniteArmorMaterial, 0, 1).setUnlocalizedName("armor/arcanite_chestplate");
-		arcanite_leggings = new ItemArmorArcanite(arcaniteArmorMaterial, 0, 2).setUnlocalizedName("armor/arcanite_leggings");
-		arcanite_boots = new ItemArmorArcanite(arcaniteArmorMaterial, 0, 3).setUnlocalizedName("armor/arcanite_boots");
+		
+		katcheen_pickaxe = new ItemPickaxeEA("tool/katcheen_pickaxe", katcheenToolMaterial);
+		katcheen_axe = new ItemAxeEA("tool/katcheen_axe", katcheenToolMaterial);
+		katcheen_shovel = new ItemShovelEA("tool/katcheen_shovel", katcheenToolMaterial);
+		katcheen_hoe = new ItemHoeEA("tool/katcheen_hoe", katcheenToolMaterial);
+		katcheen_sword = new ItemSwordEA("tool/katcheen_sword", katcheenToolMaterial);
+		
+		katcheen_helmet = new ItemArmorEA("armor/katcheen_helmet", katcheenArmorMaterial, 0, 0);
+		katcheen_chestplate = new ItemArmorEA("armor/katcheen_chestplate", katcheenArmorMaterial, 0, 1);
+		katcheen_leggings = new ItemArmorEA("armor/katcheen_leggings", katcheenArmorMaterial, 0, 2);
+		katcheen_boots = new ItemArmorEA("armor/katcheen_boots", katcheenArmorMaterial, 0, 3);
 		
 		
 		//test_liquid_bucket = new ItemBucket(InitBlocksEA.test_liquid).setUnlocalizedName("test_liquid_bucket").setCreativeTab(EbonArtsMod.tabEbonArtsItems).setContainerItem(test_liquid_bucket);
@@ -144,13 +162,15 @@ public class InitItemsEA
 		tier_4_catalyst = new Item().setUnlocalizedName("tier_4_catalyst");
 	
 	
-		banana = (ItemFood) new ItemFood(3, 0.3F, false).setUnlocalizedName("banana").setCreativeTab(EbonArtsMod.tabEbonArtsItems);;
-	
+		banana = (ItemFood) new ItemFood(3, 0.3F, false).setUnlocalizedName("banana");
+		
+		dragon_fruit = (ItemFood) new ItemDragonFruit(3, 0.3F, true);
+		
 	}
 	
 	public static void register()
 	{
-		GameRegistry.registerItem(alchemical_compendium, alchemical_compendium.getUnlocalizedName().substring(5));
+		GameRegistry.registerItem(ebon_tome, ebon_tome.getUnlocalizedName().substring(5));
 		
 		GameRegistry.registerItem(draconium_dust, draconium_dust.getUnlocalizedName().substring(5));
 		GameRegistry.registerItem(velious, velious.getUnlocalizedName().substring(5));
@@ -158,6 +178,8 @@ public class InitItemsEA
 		GameRegistry.registerItem(katcheen, katcheen.getUnlocalizedName().substring(5));
 		GameRegistry.registerItem(necrocite, necrocite.getUnlocalizedName().substring(5));
 		GameRegistry.registerItem(soularite, soularite.getUnlocalizedName().substring(5));
+		GameRegistry.registerItem(ebonheart, ebonheart.getUnlocalizedName().substring(5));
+		
 		//GameRegistry.registerItem(innate_arcanite, innate_arcanite.getUnlocalizedName().substring(5));
 		
 		//GameRegistry.registerItem(arcanite_shard, arcanite_shard.getUnlocalizedName().substring(5));
@@ -172,16 +194,21 @@ public class InitItemsEA
 		GameRegistry.registerItem(arcanite_hoe, arcanite_hoe.getUnlocalizedName().substring(5));
 		GameRegistry.registerItem(arcanite_sword, arcanite_sword.getUnlocalizedName().substring(5));
 		
+		GameRegistry.registerItem(arcanite_helmet, arcanite_helmet.getUnlocalizedName().substring(5));
+		GameRegistry.registerItem(arcanite_chestplate, arcanite_chestplate.getUnlocalizedName().substring(5));
+		GameRegistry.registerItem(arcanite_leggings, arcanite_leggings.getUnlocalizedName().substring(5));
+		GameRegistry.registerItem(arcanite_boots, arcanite_boots.getUnlocalizedName().substring(5));
+		
 		GameRegistry.registerItem(katcheen_pickaxe, katcheen_pickaxe.getUnlocalizedName().substring(5));
 		GameRegistry.registerItem(katcheen_axe, katcheen_axe.getUnlocalizedName().substring(5));
 		GameRegistry.registerItem(katcheen_shovel, katcheen_shovel.getUnlocalizedName().substring(5));
 		GameRegistry.registerItem(katcheen_hoe, katcheen_hoe.getUnlocalizedName().substring(5));
 		GameRegistry.registerItem(katcheen_sword, katcheen_sword.getUnlocalizedName().substring(5));
 		
-		GameRegistry.registerItem(arcanite_helmet, arcanite_helmet.getUnlocalizedName().substring(5));
-		GameRegistry.registerItem(arcanite_chestplate, arcanite_chestplate.getUnlocalizedName().substring(5));
-		GameRegistry.registerItem(arcanite_leggings, arcanite_leggings.getUnlocalizedName().substring(5));
-		GameRegistry.registerItem(arcanite_boots, arcanite_boots.getUnlocalizedName().substring(5));
+		GameRegistry.registerItem(katcheen_helmet, katcheen_helmet.getUnlocalizedName().substring(5));
+		GameRegistry.registerItem(katcheen_chestplate, katcheen_chestplate.getUnlocalizedName().substring(5));
+		GameRegistry.registerItem(katcheen_leggings, katcheen_leggings.getUnlocalizedName().substring(5));
+		GameRegistry.registerItem(katcheen_boots, katcheen_boots.getUnlocalizedName().substring(5));
 		
 		
 		//GameRegistry.registerItem(test_liquid_bucket, test_liquid_bucket.getUnlocalizedName().substring(5));
@@ -197,11 +224,15 @@ public class InitItemsEA
 		GameRegistry.registerItem(tier_4_catalyst, tier_4_catalyst.getUnlocalizedName().substring(5));
 		
 		GameRegistry.registerItem(banana, banana.getUnlocalizedName().substring(5));
+	
+		GameRegistry.registerItem(dragon_fruit, dragon_fruit.getUnlocalizedName().substring(5));
+		
+	
 	}
 	
 	public static void registerRenders()
 	{
-		registerRender(alchemical_compendium);
+		registerRender(ebon_tome);
 		
 		registerRender(draconium_dust);
 		registerRender(velious);
@@ -209,6 +240,8 @@ public class InitItemsEA
 		registerRender(katcheen);
 		registerRender(necrocite);
 		registerRender(soularite);
+		registerRender(ebonheart);
+		
 		//registerRender(innate_arcanite);
 		
 		
@@ -224,9 +257,10 @@ public class InitItemsEA
 		registerRender(arcanite_hoe);
 		registerRender(arcanite_sword);
 		
-		
-		
-		
+		registerRender(arcanite_helmet);
+		registerRender(arcanite_chestplate);
+		registerRender(arcanite_leggings);
+		registerRender(arcanite_boots);
 		
 		registerRender(katcheen_pickaxe);
 		registerRender(katcheen_axe);
@@ -234,10 +268,11 @@ public class InitItemsEA
 		registerRender(katcheen_hoe);
 		registerRender(katcheen_sword);
 		
-		registerRender(arcanite_helmet);
-		registerRender(arcanite_chestplate);
-		registerRender(arcanite_leggings);
-		registerRender(arcanite_boots);
+		registerRender(katcheen_helmet);
+		registerRender(katcheen_chestplate);
+		registerRender(katcheen_leggings);
+		registerRender(katcheen_boots);
+		
 		
 		//registerRender(test_liquid_bucket);
 		
@@ -250,6 +285,9 @@ public class InitItemsEA
 		registerRender(tier_4_catalyst);
 		
 		registerRender(banana);
+		registerRender(dragon_fruit);
+		
+		
 	}
 	
 	public static void registerRender(Item item)

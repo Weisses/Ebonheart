@@ -14,7 +14,7 @@ import com.ebonheart.EbonArtsMod.init.InitRecipesEA;
 public class ConfigGui extends GuiConfig {
 
 	public ConfigGui(GuiScreen screen) {
-		super(screen, new ConfigElement(EbonArtsMod.config.getCategory(Configuration.CATEGORY_GENERAL)).getChildElements(), Reference.MOD_NAME, false, false, GuiConfig.getAbridgedConfigPath(EbonArtsMod.config.toString()));
+		super(screen, new ConfigElement(EbonArtsMod.config.getCategory(Configuration.CATEGORY_GENERAL)).getChildElements(), Reference.MOD_NAME, true, true, GuiConfig.getAbridgedConfigPath(EbonArtsMod.config.toString()));
 		
 		
 		
