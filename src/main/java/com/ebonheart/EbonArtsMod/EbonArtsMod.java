@@ -18,8 +18,10 @@ import org.apache.logging.log4j.Logger;
 
 
 
+
 import com.ebonheart.EbonArtsMod.api.creative.EbonArtsTabBlocks;
 import com.ebonheart.EbonArtsMod.api.creative.EbonArtsTabItems;
+import com.ebonheart.EbonArtsMod.api.logging.LogHelper;
 import com.ebonheart.EbonArtsMod.configs.EbonArtsConfiguration;
 import com.ebonheart.EbonArtsMod.init.InitAchievementsEA;
 import com.ebonheart.EbonArtsMod.init.InitBlocksEA;
@@ -44,18 +46,22 @@ public class EbonArtsMod
 	@Mod.Instance(Reference.MOD_ID)
 	public static EbonArtsMod instance;
 	
-	public static Logger log = FMLLog.getLogger();
+	//public static Logger log = FMLLog.getLogger();
 	
 	@EventHandler
 	public void preInit(FMLPreInitializationEvent event)
 	{
 		
 		config = new Configuration(event.getSuggestedConfigurationFile());
+		FMLCommonHandler.instance().bus().register(instance);
 		EbonArtsConfiguration.syncConfig();
 		
 		this.proxy.preInit(event);
-		log.info("Log PreInit");
 		
+		
+		
+		
+		LogHelper.info("Pre Initialization Complete.");
 	}
 	
 	//if config changed then it syncs it
@@ -75,16 +81,21 @@ public class EbonArtsMod
 	public void init(FMLInitializationEvent event)
 	{
 		this.proxy.init(event);
-		log.info("Log Init");
-		FMLCommonHandler.instance().bus().register(instance);
 		
+		
+		
+		
+		
+		LogHelper.info("Initialization Complete.");
 	}
 	
 	@EventHandler
 	public void postInit(FMLPostInitializationEvent event)
 	{
 		this.proxy.postInit(event);
-		log.info("Log PostInit");
 		
+		
+		
+		LogHelper.info("Post Initialization Complete.");
 	}
 }
