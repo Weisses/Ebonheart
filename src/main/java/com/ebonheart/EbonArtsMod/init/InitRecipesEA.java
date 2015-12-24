@@ -16,6 +16,7 @@ public class InitRecipesEA {
 	{
 		
 		GameRegistry.addShapedRecipe(new ItemStack(InitBlocksEA.mystic_block_normal), new Object[]{"CCC", "CDC", "CCC", 'D', InitItemsEA.draconium_dust, 'C', Blocks.cobblestone});
+		GameRegistry.addShapedRecipe(new ItemStack(InitBlocksEA.necrocite_block, InitBlocksEA.arcanite_block), new Object[]{"NN", "NN", 'N', InitItemsEA.necrocite});
 		
 		//GameRegistry.addShapedRecipe(new ItemStack(InitTileEntitiesEA.Banana_Plant), new Object[]{"DN", "ND", 'D', InitItemsEA.draconium_dust, 'N', Items.quartz});
 		

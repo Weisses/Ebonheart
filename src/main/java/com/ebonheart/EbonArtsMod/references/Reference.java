@@ -1,4 +1,4 @@
-package com.ebonheart.EbonArtsMod;
+package com.ebonheart.EbonArtsMod.references;
 
 public class Reference 
 {
@@ -14,6 +14,7 @@ public class Reference
 	public static final String ALCHEMICAL_COMPENDIUM = "alchemical_compendium";
 	public static final String MINE_DRACONIUM_ORE = "mine_draconium_ore";
 	public static final String MINE_VELIOUS_ORE = "mine_velious_ore";
+	public static final String SHIMMERING_DISC = "shimmering_disc";
 	public static final String MINE_ARCANITE_ORE = "mine_arcanite_ore";
 	public static final String MINE_KATCHEEN_ORE = "mine_katcheen_ore";
 	public static final String MINE_NECROCITE_ORE = "mine_necrocite_ore";

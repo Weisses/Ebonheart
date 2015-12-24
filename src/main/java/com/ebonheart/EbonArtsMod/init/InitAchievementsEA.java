@@ -11,9 +11,9 @@ import net.minecraftforge.fml.common.eventhandler.SubscribeEvent;
 import net.minecraftforge.fml.common.gameevent.PlayerEvent;
 
 import com.ebonheart.EbonArtsMod.EbonArtsMod;
-import com.ebonheart.EbonArtsMod.Reference;
 import com.ebonheart.EbonArtsMod.api.AchievementHelper;
 import com.ebonheart.EbonArtsMod.common.AchievementsEA;
+import com.ebonheart.EbonArtsMod.references.Reference;
 
 public class InitAchievementsEA 
 {
@@ -30,6 +30,8 @@ public class InitAchievementsEA
 	public static Achievement mine_necrocite_ore;
 	public static Achievement mine_soularite_ore;
 	public static Achievement mine_ebon_ore;
+	
+	public static Achievement shimmering_disc;
 	//public static Achievement smeltMysticDust;
 	//public static Achievement craftEbonSigil;
 	
@@ -38,14 +40,16 @@ public class InitAchievementsEA
 		
 		//alchemical_compendium = new AchievementHelper(Reference.ALCHEMICAL_COMPENDIUM, 0, 0, InitItemsEA.alchemical_compendium, (Achievement)null).setSpecial();//.setSpecial() makes spikes, they are the hard to get achievements
 		
-		mine_draconium_ore = new AchievementHelper(Reference.MINE_DRACONIUM_ORE, -2, -1, InitBlocksEA.draconium_ore, (Achievement)null);//.func_180788_c();
-		mine_velious_ore = new AchievementHelper(Reference.MINE_VELIOUS_ORE, -3, 0, InitBlocksEA.velious_ore, (Achievement)null);//.func_180788_c();
-		mine_arcanite_ore = new AchievementHelper(Reference.MINE_ARCANITE_ORE, 2, -1, InitBlocksEA.arcanite_ore, (Achievement)null);//.func_180788_c();
-		mine_katcheen_ore = new AchievementHelper(Reference.MINE_KATCHEEN_ORE, 3, 0, InitBlocksEA.katcheen_ore, (Achievement)null);//.func_180788_c();
-		mine_necrocite_ore = new AchievementHelper(Reference.MINE_NECROCITE_ORE, -2, 1, InitBlocksEA.necrocite_ore, (Achievement)null);//.func_180788_c();
-		mine_soularite_ore = new AchievementHelper(Reference.MINE_SOULARITE_ORE, 2, 1, InitBlocksEA.soularite_ore, (Achievement)null);//.func_180788_c();
+		mine_draconium_ore = new AchievementHelper(Reference.MINE_DRACONIUM_ORE, -1, -1, InitBlocksEA.draconium_ore, (Achievement)null);//.func_180788_c();
+		mine_velious_ore = new AchievementHelper(Reference.MINE_VELIOUS_ORE, -2, 0, InitBlocksEA.velious_ore, (Achievement)null);//.func_180788_c();
+		shimmering_disc = new AchievementHelper(Reference.SHIMMERING_DISC, -4, 0, InitItemsEA.shimmering_disc, (Achievement)mine_velious_ore);//.func_180788_c();
 		
-		mine_ebon_ore = new AchievementHelper(Reference.MINE_EBON_ORE, 0, 2, InitItemsEA.ebonheart, (Achievement)null).setSpecial();//.func_180788_c();
+		mine_arcanite_ore = new AchievementHelper(Reference.MINE_ARCANITE_ORE, 3, -1, InitBlocksEA.arcanite_ore, (Achievement)null);//.func_180788_c();
+		mine_katcheen_ore = new AchievementHelper(Reference.MINE_KATCHEEN_ORE, 4, 0, InitBlocksEA.katcheen_ore, (Achievement)null);//.func_180788_c();
+		mine_necrocite_ore = new AchievementHelper(Reference.MINE_NECROCITE_ORE, -1, 1, InitBlocksEA.necrocite_ore, (Achievement)null);//.func_180788_c();
+		mine_soularite_ore = new AchievementHelper(Reference.MINE_SOULARITE_ORE, 3, 1, InitBlocksEA.soularite_ore, (Achievement)null);//.func_180788_c();
+		
+		mine_ebon_ore = new AchievementHelper(Reference.MINE_EBON_ORE, 1, 2, InitItemsEA.ebonheart, (Achievement)null).setSpecial();//.func_180788_c();
 		
 	//mine_arcanite_ore = new Achievement("achievement.mine_arcanite_ore", "mine_arcanite_ore", -1, -1, InitItemsEA.arcanite, (Achievement)null).func_180788_c();
 	//smeltMysticDust = new Achievement("achievement.smeltMysticDust", "smeltMysticDust", -3, -1, EbonArtsBlocks.arcanite_ore, mineMysticDust).func_180788_c();

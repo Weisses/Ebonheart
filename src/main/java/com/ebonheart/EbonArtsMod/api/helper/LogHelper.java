@@ -1,10 +1,10 @@
-package com.ebonheart.EbonArtsMod.api.logging;
+package com.ebonheart.EbonArtsMod.api.helper;
 
 import net.minecraftforge.fml.common.FMLLog;
 
 import org.apache.logging.log4j.Level;
 
-import com.ebonheart.EbonArtsMod.Reference;
+import com.ebonheart.EbonArtsMod.references.Reference;
 
 public class LogHelper {
 

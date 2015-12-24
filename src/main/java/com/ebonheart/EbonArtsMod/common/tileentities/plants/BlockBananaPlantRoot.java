@@ -3,7 +3,7 @@ package com.ebonheart.EbonArtsMod.common.tileentities.plants;
 import java.util.Random;
 
 import com.ebonheart.EbonArtsMod.EbonArtsMod;
-import com.ebonheart.EbonArtsMod.Reference;
+import com.ebonheart.EbonArtsMod.references.Reference;
 
 import net.minecraft.block.Block;
 import net.minecraft.block.ITileEntityProvider;

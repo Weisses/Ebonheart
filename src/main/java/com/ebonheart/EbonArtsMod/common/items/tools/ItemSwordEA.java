@@ -2,9 +2,12 @@ package com.ebonheart.EbonArtsMod.common.items.tools;
 
 import net.minecraft.entity.EntityLiving;
 import net.minecraft.entity.EntityLivingBase;
+import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.item.ItemStack;
 import net.minecraft.item.ItemSword;
 import net.minecraft.item.Item.ToolMaterial;
+import net.minecraft.potion.Potion;
+import net.minecraft.potion.PotionEffect;
 import net.minecraft.util.DamageSource;
 
 import com.ebonheart.EbonArtsMod.EbonArtsMod;
@@ -31,4 +34,17 @@ public class ItemSwordEA extends ItemSword
     	//System.out.println("electric damage");
         //return true;
     //}
+	
+	public boolean hitEntity(ItemStack stack, EntityLivingBase target, EntityLivingBase attacker)
+    {
+		
+		//target.addPotionEffect(new PotionEffect(Potion.absorption, 1, 10));
+		//this.effectTarget(target, Potion.invisibility, 2);
+		return true;
+		
+    }
+	
+	
+	
+	
 }

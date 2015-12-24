@@ -14,23 +14,24 @@ import net.minecraftforge.fml.common.eventhandler.SubscribeEvent;
 import net.minecraftforge.fml.common.gameevent.PlayerEvent;
 
 public class AchievementHelper extends Achievement {
-
+	
 	public static List<Achievement> achievements = new ArrayList();
-
-	public AchievementHelper(String name, int x, int y, ItemStack icon, Achievement parent) {
+	
+	public AchievementHelper(String name, int x, int y, ItemStack icon, Achievement parent) 
+	{
 		super("achievement.ea:" + name, "ea:" + name, x, y, icon, parent);
 		achievements.add(this);
 		registerStat();
-
-		//if(icon.getItem() instanceof IRelic)
-		//	((IRelic) icon.getItem()).setBindAchievement(this);
+		
 	}
 
-	public AchievementHelper(String name, int x, int y, Item icon, Achievement parent) {
+	public AchievementHelper(String name, int x, int y, Item icon, Achievement parent) 
+	{
 		this(name, x, y, new ItemStack(icon), parent);
 	}
 
-	public AchievementHelper(String name, int x, int y, Block icon, Achievement parent) {
+	public AchievementHelper(String name, int x, int y, Block icon, Achievement parent) 
+	{
 		this(name, x, y, new ItemStack(icon), parent);
 	}
 	

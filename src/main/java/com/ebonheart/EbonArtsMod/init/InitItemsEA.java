@@ -9,7 +9,6 @@ import net.minecraftforge.common.util.EnumHelper;
 import net.minecraftforge.fml.common.registry.GameRegistry;
 
 import com.ebonheart.EbonArtsMod.EbonArtsMod;
-import com.ebonheart.EbonArtsMod.Reference;
 import com.ebonheart.EbonArtsMod.common.items.ItemAlchemicalCompendium;
 import com.ebonheart.EbonArtsMod.common.items.ItemShimmeringDisc;
 import com.ebonheart.EbonArtsMod.common.items.armor.ItemArmorEA;
@@ -26,6 +25,7 @@ import com.ebonheart.EbonArtsMod.common.items.tools.ItemHoeEA;
 import com.ebonheart.EbonArtsMod.common.items.tools.ItemPickaxeEA;
 import com.ebonheart.EbonArtsMod.common.items.tools.ItemShovelEA;
 import com.ebonheart.EbonArtsMod.common.items.tools.ItemSwordEA;
+import com.ebonheart.EbonArtsMod.references.Reference;
 
 public class InitItemsEA 
 {

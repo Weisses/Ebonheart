@@ -43,6 +43,13 @@ public class AchievementsEA {
 			event.player.triggerAchievement(InitAchievementsEA.mine_velious_ore);
 		}
 		
+		
+		
+		//if(event.pickedUp.getEntityItem().isItemEqual(new ItemStack(InitItemsEA.shimmering_disc)))
+		//{
+		//	event.player.triggerAchievement(InitAchievementsEA.shimmering_disc);
+		//}
+		
 		if(event.pickedUp.getEntityItem().isItemEqual(new ItemStack(InitItemsEA.arcanite)))
 		{
 			event.player.triggerAchievement(InitAchievementsEA.mine_arcanite_ore);
@@ -82,7 +89,14 @@ public class AchievementsEA {
 
 	}
 	
-	
+	@SubscribeEvent
+	public void onCraft(PlayerEvent.ItemCraftedEvent event) {
+	if(event.crafting.getItem() == InitItemsEA.shimmering_disc) {
+		
+		event.player.triggerAchievement(InitAchievementsEA.shimmering_disc);
+		
+		}
+	}
 	//Pickup an item achievement
 	//@SubscribeEvent
 	//public void onPickup(PlayerEvent.ItemPickupEvent event) {

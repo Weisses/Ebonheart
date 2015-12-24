@@ -19,15 +19,18 @@ import org.apache.logging.log4j.Logger;
 
 
 
+
+
 import com.ebonheart.EbonArtsMod.api.creative.EbonArtsTabBlocks;
 import com.ebonheart.EbonArtsMod.api.creative.EbonArtsTabItems;
-import com.ebonheart.EbonArtsMod.api.logging.LogHelper;
+import com.ebonheart.EbonArtsMod.api.helper.LogHelper;
 import com.ebonheart.EbonArtsMod.configs.EbonArtsConfiguration;
 import com.ebonheart.EbonArtsMod.init.InitAchievementsEA;
 import com.ebonheart.EbonArtsMod.init.InitBlocksEA;
 import com.ebonheart.EbonArtsMod.init.InitItemsEA;
 import com.ebonheart.EbonArtsMod.init.InitRecipesEA;
 import com.ebonheart.EbonArtsMod.proxy.CommonProxy;
+import com.ebonheart.EbonArtsMod.references.Reference;
 
 @Mod(modid = Reference.MOD_ID, name = Reference.MOD_NAME, version = Reference.MOD_VERSION, guiFactory = Reference.CONFIG_GUI)
 public class EbonArtsMod 

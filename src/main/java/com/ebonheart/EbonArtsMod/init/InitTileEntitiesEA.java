@@ -7,10 +7,10 @@ import net.minecraft.item.Item;
 import net.minecraftforge.fml.client.registry.ClientRegistry;
 import net.minecraftforge.fml.common.registry.GameRegistry;
 
-import com.ebonheart.EbonArtsMod.Reference;
 import com.ebonheart.EbonArtsMod.common.tileentities.plants.BlockDragonwoodPlantRoot;
 import com.ebonheart.EbonArtsMod.common.tileentities.plants.TileEntityDragonwoodPlant;
 import com.ebonheart.EbonArtsMod.common.tileentities.plants.TileEntityDragonwoodPlantRenderer;
+import com.ebonheart.EbonArtsMod.references.Reference;
 
 
 

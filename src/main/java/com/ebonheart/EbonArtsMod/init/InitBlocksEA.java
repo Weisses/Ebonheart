@@ -10,7 +10,6 @@ import net.minecraft.item.Item;
 import net.minecraftforge.fml.common.registry.GameRegistry;
 
 import com.ebonheart.EbonArtsMod.EbonArtsMod;
-import com.ebonheart.EbonArtsMod.Reference;
 import com.ebonheart.EbonArtsMod.api.meta.ItemBlockMeta;
 import com.ebonheart.EbonArtsMod.common.blocks.basic.BlockArcanite;
 import com.ebonheart.EbonArtsMod.common.blocks.basic.BlockDoubleSlab;
@@ -33,6 +32,7 @@ import com.ebonheart.EbonArtsMod.common.blocks.basic.EABlockWall;
 import com.ebonheart.EbonArtsMod.common.blocks.basic.ItemBlockSlab;
 import com.ebonheart.EbonArtsMod.common.blocks.world.BlockMultiOre;
 import com.ebonheart.EbonArtsMod.common.blocks.world.BlockOreEA;
+import com.ebonheart.EbonArtsMod.references.Reference;
 
 public class InitBlocksEA 
 {

@@ -6,9 +6,9 @@ import net.minecraftforge.fml.common.event.FMLInitializationEvent;
 import net.minecraftforge.fml.common.event.FMLPostInitializationEvent;
 import net.minecraftforge.fml.common.event.FMLPreInitializationEvent;
 
-import com.ebonheart.EbonArtsMod.Reference;
 import com.ebonheart.EbonArtsMod.init.InitBlocksEA;
 import com.ebonheart.EbonArtsMod.init.InitItemsEA;
+import com.ebonheart.EbonArtsMod.references.Reference;
 
 public class ServerProxy extends CommonProxy 
 {
