@@ -123,6 +123,13 @@ item.tool/katcheen_shovel.name=Katcheen Shovel
 item.tool/katcheen_hoe.name=Katcheen Hoe
 item.tool/katcheen_sword.name=Katcheen Sword
 
+item.tool/empowered_sword.name=Empowered Sword
+item.tool/blazefury.name=Blazefury
+item.tool/despair.name=Despair
+item.tool/frostbite.name=Frostbite
+item.tool/massacre.name=Massacre
+item.tool/souleater.name=Souleater
+
 //-----Armor-----
 item.armor/arcanite_helmet.name=Arcanite Helmet
 item.armor/arcanite_chestplate.name=Arcanite Chestplate

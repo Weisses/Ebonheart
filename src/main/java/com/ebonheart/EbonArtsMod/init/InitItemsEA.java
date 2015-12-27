@@ -8,7 +8,6 @@ import net.minecraft.item.ItemFood;
 import net.minecraftforge.common.util.EnumHelper;
 import net.minecraftforge.fml.common.registry.GameRegistry;
 
-import com.ebonheart.EbonArtsMod.EbonArtsMod;
 import com.ebonheart.EbonArtsMod.common.items.ItemAlchemicalCompendium;
 import com.ebonheart.EbonArtsMod.common.items.ItemShimmeringDisc;
 import com.ebonheart.EbonArtsMod.common.items.armor.ItemArmorEA;
@@ -21,9 +20,14 @@ import com.ebonheart.EbonArtsMod.common.items.resources.ItemNecrocite;
 import com.ebonheart.EbonArtsMod.common.items.resources.ItemSoularite;
 import com.ebonheart.EbonArtsMod.common.items.resources.ItemVelious;
 import com.ebonheart.EbonArtsMod.common.items.tools.ItemAxeEA;
+import com.ebonheart.EbonArtsMod.common.items.tools.ItemBlazefury;
+import com.ebonheart.EbonArtsMod.common.items.tools.ItemDespair;
+import com.ebonheart.EbonArtsMod.common.items.tools.ItemFrostbite;
 import com.ebonheart.EbonArtsMod.common.items.tools.ItemHoeEA;
+import com.ebonheart.EbonArtsMod.common.items.tools.ItemMassacre;
 import com.ebonheart.EbonArtsMod.common.items.tools.ItemPickaxeEA;
 import com.ebonheart.EbonArtsMod.common.items.tools.ItemShovelEA;
+import com.ebonheart.EbonArtsMod.common.items.tools.ItemSouleater;
 import com.ebonheart.EbonArtsMod.common.items.tools.ItemSwordEA;
 import com.ebonheart.EbonArtsMod.references.Reference;
 
@@ -86,6 +90,12 @@ public class InitItemsEA
 	public static Item katcheen_leggings;
 	public static Item katcheen_boots;
 	
+	public static Item empowered_sword;
+	public static Item blazefury;
+	public static Item despair;
+	public static Item frostbite;
+	public static Item massacre;
+	public static Item souleater;
 	
 	public static ItemFood banana;
 	public static ItemFood dragon_fruit;
@@ -98,6 +108,8 @@ public class InitItemsEA
 	
 	public static final Item.ToolMaterial arcaniteToolMaterial = EnumHelper.addToolMaterial("arcaniteToolMaterial", 2, 1000, 7.0F, 2.5F, 15);
 	public static final Item.ToolMaterial katcheenToolMaterial = EnumHelper.addToolMaterial("katcheenToolMaterial", 3, 2000, 9.5F, 4.0F, 20);
+	public static final Item.ToolMaterial specialToolMaterial = EnumHelper.addToolMaterial("specialToolMaterial", 3, 2000, 9.5F, 6.0F, 20);
+	
 	//public static final Item.ToolMaterial innatearcaniteToolMaterial = EnumHelper.addToolMaterial("innatearcaniteToolMaterial", 3, 1700, 8.5F, 3.5F, 10);
 	public static final ItemArmor.ArmorMaterial arcaniteArmorMaterial = EnumHelper.addArmorMaterial("arcaniteArmorMaterial", "ea:arcanite", 33, new int[]{2, 7, 5, 2}, 10);
 	public static final ItemArmor.ArmorMaterial katcheenArmorMaterial = EnumHelper.addArmorMaterial("katcheenArmorMaterial", "ea:katcheen", 66, new int[]{3, 8, 6, 3}, 30);
@@ -148,6 +160,13 @@ public class InitItemsEA
 		katcheen_chestplate = new ItemArmorEA("armor/katcheen_chestplate", katcheenArmorMaterial, 0, 1);
 		katcheen_leggings = new ItemArmorEA("armor/katcheen_leggings", katcheenArmorMaterial, 0, 2);
 		katcheen_boots = new ItemArmorEA("armor/katcheen_boots", katcheenArmorMaterial, 0, 3);
+		
+		empowered_sword = new ItemFrostbite("tool/empowered_sword", specialToolMaterial);
+		frostbite = new ItemFrostbite("tool/frostbite", specialToolMaterial);
+		massacre = new ItemMassacre("tool/massacre", specialToolMaterial);
+		blazefury = new ItemBlazefury("tool/blazefury", specialToolMaterial);
+		despair = new ItemDespair("tool/despair", specialToolMaterial);
+		souleater = new ItemSouleater("tool/souleater", specialToolMaterial);
 		
 		
 		//test_liquid_bucket = new ItemBucket(InitBlocksEA.test_liquid).setUnlocalizedName("test_liquid_bucket").setCreativeTab(EbonArtsMod.tabEbonArtsItems).setContainerItem(test_liquid_bucket);
@@ -212,6 +231,12 @@ public class InitItemsEA
 		
 		
 		//GameRegistry.registerItem(test_liquid_bucket, test_liquid_bucket.getUnlocalizedName().substring(5));
+		GameRegistry.registerItem(empowered_sword, empowered_sword.getUnlocalizedName().substring(5));
+		GameRegistry.registerItem(frostbite, frostbite.getUnlocalizedName().substring(5));
+		GameRegistry.registerItem(massacre, massacre.getUnlocalizedName().substring(5));
+		GameRegistry.registerItem(blazefury, blazefury.getUnlocalizedName().substring(5));
+		GameRegistry.registerItem(despair, despair.getUnlocalizedName().substring(5));
+		GameRegistry.registerItem(souleater, souleater.getUnlocalizedName().substring(5));
 		
 		
 		
@@ -273,6 +298,12 @@ public class InitItemsEA
 		registerRender(katcheen_leggings);
 		registerRender(katcheen_boots);
 		
+		registerRender(empowered_sword);
+		registerRender(frostbite);
+		registerRender(massacre);
+		registerRender(blazefury);
+		registerRender(despair);
+		registerRender(souleater);
 		
 		//registerRender(test_liquid_bucket);
 		
