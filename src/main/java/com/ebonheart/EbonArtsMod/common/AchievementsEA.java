@@ -14,24 +14,14 @@ import com.ebonheart.EbonArtsMod.init.InitItemsEA;
 
 public class AchievementsEA {
 
-	//@SubscribeEvent
-	//public void onPickup(PlayerEvent.ItemPickupEvent event) 
-	//{
-	//	if(event.pickedUp.getEntityItem().isItemEqual(new ItemStack(Block.getBlockFromItem(InitItemsEA.arcanite)))) 
-	//	{
-	//		event.player.triggerAchievement(InitAchievementsEA.mine_arcanite_ore);
-	//	}
-	//}
-	
 	//Pickup an item achievement
 	@SubscribeEvent
 	public void onPickup(PlayerEvent.ItemPickupEvent event) 
 	{
-		
-		if(event.pickedUp.getEntityItem().isItemEqual(new ItemStack(InitItemsEA.ebon_tome)))
-		{
-			event.player.triggerAchievement(InitAchievementsEA.alchemical_compendium);
-		}
+		//if(event.pickedUp.getEntityItem().isItemEqual(new ItemStack(InitItemsEA.ebon_tome)))
+		//{
+		//	event.player.triggerAchievement(InitAchievementsEA.alchemical_compendium);
+		//}
 		
 		if(event.pickedUp.getEntityItem().isItemEqual(new ItemStack(InitItemsEA.draconium_dust)))
 		{
@@ -42,13 +32,6 @@ public class AchievementsEA {
 		{
 			event.player.triggerAchievement(InitAchievementsEA.mine_velious_ore);
 		}
-		
-		
-		
-		//if(event.pickedUp.getEntityItem().isItemEqual(new ItemStack(InitItemsEA.shimmering_disc)))
-		//{
-		//	event.player.triggerAchievement(InitAchievementsEA.shimmering_disc);
-		//}
 		
 		if(event.pickedUp.getEntityItem().isItemEqual(new ItemStack(InitItemsEA.arcanite)))
 		{
@@ -72,41 +55,50 @@ public class AchievementsEA {
 		
 		if(event.pickedUp.getEntityItem().isItemEqual(new ItemStack(InitItemsEA.ebonheart)))
 		{
-			event.player.triggerAchievement(InitAchievementsEA.mine_ebon_ore);
+			event.player.triggerAchievement(InitAchievementsEA.ebonheart);
 		}
-		
-		
-		
-		//if(event.pickedUp.getEntityItem().isItemEqual(new ItemStack(Item.getItemFromBlock(InitBlocksEA.ebon_ore))))
-		//{
-		//	event.player.triggerAchievement(InitAchievementsEA.mine_ebon_ore);
-		//}
-		
-		
-		
-		
-		
-
 	}
 	
+	//Craft an item achievement
 	@SubscribeEvent
-	public void onCraft(PlayerEvent.ItemCraftedEvent event) {
-	if(event.crafting.getItem() == InitItemsEA.shimmering_disc) {
+	public void onCraft(PlayerEvent.ItemCraftedEvent event) 
+	{
+		if(event.crafting.getItem() == InitItemsEA.shimmering_disc) 
+		{
+			event.player.triggerAchievement(InitAchievementsEA.shimmering_disc);
+		}
 		
-		event.player.triggerAchievement(InitAchievementsEA.shimmering_disc);
+		if(event.crafting.getItem() == InitItemsEA.empowered_sword) 
+		{
+			event.player.triggerAchievement(InitAchievementsEA.empowered_sword);
+		}
 		
+		if(event.crafting.getItem() == InitItemsEA.frostbite) 
+		{
+			event.player.triggerAchievement(InitAchievementsEA.frostbite);
+		}
+		
+		if(event.crafting.getItem() == InitItemsEA.massacre) 
+		{
+			event.player.triggerAchievement(InitAchievementsEA.massacre);
+		}
+		
+		if(event.crafting.getItem() == InitItemsEA.blazefury) 
+		{
+			event.player.triggerAchievement(InitAchievementsEA.blazefury);
+		}
+		
+		if(event.crafting.getItem() == InitItemsEA.despair) 
+		{
+			event.player.triggerAchievement(InitAchievementsEA.despair);
+		}
+		
+		if(event.crafting.getItem() == InitItemsEA.souleater) 
+		{
+			event.player.triggerAchievement(InitAchievementsEA.souleater);
 		}
 	}
-	//Pickup an item achievement
-	//@SubscribeEvent
-	//public void onPickup(PlayerEvent.ItemPickupEvent event) {
-	//	if(event.pickedUp.getEntityItem().isItemEqual(new ItemStack(Item.getItemFromBlock(EbonArtsBlocks.arcanite_ore)))) {
-		
-	//		event.player.triggerAchievement(EbonArtsAchievements.mineMysticDust);
-		
-	//	}
-	//}
-		
+	
 	
 	
 	//Smelt an item achievement
@@ -115,18 +107,6 @@ public class AchievementsEA {
 	//	if(event.smelting.getItem() == EbonArtsItems.purified_mystic_dust) {
 
 	//		event.player.triggerAchievement(EbonArtsAchievements.smeltMysticDust);
-		
-	//	}
-	//}
-	
-	
-	
-	//Craft an item achievement
-	//@SubscribeEvent
-	//public void onCraft(PlayerEvent.ItemCraftedEvent event) {
-	//	if(event.crafting.getItem() == EbonArtsItems.ebon_sigil) {
-		
-	//		event.player.triggerAchievement(EbonArtsAchievements.craftEbonSigil);
 		
 	//	}
 	//}

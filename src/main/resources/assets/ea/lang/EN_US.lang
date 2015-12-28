@@ -1,4 +1,7 @@
 < en_US.lang - English localization file for the Ebon Arts Mod >
+
+itemGroup.tabEbonArtsBlocks=Ebon Arts Blocks
+itemGroup.tabEbonArtsItems=Ebon Arts Items
 //-----Items-----
 item.ebon_tome.name=Ebon Tome-WIP
 item.gem/draconium_dust.name=Draconium Dust
@@ -10,10 +13,10 @@ item.gem/soularite.name=Soularite
 item.gem/innate_arcanite.name=Innate Arcanite
 item.shimmering_disc.name=Shimmering Disc
 
-
 item.gem/arcanite_shard.name=Arcanite Shard
-
 item.ebon_sigil.name=Ebon Sigil
+
+
 
 //-----Ores-----
 tile.ore/draconium_ore.name=Draconium Ore
@@ -24,6 +27,7 @@ tile.ore/ebon_ore.name=Ebon Ore
 tile.ore/necrocite_ore.name=Necrocite Ore
 tile.ore/soularite_ore.name=Soularite Ore
 tile.ore/ebon_ore_nether.name=Ebon Ore
+
 
 
 //-----Blocks-----
@@ -84,7 +88,6 @@ tile.fence/katcheen_fence.name=Katcheen Fence
 tile.fence/necrocite_fence.name=Necrocite Fence
 tile.fence/soularite_fence.name=Soularite Fence
 
-
 tile.wall/draconium_wall.name=Draconium Wall
 tile.wall/velious_wall.name=Velious Wall
 tile.wall/arcanite_wall.name=Arcanite Wall
@@ -110,6 +113,7 @@ tile.fence/innate_arcanite_fence_normal.name=Innate Arcanite Fence
 tile.purified_glowstone.name=Purified Glowstone
 
 
+
 //-----Tools-----
 item.tool/arcanite_pickaxe.name=Arcanite Pickaxe
 item.tool/arcanite_axe.name=Arcanite Axe
@@ -130,6 +134,8 @@ item.tool/frostbite.name=Frostbite
 item.tool/massacre.name=Massacre
 item.tool/souleater.name=Souleater
 
+
+
 //-----Armor-----
 item.armor/arcanite_helmet.name=Arcanite Helmet
 item.armor/arcanite_chestplate.name=Arcanite Chestplate
@@ -142,47 +148,8 @@ item.armor/katcheen_leggings.name=Katcheen Leggings
 item.armor/katcheen_boots.name=Katcheen Boots
 
 
-item.mystic_dust.name=Mystic Dust
-item.purified_mystic_dust.name=Purified Mystic Dust
 
-
-
-item.tier_1_catalyst.name=Catalyst (Tier 1)
-item.tier_2_catalyst.name=Catalyst (Tier 2)
-item.tier_3_catalyst.name=Catalyst (Tier 3)
-item.tier_4_catalyst.name=Catalyst (Tier 4)
-
-
-
-
-item.banana.name=Banana
-item.gem/ebonheart.name=Ebonheart Gemstone
-
-item.dragon_fruit.name=Dragon Fruit
-tile.dragonwoodplant.name=Dragonwood Sapling
-
-tile.fence/arcanite_fence_gate.name=Arcanite Fence Gate
-
-tile.arcanite_column.name=Arcanite Column
-tile.arcanite_double_slab.name=Arcanite Double Slab
-
-tile.arcanite_slab.name=Arcanite Slab
-
-tile.purified_mystic_block.name=Purified Mystic Block
-tile.ebon_alter.name=Ebon Alter
-
-
-
-itemGroup.tabEbonArtsBlocks=Ebon Arts Blocks
-itemGroup.tabEbonArtsItems=Ebon Arts Items
-
-
-
-death.attack.electric=%1$s was roasted by electric current.
-death.attack.electric.player=%1$s was roasted by electric current while fighting %2$s.
-
-
-
+//-----Achievements-----
 achievement.ea:alchemical_compendium=And so it begins!
 achievement.ea:alchemical_compendium.desc=Obtain an Alchemical Compendium.
 
@@ -206,8 +173,56 @@ achievement.ea:mine_necrocite_ore.desc=Mine some Necrocite Ore.
 achievement.ea:mine_soularite_ore=Reap the Soularite!
 achievement.ea:mine_soularite_ore.desc=Mine some Soularite Ore.
 
-achievement.ea:mine_ebon_ore=Ore's level is over 9000!
-achievement.ea:mine_ebon_ore.desc=Mine some Ebon Ore.
+achievement.ea:ebonheart=Power level is over 9000!
+achievement.ea:ebonheart.desc=Obtain an Ebonheart Gemstone.
+
+achievement.ea:empowered_sword=One step closer!
+achievement.ea:empowered_sword.desc=Craft an Empowered Sword.
+
+achievement.ea:frostbite=Icebound doom!
+achievement.ea:frostbite.desc=Craft the ultimate weapon, Frostbite.
+
+achievement.ea:massacre=Leave no survivors!
+achievement.ea:massacre.desc=Craft the ultimate weapon, Massacre.
+
+achievement.ea:blazefury=Let the world burn!
+achievement.ea:blazefury.desc=Craft the ultimate weapon, Blazefury.
+
+achievement.ea:despair=Abandon all hope!
+achievement.ea:despair.desc=Craft the ultimate weapon, Despair.
+
+achievement.ea:souleater=From death to life!
+achievement.ea:souleater.desc=Craft the ultimate weapon, Souleater.
 
 achievement.ea:smelt_draconium_dust=From dragons to dust!
 achievement.ea:smelt_draconium_dust.desc=Smelt Draconium Dust.
+
+
+
+item.mystic_dust.name=Mystic Dust
+
+item.purified_mystic_dust.name=Purified Mystic Dust
+
+item.tier_1_catalyst.name=Catalyst (Tier 1)
+item.tier_2_catalyst.name=Catalyst (Tier 2)
+item.tier_3_catalyst.name=Catalyst (Tier 3)
+item.tier_4_catalyst.name=Catalyst (Tier 4)
+
+item.banana.name=Banana
+
+item.gem/ebonheart.name=Ebonheart Gemstone
+
+item.dragon_fruit.name=Dragon Fruit
+
+tile.dragonwoodplant.name=Dragonwood Sapling
+
+tile.purified_mystic_block.name=Purified Mystic Block
+
+tile.ebon_alter.name=Ebon Alter
+
+
+
+
+
+death.attack.electric=%1$s was roasted by electric current.
+death.attack.electric.player=%1$s was roasted by electric current while fighting %2$s.

@@ -7,8 +7,9 @@ import net.minecraft.block.material.Material;
 
 public class BlockPurifiedGlowstone extends Block {
 
-	public BlockPurifiedGlowstone(Material materialIn) {
-		super(materialIn);
+	public BlockPurifiedGlowstone() 
+	{
+		super(Material.cloth);
 		this.setLightLevel(1.0f);
 		this.setUnlocalizedName("purified_glowstone");
 		this.setCreativeTab(EbonArtsMod.tabEbonArtsBlocks);

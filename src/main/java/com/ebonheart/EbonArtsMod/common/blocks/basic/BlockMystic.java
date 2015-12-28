@@ -16,9 +16,9 @@ import net.minecraftforge.fml.relauncher.SideOnly;
 
 public class BlockMystic extends Block {
 
-	public BlockMystic(Material materialIn) 
+	public BlockMystic() 
 	{
-		super(materialIn);
+		super(Material.rock);
 		this.setUnlocalizedName("gem/mystic/mystic_block_normal");
 		this.setCreativeTab(EbonArtsMod.tabEbonArtsBlocks);
 		this.setHarvestLevel("pickaxe", 2);

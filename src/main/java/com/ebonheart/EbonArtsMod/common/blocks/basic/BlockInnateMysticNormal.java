@@ -12,9 +12,9 @@ import net.minecraftforge.fml.relauncher.SideOnly;
 
 public class BlockInnateMysticNormal extends Block {
 
-	public BlockInnateMysticNormal(Material materialIn) 
+	public BlockInnateMysticNormal() 
 	{
-		super(materialIn);
+		super(Material.rock);
 		this.setUnlocalizedName("gem/mystic/innate_mystic_block_normal");
 		this.setCreativeTab(EbonArtsMod.tabEbonArtsBlocks);
 		this.setHarvestLevel("pickaxe", 2);

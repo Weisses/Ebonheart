@@ -32,6 +32,14 @@ public class InitAchievementsEA
 	public static Achievement mine_ebon_ore;
 	
 	public static Achievement shimmering_disc;
+	
+	public static Achievement ebonheart;
+	public static Achievement empowered_sword;
+	public static Achievement frostbite;
+	public static Achievement massacre;
+	public static Achievement blazefury;
+	public static Achievement despair;
+	public static Achievement souleater;
 	//public static Achievement smeltMysticDust;
 	//public static Achievement craftEbonSigil;
 	
@@ -49,7 +57,14 @@ public class InitAchievementsEA
 		mine_necrocite_ore = new AchievementHelper(Reference.MINE_NECROCITE_ORE, -1, 1, InitBlocksEA.necrocite_ore, (Achievement)null);//.func_180788_c();
 		mine_soularite_ore = new AchievementHelper(Reference.MINE_SOULARITE_ORE, 3, 1, InitBlocksEA.soularite_ore, (Achievement)null);//.func_180788_c();
 		
-		mine_ebon_ore = new AchievementHelper(Reference.MINE_EBON_ORE, 1, 2, InitItemsEA.ebonheart, (Achievement)null).setSpecial();//.func_180788_c();
+		ebonheart = new AchievementHelper(Reference.EBONHEART, 1, 0, InitItemsEA.ebonheart, (Achievement)null);//.func_180788_c();
+		
+		empowered_sword = new AchievementHelper(Reference.EMPOWERED_SWORD, 1, 2, InitItemsEA.empowered_sword, (Achievement)ebonheart);//.func_180788_c();
+		frostbite = new AchievementHelper(Reference.FROSTBITE, -1, 3, InitItemsEA.frostbite, (Achievement)empowered_sword).setSpecial();//.func_180788_c();
+		massacre = new AchievementHelper(Reference.MASSACRE, -1, 4, InitItemsEA.massacre, (Achievement)empowered_sword).setSpecial();//.func_180788_c();
+		blazefury = new AchievementHelper(Reference.BLAZEFURY, 1, 5, InitItemsEA.blazefury, (Achievement)empowered_sword).setSpecial();//.func_180788_c();
+		despair = new AchievementHelper(Reference.DESPAIR, 3, 4, InitItemsEA.despair, (Achievement)empowered_sword).setSpecial();//.func_180788_c();
+		souleater = new AchievementHelper(Reference.SOULEATER, 3, 3, InitItemsEA.souleater, (Achievement)empowered_sword).setSpecial();//.func_180788_c();
 		
 	//mine_arcanite_ore = new Achievement("achievement.mine_arcanite_ore", "mine_arcanite_ore", -1, -1, InitItemsEA.arcanite, (Achievement)null).func_180788_c();
 	//smeltMysticDust = new Achievement("achievement.smeltMysticDust", "smeltMysticDust", -3, -1, EbonArtsBlocks.arcanite_ore, mineMysticDust).func_180788_c();

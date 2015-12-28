@@ -5,11 +5,9 @@ import net.minecraft.block.material.Material;
 import net.minecraft.client.Minecraft;
 import net.minecraft.client.resources.model.ModelBakery;
 import net.minecraft.client.resources.model.ModelResourceLocation;
-import net.minecraft.init.Blocks;
 import net.minecraft.item.Item;
 import net.minecraftforge.fml.common.registry.GameRegistry;
 
-import com.ebonheart.EbonArtsMod.EbonArtsMod;
 import com.ebonheart.EbonArtsMod.api.meta.ItemBlockMeta;
 import com.ebonheart.EbonArtsMod.common.blocks.basic.BlockArcanite;
 import com.ebonheart.EbonArtsMod.common.blocks.basic.BlockDoubleSlab;
@@ -22,16 +20,18 @@ import com.ebonheart.EbonArtsMod.common.blocks.basic.BlockNecrocite;
 import com.ebonheart.EbonArtsMod.common.blocks.basic.BlockPurifiedGlowstone;
 import com.ebonheart.EbonArtsMod.common.blocks.basic.BlockSoularite;
 import com.ebonheart.EbonArtsMod.common.blocks.basic.BlockVelious;
-import com.ebonheart.EbonArtsMod.common.blocks.basic.BlockVeliousOre;
 import com.ebonheart.EbonArtsMod.common.blocks.basic.EABlockFence;
 import com.ebonheart.EbonArtsMod.common.blocks.basic.EABlockMeta;
-import com.ebonheart.EbonArtsMod.common.blocks.basic.EABlockPillar;
-import com.ebonheart.EbonArtsMod.common.blocks.basic.EABlockSlab;
 import com.ebonheart.EbonArtsMod.common.blocks.basic.EABlockStairs;
 import com.ebonheart.EbonArtsMod.common.blocks.basic.EABlockWall;
 import com.ebonheart.EbonArtsMod.common.blocks.basic.ItemBlockSlab;
 import com.ebonheart.EbonArtsMod.common.blocks.world.BlockMultiOre;
-import com.ebonheart.EbonArtsMod.common.blocks.world.BlockOreEA;
+import com.ebonheart.EbonArtsMod.common.blocks.world.BlockOreArcanite;
+import com.ebonheart.EbonArtsMod.common.blocks.world.BlockOreDraconium;
+import com.ebonheart.EbonArtsMod.common.blocks.world.BlockOreKatcheen;
+import com.ebonheart.EbonArtsMod.common.blocks.world.BlockOreNecrocite;
+import com.ebonheart.EbonArtsMod.common.blocks.world.BlockOreSoularite;
+import com.ebonheart.EbonArtsMod.common.blocks.world.BlockOreVelious;
 import com.ebonheart.EbonArtsMod.references.Reference;
 
 public class InitBlocksEA 
@@ -192,12 +192,12 @@ public class InitBlocksEA
 	public static void preInit()
 	{
 		
-		draconium_ore = new BlockOreEA("ore/draconium_ore", 2, 0.4f, 10f);
-		velious_ore = new BlockOreEA("ore/velious_ore", 2, 0f, 15f);
-		arcanite_ore = new BlockOreEA("ore/arcanite_ore", 2, 0f, 20f);
-		katcheen_ore = new BlockOreEA("ore/katcheen_ore", 3, 0f, 30f);
-		necrocite_ore = new BlockOreEA("ore/necrocite_ore", 3, 0f, 30f);
-		soularite_ore = new BlockOreEA("ore/soularite_ore", 3, 0f, 30f);
+		draconium_ore = new BlockOreDraconium(2, 0.4f, 10f);
+		velious_ore = new BlockOreVelious(2, 15f);
+		arcanite_ore = new BlockOreArcanite(2, 20f);
+		katcheen_ore = new BlockOreKatcheen(3, 30f);
+		necrocite_ore = new BlockOreNecrocite(3, 30f);
+		soularite_ore = new BlockOreSoularite(3, 30f);
 		ebon_ore = new BlockMultiOre("ore/ebon_ore");
 		ebon_ore_nether = new BlockMultiOre("ore/ebon_ore_nether");
 		
@@ -256,10 +256,10 @@ public class InitBlocksEA
 		
 		//arcanite_wall_gate = new BlockFenceGate().setUnlocalizedName("wall/arcanite_wall_gate").setCreativeTab(EbonArtsMod.tabEbonArtsBlocks);
 		
-		mystic_block_normal = new BlockMystic(Material.rock);
-		innate_mystic_block_normal = new BlockInnateMysticNormal(Material.rock);
+		mystic_block_normal = new BlockMystic();
+		innate_mystic_block_normal = new BlockInnateMysticNormal();
 		
-		purified_glowstone = new BlockPurifiedGlowstone(Material.cloth);
+		purified_glowstone = new BlockPurifiedGlowstone();
 		
 		
 		//mystic_furnace = new TestBlockFurnaceEA(false).setUnlocalizedName("machine/mystic_furnace").setCreativeTab(EbonArtsMod.tabEbonArtsBlocks);
