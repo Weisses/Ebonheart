@@ -22,7 +22,6 @@ public class CommonProxy
 	
 	public void preInit(FMLPreInitializationEvent event) 
 	{
-		//InitBlocksEA.preInit();
 		InitItemsEA.preInit();
 		InitItemsEA.register();
 		InitBlocksEA.preInit();
@@ -40,11 +39,6 @@ public class CommonProxy
 		InitRecipesEA.initShapelessRecipe();
 		InitRecipesEA.initSmeltingRecipe();
 		InitAchievementsEA.init();
-		
-		
-		//EbonArtsMod.packetHandler = MinersbasicAPI.createPacketHandler("tutorial");
-		//EbonArtsMod.packetHandler.registerPacket(EAPacket.class, new EAPacket.Handler(), Side.SERVER);
-		
 		
 		GameRegistry.registerWorldGenerator(new WorldGeneratorEA(), 0);
 		NetworkRegistry.INSTANCE.registerGuiHandler(EbonArtsMod.instance, new GuiHandler());

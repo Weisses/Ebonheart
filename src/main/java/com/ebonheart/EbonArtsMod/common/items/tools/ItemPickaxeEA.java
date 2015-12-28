@@ -5,8 +5,7 @@ import com.ebonheart.EbonArtsMod.EbonArtsMod;
 import net.minecraft.item.ItemPickaxe;
 import net.minecraft.item.Item.ToolMaterial;
 
-public class ItemPickaxeEA extends ItemPickaxe 
-{
+public class ItemPickaxeEA extends ItemPickaxe {
 
 	public ItemPickaxeEA(String unlocalizedName, ToolMaterial material) 
 	{

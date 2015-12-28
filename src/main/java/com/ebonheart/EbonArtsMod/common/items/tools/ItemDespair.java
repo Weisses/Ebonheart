@@ -1,33 +1,42 @@
 package com.ebonheart.EbonArtsMod.common.items.tools;
 
+import java.util.List;
+
 import com.ebonheart.EbonArtsMod.EbonArtsMod;
+import com.ebonheart.EbonArtsMod.common.items.ItemHelper;
 
 import net.minecraft.entity.EntityLivingBase;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.item.ItemStack;
 import net.minecraft.item.ItemSword;
+import net.minecraft.potion.Potion;
 import net.minecraft.world.World;
+import net.minecraftforge.fml.relauncher.Side;
+import net.minecraftforge.fml.relauncher.SideOnly;
 
 public class ItemDespair extends ItemSword {
 
-	public ItemDespair(String unlocalizedName, ToolMaterial material) {
+	public ItemDespair(String unlocalizedName, ToolMaterial material) 
+	{
 		super(material);
 		this.setUnlocalizedName(unlocalizedName);
 		this.setCreativeTab(EbonArtsMod.tabEbonArtsItems);
-		// TODO Auto-generated constructor stub
 	}
 	
 	public boolean hitEntity(ItemStack stack, EntityLivingBase target, EntityLivingBase attacker)
     {
-		target.setFire(5);
-        stack.damageItem(1, attacker);
+		Potion potion = Potion.wither;
+		EntityPlayer playerIn = attacker.getEntityWorld().getPlayerEntityByName(attacker.getName());
+		ItemHelper.addPotionEffectToTarget(target, potion, 5, 1);
+		stack.damageItem(1, playerIn);
         return true;
+        
     }
 	
-	public ItemStack onItemRightClick(ItemStack itemStackIn, World worldIn, EntityPlayer playerIn)
-    {
-        playerIn.setItemInUse(itemStackIn, this.getMaxItemUseDuration(itemStackIn));
-        return itemStackIn;
-    }
+	@SideOnly(Side.CLIENT)
+    public void addInformation(ItemStack stack, EntityPlayer playerIn, List toolTip, boolean advanced) {
+		toolTip.add("All things will be reduced");
+		toolTip.add("to nothingness.");
+	}
 
 }

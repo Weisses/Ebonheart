@@ -22,7 +22,6 @@ public class AchievementHelper extends Achievement {
 		super("achievement.ea:" + name, "ea:" + name, x, y, icon, parent);
 		achievements.add(this);
 		registerStat();
-		
 	}
 
 	public AchievementHelper(String name, int x, int y, Item icon, Achievement parent) 
@@ -34,5 +33,4 @@ public class AchievementHelper extends Achievement {
 	{
 		this(name, x, y, new ItemStack(icon), parent);
 	}
-	
 }

@@ -54,10 +54,10 @@ public class WorldGeneratorEA implements IWorldGenerator
 		//Overworld
 		case 0: 
 			//for multi ore gen
-			this.runGenerator(this.gen_draconium_ore, world, random, chunkX, chunkZ, 16, 32, 64);//# of veins per chunk; height min; height max
-			this.runGenerator(this.gen_velious_ore, world, random, chunkX, chunkZ, 8, 24, 48);
-			this.runGenerator(this.gen_arcanite_ore, world, random, chunkX, chunkZ, 4, 2, 32);
-			this.runGenerator(this.gen_katcheen_ore, world, random, chunkX, chunkZ, 2, 2, 16);
+			this.runGenerator(this.gen_draconium_ore, world, random, chunkX, chunkZ, 16, 28, 64);//# of veins per chunk; height min; height max
+			this.runGenerator(this.gen_velious_ore, world, random, chunkX, chunkZ, 8, 18, 48);
+			this.runGenerator(this.gen_arcanite_ore, world, random, chunkX, chunkZ, 6, 2, 32);
+			this.runGenerator(this.gen_katcheen_ore, world, random, chunkX, chunkZ, 3, 2, 16);
 			
 			//for single ore gen
 			this.runGenerator(this.gen_ebon_ore, world, random, chunkX, chunkZ, 1, 2, 16);
@@ -66,11 +66,11 @@ public class WorldGeneratorEA implements IWorldGenerator
 	    //Nether
 		case -1: 
 			//for multi ore gen
-			this.runGenerator(this.gen_necrocite_ore, world, random, chunkX, chunkZ, 32, 2, 126);
-			this.runGenerator(this.gen_soularite_ore, world, random, chunkX, chunkZ, 32, 2, 126);
+			this.runGenerator(this.gen_necrocite_ore, world, random, chunkX, chunkZ, 48, 2, 126);
+			this.runGenerator(this.gen_soularite_ore, world, random, chunkX, chunkZ, 48, 2, 126);
 			
 			//for single ore gen
-			this.runGenerator(this.gen_ebon_ore_nether, world, random, chunkX, chunkZ, 4, 2, 126);
+			this.runGenerator(this.gen_ebon_ore_nether, world, random, chunkX, chunkZ, 6, 2, 126);
 			
 	        break;
 	        

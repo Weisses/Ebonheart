@@ -1,9 +1,9 @@
 package com.ebonheart.EbonArtsMod.common.items.tools;
 
 import java.util.List;
-import java.util.Random;
 
 import com.ebonheart.EbonArtsMod.EbonArtsMod;
+import com.ebonheart.EbonArtsMod.init.InitItemsEA;
 
 import net.minecraft.entity.EntityLivingBase;
 import net.minecraft.entity.player.EntityPlayer;
@@ -13,32 +13,18 @@ import net.minecraft.world.World;
 import net.minecraftforge.fml.relauncher.Side;
 import net.minecraftforge.fml.relauncher.SideOnly;
 
-public class ItemSouleater extends ItemSword {
+public class ItemEmpoweredSword extends ItemSword {
 
-	public ItemSouleater(String unlocalizedName, ToolMaterial material) 
+	public ItemEmpoweredSword(String unlocalizedName, ToolMaterial material) 
 	{
 		super(material);
 		this.setUnlocalizedName(unlocalizedName);
 		this.setCreativeTab(EbonArtsMod.tabEbonArtsItems);
 	}
 	
-	public boolean hitEntity(ItemStack stack, EntityLivingBase target, EntityLivingBase attacker)
-    {
-		EntityPlayer playerIn = attacker.getEntityWorld().getPlayerEntityByName(attacker.getName());
-		Random rand = new Random();
-		int heal = rand.nextInt(3) + 1;
-		attacker.heal(heal);
-		
-		if(!playerIn.capabilities.isCreativeMode)
-		{
-			stack.damageItem(1, playerIn);
-		}
-		return true;
-    }
-	
 	@SideOnly(Side.CLIENT)
     public void addInformation(ItemStack stack, EntityPlayer playerIn, List toolTip, boolean advanced) {
-		toolTip.add("Pain and suffering can");
-		toolTip.add("heal all wounds.");
+		toolTip.add("This sword radiates with");
+		toolTip.add("unknown potential.");
 	}
 }

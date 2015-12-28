@@ -14,8 +14,7 @@ import com.ebonheart.EbonArtsMod.EbonArtsMod;
 import com.ebonheart.EbonArtsMod.api.damagesources.EADamageSources;
 import com.ebonheart.EbonArtsMod.api.damagesources.EntityDamageSourceElectric;
 
-public class ItemSwordEA extends ItemSword 
-{
+public class ItemSwordEA extends ItemSword {
 
 	public ItemSwordEA(String unlocalizedName, ToolMaterial material) 
 	{
@@ -34,17 +33,5 @@ public class ItemSwordEA extends ItemSword
     	//System.out.println("electric damage");
         //return true;
     //}
-	
-	public boolean hitEntity(ItemStack stack, EntityLivingBase target, EntityLivingBase attacker)
-    {
-		
-		//target.addPotionEffect(new PotionEffect(Potion.absorption, 1, 10));
-		//this.effectTarget(target, Potion.invisibility, 2);
-		return true;
-		
-    }
-	
-	
-	
-	
+
 }

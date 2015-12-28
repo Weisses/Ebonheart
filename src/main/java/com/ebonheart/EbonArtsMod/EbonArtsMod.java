@@ -33,37 +33,26 @@ import com.ebonheart.EbonArtsMod.proxy.CommonProxy;
 import com.ebonheart.EbonArtsMod.references.Reference;
 
 @Mod(modid = Reference.MOD_ID, name = Reference.MOD_NAME, version = Reference.MOD_VERSION, guiFactory = Reference.CONFIG_GUI)
-public class EbonArtsMod 
-{
+public class EbonArtsMod {
 
 	@SidedProxy(clientSide = Reference.CLIENT_PROXY_CLASS, serverSide = Reference.SERVER_PROXY_CLASS)
 	public static CommonProxy proxy;
-	
-	//public static PacketHandler packetHandler;
+	public static Configuration config;
 	
 	public static final EbonArtsTabBlocks tabEbonArtsBlocks = new EbonArtsTabBlocks("tabEbonArtsBlocks");
 	public static final EbonArtsTabItems tabEbonArtsItems = new EbonArtsTabItems("tabEbonArtsItems");
 	
-	public static Configuration config;
-	
 	@Mod.Instance(Reference.MOD_ID)
 	public static EbonArtsMod instance;
-	
-	//public static Logger log = FMLLog.getLogger();
 	
 	@EventHandler
 	public void preInit(FMLPreInitializationEvent event)
 	{
-		
 		config = new Configuration(event.getSuggestedConfigurationFile());
 		FMLCommonHandler.instance().bus().register(instance);
 		EbonArtsConfiguration.syncConfig();
 		
 		this.proxy.preInit(event);
-		
-		
-		
-		
 		LogHelper.info("Pre Initialization Complete.");
 	}
 	
@@ -75,20 +64,12 @@ public class EbonArtsMod
 		{
 			EbonArtsConfiguration.syncConfig();
 		}
-		
 	}
-	
-	
 	
 	@EventHandler
 	public void init(FMLInitializationEvent event)
 	{
 		this.proxy.init(event);
-		
-		
-		
-		
-		
 		LogHelper.info("Initialization Complete.");
 	}
 	
@@ -96,9 +77,6 @@ public class EbonArtsMod
 	public void postInit(FMLPostInitializationEvent event)
 	{
 		this.proxy.postInit(event);
-		
-		
-		
 		LogHelper.info("Post Initialization Complete.");
 	}
 }

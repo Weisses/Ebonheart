@@ -5,8 +5,7 @@ import com.ebonheart.EbonArtsMod.EbonArtsMod;
 import net.minecraft.item.ItemHoe;
 import net.minecraft.item.Item.ToolMaterial;
 
-public class ItemHoeEA extends ItemHoe 
-{
+public class ItemHoeEA extends ItemHoe {
 
 	public ItemHoeEA(String unlocalizedName, ToolMaterial material) 
 	{

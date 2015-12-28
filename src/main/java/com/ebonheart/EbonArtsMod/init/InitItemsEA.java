@@ -22,6 +22,7 @@ import com.ebonheart.EbonArtsMod.common.items.resources.ItemVelious;
 import com.ebonheart.EbonArtsMod.common.items.tools.ItemAxeEA;
 import com.ebonheart.EbonArtsMod.common.items.tools.ItemBlazefury;
 import com.ebonheart.EbonArtsMod.common.items.tools.ItemDespair;
+import com.ebonheart.EbonArtsMod.common.items.tools.ItemEmpoweredSword;
 import com.ebonheart.EbonArtsMod.common.items.tools.ItemFrostbite;
 import com.ebonheart.EbonArtsMod.common.items.tools.ItemHoeEA;
 import com.ebonheart.EbonArtsMod.common.items.tools.ItemMassacre;
@@ -108,7 +109,8 @@ public class InitItemsEA
 	
 	public static final Item.ToolMaterial arcaniteToolMaterial = EnumHelper.addToolMaterial("arcaniteToolMaterial", 2, 1000, 7.0F, 2.5F, 15);
 	public static final Item.ToolMaterial katcheenToolMaterial = EnumHelper.addToolMaterial("katcheenToolMaterial", 3, 2000, 9.5F, 4.0F, 20);
-	public static final Item.ToolMaterial specialToolMaterial = EnumHelper.addToolMaterial("specialToolMaterial", 3, 2000, 9.5F, 6.0F, 20);
+	public static final Item.ToolMaterial empoweredToolMaterial = EnumHelper.addToolMaterial("empoweredToolMaterial", 3, 2000, 9.5F, 5.0F, 0);
+	public static final Item.ToolMaterial specialToolMaterial = EnumHelper.addToolMaterial("specialToolMaterial", 3, 2000, 9.5F, 6.0F, 30);
 	
 	//public static final Item.ToolMaterial innatearcaniteToolMaterial = EnumHelper.addToolMaterial("innatearcaniteToolMaterial", 3, 1700, 8.5F, 3.5F, 10);
 	public static final ItemArmor.ArmorMaterial arcaniteArmorMaterial = EnumHelper.addArmorMaterial("arcaniteArmorMaterial", "ea:arcanite", 33, new int[]{2, 7, 5, 2}, 10);
@@ -161,7 +163,7 @@ public class InitItemsEA
 		katcheen_leggings = new ItemArmorEA("armor/katcheen_leggings", katcheenArmorMaterial, 0, 2);
 		katcheen_boots = new ItemArmorEA("armor/katcheen_boots", katcheenArmorMaterial, 0, 3);
 		
-		empowered_sword = new ItemFrostbite("tool/empowered_sword", specialToolMaterial);
+		empowered_sword = new ItemEmpoweredSword("tool/empowered_sword", empoweredToolMaterial);
 		frostbite = new ItemFrostbite("tool/frostbite", specialToolMaterial);
 		massacre = new ItemMassacre("tool/massacre", specialToolMaterial);
 		blazefury = new ItemBlazefury("tool/blazefury", specialToolMaterial);

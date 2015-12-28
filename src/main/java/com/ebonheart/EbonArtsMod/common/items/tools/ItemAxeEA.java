@@ -4,8 +4,7 @@ import com.ebonheart.EbonArtsMod.EbonArtsMod;
 
 import net.minecraft.item.ItemAxe;
 
-public class ItemAxeEA extends ItemAxe 
-{
+public class ItemAxeEA extends ItemAxe {
 
 	public ItemAxeEA(String unlocalizedName, ToolMaterial material) 
 	{

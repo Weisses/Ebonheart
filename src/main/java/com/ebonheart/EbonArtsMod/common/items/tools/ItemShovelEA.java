@@ -5,8 +5,7 @@ import com.ebonheart.EbonArtsMod.EbonArtsMod;
 import net.minecraft.item.ItemSpade;
 import net.minecraft.item.Item.ToolMaterial;
 
-public class ItemShovelEA extends ItemSpade 
-{
+public class ItemShovelEA extends ItemSpade {
 
 	public ItemShovelEA(String unlocalizedName, ToolMaterial material) 
 	{
