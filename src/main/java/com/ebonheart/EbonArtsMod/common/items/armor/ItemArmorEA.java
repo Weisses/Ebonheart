@@ -59,20 +59,12 @@ public class ItemArmorEA extends ItemArmor
 			this.effectPlayer(player, Potion.moveSpeed, 1, true);
 			this.effectPlayer(player, Potion.jump, 2, true);
 		}
-		
-		
-		
-		
 	}   
-	
-	
-	
-	
-	
-	private void effectPlayer(EntityPlayer player, Potion potion, int amplifier, boolean showParticles) {
+
+	private void effectPlayer(EntityPlayer player, Potion potion, int strength, boolean showParticles) {
 	    //Always effect for 8 seconds, then refresh
 	    if (player.getActivePotionEffect(potion) == null || player.getActivePotionEffect(potion).getDuration() <= 1)
-	        player.addPotionEffect(new PotionEffect(potion.id, 159, amplifier, true, showParticles));
+	        player.addPotionEffect(new PotionEffect(potion.id, 159, strength, true, showParticles));
 	} 
 	
 }

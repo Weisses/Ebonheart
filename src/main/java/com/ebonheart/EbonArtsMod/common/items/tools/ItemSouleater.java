@@ -4,6 +4,7 @@ import java.util.List;
 import java.util.Random;
 
 import com.ebonheart.EbonArtsMod.EbonArtsMod;
+import com.ebonheart.EbonArtsMod.init.InitItemsEA;
 
 import net.minecraft.entity.EntityLivingBase;
 import net.minecraft.entity.player.EntityPlayer;
@@ -24,14 +25,19 @@ public class ItemSouleater extends ItemSword {
 	
 	public boolean hitEntity(ItemStack stack, EntityLivingBase target, EntityLivingBase attacker)
     {
-		EntityPlayer playerIn = attacker.getEntityWorld().getPlayerEntityByName(attacker.getName());
 		Random rand = new Random();
-		int heal = rand.nextInt(3) + 1;
-		attacker.heal(heal);
+		int d = rand.nextInt(100) + 1;
 		
-		if(!playerIn.capabilities.isCreativeMode)
+		if (d < 25)
 		{
-			stack.damageItem(1, playerIn);
+			EntityPlayer playerIn = attacker.getEntityWorld().getPlayerEntityByName(attacker.getName());
+			int heal = rand.nextInt(3) + 1;
+			attacker.heal(heal);
+		
+			if(!playerIn.capabilities.isCreativeMode)
+			{
+				stack.damageItem(1, playerIn);
+			}
 		}
 		return true;
     }

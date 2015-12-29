@@ -14,13 +14,9 @@ public class InitRecipesEA {
 	
 	public static void initShapedRecipe()
 	{
-		
 		GameRegistry.addShapedRecipe(new ItemStack(InitBlocksEA.mystic_block_normal), new Object[]{"CCC", "CDC", "CCC", 'D', InitItemsEA.draconium_dust, 'C', Blocks.cobblestone});
-		//GameRegistry.addShapedRecipe(new ItemStack(InitBlocksEA.necrocite_block, InitBlocksEA.arcanite_block), new Object[]{"NN", "NN", 'N', InitItemsEA.necrocite});
 		
 		//GameRegistry.addShapedRecipe(new ItemStack(InitTileEntitiesEA.Banana_Plant), new Object[]{"DN", "ND", 'D', InitItemsEA.draconium_dust, 'N', Items.quartz});
-		
-		
 		
 		GameRegistry.addShapedRecipe(new ItemStack(InitBlocksEA.draconium_block), new Object[]{"DD", "DD", 'D', InitItemsEA.draconium_dust});
 		GameRegistry.addShapedRecipe(new ItemStack(InitBlocksEA.draconium_slab, 6), new Object[]{"DDD", 'D', InitBlocksEA.draconium_block});
@@ -111,7 +107,6 @@ public class InitRecipesEA {
 			GameRegistry.addShapedRecipe(new ItemStack(InitItemsEA.katcheen_sword), new Object[]{"K", "K", "S", 'K', InitItemsEA.katcheen, 'S', Items.stick});
 			
 			GameRegistry.addShapedRecipe(new ItemStack(InitItemsEA.empowered_sword), new Object[]{"DDD", "D#D", "DED", 'D', InitItemsEA.draconium_dust, '#', Items.diamond_sword, 'E', InitItemsEA.ebonheart});
-			
 			GameRegistry.addShapedRecipe(new ItemStack(InitItemsEA.frostbite), new Object[]{"VVV", "V#V", "VEV", 'V', InitItemsEA.velious, '#', InitItemsEA.empowered_sword, 'E', InitItemsEA.ebonheart});
 			GameRegistry.addShapedRecipe(new ItemStack(InitItemsEA.massacre), new Object[]{"AAA", "A#A", "AEA", 'A', InitItemsEA.arcanite, '#', InitItemsEA.empowered_sword, 'E', InitItemsEA.ebonheart});
 			GameRegistry.addShapedRecipe(new ItemStack(InitItemsEA.blazefury), new Object[]{"KKK", "K#K", "KEK", 'K', InitItemsEA.katcheen, '#', InitItemsEA.empowered_sword, 'E', InitItemsEA.ebonheart});
@@ -130,15 +125,15 @@ public class InitRecipesEA {
 		if(!EbonArtsConfiguration.armorRecipe)
 		{
 			
-			GameRegistry.addShapedRecipe(new ItemStack(InitItemsEA.arcanite_helmet), new Object[]{"AAA", "A A", 'A', InitItemsEA.arcanite});
-			GameRegistry.addShapedRecipe(new ItemStack(InitItemsEA.arcanite_chestplate), new Object[]{"A A", "AAA", "AAA", 'A', InitItemsEA.arcanite});
-			GameRegistry.addShapedRecipe(new ItemStack(InitItemsEA.arcanite_leggings), new Object[]{"AAA", "A A", "A A", 'A', InitItemsEA.arcanite});
-			GameRegistry.addShapedRecipe(new ItemStack(InitItemsEA.arcanite_boots), new Object[]{"A A", "A A", 'A', InitItemsEA.arcanite});
+			GameRegistry.addShapedRecipe(new ItemStack(InitItemsEA.arcanite_helmet), new Object[]{"AEA", "A A", 'A', InitItemsEA.arcanite, 'E', InitItemsEA.ebonheart});
+			GameRegistry.addShapedRecipe(new ItemStack(InitItemsEA.arcanite_chestplate), new Object[]{"A A", "AAA", "EEE", 'A', InitItemsEA.arcanite, 'E', InitItemsEA.ebonheart});
+			GameRegistry.addShapedRecipe(new ItemStack(InitItemsEA.arcanite_leggings), new Object[]{"EEE", "A A", "A A", 'A', InitItemsEA.arcanite, 'E', InitItemsEA.ebonheart});
+			GameRegistry.addShapedRecipe(new ItemStack(InitItemsEA.arcanite_boots), new Object[]{"E E", "A A", 'A', InitItemsEA.arcanite, 'E', InitItemsEA.ebonheart});
 			
-			GameRegistry.addShapedRecipe(new ItemStack(InitItemsEA.katcheen_helmet), new Object[]{"KKK", "K K", 'K', InitItemsEA.katcheen});
-			GameRegistry.addShapedRecipe(new ItemStack(InitItemsEA.katcheen_chestplate), new Object[]{"K K", "KKK", "KKK", 'K', InitItemsEA.katcheen});
-			GameRegistry.addShapedRecipe(new ItemStack(InitItemsEA.katcheen_leggings), new Object[]{"KKK", "K K", "K K", 'K', InitItemsEA.katcheen});
-			GameRegistry.addShapedRecipe(new ItemStack(InitItemsEA.katcheen_boots), new Object[]{"K K", "K K", 'K', InitItemsEA.katcheen});
+			GameRegistry.addShapedRecipe(new ItemStack(InitItemsEA.katcheen_helmet), new Object[]{"KEK", "K K", 'K', InitItemsEA.katcheen, 'E', InitItemsEA.ebonheart});
+			GameRegistry.addShapedRecipe(new ItemStack(InitItemsEA.katcheen_chestplate), new Object[]{"K K", "KKK", "EEE", 'K', InitItemsEA.katcheen, 'E', InitItemsEA.ebonheart});
+			GameRegistry.addShapedRecipe(new ItemStack(InitItemsEA.katcheen_leggings), new Object[]{"EEE", "K K", "K K", 'K', InitItemsEA.katcheen, 'E', InitItemsEA.ebonheart});
+			GameRegistry.addShapedRecipe(new ItemStack(InitItemsEA.katcheen_boots), new Object[]{"E E", "K K", 'K', InitItemsEA.katcheen, 'E', InitItemsEA.ebonheart});
 			
 		}
 		else

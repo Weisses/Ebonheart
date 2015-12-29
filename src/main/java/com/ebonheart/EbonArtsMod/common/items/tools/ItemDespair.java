@@ -26,8 +26,10 @@ public class ItemDespair extends ItemSword {
 	public boolean hitEntity(ItemStack stack, EntityLivingBase target, EntityLivingBase attacker)
     {
 		Potion potion = Potion.wither;
+		Potion potion2 = Potion.confusion;
 		EntityPlayer playerIn = attacker.getEntityWorld().getPlayerEntityByName(attacker.getName());
-		ItemHelper.addPotionEffectToTarget(target, potion, 5, 1);
+		ItemHelper.addPotionEffectToTarget(target, potion, 4, 1);
+		ItemHelper.addPotionEffectToTarget(target, potion2, 2, 1);
 		stack.damageItem(1, playerIn);
         return true;
         

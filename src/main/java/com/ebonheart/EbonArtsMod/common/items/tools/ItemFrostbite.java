@@ -28,7 +28,7 @@ public class ItemFrostbite extends ItemSword {
 		Potion potion1 = Potion.moveSlowdown;
 		Potion potion2 = Potion.weakness;
 		EntityPlayer playerIn = attacker.getEntityWorld().getPlayerEntityByName(attacker.getName());
-		ItemHelper.addPotionEffectToTarget(target, potion1, 5, 2);
+		ItemHelper.addPotionEffectToTarget(target, potion1, 3, 2);
 		ItemHelper.addPotionEffectToTarget(target, potion2, 5, 2);
 		stack.damageItem(1, playerIn);
         return true;
