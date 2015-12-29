@@ -15,6 +15,15 @@ public class InitRecipesEA {
 	public static void initShapedRecipe()
 	{
 		GameRegistry.addShapedRecipe(new ItemStack(InitBlocksEA.mystic_block_normal), new Object[]{"CCC", "CDC", "CCC", 'D', InitItemsEA.draconium_dust, 'C', Blocks.cobblestone});
+		GameRegistry.addShapedRecipe(new ItemStack(InitBlocksEA.paper_block), new Object[]{"PPP", "PPP", "PPP", 'P', Items.paper});
+		GameRegistry.addShapedRecipe(new ItemStack(Items.paper, 9), new Object[]{"P", 'P', InitBlocksEA.paper_block});
+		
+		GameRegistry.addShapedRecipe(new ItemStack(Blocks.web), new Object[]{"SSS", "S#S", "SSS", 'S', Items.string, '#', Items.slime_ball});
+		GameRegistry.addShapedRecipe(new ItemStack(Items.name_tag), new Object[]{"#", "P", "L", '#', Items.lead, 'P', Items.paper, 'L', Items.leather});
+		GameRegistry.addShapedRecipe(new ItemStack(Blocks.packed_ice), new Object[]{"II", "II", 'I', Blocks.ice});
+		
+		//GameRegistry.addShapedRecipe(new ItemStack(Items.name_tag), new Object[]{"L", "P", "#", '#', Items.lead, 'P', Items.paper, 'L', Items.leather});
+		//GameRegistry.addShapedRecipe(new ItemStack(Items.name_tag), new Object[]{"#", "P", "L", '#', Items.lead, 'P', Items.paper, 'L', Items.leather});
 		
 		//GameRegistry.addShapedRecipe(new ItemStack(InitTileEntitiesEA.Banana_Plant), new Object[]{"DN", "ND", 'D', InitItemsEA.draconium_dust, 'N', Items.quartz});
 		
@@ -202,6 +211,7 @@ public class InitRecipesEA {
 		
 		
 		GameRegistry.addShapelessRecipe(new ItemStack(InitBlocksEA.purified_glowstone), InitItemsEA.draconium_dust, Blocks.glowstone);
+		
 		
 		//GameRegistry.addShapelessRecipe(new ItemStack(InitBlocksEA.mystic_block_normal), InitItemsEA.draconium_dust, Blocks.glowstone);
 		

@@ -10,6 +10,7 @@ import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.item.ItemStack;
 import net.minecraft.item.ItemSword;
 import net.minecraft.potion.Potion;
+import net.minecraft.potion.PotionEffect;
 import net.minecraft.world.World;
 import net.minecraftforge.fml.relauncher.Side;
 import net.minecraftforge.fml.relauncher.SideOnly;
@@ -23,6 +24,8 @@ public class ItemBlazefury extends ItemSword {
 		this.setCreativeTab(EbonArtsMod.tabEbonArtsItems);
 	}
 	
+	
+	
 	public boolean hitEntity(ItemStack stack, EntityLivingBase target, EntityLivingBase attacker)
     {
 		Potion potion = Potion.fireResistance;
@@ -32,6 +35,8 @@ public class ItemBlazefury extends ItemSword {
 		stack.damageItem(1, playerIn);
         return true;
     }
+	
+	
 	
 	@SideOnly(Side.CLIENT)
     public void addInformation(ItemStack stack, EntityPlayer playerIn, List toolTip, boolean advanced) {

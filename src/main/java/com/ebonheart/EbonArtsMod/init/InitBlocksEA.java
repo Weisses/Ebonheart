@@ -17,6 +17,7 @@ import com.ebonheart.EbonArtsMod.common.blocks.basic.BlockInnateMysticNormal;
 import com.ebonheart.EbonArtsMod.common.blocks.basic.BlockKatcheen;
 import com.ebonheart.EbonArtsMod.common.blocks.basic.BlockMystic;
 import com.ebonheart.EbonArtsMod.common.blocks.basic.BlockNecrocite;
+import com.ebonheart.EbonArtsMod.common.blocks.basic.BlockPaper;
 import com.ebonheart.EbonArtsMod.common.blocks.basic.BlockPurifiedGlowstone;
 import com.ebonheart.EbonArtsMod.common.blocks.basic.BlockSoularite;
 import com.ebonheart.EbonArtsMod.common.blocks.basic.BlockVelious;
@@ -132,7 +133,7 @@ public class InitBlocksEA
 	public static Block mystic_block_normal;
 	
 	public static Block purified_glowstone;
-	
+	public static Block paper_block;
 	
 	
 	
@@ -260,6 +261,7 @@ public class InitBlocksEA
 		innate_mystic_block_normal = new BlockInnateMysticNormal();
 		
 		purified_glowstone = new BlockPurifiedGlowstone();
+		paper_block = new BlockPaper();
 		
 		
 		//mystic_furnace = new TestBlockFurnaceEA(false).setUnlocalizedName("machine/mystic_furnace").setCreativeTab(EbonArtsMod.tabEbonArtsBlocks);
@@ -353,6 +355,7 @@ public class InitBlocksEA
 		
 		
 		GameRegistry.registerBlock(purified_glowstone, purified_glowstone.getUnlocalizedName().substring(5));
+		GameRegistry.registerBlock(paper_block, paper_block.getUnlocalizedName().substring(5));
 		
 		
 		
@@ -533,6 +536,7 @@ public class InitBlocksEA
 		
 		
 		registerRender(purified_glowstone);
+		registerRender(paper_block);
 		
 		
 		//registerRender(arcanite_column_normal);

@@ -1,9 +1,11 @@
 package com.ebonheart.EbonArtsMod.proxy;
 
+import net.minecraft.potion.Potion;
 import net.minecraftforge.fml.client.registry.ClientRegistry;
 import net.minecraftforge.fml.common.event.FMLInitializationEvent;
 import net.minecraftforge.fml.common.event.FMLPostInitializationEvent;
 import net.minecraftforge.fml.common.event.FMLPreInitializationEvent;
+
 
 import com.ebonheart.EbonArtsMod.common.tileentities.plants.TileEntityBananaPlant;
 import com.ebonheart.EbonArtsMod.common.tileentities.plants.TileEntityBananaPlantRenderer;
