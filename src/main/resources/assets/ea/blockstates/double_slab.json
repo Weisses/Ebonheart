@@ -1,6 +1,0 @@
-{
-    "variants": {
-        "variant=false": { "model": "ea:gem/draconium/draconium_block" },
-        "variant=true":    { "model": "ea:gem/draconium/draconium_block" }
-    }
-}

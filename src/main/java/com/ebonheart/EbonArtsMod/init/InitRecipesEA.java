@@ -20,7 +20,8 @@ public class InitRecipesEA {
 		
 		GameRegistry.addShapedRecipe(new ItemStack(Blocks.web), new Object[]{"SSS", "S#S", "SSS", 'S', Items.string, '#', Items.slime_ball});
 		GameRegistry.addShapedRecipe(new ItemStack(Items.name_tag), new Object[]{"#", "P", "L", '#', Items.lead, 'P', Items.paper, 'L', Items.leather});
-		GameRegistry.addShapedRecipe(new ItemStack(Blocks.packed_ice), new Object[]{"II", "II", 'I', Blocks.ice});
+		GameRegistry.addShapedRecipe(new ItemStack(Blocks.packed_ice), new Object[]{"III", "III", "III", 'I', Blocks.ice});
+		GameRegistry.addShapedRecipe(new ItemStack(Blocks.ice, 9), new Object[]{"I", 'I', Blocks.packed_ice});
 		
 		//GameRegistry.addShapedRecipe(new ItemStack(Items.name_tag), new Object[]{"L", "P", "#", '#', Items.lead, 'P', Items.paper, 'L', Items.leather});
 		//GameRegistry.addShapedRecipe(new ItemStack(Items.name_tag), new Object[]{"#", "P", "L", '#', Items.lead, 'P', Items.paper, 'L', Items.leather});

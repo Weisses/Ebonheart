@@ -1,8 +1,0 @@
-{
-    "variants": {
-        "half=bottom,variant=false": { "model": "ea:half_slab" },
-        "half=top,variant=false": { "model": "ea:upper_slab" },
-        "half=bottom,variant=true": { "model": "ea:half_slab" },
-        "half=top,variant=true": { "model": "ea:upper_slab" }
-    }
-}

@@ -22,6 +22,7 @@ import com.ebonheart.EbonArtsMod.common.blocks.basic.BlockPurifiedGlowstone;
 import com.ebonheart.EbonArtsMod.common.blocks.basic.BlockSoularite;
 import com.ebonheart.EbonArtsMod.common.blocks.basic.BlockVelious;
 import com.ebonheart.EbonArtsMod.common.blocks.basic.EABlockFence;
+import com.ebonheart.EbonArtsMod.common.blocks.basic.EABlockFenceGate;
 import com.ebonheart.EbonArtsMod.common.blocks.basic.EABlockMeta;
 import com.ebonheart.EbonArtsMod.common.blocks.basic.EABlockStairs;
 import com.ebonheart.EbonArtsMod.common.blocks.basic.EABlockWall;
@@ -37,14 +38,11 @@ import com.ebonheart.EbonArtsMod.references.Reference;
 
 public class InitBlocksEA 
 {
-	//basic ore dust; gem; ingot; ingot
 	public static Block draconium_ore;
 	public static Block velious_ore;
 	public static Block arcanite_ore;
 	public static Block katcheen_ore;
 	public static Block ebon_ore;
-	
-	//advanced ore gem; gem
 	public static Block necrocite_ore;
 	public static Block soularite_ore;
 	public static Block ebon_ore_nether;
@@ -73,15 +71,6 @@ public class InitBlocksEA
 	public static Block necrocite_slab;
 	public static Block soularite_slab;
 	
-	
-	
-	
-	
-	//public static Block pillar;
-	
-
-	
-	
 	public static Block draconium_fence;
 	public static Block velious_fence;
 	public static Block arcanite_fence;
@@ -89,7 +78,12 @@ public class InitBlocksEA
 	public static Block necrocite_fence;
 	public static Block soularite_fence;
 	
-	//public static Block arcanite_fence_gate_normal;
+	public static Block draconium_fence_gate;
+	public static Block velious_fence_gate;
+	public static Block arcanite_fence_gate;
+	public static Block katcheen_fence_gate;
+	public static Block necrocite_fence_gate;
+	public static Block soularite_fence_gate;
 	
 	public static Block draconium_wall;
 	public static Block velious_wall;
@@ -98,16 +92,9 @@ public class InitBlocksEA
 	public static Block necrocite_wall;
 	public static Block soularite_wall;
 	
-	//public static Block arcanite_wall_gate;
-	
 	public static Block innate_mystic_block;
 	public static Block innate_mystic_block_normal;
 	
-	//public static Block arcanite_column_normal;
-	//public static Block arcanite_double_slab;
-	//public static Block arcanite_slab;
-	
-	//public static Block arcanite_stairs;
 	public static Block draconium_stairs;
 	public static Block velious_stairs;
 	public static Block arcanite_stairs;
@@ -137,7 +124,7 @@ public class InitBlocksEA
 	
 	
 	
-	
+	//public static Block arcanite_column_normal;
 	
 	//public static Block purified_mystic_block;
 	
@@ -192,7 +179,6 @@ public class InitBlocksEA
 
 	public static void preInit()
 	{
-		
 		draconium_ore = new BlockOreDraconium(2, 0.4f, 10f);
 		velious_ore = new BlockOreVelious(2, 15f);
 		arcanite_ore = new BlockOreArcanite(2, 20f);
@@ -244,6 +230,13 @@ public class InitBlocksEA
 		necrocite_fence = new EABlockFence("fence/necrocite_fence");
 		soularite_fence = new EABlockFence("fence/soularite_fence");
 		
+		draconium_fence_gate = new EABlockFenceGate("fence/draconium_fence_gate");
+		velious_fence_gate = new EABlockFenceGate("fence/velious_fence_gate");
+		arcanite_fence_gate = new EABlockFenceGate("fence/arcanite_fence_gate");
+		katcheen_fence_gate = new EABlockFenceGate("fence/katcheen_fence_gate");
+		necrocite_fence_gate = new EABlockFenceGate("fence/necrocite_fence_gate");
+		soularite_fence_gate = new EABlockFenceGate("fence/soularite_fence_gate");
+		
 		draconium_wall = new EABlockWall("wall/draconium_wall");
 		velious_wall = new EABlockWall("wall/velious_wall");
 		arcanite_wall = new EABlockWall("wall/arcanite_wall");
@@ -251,18 +244,15 @@ public class InitBlocksEA
 		necrocite_wall = new EABlockWall("wall/necrocite_wall");
 		soularite_wall = new EABlockWall("wall/soularite_wall");
 		
-		//pillar = new EABlockPillar().setUnlocalizedName("pillar");
-		
-		//arcanite_fence_gate_normal = new EABlockFence("fence/arcanite_fence_gate_normal", Material.rock);
-		
-		//arcanite_wall_gate = new BlockFenceGate().setUnlocalizedName("wall/arcanite_wall_gate").setCreativeTab(EbonArtsMod.tabEbonArtsBlocks);
-		
 		mystic_block_normal = new BlockMystic();
 		innate_mystic_block_normal = new BlockInnateMysticNormal();
 		
 		purified_glowstone = new BlockPurifiedGlowstone();
 		paper_block = new BlockPaper();
 		
+		
+		
+		//pillar = new EABlockPillar().setUnlocalizedName("pillar");
 		
 		//mystic_furnace = new TestBlockFurnaceEA(false).setUnlocalizedName("machine/mystic_furnace").setCreativeTab(EbonArtsMod.tabEbonArtsBlocks);
 		//lit_mystic_furnace = new TestBlockFurnaceEA(true).setUnlocalizedName("machine/lit_mystic_furnace").setCreativeTab(EbonArtsMod.tabEbonArtsBlocks);
@@ -281,7 +271,6 @@ public class InitBlocksEA
 	
 	public static void register()
 	{
-		
 		GameRegistry.registerBlock(draconium_ore, draconium_ore.getUnlocalizedName().substring(5));
 		GameRegistry.registerBlock(velious_ore, velious_ore.getUnlocalizedName().substring(5));
 		GameRegistry.registerBlock(arcanite_ore, arcanite_ore.getUnlocalizedName().substring(5));
@@ -339,6 +328,13 @@ public class InitBlocksEA
 		GameRegistry.registerBlock(necrocite_fence, necrocite_fence.getUnlocalizedName().substring(5));
 		GameRegistry.registerBlock(soularite_fence, soularite_fence.getUnlocalizedName().substring(5));
 		
+		GameRegistry.registerBlock(draconium_fence_gate, draconium_fence_gate.getUnlocalizedName().substring(5));
+		GameRegistry.registerBlock(velious_fence_gate, velious_fence_gate.getUnlocalizedName().substring(5));
+		GameRegistry.registerBlock(arcanite_fence_gate, arcanite_fence_gate.getUnlocalizedName().substring(5));
+		GameRegistry.registerBlock(katcheen_fence_gate, katcheen_fence_gate.getUnlocalizedName().substring(5));
+		GameRegistry.registerBlock(necrocite_fence_gate, necrocite_fence_gate.getUnlocalizedName().substring(5));
+		GameRegistry.registerBlock(soularite_fence_gate, soularite_fence_gate.getUnlocalizedName().substring(5));
+		
 		GameRegistry.registerBlock(draconium_wall, draconium_wall.getUnlocalizedName().substring(5));
 		GameRegistry.registerBlock(velious_wall, velious_wall.getUnlocalizedName().substring(5));
 		GameRegistry.registerBlock(arcanite_wall, arcanite_wall.getUnlocalizedName().substring(5));
@@ -346,32 +342,12 @@ public class InitBlocksEA
 		GameRegistry.registerBlock(necrocite_wall, necrocite_wall.getUnlocalizedName().substring(5));
 		GameRegistry.registerBlock(soularite_wall, soularite_wall.getUnlocalizedName().substring(5));
 		
-		
-		//GameRegistry.registerBlock(pillar, pillar.getUnlocalizedName().substring(5));
-		
-		
-		
-		
-		
-		
 		GameRegistry.registerBlock(purified_glowstone, purified_glowstone.getUnlocalizedName().substring(5));
 		GameRegistry.registerBlock(paper_block, paper_block.getUnlocalizedName().substring(5));
 		
 		
 		
-		
-		
-		
-		
-		
-		
-		//GameRegistry.registerBlock(arcanite_fence_gate_normal, arcanite_fence_gate_normal.getUnlocalizedName().substring(5));
-		
-		
-		
-		//GameRegistry.registerBlock(arcanite_wall_gate, arcanite_wall_gate.getUnlocalizedName().substring(5));
-		
-		
+		//GameRegistry.registerBlock(pillar, pillar.getUnlocalizedName().substring(5));
 		
 		//GameRegistry.registerBlock(mystic_furnace, mystic_furnace.getUnlocalizedName().substring(5));
 		//GameRegistry.registerBlock(lit_mystic_furnace, lit_mystic_furnace.getUnlocalizedName().substring(5));
@@ -391,7 +367,6 @@ public class InitBlocksEA
 	
 	public static void registerRenders()
 	{
-		
 		registerRender(draconium_ore);
 		registerRender(velious_ore);
 		registerRender(arcanite_ore);
@@ -481,6 +456,13 @@ public class InitBlocksEA
 		registerRender(necrocite_fence);
 		registerRender(soularite_fence);
 		
+		registerRender(draconium_fence_gate);
+		registerRender(velious_fence_gate);
+		registerRender(arcanite_fence_gate);
+		registerRender(katcheen_fence_gate);
+		registerRender(necrocite_fence_gate);
+		registerRender(soularite_fence_gate);
+		
 		registerRender(draconium_wall);
 		registerRender(velious_wall);
 		registerRender(arcanite_wall);
@@ -488,58 +470,23 @@ public class InitBlocksEA
 		registerRender(necrocite_wall);
 		registerRender(soularite_wall);
 		
+		registerRender(purified_glowstone);
+		registerRender(paper_block);
 		
 		
 		
-		
-		
+		//registerRender(arcanite_column_normal);
 		
 		//registerRender(pillar);
 		
 		
 		
 		
-		
-		
-		//registerRender(arcanite_fence_gate_normal);
-		
-		
-		
-		//registerRender(arcanite_wall_gate);
-		
-		
-		
-		
-		
-		
-		
-		
-		
 		//registerRender(mystic_furnace);
 		//registerRender(lit_mystic_furnace);
-		
+				
 		//registerRender(test_liquid);
 		//registerRender(flowing_test_liquid);
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		registerRender(purified_glowstone);
-		registerRender(paper_block);
-		
-		
-		//registerRender(arcanite_column_normal);
 		
 		//registerRender(InitBlocksEA.arcanite_stairs, 0, "gem/arcanite/arcanite_stairs_white");
 		//registerRender(InitBlocksEA.arcanite_stairs, 1, "gem/arcanite/arcanite_stairs_orange");

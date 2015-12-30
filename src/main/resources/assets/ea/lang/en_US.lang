@@ -88,6 +88,13 @@ tile.fence/katcheen_fence.name=Katcheen Fence
 tile.fence/necrocite_fence.name=Necrocite Fence
 tile.fence/soularite_fence.name=Soularite Fence
 
+tile.fence/draconium_fence_gate.name=Draconium Gate
+tile.fence/velious_fence_gate.name=Velious Gate
+tile.fence/arcanite_fence_gate.name=Arcanite Gate
+tile.fence/katcheen_fence_gate.name=Katcheen Gate
+tile.fence/necrocite_fence_gate.name=Necrocite Gate
+tile.fence/soularite_fence_gate.name=Soularite Gate
+
 tile.wall/draconium_wall.name=Draconium Wall
 tile.wall/velious_wall.name=Velious Wall
 tile.wall/arcanite_wall.name=Arcanite Wall
