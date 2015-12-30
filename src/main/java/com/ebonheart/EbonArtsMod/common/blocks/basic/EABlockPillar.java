@@ -1,5 +1,6 @@
 package com.ebonheart.EbonArtsMod.common.blocks.basic;
 
+import java.util.Iterator;
 import java.util.List;
 
 import com.ebonheart.EbonArtsMod.EbonArtsMod;
@@ -7,9 +8,9 @@ import com.ebonheart.EbonArtsMod.init.InitBlocksEA;
 import com.google.common.base.Predicate;
 
 import net.minecraft.block.Block;
-import net.minecraft.block.BlockLog;
 import net.minecraft.block.BlockNewLog;
 import net.minecraft.block.BlockPlanks;
+import net.minecraft.block.BlockRotatedPillar;
 import net.minecraft.block.material.MapColor;
 import net.minecraft.block.material.Material;
 import net.minecraft.block.properties.IProperty;
@@ -27,17 +28,18 @@ import net.minecraft.world.World;
 import net.minecraftforge.fml.relauncher.Side;
 import net.minecraftforge.fml.relauncher.SideOnly;
 
-public class EABlockPillar extends Block {
+public class EABlockPillar extends BlockRotatedPillar {
 
+	 
 	
     public EABlockPillar()
     {
         super(Material.rock);
         //this.setDefaultState(this.blockState.getBaseState().withProperty(VARIANT, EABlockPillar.EnumType.DEFAULT));
         this.setCreativeTab(EbonArtsMod.tabEbonArtsBlocks);
-        //this.getUnlocalizedName("pillar");
+        this.setUnlocalizedName("column");
     }
-
-    
+    	  
+    	  
 }
 

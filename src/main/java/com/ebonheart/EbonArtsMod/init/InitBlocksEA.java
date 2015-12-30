@@ -24,6 +24,7 @@ import com.ebonheart.EbonArtsMod.common.blocks.basic.BlockVelious;
 import com.ebonheart.EbonArtsMod.common.blocks.basic.EABlockFence;
 import com.ebonheart.EbonArtsMod.common.blocks.basic.EABlockFenceGate;
 import com.ebonheart.EbonArtsMod.common.blocks.basic.EABlockMeta;
+import com.ebonheart.EbonArtsMod.common.blocks.basic.EABlockPillar;
 import com.ebonheart.EbonArtsMod.common.blocks.basic.EABlockStairs;
 import com.ebonheart.EbonArtsMod.common.blocks.basic.EABlockWall;
 import com.ebonheart.EbonArtsMod.common.blocks.basic.ItemBlockSlab;
@@ -122,9 +123,23 @@ public class InitBlocksEA
 	public static Block purified_glowstone;
 	public static Block paper_block;
 	
+	public static Block obsidian_block_brick;
+	public static Block double_obsidian_slab;
+	public static Block obsidian_slab;
+	public static Block obsidian_fence;
+	public static Block obsidian_fence_gate;
+	public static Block obsidian_wall;
+	public static Block obsidian_stairs;
 	
+	public static Block glowstone_block_brick;
+	public static Block double_glowstone_slab;
+	public static Block glowstone_slab;
+	public static Block glowstone_fence;
+	public static Block glowstone_fence_gate;
+	public static Block glowstone_wall;
+	public static Block glowstone_stairs;
 	
-	//public static Block arcanite_column_normal;
+	//public static Block column;
 	
 	//public static Block purified_mystic_block;
 	
@@ -261,7 +276,7 @@ public class InitBlocksEA
 		//flowing_test_liquid = new TestBlockDynamicLiquidEA(Material.water);
 		
 		
-		//arcanite_column_normal = new EABlockPillar().setUnlocalizedName("gem/arcanite/arcanite_column_normal").setCreativeTab(EbonArtsMod.tabEbonArtsBlocks);
+		//column = new EABlockPillar();
 		
 		//purified_mystic_block = new GeneralModBlocks(Material.rock).setUnlocalizedName("purified_mystic_block").setCreativeTab(EbonArtsMod.tabEbonArtsBlocks);
 		
@@ -356,7 +371,7 @@ public class InitBlocksEA
 		//GameRegistry.registerBlock(flowing_test_liquid, flowing_test_liquid.getUnlocalizedName().substring(5));
 		
 		
-		//GameRegistry.registerBlock(arcanite_column_normal, arcanite_column_normal.getUnlocalizedName().substring(5));
+		//GameRegistry.registerBlock(column, column.getUnlocalizedName().substring(5));
 		//GameRegistry.registerBlock(arcanite_double_slab, arcanite_double_slab.getUnlocalizedName().substring(5));
 		//GameRegistry.registerBlock(arcanite_slab, arcanite_slab.getUnlocalizedName().substring(5));
 		
@@ -475,7 +490,7 @@ public class InitBlocksEA
 		
 		
 		
-		//registerRender(arcanite_column_normal);
+		//registerRender(column);
 		
 		//registerRender(pillar);
 		
