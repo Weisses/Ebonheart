@@ -1,6 +1,6 @@
 {
     "parent": "block/wall_gate_open",
     "textures": {
-        "texture": "blocks/obsidian"
+        "texture": "ea:blocks/gems/obsidian/obsidian_block_side"
     }
 }

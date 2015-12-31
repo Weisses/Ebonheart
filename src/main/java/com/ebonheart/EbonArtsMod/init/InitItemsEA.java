@@ -134,8 +134,7 @@ public class InitItemsEA
 		soularite = new ItemSoularite();
 		ebonheart = new ItemEbonheart();
 		
-		obsidian_shards = new ItemObsidianShard();
-		glowstone_shards = new ItemGlowstoneShard();
+		
 		//innate_arcanite = new ItemInnateArcanite("gem/innate_arcanite");
 		
 		
@@ -177,6 +176,8 @@ public class InitItemsEA
 		despair = new ItemDespair("tool/despair", specialToolMaterial);
 		souleater = new ItemSouleater("tool/souleater", specialToolMaterial);
 		
+		obsidian_shards = new ItemObsidianShard();
+		glowstone_shards = new ItemGlowstoneShard();
 		
 		//test_liquid_bucket = new ItemBucket(InitBlocksEA.test_liquid).setUnlocalizedName("test_liquid_bucket").setCreativeTab(EbonArtsMod.tabEbonArtsItems).setContainerItem(test_liquid_bucket);
 		
@@ -208,8 +209,6 @@ public class InitItemsEA
 		GameRegistry.registerItem(soularite, soularite.getUnlocalizedName().substring(5));
 		GameRegistry.registerItem(ebonheart, ebonheart.getUnlocalizedName().substring(5));
 		
-		GameRegistry.registerItem(obsidian_shards, obsidian_shards.getUnlocalizedName().substring(5));
-		GameRegistry.registerItem(glowstone_shards, glowstone_shards.getUnlocalizedName().substring(5));
 		
 		//GameRegistry.registerItem(innate_arcanite, innate_arcanite.getUnlocalizedName().substring(5));
 		
@@ -251,6 +250,9 @@ public class InitItemsEA
 		GameRegistry.registerItem(souleater, souleater.getUnlocalizedName().substring(5));
 		
 		
+		GameRegistry.registerItem(obsidian_shards, obsidian_shards.getUnlocalizedName().substring(5));
+		GameRegistry.registerItem(glowstone_shards, glowstone_shards.getUnlocalizedName().substring(5));
+		
 		
 		//GameRegistry.registerItem(mystic_dust, mystic_dust.getUnlocalizedName().substring(5));
 		//GameRegistry.registerItem(purified_mystic_dust, purified_mystic_dust.getUnlocalizedName().substring(5));
@@ -279,8 +281,6 @@ public class InitItemsEA
 		registerRender(soularite);
 		registerRender(ebonheart);
 		
-		registerRender(obsidian_shards);
-		registerRender(glowstone_shards);
 		
 		//registerRender(innate_arcanite);
 		
@@ -319,6 +319,10 @@ public class InitItemsEA
 		registerRender(blazefury);
 		registerRender(despair);
 		registerRender(souleater);
+		
+		
+		registerRender(obsidian_shards);
+		registerRender(glowstone_shards);
 		
 		//registerRender(test_liquid_bucket);
 		

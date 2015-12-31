@@ -1,12 +1,6 @@
 {
-    "parent": "block/cube",
+    "parent": "block/cube_all",
     "textures": {
-        "particle": "ea:blocks/gems/obsidian_brick_overlay",
-        "down": "ea:blocks/gems/obsidian_brick_overlay",
-        "up": "ea:blocks/gems/obsidian_brick_overlay",
-        "north": "ea:blocks/gems/obsidian_brick_overlay",
-        "east": "ea:blocks/gems/obsidian_brick_overlay",
-        "south": "ea:blocks/gems/obsidian_brick_overlay",
-        "west": "ea:blocks/gems/obsidian_brick_overlay"
+        "all": "ea:blocks/gems/obsidian/obsidian_block_brick"
     }
 }

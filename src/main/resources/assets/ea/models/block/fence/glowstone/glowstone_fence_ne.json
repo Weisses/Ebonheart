@@ -1,6 +1,6 @@
 {
 	"parent": "block/fence_ne",
 	"textures": {
-		"texture": "blocks/glowstone"
+		"texture": "ea:blocks/gems/glowstone/glowstone_block_side"
 	}
 }

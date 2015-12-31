@@ -70,12 +70,12 @@ tile.gem/mystic/innate_mystic_block.green.name=Green Innate Mystic Block
 tile.gem/mystic/innate_mystic_block.red.name=Red Innate Mystic Block
 tile.gem/mystic/innate_mystic_block.black.name=Black Innate Mystic Block
 
-tile.gem/draconium/draconium_block.name=Draconium Block
-tile.gem/velious/velious_block.name=Velious Block
-tile.gem/arcanite/arcanite_block.name=Arcanite Block
-tile.gem/katcheen/katcheen_block.name=Katcheen Block
-tile.gem/necrocite/necrocite_block.name=Necrocite Block
-tile.gem/soularite/soularite_block.name=Soularite Block
+tile.gem/draconium/draconium_block.name=Block of Draconium
+tile.gem/velious/velious_block.name=Block of Velious
+tile.gem/arcanite/arcanite_block.name=Block of Arcanite
+tile.gem/katcheen/katcheen_block.name=Block of Katcheen
+tile.gem/necrocite/necrocite_block.name=Block of Necrocite
+tile.gem/soularite/soularite_block.name=Block of Soularite
 
 tile.gem/draconium/draconium_block_brick.name=Draconium Brick
 tile.gem/velious/velious_block_brick.name=Velious Brick
@@ -120,22 +120,24 @@ tile.slab/necrocite/necrocite_slab.name=Necrocite Slab
 tile.slab/soularite/soularite_slab.name=Soularite Slab
 
 tile.fence/innate_arcanite_fence_normal.name=Innate Arcanite Fence
-tile.purified_glowstone.name=Purified Glowstone
-tile.paper_block.name=Paper Block
 
-tile.gem/glowstone/glowstone_block_brick.name=Glowstone Brick
-tile.fence/glowstone_fence.name=Glowstone Fence
-tile.fence/glowstone_fence_gate.name=Glowstone Gate
-tile.wall/glowstone_wall.name=Glowstone Wall
-tile.stairs/glowstone_stairs.name=Glowstone Stairs
-tile.slab/glowstone/glowstone_slab.name=Glowstone Slab
+tile.paper_block.name=Block of Paper
 
-tile.gem/obsidian/obsidian_block_brick.name=Obsidian Brick
-tile.fence/obsidian_fence.name=Obsidian Fence
-tile.fence/obsidian_fence_gate.name=Obsidian Gate
-tile.wall/obsidian_wall.name=Obsidian Wall
-tile.stairs/obsidian_stairs.name=Obsidian Stairs
-tile.slab/obsidian/obsidian_slab.name=Obsidian Slab
+tile.gem/glowstone/glowstone_block.name=Block of Purified Glowstone
+tile.gem/glowstone/glowstone_block_brick.name=Purified Glowstone Brick
+tile.fence/glowstone_fence.name=Purified Glowstone Fence
+tile.fence/glowstone_fence_gate.name=Purified Glowstone Gate
+tile.wall/glowstone_wall.name=Purified Glowstone Wall
+tile.stairs/glowstone_stairs.name=Purified Glowstone Stairs
+tile.slab/glowstone/glowstone_slab.name=Purified Glowstone Slab
+
+tile.gem/obsidian/obsidian_block.name=Block of Purified Obsidian
+tile.gem/obsidian/obsidian_block_brick.name=Purified Obsidian Brick
+tile.fence/obsidian_fence.name=Purified Obsidian Fence
+tile.fence/obsidian_fence_gate.name=Purified Obsidian Gate
+tile.wall/obsidian_wall.name=Purified Obsidian Wall
+tile.stairs/obsidian_stairs.name=Purified Obsidian Stairs
+tile.slab/obsidian/obsidian_slab.name=Purified Obsidian Slab
 
 //-----Tools-----
 item.tool/arcanite_pickaxe.name=Arcanite Pickaxe
@@ -216,6 +218,9 @@ achievement.ea:despair.desc=Craft the ultimate weapon, Despair.
 
 achievement.ea:souleater=From death to life!
 achievement.ea:souleater.desc=Craft the ultimate weapon, Souleater.
+
+achievement.ea:nether_bound=Nether bound!
+achievement.ea:nether_bound.desc=Craft either Obsidian or Glowstone Shards.
 
 achievement.ea:smelt_draconium_dust=From dragons to dust!
 achievement.ea:smelt_draconium_dust.desc=Smelt Draconium Dust.

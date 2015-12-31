@@ -1,8 +1,8 @@
 {
     "parent": "block/half_slab",
     "textures": {
-        "bottom": "ea:blocks/gems/glowstone_slab",
-        "top": "ea:blocks/gems/glowstone_slab",
-        "side": "ea:blocks/gems/glowstone_slab_overlay"
+        "bottom": "ea:blocks/gems/glowstone/glowstone_block_bottom",
+        "top": "ea:blocks/gems/glowstone/glowstone_block_top",
+        "side": "ea:blocks/gems/glowstone/glowstone_block_slab"
     }
 }

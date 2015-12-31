@@ -1,6 +1,6 @@
 {
     "parent": "block/wall_nsew",
     "textures": {
-        "wall": "blocks/obsidian"
+        "wall": "ea:blocks/gems/obsidian/obsidian_block_side"
     }
 }

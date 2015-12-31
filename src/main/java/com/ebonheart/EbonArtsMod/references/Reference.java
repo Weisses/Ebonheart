@@ -29,5 +29,6 @@ public class Reference
 	public static final String DESPAIR = "despair";
 	public static final String SOULEATER = "souleater";
 	
+	public static final String NETHER_BOUND = "nether_bound";
 	
 }

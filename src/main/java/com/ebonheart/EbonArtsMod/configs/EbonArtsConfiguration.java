@@ -9,6 +9,7 @@ public class EbonArtsConfiguration
 {
 
 	public static boolean horseRecipe;
+	public static boolean vanillaRecipe;
 	public static boolean toolRecipe;
 	public static boolean weaponRecipe;
 	public static boolean armorRecipe;
@@ -17,6 +18,8 @@ public class EbonArtsConfiguration
 	public static boolean decraftRecipe2;
 	public static final boolean HORSERECIPE_DEFAULT = false;
 	public static final String HORSERECIPE_NAME = "Disable crafting Horse Armor/Saddles?";
+	public static final boolean VANILLARECIPE_DEFAULT = false;
+	public static final String VANILLARECIPE_NAME = "Disable crafting special vanilla items?";
 	public static final boolean TOOLRECIPE_DEFAULT = false;
 	public static final String TOOLRECIPE_NAME = "Disable crafting Mod Tools?";
 	public static final boolean WEAPONRECIPE_DEFAULT = false;
@@ -39,6 +42,7 @@ public class EbonArtsConfiguration
 		
 		EbonArtsMod.config.addCustomCategoryComment(RECIPES, "Enable, disable, or modify item and block recipes.");
 		horseRecipe = EbonArtsMod.config.get(RECIPES, HORSERECIPE_NAME, HORSERECIPE_DEFAULT).getBoolean(HORSERECIPE_DEFAULT);
+		vanillaRecipe = EbonArtsMod.config.get(RECIPES, VANILLARECIPE_NAME, VANILLARECIPE_DEFAULT).getBoolean(VANILLARECIPE_DEFAULT);
 		toolRecipe = EbonArtsMod.config.get(RECIPES, TOOLRECIPE_NAME, TOOLRECIPE_DEFAULT).getBoolean(TOOLRECIPE_DEFAULT);
 		weaponRecipe = EbonArtsMod.config.get(RECIPES, WEAPONRECIPE_NAME, WEAPONRECIPE_DEFAULT).getBoolean(WEAPONRECIPE_DEFAULT);
 		armorRecipe = EbonArtsMod.config.get(RECIPES, ARMORRECIPE_NAME, ARMORRECIPE_DEFAULT).getBoolean(ARMORRECIPE_DEFAULT);

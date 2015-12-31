@@ -40,6 +40,8 @@ public class InitAchievementsEA
 	public static Achievement blazefury;
 	public static Achievement despair;
 	public static Achievement souleater;
+	
+	public static Achievement nether_bound;
 	//public static Achievement smeltMysticDust;
 	//public static Achievement craftEbonSigil;
 	
@@ -65,6 +67,8 @@ public class InitAchievementsEA
 		blazefury = new AchievementHelper(Reference.BLAZEFURY, 1, 5, InitItemsEA.blazefury, (Achievement)empowered_sword).setSpecial();//.func_180788_c();
 		despair = new AchievementHelper(Reference.DESPAIR, 3, 4, InitItemsEA.despair, (Achievement)empowered_sword).setSpecial();//.func_180788_c();
 		souleater = new AchievementHelper(Reference.SOULEATER, 3, 3, InitItemsEA.souleater, (Achievement)empowered_sword).setSpecial();//.func_180788_c();
+		
+		nether_bound = new AchievementHelper(Reference.NETHER_BOUND, 1, -2, InitItemsEA.glowstone_shards, (Achievement)null).setSpecial();//.func_180788_c();
 		
 	//mine_arcanite_ore = new Achievement("achievement.mine_arcanite_ore", "mine_arcanite_ore", -1, -1, InitItemsEA.arcanite, (Achievement)null).func_180788_c();
 	//smeltMysticDust = new Achievement("achievement.smeltMysticDust", "smeltMysticDust", -3, -1, EbonArtsBlocks.arcanite_ore, mineMysticDust).func_180788_c();

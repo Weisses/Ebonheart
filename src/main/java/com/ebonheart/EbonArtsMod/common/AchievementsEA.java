@@ -63,6 +63,15 @@ public class AchievementsEA {
 	@SubscribeEvent
 	public void onCraft(PlayerEvent.ItemCraftedEvent event) 
 	{
+		if(event.crafting.getItem() == InitItemsEA.obsidian_shards) 
+		{
+			event.player.triggerAchievement(InitAchievementsEA.nether_bound);
+		}
+		if(event.crafting.getItem() == InitItemsEA.glowstone_shards) 
+		{
+			event.player.triggerAchievement(InitAchievementsEA.nether_bound);
+		}
+		
 		if(event.crafting.getItem() == InitItemsEA.shimmering_disc) 
 		{
 			event.player.triggerAchievement(InitAchievementsEA.shimmering_disc);

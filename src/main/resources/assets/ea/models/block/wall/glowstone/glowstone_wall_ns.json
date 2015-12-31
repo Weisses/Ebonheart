@@ -1,6 +1,6 @@
 {
     "parent": "block/wall_ns",
     "textures": {
-        "wall": "blocks/glowstone"
+        "wall": "ea:blocks/gems/glowstone/glowstone_block_side"
     }
 }

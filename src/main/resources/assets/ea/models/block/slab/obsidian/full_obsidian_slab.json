@@ -1,12 +1,12 @@
 {
     "parent": "block/cube",
     "textures": {
-        "particle": "ea:blocks/gems/obsidian_slab_overlay",
-        "down": "ea:blocks/gems/obsidian_slab",
-        "up": "ea:blocks/gems/obsidian_slab",
-        "north": "ea:blocks/gems/obsidian_slab_overlay",
-        "east": "ea:blocks/gems/obsidian_slab_overlay",
-        "south": "ea:blocks/gems/obsidian_slab_overlay",
-        "west": "ea:blocks/gems/obsidian_slab_overlay"
+        "particle": "ea:blocks/gems/obsidian/obsidian_block_slab",
+        "down": "ea:blocks/gems/obsidian/obsidian_block_bottom",
+        "up": "ea:blocks/gems/obsidian/obsidian_block_top",
+        "north": "ea:blocks/gems/obsidian/obsidian_block_slab",
+        "east": "ea:blocks/gems/obsidian/obsidian_block_slab",
+        "south": "ea:blocks/gems/obsidian/obsidian_block_slab",
+        "west": "ea:blocks/gems/obsidian/obsidian_block_slab"
     }
 }

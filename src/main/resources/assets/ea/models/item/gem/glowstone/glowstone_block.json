@@ -1,5 +1,5 @@
 {
-    "parent": "ea:block/purified_glowstone",
+    "parent": "ea:block/gem/glowstone/glowstone_block",
     "display": {
         "thirdperson": {
             "rotation": [ 10, -45, 170 ],

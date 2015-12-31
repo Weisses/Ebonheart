@@ -23,8 +23,8 @@ public class ItemGlowstoneShard extends Item {
 	
 	@SideOnly(Side.CLIENT)
     public void addInformation(ItemStack stack, EntityPlayer playerIn, List toolTip, boolean advanced) {
-		toolTip.add("Sharp, slate like material that");
-		toolTip.add("is stronger than iron.");
+		toolTip.add("Crystalline imbued pieces");
+		toolTip.add("of glowstone.");
 		
 	}
 }
