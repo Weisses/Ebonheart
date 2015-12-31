@@ -12,11 +12,13 @@ import com.ebonheart.EbonArtsMod.api.meta.ItemBlockMeta;
 import com.ebonheart.EbonArtsMod.common.blocks.basic.BlockArcanite;
 import com.ebonheart.EbonArtsMod.common.blocks.basic.BlockDoubleSlab;
 import com.ebonheart.EbonArtsMod.common.blocks.basic.BlockDraconium;
+import com.ebonheart.EbonArtsMod.common.blocks.basic.BlockGlowstone;
 import com.ebonheart.EbonArtsMod.common.blocks.basic.BlockHalfSlab;
 import com.ebonheart.EbonArtsMod.common.blocks.basic.BlockInnateMysticNormal;
 import com.ebonheart.EbonArtsMod.common.blocks.basic.BlockKatcheen;
 import com.ebonheart.EbonArtsMod.common.blocks.basic.BlockMystic;
 import com.ebonheart.EbonArtsMod.common.blocks.basic.BlockNecrocite;
+import com.ebonheart.EbonArtsMod.common.blocks.basic.BlockObsidian;
 import com.ebonheart.EbonArtsMod.common.blocks.basic.BlockPaper;
 import com.ebonheart.EbonArtsMod.common.blocks.basic.BlockPurifiedGlowstone;
 import com.ebonheart.EbonArtsMod.common.blocks.basic.BlockSoularite;
@@ -262,10 +264,24 @@ public class InitBlocksEA
 		mystic_block_normal = new BlockMystic();
 		innate_mystic_block_normal = new BlockInnateMysticNormal();
 		
+		obsidian_block_brick = new BlockObsidian("gem/obsidian/obsidian_block_brick");
+		double_obsidian_slab = new BlockDoubleSlab("slab/obsidian/double_obsidian_slab");
+		obsidian_slab = new BlockHalfSlab("slab/obsidian/obsidian_slab");
+		obsidian_stairs = new EABlockStairs("stairs/obsidian_stairs");
+		obsidian_fence = new EABlockFence("fence/obsidian_fence");
+		obsidian_fence_gate = new EABlockFenceGate("fence/obsidian_fence_gate");
+		obsidian_wall = new EABlockWall("wall/obsidian_wall");
+		
+		glowstone_block_brick = new BlockGlowstone("gem/glowstone/glowstone_block_brick").setLightLevel(1.0f);
+		double_glowstone_slab = new BlockDoubleSlab("slab/glowstone/double_glowstone_slab").setLightLevel(1.0f);
+		glowstone_slab = new BlockHalfSlab("slab/glowstone/glowstone_slab").setLightLevel(1.0f);
+		glowstone_stairs = new EABlockStairs("stairs/glowstone_stairs").setLightLevel(1.0f);
+		glowstone_fence = new EABlockFence("fence/glowstone_fence").setLightLevel(1.0f);
+		glowstone_fence_gate = new EABlockFenceGate("fence/glowstone_fence_gate").setLightLevel(1.0f);
+		glowstone_wall = new EABlockWall("wall/glowstone_wall").setLightLevel(1.0f);
+		
 		purified_glowstone = new BlockPurifiedGlowstone();
 		paper_block = new BlockPaper();
-		
-		
 		
 		//pillar = new EABlockPillar().setUnlocalizedName("pillar");
 		
@@ -357,8 +373,28 @@ public class InitBlocksEA
 		GameRegistry.registerBlock(necrocite_wall, necrocite_wall.getUnlocalizedName().substring(5));
 		GameRegistry.registerBlock(soularite_wall, soularite_wall.getUnlocalizedName().substring(5));
 		
+		GameRegistry.registerBlock(obsidian_block_brick, obsidian_block_brick.getUnlocalizedName().substring(5));
+		GameRegistry.registerBlock(double_obsidian_slab, ItemBlockSlab.class, "slab/obsidian/double_obsidian_slab", obsidian_slab, double_obsidian_slab, true);
+		GameRegistry.registerBlock(obsidian_slab, ItemBlockSlab.class, "slab/obsidian/obsidian_slab", obsidian_slab, double_obsidian_slab, false);
+		GameRegistry.registerBlock(obsidian_stairs, obsidian_stairs.getUnlocalizedName().substring(5));
+		GameRegistry.registerBlock(obsidian_fence, obsidian_fence.getUnlocalizedName().substring(5));
+		GameRegistry.registerBlock(obsidian_fence_gate, obsidian_fence_gate.getUnlocalizedName().substring(5));
+		GameRegistry.registerBlock(obsidian_wall, obsidian_wall.getUnlocalizedName().substring(5));
+		
+		GameRegistry.registerBlock(glowstone_block_brick, glowstone_block_brick.getUnlocalizedName().substring(5));
+		GameRegistry.registerBlock(double_glowstone_slab, ItemBlockSlab.class, "slab/glowstone/double_glowstone_slab", glowstone_slab, double_glowstone_slab, true);
+		GameRegistry.registerBlock(glowstone_slab, ItemBlockSlab.class, "slab/glowstone/glowstone_slab", glowstone_slab, double_glowstone_slab, false);
+		GameRegistry.registerBlock(glowstone_stairs, glowstone_stairs.getUnlocalizedName().substring(5));
+		GameRegistry.registerBlock(glowstone_fence, glowstone_fence.getUnlocalizedName().substring(5));
+		GameRegistry.registerBlock(glowstone_fence_gate, glowstone_fence_gate.getUnlocalizedName().substring(5));
+		GameRegistry.registerBlock(glowstone_wall, glowstone_wall.getUnlocalizedName().substring(5));
+		
 		GameRegistry.registerBlock(purified_glowstone, purified_glowstone.getUnlocalizedName().substring(5));
 		GameRegistry.registerBlock(paper_block, paper_block.getUnlocalizedName().substring(5));
+		
+		
+		
+		
 		
 		
 		
@@ -485,10 +521,24 @@ public class InitBlocksEA
 		registerRender(necrocite_wall);
 		registerRender(soularite_wall);
 		
+		registerRender(obsidian_block_brick);
+		registerRender(double_obsidian_slab);
+		registerRender(obsidian_slab);
+		registerRender(obsidian_stairs);
+		registerRender(obsidian_fence);
+		registerRender(obsidian_fence_gate);
+		registerRender(obsidian_wall);
+		
+		registerRender(glowstone_block_brick);
+		registerRender(double_glowstone_slab);
+		registerRender(glowstone_slab);
+		registerRender(glowstone_stairs);
+		registerRender(glowstone_fence);
+		registerRender(glowstone_fence_gate);
+		registerRender(glowstone_wall);
+		
 		registerRender(purified_glowstone);
 		registerRender(paper_block);
-		
-		
 		
 		//registerRender(column);
 		

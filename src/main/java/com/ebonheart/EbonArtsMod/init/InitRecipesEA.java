@@ -88,6 +88,23 @@ public class InitRecipesEA {
 		GameRegistry.addShapedRecipe(new ItemStack(InitBlocksEA.soularite_wall, 3), new Object[]{"SSS", "SSS", 'S', InitBlocksEA.soularite_block});
 		GameRegistry.addShapedRecipe(new ItemStack(InitBlocksEA.soularite_block_brick, 4), new Object[]{"SS", "SS", 'S', InitBlocksEA.soularite_block});
 		
+		//GameRegistry.addShapedRecipe(new ItemStack(InitBlocksEA.glowstone_slab, 6), new Object[]{"SSS", 'S', InitBlocksEA.glowstone_block});
+		//GameRegistry.addShapedRecipe(new ItemStack(InitBlocksEA.glowstone_stairs, 3), new Object[]{"  S", " SS", "SSS", 'S', InitBlocksEA.glowstone_block});
+		//GameRegistry.addShapedRecipe(new ItemStack(InitBlocksEA.glowstone_stairs, 3), new Object[]{"S  ", "SS ", "SSS", 'S', InitBlocksEA.glowstone_block});
+		//GameRegistry.addShapedRecipe(new ItemStack(InitBlocksEA.glowstone_stairs, 3), new Object[]{"SSS", " SS", "  S", 'S', InitBlocksEA.glowstone_block});
+		//GameRegistry.addShapedRecipe(new ItemStack(InitBlocksEA.glowstone_stairs, 3), new Object[]{"SSS", "SS ", "S  ", 'S', InitBlocksEA.glowstone_block});
+		//GameRegistry.addShapedRecipe(new ItemStack(InitBlocksEA.glowstone_fence, 3), new Object[]{"S#S", "S#S", 'S', InitBlocksEA.glowstone_block, '#', InitItemsEA.glowstone});
+		//GameRegistry.addShapedRecipe(new ItemStack(InitBlocksEA.glowstone_wall, 3), new Object[]{"SSS", "SSS", 'S', InitBlocksEA.glowstone_block});
+		//GameRegistry.addShapedRecipe(new ItemStack(InitBlocksEA.glowstone_block_brick, 4), new Object[]{"SS", "SS", 'S', InitBlocksEA.glowstone_block});
+		
+		//GameRegistry.addShapedRecipe(new ItemStack(InitBlocksEA.obsidian_slab, 6), new Object[]{"SSS", 'S', InitBlocksEA.obsidian_block});
+		//GameRegistry.addShapedRecipe(new ItemStack(InitBlocksEA.obsidian_stairs, 3), new Object[]{"  S", " SS", "SSS", 'S', InitBlocksEA.obsidian_block});
+		//GameRegistry.addShapedRecipe(new ItemStack(InitBlocksEA.obsidian_stairs, 3), new Object[]{"S  ", "SS ", "SSS", 'S', InitBlocksEA.obsidian_block});
+		//GameRegistry.addShapedRecipe(new ItemStack(InitBlocksEA.obsidian_stairs, 3), new Object[]{"SSS", " SS", "  S", 'S', InitBlocksEA.obsidian_block});
+		//GameRegistry.addShapedRecipe(new ItemStack(InitBlocksEA.obsidian_stairs, 3), new Object[]{"SSS", "SS ", "S  ", 'S', InitBlocksEA.obsidian_block});
+		//GameRegistry.addShapedRecipe(new ItemStack(InitBlocksEA.obsidian_fence, 3), new Object[]{"S#S", "S#S", 'S', InitBlocksEA.obsidian_block, '#', InitItemsEA.obsidian});
+		//GameRegistry.addShapedRecipe(new ItemStack(InitBlocksEA.obsidian_wall, 3), new Object[]{"SSS", "SSS", 'S', InitBlocksEA.obsidian_block});
+		//GameRegistry.addShapedRecipe(new ItemStack(InitBlocksEA.obsidian_block_brick, 4), new Object[]{"SS", "SS", 'S', InitBlocksEA.obsidian_block});
 		
 		
 		if(!EbonArtsConfiguration.toolRecipe)

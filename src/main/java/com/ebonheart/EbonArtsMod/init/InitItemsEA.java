@@ -15,8 +15,10 @@ import com.ebonheart.EbonArtsMod.common.items.resources.ItemArcanite;
 import com.ebonheart.EbonArtsMod.common.items.resources.ItemDraconiumDust;
 import com.ebonheart.EbonArtsMod.common.items.resources.ItemDragonFruit;
 import com.ebonheart.EbonArtsMod.common.items.resources.ItemEbonheart;
+import com.ebonheart.EbonArtsMod.common.items.resources.ItemGlowstoneShard;
 import com.ebonheart.EbonArtsMod.common.items.resources.ItemKatcheen;
 import com.ebonheart.EbonArtsMod.common.items.resources.ItemNecrocite;
+import com.ebonheart.EbonArtsMod.common.items.resources.ItemObsidianShard;
 import com.ebonheart.EbonArtsMod.common.items.resources.ItemSoularite;
 import com.ebonheart.EbonArtsMod.common.items.resources.ItemVelious;
 import com.ebonheart.EbonArtsMod.common.items.tools.ItemAxeEA;
@@ -44,6 +46,8 @@ public class InitItemsEA
 	public static Item soularite;
 	public static Item ebonheart;
 	
+	public static Item obsidian_shards;
+	public static Item glowstone_shards;
 	//public static Item innate_arcanite;
 	
 	
@@ -129,6 +133,9 @@ public class InitItemsEA
 		necrocite = new ItemNecrocite();
 		soularite = new ItemSoularite();
 		ebonheart = new ItemEbonheart();
+		
+		obsidian_shards = new ItemObsidianShard();
+		glowstone_shards = new ItemGlowstoneShard();
 		//innate_arcanite = new ItemInnateArcanite("gem/innate_arcanite");
 		
 		
@@ -201,6 +208,9 @@ public class InitItemsEA
 		GameRegistry.registerItem(soularite, soularite.getUnlocalizedName().substring(5));
 		GameRegistry.registerItem(ebonheart, ebonheart.getUnlocalizedName().substring(5));
 		
+		GameRegistry.registerItem(obsidian_shards, obsidian_shards.getUnlocalizedName().substring(5));
+		GameRegistry.registerItem(glowstone_shards, glowstone_shards.getUnlocalizedName().substring(5));
+		
 		//GameRegistry.registerItem(innate_arcanite, innate_arcanite.getUnlocalizedName().substring(5));
 		
 		//GameRegistry.registerItem(arcanite_shard, arcanite_shard.getUnlocalizedName().substring(5));
@@ -268,6 +278,9 @@ public class InitItemsEA
 		registerRender(necrocite);
 		registerRender(soularite);
 		registerRender(ebonheart);
+		
+		registerRender(obsidian_shards);
+		registerRender(glowstone_shards);
 		
 		//registerRender(innate_arcanite);
 		

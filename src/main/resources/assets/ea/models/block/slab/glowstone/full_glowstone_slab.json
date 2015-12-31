@@ -1,0 +1,12 @@
+{
+    "parent": "block/cube",
+    "textures": {
+        "particle": "ea:blocks/gems/glowstone_slab_overlay",
+        "down": "ea:blocks/gems/glowstone_slab",
+        "up": "ea:blocks/gems/glowstone_slab",
+        "north": "ea:blocks/gems/glowstone_slab_overlay",
+        "east": "ea:blocks/gems/glowstone_slab_overlay",
+        "south": "ea:blocks/gems/glowstone_slab_overlay",
+        "west": "ea:blocks/gems/glowstone_slab_overlay"
+    }
+}

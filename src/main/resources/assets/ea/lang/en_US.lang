@@ -13,6 +13,9 @@ item.gem/soularite.name=Soularite
 item.gem/innate_arcanite.name=Innate Arcanite
 item.shimmering_disc.name=Shimmering Disc
 
+item.gem/obsidian_shard.name=Obsidian Shard
+item.gem/glowstone_shard.name=Glowstone Shard
+
 item.gem/arcanite_shard.name=Arcanite Shard
 item.ebon_sigil.name=Ebon Sigil
 
@@ -74,12 +77,12 @@ tile.gem/katcheen/katcheen_block.name=Katcheen Block
 tile.gem/necrocite/necrocite_block.name=Necrocite Block
 tile.gem/soularite/soularite_block.name=Soularite Block
 
-tile.gem/draconium/draconium_block_brick.name=Draconium Block Brick
-tile.gem/velious/velious_block_brick.name=Velious Block Brick
-tile.gem/arcanite/arcanite_block_brick.name=Arcanite Block Brick
-tile.gem/katcheen/katcheen_block_brick.name=Katcheen Block Brick
-tile.gem/necrocite/necrocite_block_brick.name=Necrocite Block Brick
-tile.gem/soularite/soularite_block_brick.name=Soularite Block Brick
+tile.gem/draconium/draconium_block_brick.name=Draconium Brick
+tile.gem/velious/velious_block_brick.name=Velious Brick
+tile.gem/arcanite/arcanite_block_brick.name=Arcanite Brick
+tile.gem/katcheen/katcheen_block_brick.name=Katcheen Brick
+tile.gem/necrocite/necrocite_block_brick.name=Necrocite Brick
+tile.gem/soularite/soularite_block_brick.name=Soularite Brick
 
 tile.fence/draconium_fence.name=Draconium Fence
 tile.fence/velious_fence.name=Velious Fence
@@ -120,7 +123,19 @@ tile.fence/innate_arcanite_fence_normal.name=Innate Arcanite Fence
 tile.purified_glowstone.name=Purified Glowstone
 tile.paper_block.name=Paper Block
 
+tile.gem/glowstone/glowstone_block_brick.name=Glowstone Brick
+tile.fence/glowstone_fence.name=Glowstone Fence
+tile.fence/glowstone_fence_gate.name=Glowstone Gate
+tile.wall/glowstone_wall.name=Glowstone Wall
+tile.stairs/glowstone_stairs.name=Glowstone Stairs
+tile.slab/glowstone/glowstone_slab.name=Glowstone Slab
 
+tile.gem/obsidian/obsidian_block_brick.name=Obsidian Brick
+tile.fence/obsidian_fence.name=Obsidian Fence
+tile.fence/obsidian_fence_gate.name=Obsidian Gate
+tile.wall/obsidian_wall.name=Obsidian Wall
+tile.stairs/obsidian_stairs.name=Obsidian Stairs
+tile.slab/obsidian/obsidian_slab.name=Obsidian Slab
 
 //-----Tools-----
 item.tool/arcanite_pickaxe.name=Arcanite Pickaxe
