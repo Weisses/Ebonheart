@@ -28,7 +28,7 @@ public class BlockOreVelious extends Block {
 		this.setCreativeTab(EbonArtsMod.tabEbonArtsBlocks);
 		this.setHarvestLevel("pickaxe", harvestlevel); //("pickaxe", 2) is iron
 		this.setHardness(hardness);
-		this.setResistance(1000f);
+		this.setResistance(5f);
 		this.setStepSound(soundTypeStone);
 	}
 

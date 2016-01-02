@@ -22,7 +22,7 @@ public class BlockMultiOre extends Block {
 		this.setCreativeTab(EbonArtsMod.tabEbonArtsBlocks);
 		this.setStepSound(soundTypeStone);
 		this.setHardness(40.0f);
-		this.setResistance(1500f);
+		this.setResistance(2000f);
 		this.setHarvestLevel("pickaxe", 3);
 	}
 

@@ -18,8 +18,8 @@ public class BlockObsidian extends Block {
 		this.setUnlocalizedName(unlocalizedName);
 		this.setCreativeTab(EbonArtsMod.tabEbonArtsBlocks);
 		this.setHarvestLevel("pickaxe", 2);
-		this.setHardness(10f);
-		this.setResistance(1500f);
+		//this.setHardness(10f);
+		//this.setResistance(2000f);
 		this.setStepSound(soundTypeStone);
 	}
 }

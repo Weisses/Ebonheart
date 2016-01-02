@@ -15,8 +15,8 @@ public class EABlockFence extends BlockFence {
 		this.setUnlocalizedName(unlocalizedName);
 		this.setCreativeTab(EbonArtsMod.tabEbonArtsBlocks);
 		this.setHarvestLevel("pickaxe", 2);
-		this.setHardness(5f);
-		this.setResistance(1000f);
+		//this.setHardness(5f);
+		//this.setResistance(1000f);
 		this.setStepSound(soundTypeStone);
 	}
 }

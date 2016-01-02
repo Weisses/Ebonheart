@@ -3,9 +3,9 @@ package com.ebonheart.EbonArtsMod.common.blocks.basic;
 import net.minecraft.item.Item;
 
 //Double slab.
-public class BlockDoubleSlab extends EABlockSlab {
+public class BlockDoubleSlabNecrocite extends EABlockSlabNecrocite {
 	
-    public BlockDoubleSlab(String setUnlocalizedName) 
+    public BlockDoubleSlabNecrocite(String setUnlocalizedName) 
     {
         super();
         this.setUnlocalizedName(setUnlocalizedName);

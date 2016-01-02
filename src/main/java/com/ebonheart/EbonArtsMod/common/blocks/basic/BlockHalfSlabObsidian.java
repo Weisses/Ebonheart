@@ -11,9 +11,9 @@ import net.minecraft.util.MovingObjectPosition;
 import net.minecraft.world.World;
 
 //Regular slab.
-public class BlockHalfSlab extends EABlockSlab {
+public class BlockHalfSlabObsidian extends EABlockSlabObsidian {
 	
-    public BlockHalfSlab(String unlocalizedName) 
+    public BlockHalfSlabObsidian(String unlocalizedName) 
     {
         super();
         this.setUnlocalizedName(unlocalizedName);

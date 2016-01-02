@@ -22,6 +22,7 @@ public class ItemEbonheart extends Item {
 		
 	 this.setUnlocalizedName("gem/ebonheart");
 	 this.setCreativeTab(EbonArtsMod.tabEbonArtsItems);
+	 this.setMaxStackSize(16);
 	 
 	}
 	

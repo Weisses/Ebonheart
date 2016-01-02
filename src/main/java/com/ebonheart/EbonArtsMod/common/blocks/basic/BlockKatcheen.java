@@ -17,9 +17,9 @@ public class BlockKatcheen extends Block {
 		super(Material.rock);
 		this.setUnlocalizedName(unlocalizedName);
 		this.setCreativeTab(EbonArtsMod.tabEbonArtsBlocks);
-		this.setHarvestLevel("pickaxe", 3);
-		this.setHardness(30f);
-		this.setResistance(1500f);
+		this.setHarvestLevel("pickaxe", 2);
+		//this.setHardness(30f);
+		//this.setResistance(1500f);
 		this.setStepSound(soundTypeStone);
 	}
 }

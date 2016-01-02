@@ -12,8 +12,8 @@ public class BlockPaper extends Block {
 		super(Material.cloth);
 		this.setUnlocalizedName("paper_block");
 		this.setCreativeTab(EbonArtsMod.tabEbonArtsBlocks);
-		this.setHardness(1f);
-		this.setResistance(1000f);
+		//this.setHardness(1f);
+		//this.setResistance(5f);
 	}
 
 }
