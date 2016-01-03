@@ -20,10 +20,15 @@ public class InitRecipesEA {
 		
 		//GameRegistry.addShapedRecipe(new ItemStack(InitTileEntitiesEA.Banana_Plant), new Object[]{"DN", "ND", 'D', InitItemsEA.draconium_dust, 'N', Items.quartz});
 		
+		GameRegistry.addShapedRecipe(new ItemStack(InitBlocksEA.paper_block), new Object[]{"PPP", "PPP", "PPP", 'P', Items.paper});
+		GameRegistry.addShapedRecipe(new ItemStack(Items.paper, 9), new Object[]{"P", 'P', InitBlocksEA.paper_block});
 		
 		
-		GameRegistry.addShapedRecipe(new ItemStack(InitItemsEA.obsidian_shards), new Object[]{"DGD", "GQG", "DGD", 'D', InitItemsEA.draconium_dust, 'G', Items.gunpowder, 'Q', Items.quartz,});
-		GameRegistry.addShapedRecipe(new ItemStack(InitItemsEA.glowstone_shards), new Object[]{"DGD", "GQG", "DGD", 'D', InitItemsEA.draconium_dust, 'G', Items.gunpowder, 'Q', Items.glowstone_dust,});
+		GameRegistry.addShapedRecipe(new ItemStack(InitItemsEA.obsidian_shards), new Object[]{"DGD", "GQG", "DGD", 'D', InitItemsEA.draconium_dust, 'G', Items.gunpowder, 'Q', Items.quartz});
+		GameRegistry.addShapedRecipe(new ItemStack(InitItemsEA.obsidian_shards, 4), new Object[]{"DGD", "GQG", "DGD", 'D', InitItemsEA.draconium_dust, 'G', Items.gunpowder, 'Q', Blocks.obsidian});
+		
+		GameRegistry.addShapedRecipe(new ItemStack(InitItemsEA.glowstone_shards), new Object[]{"DGD", "GQG", "DGD", 'D', InitItemsEA.draconium_dust, 'G', Items.gunpowder, 'Q', Items.glowstone_dust});
+		GameRegistry.addShapedRecipe(new ItemStack(InitItemsEA.glowstone_shards, 4), new Object[]{"DGD", "GQG", "DGD", 'D', InitItemsEA.draconium_dust, 'G', Items.gunpowder, 'Q', Blocks.glowstone});
 		
 		GameRegistry.addShapedRecipe(new ItemStack(InitBlocksEA.draconium_block), new Object[]{"##", "##", '#', InitItemsEA.draconium_dust});
 		GameRegistry.addShapedRecipe(new ItemStack(InitBlocksEA.draconium_slab, 6), new Object[]{"DDD", 'D', InitBlocksEA.draconium_block});
@@ -117,8 +122,6 @@ public class InitRecipesEA {
 		
 		if(!EbonArtsConfiguration.vanillaRecipe)
 		{
-			GameRegistry.addShapedRecipe(new ItemStack(InitBlocksEA.paper_block), new Object[]{"PPP", "PPP", "PPP", 'P', Items.paper});
-			GameRegistry.addShapedRecipe(new ItemStack(Items.paper, 9), new Object[]{"P", 'P', InitBlocksEA.paper_block});
 			GameRegistry.addShapedRecipe(new ItemStack(Blocks.web), new Object[]{"SSS", "S#S", "SSS", 'S', Items.string, '#', Items.slime_ball});
 			GameRegistry.addShapedRecipe(new ItemStack(Items.name_tag), new Object[]{"#", "P", "L", '#', Items.lead, 'P', Items.paper, 'L', Items.leather});
 			GameRegistry.addShapedRecipe(new ItemStack(Blocks.packed_ice), new Object[]{"III", "III", "III", 'I', Blocks.ice});
@@ -192,7 +195,7 @@ public class InitRecipesEA {
 		
 		if(!EbonArtsConfiguration.musicRecipe)
 		{
-			GameRegistry.addShapedRecipe(new ItemStack(InitItemsEA.shimmering_disc, 1), new Object[]{"CCC", "CVC", "CCC", 'C', Blocks.cobblestone,'V', InitItemsEA.velious});
+			GameRegistry.addShapedRecipe(new ItemStack(InitItemsEA.shimmering_disc, 1), new Object[]{"VVV", "VDV", "VVV", 'D', Items.diamond,'V', InitItemsEA.velious});
 		}
 		else
 		{
@@ -234,6 +237,9 @@ public class InitRecipesEA {
 		GameRegistry.addShapelessRecipe(new ItemStack(InitBlocksEA.mystic_block, 1, 13), InitBlocksEA.mystic_block_normal, new ItemStack(Items.dye, 1, 2));
 		GameRegistry.addShapelessRecipe(new ItemStack(InitBlocksEA.mystic_block, 1, 14), InitBlocksEA.mystic_block_normal, new ItemStack(Items.dye, 1, 1));
 		GameRegistry.addShapelessRecipe(new ItemStack(InitBlocksEA.mystic_block, 1, 15), InitBlocksEA.mystic_block_normal, new ItemStack(Items.dye, 1, 0));
+		
+		//GameRegistry.addShapelessRecipe(new ItemStack(InitItemsEA.obsidian_shards, 4), Blocks.obsidian, new ItemStack(InitItemsEA.draconium_dust));
+		//GameRegistry.addShapelessRecipe(new ItemStack(InitItemsEA.glowstone_shards, 4), Blocks.glowstone, new ItemStack(InitItemsEA.draconium_dust));
 		
 		//GameRegistry.addShapelessRecipe(new ItemStack(InitTileEntitiesEA.Banana_Plant), new Object[] {InitItemsEA.draconium_dust, new ItemStack(Blocks.sapling)});
 		//GameRegistry.addShapelessRecipe(new ItemStack(InitTileEntitiesEA.Banana_Plant), InitItemsEA.draconium_dust, new ItemStack(Blocks.sapling, 1, 1));
