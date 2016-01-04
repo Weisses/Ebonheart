@@ -40,6 +40,7 @@ import com.ebonheart.EbonArtsMod.common.blocks.basic.EABlockFence;
 import com.ebonheart.EbonArtsMod.common.blocks.basic.EABlockFenceGate;
 import com.ebonheart.EbonArtsMod.common.blocks.basic.EABlockMeta;
 import com.ebonheart.EbonArtsMod.common.blocks.basic.EABlockStairs;
+import com.ebonheart.EbonArtsMod.common.blocks.basic.EABlockTorch;
 import com.ebonheart.EbonArtsMod.common.blocks.basic.EABlockWall;
 import com.ebonheart.EbonArtsMod.common.blocks.basic.ItemBlockSlabArcanite;
 import com.ebonheart.EbonArtsMod.common.blocks.basic.ItemBlockSlabDraconium;
@@ -49,6 +50,7 @@ import com.ebonheart.EbonArtsMod.common.blocks.basic.ItemBlockSlabNecrocite;
 import com.ebonheart.EbonArtsMod.common.blocks.basic.ItemBlockSlabObsidian;
 import com.ebonheart.EbonArtsMod.common.blocks.basic.ItemBlockSlabSoularite;
 import com.ebonheart.EbonArtsMod.common.blocks.basic.ItemBlockSlabVelious;
+import com.ebonheart.EbonArtsMod.common.blocks.devices.BlockColorAtrium;
 import com.ebonheart.EbonArtsMod.common.blocks.world.BlockMultiOre;
 import com.ebonheart.EbonArtsMod.common.blocks.world.BlockOreArcanite;
 import com.ebonheart.EbonArtsMod.common.blocks.world.BlockOreDraconium;
@@ -138,6 +140,13 @@ public class InitBlocksEA
 	public static Block necrocite_block_brick;
 	public static Block soularite_block_brick;
 	
+	public static Block draconium_torch;
+	public static Block velious_torch;
+	public static Block arcanite_torch;
+	public static Block katcheen_torch;
+	public static Block necrocite_torch;
+	public static Block soularite_torch;
+	
 	public static Block mystic_block;
 	public static Block mystic_block_normal;
 	
@@ -151,6 +160,7 @@ public class InitBlocksEA
 	public static Block obsidian_fence_gate;
 	public static Block obsidian_wall;
 	public static Block obsidian_stairs;
+	public static Block obsidian_torch;
 	
 	public static Block glowstone_block;
 	public static Block glowstone_block_brick;
@@ -160,6 +170,8 @@ public class InitBlocksEA
 	public static Block glowstone_fence_gate;
 	public static Block glowstone_wall;
 	public static Block glowstone_stairs;
+	public static Block glowstone_torch;
+	
 	
 	//public static Block column;
 	
@@ -170,6 +182,11 @@ public class InitBlocksEA
 	
 	//public static Block mystic_furnace;
 	//public static Block lit_mystic_furnace;
+	
+	public static Block torchtest;
+	
+	public static Block color_atrium;
+	public static Block lit_color_atrium;
 	
 	public static void clientInit() 
 	{
@@ -281,6 +298,13 @@ public class InitBlocksEA
 		necrocite_wall = new EABlockWall("wall/necrocite_wall").setHardness(5.0F).setResistance(45.0F);
 		soularite_wall = new EABlockWall("wall/soularite_wall").setHardness(5.0F).setResistance(45.0F);
 		
+		draconium_torch = new EABlockTorch("gem/draconium/draconium_torch").setHardness(5.0F).setResistance(4.0F);
+		velious_torch = new EABlockTorch("gem/velious/velious_torch").setHardness(5.0F).setResistance(15.0F);
+		arcanite_torch = new EABlockTorch("gem/arcanite/arcanite_torch").setHardness(5.0F).setResistance(30.0F);
+		katcheen_torch = new EABlockTorch("gem/katcheen/katcheen_torch").setHardness(5.0F).setResistance(2000.0F);
+		necrocite_torch = new EABlockTorch("gem/necrocite/necrocite_torch").setHardness(5.0F).setResistance(45.0F);
+		soularite_torch = new EABlockTorch("gem/soularite/soularite_torch").setHardness(5.0F).setResistance(45.0F);
+		
 		mystic_block_normal = new BlockMystic();
 		innate_mystic_block_normal = new BlockInnateMysticNormal();
 		
@@ -292,6 +316,7 @@ public class InitBlocksEA
 		obsidian_fence = new EABlockFence("fence/obsidian_fence").setHardness(5.0F).setResistance(2000.0F);
 		obsidian_fence_gate = new EABlockFenceGate("fence/obsidian_fence_gate").setHardness(5.0F).setResistance(2000.0F);
 		obsidian_wall = new EABlockWall("wall/obsidian_wall").setHardness(5.0F).setResistance(2000.0F);
+		obsidian_torch = new EABlockTorch("gem/obsidian/obsidian_torch").setHardness(0.0F).setResistance(0.0F);
 		
 		glowstone_block = new BlockGlowstone("gem/glowstone/glowstone_block").setHardness(5.0F).setResistance(45.0F);
 		glowstone_block_brick = new BlockGlowstone("gem/glowstone/glowstone_block_brick").setHardness(5.0F).setResistance(45.0F).setLightLevel(1.0f);
@@ -301,16 +326,26 @@ public class InitBlocksEA
 		glowstone_fence = new EABlockFence("fence/glowstone_fence").setHardness(5.0F).setResistance(45.0F).setLightLevel(1.0f);
 		glowstone_fence_gate = new EABlockFenceGate("fence/glowstone_fence_gate").setHardness(5.0F).setResistance(45.0F).setLightLevel(1.0f);
 		glowstone_wall = new EABlockWall("wall/glowstone_wall").setHardness(5.0F).setResistance(45.0F).setLightLevel(1.0f);
+		glowstone_torch = new EABlockTorch("gem/glowstone/glowstone_torch").setHardness(0.0F).setResistance(0.0F);
 		
 		
 		
 		
 		paper_block = new BlockPaper().setHardness(1.0F).setResistance(4.0F);
 		
+		
+		torchtest = new EABlockTorch("torchtest").setHardness(0.0F);
+		
+		
 		//pillar = new EABlockPillar().setUnlocalizedName("pillar");
 		
 		//mystic_furnace = new TestBlockFurnaceEA(false).setUnlocalizedName("machine/mystic_furnace").setCreativeTab(EbonArtsMod.tabEbonArtsBlocks);
 		//lit_mystic_furnace = new TestBlockFurnaceEA(true).setUnlocalizedName("machine/lit_mystic_furnace").setCreativeTab(EbonArtsMod.tabEbonArtsBlocks);
+		
+		color_atrium = new BlockColorAtrium(false).setUnlocalizedName("machine/color_atrium");
+		lit_color_atrium = new BlockColorAtrium(true).setUnlocalizedName("machine/lit_color_atrium");
+		
+		
 		
 		//test_liquid = new TestBlockStaticLiquidEA(Material.water);
 		//flowing_test_liquid = new TestBlockDynamicLiquidEA(Material.water);
@@ -397,6 +432,13 @@ public class InitBlocksEA
 		GameRegistry.registerBlock(necrocite_wall, necrocite_wall.getUnlocalizedName().substring(5));
 		GameRegistry.registerBlock(soularite_wall, soularite_wall.getUnlocalizedName().substring(5));
 		
+		GameRegistry.registerBlock(draconium_torch, draconium_torch.getUnlocalizedName().substring(5));
+		GameRegistry.registerBlock(velious_torch, velious_torch.getUnlocalizedName().substring(5));
+		GameRegistry.registerBlock(arcanite_torch, arcanite_torch.getUnlocalizedName().substring(5));
+		GameRegistry.registerBlock(katcheen_torch, katcheen_torch.getUnlocalizedName().substring(5));
+		GameRegistry.registerBlock(necrocite_torch, necrocite_torch.getUnlocalizedName().substring(5));
+		GameRegistry.registerBlock(soularite_torch, soularite_torch.getUnlocalizedName().substring(5));
+		
 		GameRegistry.registerBlock(obsidian_block, obsidian_block.getUnlocalizedName().substring(5));
 		GameRegistry.registerBlock(obsidian_block_brick, obsidian_block_brick.getUnlocalizedName().substring(5));
 		GameRegistry.registerBlock(double_obsidian_slab, ItemBlockSlabObsidian.class, "slab/obsidian/double_obsidian_slab", obsidian_slab, double_obsidian_slab, true);
@@ -420,13 +462,14 @@ public class InitBlocksEA
 		
 		
 		
+		GameRegistry.registerBlock(torchtest, torchtest.getUnlocalizedName().substring(5));
 		
 		
 		
 		//GameRegistry.registerBlock(pillar, pillar.getUnlocalizedName().substring(5));
 		
-		//GameRegistry.registerBlock(mystic_furnace, mystic_furnace.getUnlocalizedName().substring(5));
-		//GameRegistry.registerBlock(lit_mystic_furnace, lit_mystic_furnace.getUnlocalizedName().substring(5));
+		GameRegistry.registerBlock(color_atrium, color_atrium.getUnlocalizedName().substring(5));
+		GameRegistry.registerBlock(lit_color_atrium, lit_color_atrium.getUnlocalizedName().substring(5));
 		
 		//GameRegistry.registerBlock(test_liquid, test_liquid.getUnlocalizedName().substring(5));
 		//GameRegistry.registerBlock(flowing_test_liquid, flowing_test_liquid.getUnlocalizedName().substring(5));
@@ -546,6 +589,13 @@ public class InitBlocksEA
 		registerRender(necrocite_wall);
 		registerRender(soularite_wall);
 		
+		registerRender(draconium_torch);
+		registerRender(velious_torch);
+		registerRender(arcanite_torch);
+		registerRender(katcheen_torch);
+		registerRender(necrocite_torch);
+		registerRender(soularite_torch);
+		
 		registerRender(obsidian_block);
 		registerRender(obsidian_block_brick);
 		registerRender(double_obsidian_slab);
@@ -570,11 +620,12 @@ public class InitBlocksEA
 		
 		//registerRender(pillar);
 		
+		registerRender(torchtest);
 		
 		
 		
-		//registerRender(mystic_furnace);
-		//registerRender(lit_mystic_furnace);
+		registerRender(color_atrium);
+		registerRender(lit_color_atrium);
 				
 		//registerRender(test_liquid);
 		//registerRender(flowing_test_liquid);
