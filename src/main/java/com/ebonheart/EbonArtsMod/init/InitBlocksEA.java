@@ -38,9 +38,17 @@ import com.ebonheart.EbonArtsMod.common.blocks.basic.BlockSoularite;
 import com.ebonheart.EbonArtsMod.common.blocks.basic.BlockVelious;
 import com.ebonheart.EbonArtsMod.common.blocks.basic.EABlockFence;
 import com.ebonheart.EbonArtsMod.common.blocks.basic.EABlockFenceGate;
+import com.ebonheart.EbonArtsMod.common.blocks.basic.EABlockTorchArcanite;
+import com.ebonheart.EbonArtsMod.common.blocks.basic.EABlockTorchDraconium;
+import com.ebonheart.EbonArtsMod.common.blocks.basic.EABlockTorchGlowstone;
+import com.ebonheart.EbonArtsMod.common.blocks.basic.EABlockTorchKatcheen;
+import com.ebonheart.EbonArtsMod.common.blocks.basic.EABlockTorchObsidian;
 import com.ebonheart.EbonArtsMod.common.blocks.basic.EABlockMeta;
 import com.ebonheart.EbonArtsMod.common.blocks.basic.EABlockStairs;
 import com.ebonheart.EbonArtsMod.common.blocks.basic.EABlockTorch;
+import com.ebonheart.EbonArtsMod.common.blocks.basic.EABlockTorchNecrocite;
+import com.ebonheart.EbonArtsMod.common.blocks.basic.EABlockTorchSoularite;
+import com.ebonheart.EbonArtsMod.common.blocks.basic.EABlockTorchVelious;
 import com.ebonheart.EbonArtsMod.common.blocks.basic.EABlockWall;
 import com.ebonheart.EbonArtsMod.common.blocks.basic.ItemBlockSlabArcanite;
 import com.ebonheart.EbonArtsMod.common.blocks.basic.ItemBlockSlabDraconium;
@@ -298,12 +306,12 @@ public class InitBlocksEA
 		necrocite_wall = new EABlockWall("wall/necrocite_wall").setHardness(5.0F).setResistance(45.0F);
 		soularite_wall = new EABlockWall("wall/soularite_wall").setHardness(5.0F).setResistance(45.0F);
 		
-		draconium_torch = new EABlockTorch("gem/draconium/draconium_torch").setHardness(5.0F).setResistance(4.0F);
-		velious_torch = new EABlockTorch("gem/velious/velious_torch").setHardness(5.0F).setResistance(15.0F);
-		arcanite_torch = new EABlockTorch("gem/arcanite/arcanite_torch").setHardness(5.0F).setResistance(30.0F);
-		katcheen_torch = new EABlockTorch("gem/katcheen/katcheen_torch").setHardness(5.0F).setResistance(2000.0F);
-		necrocite_torch = new EABlockTorch("gem/necrocite/necrocite_torch").setHardness(5.0F).setResistance(45.0F);
-		soularite_torch = new EABlockTorch("gem/soularite/soularite_torch").setHardness(5.0F).setResistance(45.0F);
+		draconium_torch = new EABlockTorchDraconium("gem/draconium/draconium_torch").setHardness(5.0F).setResistance(4.0F);
+		velious_torch = new EABlockTorchVelious("gem/velious/velious_torch").setHardness(5.0F).setResistance(15.0F);
+		arcanite_torch = new EABlockTorchArcanite("gem/arcanite/arcanite_torch").setHardness(5.0F).setResistance(30.0F);
+		katcheen_torch = new EABlockTorchKatcheen("gem/katcheen/katcheen_torch").setHardness(5.0F).setResistance(2000.0F);
+		necrocite_torch = new EABlockTorchNecrocite("gem/necrocite/necrocite_torch").setHardness(5.0F).setResistance(45.0F);
+		soularite_torch = new EABlockTorchSoularite("gem/soularite/soularite_torch").setHardness(5.0F).setResistance(45.0F);
 		
 		mystic_block_normal = new BlockMystic();
 		innate_mystic_block_normal = new BlockInnateMysticNormal();
@@ -316,7 +324,7 @@ public class InitBlocksEA
 		obsidian_fence = new EABlockFence("fence/obsidian_fence").setHardness(5.0F).setResistance(2000.0F);
 		obsidian_fence_gate = new EABlockFenceGate("fence/obsidian_fence_gate").setHardness(5.0F).setResistance(2000.0F);
 		obsidian_wall = new EABlockWall("wall/obsidian_wall").setHardness(5.0F).setResistance(2000.0F);
-		obsidian_torch = new EABlockTorch("gem/obsidian/obsidian_torch").setHardness(0.0F).setResistance(0.0F);
+		obsidian_torch = new EABlockTorchObsidian("gem/obsidian/obsidian_torch").setHardness(0.0F).setResistance(0.0F);
 		
 		glowstone_block = new BlockGlowstone("gem/glowstone/glowstone_block").setHardness(5.0F).setResistance(45.0F);
 		glowstone_block_brick = new BlockGlowstone("gem/glowstone/glowstone_block_brick").setHardness(5.0F).setResistance(45.0F).setLightLevel(1.0f);
@@ -326,7 +334,7 @@ public class InitBlocksEA
 		glowstone_fence = new EABlockFence("fence/glowstone_fence").setHardness(5.0F).setResistance(45.0F).setLightLevel(1.0f);
 		glowstone_fence_gate = new EABlockFenceGate("fence/glowstone_fence_gate").setHardness(5.0F).setResistance(45.0F).setLightLevel(1.0f);
 		glowstone_wall = new EABlockWall("wall/glowstone_wall").setHardness(5.0F).setResistance(45.0F).setLightLevel(1.0f);
-		glowstone_torch = new EABlockTorch("gem/glowstone/glowstone_torch").setHardness(0.0F).setResistance(0.0F);
+		glowstone_torch = new EABlockTorchGlowstone("gem/glowstone/glowstone_torch").setHardness(0.0F).setResistance(0.0F);
 		
 		
 		
@@ -447,6 +455,7 @@ public class InitBlocksEA
 		GameRegistry.registerBlock(obsidian_fence, obsidian_fence.getUnlocalizedName().substring(5));
 		GameRegistry.registerBlock(obsidian_fence_gate, obsidian_fence_gate.getUnlocalizedName().substring(5));
 		GameRegistry.registerBlock(obsidian_wall, obsidian_wall.getUnlocalizedName().substring(5));
+		GameRegistry.registerBlock(obsidian_torch, obsidian_torch.getUnlocalizedName().substring(5));
 		
 		GameRegistry.registerBlock(glowstone_block, glowstone_block.getUnlocalizedName().substring(5));
 		GameRegistry.registerBlock(glowstone_block_brick, glowstone_block_brick.getUnlocalizedName().substring(5));
@@ -456,6 +465,7 @@ public class InitBlocksEA
 		GameRegistry.registerBlock(glowstone_fence, glowstone_fence.getUnlocalizedName().substring(5));
 		GameRegistry.registerBlock(glowstone_fence_gate, glowstone_fence_gate.getUnlocalizedName().substring(5));
 		GameRegistry.registerBlock(glowstone_wall, glowstone_wall.getUnlocalizedName().substring(5));
+		GameRegistry.registerBlock(glowstone_torch, glowstone_torch.getUnlocalizedName().substring(5));
 		
 		GameRegistry.registerBlock(paper_block, paper_block.getUnlocalizedName().substring(5));
 		
@@ -604,6 +614,7 @@ public class InitBlocksEA
 		registerRender(obsidian_fence);
 		registerRender(obsidian_fence_gate);
 		registerRender(obsidian_wall);
+		registerRender(obsidian_torch);
 		
 		registerRender(glowstone_block);
 		registerRender(glowstone_block_brick);
@@ -613,6 +624,7 @@ public class InitBlocksEA
 		registerRender(glowstone_fence);
 		registerRender(glowstone_fence_gate);
 		registerRender(glowstone_wall);
+		registerRender(glowstone_torch);
 		
 		registerRender(paper_block);
 		

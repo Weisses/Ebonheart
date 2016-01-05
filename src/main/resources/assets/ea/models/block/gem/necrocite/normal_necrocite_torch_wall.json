@@ -1,0 +1,6 @@
+{
+    "parent": "block/torch_wall",
+    "textures": {
+        "torch": "ea:blocks/gems/necrocite/necrocite_torch_on"
+    }
+}

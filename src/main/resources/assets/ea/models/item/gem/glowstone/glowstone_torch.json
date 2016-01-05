@@ -1,7 +1,7 @@
 {
     "parent": "builtin/generated",
     "textures": {
-        "layer0": "ea:block/gem/glowstone/glowstone_torch"
+        "layer0": "ea:blocks/gems/glowstone/glowstone_torch_on"
     },
     "display": {
         "thirdperson": {

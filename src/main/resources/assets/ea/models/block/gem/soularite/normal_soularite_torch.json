@@ -1,0 +1,6 @@
+{
+    "parent": "block/torch",
+    "textures": {
+        "torch": "ea:blocks/gems/soularite/soularite_torch_on"
+    }
+}

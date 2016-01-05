@@ -1,7 +1,7 @@
 {
     "parent": "builtin/generated",
     "textures": {
-        "layer0": "ea:block/gem/obsidian/obsidian_torch"
+        "layer0": "ea:blocks/gems/obsidian/obsidian_torch_on"
     },
     "display": {
         "thirdperson": {

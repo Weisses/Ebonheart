@@ -1,0 +1,6 @@
+{
+    "parent": "block/torch_wall",
+    "textures": {
+        "torch": "ea:blocks/gems/draconium/draconium_torch_on"
+    }
+}

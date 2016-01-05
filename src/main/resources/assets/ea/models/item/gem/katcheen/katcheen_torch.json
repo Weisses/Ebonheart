@@ -1,7 +1,7 @@
 {
     "parent": "builtin/generated",
     "textures": {
-        "layer0": "ea:block/gem/katcheen/katcheen_torch"
+        "layer0": "ea:blocks/gems/katcheen/katcheen_torch_on"
     },
     "display": {
         "thirdperson": {

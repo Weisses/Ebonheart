@@ -1,7 +1,7 @@
 {
     "parent": "builtin/generated",
     "textures": {
-        "layer0": "ea:block/gem/arcanite/normal_arcanite_torch"
+        "layer0": "ea:blocks/gems/arcanite/arcanite_torch_on"
     },
     "display": {
         "thirdperson": {

@@ -1,7 +1,7 @@
 {
     "parent": "builtin/generated",
     "textures": {
-        "layer0": "ea:block/gem/necrocite/necrocite_torch"
+        "layer0": "ea:blocks/gems/necrocite/necrocite_torch_on"
     },
     "display": {
         "thirdperson": {

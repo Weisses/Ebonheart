@@ -1,7 +1,7 @@
 {
     "parent": "builtin/generated",
     "textures": {
-        "layer0": "ea:block/gem/soularite/soularite_torch"
+        "layer0": "ea:blocks/gems/soularite/soularite_torch_on"
     },
     "display": {
         "thirdperson": {

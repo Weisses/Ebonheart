@@ -1,0 +1,6 @@
+{
+    "parent": "block/torch",
+    "textures": {
+        "torch": "ea:blocks/gems/velious/velious_torch_on"
+    }
+}

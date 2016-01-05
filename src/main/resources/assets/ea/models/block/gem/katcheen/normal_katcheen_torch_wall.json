@@ -1,0 +1,6 @@
+{
+    "parent": "block/torch_wall",
+    "textures": {
+        "torch": "ea:blocks/gems/katcheen/katcheen_torch_on"
+    }
+}

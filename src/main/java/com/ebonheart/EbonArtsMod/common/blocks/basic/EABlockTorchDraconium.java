@@ -26,7 +26,7 @@ import net.minecraftforge.fml.relauncher.SideOnly;
 import com.ebonheart.EbonArtsMod.EbonArtsMod;
 import com.google.common.base.Predicate;
 
-public class EABlockTorch extends Block{
+public class EABlockTorchDraconium extends Block{
 
 	    public static final PropertyDirection FACING = PropertyDirection.create("facing", new Predicate()
 	    {
@@ -41,7 +41,7 @@ public class EABlockTorch extends Block{
 	    });
 	    
 
-	    public EABlockTorch(String unlocalizedName)
+	    public EABlockTorchDraconium(String unlocalizedName)
 	    {
 	        super(Material.circuits);
 	        this.setUnlocalizedName(unlocalizedName);
@@ -275,14 +275,14 @@ public class EABlockTorch extends Block{
 	        if (enumfacing.getAxis().isHorizontal())
 	        {
 	            EnumFacing enumfacing1 = enumfacing.getOpposite();
-	            worldIn.spawnParticle(EnumParticleTypes.PORTAL, d0 + d4 * (double)enumfacing1.getFrontOffsetX(), d1 + d3, d2 + d4 * (double)enumfacing1.getFrontOffsetZ(), 0.0D, 0.0D, 0.0D, new int[0]);
-	            worldIn.spawnParticle(EnumParticleTypes.REDSTONE, d0 + d4 * (double)enumfacing1.getFrontOffsetX(), d1 + d3, d2 + d4 * (double)enumfacing1.getFrontOffsetZ(), 1.0D, 5.0D, 0.0D, new int[0]);
+	            worldIn.spawnParticle(EnumParticleTypes.SPELL_MOB_AMBIENT, d0 + d4 * (double)enumfacing1.getFrontOffsetX(), d1 + d3, d2 + d4 * (double)enumfacing1.getFrontOffsetZ(), 0.0D, 5.0D, 0.0D, new int[0]);
+	            worldIn.spawnParticle(EnumParticleTypes.REDSTONE, d0 + d4 * (double)enumfacing1.getFrontOffsetX(), d1 + d3, d2 + d4 * (double)enumfacing1.getFrontOffsetZ(), 3.0D, 1.0D, 9.0D, new int[0]);
 	            //worldIn.spawnParticle(EnumParticleTypes.SPELL_MOB_AMBIENT, d0 + d4 * (double)enumfacing1.getFrontOffsetX(), d1 + d3, d2 + d4 * (double)enumfacing1.getFrontOffsetZ(), 0.0D, 10.0D, 0.0D, new int[0]);
 	        }
 	        else
 	        {
-	            worldIn.spawnParticle(EnumParticleTypes.PORTAL, d0, d1, d2, 0.0D, 0.0D, 0.0D, new int[0]);
-	            worldIn.spawnParticle(EnumParticleTypes.REDSTONE, d0, d1, d2, 1.0D, 5.0D, 0.0D, new int[0]);
+	            worldIn.spawnParticle(EnumParticleTypes.SPELL_MOB_AMBIENT, d0, d1, d2, 0.0D, 5.0D, 0.0D, new int[0]);
+	            worldIn.spawnParticle(EnumParticleTypes.REDSTONE, d0, d1, d2, 3.0D, 1.0D, 9.0D, new int[0]);
 	            //worldIn.spawnParticle(EnumParticleTypes.SPELL_MOB_AMBIENT, d0, d1, d2, 0.0D, 10.0D, 0.0D, new int[0]);
 	        }
 	    }
@@ -295,7 +295,7 @@ public class EABlockTorch extends Block{
 	        byte b0 = 0;
 	        int i;
 
-	        switch (EABlockTorch.SwitchEnumFacing.FACING_LOOKUP[((EnumFacing)state.getValue(FACING)).ordinal()])
+	        switch (EABlockTorchDraconium.SwitchEnumFacing.FACING_LOOKUP[((EnumFacing)state.getValue(FACING)).ordinal()])
 	        {
 	            case 1:
 	                i = b0 | 1;
