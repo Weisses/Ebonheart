@@ -24,7 +24,4 @@ public class BlockHalfSlabKatcheen extends EABlockSlabKatcheen {
     {
         return false;
     }
-    
-
-    
 }

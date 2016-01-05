@@ -33,11 +33,10 @@ public class BlockOreKatcheen extends Block {
 	}
 
 	@Override
-	public ArrayList<ItemStack> getDrops(IBlockAccess world, BlockPos pos, IBlockState blockstate, int fortune) {
-		
+	public ArrayList<ItemStack> getDrops(IBlockAccess world, BlockPos pos, IBlockState blockstate, int fortune) 
+	{
 		Random rand = new Random();
 		int d = rand.nextInt(100) + 1;
-		
 		
 		ArrayList<ItemStack> drops = new ArrayList<ItemStack>();
 		drops.add(new ItemStack(InitItemsEA.katcheen));
@@ -56,7 +55,6 @@ public class BlockOreKatcheen extends Block {
             {
                 j = 0;
             }
-
             return this.quantityDropped(random) * (j + 1);
         }
         else

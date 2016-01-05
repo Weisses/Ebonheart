@@ -24,7 +24,4 @@ public class BlockHalfSlabObsidian extends EABlockSlabObsidian {
     {
         return false;
     }
-    
-
-    
 }

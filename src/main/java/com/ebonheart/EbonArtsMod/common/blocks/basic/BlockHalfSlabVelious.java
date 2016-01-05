@@ -24,7 +24,4 @@ public class BlockHalfSlabVelious extends EABlockSlabVelious {
     {
         return false;
     }
-    
-
-    
 }

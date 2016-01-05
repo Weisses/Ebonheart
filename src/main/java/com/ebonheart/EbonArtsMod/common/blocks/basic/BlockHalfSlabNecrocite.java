@@ -24,7 +24,4 @@ public class BlockHalfSlabNecrocite extends EABlockSlabNecrocite {
     {
         return false;
     }
-    
-
-    
 }

@@ -18,8 +18,6 @@ public class BlockGlowstone extends Block {
 		this.setUnlocalizedName(unlocalizedName);
 		this.setCreativeTab(EbonArtsMod.tabEbonArtsBlocks);
 		this.setHarvestLevel("pickaxe", 2);
-		//this.setHardness(10f);
-		//this.setResistance(1500f);
 		this.setStepSound(soundTypeStone);
 	}
 }

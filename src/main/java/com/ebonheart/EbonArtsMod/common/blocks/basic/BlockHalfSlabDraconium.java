@@ -24,7 +24,4 @@ public class BlockHalfSlabDraconium extends EABlockSlabDraconium {
     {
         return false;
     }
-    
-
-    
 }

@@ -24,7 +24,4 @@ public class BlockHalfSlabGlowstone extends EABlockSlabGlowstone {
     {
         return false;
     }
-    
-
-    
 }

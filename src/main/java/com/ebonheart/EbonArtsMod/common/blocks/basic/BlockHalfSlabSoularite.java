@@ -24,7 +24,4 @@ public class BlockHalfSlabSoularite extends EABlockSlabSoularite {
     {
         return false;
     }
-    
-
-    
 }

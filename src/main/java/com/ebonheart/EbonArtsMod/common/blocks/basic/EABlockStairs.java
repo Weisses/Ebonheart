@@ -8,16 +8,14 @@ import net.minecraft.init.Blocks;
 
 
 public class EABlockStairs extends BlockStairs {
-
-	public EABlockStairs(String unlocalizedName) {
+	
+	public EABlockStairs(String unlocalizedName) 
+	{
 		super(Blocks.oak_stairs.getStateFromMeta(0));
 		this.useNeighborBrightness = true;
 		this.setUnlocalizedName(unlocalizedName);
 		this.setCreativeTab(EbonArtsMod.tabEbonArtsBlocks);
 		this.setHarvestLevel("pickaxe", 2);
-		//this.setHardness(5f);
-		//this.setResistance(1000f);
 		this.setStepSound(soundTypeStone);
 	}
-
 }

@@ -10,17 +10,13 @@ import net.minecraft.creativetab.CreativeTabs;
 
 
 public class EABlockFenceGate extends BlockFenceGate {
-
+	
 	public EABlockFenceGate(String unlocalizedName) 
 	{
-        //super(Material.rock);
-        this.setUnlocalizedName(unlocalizedName);
-		this.setCreativeTab(EbonArtsMod.tabEbonArtsBlocks);
-        this.setDefaultState(this.blockState.getBaseState().withProperty(OPEN, Boolean.valueOf(false)).withProperty(POWERED, Boolean.valueOf(false)).withProperty(IN_WALL, Boolean.valueOf(false)));
+		this.setUnlocalizedName(unlocalizedName);
+        this.setCreativeTab(EbonArtsMod.tabEbonArtsBlocks);
+		this.setDefaultState(this.blockState.getBaseState().withProperty(OPEN, Boolean.valueOf(false)).withProperty(POWERED, Boolean.valueOf(false)).withProperty(IN_WALL, Boolean.valueOf(false)));
         this.setHarvestLevel("pickaxe", 2);
-        //this.setCreativeTab(CreativeTabs.tabRedstone);
-        //this.setHardness(5f);
-		//this.setResistance(1000f);
-		this.setStepSound(soundTypeStone);
-    }
+        this.setStepSound(soundTypeStone);
+	}
 }

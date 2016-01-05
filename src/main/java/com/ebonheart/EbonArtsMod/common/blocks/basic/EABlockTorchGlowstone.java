@@ -26,7 +26,7 @@ import net.minecraftforge.fml.relauncher.SideOnly;
 import com.ebonheart.EbonArtsMod.EbonArtsMod;
 import com.google.common.base.Predicate;
 
-public class EABlockTorchGlowstone extends Block{
+public class EABlockTorchGlowstone extends Block {
 
 	    public static final PropertyDirection FACING = PropertyDirection.create("facing", new Predicate()
 	    {
@@ -276,20 +276,14 @@ public class EABlockTorchGlowstone extends Block{
 	        {
 	            EnumFacing enumfacing1 = enumfacing.getOpposite();
 	            worldIn.spawnParticle(EnumParticleTypes.SPELL_WITCH, d0 + d4 * (double)enumfacing1.getFrontOffsetX(), d1 + d3, d2 + d4 * (double)enumfacing1.getFrontOffsetZ(), 10.5D, 0.5D, 0.5D, new int[0]);
-	            //worldIn.spawnParticle(EnumParticleTypes.ENCHANTMENT_TABLE, d0 + d4 * (double)enumfacing1.getFrontOffsetX(), d1 + d3, d2 + d4 * (double)enumfacing1.getFrontOffsetZ(), 0.0D, 1.0D, 0.0D, new int[0]);
 	            worldIn.spawnParticle(EnumParticleTypes.SPELL_MOB, d0 + d4 * (double)enumfacing1.getFrontOffsetX(), d1 + d3, d2 + d4 * (double)enumfacing1.getFrontOffsetZ(), 2.0D, 10.0D, 0.0D, new int[0]);
 	            worldIn.spawnParticle(EnumParticleTypes.PORTAL, d0 + d4 * (double)enumfacing1.getFrontOffsetX(), d1 + d3, d2 + d4 * (double)enumfacing1.getFrontOffsetZ(), 0.0D, 0.0D, 0.0D, new int[0]);
-	            
-	            //worldIn.spawnParticle(EnumParticleTypes.REDSTONE, d0 + d4 * (double)enumfacing1.getFrontOffsetX(), d1 + d3, d2 + d4 * (double)enumfacing1.getFrontOffsetZ(), 0.0D, 11.5D, 0.0D, new int[0]);
 	        }
 	        else
 	        {
 	            worldIn.spawnParticle(EnumParticleTypes.SPELL_WITCH, d0, d1, d2, 10.5D, 0.5D, 0.5D, new int[0]);
-	            //worldIn.spawnParticle(EnumParticleTypes.ENCHANTMENT_TABLE, d0, d1, d2, 0.0D, 1.0D, 0.0D, new int[0]);
-	            worldIn.spawnParticle(EnumParticleTypes.PORTAL, d0, d1, d2, 0.0D, 0.0D, 0.0D, new int[0]);
-	            
-	            //worldIn.spawnParticle(EnumParticleTypes.REDSTONE, d0, d1, d2, 0.0D, 11.5D, 0.0D, new int[0]);
 	            worldIn.spawnParticle(EnumParticleTypes.SPELL_MOB, d0, d1, d2, 2.0D, 10.0D, 0.0D, new int[0]);
+	            worldIn.spawnParticle(EnumParticleTypes.PORTAL, d0, d1, d2, 0.0D, 0.0D, 0.0D, new int[0]);
 	        }
 	    }
 
@@ -338,7 +332,6 @@ public class EABlockTorchGlowstone extends Block{
 	    static final class SwitchEnumFacing
 	        {
 	            static final int[] FACING_LOOKUP = new int[EnumFacing.values().length];
-	            //private static final String __OBFID = "CL_00002053";
 
 	            static
 	            {

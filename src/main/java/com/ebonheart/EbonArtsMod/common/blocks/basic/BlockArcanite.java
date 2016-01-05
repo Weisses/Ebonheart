@@ -18,8 +18,6 @@ public class BlockArcanite extends Block {
 		this.setUnlocalizedName(unlocalizedName);
 		this.setCreativeTab(EbonArtsMod.tabEbonArtsBlocks);
 		this.setHarvestLevel("pickaxe", 2);
-		//this.setHardness(20f);
-		//this.setResistance(1000f);
 		this.setStepSound(soundTypeStone);
 	}
 }

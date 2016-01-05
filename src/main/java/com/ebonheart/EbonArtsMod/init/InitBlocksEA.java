@@ -45,7 +45,6 @@ import com.ebonheart.EbonArtsMod.common.blocks.basic.EABlockTorchKatcheen;
 import com.ebonheart.EbonArtsMod.common.blocks.basic.EABlockTorchObsidian;
 import com.ebonheart.EbonArtsMod.common.blocks.basic.EABlockMeta;
 import com.ebonheart.EbonArtsMod.common.blocks.basic.EABlockStairs;
-import com.ebonheart.EbonArtsMod.common.blocks.basic.EABlockTorch;
 import com.ebonheart.EbonArtsMod.common.blocks.basic.EABlockTorchNecrocite;
 import com.ebonheart.EbonArtsMod.common.blocks.basic.EABlockTorchSoularite;
 import com.ebonheart.EbonArtsMod.common.blocks.basic.EABlockTorchVelious;
@@ -59,6 +58,8 @@ import com.ebonheart.EbonArtsMod.common.blocks.basic.ItemBlockSlabObsidian;
 import com.ebonheart.EbonArtsMod.common.blocks.basic.ItemBlockSlabSoularite;
 import com.ebonheart.EbonArtsMod.common.blocks.basic.ItemBlockSlabVelious;
 import com.ebonheart.EbonArtsMod.common.blocks.devices.BlockColorAtrium;
+import com.ebonheart.EbonArtsMod.common.blocks.devices.BlockDoor;
+import com.ebonheart.EbonArtsMod.common.blocks.devices.EABlockDoor;
 import com.ebonheart.EbonArtsMod.common.blocks.world.BlockMultiOre;
 import com.ebonheart.EbonArtsMod.common.blocks.world.BlockOreArcanite;
 import com.ebonheart.EbonArtsMod.common.blocks.world.BlockOreDraconium;
@@ -155,6 +156,13 @@ public class InitBlocksEA
 	public static Block necrocite_torch;
 	public static Block soularite_torch;
 	
+	//public static Block draconium_door;
+	//public static Block velious_door;
+	public static Block arcanite_door;
+	//public static Block katcheen_door;
+	//public static Block necrocite_door;
+	//public static Block soularite_door;
+	
 	public static Block mystic_block;
 	public static Block mystic_block_normal;
 	
@@ -191,7 +199,7 @@ public class InitBlocksEA
 	//public static Block mystic_furnace;
 	//public static Block lit_mystic_furnace;
 	
-	public static Block torchtest;
+	
 	
 	public static Block color_atrium;
 	public static Block lit_color_atrium;
@@ -313,6 +321,14 @@ public class InitBlocksEA
 		necrocite_torch = new EABlockTorchNecrocite("gem/necrocite/necrocite_torch").setHardness(5.0F).setResistance(45.0F);
 		soularite_torch = new EABlockTorchSoularite("gem/soularite/soularite_torch").setHardness(5.0F).setResistance(45.0F);
 		
+		//draconium_door = new EABlockDoor("door/draconium_door").setHardness(5.0F).setResistance(4.0F);
+		//velious_door = new EABlockDoor("door/velious_door").setHardness(5.0F).setResistance(15.0F);
+		arcanite_door = new BlockDoor(Material.wood).setUnlocalizedName("door/arcanite_door").setHardness(5.0F).setResistance(30.0F);
+		//katcheen_door = new EABlockDoor("door/katcheen_door").setHardness(5.0F).setResistance(2000.0F);
+		//necrocite_door = new EABlockDoor("door/necrocite_door").setHardness(5.0F).setResistance(45.0F);
+		//soularite_door = new EABlockDoor("door/soularite_door").setHardness(5.0F).setResistance(45.0F);
+		
+		
 		mystic_block_normal = new BlockMystic();
 		innate_mystic_block_normal = new BlockInnateMysticNormal();
 		
@@ -342,7 +358,7 @@ public class InitBlocksEA
 		paper_block = new BlockPaper().setHardness(1.0F).setResistance(4.0F);
 		
 		
-		torchtest = new EABlockTorch("torchtest").setHardness(0.0F);
+		
 		
 		
 		//pillar = new EABlockPillar().setUnlocalizedName("pillar");
@@ -447,6 +463,13 @@ public class InitBlocksEA
 		GameRegistry.registerBlock(necrocite_torch, necrocite_torch.getUnlocalizedName().substring(5));
 		GameRegistry.registerBlock(soularite_torch, soularite_torch.getUnlocalizedName().substring(5));
 		
+		//GameRegistry.registerBlock(draconium_door, draconium_door.getUnlocalizedName().substring(5));
+		//GameRegistry.registerBlock(velious_door, velious_door.getUnlocalizedName().substring(5));
+		GameRegistry.registerBlock(arcanite_door, arcanite_door.getUnlocalizedName().substring(5));
+		//GameRegistry.registerBlock(katcheen_door, katcheen_door.getUnlocalizedName().substring(5));
+		//GameRegistry.registerBlock(necrocite_door, necrocite_door.getUnlocalizedName().substring(5));
+		//GameRegistry.registerBlock(soularite_door, soularite_door.getUnlocalizedName().substring(5));
+		
 		GameRegistry.registerBlock(obsidian_block, obsidian_block.getUnlocalizedName().substring(5));
 		GameRegistry.registerBlock(obsidian_block_brick, obsidian_block_brick.getUnlocalizedName().substring(5));
 		GameRegistry.registerBlock(double_obsidian_slab, ItemBlockSlabObsidian.class, "slab/obsidian/double_obsidian_slab", obsidian_slab, double_obsidian_slab, true);
@@ -472,7 +495,6 @@ public class InitBlocksEA
 		
 		
 		
-		GameRegistry.registerBlock(torchtest, torchtest.getUnlocalizedName().substring(5));
 		
 		
 		
@@ -606,6 +628,13 @@ public class InitBlocksEA
 		registerRender(necrocite_torch);
 		registerRender(soularite_torch);
 		
+		//registerRender(draconium_door);
+		//registerRender(velious_door);
+		registerRender(arcanite_door);
+		//registerRender(katcheen_door);
+		//registerRender(necrocite_door);
+		//registerRender(soularite_door);
+		
 		registerRender(obsidian_block);
 		registerRender(obsidian_block_brick);
 		registerRender(double_obsidian_slab);
@@ -632,7 +661,6 @@ public class InitBlocksEA
 		
 		//registerRender(pillar);
 		
-		registerRender(torchtest);
 		
 		
 		

@@ -29,8 +29,6 @@ import net.minecraftforge.fml.relauncher.Side;
 import net.minecraftforge.fml.relauncher.SideOnly;
 
 public class EABlockPillar extends BlockRotatedPillar {
-
-	 
 	
     public EABlockPillar()
     {
@@ -39,7 +37,5 @@ public class EABlockPillar extends BlockRotatedPillar {
         this.setCreativeTab(EbonArtsMod.tabEbonArtsBlocks);
         this.setUnlocalizedName("column");
     }
-    	  
-    	  
 }
 

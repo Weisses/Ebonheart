@@ -25,9 +25,7 @@ public class BlockMultiOre extends Block {
 		this.setResistance(2000f);
 		this.setHarvestLevel("pickaxe", 3);
 	}
-
 	
-
 	@Override
 	public ArrayList<ItemStack> getDrops(IBlockAccess world, BlockPos pos, IBlockState blockstate, int fortune) {
 		ArrayList<ItemStack> drops = new ArrayList<ItemStack>();
@@ -37,10 +35,8 @@ public class BlockMultiOre extends Block {
 		drops.add(new ItemStack(Items.dye, RANDOM.nextInt(3) + 2, 4));
 		drops.add(new ItemStack(Items.redstone, RANDOM.nextInt(2) + 2));
 		drops.add(new ItemStack(InitItemsEA.ebonheart));
-		//drops.add(new ItemStack(InitItemsEA.item_arcanite, RANDOM.nextInt(2) + 1));
 		if (RANDOM.nextFloat() < 0.5F)
 			drops.add(new ItemStack(Items.diamond));
 		return drops;
 	}
-	
 }

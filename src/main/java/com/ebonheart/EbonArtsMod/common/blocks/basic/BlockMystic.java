@@ -26,6 +26,4 @@ public class BlockMystic extends Block {
 		this.setResistance(1000f);
 		this.setStepSound(soundTypeStone);
 	}
-	
-	
 }
