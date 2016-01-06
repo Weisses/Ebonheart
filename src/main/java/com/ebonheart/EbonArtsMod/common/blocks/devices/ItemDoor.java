@@ -76,9 +76,9 @@ public class ItemDoor extends Item
         }
 
         BlockPos blockpos3 = pos.up();
-        IBlockState iblockstate = door.getDefaultState().withProperty(BlockDoor.FACING, facing).withProperty(BlockDoor.HINGE, flag2 ? BlockDoor.EnumHingePosition.RIGHT : BlockDoor.EnumHingePosition.LEFT);
-        worldIn.setBlockState(pos, iblockstate.withProperty(BlockDoor.HALF, BlockDoor.EnumDoorHalf.LOWER), 2);
-        worldIn.setBlockState(blockpos3, iblockstate.withProperty(BlockDoor.HALF, BlockDoor.EnumDoorHalf.UPPER), 2);
+        IBlockState iblockstate = door.getDefaultState().withProperty(BlockDoor1.FACING, facing).withProperty(BlockDoor1.HINGE, flag2 ? BlockDoor1.EnumHingePosition.RIGHT : BlockDoor1.EnumHingePosition.LEFT);
+        worldIn.setBlockState(pos, iblockstate.withProperty(BlockDoor1.HALF, BlockDoor1.EnumDoorHalf.LOWER), 2);
+        worldIn.setBlockState(blockpos3, iblockstate.withProperty(BlockDoor1.HALF, BlockDoor1.EnumDoorHalf.UPPER), 2);
         worldIn.notifyNeighborsOfStateChange(pos, door);
         worldIn.notifyNeighborsOfStateChange(blockpos3, door);
     }

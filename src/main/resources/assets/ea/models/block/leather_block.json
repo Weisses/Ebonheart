@@ -1,0 +1,8 @@
+{
+    "parent": "block/orientable",
+    "textures": {
+        "top": "ea:blocks/leather_block_top",
+        "front": "ea:blocks/leather_block_side",
+        "side": "ea:blocks/leather_block_side"
+    }
+}

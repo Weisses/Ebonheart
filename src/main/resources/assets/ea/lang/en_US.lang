@@ -119,9 +119,24 @@ tile.slab/katcheen/katcheen_slab.name=Katcheen Slab
 tile.slab/necrocite/necrocite_slab.name=Necrocite Slab
 tile.slab/soularite/soularite_slab.name=Soularite Slab
 
+tile.gem/draconium/draconium_torch.name=Draconium Torch
+tile.gem/velious/velious_torch.name=Velious Torch
+tile.gem/arcanite/arcanite_torch.name=Arcanite Torch
+tile.gem/katcheen/katcheen_torch.name=Katcheen Torch
+tile.gem/necrocite/necrocite_torch.name=Necrocite Torch
+tile.gem/soularite/soularite_torch.name=Soularite Torch
+
+tile.ladder/draconium_ladder.name=Draconium Ladder
+tile.ladder/velious_ladder.name=Velious Ladder
+tile.ladder/arcanite_ladder.name=Arcanite Ladder
+tile.ladder/katcheen_ladder.name=Katcheen Ladder
+tile.ladder/necrocite_ladder.name=Necrocite Ladder
+tile.ladder/soularite_ladder.name=Soularite Ladder
+
 tile.fence/innate_arcanite_fence_normal.name=Innate Arcanite Fence
 
 tile.paper_block.name=Block of Paper
+tile.leather_block.name=Block of Leather
 
 tile.gem/glowstone/glowstone_block.name=Block of Purified Glowstone
 tile.gem/glowstone/glowstone_block_brick.name=Purified Glowstone Brick
@@ -130,6 +145,8 @@ tile.fence/glowstone_fence_gate.name=Purified Glowstone Gate
 tile.wall/glowstone_wall.name=Purified Glowstone Wall
 tile.stairs/glowstone_stairs.name=Purified Glowstone Stairs
 tile.slab/glowstone/glowstone_slab.name=Purified Glowstone Slab
+tile.gem/glowstone/glowstone_torch.name=Purified Glowstone Torch
+tile.ladder/glowstone_ladder.name=Purified Glowstone Ladder
 
 tile.gem/obsidian/obsidian_block.name=Block of Purified Obsidian
 tile.gem/obsidian/obsidian_block_brick.name=Purified Obsidian Brick
@@ -138,6 +155,8 @@ tile.fence/obsidian_fence_gate.name=Purified Obsidian Gate
 tile.wall/obsidian_wall.name=Purified Obsidian Wall
 tile.stairs/obsidian_stairs.name=Purified Obsidian Stairs
 tile.slab/obsidian/obsidian_slab.name=Purified Obsidian Slab
+tile.gem/obsidian/obsidian_torch.name=Purified Obsidian Torch
+tile.ladder/obsidian_ladder.name=Purified Obsidian Ladder
 
 //-----Tools-----
 item.tool/arcanite_pickaxe.name=Arcanite Pickaxe

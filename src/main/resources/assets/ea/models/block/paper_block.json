@@ -1,12 +1,8 @@
 {
-    "parent": "block/cube",
+    "parent": "block/orientable",
     "textures": {
-        "particle": "ea:blocks/paper_block_top",
-        "down": "ea:blocks/paper_block_top",
-        "up": "ea:blocks/paper_block_top",
-        "north": "ea:blocks/paper_block_side",
-        "east": "ea:blocks/paper_block_side",
-        "south": "ea:blocks/paper_block_side",
-        "west": "ea:blocks/paper_block_side"
+        "top": "ea:blocks/paper_block_top",
+        "front": "ea:blocks/paper_block_side",
+        "side": "ea:blocks/paper_block_side"
     }
 }

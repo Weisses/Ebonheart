@@ -1,6 +1,8 @@
 package com.ebonheart.EbonArtsMod.init;
 
 import net.minecraft.block.Block;
+import net.minecraft.block.BlockDoor;
+import net.minecraft.block.BlockLadder;
 import net.minecraft.block.material.Material;
 import net.minecraft.client.Minecraft;
 import net.minecraft.client.resources.model.ModelBakery;
@@ -30,6 +32,7 @@ import com.ebonheart.EbonArtsMod.common.blocks.basic.BlockHalfSlabSoularite;
 import com.ebonheart.EbonArtsMod.common.blocks.basic.BlockHalfSlabVelious;
 import com.ebonheart.EbonArtsMod.common.blocks.basic.BlockInnateMysticNormal;
 import com.ebonheart.EbonArtsMod.common.blocks.basic.BlockKatcheen;
+import com.ebonheart.EbonArtsMod.common.blocks.basic.BlockLeather;
 import com.ebonheart.EbonArtsMod.common.blocks.basic.BlockMystic;
 import com.ebonheart.EbonArtsMod.common.blocks.basic.BlockNecrocite;
 import com.ebonheart.EbonArtsMod.common.blocks.basic.BlockObsidian;
@@ -38,6 +41,7 @@ import com.ebonheart.EbonArtsMod.common.blocks.basic.BlockSoularite;
 import com.ebonheart.EbonArtsMod.common.blocks.basic.BlockVelious;
 import com.ebonheart.EbonArtsMod.common.blocks.basic.EABlockFence;
 import com.ebonheart.EbonArtsMod.common.blocks.basic.EABlockFenceGate;
+import com.ebonheart.EbonArtsMod.common.blocks.basic.EABlockLadder;
 import com.ebonheart.EbonArtsMod.common.blocks.basic.EABlockTorchArcanite;
 import com.ebonheart.EbonArtsMod.common.blocks.basic.EABlockTorchDraconium;
 import com.ebonheart.EbonArtsMod.common.blocks.basic.EABlockTorchGlowstone;
@@ -58,8 +62,8 @@ import com.ebonheart.EbonArtsMod.common.blocks.basic.ItemBlockSlabObsidian;
 import com.ebonheart.EbonArtsMod.common.blocks.basic.ItemBlockSlabSoularite;
 import com.ebonheart.EbonArtsMod.common.blocks.basic.ItemBlockSlabVelious;
 import com.ebonheart.EbonArtsMod.common.blocks.devices.BlockColorAtrium;
-import com.ebonheart.EbonArtsMod.common.blocks.devices.BlockDoor;
-import com.ebonheart.EbonArtsMod.common.blocks.devices.EABlockDoor;
+import com.ebonheart.EbonArtsMod.common.blocks.devices.BlockDoor1;
+import com.ebonheart.EbonArtsMod.common.blocks.devices.BlockEADoor;
 import com.ebonheart.EbonArtsMod.common.blocks.world.BlockMultiOre;
 import com.ebonheart.EbonArtsMod.common.blocks.world.BlockOreArcanite;
 import com.ebonheart.EbonArtsMod.common.blocks.world.BlockOreDraconium;
@@ -158,15 +162,23 @@ public class InitBlocksEA
 	
 	//public static Block draconium_door;
 	//public static Block velious_door;
-	public static Block arcanite_door;
+	//public static Block arcanite_door;
 	//public static Block katcheen_door;
 	//public static Block necrocite_door;
 	//public static Block soularite_door;
 	
+	public static Block draconium_ladder;
+	public static Block velious_ladder;
+	public static Block arcanite_ladder;
+	public static Block katcheen_ladder;
+	public static Block necrocite_ladder;
+	public static Block soularite_ladder;
+		
 	public static Block mystic_block;
 	public static Block mystic_block_normal;
 	
 	public static Block paper_block;
+	public static Block leather_block;
 	
 	public static Block obsidian_block;
 	public static Block obsidian_block_brick;
@@ -177,6 +189,7 @@ public class InitBlocksEA
 	public static Block obsidian_wall;
 	public static Block obsidian_stairs;
 	public static Block obsidian_torch;
+	public static Block obsidian_ladder;
 	
 	public static Block glowstone_block;
 	public static Block glowstone_block_brick;
@@ -187,6 +200,7 @@ public class InitBlocksEA
 	public static Block glowstone_wall;
 	public static Block glowstone_stairs;
 	public static Block glowstone_torch;
+	public static Block glowstone_ladder;
 	
 	
 	//public static Block column;
@@ -201,8 +215,8 @@ public class InitBlocksEA
 	
 	
 	
-	public static Block color_atrium;
-	public static Block lit_color_atrium;
+	//public static Block color_atrium;
+	//public static Block lit_color_atrium;
 	
 	public static void clientInit() 
 	{
@@ -323,11 +337,18 @@ public class InitBlocksEA
 		
 		//draconium_door = new EABlockDoor("door/draconium_door").setHardness(5.0F).setResistance(4.0F);
 		//velious_door = new EABlockDoor("door/velious_door").setHardness(5.0F).setResistance(15.0F);
-		arcanite_door = new BlockDoor(Material.wood).setUnlocalizedName("door/arcanite_door").setHardness(5.0F).setResistance(30.0F);
+		//arcanite_door = new EABlockLadder().setUnlocalizedName("door/arcanite_door").setHardness(5.0F).setResistance(30.0F);
 		//katcheen_door = new EABlockDoor("door/katcheen_door").setHardness(5.0F).setResistance(2000.0F);
 		//necrocite_door = new EABlockDoor("door/necrocite_door").setHardness(5.0F).setResistance(45.0F);
 		//soularite_door = new EABlockDoor("door/soularite_door").setHardness(5.0F).setResistance(45.0F);
 		
+		draconium_ladder = new EABlockLadder("ladder/draconium_ladder").setHardness(5.0F).setResistance(4.0F);
+		velious_ladder = new EABlockLadder("ladder/velious_ladder").setHardness(5.0F).setResistance(15.0F);
+		arcanite_ladder = new EABlockLadder("ladder/arcanite_ladder").setHardness(5.0F).setResistance(30.0F);
+		katcheen_ladder = new EABlockLadder("ladder/katcheen_ladder").setHardness(5.0F).setResistance(2000.0F);
+		necrocite_ladder = new EABlockLadder("ladder/necrocite_ladder").setHardness(5.0F).setResistance(45.0F);
+		soularite_ladder = new EABlockLadder("ladder/soularite_ladder").setHardness(5.0F).setResistance(45.0F);
+				
 		
 		mystic_block_normal = new BlockMystic();
 		innate_mystic_block_normal = new BlockInnateMysticNormal();
@@ -341,6 +362,7 @@ public class InitBlocksEA
 		obsidian_fence_gate = new EABlockFenceGate("fence/obsidian_fence_gate").setHardness(5.0F).setResistance(2000.0F);
 		obsidian_wall = new EABlockWall("wall/obsidian_wall").setHardness(5.0F).setResistance(2000.0F);
 		obsidian_torch = new EABlockTorchObsidian("gem/obsidian/obsidian_torch").setHardness(0.0F).setResistance(0.0F);
+		obsidian_ladder = new EABlockLadder("ladder/obsidian_ladder").setHardness(5.0F).setResistance(0.0F);
 		
 		glowstone_block = new BlockGlowstone("gem/glowstone/glowstone_block").setHardness(5.0F).setResistance(45.0F);
 		glowstone_block_brick = new BlockGlowstone("gem/glowstone/glowstone_block_brick").setHardness(5.0F).setResistance(45.0F).setLightLevel(1.0f);
@@ -351,11 +373,13 @@ public class InitBlocksEA
 		glowstone_fence_gate = new EABlockFenceGate("fence/glowstone_fence_gate").setHardness(5.0F).setResistance(45.0F).setLightLevel(1.0f);
 		glowstone_wall = new EABlockWall("wall/glowstone_wall").setHardness(5.0F).setResistance(45.0F).setLightLevel(1.0f);
 		glowstone_torch = new EABlockTorchGlowstone("gem/glowstone/glowstone_torch").setHardness(0.0F).setResistance(0.0F);
+		glowstone_ladder = new EABlockLadder("ladder/glowstone_ladder").setHardness(5.0F).setResistance(0.0F).setLightLevel(1.0f);
 		
 		
 		
 		
 		paper_block = new BlockPaper().setHardness(1.0F).setResistance(4.0F);
+		leather_block = new BlockLeather().setHardness(1.0F).setResistance(4.0F);
 		
 		
 		
@@ -366,8 +390,8 @@ public class InitBlocksEA
 		//mystic_furnace = new TestBlockFurnaceEA(false).setUnlocalizedName("machine/mystic_furnace").setCreativeTab(EbonArtsMod.tabEbonArtsBlocks);
 		//lit_mystic_furnace = new TestBlockFurnaceEA(true).setUnlocalizedName("machine/lit_mystic_furnace").setCreativeTab(EbonArtsMod.tabEbonArtsBlocks);
 		
-		color_atrium = new BlockColorAtrium(false).setUnlocalizedName("machine/color_atrium");
-		lit_color_atrium = new BlockColorAtrium(true).setUnlocalizedName("machine/lit_color_atrium");
+		//color_atrium = new BlockColorAtrium(false).setUnlocalizedName("machine/color_atrium");
+		//lit_color_atrium = new BlockColorAtrium(true).setUnlocalizedName("machine/lit_color_atrium");
 		
 		
 		
@@ -465,11 +489,19 @@ public class InitBlocksEA
 		
 		//GameRegistry.registerBlock(draconium_door, draconium_door.getUnlocalizedName().substring(5));
 		//GameRegistry.registerBlock(velious_door, velious_door.getUnlocalizedName().substring(5));
-		GameRegistry.registerBlock(arcanite_door, arcanite_door.getUnlocalizedName().substring(5));
+		//GameRegistry.registerBlock(arcanite_door, arcanite_door.getUnlocalizedName().substring(5));
 		//GameRegistry.registerBlock(katcheen_door, katcheen_door.getUnlocalizedName().substring(5));
 		//GameRegistry.registerBlock(necrocite_door, necrocite_door.getUnlocalizedName().substring(5));
 		//GameRegistry.registerBlock(soularite_door, soularite_door.getUnlocalizedName().substring(5));
 		
+		GameRegistry.registerBlock(draconium_ladder, draconium_ladder.getUnlocalizedName().substring(5));
+		GameRegistry.registerBlock(velious_ladder, velious_ladder.getUnlocalizedName().substring(5));
+		GameRegistry.registerBlock(arcanite_ladder, arcanite_ladder.getUnlocalizedName().substring(5));
+		GameRegistry.registerBlock(katcheen_ladder, katcheen_ladder.getUnlocalizedName().substring(5));
+		GameRegistry.registerBlock(necrocite_ladder, necrocite_ladder.getUnlocalizedName().substring(5));
+		GameRegistry.registerBlock(soularite_ladder, soularite_ladder.getUnlocalizedName().substring(5));
+				
+				
 		GameRegistry.registerBlock(obsidian_block, obsidian_block.getUnlocalizedName().substring(5));
 		GameRegistry.registerBlock(obsidian_block_brick, obsidian_block_brick.getUnlocalizedName().substring(5));
 		GameRegistry.registerBlock(double_obsidian_slab, ItemBlockSlabObsidian.class, "slab/obsidian/double_obsidian_slab", obsidian_slab, double_obsidian_slab, true);
@@ -479,6 +511,7 @@ public class InitBlocksEA
 		GameRegistry.registerBlock(obsidian_fence_gate, obsidian_fence_gate.getUnlocalizedName().substring(5));
 		GameRegistry.registerBlock(obsidian_wall, obsidian_wall.getUnlocalizedName().substring(5));
 		GameRegistry.registerBlock(obsidian_torch, obsidian_torch.getUnlocalizedName().substring(5));
+		GameRegistry.registerBlock(obsidian_ladder, obsidian_ladder.getUnlocalizedName().substring(5));
 		
 		GameRegistry.registerBlock(glowstone_block, glowstone_block.getUnlocalizedName().substring(5));
 		GameRegistry.registerBlock(glowstone_block_brick, glowstone_block_brick.getUnlocalizedName().substring(5));
@@ -489,8 +522,10 @@ public class InitBlocksEA
 		GameRegistry.registerBlock(glowstone_fence_gate, glowstone_fence_gate.getUnlocalizedName().substring(5));
 		GameRegistry.registerBlock(glowstone_wall, glowstone_wall.getUnlocalizedName().substring(5));
 		GameRegistry.registerBlock(glowstone_torch, glowstone_torch.getUnlocalizedName().substring(5));
+		GameRegistry.registerBlock(glowstone_ladder, glowstone_ladder.getUnlocalizedName().substring(5));
 		
 		GameRegistry.registerBlock(paper_block, paper_block.getUnlocalizedName().substring(5));
+		GameRegistry.registerBlock(leather_block, leather_block.getUnlocalizedName().substring(5));
 		
 		
 		
@@ -500,8 +535,8 @@ public class InitBlocksEA
 		
 		//GameRegistry.registerBlock(pillar, pillar.getUnlocalizedName().substring(5));
 		
-		GameRegistry.registerBlock(color_atrium, color_atrium.getUnlocalizedName().substring(5));
-		GameRegistry.registerBlock(lit_color_atrium, lit_color_atrium.getUnlocalizedName().substring(5));
+		//GameRegistry.registerBlock(color_atrium, color_atrium.getUnlocalizedName().substring(5));
+		//GameRegistry.registerBlock(lit_color_atrium, lit_color_atrium.getUnlocalizedName().substring(5));
 		
 		//GameRegistry.registerBlock(test_liquid, test_liquid.getUnlocalizedName().substring(5));
 		//GameRegistry.registerBlock(flowing_test_liquid, flowing_test_liquid.getUnlocalizedName().substring(5));
@@ -630,11 +665,18 @@ public class InitBlocksEA
 		
 		//registerRender(draconium_door);
 		//registerRender(velious_door);
-		registerRender(arcanite_door);
+		//registerRender(arcanite_door);
 		//registerRender(katcheen_door);
 		//registerRender(necrocite_door);
 		//registerRender(soularite_door);
 		
+		registerRender(draconium_ladder);
+		registerRender(velious_ladder);
+		registerRender(arcanite_ladder);
+		registerRender(katcheen_ladder);
+		registerRender(necrocite_ladder);
+		registerRender(soularite_ladder);
+				
 		registerRender(obsidian_block);
 		registerRender(obsidian_block_brick);
 		registerRender(double_obsidian_slab);
@@ -644,6 +686,7 @@ public class InitBlocksEA
 		registerRender(obsidian_fence_gate);
 		registerRender(obsidian_wall);
 		registerRender(obsidian_torch);
+		registerRender(obsidian_ladder);
 		
 		registerRender(glowstone_block);
 		registerRender(glowstone_block_brick);
@@ -654,8 +697,10 @@ public class InitBlocksEA
 		registerRender(glowstone_fence_gate);
 		registerRender(glowstone_wall);
 		registerRender(glowstone_torch);
+		registerRender(glowstone_ladder);
 		
 		registerRender(paper_block);
+		registerRender(leather_block);
 		
 		//registerRender(column);
 		
@@ -664,8 +709,8 @@ public class InitBlocksEA
 		
 		
 		
-		registerRender(color_atrium);
-		registerRender(lit_color_atrium);
+		//registerRender(color_atrium);
+		//registerRender(lit_color_atrium);
 				
 		//registerRender(test_liquid);
 		//registerRender(flowing_test_liquid);
