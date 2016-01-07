@@ -1,6 +1,7 @@
 package com.ebonheart.EbonArtsMod.common.items.tools;
 
 import java.util.List;
+import java.util.Random;
 
 import com.ebonheart.EbonArtsMod.EbonArtsMod;
 import com.ebonheart.EbonArtsMod.common.items.ItemHelper;
@@ -25,11 +26,18 @@ public class ItemMassacre extends ItemSword {
 	
 	public boolean hitEntity(ItemStack stack, EntityLivingBase target, EntityLivingBase attacker)
     {
-		Potion potion = Potion.resistance;
-		EntityPlayer playerIn = attacker.getEntityWorld().getPlayerEntityByName(attacker.getName());
-		ItemHelper.addPotionEffectToTarget(playerIn, potion, 5, 0);
-		stack.damageItem(1, playerIn);
-        return true;
+		Random rand = new Random();
+		int d = rand.nextInt(100) + 1;
+		
+		if (d < 30)
+		{
+			Potion potion = Potion.resistance;
+			EntityPlayer playerIn = attacker.getEntityWorld().getPlayerEntityByName(attacker.getName());
+			ItemHelper.addPotionEffectToTarget(playerIn, potion, 5, 0);
+			stack.damageItem(1, playerIn);
+		}
+		return true;
+		
     }
 	
 	@SideOnly(Side.CLIENT)

@@ -1,6 +1,7 @@
 package com.ebonheart.EbonArtsMod.common.items.tools;
 
 import java.util.List;
+import java.util.Random;
 
 import com.ebonheart.EbonArtsMod.EbonArtsMod;
 import com.ebonheart.EbonArtsMod.common.items.ItemHelper;
@@ -25,12 +26,18 @@ public class ItemFrostbite extends ItemSword {
 	
 	public boolean hitEntity(ItemStack stack, EntityLivingBase target, EntityLivingBase attacker)
     {
-		Potion potion1 = Potion.moveSlowdown;
-		Potion potion2 = Potion.weakness;
-		EntityPlayer playerIn = attacker.getEntityWorld().getPlayerEntityByName(attacker.getName());
-		ItemHelper.addPotionEffectToTarget(target, potion1, 3, 2);
-		ItemHelper.addPotionEffectToTarget(target, potion2, 5, 2);
-		stack.damageItem(1, playerIn);
+		Random rand = new Random();
+		int d = rand.nextInt(100) + 1;
+		
+		if (d < 40)
+		{
+			Potion potion1 = Potion.moveSlowdown;
+			Potion potion2 = Potion.weakness;
+			EntityPlayer playerIn = attacker.getEntityWorld().getPlayerEntityByName(attacker.getName());
+			ItemHelper.addPotionEffectToTarget(target, potion1, 3, 2);
+			ItemHelper.addPotionEffectToTarget(target, potion2, 5, 2);
+			stack.damageItem(1, playerIn);
+		}
         return true;
     }
 	

@@ -4,12 +4,14 @@ import java.util.List;
 import java.util.Random;
 
 import com.ebonheart.EbonArtsMod.EbonArtsMod;
+import com.ebonheart.EbonArtsMod.common.items.ItemHelper;
 import com.ebonheart.EbonArtsMod.init.InitItemsEA;
 
 import net.minecraft.entity.EntityLivingBase;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.item.ItemStack;
 import net.minecraft.item.ItemSword;
+import net.minecraft.potion.Potion;
 import net.minecraft.world.World;
 import net.minecraftforge.fml.relauncher.Side;
 import net.minecraftforge.fml.relauncher.SideOnly;
@@ -33,6 +35,8 @@ public class ItemSouleater extends ItemSword {
 			EntityPlayer playerIn = attacker.getEntityWorld().getPlayerEntityByName(attacker.getName());
 			int heal = rand.nextInt(3) + 1;
 			attacker.heal(heal);
+			Potion potion = Potion.absorption;
+			ItemHelper.addPotionEffectToTarget(playerIn, potion, 4, 0);
 		
 			if(!playerIn.capabilities.isCreativeMode)
 			{

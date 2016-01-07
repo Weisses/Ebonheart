@@ -1,7 +1,16 @@
 {
     "variants": {
-        "axis=y":  { "model": "quartz_lines" },
-        "axis=z":   { "model": "quartz_lines", "x": 90 },
-        "axis=x":   { "model": "quartz_lines", "x": 90, "y": 90 }
+        "axis=y,variant=spruce":  { "model": "quartz_lines" },
+        "axis=z,variant=spruce":   { "model": "quartz_lines", "x": 90 },
+        "axis=x,variant=spruce":   { "model": "quartz_lines", "x": 90, "y": 90 },
+        "axis=y,variant=oak":  { "model": "quartz_lines" },
+        "axis=z,variant=oak":   { "model": "quartz_lines", "x": 90 },
+        "axis=x,variant=oak":   { "model": "quartz_lines", "x": 90, "y": 90 },
+        "axis=y,variant=jungle":  { "model": "quartz_lines" },
+        "axis=z,variant=jungle":   { "model": "quartz_lines", "x": 90 },
+        "axis=x,variant=jungle":   { "model": "quartz_lines", "x": 90, "y": 90 },
+        "axis=y,variant=birch":  { "model": "quartz_lines" },
+        "axis=z,variant=birch":   { "model": "quartz_lines", "x": 90 },
+        "axis=x,variant=birch":   { "model": "quartz_lines", "x": 90, "y": 90 }
     }
 }

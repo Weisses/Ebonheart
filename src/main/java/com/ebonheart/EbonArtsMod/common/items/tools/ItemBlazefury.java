@@ -1,6 +1,7 @@
 package com.ebonheart.EbonArtsMod.common.items.tools;
 
 import java.util.List;
+import java.util.Random;
 
 import com.ebonheart.EbonArtsMod.EbonArtsMod;
 import com.ebonheart.EbonArtsMod.common.items.ItemHelper;
@@ -28,11 +29,17 @@ public class ItemBlazefury extends ItemSword {
 	
 	public boolean hitEntity(ItemStack stack, EntityLivingBase target, EntityLivingBase attacker)
     {
-		Potion potion = Potion.fireResistance;
-		EntityPlayer playerIn = attacker.getEntityWorld().getPlayerEntityByName(attacker.getName());
-		target.setFire(4);
-		ItemHelper.addPotionEffectToTarget(playerIn, potion, 5, 0);
-		stack.damageItem(1, playerIn);
+		Random rand = new Random();
+		int d = rand.nextInt(100) + 1;
+		
+		if (d < 35)
+		{
+			Potion potion = Potion.fireResistance;
+			EntityPlayer playerIn = attacker.getEntityWorld().getPlayerEntityByName(attacker.getName());
+			target.setFire(4);
+			ItemHelper.addPotionEffectToTarget(playerIn, potion, 5, 0);
+			stack.damageItem(1, playerIn);
+		}
         return true;
     }
 	

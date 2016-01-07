@@ -42,6 +42,7 @@ import com.ebonheart.EbonArtsMod.common.blocks.basic.BlockVelious;
 import com.ebonheart.EbonArtsMod.common.blocks.basic.EABlockFence;
 import com.ebonheart.EbonArtsMod.common.blocks.basic.EABlockFenceGate;
 import com.ebonheart.EbonArtsMod.common.blocks.basic.EABlockLadder;
+import com.ebonheart.EbonArtsMod.common.blocks.basic.EABlockPillar;
 import com.ebonheart.EbonArtsMod.common.blocks.basic.EABlockTorchArcanite;
 import com.ebonheart.EbonArtsMod.common.blocks.basic.EABlockTorchDraconium;
 import com.ebonheart.EbonArtsMod.common.blocks.basic.EABlockTorchGlowstone;
@@ -203,7 +204,7 @@ public class InitBlocksEA
 	public static Block glowstone_ladder;
 	
 	
-	//public static Block column;
+	public static Block column;
 	
 	//public static Block purified_mystic_block;
 	
@@ -399,7 +400,7 @@ public class InitBlocksEA
 		//flowing_test_liquid = new TestBlockDynamicLiquidEA(Material.water);
 		
 		
-		//column = new EABlockPillar();
+		column = new EABlockPillar();
 		
 		//purified_mystic_block = new GeneralModBlocks(Material.rock).setUnlocalizedName("purified_mystic_block").setCreativeTab(EbonArtsMod.tabEbonArtsBlocks);
 		
@@ -542,7 +543,7 @@ public class InitBlocksEA
 		//GameRegistry.registerBlock(flowing_test_liquid, flowing_test_liquid.getUnlocalizedName().substring(5));
 		
 		
-		//GameRegistry.registerBlock(column, column.getUnlocalizedName().substring(5));
+		GameRegistry.registerBlock(column, column.getUnlocalizedName().substring(5));
 		//GameRegistry.registerBlock(arcanite_double_slab, arcanite_double_slab.getUnlocalizedName().substring(5));
 		//GameRegistry.registerBlock(arcanite_slab, arcanite_slab.getUnlocalizedName().substring(5));
 		
@@ -702,7 +703,7 @@ public class InitBlocksEA
 		registerRender(paper_block);
 		registerRender(leather_block);
 		
-		//registerRender(column);
+		registerRender(column);
 		
 		//registerRender(pillar);
 		
