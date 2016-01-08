@@ -56,7 +56,7 @@ public class BlockColorAtrium extends BlockContainer {
      */
     public Item getItemDropped(IBlockState state, Random rand, int fortune)
     {
-        return Item.getItemFromBlock(InitBlocksEA.color_atrium);
+        return Item.getItemFromBlock(InitBlocksEA.arcanite_block);
     }
 
     public void onBlockAdded(World worldIn, BlockPos pos, IBlockState state)
@@ -155,13 +155,13 @@ public class BlockColorAtrium extends BlockContainer {
 
         if (active)
         {
-            worldIn.setBlockState(pos, InitBlocksEA.lit_color_atrium.getDefaultState().withProperty(FACING, iblockstate.getValue(FACING)), 3);
-            worldIn.setBlockState(pos, InitBlocksEA.lit_color_atrium.getDefaultState().withProperty(FACING, iblockstate.getValue(FACING)), 3);
+            worldIn.setBlockState(pos, InitBlocksEA.arcanite_block.getDefaultState().withProperty(FACING, iblockstate.getValue(FACING)), 3);
+            worldIn.setBlockState(pos, InitBlocksEA.arcanite_block.getDefaultState().withProperty(FACING, iblockstate.getValue(FACING)), 3);
         }
         else
         {
-            worldIn.setBlockState(pos, InitBlocksEA.color_atrium.getDefaultState().withProperty(FACING, iblockstate.getValue(FACING)), 3);
-            worldIn.setBlockState(pos, InitBlocksEA.color_atrium.getDefaultState().withProperty(FACING, iblockstate.getValue(FACING)), 3);
+            worldIn.setBlockState(pos, InitBlocksEA.arcanite_block.getDefaultState().withProperty(FACING, iblockstate.getValue(FACING)), 3);
+            worldIn.setBlockState(pos, InitBlocksEA.arcanite_block.getDefaultState().withProperty(FACING, iblockstate.getValue(FACING)), 3);
         }
 
         keepInventory = false;
@@ -230,7 +230,7 @@ public class BlockColorAtrium extends BlockContainer {
     @SideOnly(Side.CLIENT)
     public Item getItem(World worldIn, BlockPos pos)
     {
-        return Item.getItemFromBlock(InitBlocksEA.color_atrium);
+        return Item.getItemFromBlock(InitBlocksEA.arcanite_block);
     }
 
     /**

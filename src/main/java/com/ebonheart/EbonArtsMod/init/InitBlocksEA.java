@@ -400,7 +400,7 @@ public class InitBlocksEA
 		//flowing_test_liquid = new TestBlockDynamicLiquidEA(Material.water);
 		
 		
-		column = new EABlockPillar();
+		column = new EABlockPillar("column");
 		
 		//purified_mystic_block = new GeneralModBlocks(Material.rock).setUnlocalizedName("purified_mystic_block").setCreativeTab(EbonArtsMod.tabEbonArtsBlocks);
 		

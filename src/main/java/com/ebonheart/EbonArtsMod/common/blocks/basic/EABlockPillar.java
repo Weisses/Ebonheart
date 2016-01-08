@@ -8,7 +8,6 @@ import com.ebonheart.EbonArtsMod.init.InitBlocksEA;
 import com.google.common.base.Predicate;
 
 import net.minecraft.block.Block;
-import net.minecraft.block.BlockLog;
 import net.minecraft.block.BlockNewLog;
 import net.minecraft.block.BlockPlanks;
 import net.minecraft.block.BlockRotatedPillar;
@@ -40,61 +39,39 @@ import net.minecraftforge.fml.relauncher.SideOnly;
 //    }
 //}
 
-public class EABlockPillar extends BlockLog
-{
-    public static final PropertyEnum VARIANT = PropertyEnum.create("variant", BlockPlanks.EnumType.class, new Predicate()
+public class EABlockPillar extends BlockRotatedPillar {
+	
+	public static final PropertyEnum LOG_AXIS = PropertyEnum.create("axis", EABlockPillar.EnumAxis.class);
+    
+    public EABlockPillar(String unlocalizedName)
     {
-    //    private static final String __OBFID = "CL_00002084";
-        public boolean apply(BlockPlanks.EnumType type)
-        {
-            return type.getMetadata() < 4;
-        }
-        public boolean apply(Object p_apply_1_)
-        {
-            return this.apply((BlockPlanks.EnumType)p_apply_1_);
-        }
-    });
-    private static final String __OBFID = "CL_00000281";
-
-    public EABlockPillar()
-    {
-    	this.setUnlocalizedName("column");
+    	super(Material.rock);
+    	this.setUnlocalizedName(unlocalizedName);
     	this.setCreativeTab(EbonArtsMod.tabEbonArtsBlocks);
-        this.setDefaultState(this.blockState.getBaseState().withProperty(VARIANT, BlockPlanks.EnumType.OAK).withProperty(LOG_AXIS, BlockLog.EnumAxis.Y));
+    	this.setHarvestLevel("pickaxe", 2);
+    	this.setStepSound(soundTypeStone);
     }
-
-    /**
-     * returns a list of blocks with the same ID, but different meta (eg: wood returns 4 blocks)
-     */
-    //@SideOnly(Side.CLIENT)
-    //public void getSubBlocks(Item itemIn, CreativeTabs tab, List list)
-    //{
-    //    list.add(new ItemStack(itemIn, 1, BlockPlanks.EnumType.OAK.getMetadata()));
-    //    list.add(new ItemStack(itemIn, 1, BlockPlanks.EnumType.SPRUCE.getMetadata()));
-    //    list.add(new ItemStack(itemIn, 1, BlockPlanks.EnumType.BIRCH.getMetadata()));
-    //    list.add(new ItemStack(itemIn, 1, BlockPlanks.EnumType.JUNGLE.getMetadata()));
-    //}
 
     /**
      * Convert the given metadata into a BlockState for this Block
      */
     public IBlockState getStateFromMeta(int meta)
     {
-        IBlockState iblockstate = this.getDefaultState().withProperty(VARIANT, BlockPlanks.EnumType.byMetadata((meta & 3) % 4));
+        IBlockState iblockstate = this.getDefaultState();
 
         switch (meta & 12)
         {
             case 0:
-                iblockstate = iblockstate.withProperty(LOG_AXIS, BlockLog.EnumAxis.Y);
+                iblockstate = iblockstate.withProperty(LOG_AXIS, EABlockPillar.EnumAxis.Y);
                 break;
             case 4:
-                iblockstate = iblockstate.withProperty(LOG_AXIS, BlockLog.EnumAxis.X);
+                iblockstate = iblockstate.withProperty(LOG_AXIS, EABlockPillar.EnumAxis.X);
                 break;
             case 8:
-                iblockstate = iblockstate.withProperty(LOG_AXIS, BlockLog.EnumAxis.Z);
+                iblockstate = iblockstate.withProperty(LOG_AXIS, EABlockPillar.EnumAxis.Z);
                 break;
             default:
-                iblockstate = iblockstate.withProperty(LOG_AXIS, BlockLog.EnumAxis.NONE);
+                iblockstate = iblockstate.withProperty(LOG_AXIS, EABlockPillar.EnumAxis.NONE);
         }
 
         return iblockstate;
@@ -105,10 +82,9 @@ public class EABlockPillar extends BlockLog
      */
     public int getMetaFromState(IBlockState state)
     {
-        byte b0 = 0;
-        int i = b0 | ((BlockPlanks.EnumType)state.getValue(VARIANT)).getMetadata();
-
-        switch (EABlockPillar.SwitchEnumAxis.AXIS_LOOKUP[((BlockLog.EnumAxis)state.getValue(LOG_AXIS)).ordinal()])
+        int i = 0;
+        
+        switch (EABlockPillar.SwitchEnumAxis.AXIS_LOOKUP[((EABlockPillar.EnumAxis)state.getValue(LOG_AXIS)).ordinal()])
         {
             case 1:
                 i |= 4;
@@ -119,38 +95,79 @@ public class EABlockPillar extends BlockLog
             case 3:
                 i |= 12;
         }
-
         return i;
     }
 
+    public IBlockState onBlockPlaced(World worldIn, BlockPos pos, EnumFacing facing, float hitX, float hitY, float hitZ, int meta, EntityLivingBase placer)
+    {
+        return super.onBlockPlaced(worldIn, pos, facing, hitX, hitY, hitZ, meta, placer).withProperty(LOG_AXIS, EABlockPillar.EnumAxis.fromFacingAxis(facing.getAxis()));
+    }
+    
     protected BlockState createBlockState()
     {
-        return new BlockState(this, new IProperty[] {VARIANT, LOG_AXIS});
-    }
-
-    protected ItemStack createStackedBlock(IBlockState state)
-    {
-        return new ItemStack(Item.getItemFromBlock(this), 1, ((BlockPlanks.EnumType)state.getValue(VARIANT)).getMetadata());
+        return new BlockState(this, new IProperty[] {LOG_AXIS});
     }
 
     /**
      * Get the damage value that this Block should drop
      */
-    public int damageDropped(IBlockState state)
+    //public int damageDropped(IBlockState state)
+    //{
+	     //return ((BlockPlanks.EnumType)state.getValue(VARIANT)).getMetadata();
+    //}
+
+    
+    public static enum EnumAxis implements IStringSerializable
     {
-        return ((BlockPlanks.EnumType)state.getValue(VARIANT)).getMetadata();
+        X("x"),
+        Y("y"),
+        Z("z"),
+        NONE("none");
+        private final String name;
+
+        private static final String __OBFID = "CL_00002100";
+
+        private EnumAxis(String name)
+        {
+            this.name = name;
+        }
+
+        public String toString()
+        {
+            return this.name;
+        }
+
+        public static EABlockPillar.EnumAxis fromFacingAxis(EnumFacing.Axis axis)
+        {
+            switch (EABlockPillar.SwitchAxis.AXIS_LOOKUP[axis.ordinal()])
+            {
+                case 1:
+                    return X;
+                case 2:
+                    return Y;
+                case 3:
+                    return Z;
+                default:
+                    return NONE;
+            }
+        }
+
+        public String getName()
+        {
+            return this.name;
+        }
     }
 
-    static final class SwitchEnumAxis
+    static final class SwitchAxis
         {
-            static final int[] AXIS_LOOKUP = new int[BlockLog.EnumAxis.values().length];
-            private static final String __OBFID = "CL_00002083";
+            static final int[] AXIS_LOOKUP = new int[EnumFacing.Axis.values().length];
+            private static final String __OBFID = "CL_00002101";
 
             static
             {
                 try
                 {
-                    AXIS_LOOKUP[BlockLog.EnumAxis.X.ordinal()] = 1;
+                    AXIS_LOOKUP[EnumFacing.Axis.X.ordinal()] = 1;
                 }
                 catch (NoSuchFieldError var3)
                 {
@@ -159,7 +176,7 @@ public class EABlockPillar extends BlockLog
 
                 try
                 {
-                    AXIS_LOOKUP[BlockLog.EnumAxis.Z.ordinal()] = 2;
+                    AXIS_LOOKUP[EnumFacing.Axis.Y.ordinal()] = 2;
                 }
                 catch (NoSuchFieldError var2)
                 {
@@ -168,7 +185,44 @@ public class EABlockPillar extends BlockLog
 
                 try
                 {
-                    AXIS_LOOKUP[BlockLog.EnumAxis.NONE.ordinal()] = 3;
+                    AXIS_LOOKUP[EnumFacing.Axis.Z.ordinal()] = 3;
+                }
+                catch (NoSuchFieldError var1)
+                {
+                    ;
+                }
+            }
+        }
+    
+    
+    
+    static final class SwitchEnumAxis
+        {
+            static final int[] AXIS_LOOKUP = new int[EABlockPillar.EnumAxis.values().length];
+            
+            static
+            {
+                try
+                {
+                    AXIS_LOOKUP[EABlockPillar.EnumAxis.X.ordinal()] = 1;
+                }
+                catch (NoSuchFieldError var3)
+                {
+                    ;
+                }
+
+                try
+                {
+                    AXIS_LOOKUP[EABlockPillar.EnumAxis.Z.ordinal()] = 2;
+                }
+                catch (NoSuchFieldError var2)
+                {
+                    ;
+                }
+
+                try
+                {
+                    AXIS_LOOKUP[EABlockPillar.EnumAxis.NONE.ordinal()] = 3;
                 }
                 catch (NoSuchFieldError var1)
                 {
