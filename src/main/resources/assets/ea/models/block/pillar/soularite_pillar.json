@@ -1,0 +1,7 @@
+{
+    "parent": "block/cube_column",
+    "textures": {
+        "end": "ea:blocks/gems/soularite/soularite_pillar_top",
+        "side": "ea:blocks/gems/soularite/soularite_pillar_side"
+    }
+}

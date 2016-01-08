@@ -1,0 +1,7 @@
+{
+    "parent": "block/cube_column",
+    "textures": {
+        "end": "ea:blocks/gems/glowstone/glowstone_pillar_top",
+        "side": "ea:blocks/gems/glowstone/glowstone_pillar_side"
+    }
+}

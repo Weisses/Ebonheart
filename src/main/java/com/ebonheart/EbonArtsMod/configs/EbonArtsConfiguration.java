@@ -15,7 +15,7 @@ public class EbonArtsConfiguration
 	public static boolean armorRecipe;
 	public static boolean musicRecipe;
 	public static boolean decraftRecipe1;
-	public static boolean decraftRecipe2;
+	//public static boolean decraftRecipe2;
 	public static final boolean HORSERECIPE_DEFAULT = false;
 	public static final String HORSERECIPE_NAME = "Disable crafting Horse Armor/Saddles?";
 	public static final boolean VANILLARECIPE_DEFAULT = false;
@@ -30,8 +30,8 @@ public class EbonArtsConfiguration
 	public static final String MUSICRECIPE_NAME = "Disable crafting Music Discs?";
 	public static final boolean DECRAFTRECIPE1_DEFAULT = false;
 	public static final String DECRAFTRECIPE1_NAME = "Disable decrafting Mod Items?";
-	public static final boolean DECRAFTRECIPE2_DEFAULT = false;
-	public static final String DECRAFTRECIPE2_NAME = "Disable decrafting Vanilla Items?";
+	//public static final boolean DECRAFTRECIPE2_DEFAULT = false;
+	//public static final String DECRAFTRECIPE2_NAME = "Disable decrafting Vanilla Items?";
 	
 	public static void syncConfig()
 	{
@@ -48,7 +48,7 @@ public class EbonArtsConfiguration
 		armorRecipe = EbonArtsMod.config.get(RECIPES, ARMORRECIPE_NAME, ARMORRECIPE_DEFAULT).getBoolean(ARMORRECIPE_DEFAULT);
 		musicRecipe = EbonArtsMod.config.get(RECIPES, MUSICRECIPE_NAME, MUSICRECIPE_DEFAULT).getBoolean(MUSICRECIPE_DEFAULT);
 		decraftRecipe1 = EbonArtsMod.config.get(RECIPES, DECRAFTRECIPE1_NAME, DECRAFTRECIPE1_DEFAULT).getBoolean(DECRAFTRECIPE1_DEFAULT);
-		decraftRecipe2 = EbonArtsMod.config.get(RECIPES, DECRAFTRECIPE2_NAME, DECRAFTRECIPE2_DEFAULT).getBoolean(DECRAFTRECIPE2_DEFAULT);
+		//decraftRecipe2 = EbonArtsMod.config.get(RECIPES, DECRAFTRECIPE2_NAME, DECRAFTRECIPE2_DEFAULT).getBoolean(DECRAFTRECIPE2_DEFAULT);
 		
 		//saves the config
 		if(EbonArtsMod.config.hasChanged())

@@ -1,5 +1,5 @@
 {
-    "parent": "ea:block/stairs/obsidian_stairs",
+    "parent": "ea:block/stairs/obsidian/obsidian_stairs",
     "display": {
         "thirdperson": {
             "rotation": [ 10, -45, 170 ],

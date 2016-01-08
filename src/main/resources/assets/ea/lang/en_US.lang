@@ -133,6 +133,13 @@ tile.ladder/katcheen_ladder.name=Katcheen Ladder
 tile.ladder/necrocite_ladder.name=Necrocite Ladder
 tile.ladder/soularite_ladder.name=Soularite Ladder
 
+tile.pillar/draconium_pillar.name=Draconium Pillar
+tile.pillar/velious_pillar.name=Velious Pillar
+tile.pillar/arcanite_pillar.name=Arcanite Pillar
+tile.pillar/katcheen_pillar.name=Katcheen Pillar
+tile.pillar/necrocite_pillar.name=Necrocite Pillar
+tile.pillar/soularite_pillar.name=Soularite Pillar
+
 tile.fence/innate_arcanite_fence_normal.name=Innate Arcanite Fence
 
 tile.paper_block.name=Block of Paper
@@ -147,6 +154,7 @@ tile.stairs/glowstone_stairs.name=Purified Glowstone Stairs
 tile.slab/glowstone/glowstone_slab.name=Purified Glowstone Slab
 tile.gem/glowstone/glowstone_torch.name=Purified Glowstone Torch
 tile.ladder/glowstone_ladder.name=Purified Glowstone Ladder
+tile.pillar/glowstone_pillar.name=Purified Glowstone Pillar
 
 tile.gem/obsidian/obsidian_block.name=Block of Purified Obsidian
 tile.gem/obsidian/obsidian_block_brick.name=Purified Obsidian Brick
@@ -157,6 +165,7 @@ tile.stairs/obsidian_stairs.name=Purified Obsidian Stairs
 tile.slab/obsidian/obsidian_slab.name=Purified Obsidian Slab
 tile.gem/obsidian/obsidian_torch.name=Purified Obsidian Torch
 tile.ladder/obsidian_ladder.name=Purified Obsidian Ladder
+tile.pillar/obsidian_pillar.name=Purified Obsidian Pillar
 
 //-----Tools-----
 item.tool/arcanite_pickaxe.name=Arcanite Pickaxe

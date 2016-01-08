@@ -1,5 +1,5 @@
 {
-    "parent": "ea:block/stairs/soularite_stairs",
+    "parent": "ea:block/stairs/soularite/soularite_stairs",
     "display": {
         "thirdperson": {
             "rotation": [ 10, -45, 170 ],

@@ -1,5 +1,5 @@
 {
-    "parent": "ea:block/stairs/velious_stairs",
+    "parent": "ea:block/stairs/velious/velious_stairs",
     "display": {
         "thirdperson": {
             "rotation": [ 10, -45, 170 ],
