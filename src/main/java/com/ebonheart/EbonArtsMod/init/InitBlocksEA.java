@@ -195,7 +195,7 @@ public class InitBlocksEA
 	
 	//public static Block draconium_door;
 	//public static Block velious_door;
-	public static Block arcanite_door;
+	//public static Block arcanite_door;
 	//public static Block katcheen_door;
 	//public static Block necrocite_door;
 	//public static Block soularite_door;
@@ -359,7 +359,7 @@ public class InitBlocksEA
 		
 		//draconium_door = new EABlockDoor("door/draconium_door").setHardness(5.0F).setResistance(4.0F);
 		//velious_door = new EABlockDoor("door/velious_door").setHardness(5.0F).setResistance(15.0F);
-		arcanite_door = new EABlockDoor("door/arcanite_door").setHardness(5.0F).setResistance(30.0F);
+		//arcanite_door = new EABlockDoor("door/arcanite_door").setHardness(5.0F).setResistance(30.0F);
 		//katcheen_door = new EABlockDoor("door/katcheen_door").setHardness(5.0F).setResistance(2000.0F);
 		//necrocite_door = new EABlockDoor("door/necrocite_door").setHardness(5.0F).setResistance(45.0F);
 		//soularite_door = new EABlockDoor("door/soularite_door").setHardness(5.0F).setResistance(45.0F);
@@ -500,7 +500,7 @@ public class InitBlocksEA
 		
 		//GameRegistry.registerBlock(draconium_door, draconium_door.getUnlocalizedName().substring(5));
 		//GameRegistry.registerBlock(velious_door, velious_door.getUnlocalizedName().substring(5));
-		GameRegistry.registerBlock(arcanite_door, arcanite_door.getUnlocalizedName().substring(5));
+		//GameRegistry.registerBlock(arcanite_door, arcanite_door.getUnlocalizedName().substring(5));
 		//GameRegistry.registerBlock(katcheen_door, katcheen_door.getUnlocalizedName().substring(5));
 		//GameRegistry.registerBlock(necrocite_door, necrocite_door.getUnlocalizedName().substring(5));
 		//GameRegistry.registerBlock(soularite_door, soularite_door.getUnlocalizedName().substring(5));
@@ -667,7 +667,7 @@ public class InitBlocksEA
 		
 		//registerRender(draconium_door);
 		//registerRender(velious_door);
-		registerRender(arcanite_door);
+		//registerRender(arcanite_door);
 		//registerRender(katcheen_door);
 		//registerRender(necrocite_door);
 		//registerRender(soularite_door);
