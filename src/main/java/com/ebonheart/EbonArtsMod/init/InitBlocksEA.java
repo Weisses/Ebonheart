@@ -37,6 +37,7 @@ import com.ebonheart.EbonArtsMod.common.blocks.basic.BlockMystic;
 import com.ebonheart.EbonArtsMod.common.blocks.basic.BlockNecrocite;
 import com.ebonheart.EbonArtsMod.common.blocks.basic.BlockObsidian;
 import com.ebonheart.EbonArtsMod.common.blocks.basic.BlockPaper;
+import com.ebonheart.EbonArtsMod.common.blocks.basic.BlockReed;
 import com.ebonheart.EbonArtsMod.common.blocks.basic.BlockSoularite;
 import com.ebonheart.EbonArtsMod.common.blocks.basic.BlockVelious;
 import com.ebonheart.EbonArtsMod.common.blocks.basic.EABlockFence;
@@ -208,7 +209,7 @@ public class InitBlocksEA
 	
 	public static Block paper_block;
 	public static Block leather_block;
-	
+	public static Block reed_block;
 	
 	
 	//public static Block purified_mystic_block;
@@ -387,6 +388,7 @@ public class InitBlocksEA
 		
 		paper_block = new BlockPaper().setHardness(1.0F).setResistance(4.0F);
 		leather_block = new BlockLeather().setHardness(1.0F).setResistance(4.0F);
+		reed_block = new BlockReed().setHardness(1.0F).setResistance(4.0F);
 		
 		//mystic_furnace = new TestBlockFurnaceEA(false).setUnlocalizedName("machine/mystic_furnace").setCreativeTab(EbonArtsMod.tabEbonArtsBlocks);
 		//lit_mystic_furnace = new TestBlockFurnaceEA(true).setUnlocalizedName("machine/lit_mystic_furnace").setCreativeTab(EbonArtsMod.tabEbonArtsBlocks);
@@ -525,6 +527,7 @@ public class InitBlocksEA
 		
 		GameRegistry.registerBlock(paper_block, paper_block.getUnlocalizedName().substring(5));
 		GameRegistry.registerBlock(leather_block, leather_block.getUnlocalizedName().substring(5));
+		GameRegistry.registerBlock(reed_block, reed_block.getUnlocalizedName().substring(5));
 		
 		//GameRegistry.registerBlock(color_atrium, color_atrium.getUnlocalizedName().substring(5));
 		//GameRegistry.registerBlock(lit_color_atrium, lit_color_atrium.getUnlocalizedName().substring(5));
@@ -692,6 +695,7 @@ public class InitBlocksEA
 		
 		registerRender(paper_block);
 		registerRender(leather_block);
+		registerRender(reed_block);
 		
 		//registerRender(color_atrium);
 		//registerRender(lit_color_atrium);
