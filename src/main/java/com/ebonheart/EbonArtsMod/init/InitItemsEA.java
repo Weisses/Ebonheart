@@ -32,84 +32,12 @@ import com.ebonheart.EbonArtsMod.common.items.tools.ItemPickaxeEA;
 import com.ebonheart.EbonArtsMod.common.items.tools.ItemShovelEA;
 import com.ebonheart.EbonArtsMod.common.items.tools.ItemSouleater;
 import com.ebonheart.EbonArtsMod.common.items.tools.ItemSwordEA;
+import com.ebonheart.EbonArtsMod.references.ItemsEA;
 import com.ebonheart.EbonArtsMod.references.Reference;
 
-public class InitItemsEA 
-{
-	public static Item ebon_tome;
-	
-	public static Item draconium_dust;
-	public static Item velious;
-	public static Item arcanite;
-	public static Item katcheen;
-	public static Item necrocite;
-	public static Item soularite;
-	public static Item ebonheart;
-	
-	public static Item obsidian_shards;
-	public static Item glowstone_shards;
-	//public static Item innate_arcanite;
+public class InitItemsEA extends ItemsEA {
 	
 	
-	
-	public static Item shimmering_disc;
-	
-	
-	//public static Item arcanite_shard;
-	
-	
-	//public static Item mystic_dust;
-	//public static Item purified_mystic_dust;
-	
-	public static Item tier_1_catalyst;
-	public static Item tier_2_catalyst;
-	public static Item tier_3_catalyst;
-	public static Item tier_4_catalyst;
-	//public static Item iron_catalyst;
-	//public static Item gold_catalyst;
-	//public static Item diamond_catalyst;
-	//public static Item emerald_catalyst;
-	
-	//public static Item ebon_sigil;
-	//public static Item dragons_catalyst;
-	
-	public static Item arcanite_pickaxe;
-	public static Item arcanite_axe;
-	public static Item arcanite_shovel;
-	public static Item arcanite_hoe;
-	public static Item arcanite_sword;
-	
-	public static Item arcanite_helmet;
-	public static Item arcanite_chestplate;
-	public static Item arcanite_leggings;
-	public static Item arcanite_boots;
-	
-	public static Item katcheen_pickaxe;
-	public static Item katcheen_axe;
-	public static Item katcheen_shovel;
-	public static Item katcheen_hoe;
-	public static Item katcheen_sword;
-	
-	public static Item katcheen_helmet;
-	public static Item katcheen_chestplate;
-	public static Item katcheen_leggings;
-	public static Item katcheen_boots;
-	
-	public static Item empowered_sword;
-	public static Item blazefury;
-	public static Item despair;
-	public static Item frostbite;
-	public static Item massacre;
-	public static Item souleater;
-	
-	public static ItemFood banana;
-	public static ItemFood dragon_fruit;
-	
-	
-	//public static Item test_liquid_bucket;
-	
-	
-	//public static Item mans_steak;
 	
 	public static final Item.ToolMaterial arcaniteToolMaterial = EnumHelper.addToolMaterial("arcaniteToolMaterial", 2, 1000, 7.0F, 2.5F, 15);
 	public static final Item.ToolMaterial katcheenToolMaterial = EnumHelper.addToolMaterial("katcheenToolMaterial", 3, 2000, 9.5F, 4.0F, 20);
@@ -269,79 +197,5 @@ public class InitItemsEA
 	
 	}
 	
-	public static void registerRenders()
-	{
-		registerRender(ebon_tome);
-		
-		registerRender(draconium_dust);
-		registerRender(velious);
-		registerRender(arcanite);
-		registerRender(katcheen);
-		registerRender(necrocite);
-		registerRender(soularite);
-		registerRender(ebonheart);
-		
-		
-		//registerRender(innate_arcanite);
-		
-		
-		//registerRender(arcanite_shard);
-		
-		registerRender(shimmering_disc);
-		
-		
-		
-		registerRender(arcanite_pickaxe);
-		registerRender(arcanite_axe);
-		registerRender(arcanite_shovel);
-		registerRender(arcanite_hoe);
-		registerRender(arcanite_sword);
-		
-		registerRender(arcanite_helmet);
-		registerRender(arcanite_chestplate);
-		registerRender(arcanite_leggings);
-		registerRender(arcanite_boots);
-		
-		registerRender(katcheen_pickaxe);
-		registerRender(katcheen_axe);
-		registerRender(katcheen_shovel);
-		registerRender(katcheen_hoe);
-		registerRender(katcheen_sword);
-		
-		registerRender(katcheen_helmet);
-		registerRender(katcheen_chestplate);
-		registerRender(katcheen_leggings);
-		registerRender(katcheen_boots);
-		
-		registerRender(empowered_sword);
-		registerRender(frostbite);
-		registerRender(massacre);
-		registerRender(blazefury);
-		registerRender(despair);
-		registerRender(souleater);
-		
-		
-		registerRender(obsidian_shards);
-		registerRender(glowstone_shards);
-		
-		//registerRender(test_liquid_bucket);
-		
-		//registerRender(mystic_dust);
-		//registerRender(purified_mystic_dust);
-		//registerRender(ebon_sigil);
-		registerRender(tier_1_catalyst);
-		registerRender(tier_2_catalyst);
-		registerRender(tier_3_catalyst);
-		registerRender(tier_4_catalyst);
-		
-		registerRender(banana);
-		registerRender(dragon_fruit);
-		
-		
-	}
 	
-	public static void registerRender(Item item)
-	{
-		Minecraft.getMinecraft().getRenderItem().getItemModelMesher().register(item, 0, new ModelResourceLocation(Reference.MOD_ID + ":" + item.getUnlocalizedName().substring(5), "inventory"));
-	}
 }

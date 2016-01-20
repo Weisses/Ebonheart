@@ -50,6 +50,13 @@ public class EABlockPillar extends BlockRotatedPillar {
     	this.setCreativeTab(EbonArtsMod.tabEbonArtsBlocks);
     	this.setHarvestLevel("pickaxe", 2);
     	this.setStepSound(soundTypeStone);
+    	this.useNeighborBrightness = true;
+    }
+    
+    @Override
+    public boolean isOpaqueCube()
+    {
+    	return false;
     }
 
     /**

@@ -21,6 +21,9 @@ public class InitRecipesEA {
 		GameRegistry.addShapedRecipe(new ItemStack(InitBlocksEA.paper_block), new Object[]{"PPP", "PPP", "PPP", 'P', Items.paper});
 		GameRegistry.addShapedRecipe(new ItemStack(Items.paper, 9), new Object[]{"P", 'P', InitBlocksEA.paper_block});
 		
+		GameRegistry.addShapedRecipe(new ItemStack(InitBlocksEA.reed_block), new Object[]{"RRR", "RRR", "RRR", 'R', Items.reeds});
+		GameRegistry.addShapedRecipe(new ItemStack(Items.reeds, 9), new Object[]{"R", 'R', InitBlocksEA.reed_block});
+		
 		GameRegistry.addShapedRecipe(new ItemStack(InitBlocksEA.leather_block), new Object[]{"LLL", "LLL", "LLL", 'L', Items.leather});
 		GameRegistry.addShapedRecipe(new ItemStack(Items.leather, 9), new Object[]{"L", 'L', InitBlocksEA.leather_block});
 		

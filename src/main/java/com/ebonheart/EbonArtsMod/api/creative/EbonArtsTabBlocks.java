@@ -6,6 +6,7 @@ import net.minecraft.item.Item;
 
 import com.ebonheart.EbonArtsMod.init.InitBlocksEA;
 import com.ebonheart.EbonArtsMod.init.InitItemsEA;
+import com.ebonheart.EbonArtsMod.references.BlocksEA;
 
 public class EbonArtsTabBlocks extends CreativeTabs {
 
@@ -18,6 +19,6 @@ public class EbonArtsTabBlocks extends CreativeTabs {
 	@Override
 	public Item getTabIconItem() 
 	{
-		return Item.getItemFromBlock(InitBlocksEA.draconium_ore);
+		return Item.getItemFromBlock(BlocksEA.draconium_ore);
 	}
 }

@@ -1,8 +1,5 @@
 {
-    "parent": "builtin/generated",
-    "textures": {
-        "layer0": "ea:blocks/gems/soularite/soularite_torch_on"
-    },
+    "parent": "ea:block/gem/soularite/normal_soularite_torch",
     "display": {
         "thirdperson": {
             "rotation": [ -90, 0, 0 ],
@@ -13,6 +10,10 @@
             "rotation": [ 0, -135, 25 ],
             "translation": [ 0, 4, 2 ],
             "scale": [ 1.7, 1.7, 1.7 ]
+        },
+        "gui": {
+            "rotation": [ -30, 135, 0 ],
+            "scale": [ 1.5, 1.5, 1.5 ]
         }
     }
 }

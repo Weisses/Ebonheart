@@ -1,5 +1,9 @@
 {
-    "parent": "ea:block/pillar/arcanite_pillar",
+    "parent": "block/cube_column",
+    "textures": {
+        "end": "ea:blocks/gems/arcanite/arcanite_pillar_top",
+        "side": "ea:blocks/gems/arcanite/arcanite_pillar_side"
+    },
     "display": {
         "thirdperson": {
             "rotation": [ 10, -45, 170 ],

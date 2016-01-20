@@ -7,6 +7,8 @@ import net.minecraft.item.Item;
 import net.minecraftforge.fml.client.registry.ClientRegistry;
 import net.minecraftforge.fml.common.registry.GameRegistry;
 
+
+import com.ebonheart.EbonArtsMod.common.blocks.basic.BlockPaper;
 import com.ebonheart.EbonArtsMod.common.tileentities.plants.BlockDragonwoodPlantRoot;
 import com.ebonheart.EbonArtsMod.common.tileentities.plants.TileEntityDragonwoodPlant;
 import com.ebonheart.EbonArtsMod.common.tileentities.plants.TileEntityDragonwoodPlantRenderer;
@@ -33,7 +35,7 @@ public final class InitTileEntitiesEA {
 		
 		//GameRegistry.registerTileEntity(TestTileEntity.class, "tile_entity");
 		GameRegistry.registerTileEntity(TileEntityDragonwoodPlant.class, "dragonwoodplant");
-	
+		//ClientRegistry.bindTileEntitySpecialRenderer(BlockPaper.class, new BlockPaperRenderer());
 	}
 	
 	

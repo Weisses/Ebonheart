@@ -1,8 +1,5 @@
 package com.ebonheart.EbonArtsMod.common.blocks.basic;
 
-import com.ebonheart.EbonArtsMod.EbonArtsMod;
-
-import net.minecraft.block.Block;
 import net.minecraft.block.BlockDirectional;
 import net.minecraft.block.material.Material;
 import net.minecraft.block.properties.IProperty;
@@ -12,6 +9,10 @@ import net.minecraft.entity.EntityLivingBase;
 import net.minecraft.util.BlockPos;
 import net.minecraft.util.EnumFacing;
 import net.minecraft.world.World;
+
+import com.ebonheart.EbonArtsMod.EbonArtsMod;
+
+
 
 public class BlockReed extends BlockDirectional {
 

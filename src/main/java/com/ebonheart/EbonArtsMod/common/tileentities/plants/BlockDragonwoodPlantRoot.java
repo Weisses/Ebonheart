@@ -86,10 +86,10 @@ public class BlockDragonwoodPlantRoot extends Block implements ITileEntityProvid
 		return new TileEntityDragonwoodPlant();
 	}
 	
-	public void RegisterRenderers()
-	{
-		Minecraft.getMinecraft().getRenderItem().getItemModelMesher().register(Item.getItemFromBlock(this), 0, new ModelResourceLocation(Reference.MOD_ID +":" + "dragonwoodplant", "inventory"));
-	}
+	//public void RegisterRenderers()
+	//{
+	//	Minecraft.getMinecraft().getRenderItem().getItemModelMesher().register(Item.getItemFromBlock(this), 0, new ModelResourceLocation(Reference.MOD_ID +":" + "dragonwoodplant", "inventory"));
+	//}
 	
 	public int tickRate(World world)
     {

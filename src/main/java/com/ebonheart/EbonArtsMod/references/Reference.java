@@ -1,7 +1,7 @@
 package com.ebonheart.EbonArtsMod.references;
 
-public class Reference 
-{
+public class Reference {
+	
 	//Main
 	public static final String MOD_ID = "ea";
 	public static final String MOD_NAME = "Ebon Arts Mod";

@@ -3,26 +3,18 @@ package com.ebonheart.EbonArtsMod;
 import net.minecraftforge.common.config.Configuration;
 import net.minecraftforge.fml.client.event.ConfigChangedEvent;
 import net.minecraftforge.fml.common.FMLCommonHandler;
-import net.minecraftforge.fml.common.FMLLog;
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.common.Mod.EventHandler;
-import net.minecraftforge.fml.common.Mod.Instance;
 import net.minecraftforge.fml.common.SidedProxy;
 import net.minecraftforge.fml.common.event.FMLInitializationEvent;
 import net.minecraftforge.fml.common.event.FMLPostInitializationEvent;
 import net.minecraftforge.fml.common.event.FMLPreInitializationEvent;
 import net.minecraftforge.fml.common.eventhandler.SubscribeEvent;
 
-import org.apache.logging.log4j.Logger;
-
 import com.ebonheart.EbonArtsMod.api.creative.EbonArtsTabBlocks;
 import com.ebonheart.EbonArtsMod.api.creative.EbonArtsTabItems;
 import com.ebonheart.EbonArtsMod.api.helper.LogHelper;
 import com.ebonheart.EbonArtsMod.configs.EbonArtsConfiguration;
-import com.ebonheart.EbonArtsMod.init.InitAchievementsEA;
-import com.ebonheart.EbonArtsMod.init.InitBlocksEA;
-import com.ebonheart.EbonArtsMod.init.InitItemsEA;
-import com.ebonheart.EbonArtsMod.init.InitRecipesEA;
 import com.ebonheart.EbonArtsMod.proxy.CommonProxy;
 import com.ebonheart.EbonArtsMod.references.Reference;
 
@@ -31,7 +23,7 @@ public class EbonArtsMod {
 
 	@SidedProxy(clientSide = Reference.CLIENT_PROXY_CLASS, serverSide = Reference.SERVER_PROXY_CLASS)
 	public static CommonProxy proxy;
-	public static Configuration config;
+	public static Configuration config = null;
 	
 	public static final EbonArtsTabBlocks tabEbonArtsBlocks = new EbonArtsTabBlocks("tabEbonArtsBlocks");
 	public static final EbonArtsTabItems tabEbonArtsItems = new EbonArtsTabItems("tabEbonArtsItems");
@@ -43,6 +35,24 @@ public class EbonArtsMod {
 	public void preInit(FMLPreInitializationEvent event)
 	{
 		config = new Configuration(event.getSuggestedConfigurationFile());
+		try
+		{
+			config.load();
+			LogHelper.info("Configuration loaded.");
+		}
+		catch (Exception e)
+		{
+			LogHelper.error("Ebon Arts has a problem loading it's configuration.");
+			throw new RuntimeException(e);
+		}
+		finally
+		{
+			if (config.hasChanged()) 
+			{
+				config.save();
+				LogHelper.info("Configuration changed, saved.");
+			}
+		}
 		FMLCommonHandler.instance().bus().register(instance);
 		EbonArtsConfiguration.syncConfig();
 		
@@ -50,13 +60,14 @@ public class EbonArtsMod {
 		LogHelper.info("Pre Initialization Complete.");
 	}
 	
-	//if config changed then it syncs it
+	//If config changed, it syncs it.
 	@SubscribeEvent
 	public void onConfigChanged(ConfigChangedEvent.OnConfigChangedEvent event)
 	{
 		if(event.modID.equals(Reference.MOD_ID))
 		{
 			EbonArtsConfiguration.syncConfig();
+			LogHelper.info("Configuration synced.");
 		}
 	}
 	

@@ -1,33 +1,26 @@
 package com.ebonheart.EbonArtsMod.proxy;
 
-import net.minecraft.client.Minecraft;
-import net.minecraft.client.resources.model.ModelResourceLocation;
 import net.minecraftforge.fml.common.event.FMLInitializationEvent;
 import net.minecraftforge.fml.common.event.FMLPostInitializationEvent;
 import net.minecraftforge.fml.common.event.FMLPreInitializationEvent;
 
-import com.ebonheart.EbonArtsMod.init.InitBlocksEA;
-import com.ebonheart.EbonArtsMod.init.InitItemsEA;
-import com.ebonheart.EbonArtsMod.references.Reference;
-
-public class ServerProxy extends CommonProxy 
-{
+public class ServerProxy extends CommonProxy {
 	
 	@Override
-	public void preInit(FMLPreInitializationEvent e) 
+	public void preInit(FMLPreInitializationEvent event) 
 	{
-		super.preInit(e);
+		super.preInit(event);
 	}
 	
 	@Override
-	public void init(FMLInitializationEvent e) 
+	public void init(FMLInitializationEvent event) 
 	{
-		super.init(e);
+		super.init(event);
 	}
 	
 	@Override
-	public void postInit(FMLPostInitializationEvent e) 
+	public void postInit(FMLPostInitializationEvent event) 
 	{
-		super.postInit(e);
+		super.postInit(event);
 	}
 }

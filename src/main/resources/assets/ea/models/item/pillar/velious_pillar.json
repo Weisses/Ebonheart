@@ -1,5 +1,9 @@
 {
-    "parent": "ea:block/pillar/velious_pillar",
+    "parent": "block/cube_column",
+    "textures": {
+        "end": "ea:blocks/gems/velious/velious_pillar_top",
+        "side": "ea:blocks/gems/velious/velious_pillar_side"
+    },
     "display": {
         "thirdperson": {
             "rotation": [ 10, -45, 170 ],
