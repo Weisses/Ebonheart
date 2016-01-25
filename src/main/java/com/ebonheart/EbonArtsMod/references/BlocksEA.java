@@ -33,6 +33,7 @@ public class BlocksEA {
 	public static Block soularite_block;
 	public static Block obsidian_block;
 	public static Block glowstone_block;
+	public static Block ebonheart_block;
 	
 	public static Block draconium_block_brick;
 	public static Block velious_block_brick;

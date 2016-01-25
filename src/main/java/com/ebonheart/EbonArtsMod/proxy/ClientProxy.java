@@ -28,6 +28,7 @@ public class ClientProxy extends CommonProxy {
 		
 		InitItemsEARender.registerRenders();
 		InitBlocksEARender.registerRenders();
+		InitBlocksEARender.registerSpecialRenders();
 		//InitTileEntitiesEA.registerRenders();
 		//InitTileEntitiesEA.clientRegisterRenders();
 				

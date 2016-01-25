@@ -8,7 +8,7 @@ import net.minecraft.item.Item;
 import net.minecraftforge.fml.client.registry.ClientRegistry;
 
 import com.ebonheart.EbonArtsMod.client.render.blocks.TileEntityTutorialRenderer;
-import com.ebonheart.EbonArtsMod.common.TileEntityTutorial;
+import com.ebonheart.EbonArtsMod.common.tileentities.TileEntityTutorial;
 import com.ebonheart.EbonArtsMod.init.InitBlocksEA;
 import com.ebonheart.EbonArtsMod.references.BlocksEA;
 import com.ebonheart.EbonArtsMod.references.Reference;
@@ -131,6 +131,7 @@ public final class InitBlocksEARender extends BlocksEA {
 		registerRender(soularite_block);
 		registerRender(obsidian_block);
 		registerRender(glowstone_block);
+		registerRender(ebonheart_block);
 		
 		registerRender(draconium_block_brick);
 		registerRender(velious_block_brick);
@@ -256,14 +257,16 @@ public final class InitBlocksEARender extends BlocksEA {
 		//registerRender(InitBlocksEA.arcanite_stairs, 14, "gem/arcanite/arcanite_stairs_red");
 		//registerRender(InitBlocksEA.arcanite_stairs, 15, "gem/arcanite/arcanite_stairs_black");
 		
-		registerRender(tutorialTileEntity);
-		ClientRegistry.bindTileEntitySpecialRenderer(TileEntityTutorial.class, new TileEntityTutorialRenderer());
 		
 		//registerRender(purified_mystic_block);
 	}
 	
 	public static void registerSpecialRenders()
 	{
+		registerRender(tutorialTileEntity);
+		ClientRegistry.bindTileEntitySpecialRenderer(TileEntityTutorial.class, new TileEntityTutorialRenderer());
+		
+		
 		
 	}
 	

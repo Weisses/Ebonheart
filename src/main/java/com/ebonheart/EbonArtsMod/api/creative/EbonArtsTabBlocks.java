@@ -19,6 +19,6 @@ public class EbonArtsTabBlocks extends CreativeTabs {
 	@Override
 	public Item getTabIconItem() 
 	{
-		return Item.getItemFromBlock(BlocksEA.draconium_ore);
+		return Item.getItemFromBlock(BlocksEA.ebonheart_block);
 	}
 }
