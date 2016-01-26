@@ -145,6 +145,7 @@ tile.fence/innate_arcanite_fence_normal.name=Innate Arcanite Fence
 tile.paper_block.name=Block of Paper
 tile.leather_block.name=Block of Leather
 tile.reed_block.name=Block of Sugar Cane
+tile.gem/ebonheart/ebonheart_block.name=Block of Ebonheart
 
 tile.gem/glowstone/glowstone_block.name=Block of Purified Glowstone
 tile.gem/glowstone/glowstone_block_brick.name=Purified Glowstone Brick

@@ -7,8 +7,10 @@ import net.minecraft.client.resources.model.ModelResourceLocation;
 import net.minecraft.item.Item;
 import net.minecraftforge.fml.client.registry.ClientRegistry;
 
-import com.ebonheart.EbonArtsMod.client.render.blocks.TileEntityTutorialRenderer;
-import com.ebonheart.EbonArtsMod.common.tileentities.TileEntityTutorial;
+import com.ebonheart.EbonArtsMod.client.render.blocks.RenderEbonheart;
+import com.ebonheart.EbonArtsMod.client.render.models.Ebonheart;
+import com.ebonheart.EbonArtsMod.client.render.models.TileEntityTutorialRenderer;
+import com.ebonheart.EbonArtsMod.common.entity.tile.TileEntityTutorial;
 import com.ebonheart.EbonArtsMod.init.InitBlocksEA;
 import com.ebonheart.EbonArtsMod.references.BlocksEA;
 import com.ebonheart.EbonArtsMod.references.Reference;
@@ -263,8 +265,8 @@ public final class InitBlocksEARender extends BlocksEA {
 	
 	public static void registerSpecialRenders()
 	{
-		registerRender(tutorialTileEntity);
-		ClientRegistry.bindTileEntitySpecialRenderer(TileEntityTutorial.class, new TileEntityTutorialRenderer());
+		//registerRender(tutorialTileEntity);
+		//ClientRegistry.bindTileEntitySpecialRenderer(TileEntityTutorial.class, new RenderEbonheart());
 		
 		
 		

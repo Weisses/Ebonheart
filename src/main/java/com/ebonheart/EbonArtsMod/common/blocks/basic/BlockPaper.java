@@ -12,10 +12,8 @@ import net.minecraft.world.World;
 
 import com.ebonheart.EbonArtsMod.EbonArtsMod;
 
-
-
 public class BlockPaper extends BlockDirectional {
-
+	
 	public BlockPaper() 
 	{
 		super(Material.cloth);
@@ -23,13 +21,14 @@ public class BlockPaper extends BlockDirectional {
 		this.setDefaultState(this.blockState.getBaseState().withProperty(FACING, EnumFacing.NORTH));
 		this.setCreativeTab(EbonArtsMod.tabEbonArtsBlocks);
 		this.setStepSound(soundTypeCloth);
+		this.useNeighborBrightness=true;
 	}
 	
     public boolean canPlaceBlockAt(World worldIn, BlockPos pos)
-    {
-        return worldIn.getBlockState(pos).getBlock().isReplaceable(worldIn, pos) && World.doesBlockHaveSolidTopSurface(worldIn, pos.down());
-    }
-
+	{
+    	return worldIn.getBlockState(pos).getBlock().isReplaceable(worldIn, pos) && World.doesBlockHaveSolidTopSurface(worldIn, pos.down());
+	}
+    
     public IBlockState onBlockPlaced(World worldIn, BlockPos pos, EnumFacing facing, float hitX, float hitY, float hitZ, int meta, EntityLivingBase placer)
     {
         return this.getDefaultState().withProperty(FACING, placer.getHorizontalFacing().getOpposite());
@@ -49,5 +48,14 @@ public class BlockPaper extends BlockDirectional {
     {
         return new BlockState(this, new IProperty[] {FACING});
     }
-
+    
+    public boolean isOpaqueCube()
+    {
+    	return false;
+    }
+    
+    public boolean isFullCube()
+    {
+        return false;
+    }
 }

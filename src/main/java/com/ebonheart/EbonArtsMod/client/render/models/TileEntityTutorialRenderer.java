@@ -1,4 +1,4 @@
-package com.ebonheart.EbonArtsMod.client.render.blocks;
+package com.ebonheart.EbonArtsMod.client.render.models;
 
 import net.minecraft.client.Minecraft;
 import net.minecraft.client.renderer.GlStateManager;

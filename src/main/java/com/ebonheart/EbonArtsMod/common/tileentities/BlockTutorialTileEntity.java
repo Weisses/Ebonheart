@@ -1,5 +1,7 @@
 package com.ebonheart.EbonArtsMod.common.tileentities;
 
+import com.ebonheart.EbonArtsMod.common.entity.tile.TileEntityTutorial;
+
 import net.minecraft.block.BlockContainer;
 import net.minecraft.block.material.Material;
 import net.minecraft.tileentity.TileEntity;

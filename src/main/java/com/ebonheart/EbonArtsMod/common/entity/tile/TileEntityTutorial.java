@@ -1,4 +1,4 @@
-package com.ebonheart.EbonArtsMod.common.tileentities;
+package com.ebonheart.EbonArtsMod.common.entity.tile;
 
 import net.minecraft.nbt.NBTTagCompound;
 import net.minecraft.tileentity.TileEntity;

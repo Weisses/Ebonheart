@@ -30,6 +30,7 @@ public class BlockLeather extends BlockDirectional {
 		this.setDefaultState(this.blockState.getBaseState().withProperty(FACING, EnumFacing.NORTH));
 		this.setCreativeTab(EbonArtsMod.tabEbonArtsBlocks);
 		this.setStepSound(soundTypeCloth);
+		this.useNeighborBrightness=true;
 	}
 	
     public boolean canPlaceBlockAt(World worldIn, BlockPos pos)
@@ -55,5 +56,15 @@ public class BlockLeather extends BlockDirectional {
     protected BlockState createBlockState()
     {
         return new BlockState(this, new IProperty[] {FACING});
+    }
+    
+    public boolean isOpaqueCube()
+    {
+    	return false;
+    }
+    
+    public boolean isFullCube()
+    {
+        return false;
     }
 }
