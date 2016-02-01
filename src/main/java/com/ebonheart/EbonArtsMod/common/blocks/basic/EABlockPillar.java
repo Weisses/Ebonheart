@@ -58,6 +58,11 @@ public class EABlockPillar extends BlockRotatedPillar {
     {
     	return false;
     }
+    
+    public boolean isFullCube()
+    {
+        return false;
+    }
 
     /**
      * Convert the given metadata into a BlockState for this Block

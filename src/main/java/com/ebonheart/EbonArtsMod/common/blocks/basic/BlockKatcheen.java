@@ -19,5 +19,16 @@ public class BlockKatcheen extends Block {
 		this.setCreativeTab(EbonArtsMod.tabEbonArtsBlocks);
 		this.setHarvestLevel("pickaxe", 2);
 		this.setStepSound(soundTypeStone);
+		this.useNeighborBrightness=true;
 	}
+    
+    public boolean isOpaqueCube()
+    {
+    	return false;
+    }
+    
+    public boolean isFullCube()
+    {
+        return false;
+    }
 }

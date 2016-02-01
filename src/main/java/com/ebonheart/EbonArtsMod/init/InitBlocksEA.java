@@ -79,8 +79,6 @@ import com.ebonheart.EbonArtsMod.references.Reference;
 
 public class InitBlocksEA extends BlocksEA {
 	
-	
-	
 	public static void preInit()
 	{
 		draconium_ore = new BlockOreDraconium(2, 0.4f, 10f);
@@ -248,7 +246,6 @@ public class InitBlocksEA extends BlocksEA {
 		GameRegistry.registerBlock(soularite_block, soularite_block.getUnlocalizedName().substring(5));
 		GameRegistry.registerBlock(obsidian_block, obsidian_block.getUnlocalizedName().substring(5));
 		GameRegistry.registerBlock(glowstone_block, glowstone_block.getUnlocalizedName().substring(5));
-		GameRegistry.registerBlock(ebonheart_block, ebonheart_block.getUnlocalizedName().substring(5));
 		
 		GameRegistry.registerBlock(draconium_block_brick, draconium_block_brick.getUnlocalizedName().substring(5));
 		GameRegistry.registerBlock(velious_block_brick, velious_block_brick.getUnlocalizedName().substring(5));
@@ -350,6 +347,7 @@ public class InitBlocksEA extends BlocksEA {
 		GameRegistry.registerBlock(paper_block, paper_block.getUnlocalizedName().substring(5));
 		GameRegistry.registerBlock(leather_block, leather_block.getUnlocalizedName().substring(5));
 		GameRegistry.registerBlock(reed_block, reed_block.getUnlocalizedName().substring(5));
+		GameRegistry.registerBlock(ebonheart_block, ebonheart_block.getUnlocalizedName().substring(5));
 		
 		//GameRegistry.registerBlock(color_atrium, color_atrium.getUnlocalizedName().substring(5));
 		//GameRegistry.registerBlock(lit_color_atrium, lit_color_atrium.getUnlocalizedName().substring(5));
@@ -363,6 +361,4 @@ public class InitBlocksEA extends BlocksEA {
 		
 	
 	}
-	
-	
 }

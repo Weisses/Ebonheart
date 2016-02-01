@@ -37,8 +37,6 @@ import com.ebonheart.EbonArtsMod.references.Reference;
 
 public class InitItemsEA extends ItemsEA {
 	
-	
-	
 	public static final Item.ToolMaterial arcaniteToolMaterial = EnumHelper.addToolMaterial("arcaniteToolMaterial", 2, 1000, 7.0F, 2.5F, 15);
 	public static final Item.ToolMaterial katcheenToolMaterial = EnumHelper.addToolMaterial("katcheenToolMaterial", 3, 2000, 9.5F, 4.0F, 20);
 	public static final Item.ToolMaterial empoweredToolMaterial = EnumHelper.addToolMaterial("empoweredToolMaterial", 3, 2000, 9.5F, 5.0F, 0);
@@ -62,17 +60,7 @@ public class InitItemsEA extends ItemsEA {
 		soularite = new ItemSoularite();
 		ebonheart = new ItemEbonheart();
 		
-		
-		//innate_arcanite = new ItemInnateArcanite("gem/innate_arcanite");
-		
-		
-		
 		shimmering_disc = new ItemShimmeringDisc();
-		
-		
-		
-		
-		//arcanite_shard = new ItemArcaniteShard("arcanite_shard");
 		
 		arcanite_pickaxe = new ItemPickaxeEA("tool/arcanite_pickaxe", arcaniteToolMaterial);
 		arcanite_axe = new ItemAxeEA("tool/arcanite_axe", arcaniteToolMaterial);
@@ -84,7 +72,6 @@ public class InitItemsEA extends ItemsEA {
 		arcanite_chestplate = new ItemArmorEA("armor/arcanite_chestplate", arcaniteArmorMaterial, 0, 1);
 		arcanite_leggings = new ItemArmorEA("armor/arcanite_leggings", arcaniteArmorMaterial, 0, 2);
 		arcanite_boots = new ItemArmorEA("armor/arcanite_boots", arcaniteArmorMaterial, 0, 3);
-		
 		
 		katcheen_pickaxe = new ItemPickaxeEA("tool/katcheen_pickaxe", katcheenToolMaterial);
 		katcheen_axe = new ItemAxeEA("tool/katcheen_axe", katcheenToolMaterial);
@@ -107,20 +94,24 @@ public class InitItemsEA extends ItemsEA {
 		obsidian_shards = new ItemObsidianShard();
 		glowstone_shards = new ItemGlowstoneShard();
 		
+		
+		
 		//test_liquid_bucket = new ItemBucket(InitBlocksEA.test_liquid).setUnlocalizedName("test_liquid_bucket").setCreativeTab(EbonArtsMod.tabEbonArtsItems).setContainerItem(test_liquid_bucket);
 		
-		
+		//arcanite_shard = new ItemArcaniteShard("arcanite_shard");
+		//innate_arcanite = new ItemInnateArcanite("gem/innate_arcanite");
+				
 		//mystic_dust = new Item().setUnlocalizedName("mystic_dust").setCreativeTab(EbonArtsMod.tabEbonArtsItems);
 		//purified_mystic_dust = new Item().setUnlocalizedName("purified_mystic_dust").setCreativeTab(EbonArtsMod.tabEbonArtsItems);
 		//ebon_sigil = new Omniplex().setUnlocalizedName("ebon_sigil");
-		tier_1_catalyst = new Item().setUnlocalizedName("tier_1_catalyst");
-		tier_2_catalyst = new Item().setUnlocalizedName("tier_2_catalyst");
-		tier_3_catalyst = new Item().setUnlocalizedName("tier_3_catalyst");
-		tier_4_catalyst = new Item().setUnlocalizedName("tier_4_catalyst");
-	
-	
-		banana = (ItemFood) new ItemFood(3, 0.3F, false).setUnlocalizedName("banana");
+		//tier_1_catalyst = new Item().setUnlocalizedName("tier_1_catalyst");
+		//tier_2_catalyst = new Item().setUnlocalizedName("tier_2_catalyst");
+		//tier_3_catalyst = new Item().setUnlocalizedName("tier_3_catalyst");
+		//tier_4_catalyst = new Item().setUnlocalizedName("tier_4_catalyst");
 		
+		
+		
+		banana = (ItemFood) new ItemFood(3, 0.3F, false).setUnlocalizedName("banana");
 		dragon_fruit = (ItemFood) new ItemDragonFruit(3, 0.3F, true);
 		
 	}
@@ -137,14 +128,7 @@ public class InitItemsEA extends ItemsEA {
 		GameRegistry.registerItem(soularite, soularite.getUnlocalizedName().substring(5));
 		GameRegistry.registerItem(ebonheart, ebonheart.getUnlocalizedName().substring(5));
 		
-		
-		//GameRegistry.registerItem(innate_arcanite, innate_arcanite.getUnlocalizedName().substring(5));
-		
-		//GameRegistry.registerItem(arcanite_shard, arcanite_shard.getUnlocalizedName().substring(5));
-		
 		GameRegistry.registerItem(shimmering_disc, shimmering_disc.getUnlocalizedName().substring(5));
-		
-		
 		
 		GameRegistry.registerItem(arcanite_pickaxe, arcanite_pickaxe.getUnlocalizedName().substring(5));
 		GameRegistry.registerItem(arcanite_axe, arcanite_axe.getUnlocalizedName().substring(5));
@@ -168,8 +152,6 @@ public class InitItemsEA extends ItemsEA {
 		GameRegistry.registerItem(katcheen_leggings, katcheen_leggings.getUnlocalizedName().substring(5));
 		GameRegistry.registerItem(katcheen_boots, katcheen_boots.getUnlocalizedName().substring(5));
 		
-		
-		//GameRegistry.registerItem(test_liquid_bucket, test_liquid_bucket.getUnlocalizedName().substring(5));
 		GameRegistry.registerItem(empowered_sword, empowered_sword.getUnlocalizedName().substring(5));
 		GameRegistry.registerItem(frostbite, frostbite.getUnlocalizedName().substring(5));
 		GameRegistry.registerItem(massacre, massacre.getUnlocalizedName().substring(5));
@@ -177,25 +159,27 @@ public class InitItemsEA extends ItemsEA {
 		GameRegistry.registerItem(despair, despair.getUnlocalizedName().substring(5));
 		GameRegistry.registerItem(souleater, souleater.getUnlocalizedName().substring(5));
 		
-		
 		GameRegistry.registerItem(obsidian_shards, obsidian_shards.getUnlocalizedName().substring(5));
 		GameRegistry.registerItem(glowstone_shards, glowstone_shards.getUnlocalizedName().substring(5));
 		
 		
+		
+		//GameRegistry.registerItem(test_liquid_bucket, test_liquid_bucket.getUnlocalizedName().substring(5));
+		
+		//GameRegistry.registerItem(innate_arcanite, innate_arcanite.getUnlocalizedName().substring(5));
+		//GameRegistry.registerItem(arcanite_shard, arcanite_shard.getUnlocalizedName().substring(5));
+		
 		//GameRegistry.registerItem(mystic_dust, mystic_dust.getUnlocalizedName().substring(5));
 		//GameRegistry.registerItem(purified_mystic_dust, purified_mystic_dust.getUnlocalizedName().substring(5));
 		//GameRegistry.registerItem(ebon_sigil, ebon_sigil.getUnlocalizedName().substring(5));
-		GameRegistry.registerItem(tier_1_catalyst, tier_1_catalyst.getUnlocalizedName().substring(5));
-		GameRegistry.registerItem(tier_2_catalyst, tier_2_catalyst.getUnlocalizedName().substring(5));
-		GameRegistry.registerItem(tier_3_catalyst, tier_3_catalyst.getUnlocalizedName().substring(5));
-		GameRegistry.registerItem(tier_4_catalyst, tier_4_catalyst.getUnlocalizedName().substring(5));
+		//GameRegistry.registerItem(tier_1_catalyst, tier_1_catalyst.getUnlocalizedName().substring(5));
+		//GameRegistry.registerItem(tier_2_catalyst, tier_2_catalyst.getUnlocalizedName().substring(5));
+		//GameRegistry.registerItem(tier_3_catalyst, tier_3_catalyst.getUnlocalizedName().substring(5));
+		//GameRegistry.registerItem(tier_4_catalyst, tier_4_catalyst.getUnlocalizedName().substring(5));
+		
+		
 		
 		GameRegistry.registerItem(banana, banana.getUnlocalizedName().substring(5));
-	
 		GameRegistry.registerItem(dragon_fruit, dragon_fruit.getUnlocalizedName().substring(5));
-		
-	
 	}
-	
-	
 }

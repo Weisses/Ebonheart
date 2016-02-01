@@ -21,15 +21,7 @@ public final class InitItemsEARender extends ItemsEA {
 		registerRender(soularite);
 		registerRender(ebonheart);
 		
-		
-		//registerRender(innate_arcanite);
-		
-		
-		//registerRender(arcanite_shard);
-		
 		registerRender(shimmering_disc);
-		
-		
 		
 		registerRender(arcanite_pickaxe);
 		registerRender(arcanite_axe);
@@ -60,24 +52,29 @@ public final class InitItemsEARender extends ItemsEA {
 		registerRender(despair);
 		registerRender(souleater);
 		
-		
 		registerRender(obsidian_shards);
 		registerRender(glowstone_shards);
+		
+		
 		
 		//registerRender(test_liquid_bucket);
 		
 		//registerRender(mystic_dust);
 		//registerRender(purified_mystic_dust);
 		//registerRender(ebon_sigil);
-		registerRender(tier_1_catalyst);
-		registerRender(tier_2_catalyst);
-		registerRender(tier_3_catalyst);
-		registerRender(tier_4_catalyst);
+		
+		//registerRender(innate_arcanite);
+		//registerRender(arcanite_shard);
+				
+		//registerRender(tier_1_catalyst);
+		//registerRender(tier_2_catalyst);
+		//registerRender(tier_3_catalyst);
+		//registerRender(tier_4_catalyst);
+		
+		
 		
 		registerRender(banana);
 		registerRender(dragon_fruit);
-		
-		
 	}
 	
 	public static void registerRender(Item item)
