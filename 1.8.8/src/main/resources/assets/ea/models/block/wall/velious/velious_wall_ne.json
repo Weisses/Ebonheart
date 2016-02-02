@@ -1,0 +1,6 @@
+{
+    "parent": "block/wall_ne",
+    "textures": {
+        "wall": "ea:blocks/gems/velious/velious_block_side"
+    }
+}

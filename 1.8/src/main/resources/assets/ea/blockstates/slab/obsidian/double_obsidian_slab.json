@@ -1,0 +1,6 @@
+{
+    "variants": {
+        "variant=false": { "model": "ea:slab/obsidian/full_obsidian_slab" },
+        "variant=true":    { "model": "ea:slab/obsidian/full_obsidian_slab" }
+    }
+}

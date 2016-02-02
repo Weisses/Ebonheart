@@ -1,0 +1,5 @@
+{
+    "variants": {
+        "normal":   { "model": "ea:gem/mystic/mystic_block_normal" }
+    }
+}

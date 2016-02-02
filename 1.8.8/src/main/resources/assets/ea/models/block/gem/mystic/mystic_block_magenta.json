@@ -1,0 +1,12 @@
+{
+    "parent": "block/cube",
+    "textures": {
+        "particle": "ea:blocks/gems/mystic/mystic_block_bottom_magenta",
+        "down": "ea:blocks/gems/mystic/mystic_block_bottom_magenta",
+        "up": "ea:blocks/gems/mystic/mystic_block_top_magenta",
+        "north": "ea:blocks/gems/mystic/mystic_block_side_magenta",
+        "east": "ea:blocks/gems/mystic/mystic_block_side_magenta",
+        "south": "ea:blocks/gems/mystic/mystic_block_side_magenta",
+        "west": "ea:blocks/gems/mystic/mystic_block_side_magenta"
+    }
+}

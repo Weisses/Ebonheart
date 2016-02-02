@@ -1,0 +1,12 @@
+{
+    "parent": "block/cube",
+    "textures": {
+        "particle": "ea:blocks/gems/mystic/innate_mystic_block_top_cyan",
+        "down": "ea:blocks/gems/mystic/innate_mystic_block_top_cyan",
+        "up": "ea:blocks/gems/mystic/innate_mystic_block_top_cyan",
+        "north": "ea:blocks/gems/mystic/innate_mystic_block_side_cyan",
+        "east": "ea:blocks/gems/mystic/innate_mystic_block_side_cyan",
+        "south": "ea:blocks/gems/mystic/innate_mystic_block_side_cyan",
+        "west": "ea:blocks/gems/mystic/innate_mystic_block_side_cyan"
+    }
+}

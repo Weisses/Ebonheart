@@ -1,0 +1,8 @@
+{
+    "parent": "block/half_slab",
+    "textures": {
+        "bottom": "ea:blocks/gems/necrocite/necrocite_block_bottom",
+        "top": "ea:blocks/gems/necrocite/necrocite_block_top",
+        "side": "ea:blocks/gems/necrocite/necrocite_block_slab"
+    }
+}
