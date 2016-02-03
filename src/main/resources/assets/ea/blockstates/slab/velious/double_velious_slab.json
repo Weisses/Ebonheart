@@ -1,6 +1,0 @@
-{
-    "variants": {
-        "variant=false": { "model": "ea:slab/velious/full_velious_slab" },
-        "variant=true":    { "model": "ea:slab/velious/full_velious_slab" }
-    }
-}

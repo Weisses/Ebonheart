@@ -1,6 +1,0 @@
-{
-    "variants": {
-        "variant=false": { "model": "ea:slab/katcheen/full_katcheen_slab" },
-        "variant=true":    { "model": "ea:slab/katcheen/full_katcheen_slab" }
-    }
-}

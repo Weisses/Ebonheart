@@ -1,8 +1,0 @@
-{
-    "parent": "block/stairs",
-    "textures": {
-        "bottom": "ea:blocks/gems/velious/velious_block_stairs",
-        "top": "ea:blocks/gems/velious/velious_block_stairs",
-        "side": "ea:blocks/gems/velious/velious_block_stairs"
-    }
-}

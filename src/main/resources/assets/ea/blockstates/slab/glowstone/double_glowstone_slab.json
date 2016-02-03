@@ -1,6 +1,0 @@
-{
-    "variants": {
-        "variant=false": { "model": "ea:slab/glowstone/full_glowstone_slab" },
-        "variant=true":    { "model": "ea:slab/glowstone/full_glowstone_slab" }
-    }
-}
