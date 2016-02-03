@@ -142,6 +142,7 @@ public final class InitBlocksEARender extends BlocksEA {
 		registerRender(soularite_block_brick);
 		registerRender(obsidian_block_brick);
 		registerRender(glowstone_block_brick);
+		registerRender(ebonheart_block_brick);
 		
 		registerRender(double_draconium_slab);
 		registerRender(double_velious_slab);
@@ -151,6 +152,7 @@ public final class InitBlocksEARender extends BlocksEA {
 		registerRender(double_soularite_slab);
 		registerRender(double_obsidian_slab);
 		registerRender(double_glowstone_slab);
+		registerRender(double_ebonheart_slab);
 		
 		registerRender(draconium_slab);
 		registerRender(velious_slab);
@@ -160,6 +162,7 @@ public final class InitBlocksEARender extends BlocksEA {
 		registerRender(soularite_slab);
 		registerRender(obsidian_slab);
 		registerRender(glowstone_slab);
+		registerRender(ebonheart_slab);
 		
 		registerRender(draconium_stairs);
 		registerRender(velious_stairs);
@@ -169,6 +172,7 @@ public final class InitBlocksEARender extends BlocksEA {
 		registerRender(soularite_stairs);
 		registerRender(obsidian_stairs);
 		registerRender(glowstone_stairs);
+		registerRender(ebonheart_stairs);
 		
 		registerRender(draconium_fence);
 		registerRender(velious_fence);
@@ -178,6 +182,7 @@ public final class InitBlocksEARender extends BlocksEA {
 		registerRender(soularite_fence);
 		registerRender(obsidian_fence);
 		registerRender(glowstone_fence);
+		registerRender(ebonheart_fence);
 		
 		registerRender(draconium_fence_gate);
 		registerRender(velious_fence_gate);
@@ -187,6 +192,7 @@ public final class InitBlocksEARender extends BlocksEA {
 		registerRender(soularite_fence_gate);
 		registerRender(obsidian_fence_gate);
 		registerRender(glowstone_fence_gate);
+		registerRender(ebonheart_fence_gate);
 		
 		registerRender(draconium_wall);
 		registerRender(velious_wall);
@@ -196,6 +202,7 @@ public final class InitBlocksEARender extends BlocksEA {
 		registerRender(soularite_wall);
 		registerRender(obsidian_wall);
 		registerRender(glowstone_wall);
+		registerRender(ebonheart_wall);
 		
 		registerRender(draconium_torch);
 		registerRender(velious_torch);
@@ -205,6 +212,7 @@ public final class InitBlocksEARender extends BlocksEA {
 		registerRender(soularite_torch);
 		registerRender(obsidian_torch);
 		registerRender(glowstone_torch);
+		registerRender(ebonheart_torch);
 		
 		//registerRender(draconium_door);
 		//registerRender(velious_door);
@@ -221,6 +229,7 @@ public final class InitBlocksEARender extends BlocksEA {
 		registerRender(soularite_ladder);
 		registerRender(obsidian_ladder);
 		registerRender(glowstone_ladder);
+		registerRender(ebonheart_ladder);
 		
 		registerRender(draconium_pillar);
 		registerRender(velious_pillar);
@@ -230,6 +239,7 @@ public final class InitBlocksEARender extends BlocksEA {
 		registerRender(soularite_pillar);
 		registerRender(obsidian_pillar);
 		registerRender(glowstone_pillar);
+		registerRender(ebonheart_pillar);
 		
 		registerRender(paper_block);
 		registerRender(leather_block);

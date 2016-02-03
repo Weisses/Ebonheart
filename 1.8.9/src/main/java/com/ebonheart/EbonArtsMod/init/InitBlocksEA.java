@@ -34,6 +34,7 @@ import com.ebonheart.EbonArtsMod.common.blocks.basic.EABlockStairs;
 import com.ebonheart.EbonArtsMod.common.blocks.basic.EABlockWall;
 import com.ebonheart.EbonArtsMod.common.blocks.basic.slabs.BlockDoubleSlabArcanite;
 import com.ebonheart.EbonArtsMod.common.blocks.basic.slabs.BlockDoubleSlabDraconium;
+import com.ebonheart.EbonArtsMod.common.blocks.basic.slabs.BlockDoubleSlabEbonheart;
 import com.ebonheart.EbonArtsMod.common.blocks.basic.slabs.BlockDoubleSlabGlowstone;
 import com.ebonheart.EbonArtsMod.common.blocks.basic.slabs.BlockDoubleSlabKatcheen;
 import com.ebonheart.EbonArtsMod.common.blocks.basic.slabs.BlockDoubleSlabNecrocite;
@@ -42,6 +43,7 @@ import com.ebonheart.EbonArtsMod.common.blocks.basic.slabs.BlockDoubleSlabSoular
 import com.ebonheart.EbonArtsMod.common.blocks.basic.slabs.BlockDoubleSlabVelious;
 import com.ebonheart.EbonArtsMod.common.blocks.basic.slabs.BlockHalfSlabArcanite;
 import com.ebonheart.EbonArtsMod.common.blocks.basic.slabs.BlockHalfSlabDraconium;
+import com.ebonheart.EbonArtsMod.common.blocks.basic.slabs.BlockHalfSlabEbonheart;
 import com.ebonheart.EbonArtsMod.common.blocks.basic.slabs.BlockHalfSlabGlowstone;
 import com.ebonheart.EbonArtsMod.common.blocks.basic.slabs.BlockHalfSlabKatcheen;
 import com.ebonheart.EbonArtsMod.common.blocks.basic.slabs.BlockHalfSlabNecrocite;
@@ -50,6 +52,7 @@ import com.ebonheart.EbonArtsMod.common.blocks.basic.slabs.BlockHalfSlabSoularit
 import com.ebonheart.EbonArtsMod.common.blocks.basic.slabs.BlockHalfSlabVelious;
 import com.ebonheart.EbonArtsMod.common.blocks.basic.slabs.ItemBlockSlabArcanite;
 import com.ebonheart.EbonArtsMod.common.blocks.basic.slabs.ItemBlockSlabDraconium;
+import com.ebonheart.EbonArtsMod.common.blocks.basic.slabs.ItemBlockSlabEbonheart;
 import com.ebonheart.EbonArtsMod.common.blocks.basic.slabs.ItemBlockSlabGlowstone;
 import com.ebonheart.EbonArtsMod.common.blocks.basic.slabs.ItemBlockSlabKatcheen;
 import com.ebonheart.EbonArtsMod.common.blocks.basic.slabs.ItemBlockSlabNecrocite;
@@ -58,6 +61,7 @@ import com.ebonheart.EbonArtsMod.common.blocks.basic.slabs.ItemBlockSlabSoularit
 import com.ebonheart.EbonArtsMod.common.blocks.basic.slabs.ItemBlockSlabVelious;
 import com.ebonheart.EbonArtsMod.common.blocks.basic.torches.EABlockTorchArcanite;
 import com.ebonheart.EbonArtsMod.common.blocks.basic.torches.EABlockTorchDraconium;
+import com.ebonheart.EbonArtsMod.common.blocks.basic.torches.EABlockTorchEbonheart;
 import com.ebonheart.EbonArtsMod.common.blocks.basic.torches.EABlockTorchGlowstone;
 import com.ebonheart.EbonArtsMod.common.blocks.basic.torches.EABlockTorchKatcheen;
 import com.ebonheart.EbonArtsMod.common.blocks.basic.torches.EABlockTorchNecrocite;
@@ -97,7 +101,7 @@ public class InitBlocksEA extends BlocksEA {
 		necrocite_block = new BlockNecrocite("gem/necrocite/necrocite_block").setHardness(5.0F).setResistance(45.0F);
 		soularite_block = new BlockSoularite("gem/soularite/soularite_block").setHardness(5.0F).setResistance(45.0F);
 		obsidian_block = new BlockObsidian("gem/obsidian/obsidian_block").setHardness(5.0F).setResistance(2000.0F);
-		glowstone_block = new BlockGlowstone("gem/glowstone/glowstone_block").setHardness(5.0F).setResistance(45.0F);
+		glowstone_block = new BlockGlowstone("gem/glowstone/glowstone_block").setHardness(5.0F).setResistance(45.0F).setLightLevel(1.0f);;
 		ebonheart_block = new BlockEbonheart("gem/ebonheart/ebonheart_block").setHardness(5.0F).setResistance(2000.0F);
 		
 		draconium_block_brick = new BlockDraconium("gem/draconium/draconium_block_brick").setHardness(5.0F).setResistance(4.0F);
@@ -108,6 +112,7 @@ public class InitBlocksEA extends BlocksEA {
 		soularite_block_brick = new BlockSoularite("gem/soularite/soularite_block_brick").setHardness(5.0F).setResistance(45.0F);
 		obsidian_block_brick = new BlockObsidian("gem/obsidian/obsidian_block_brick").setHardness(5.0F).setResistance(2000.0F);
 		glowstone_block_brick = new BlockGlowstone("gem/glowstone/glowstone_block_brick").setHardness(5.0F).setResistance(45.0F).setLightLevel(1.0f);
+		ebonheart_block_brick = new BlockEbonheart("gem/ebonheart/ebonheart_block_brick").setHardness(5.0F).setResistance(2000.0F);
 		
 		double_draconium_slab = new BlockDoubleSlabDraconium("slab/draconium/double_draconium_slab").setHardness(5.0F).setResistance(4.0F);
 		double_velious_slab = new BlockDoubleSlabVelious("slab/velious/double_velious_slab").setHardness(5.0F).setResistance(15.0F);
@@ -117,6 +122,7 @@ public class InitBlocksEA extends BlocksEA {
 		double_soularite_slab = new BlockDoubleSlabSoularite("slab/soularite/double_soularite_slab").setHardness(5.0F).setResistance(45.0F);
 		double_obsidian_slab = new BlockDoubleSlabObsidian("slab/obsidian/double_obsidian_slab").setHardness(5.0F).setResistance(2000.0F);
 		double_glowstone_slab = new BlockDoubleSlabGlowstone("slab/glowstone/double_glowstone_slab").setHardness(5.0F).setResistance(45.0F).setLightLevel(1.0f);
+		double_ebonheart_slab = new BlockDoubleSlabEbonheart("slab/ebonheart/double_ebonheart_slab").setHardness(5.0F).setResistance(2000.0F);
 		
 		draconium_slab = new BlockHalfSlabDraconium("slab/draconium/draconium_slab").setHardness(5.0F).setResistance(4.0F);
 		velious_slab = new BlockHalfSlabVelious("slab/velious/velious_slab").setHardness(5.0F).setResistance(15.0F);
@@ -126,6 +132,7 @@ public class InitBlocksEA extends BlocksEA {
 		soularite_slab = new BlockHalfSlabSoularite("slab/soularite/soularite_slab").setHardness(5.0F).setResistance(45.0F);
 		obsidian_slab = new BlockHalfSlabObsidian("slab/obsidian/obsidian_slab").setHardness(5.0F).setResistance(2000.0F);
 		glowstone_slab = new BlockHalfSlabGlowstone("slab/glowstone/glowstone_slab").setHardness(5.0F).setResistance(45.0F).setLightLevel(1.0f);
+		ebonheart_slab = new BlockHalfSlabEbonheart("slab/ebonheart/ebonheart_slab").setHardness(5.0F).setResistance(2000.0F);
 		
 		draconium_stairs = new EABlockStairs("stairs/draconium_stairs").setHardness(5.0F).setResistance(4.0F);
 		velious_stairs = new EABlockStairs("stairs/velious_stairs").setHardness(5.0F).setResistance(15.0F);
@@ -135,6 +142,7 @@ public class InitBlocksEA extends BlocksEA {
 		soularite_stairs = new EABlockStairs("stairs/soularite_stairs").setHardness(5.0F).setResistance(45.0F);
 		obsidian_stairs = new EABlockStairs("stairs/obsidian_stairs").setHardness(5.0F).setResistance(2000.0F);
 		glowstone_stairs = new EABlockStairs("stairs/glowstone_stairs").setHardness(5.0F).setResistance(45.0F).setLightLevel(1.0f);
+		ebonheart_stairs = new EABlockStairs("stairs/ebonheart_stairs").setHardness(5.0F).setResistance(2000.0F);
 		
 		draconium_fence = new EABlockFence("fence/draconium_fence").setHardness(5.0F).setResistance(4.0F);
 		velious_fence = new EABlockFence("fence/velious_fence").setHardness(5.0F).setResistance(15.0F);
@@ -144,6 +152,7 @@ public class InitBlocksEA extends BlocksEA {
 		soularite_fence = new EABlockFence("fence/soularite_fence").setHardness(5.0F).setResistance(45.0F);
 		obsidian_fence = new EABlockFence("fence/obsidian_fence").setHardness(5.0F).setResistance(2000.0F);
 		glowstone_fence = new EABlockFence("fence/glowstone_fence").setHardness(5.0F).setResistance(45.0F).setLightLevel(1.0f);
+		ebonheart_fence = new EABlockFence("fence/ebonheart_fence").setHardness(5.0F).setResistance(2000.0F);
 		
 		draconium_fence_gate = new EABlockFenceGate("fence/draconium_fence_gate").setHardness(5.0F).setResistance(4.0F);
 		velious_fence_gate = new EABlockFenceGate("fence/velious_fence_gate").setHardness(5.0F).setResistance(15.0F);
@@ -153,6 +162,7 @@ public class InitBlocksEA extends BlocksEA {
 		soularite_fence_gate = new EABlockFenceGate("fence/soularite_fence_gate").setHardness(5.0F).setResistance(45.0F);
 		obsidian_fence_gate = new EABlockFenceGate("fence/obsidian_fence_gate").setHardness(5.0F).setResistance(2000.0F);
 		glowstone_fence_gate = new EABlockFenceGate("fence/glowstone_fence_gate").setHardness(5.0F).setResistance(45.0F).setLightLevel(1.0f);
+		ebonheart_fence_gate = new EABlockFenceGate("fence/ebonheart_fence_gate").setHardness(5.0F).setResistance(2000.0F);
 		
 		draconium_wall = new EABlockWall("wall/draconium_wall").setHardness(5.0F).setResistance(4.0F);
 		velious_wall = new EABlockWall("wall/velious_wall").setHardness(5.0F).setResistance(15.0F);
@@ -162,6 +172,7 @@ public class InitBlocksEA extends BlocksEA {
 		soularite_wall = new EABlockWall("wall/soularite_wall").setHardness(5.0F).setResistance(45.0F);
 		obsidian_wall = new EABlockWall("wall/obsidian_wall").setHardness(5.0F).setResistance(2000.0F);
 		glowstone_wall = new EABlockWall("wall/glowstone_wall").setHardness(5.0F).setResistance(45.0F).setLightLevel(1.0f);
+		ebonheart_wall = new EABlockWall("wall/ebonheart_wall").setHardness(5.0F).setResistance(2000.0F);
 		
 		draconium_torch = new EABlockTorchDraconium("gem/draconium/draconium_torch").setHardness(5.0F).setResistance(4.0F);
 		velious_torch = new EABlockTorchVelious("gem/velious/velious_torch").setHardness(5.0F).setResistance(15.0F);
@@ -171,6 +182,7 @@ public class InitBlocksEA extends BlocksEA {
 		soularite_torch = new EABlockTorchSoularite("gem/soularite/soularite_torch").setHardness(5.0F).setResistance(45.0F);
 		obsidian_torch = new EABlockTorchObsidian("gem/obsidian/obsidian_torch").setHardness(0.0F).setResistance(0.0F);
 		glowstone_torch = new EABlockTorchGlowstone("gem/glowstone/glowstone_torch").setHardness(0.0F).setResistance(0.0F);
+		ebonheart_torch = new EABlockTorchEbonheart("gem/ebonheart/ebonheart_torch").setHardness(0.0F).setResistance(0.0F);
 		
 		//draconium_door = new EABlockDoor("door/draconium_door").setHardness(5.0F).setResistance(4.0F);
 		//velious_door = new EABlockDoor("door/velious_door").setHardness(5.0F).setResistance(15.0F);
@@ -187,6 +199,7 @@ public class InitBlocksEA extends BlocksEA {
 		soularite_ladder = new EABlockLadder("ladder/soularite_ladder").setHardness(5.0F).setResistance(45.0F);
 		obsidian_ladder = new EABlockLadder("ladder/obsidian_ladder").setHardness(5.0F).setResistance(0.0F);
 		glowstone_ladder = new EABlockLadder("ladder/glowstone_ladder").setHardness(5.0F).setResistance(0.0F).setLightLevel(1.0f);
+		ebonheart_ladder = new EABlockLadder("ladder/ebonheart_ladder").setHardness(5.0F).setResistance(0.0F);
 		
 		draconium_pillar = new EABlockPillar("pillar/draconium_pillar").setHardness(5.0F).setResistance(4.0F);
 		velious_pillar = new EABlockPillar("pillar/velious_pillar").setHardness(5.0F).setResistance(15.0F);
@@ -196,6 +209,7 @@ public class InitBlocksEA extends BlocksEA {
 		soularite_pillar = new EABlockPillar("pillar/soularite_pillar").setHardness(5.0F).setResistance(45.0F);
 		obsidian_pillar = new EABlockPillar("pillar/obsidian_pillar").setHardness(5.0F).setResistance(2000.0F);
 		glowstone_pillar = new EABlockPillar("pillar/glowstone_pillar").setHardness(5.0F).setResistance(45.0F).setLightLevel(1.0f);
+		ebonheart_pillar = new EABlockPillar("pillar/ebonheart_pillar").setHardness(5.0F).setResistance(2000.0F);
 		
 		mystic_block_normal = new BlockMystic();
 		innate_mystic_block_normal = new BlockInnateMysticNormal();
@@ -238,6 +252,12 @@ public class InitBlocksEA extends BlocksEA {
 		GameRegistry.registerBlock(innate_mystic_block_normal, innate_mystic_block_normal.getUnlocalizedName().substring(5));
 		GameRegistry.registerBlock(innate_mystic_block = new EABlockMeta("gem/mystic/innate_mystic_block", Material.rock), ItemBlockMeta.class, "gem/mystic/innate_mystic_block");
 		
+
+		GameRegistry.registerBlock(paper_block, paper_block.getUnlocalizedName().substring(5));
+		GameRegistry.registerBlock(leather_block, leather_block.getUnlocalizedName().substring(5));
+		GameRegistry.registerBlock(reed_block, reed_block.getUnlocalizedName().substring(5));
+		
+		
 		GameRegistry.registerBlock(draconium_block, draconium_block.getUnlocalizedName().substring(5));
 		GameRegistry.registerBlock(velious_block, velious_block.getUnlocalizedName().substring(5));
 		GameRegistry.registerBlock(arcanite_block, arcanite_block.getUnlocalizedName().substring(5));
@@ -246,6 +266,7 @@ public class InitBlocksEA extends BlocksEA {
 		GameRegistry.registerBlock(soularite_block, soularite_block.getUnlocalizedName().substring(5));
 		GameRegistry.registerBlock(obsidian_block, obsidian_block.getUnlocalizedName().substring(5));
 		GameRegistry.registerBlock(glowstone_block, glowstone_block.getUnlocalizedName().substring(5));
+		GameRegistry.registerBlock(ebonheart_block, ebonheart_block.getUnlocalizedName().substring(5));
 		
 		GameRegistry.registerBlock(draconium_block_brick, draconium_block_brick.getUnlocalizedName().substring(5));
 		GameRegistry.registerBlock(velious_block_brick, velious_block_brick.getUnlocalizedName().substring(5));
@@ -255,6 +276,7 @@ public class InitBlocksEA extends BlocksEA {
 		GameRegistry.registerBlock(soularite_block_brick, soularite_block_brick.getUnlocalizedName().substring(5));
 		GameRegistry.registerBlock(obsidian_block_brick, obsidian_block_brick.getUnlocalizedName().substring(5));
 		GameRegistry.registerBlock(glowstone_block_brick, glowstone_block_brick.getUnlocalizedName().substring(5));
+		GameRegistry.registerBlock(ebonheart_block_brick, ebonheart_block_brick.getUnlocalizedName().substring(5));
 		
 		GameRegistry.registerBlock(double_draconium_slab, ItemBlockSlabDraconium.class, "slab/draconium/double_draconium_slab", draconium_slab, double_draconium_slab, true);
 		GameRegistry.registerBlock(double_velious_slab, ItemBlockSlabVelious.class, "slab/velious/double_velious_slab", velious_slab, double_velious_slab, true);
@@ -264,6 +286,7 @@ public class InitBlocksEA extends BlocksEA {
 		GameRegistry.registerBlock(double_soularite_slab, ItemBlockSlabSoularite.class, "slab/soularite/double_soularite_slab", soularite_slab, double_soularite_slab, true);
 		GameRegistry.registerBlock(double_obsidian_slab, ItemBlockSlabObsidian.class, "slab/obsidian/double_obsidian_slab", obsidian_slab, double_obsidian_slab, true);
 		GameRegistry.registerBlock(double_glowstone_slab, ItemBlockSlabGlowstone.class, "slab/glowstone/double_glowstone_slab", glowstone_slab, double_glowstone_slab, true);
+		GameRegistry.registerBlock(double_ebonheart_slab, ItemBlockSlabEbonheart.class, "slab/ebonheart/double_ebonheart_slab", ebonheart_slab, double_ebonheart_slab, true);
 		
 		GameRegistry.registerBlock(draconium_slab, ItemBlockSlabDraconium.class, "slab/draconium/draconium_slab", draconium_slab, double_draconium_slab, false);
 		GameRegistry.registerBlock(velious_slab, ItemBlockSlabVelious.class, "slab/velious/velious_slab", velious_slab, double_velious_slab, false);
@@ -273,6 +296,7 @@ public class InitBlocksEA extends BlocksEA {
 		GameRegistry.registerBlock(soularite_slab, ItemBlockSlabSoularite.class, "slab/soularite/soularite_slab", soularite_slab, double_soularite_slab, false);
 		GameRegistry.registerBlock(obsidian_slab, ItemBlockSlabObsidian.class, "slab/obsidian/obsidian_slab", obsidian_slab, double_obsidian_slab, false);
 		GameRegistry.registerBlock(glowstone_slab, ItemBlockSlabGlowstone.class, "slab/glowstone/glowstone_slab", glowstone_slab, double_glowstone_slab, false);
+		GameRegistry.registerBlock(ebonheart_slab, ItemBlockSlabEbonheart.class, "slab/ebonheart/ebonheart_slab", ebonheart_slab, double_ebonheart_slab, false);
 		
 		GameRegistry.registerBlock(draconium_stairs, draconium_stairs.getUnlocalizedName().substring(5));
 		GameRegistry.registerBlock(velious_stairs, velious_stairs.getUnlocalizedName().substring(5));
@@ -282,6 +306,7 @@ public class InitBlocksEA extends BlocksEA {
 		GameRegistry.registerBlock(soularite_stairs, soularite_stairs.getUnlocalizedName().substring(5));
 		GameRegistry.registerBlock(obsidian_stairs, obsidian_stairs.getUnlocalizedName().substring(5));
 		GameRegistry.registerBlock(glowstone_stairs, glowstone_stairs.getUnlocalizedName().substring(5));
+		GameRegistry.registerBlock(ebonheart_stairs, ebonheart_stairs.getUnlocalizedName().substring(5));
 		
 		GameRegistry.registerBlock(draconium_fence, draconium_fence.getUnlocalizedName().substring(5));
 		GameRegistry.registerBlock(velious_fence, velious_fence.getUnlocalizedName().substring(5));
@@ -291,6 +316,7 @@ public class InitBlocksEA extends BlocksEA {
 		GameRegistry.registerBlock(soularite_fence, soularite_fence.getUnlocalizedName().substring(5));
 		GameRegistry.registerBlock(obsidian_fence, obsidian_fence.getUnlocalizedName().substring(5));
 		GameRegistry.registerBlock(glowstone_fence, glowstone_fence.getUnlocalizedName().substring(5));
+		GameRegistry.registerBlock(ebonheart_fence, ebonheart_fence.getUnlocalizedName().substring(5));
 		
 		GameRegistry.registerBlock(draconium_fence_gate, draconium_fence_gate.getUnlocalizedName().substring(5));
 		GameRegistry.registerBlock(velious_fence_gate, velious_fence_gate.getUnlocalizedName().substring(5));
@@ -300,6 +326,7 @@ public class InitBlocksEA extends BlocksEA {
 		GameRegistry.registerBlock(soularite_fence_gate, soularite_fence_gate.getUnlocalizedName().substring(5));
 		GameRegistry.registerBlock(obsidian_fence_gate, obsidian_fence_gate.getUnlocalizedName().substring(5));
 		GameRegistry.registerBlock(glowstone_fence_gate, glowstone_fence_gate.getUnlocalizedName().substring(5));
+		GameRegistry.registerBlock(ebonheart_fence_gate, ebonheart_fence_gate.getUnlocalizedName().substring(5));
 		
 		GameRegistry.registerBlock(draconium_wall, draconium_wall.getUnlocalizedName().substring(5));
 		GameRegistry.registerBlock(velious_wall, velious_wall.getUnlocalizedName().substring(5));
@@ -309,6 +336,7 @@ public class InitBlocksEA extends BlocksEA {
 		GameRegistry.registerBlock(soularite_wall, soularite_wall.getUnlocalizedName().substring(5));
 		GameRegistry.registerBlock(obsidian_wall, obsidian_wall.getUnlocalizedName().substring(5));
 		GameRegistry.registerBlock(glowstone_wall, glowstone_wall.getUnlocalizedName().substring(5));
+		GameRegistry.registerBlock(ebonheart_wall, ebonheart_wall.getUnlocalizedName().substring(5));
 		
 		GameRegistry.registerBlock(draconium_torch, draconium_torch.getUnlocalizedName().substring(5));
 		GameRegistry.registerBlock(velious_torch, velious_torch.getUnlocalizedName().substring(5));
@@ -318,6 +346,7 @@ public class InitBlocksEA extends BlocksEA {
 		GameRegistry.registerBlock(soularite_torch, soularite_torch.getUnlocalizedName().substring(5));
 		GameRegistry.registerBlock(obsidian_torch, obsidian_torch.getUnlocalizedName().substring(5));
 		GameRegistry.registerBlock(glowstone_torch, glowstone_torch.getUnlocalizedName().substring(5));
+		GameRegistry.registerBlock(ebonheart_torch, ebonheart_torch.getUnlocalizedName().substring(5));
 		
 		//GameRegistry.registerBlock(draconium_door, draconium_door.getUnlocalizedName().substring(5));
 		//GameRegistry.registerBlock(velious_door, velious_door.getUnlocalizedName().substring(5));
@@ -334,6 +363,7 @@ public class InitBlocksEA extends BlocksEA {
 		GameRegistry.registerBlock(soularite_ladder, soularite_ladder.getUnlocalizedName().substring(5));
 		GameRegistry.registerBlock(obsidian_ladder, obsidian_ladder.getUnlocalizedName().substring(5));
 		GameRegistry.registerBlock(glowstone_ladder, glowstone_ladder.getUnlocalizedName().substring(5));
+		GameRegistry.registerBlock(ebonheart_ladder, ebonheart_ladder.getUnlocalizedName().substring(5));
 		
 		GameRegistry.registerBlock(draconium_pillar, draconium_pillar.getUnlocalizedName().substring(5));
 		GameRegistry.registerBlock(velious_pillar, velious_pillar.getUnlocalizedName().substring(5));
@@ -343,11 +373,7 @@ public class InitBlocksEA extends BlocksEA {
 		GameRegistry.registerBlock(soularite_pillar, soularite_pillar.getUnlocalizedName().substring(5));
 		GameRegistry.registerBlock(obsidian_pillar, obsidian_pillar.getUnlocalizedName().substring(5));
 		GameRegistry.registerBlock(glowstone_pillar, glowstone_pillar.getUnlocalizedName().substring(5));
-		
-		GameRegistry.registerBlock(paper_block, paper_block.getUnlocalizedName().substring(5));
-		GameRegistry.registerBlock(leather_block, leather_block.getUnlocalizedName().substring(5));
-		GameRegistry.registerBlock(reed_block, reed_block.getUnlocalizedName().substring(5));
-		GameRegistry.registerBlock(ebonheart_block, ebonheart_block.getUnlocalizedName().substring(5));
+		GameRegistry.registerBlock(ebonheart_pillar, ebonheart_pillar.getUnlocalizedName().substring(5));
 		
 		//GameRegistry.registerBlock(color_atrium, color_atrium.getUnlocalizedName().substring(5));
 		//GameRegistry.registerBlock(lit_color_atrium, lit_color_atrium.getUnlocalizedName().substring(5));

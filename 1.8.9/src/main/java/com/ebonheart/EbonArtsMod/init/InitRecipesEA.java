@@ -17,8 +17,8 @@ public class InitRecipesEA {
 		GameRegistry.addShapedRecipe(new ItemStack(InitBlocksEA.mystic_block_normal), new Object[]{"CCC", "CDC", "CCC", 'D', InitItemsEA.draconium_dust, 'C', Blocks.cobblestone});
 		
 		//GameRegistry.addShapedRecipe(new ItemStack(InitTileEntitiesEA.Banana_Plant), new Object[]{"DN", "ND", 'D', InitItemsEA.draconium_dust, 'N', Items.quartz});
-		GameRegistry.addShapedRecipe(new ItemStack(InitBlocksEA.ebonheart_block), new Object[]{"EEE", "EEE", "EEE", 'E', InitItemsEA.ebonheart});
-		GameRegistry.addShapedRecipe(new ItemStack(InitItemsEA.ebonheart, 9), new Object[]{"E", 'E', InitBlocksEA.ebonheart_block});
+		//GameRegistry.addShapedRecipe(new ItemStack(InitBlocksEA.ebonheart_block), new Object[]{"EEE", "EEE", "EEE", 'E', InitItemsEA.ebonheart});
+		//GameRegistry.addShapedRecipe(new ItemStack(InitItemsEA.ebonheart, 9), new Object[]{"E", 'E', InitBlocksEA.ebonheart_block});
 		
 		GameRegistry.addShapedRecipe(new ItemStack(InitBlocksEA.paper_block), new Object[]{"PPP", "PPP", "PPP", 'P', Items.paper});
 		GameRegistry.addShapedRecipe(new ItemStack(Items.paper, 9), new Object[]{"P", 'P', InitBlocksEA.paper_block});
@@ -155,6 +155,20 @@ public class InitRecipesEA {
 		GameRegistry.addShapedRecipe(new ItemStack(InitBlocksEA.glowstone_ladder, 4), new Object[]{"G G", "GGG", "G G", 'G', InitBlocksEA.glowstone_block});
 		GameRegistry.addShapedRecipe(new ItemStack(InitBlocksEA.glowstone_pillar, 2), new Object[]{"G", "G", 'G', InitBlocksEA.glowstone_block});
 		
+		GameRegistry.addShapedRecipe(new ItemStack(InitBlocksEA.ebonheart_block), new Object[]{"##", "##", '#', InitItemsEA.ebonheart});
+		GameRegistry.addShapedRecipe(new ItemStack(InitBlocksEA.ebonheart_slab, 6), new Object[]{"SSS", 'S', InitBlocksEA.ebonheart_block});
+		GameRegistry.addShapedRecipe(new ItemStack(InitBlocksEA.ebonheart_stairs, 4), new Object[]{"  S", " SS", "SSS", 'S', InitBlocksEA.ebonheart_block});
+		GameRegistry.addShapedRecipe(new ItemStack(InitBlocksEA.ebonheart_stairs, 4), new Object[]{"S  ", "SS ", "SSS", 'S', InitBlocksEA.ebonheart_block});
+		GameRegistry.addShapedRecipe(new ItemStack(InitBlocksEA.ebonheart_stairs, 4), new Object[]{"SSS", " SS", "  S", 'S', InitBlocksEA.ebonheart_block});
+		GameRegistry.addShapedRecipe(new ItemStack(InitBlocksEA.ebonheart_stairs, 4), new Object[]{"SSS", "SS ", "S  ", 'S', InitBlocksEA.ebonheart_block});
+		GameRegistry.addShapedRecipe(new ItemStack(InitBlocksEA.ebonheart_fence, 3), new Object[]{"S#S", "S#S", 'S', InitBlocksEA.ebonheart_block, '#', InitItemsEA.ebonheart});
+		GameRegistry.addShapedRecipe(new ItemStack(InitBlocksEA.ebonheart_fence_gate), new Object[]{"#S#", "#S#", 'S', InitBlocksEA.ebonheart_block, '#', InitItemsEA.ebonheart});
+		GameRegistry.addShapedRecipe(new ItemStack(InitBlocksEA.ebonheart_wall, 3), new Object[]{"SSS", "SSS", 'S', InitBlocksEA.ebonheart_block});
+		GameRegistry.addShapedRecipe(new ItemStack(InitBlocksEA.ebonheart_block_brick, 4), new Object[]{"SS", "SS", 'S', InitBlocksEA.ebonheart_block});
+		GameRegistry.addShapedRecipe(new ItemStack(InitBlocksEA.ebonheart_torch, 4), new Object[]{"C", "S", 'S', InitBlocksEA.ebonheart_block, 'C', Items.coal});
+		GameRegistry.addShapedRecipe(new ItemStack(InitBlocksEA.ebonheart_torch, 4), new Object[]{"C", "S", 'S', InitBlocksEA.ebonheart_block, 'C', new ItemStack(Items.coal, 1, 1)});
+		GameRegistry.addShapedRecipe(new ItemStack(InitBlocksEA.ebonheart_ladder, 4), new Object[]{"S S", "SSS", "S S", 'S', InitBlocksEA.ebonheart_block});
+		GameRegistry.addShapedRecipe(new ItemStack(InitBlocksEA.ebonheart_pillar, 2), new Object[]{"S", "S", 'S', InitBlocksEA.ebonheart_block});
 		
 		
 		if(!EbonArtsConfiguration.vanillaRecipe)
@@ -390,6 +404,18 @@ public class InitRecipesEA {
 			GameRegistry.addShapelessRecipe(new ItemStack(InitItemsEA.glowstone_shards, 1), new ItemStack(InitBlocksEA.glowstone_torch));
 			GameRegistry.addShapelessRecipe(new ItemStack(InitItemsEA.glowstone_shards, 7), new ItemStack(InitBlocksEA.glowstone_ladder));
 			GameRegistry.addShapelessRecipe(new ItemStack(InitItemsEA.glowstone_shards, 4), new ItemStack(InitBlocksEA.glowstone_pillar));
+			
+			GameRegistry.addShapelessRecipe(new ItemStack(InitItemsEA.ebonheart, 4), new ItemStack(InitBlocksEA.ebonheart_block));
+			GameRegistry.addShapelessRecipe(new ItemStack(InitItemsEA.ebonheart, 4), new ItemStack(InitBlocksEA.ebonheart_block_brick));
+			GameRegistry.addShapelessRecipe(new ItemStack(InitItemsEA.ebonheart, 2), new ItemStack(InitBlocksEA.ebonheart_slab));
+			GameRegistry.addShapelessRecipe(new ItemStack(InitItemsEA.ebonheart, 6), new ItemStack(InitBlocksEA.ebonheart_fence));
+			GameRegistry.addShapelessRecipe(new ItemStack(InitItemsEA.ebonheart, 12), new ItemStack(InitBlocksEA.ebonheart_fence_gate));
+			GameRegistry.addShapelessRecipe(new ItemStack(InitItemsEA.ebonheart, 8), new ItemStack(InitBlocksEA.ebonheart_wall));
+			GameRegistry.addShapelessRecipe(new ItemStack(InitItemsEA.ebonheart, 6), new ItemStack(InitBlocksEA.ebonheart_stairs));
+			GameRegistry.addShapelessRecipe(new ItemStack(InitItemsEA.ebonheart, 1), new ItemStack(InitBlocksEA.ebonheart_torch));
+			GameRegistry.addShapelessRecipe(new ItemStack(InitItemsEA.ebonheart, 7), new ItemStack(InitBlocksEA.ebonheart_ladder));
+			GameRegistry.addShapelessRecipe(new ItemStack(InitItemsEA.ebonheart, 4), new ItemStack(InitBlocksEA.ebonheart_pillar));
+			
 		}
 		else
 		{

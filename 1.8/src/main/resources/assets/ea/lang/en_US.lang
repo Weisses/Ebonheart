@@ -169,6 +169,17 @@ tile.gem/obsidian/obsidian_torch.name=Purified Obsidian Torch
 tile.ladder/obsidian_ladder.name=Purified Obsidian Ladder
 tile.pillar/obsidian_pillar.name=Purified Obsidian Pillar
 
+tile.gem/ebonheart/ebonheart_block.name=Block of Ebonheart
+tile.gem/ebonheart/ebonheart_block_brick.name=Ebonheart Brick
+tile.fence/ebonheart_fence.name=Ebonheart Fence
+tile.fence/ebonheart_fence_gate.name=Ebonheart Gate
+tile.wall/ebonheart_wall.name=Ebonheart Wall
+tile.stairs/ebonheart_stairs.name=Ebonheart Stairs
+tile.slab/ebonheart/ebonheart_slab.name=Ebonheart Slab
+tile.gem/ebonheart/ebonheart_torch.name=Ebonheart Torch
+tile.ladder/ebonheart_ladder.name=Ebonheart Ladder
+tile.pillar/ebonheart_pillar.name=Ebonheart Pillar
+
 //-----Tools-----
 item.tool/arcanite_pickaxe.name=Arcanite Pickaxe
 item.tool/arcanite_axe.name=Arcanite Axe
@@ -228,7 +239,7 @@ achievement.ea:mine_necrocite_ore.desc=Mine some Necrocite Ore.
 achievement.ea:mine_soularite_ore=Reap the Soularite!
 achievement.ea:mine_soularite_ore.desc=Mine some Soularite Ore.
 
-achievement.ea:ebonheart=Power level is over 9000!
+achievement.ea:ebonheart=Power level's over 9000!
 achievement.ea:ebonheart.desc=Obtain an Ebonheart Gemstone.
 
 achievement.ea:empowered_sword=One step closer!

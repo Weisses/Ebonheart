@@ -43,6 +43,7 @@ public class BlocksEA {
 	public static Block soularite_block_brick;
 	public static Block obsidian_block_brick;
 	public static Block glowstone_block_brick;
+	public static Block ebonheart_block_brick;
 	
 	public static Block double_draconium_slab;
 	public static Block double_velious_slab;
@@ -62,6 +63,7 @@ public class BlocksEA {
 	public static Block soularite_slab;
 	public static Block obsidian_slab;
 	public static Block glowstone_slab;
+	public static Block ebonheart_slab;
 	
 	public static Block draconium_stairs;
 	public static Block velious_stairs;
@@ -71,6 +73,7 @@ public class BlocksEA {
 	public static Block soularite_stairs;
 	public static Block obsidian_stairs;
 	public static Block glowstone_stairs;
+	public static Block ebonheart_stairs;
 	
 	public static Block draconium_fence;
 	public static Block velious_fence;
@@ -80,6 +83,7 @@ public class BlocksEA {
 	public static Block soularite_fence;
 	public static Block obsidian_fence;
 	public static Block glowstone_fence;
+	public static Block ebonheart_fence;
 	
 	public static Block draconium_fence_gate;
 	public static Block velious_fence_gate;
@@ -89,6 +93,7 @@ public class BlocksEA {
 	public static Block soularite_fence_gate;
 	public static Block obsidian_fence_gate;
 	public static Block glowstone_fence_gate;
+	public static Block ebonheart_fence_gate;
 	
 	public static Block draconium_wall;
 	public static Block velious_wall;
@@ -98,6 +103,7 @@ public class BlocksEA {
 	public static Block soularite_wall;
 	public static Block obsidian_wall;
 	public static Block glowstone_wall;
+	public static Block ebonheart_wall;
 	
 	public static Block draconium_torch;
 	public static Block velious_torch;
@@ -107,6 +113,7 @@ public class BlocksEA {
 	public static Block soularite_torch;
 	public static Block obsidian_torch;
 	public static Block glowstone_torch;
+	public static Block ebonheart_torch;
 	
 	public static Block draconium_ladder;
 	public static Block velious_ladder;
@@ -116,6 +123,7 @@ public class BlocksEA {
 	public static Block soularite_ladder;
 	public static Block obsidian_ladder;
 	public static Block glowstone_ladder;
+	public static Block ebonheart_ladder;
 	
 	public static Block draconium_pillar;
 	public static Block velious_pillar;
@@ -125,6 +133,7 @@ public class BlocksEA {
 	public static Block soularite_pillar;
 	public static Block obsidian_pillar;
 	public static Block glowstone_pillar;
+	public static Block ebonheart_pillar;
 	
 	//public static Block draconium_door;
 	//public static Block velious_door;

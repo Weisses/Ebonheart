@@ -28,8 +28,9 @@ public class ItemEbonheart extends Item {
 	
 	@SideOnly(Side.CLIENT)
     public void addInformation(ItemStack stack, EntityPlayer playerIn, List toolTip, boolean advanced) {
-		toolTip.add("Experience from centuries past");
-		toolTip.add("is trapped within.");
+		toolTip.add("Experience from centuries past is");
+		toolTip.add("trapped within. The greatest mysteries");
+		toolTip.add("are truly black and white.");
 		
 	}
 	
