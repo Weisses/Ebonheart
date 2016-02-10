@@ -13,15 +13,26 @@ import net.minecraft.util.DamageSource;
 import com.ebonheart.EbonArtsMod.EbonArtsMod;
 import com.ebonheart.EbonArtsMod.api.damagesources.EADamageSources;
 import com.ebonheart.EbonArtsMod.api.damagesources.EntityDamageSourceElectric;
+import com.ebonheart.EbonArtsMod.init.InitItemsEA;
 
-public class ItemSwordEA extends ItemSword {
+public class ItemSwordArcanite extends ItemSword {
 
-	public ItemSwordEA(String unlocalizedName, ToolMaterial material) 
+	public ItemSwordArcanite(String unlocalizedName, ToolMaterial material) 
 	{
 		super(material);
 		this.setUnlocalizedName(unlocalizedName);
 		this.setCreativeTab(EbonArtsMod.tabEbonArtsItems);
 		
+	}
+	
+	@Override
+	public boolean getIsRepairable(ItemStack toRepair, ItemStack repair)
+	{
+		
+		if(repair.getItem().equals(InitItemsEA.arcanite))
+			return true;
+		else
+			return false;
 	}
 	//entity.attackEntityFrom(DamageSource source, float damage)
 	

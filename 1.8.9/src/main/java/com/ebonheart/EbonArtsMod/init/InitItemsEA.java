@@ -31,7 +31,8 @@ import com.ebonheart.EbonArtsMod.common.items.tools.ItemMassacre;
 import com.ebonheart.EbonArtsMod.common.items.tools.ItemPickaxeEA;
 import com.ebonheart.EbonArtsMod.common.items.tools.ItemShovelEA;
 import com.ebonheart.EbonArtsMod.common.items.tools.ItemSouleater;
-import com.ebonheart.EbonArtsMod.common.items.tools.ItemSwordEA;
+import com.ebonheart.EbonArtsMod.common.items.tools.ItemSwordArcanite;
+import com.ebonheart.EbonArtsMod.common.items.tools.ItemSwordKatcheen;
 import com.ebonheart.EbonArtsMod.references.ItemsEA;
 import com.ebonheart.EbonArtsMod.references.Reference;
 
@@ -66,7 +67,7 @@ public class InitItemsEA extends ItemsEA {
 		arcanite_axe = new ItemAxeEA("tool/arcanite_axe", arcaniteToolMaterial);
 		arcanite_shovel = new ItemShovelEA("tool/arcanite_shovel", arcaniteToolMaterial);
 		arcanite_hoe = new ItemHoeEA("tool/arcanite_hoe", arcaniteToolMaterial);
-		arcanite_sword = new ItemSwordEA("tool/arcanite_sword", arcaniteToolMaterial);
+		arcanite_sword = new ItemSwordArcanite("tool/arcanite_sword", arcaniteToolMaterial);
 		
 		arcanite_helmet = new ItemArmorEA("armor/arcanite_helmet", arcaniteArmorMaterial, 0, 0);
 		arcanite_chestplate = new ItemArmorEA("armor/arcanite_chestplate", arcaniteArmorMaterial, 0, 1);
@@ -77,7 +78,7 @@ public class InitItemsEA extends ItemsEA {
 		katcheen_axe = new ItemAxeEA("tool/katcheen_axe", katcheenToolMaterial);
 		katcheen_shovel = new ItemShovelEA("tool/katcheen_shovel", katcheenToolMaterial);
 		katcheen_hoe = new ItemHoeEA("tool/katcheen_hoe", katcheenToolMaterial);
-		katcheen_sword = new ItemSwordEA("tool/katcheen_sword", katcheenToolMaterial);
+		katcheen_sword = new ItemSwordKatcheen("tool/katcheen_sword", katcheenToolMaterial);
 		
 		katcheen_helmet = new ItemArmorEA("armor/katcheen_helmet", katcheenArmorMaterial, 0, 0);
 		katcheen_chestplate = new ItemArmorEA("armor/katcheen_chestplate", katcheenArmorMaterial, 0, 1);
