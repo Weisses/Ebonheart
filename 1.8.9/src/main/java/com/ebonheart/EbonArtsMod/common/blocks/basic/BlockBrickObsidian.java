@@ -10,9 +10,9 @@ import net.minecraftforge.fml.relauncher.Side;
 import net.minecraftforge.fml.relauncher.SideOnly;
 
 
-public class BlockSoularite extends Block {
+public class BlockBrickObsidian extends Block {
 
-	public BlockSoularite(String unlocalizedName) 
+	public BlockBrickObsidian(String unlocalizedName) 
 	{
 		super(Material.rock);
 		this.setUnlocalizedName(unlocalizedName);
@@ -29,6 +29,6 @@ public class BlockSoularite extends Block {
     
     public boolean isFullCube()
     {
-        return true;
+        return false;
     }
 }

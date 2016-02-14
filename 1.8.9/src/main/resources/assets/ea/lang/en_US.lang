@@ -266,7 +266,8 @@ achievement.ea:nether_bound.desc=Craft either Obsidian or Glowstone Shards.
 achievement.ea:smelt_draconium_dust=From dragons to dust!
 achievement.ea:smelt_draconium_dust.desc=Smelt Draconium Dust.
 
-
+//-----Music Discs-----
+item.shimmering_disc.desc=Lost Woods
 
 item.mystic_dust.name=Mystic Dust
 

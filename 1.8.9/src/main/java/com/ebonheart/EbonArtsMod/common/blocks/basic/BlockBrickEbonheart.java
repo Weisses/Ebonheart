@@ -6,13 +6,16 @@ import net.minecraft.block.Block;
 import net.minecraft.block.BlockLog;
 import net.minecraft.block.BlockRotatedPillar;
 import net.minecraft.block.material.Material;
+import net.minecraft.util.BlockPos;
+import net.minecraft.util.EnumFacing;
+import net.minecraft.world.IBlockAccess;
 import net.minecraftforge.fml.relauncher.Side;
 import net.minecraftforge.fml.relauncher.SideOnly;
 
 
-public class BlockSoularite extends Block {
+public class BlockBrickEbonheart extends Block {
 
-	public BlockSoularite(String unlocalizedName) 
+	public BlockBrickEbonheart(String unlocalizedName) 
 	{
 		super(Material.rock);
 		this.setUnlocalizedName(unlocalizedName);
@@ -21,7 +24,7 @@ public class BlockSoularite extends Block {
 		this.setStepSound(soundTypeStone);
 		this.useNeighborBrightness=true;
 	}
-    
+	
     public boolean isOpaqueCube()
     {
     	return false;
@@ -29,6 +32,7 @@ public class BlockSoularite extends Block {
     
     public boolean isFullCube()
     {
-        return true;
+        return false;
     }
+    
 }

@@ -29,6 +29,6 @@ public class BlockGlowstone extends Block {
     
     public boolean isFullCube()
     {
-        return false;
+        return true;
     }
 }
