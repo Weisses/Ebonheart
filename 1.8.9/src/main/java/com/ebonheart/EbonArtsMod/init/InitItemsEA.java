@@ -6,11 +6,14 @@ import net.minecraft.item.Item;
 import net.minecraft.item.ItemArmor;
 import net.minecraft.item.ItemFood;
 import net.minecraftforge.common.util.EnumHelper;
+import net.minecraftforge.fml.common.registry.EntityRegistry;
 import net.minecraftforge.fml.common.registry.GameRegistry;
 
+import com.ebonheart.EbonArtsMod.common.entity.EntityEbonheart;
 import com.ebonheart.EbonArtsMod.common.items.ItemAlchemicalCompendium;
-import com.ebonheart.EbonArtsMod.common.items.ItemShimmeringDisc;
-import com.ebonheart.EbonArtsMod.common.items.armor.ItemArmorEA;
+import com.ebonheart.EbonArtsMod.common.items.ItemMusicDiscEA;
+import com.ebonheart.EbonArtsMod.common.items.armor.ItemArmorEAArcanite;
+import com.ebonheart.EbonArtsMod.common.items.armor.ItemArmorEAKatcheen;
 import com.ebonheart.EbonArtsMod.common.items.resources.ItemArcanite;
 import com.ebonheart.EbonArtsMod.common.items.resources.ItemDraconiumDust;
 import com.ebonheart.EbonArtsMod.common.items.resources.ItemDragonFruit;
@@ -61,7 +64,7 @@ public class InitItemsEA extends ItemsEA {
 		soularite = new ItemSoularite();
 		ebonheart = new ItemEbonheart();
 		
-		shimmering_disc = new ItemShimmeringDisc();
+		shimmering_disc = new ItemMusicDiscEA("shimmering_disc", "records.shimmering_disc");
 		
 		arcanite_pickaxe = new ItemPickaxeEA("tool/arcanite_pickaxe", arcaniteToolMaterial);
 		arcanite_axe = new ItemAxeEA("tool/arcanite_axe", arcaniteToolMaterial);
@@ -69,10 +72,10 @@ public class InitItemsEA extends ItemsEA {
 		arcanite_hoe = new ItemHoeEA("tool/arcanite_hoe", arcaniteToolMaterial);
 		arcanite_sword = new ItemSwordArcanite("tool/arcanite_sword", arcaniteToolMaterial);
 		
-		arcanite_helmet = new ItemArmorEA("armor/arcanite_helmet", arcaniteArmorMaterial, 0, 0);
-		arcanite_chestplate = new ItemArmorEA("armor/arcanite_chestplate", arcaniteArmorMaterial, 0, 1);
-		arcanite_leggings = new ItemArmorEA("armor/arcanite_leggings", arcaniteArmorMaterial, 0, 2);
-		arcanite_boots = new ItemArmorEA("armor/arcanite_boots", arcaniteArmorMaterial, 0, 3);
+		arcanite_helmet = new ItemArmorEAArcanite("armor/arcanite_helmet", arcaniteArmorMaterial, 0, 0);
+		arcanite_chestplate = new ItemArmorEAArcanite("armor/arcanite_chestplate", arcaniteArmorMaterial, 0, 1);
+		arcanite_leggings = new ItemArmorEAArcanite("armor/arcanite_leggings", arcaniteArmorMaterial, 0, 2);
+		arcanite_boots = new ItemArmorEAArcanite("armor/arcanite_boots", arcaniteArmorMaterial, 0, 3);
 		
 		katcheen_pickaxe = new ItemPickaxeEA("tool/katcheen_pickaxe", katcheenToolMaterial);
 		katcheen_axe = new ItemAxeEA("tool/katcheen_axe", katcheenToolMaterial);
@@ -80,10 +83,10 @@ public class InitItemsEA extends ItemsEA {
 		katcheen_hoe = new ItemHoeEA("tool/katcheen_hoe", katcheenToolMaterial);
 		katcheen_sword = new ItemSwordKatcheen("tool/katcheen_sword", katcheenToolMaterial);
 		
-		katcheen_helmet = new ItemArmorEA("armor/katcheen_helmet", katcheenArmorMaterial, 0, 0);
-		katcheen_chestplate = new ItemArmorEA("armor/katcheen_chestplate", katcheenArmorMaterial, 0, 1);
-		katcheen_leggings = new ItemArmorEA("armor/katcheen_leggings", katcheenArmorMaterial, 0, 2);
-		katcheen_boots = new ItemArmorEA("armor/katcheen_boots", katcheenArmorMaterial, 0, 3);
+		katcheen_helmet = new ItemArmorEAKatcheen("armor/katcheen_helmet", katcheenArmorMaterial, 0, 0);
+		katcheen_chestplate = new ItemArmorEAKatcheen("armor/katcheen_chestplate", katcheenArmorMaterial, 0, 1);
+		katcheen_leggings = new ItemArmorEAKatcheen("armor/katcheen_leggings", katcheenArmorMaterial, 0, 2);
+		katcheen_boots = new ItemArmorEAKatcheen("armor/katcheen_boots", katcheenArmorMaterial, 0, 3);
 		
 		empowered_sword = new ItemEmpoweredSword("tool/empowered_sword", empoweredToolMaterial);
 		frostbite = new ItemFrostbite("tool/frostbite", specialToolMaterial);
@@ -164,6 +167,8 @@ public class InitItemsEA extends ItemsEA {
 		GameRegistry.registerItem(glowstone_shards, glowstone_shards.getUnlocalizedName().substring(5));
 		
 		
+		
+		EntityRegistry.registerModEntity(EntityEbonheart.class, "Ebonheart", EntityRegistry.findGlobalUniqueEntityId(), Reference.MOD_ID, 64, 10, true);
 		
 		//GameRegistry.registerItem(test_liquid_bucket, test_liquid_bucket.getUnlocalizedName().substring(5));
 		

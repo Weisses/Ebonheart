@@ -9,6 +9,7 @@ import com.ebonheart.EbonArtsMod.init.InitItemsEA;
 
 import net.minecraft.entity.EntityLivingBase;
 import net.minecraft.entity.player.EntityPlayer;
+import net.minecraft.item.EnumRarity;
 import net.minecraft.item.ItemStack;
 import net.minecraft.item.ItemSword;
 import net.minecraft.potion.Potion;
@@ -51,4 +52,9 @@ public class ItemSouleater extends ItemSword {
 		toolTip.add("Pain and suffering can");
 		toolTip.add("heal all wounds.");
 	}
+	
+	public EnumRarity getRarity(ItemStack stack)
+    {
+        return EnumRarity.EPIC;
+    }
 }

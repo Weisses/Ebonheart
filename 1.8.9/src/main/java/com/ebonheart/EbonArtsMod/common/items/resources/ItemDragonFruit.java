@@ -5,6 +5,7 @@ import java.util.List;
 import com.ebonheart.EbonArtsMod.EbonArtsMod;
 
 import net.minecraft.entity.player.EntityPlayer;
+import net.minecraft.item.EnumRarity;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemFood;
 import net.minecraft.item.ItemStack;
@@ -29,8 +30,8 @@ public class ItemDragonFruit extends ItemFood {
 
 	@SideOnly(Side.CLIENT)
     public void addInformation(ItemStack stack, EntityPlayer playerIn, List toolTip, boolean advanced) {
-		toolTip.add("An ancient fruit with the");
-		toolTip.add("power of a dragon.");
+		toolTip.add("An ancient fruit that");
+		toolTip.add("makes a healthy meal.");
 		
 	}
 	
@@ -40,6 +41,10 @@ public class ItemDragonFruit extends ItemFood {
         return true;
     }
 
-    
+
+	public EnumRarity getRarity(ItemStack stack)
+    {
+        return EnumRarity.UNCOMMON;
+    }
 
 }

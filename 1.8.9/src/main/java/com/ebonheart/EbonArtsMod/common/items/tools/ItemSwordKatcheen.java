@@ -3,6 +3,7 @@ package com.ebonheart.EbonArtsMod.common.items.tools;
 import net.minecraft.entity.EntityLiving;
 import net.minecraft.entity.EntityLivingBase;
 import net.minecraft.entity.player.EntityPlayer;
+import net.minecraft.item.EnumRarity;
 import net.minecraft.item.ItemStack;
 import net.minecraft.item.ItemSword;
 import net.minecraft.item.Item.ToolMaterial;
@@ -44,5 +45,10 @@ public class ItemSwordKatcheen extends ItemSword {
     	//System.out.println("electric damage");
         //return true;
     //}
+	
+	public EnumRarity getRarity(ItemStack stack)
+    {
+        return EnumRarity.RARE;
+    }
 
 }

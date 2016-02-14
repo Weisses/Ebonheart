@@ -5,6 +5,7 @@ import java.util.List;
 import com.ebonheart.EbonArtsMod.EbonArtsMod;
 
 import net.minecraft.entity.player.EntityPlayer;
+import net.minecraft.item.EnumRarity;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
 import net.minecraft.util.EnumChatFormatting;
@@ -27,4 +28,9 @@ public class ItemSoularite extends Item {
 		toolTip.add("time and space.");
 		
 	}
+	
+	public EnumRarity getRarity(ItemStack stack)
+    {
+        return EnumRarity.RARE;
+    }
 }

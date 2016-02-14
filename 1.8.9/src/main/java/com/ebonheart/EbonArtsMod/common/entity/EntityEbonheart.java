@@ -1,29 +1,34 @@
 package com.ebonheart.EbonArtsMod.common.entity;
 
+import net.minecraft.client.Minecraft;
+import net.minecraft.client.resources.model.ModelResourceLocation;
 import net.minecraft.entity.EntityLivingBase;
 import net.minecraft.entity.item.EntityXPOrb;
 import net.minecraft.entity.projectile.EntityThrowable;
 import net.minecraft.util.BlockPos;
+import net.minecraft.util.EnumParticleTypes;
 import net.minecraft.util.MovingObjectPosition;
 import net.minecraft.world.World;
+import net.minecraftforge.fml.relauncher.Side;
+import net.minecraftforge.fml.relauncher.SideOnly;
 
 public class EntityEbonheart extends EntityThrowable
 {
-    //private static final String __OBFID = "CL_00001726";
-
+    
     public EntityEbonheart(World worldIn)
     {
         super(worldIn);
     }
 
-    public EntityEbonheart(World worldIn, EntityLivingBase p_i1786_2_)
+    public EntityEbonheart(World worldIn, EntityLivingBase entity)
     {
-        super(worldIn, p_i1786_2_);
+        super(worldIn, entity);
+        
     }
 
-    public EntityEbonheart(World worldIn, double p_i1787_2_, double p_i1787_4_, double p_i1787_6_)
+    public EntityEbonheart(World worldIn, double x, double y, double z)
     {
-        super(worldIn, p_i1787_2_, p_i1787_4_, p_i1787_6_);
+        super(worldIn, x, y, z);
     }
 
     /**
@@ -59,9 +64,16 @@ public class EntityEbonheart extends EntityThrowable
                 int j = EntityXPOrb.getXPSplit(i);
                 i -= j;
                 this.worldObj.spawnEntityInWorld(new EntityXPOrb(this.worldObj, this.posX, this.posY, this.posZ, j));
+                this.worldObj.spawnParticle(EnumParticleTypes.CRIT_MAGIC, this.posX, this.posY, this.posZ, 2.0D, 5.0D, 2.0D, new int[0]);
             }
 
             this.setDead();
         }
+    }
+    
+    @SideOnly(Side.CLIENT)
+    public boolean canRenderOnFire()
+    {
+        return this.isBurning();
     }
 }

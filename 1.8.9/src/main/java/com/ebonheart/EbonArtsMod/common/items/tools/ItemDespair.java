@@ -8,6 +8,7 @@ import com.ebonheart.EbonArtsMod.common.items.ItemHelper;
 
 import net.minecraft.entity.EntityLivingBase;
 import net.minecraft.entity.player.EntityPlayer;
+import net.minecraft.item.EnumRarity;
 import net.minecraft.item.ItemStack;
 import net.minecraft.item.ItemSword;
 import net.minecraft.potion.Potion;
@@ -47,5 +48,10 @@ public class ItemDespair extends ItemSword {
 		toolTip.add("All things will be reduced");
 		toolTip.add("to nothingness.");
 	}
+	
+	public EnumRarity getRarity(ItemStack stack)
+    {
+        return EnumRarity.EPIC;
+    }
 
 }

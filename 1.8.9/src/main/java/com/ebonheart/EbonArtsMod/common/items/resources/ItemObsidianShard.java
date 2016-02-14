@@ -5,6 +5,7 @@ import java.util.List;
 import com.ebonheart.EbonArtsMod.EbonArtsMod;
 
 import net.minecraft.entity.player.EntityPlayer;
+import net.minecraft.item.EnumRarity;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
 import net.minecraft.util.EnumChatFormatting;
@@ -27,4 +28,10 @@ public class ItemObsidianShard extends Item {
 		toolTip.add("of obsidian.");
 		
 	}
+	
+
+	public EnumRarity getRarity(ItemStack stack)
+    {
+        return EnumRarity.UNCOMMON;
+    }
 }

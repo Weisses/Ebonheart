@@ -8,6 +8,7 @@ import com.ebonheart.EbonArtsMod.common.items.ItemHelper;
 
 import net.minecraft.entity.EntityLivingBase;
 import net.minecraft.entity.player.EntityPlayer;
+import net.minecraft.item.EnumRarity;
 import net.minecraft.item.ItemStack;
 import net.minecraft.item.ItemSword;
 import net.minecraft.potion.Potion;
@@ -46,4 +47,9 @@ public class ItemFrostbite extends ItemSword {
 		toolTip.add("The grip of frost weakens");
 		toolTip.add("and chills all before it.");
 	}
+	
+	public EnumRarity getRarity(ItemStack stack)
+    {
+        return EnumRarity.EPIC;
+    }
 }

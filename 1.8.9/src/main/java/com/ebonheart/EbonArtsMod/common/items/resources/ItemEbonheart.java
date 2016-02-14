@@ -7,6 +7,7 @@ import com.ebonheart.EbonArtsMod.common.entity.EntityEbonheart;
 
 import net.minecraft.entity.item.EntityExpBottle;
 import net.minecraft.entity.player.EntityPlayer;
+import net.minecraft.item.EnumRarity;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
 import net.minecraft.stats.StatList;
@@ -58,6 +59,10 @@ public class ItemEbonheart extends Item {
         return itemStackIn;
     }
 	
-	
+
+	public EnumRarity getRarity(ItemStack stack)
+    {
+        return EnumRarity.EPIC;
+    }
 	
 }

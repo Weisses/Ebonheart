@@ -7,6 +7,7 @@ import com.ebonheart.EbonArtsMod.init.InitItemsEA;
 
 import net.minecraft.entity.EntityLivingBase;
 import net.minecraft.entity.player.EntityPlayer;
+import net.minecraft.item.EnumRarity;
 import net.minecraft.item.ItemStack;
 import net.minecraft.item.ItemSword;
 import net.minecraft.world.World;
@@ -23,8 +24,13 @@ public class ItemEmpoweredSword extends ItemSword {
 	}
 	
 	@SideOnly(Side.CLIENT)
-    public void addInformation(ItemStack stack, EntityPlayer playerIn, List toolTip, boolean advanced) {
+    public void addInformation(ItemStack stack, EntityPlayer playerIn, List toolTip, boolean advanced) 
+	{
 		toolTip.add("This sword radiates with");
 		toolTip.add("unknown potential.");
 	}
+	public EnumRarity getRarity(ItemStack stack)
+    {
+        return EnumRarity.RARE;
+    }
 }
