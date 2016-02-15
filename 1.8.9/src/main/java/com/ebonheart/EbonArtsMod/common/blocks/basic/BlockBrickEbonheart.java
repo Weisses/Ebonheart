@@ -8,6 +8,7 @@ import net.minecraft.block.BlockRotatedPillar;
 import net.minecraft.block.material.Material;
 import net.minecraft.util.BlockPos;
 import net.minecraft.util.EnumFacing;
+import net.minecraft.util.EnumWorldBlockLayer;
 import net.minecraft.world.IBlockAccess;
 import net.minecraftforge.fml.relauncher.Side;
 import net.minecraftforge.fml.relauncher.SideOnly;
@@ -33,6 +34,39 @@ public class BlockBrickEbonheart extends Block {
     public boolean isFullCube()
     {
         return false;
+    }
+    
+    @SideOnly(Side.CLIENT)
+    public boolean shouldSideBeRendered(IBlockAccess worldIn, BlockPos pos, EnumFacing side)
+    {
+        return true;
+    }
+    
+    public boolean canPlaceTorchOnTop(IBlockAccess world, BlockPos pos)
+    {
+        if (isSideSolid(world, pos, EnumFacing.UP))
+        {
+            return true;
+        }
+        else
+        {
+            return this instanceof BlockBrickEbonheart;
+        }
+    }
+    
+    public boolean canPlaceTorchOnTop1(IBlockAccess world, BlockPos pos)
+    {
+        if (isSideSolid(world, pos, EnumFacing.EAST))
+        {
+            return true;
+        }
+        else
+        {
+            return this instanceof BlockBrickEbonheart;
+        }
+        
+        
+        
     }
     
 }
