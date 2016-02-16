@@ -34,6 +34,6 @@ public class BlockBrickArcanite extends Block {
     
     public boolean isFullCube()
     {
-        return false;
+        return true;
     }
 }

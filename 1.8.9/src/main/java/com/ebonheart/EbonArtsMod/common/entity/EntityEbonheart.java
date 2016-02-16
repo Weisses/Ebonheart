@@ -64,16 +64,13 @@ public class EntityEbonheart extends EntityThrowable
                 int j = EntityXPOrb.getXPSplit(i);
                 i -= j;
                 this.worldObj.spawnEntityInWorld(new EntityXPOrb(this.worldObj, this.posX, this.posY, this.posZ, j));
-                this.worldObj.spawnParticle(EnumParticleTypes.CRIT_MAGIC, this.posX, this.posY, this.posZ, 2.0D, 5.0D, 2.0D, new int[0]);
+                
+                
+                //this.worldObj.spawnParticle(EnumParticleTypes.PORTAL, this.posX, this.posY, this.posZ, 2.0D, 5.0D, 2.0D, new int[0]);
             }
 
             this.setDead();
         }
     }
     
-    @SideOnly(Side.CLIENT)
-    public boolean canRenderOnFire()
-    {
-        return this.isBurning();
-    }
 }

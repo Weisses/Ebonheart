@@ -29,6 +29,6 @@ public class BlockBrickDraconium extends Block {
     
     public boolean isFullCube()
     {
-        return false;
+        return true;
     }
 }

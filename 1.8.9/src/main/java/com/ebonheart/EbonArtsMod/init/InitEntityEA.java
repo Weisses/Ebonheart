@@ -11,6 +11,7 @@ import net.minecraftforge.fml.client.registry.RenderingRegistry;
 import net.minecraftforge.fml.common.registry.EntityRegistry;
 import net.minecraftforge.fml.common.registry.GameRegistry;
 
+import com.ebonheart.EbonArtsMod.client.render.models.RenderEbonheart;
 import com.ebonheart.EbonArtsMod.common.entity.EntityEbonheart;
 import com.ebonheart.EbonArtsMod.common.items.ItemAlchemicalCompendium;
 import com.ebonheart.EbonArtsMod.common.items.ItemMusicDiscEA;
@@ -49,7 +50,6 @@ public class InitEntityEA extends ItemsEA {
 		//throwingRock = new ItemThrowingRock().setUnlocalizedName("throwingRock");
 		
 		
-		
 	}
 	
 	public static void register()
@@ -59,16 +59,7 @@ public class InitEntityEA extends ItemsEA {
 		
 		//EntityRegistry.registerModEntity(EntityEbonheart.class, "Ebonheart", EntityRegistry.findGlobalUniqueEntityId(), Reference.MOD_ID, 64, 10, true);
 		
-		
-		
-	}
-	
-	public static void registerRenderers()
-	{
-		
-		
-		
-		//RenderingRegistry.registerEntityRenderingHandler(EntityEbonheart.class, new ItemEbonheart(InitItemsEA.ebonheart));
+		EntityRegistry.registerModEntity(EntityEbonheart.class, "Ebonheart", EntityRegistry.findGlobalUniqueEntityId(), Reference.MOD_ID, 64, 10, true);
 		
 	}
 }

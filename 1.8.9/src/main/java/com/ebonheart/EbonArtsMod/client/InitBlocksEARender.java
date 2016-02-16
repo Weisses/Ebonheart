@@ -7,7 +7,7 @@ import net.minecraft.client.resources.model.ModelResourceLocation;
 import net.minecraft.item.Item;
 import net.minecraftforge.fml.client.registry.ClientRegistry;
 
-import com.ebonheart.EbonArtsMod.client.render.models.Ebonheart;
+import com.ebonheart.EbonArtsMod.client.render.models.RenderEbonheart;
 import com.ebonheart.EbonArtsMod.common.entity.tile.TileEntityTutorial;
 import com.ebonheart.EbonArtsMod.init.InitBlocksEA;
 import com.ebonheart.EbonArtsMod.references.BlocksEA;
@@ -53,25 +53,6 @@ public final class InitBlocksEARender extends BlocksEA {
 				"ea:gem/mystic/innate_mystic_block_red", 
 				"ea:gem/mystic/innate_mystic_block_black");
 		
-		
-		
-		//ModelBakery.addVariantName(Item.getItemFromBlock(InitBlocksEA.arcanite_stairs), 
-		//		"ea:gem/arcanite/arcanite_stairs_white", 
-		//		"ea:gem/arcanite/arcanite_stairs_orange", 
-		//		"ea:gem/arcanite/arcanite_stairs_magenta", 
-		//		"ea:gem/arcanite/arcanite_stairs_lightblue", 
-		//		"ea:gem/arcanite/arcanite_stairs_yellow", 
-		//		"ea:gem/arcanite/arcanite_stairs_lime", 
-		//		"ea:gem/arcanite/arcanite_stairs_pink", 
-		//		"ea:gem/arcanite/arcanite_stairs_gray", 
-		//		"ea:gem/arcanite/arcanite_stairs_lightgray", 
-		//		"ea:gem/arcanite/arcanite_stairs_cyan", 
-		//		"ea:gem/arcanite/arcanite_stairs_purple", 
-		//		"ea:gem/arcanite/arcanite_stairs_blue", 
-		//		"ea:gem/arcanite/arcanite_stairs_brown", 
-		//		"ea:gem/arcanite/arcanite_stairs_green", 
-		//		"ea:gem/arcanite/arcanite_stairs_red", 
-		//		"ea:gem/arcanite/arcanite_stairs_black");
 	}
 	
 	public static void registerRenders()
@@ -243,40 +224,13 @@ public final class InitBlocksEARender extends BlocksEA {
 		registerRender(paper_block);
 		registerRender(leather_block);
 		registerRender(reed_block);
-		
-		//registerRender(color_atrium);
-		//registerRender(lit_color_atrium);
-		
-		//registerRender(test_liquid);
-		//registerRender(flowing_test_liquid);
-		
-		//registerRender(InitBlocksEA.arcanite_stairs, 0, "gem/arcanite/arcanite_stairs_white");
-		//registerRender(InitBlocksEA.arcanite_stairs, 1, "gem/arcanite/arcanite_stairs_orange");
-		//registerRender(InitBlocksEA.arcanite_stairs, 2, "gem/arcanite/arcanite_stairs_magenta");
-		//registerRender(InitBlocksEA.arcanite_stairs, 3, "gem/arcanite/arcanite_stairs_lightblue");
-		//registerRender(InitBlocksEA.arcanite_stairs, 4, "gem/arcanite/arcanite_stairs_yellow");
-		//registerRender(InitBlocksEA.arcanite_stairs, 5, "gem/arcanite/arcanite_stairs_lime");
-		//registerRender(InitBlocksEA.arcanite_stairs, 6, "gem/arcanite/arcanite_stairs_pink");
-		//registerRender(InitBlocksEA.arcanite_stairs, 7, "gem/arcanite/arcanite_stairs_gray");
-		//registerRender(InitBlocksEA.arcanite_stairs, 8, "gem/arcanite/arcanite_stairs_lightgray");
-		//registerRender(InitBlocksEA.arcanite_stairs, 9, "gem/arcanite/arcanite_stairs_cyan");
-		//registerRender(InitBlocksEA.arcanite_stairs, 10, "gem/arcanite/arcanite_stairs_purple");
-		//registerRender(InitBlocksEA.arcanite_stairs, 11, "gem/arcanite/arcanite_stairs_blue");
-		//registerRender(InitBlocksEA.arcanite_stairs, 12, "gem/arcanite/arcanite_stairs_brown");
-		//registerRender(InitBlocksEA.arcanite_stairs, 13, "gem/arcanite/arcanite_stairs_green");
-		//registerRender(InitBlocksEA.arcanite_stairs, 14, "gem/arcanite/arcanite_stairs_red");
-		//registerRender(InitBlocksEA.arcanite_stairs, 15, "gem/arcanite/arcanite_stairs_black");
-		
-		
-		//registerRender(purified_mystic_block);
 	}
 	
 	public static void registerSpecialRenders()
 	{
+		
 		//registerRender(tutorialTileEntity);
 		//ClientRegistry.bindTileEntitySpecialRenderer(TileEntityTutorial.class, new RenderEbonheart());
-		
-		
 		
 	}
 	
@@ -290,6 +244,4 @@ public final class InitBlocksEARender extends BlocksEA {
 	{
 		Minecraft.getMinecraft().getRenderItem().getItemModelMesher().register(Item.getItemFromBlock(block), meta, new ModelResourceLocation(Reference.MOD_ID + ":" + file, "inventory"));
 	}
-	
-	
 }

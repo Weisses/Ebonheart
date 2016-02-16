@@ -24,10 +24,13 @@ public class CommonProxy {
 		InitItemsEA.register();
 		InitBlocksEA.preInit();
 		InitBlocksEA.register();
+		InitEntityEA.preInit();
 		InitEntityEA.register();
+		
+		
+		
 		//InitTileEntitiesEA.init();
 		//InitTileEntitiesEA.register();
-		
 	}
 	
 	public void init(FMLInitializationEvent event) 
@@ -36,7 +39,7 @@ public class CommonProxy {
 		InitRecipesEA.initShapelessRecipe();
 		InitRecipesEA.initSmeltingRecipe();
 		InitAchievementsEA.init();
-		WorldChestHooks.register();
+		WorldChestHooks.init();
 		
 		GameRegistry.registerWorldGenerator(new WorldGeneratorEA(), 0);
 		NetworkRegistry.INSTANCE.registerGuiHandler(EbonArtsMod.instance, new GuiHandler());

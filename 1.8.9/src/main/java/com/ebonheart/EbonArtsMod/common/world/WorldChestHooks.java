@@ -10,7 +10,7 @@ import net.minecraftforge.common.ChestGenHooks;
 public class WorldChestHooks extends InitItemsEA {
 
 	
-	public static void register()
+	public static void init()
 	{
 		//Common
 		ChestHookEACommon(draconium_dust);
