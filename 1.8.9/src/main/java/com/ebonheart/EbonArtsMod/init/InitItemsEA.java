@@ -95,7 +95,6 @@ public class InitItemsEA extends ItemsEA {
 		glowstone_shards = new ItemGlowstoneShard();
 		
 		
-		
 		banana = (ItemFood) new ItemFood(3, 0.3F, false).setUnlocalizedName("banana");
 		dragon_fruit = (ItemFood) new ItemDragonFruit(3, 0.3F, true);
 		
