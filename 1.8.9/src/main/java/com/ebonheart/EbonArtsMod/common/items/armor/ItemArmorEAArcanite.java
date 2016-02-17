@@ -75,8 +75,8 @@ public class ItemArmorEAArcanite extends ItemArmor
         return EnumRarity.RARE;
     }
 	
-	//public boolean getIsRepairable(ItemStack par1ItemStack, ItemStack par2ItemStack)
-	//{
-	//        return InitItemsEA.arcanite == par2ItemStack.getItem() ? true : super.getIsRepairable(par1ItemStack, par2ItemStack);
-	//}
+	public boolean getIsRepairable(ItemStack par1ItemStack, ItemStack par2ItemStack)
+	{
+	        return InitItemsEA.arcanite == par2ItemStack.getItem() ? true : super.getIsRepairable(par1ItemStack, par2ItemStack);
+	}
 }

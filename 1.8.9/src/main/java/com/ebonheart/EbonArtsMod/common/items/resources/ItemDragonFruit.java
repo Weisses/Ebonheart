@@ -23,7 +23,7 @@ public class ItemDragonFruit extends ItemFood {
 		super(amount, saturation, isWolfFood);
 		
 		this.setUnlocalizedName("dragon_fruit");
-		//this.setCreativeTab(EbonArtsMod.tabEbonArtsItems);
+		this.setCreativeTab(EbonArtsMod.tabEbonArtsItems);
 			 
 			
 	}

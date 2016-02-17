@@ -96,7 +96,7 @@ public class InitItemsEA extends ItemsEA {
 		
 		
 		banana = (ItemFood) new ItemFood(3, 0.3F, false).setUnlocalizedName("banana");
-		dragon_fruit = (ItemFood) new ItemDragonFruit(3, 0.3F, true);
+		dragon_fruit = (ItemFood) new ItemDragonFruit(6, 1.0F, true);
 		
 	}
 	
