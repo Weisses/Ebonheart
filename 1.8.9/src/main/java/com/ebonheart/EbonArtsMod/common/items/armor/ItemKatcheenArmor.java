@@ -13,15 +13,14 @@ import net.minecraftforge.fml.relauncher.SideOnly;
 import com.ebonheart.EbonArtsMod.EbonArtsMod;
 import com.ebonheart.EbonArtsMod.init.InitItemsEA;
 
-public class ItemArmorEAArcanite extends ItemArmor 
+public class ItemKatcheenArmor extends ItemArmor 
 {
 
-	public ItemArmorEAArcanite(String unlocalizedName, ArmorMaterial material, int renderIndex, int armorType) 
+	public ItemKatcheenArmor(String unlocalizedName, ArmorMaterial material, int renderIndex, int armorType) 
 	{
 		super(material, renderIndex, armorType);
 		this.setUnlocalizedName(unlocalizedName);
 		this.setCreativeTab(EbonArtsMod.tabEbonArtsItems);
-		canRepair = true;
 		
 	}
 
@@ -40,27 +39,27 @@ public class ItemArmorEAArcanite extends ItemArmor
 		//	effectPlayer(player, Potion.jump, 1, false);
 		//} 
 		
-		if (player.inventory.armorItemInSlot(3) != null && player.inventory.armorItemInSlot(3).getItem() == InitItemsEA.arcanite_helmet
-		        && player.inventory.armorItemInSlot(2) != null && player.inventory.armorItemInSlot(2).getItem() == InitItemsEA.arcanite_chestplate
-		        && player.inventory.armorItemInSlot(1) != null && player.inventory.armorItemInSlot(1).getItem() == InitItemsEA.arcanite_leggings
-		        && player.inventory.armorItemInSlot(0) != null && player.inventory.armorItemInSlot(0).getItem() == InitItemsEA.arcanite_boots) 
-		{
-		        //this.effectPlayer(player, Potion.resistance, 0, true);
-			this.effectPlayer(player, Potion.digSpeed, 0, false);
-			this.effectPlayer(player, Potion.moveSpeed, 0, false);
-			this.effectPlayer(player, Potion.jump, 1, true);
-		}
-		
-		//if (player.inventory.armorItemInSlot(3) != null && player.inventory.armorItemInSlot(3).getItem() == InitItemsEA.katcheen_helmet
-		//        && player.inventory.armorItemInSlot(2) != null && player.inventory.armorItemInSlot(2).getItem() == InitItemsEA.katcheen_chestplate
-		//        && player.inventory.armorItemInSlot(1) != null && player.inventory.armorItemInSlot(1).getItem() == InitItemsEA.katcheen_leggings
-		//        && player.inventory.armorItemInSlot(0) != null && player.inventory.armorItemInSlot(0).getItem() == InitItemsEA.katcheen_boots) 
+		//if (player.inventory.armorItemInSlot(3) != null && player.inventory.armorItemInSlot(3).getItem() == InitItemsEA.arcanite_helmet
+		//        && player.inventory.armorItemInSlot(2) != null && player.inventory.armorItemInSlot(2).getItem() == InitItemsEA.arcanite_chestplate
+		//        && player.inventory.armorItemInSlot(1) != null && player.inventory.armorItemInSlot(1).getItem() == InitItemsEA.arcanite_leggings
+		//        && player.inventory.armorItemInSlot(0) != null && player.inventory.armorItemInSlot(0).getItem() == InitItemsEA.arcanite_boots) 
 		//{
 		        //this.effectPlayer(player, Potion.resistance, 0, true);
-		//	this.effectPlayer(player, Potion.digSpeed, 1, true);
-		//	this.effectPlayer(player, Potion.moveSpeed, 1, true);
-		//	this.effectPlayer(player, Potion.jump, 2, true);
+		//	this.effectPlayer(player, Potion.digSpeed, 0, false);
+		//	this.effectPlayer(player, Potion.moveSpeed, 0, false);
+		//	this.effectPlayer(player, Potion.jump, 1, true);
 		//}
+		
+		if (player.inventory.armorItemInSlot(3) != null && player.inventory.armorItemInSlot(3).getItem() == InitItemsEA.katcheen_helmet
+		        && player.inventory.armorItemInSlot(2) != null && player.inventory.armorItemInSlot(2).getItem() == InitItemsEA.katcheen_chestplate
+		        && player.inventory.armorItemInSlot(1) != null && player.inventory.armorItemInSlot(1).getItem() == InitItemsEA.katcheen_leggings
+		        && player.inventory.armorItemInSlot(0) != null && player.inventory.armorItemInSlot(0).getItem() == InitItemsEA.katcheen_boots) 
+		{
+		        //this.effectPlayer(player, Potion.resistance, 0, true);
+			this.effectPlayer(player, Potion.digSpeed, 1, true);
+			this.effectPlayer(player, Potion.moveSpeed, 1, true);
+			this.effectPlayer(player, Potion.jump, 2, true);
+		}
 	}   
 
 	private void effectPlayer(EntityPlayer player, Potion potion, int strength, boolean showParticles) {
@@ -77,6 +76,7 @@ public class ItemArmorEAArcanite extends ItemArmor
 	
 	public boolean getIsRepairable(ItemStack par1ItemStack, ItemStack par2ItemStack)
 	{
-	        return InitItemsEA.arcanite == par2ItemStack.getItem() ? true : super.getIsRepairable(par1ItemStack, par2ItemStack);
+	        return InitItemsEA.katcheen == par2ItemStack.getItem() ? true : super.getIsRepairable(par1ItemStack, par2ItemStack);
 	}
+	
 }

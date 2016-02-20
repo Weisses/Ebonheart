@@ -16,23 +16,18 @@ import net.minecraftforge.fml.relauncher.SideOnly;
 
 public class ItemDragonFruit extends ItemFood {
 	
-	
-	
-	
-	public ItemDragonFruit(int amount, float saturation, boolean isWolfFood) {
+	public ItemDragonFruit(int amount, float saturation, boolean isWolfFood) 
+	{
 		super(amount, saturation, isWolfFood);
-		
 		this.setUnlocalizedName("dragon_fruit");
 		this.setCreativeTab(EbonArtsMod.tabEbonArtsItems);
-			 
-			
 	}
-
+	
 	@SideOnly(Side.CLIENT)
-    public void addInformation(ItemStack stack, EntityPlayer playerIn, List toolTip, boolean advanced) {
-		toolTip.add("An ancient fruit that");
-		toolTip.add("makes a healthy meal.");
-		
+    public void addInformation(ItemStack stack, EntityPlayer playerIn, List toolTip, boolean advanced) 
+	{
+		toolTip.add(EnumChatFormatting.GOLD + "An ancient fruit that");
+		toolTip.add(EnumChatFormatting.GOLD + "makes a healthy meal.");
 	}
 	
     @SideOnly(Side.CLIENT)
@@ -40,11 +35,9 @@ public class ItemDragonFruit extends ItemFood {
     {
         return true;
     }
-
-
+    
 	public EnumRarity getRarity(ItemStack stack)
     {
         return EnumRarity.UNCOMMON;
     }
-
 }

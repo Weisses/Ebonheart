@@ -1,7 +1,7 @@
 {
     "parent": "builtin/generated",
     "textures": {
-        "layer0": "ea:items/tier_2_catalyst"
+        "layer0": "ea:items/tools/empowered_blade"
     },
     "display": {
         "thirdperson": {

@@ -1,49 +1,48 @@
 package com.ebonheart.EbonArtsMod.init;
 
-import net.minecraft.client.Minecraft;
-import net.minecraft.client.resources.model.ModelResourceLocation;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemArmor;
 import net.minecraft.item.ItemFood;
 import net.minecraftforge.common.util.EnumHelper;
-import net.minecraftforge.fml.common.registry.EntityRegistry;
 import net.minecraftforge.fml.common.registry.GameRegistry;
 
-import com.ebonheart.EbonArtsMod.common.entity.EntityEbonheart;
-import com.ebonheart.EbonArtsMod.common.items.ItemAlchemicalCompendium;
 import com.ebonheart.EbonArtsMod.common.items.ItemMusicDiscEA;
-import com.ebonheart.EbonArtsMod.common.items.armor.ItemArmorEAArcanite;
-import com.ebonheart.EbonArtsMod.common.items.armor.ItemArmorEAKatcheen;
+import com.ebonheart.EbonArtsMod.common.items.armor.ItemArcaniteArmor;
+import com.ebonheart.EbonArtsMod.common.items.armor.ItemKatcheenArmor;
 import com.ebonheart.EbonArtsMod.common.items.resources.ItemArcanite;
 import com.ebonheart.EbonArtsMod.common.items.resources.ItemDraconiumDust;
 import com.ebonheart.EbonArtsMod.common.items.resources.ItemDragonFruit;
 import com.ebonheart.EbonArtsMod.common.items.resources.ItemEbonheart;
+import com.ebonheart.EbonArtsMod.common.items.resources.ItemEmpoweredBlade;
 import com.ebonheart.EbonArtsMod.common.items.resources.ItemGlowstoneShard;
 import com.ebonheart.EbonArtsMod.common.items.resources.ItemKatcheen;
 import com.ebonheart.EbonArtsMod.common.items.resources.ItemNecrocite;
 import com.ebonheart.EbonArtsMod.common.items.resources.ItemObsidianShard;
 import com.ebonheart.EbonArtsMod.common.items.resources.ItemSoularite;
 import com.ebonheart.EbonArtsMod.common.items.resources.ItemVelious;
-import com.ebonheart.EbonArtsMod.common.items.tools.ItemAxeEA;
+import com.ebonheart.EbonArtsMod.common.items.tools.ItemArcaniteAxe;
+import com.ebonheart.EbonArtsMod.common.items.tools.ItemArcaniteHoe;
+import com.ebonheart.EbonArtsMod.common.items.tools.ItemArcanitePickaxe;
+import com.ebonheart.EbonArtsMod.common.items.tools.ItemArcaniteShovel;
+import com.ebonheart.EbonArtsMod.common.items.tools.ItemArcaniteSword;
 import com.ebonheart.EbonArtsMod.common.items.tools.ItemBlazefury;
+import com.ebonheart.EbonArtsMod.common.items.tools.ItemDeception;
 import com.ebonheart.EbonArtsMod.common.items.tools.ItemDespair;
-import com.ebonheart.EbonArtsMod.common.items.tools.ItemEmpoweredSword;
 import com.ebonheart.EbonArtsMod.common.items.tools.ItemFrostbite;
-import com.ebonheart.EbonArtsMod.common.items.tools.ItemHoeEA;
+import com.ebonheart.EbonArtsMod.common.items.tools.ItemKatcheenAxe;
+import com.ebonheart.EbonArtsMod.common.items.tools.ItemKatcheenHoe;
+import com.ebonheart.EbonArtsMod.common.items.tools.ItemKatcheenPickaxe;
+import com.ebonheart.EbonArtsMod.common.items.tools.ItemKatcheenShovel;
+import com.ebonheart.EbonArtsMod.common.items.tools.ItemKatcheenSword;
 import com.ebonheart.EbonArtsMod.common.items.tools.ItemMassacre;
-import com.ebonheart.EbonArtsMod.common.items.tools.ItemPickaxeEA;
-import com.ebonheart.EbonArtsMod.common.items.tools.ItemShovelEA;
 import com.ebonheart.EbonArtsMod.common.items.tools.ItemSouleater;
-import com.ebonheart.EbonArtsMod.common.items.tools.ItemSwordArcanite;
-import com.ebonheart.EbonArtsMod.common.items.tools.ItemSwordKatcheen;
 import com.ebonheart.EbonArtsMod.references.ItemsEA;
-import com.ebonheart.EbonArtsMod.references.Reference;
 
 public class InitItemsEA extends ItemsEA {
 	
 	public static final Item.ToolMaterial arcaniteToolMaterial = EnumHelper.addToolMaterial("arcaniteToolMaterial", 2, 315, 6.5F, 2.5F, 15);
 	public static final Item.ToolMaterial katcheenToolMaterial = EnumHelper.addToolMaterial("katcheenToolMaterial", 3, 1600, 8.5F, 4.0F, 20);
-	public static final Item.ToolMaterial empoweredToolMaterial = EnumHelper.addToolMaterial("empoweredToolMaterial", 3, 1661, 9.5F, 5.0F, 0);
+	//public static final Item.ToolMaterial empoweredToolMaterial = EnumHelper.addToolMaterial("empoweredToolMaterial", 3, 1661, 9.5F, 5.0F, 0);
 	public static final Item.ToolMaterial specialToolMaterial = EnumHelper.addToolMaterial("specialToolMaterial", 3, 1661, 9.5F, 6.0F, 30);
 	
 	public static final ItemArmor.ArmorMaterial arcaniteArmorMaterial = EnumHelper.addArmorMaterial("arcaniteArmorMaterial", "ea:arcanite", 18, new int[]{2, 6, 5, 2}, 10);
@@ -62,29 +61,31 @@ public class InitItemsEA extends ItemsEA {
 		soularite = new ItemSoularite();
 		ebonheart = new ItemEbonheart();
 		
+		empowered_blade = new ItemEmpoweredBlade("tool/empowered_blade");
+		
 		shimmering_disc = new ItemMusicDiscEA("shimmering_disc", "records.shimmering_disc");
 		
-		arcanite_pickaxe = new ItemPickaxeEA("tool/arcanite_pickaxe", arcaniteToolMaterial);
-		arcanite_axe = new ItemAxeEA("tool/arcanite_axe", arcaniteToolMaterial);
-		arcanite_shovel = new ItemShovelEA("tool/arcanite_shovel", arcaniteToolMaterial);
-		arcanite_hoe = new ItemHoeEA("tool/arcanite_hoe", arcaniteToolMaterial);
-		arcanite_sword = new ItemSwordArcanite("tool/arcanite_sword", arcaniteToolMaterial);
-		arcanite_helmet = new ItemArmorEAArcanite("armor/arcanite_helmet", arcaniteArmorMaterial, 0, 0);
-		arcanite_chestplate = new ItemArmorEAArcanite("armor/arcanite_chestplate", arcaniteArmorMaterial, 0, 1);
-		arcanite_leggings = new ItemArmorEAArcanite("armor/arcanite_leggings", arcaniteArmorMaterial, 0, 2);
-		arcanite_boots = new ItemArmorEAArcanite("armor/arcanite_boots", arcaniteArmorMaterial, 0, 3);
+		arcanite_pickaxe = new ItemArcanitePickaxe("tool/arcanite_pickaxe", arcaniteToolMaterial);
+		arcanite_axe = new ItemArcaniteAxe("tool/arcanite_axe", arcaniteToolMaterial);
+		arcanite_shovel = new ItemArcaniteShovel("tool/arcanite_shovel", arcaniteToolMaterial);
+		arcanite_hoe = new ItemArcaniteHoe("tool/arcanite_hoe", arcaniteToolMaterial);
+		arcanite_sword = new ItemArcaniteSword("tool/arcanite_sword", arcaniteToolMaterial);
+		arcanite_helmet = new ItemArcaniteArmor("armor/arcanite_helmet", arcaniteArmorMaterial, 0, 0);
+		arcanite_chestplate = new ItemArcaniteArmor("armor/arcanite_chestplate", arcaniteArmorMaterial, 0, 1);
+		arcanite_leggings = new ItemArcaniteArmor("armor/arcanite_leggings", arcaniteArmorMaterial, 0, 2);
+		arcanite_boots = new ItemArcaniteArmor("armor/arcanite_boots", arcaniteArmorMaterial, 0, 3);
 		
-		katcheen_pickaxe = new ItemPickaxeEA("tool/katcheen_pickaxe", katcheenToolMaterial);
-		katcheen_axe = new ItemAxeEA("tool/katcheen_axe", katcheenToolMaterial);
-		katcheen_shovel = new ItemShovelEA("tool/katcheen_shovel", katcheenToolMaterial);
-		katcheen_hoe = new ItemHoeEA("tool/katcheen_hoe", katcheenToolMaterial);
-		katcheen_sword = new ItemSwordKatcheen("tool/katcheen_sword", katcheenToolMaterial);
-		katcheen_helmet = new ItemArmorEAKatcheen("armor/katcheen_helmet", katcheenArmorMaterial, 0, 0);
-		katcheen_chestplate = new ItemArmorEAKatcheen("armor/katcheen_chestplate", katcheenArmorMaterial, 0, 1);
-		katcheen_leggings = new ItemArmorEAKatcheen("armor/katcheen_leggings", katcheenArmorMaterial, 0, 2);
-		katcheen_boots = new ItemArmorEAKatcheen("armor/katcheen_boots", katcheenArmorMaterial, 0, 3);
+		katcheen_pickaxe = new ItemKatcheenPickaxe("tool/katcheen_pickaxe", katcheenToolMaterial);
+		katcheen_axe = new ItemKatcheenAxe("tool/katcheen_axe", katcheenToolMaterial);
+		katcheen_shovel = new ItemKatcheenShovel("tool/katcheen_shovel", katcheenToolMaterial);
+		katcheen_hoe = new ItemKatcheenHoe("tool/katcheen_hoe", katcheenToolMaterial);
+		katcheen_sword = new ItemKatcheenSword("tool/katcheen_sword", katcheenToolMaterial);
+		katcheen_helmet = new ItemKatcheenArmor("armor/katcheen_helmet", katcheenArmorMaterial, 0, 0);
+		katcheen_chestplate = new ItemKatcheenArmor("armor/katcheen_chestplate", katcheenArmorMaterial, 0, 1);
+		katcheen_leggings = new ItemKatcheenArmor("armor/katcheen_leggings", katcheenArmorMaterial, 0, 2);
+		katcheen_boots = new ItemKatcheenArmor("armor/katcheen_boots", katcheenArmorMaterial, 0, 3);
 		
-		empowered_sword = new ItemEmpoweredSword("tool/empowered_sword", empoweredToolMaterial);
+		deception = new ItemDeception("tool/deception", specialToolMaterial);
 		frostbite = new ItemFrostbite("tool/frostbite", specialToolMaterial);
 		massacre = new ItemMassacre("tool/massacre", specialToolMaterial);
 		blazefury = new ItemBlazefury("tool/blazefury", specialToolMaterial);
@@ -112,6 +113,8 @@ public class InitItemsEA extends ItemsEA {
 		GameRegistry.registerItem(soularite, soularite.getUnlocalizedName().substring(5));
 		GameRegistry.registerItem(ebonheart, ebonheart.getUnlocalizedName().substring(5));
 		
+		GameRegistry.registerItem(empowered_blade, empowered_blade.getUnlocalizedName().substring(5));
+		
 		GameRegistry.registerItem(shimmering_disc, shimmering_disc.getUnlocalizedName().substring(5));
 		
 		GameRegistry.registerItem(arcanite_pickaxe, arcanite_pickaxe.getUnlocalizedName().substring(5));
@@ -134,7 +137,7 @@ public class InitItemsEA extends ItemsEA {
 		GameRegistry.registerItem(katcheen_leggings, katcheen_leggings.getUnlocalizedName().substring(5));
 		GameRegistry.registerItem(katcheen_boots, katcheen_boots.getUnlocalizedName().substring(5));
 		
-		GameRegistry.registerItem(empowered_sword, empowered_sword.getUnlocalizedName().substring(5));
+		GameRegistry.registerItem(deception, deception.getUnlocalizedName().substring(5));
 		GameRegistry.registerItem(frostbite, frostbite.getUnlocalizedName().substring(5));
 		GameRegistry.registerItem(massacre, massacre.getUnlocalizedName().substring(5));
 		GameRegistry.registerItem(blazefury, blazefury.getUnlocalizedName().substring(5));

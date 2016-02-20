@@ -30,10 +30,12 @@ public class ClientProxy extends CommonProxy {
 		
 		InitItemsEARender.registerRenders();
 		InitBlocksEARender.registerRenders();
-		//InitBlocksEARender.registerSpecialRenders();
 		InitEntityEARender.registerRenders();
 		
+		//InitEntityEARender.registerParticle(null, null);
 		
+		
+		//InitBlocksEARender.registerSpecialRenders();
 	}
 	
 	@Override

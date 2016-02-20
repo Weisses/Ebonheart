@@ -77,8 +77,8 @@ public class ItemMusicDiscEA extends ItemRecord {
 	@SideOnly(Side.CLIENT)
     public void addInformation(ItemStack stack, EntityPlayer playerIn, List toolTip, boolean advanced) 
 	{
-		toolTip.add("Though playable, this disc");
-		toolTip.add("can be crafted into others.");
+		toolTip.add(EnumChatFormatting.DARK_AQUA + "This playable, enchanted disc");
+		toolTip.add(EnumChatFormatting.DARK_AQUA + "can be crafted into others.");
 		
 	}
 	

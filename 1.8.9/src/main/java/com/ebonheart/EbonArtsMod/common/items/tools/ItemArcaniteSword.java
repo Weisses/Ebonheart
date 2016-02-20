@@ -16,25 +16,25 @@ import com.ebonheart.EbonArtsMod.api.damagesources.EADamageSources;
 import com.ebonheart.EbonArtsMod.api.damagesources.EntityDamageSourceElectric;
 import com.ebonheart.EbonArtsMod.init.InitItemsEA;
 
-public class ItemSwordKatcheen extends ItemSword {
-
-	public ItemSwordKatcheen(String unlocalizedName, ToolMaterial material) 
+public class ItemArcaniteSword extends ItemSword {
+	
+	public ItemArcaniteSword(String unlocalizedName, ToolMaterial material) 
 	{
 		super(material);
 		this.setUnlocalizedName(unlocalizedName);
 		this.setCreativeTab(EbonArtsMod.tabEbonArtsItems);
-		
 	}
 	
-	@Override
-	public boolean getIsRepairable(ItemStack toRepair, ItemStack repair)
+	public boolean getIsRepairable(ItemStack par1ItemStack, ItemStack par2ItemStack)
 	{
-		
-		if(repair.getItem().equals(InitItemsEA.katcheen))
-			return true;
-		else
-			return false;
+		return InitItemsEA.arcanite == par2ItemStack.getItem() ? true : super.getIsRepairable(par1ItemStack, par2ItemStack);
 	}
+	
+	public EnumRarity getRarity(ItemStack stack)
+	{
+		return EnumRarity.UNCOMMON;
+	}
+	
 	//entity.attackEntityFrom(DamageSource source, float damage)
 	
     //public boolean hitEntity(ItemStack stack, EntityLivingBase target, EntityLivingBase attacker)
@@ -46,9 +46,4 @@ public class ItemSwordKatcheen extends ItemSword {
         //return true;
     //}
 	
-	public EnumRarity getRarity(ItemStack stack)
-    {
-        return EnumRarity.RARE;
-    }
-
 }

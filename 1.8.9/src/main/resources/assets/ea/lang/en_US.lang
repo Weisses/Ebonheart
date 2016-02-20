@@ -1,25 +1,23 @@
 < en_US.lang - English localization file for the Ebon Arts Mod >
 
+//-----Creative Tabs-----
 itemGroup.tabEbonArtsBlocks=Ebon Arts Blocks
 itemGroup.tabEbonArtsItems=Ebon Arts Items
+
 //-----Items-----
-item.ebon_tome.name=Ebon Tome-WIP
 item.gem/draconium_dust.name=Draconium Dust
 item.gem/velious.name=Velious
 item.gem/arcanite.name=Arcanite
 item.gem/katcheen.name=Katcheen
 item.gem/necrocite.name=Necrocite
 item.gem/soularite.name=Soularite
-item.gem/innate_arcanite.name=Innate Arcanite
+item.gem/ebonheart.name=Ebonheart Gemstone
+item.tool/empowered_blade.name=Empowered Blade
 item.shimmering_disc.name=Shimmering Disc
-
 item.gem/obsidian_shard.name=Obsidian Shard
 item.gem/glowstone_shard.name=Glowstone Shard
-
-item.gem/arcanite_shard.name=Arcanite Shard
-item.ebon_sigil.name=Ebon Sigil
-
-
+item.banana.name=Banana
+item.dragon_fruit.name=Dragon Fruit
 
 //-----Ores-----
 tile.ore/draconium_ore.name=Draconium Ore
@@ -30,8 +28,6 @@ tile.ore/ebon_ore.name=Ebon Ore
 tile.ore/necrocite_ore.name=Necrocite Ore
 tile.ore/soularite_ore.name=Soularite Ore
 tile.ore/ebon_ore_nether.name=Ebon Ore
-
-
 
 //-----Blocks-----
 tile.gem/mystic/mystic_block_normal.name=Mystic Block
@@ -140,12 +136,9 @@ tile.pillar/katcheen_pillar.name=Katcheen Pillar
 tile.pillar/necrocite_pillar.name=Necrocite Pillar
 tile.pillar/soularite_pillar.name=Soularite Pillar
 
-tile.fence/innate_arcanite_fence_normal.name=Innate Arcanite Fence
-
 tile.paper_block.name=Block of Paper
 tile.leather_block.name=Block of Leather
 tile.reed_block.name=Block of Sugar Cane
-tile.gem/ebonheart/ebonheart_block.name=Block of Ebonheart
 
 tile.gem/glowstone/glowstone_block.name=Block of Purified Glowstone
 tile.gem/glowstone/glowstone_block_brick.name=Purified Glowstone Brick
@@ -193,14 +186,12 @@ item.tool/katcheen_shovel.name=Katcheen Shovel
 item.tool/katcheen_hoe.name=Katcheen Hoe
 item.tool/katcheen_sword.name=Katcheen Sword
 
-item.tool/empowered_sword.name=Empowered Sword
-item.tool/blazefury.name=Blazefury
-item.tool/despair.name=Despair
+item.tool/deception.name=Deception
 item.tool/frostbite.name=Frostbite
 item.tool/massacre.name=Massacre
+item.tool/blazefury.name=Blazefury
+item.tool/despair.name=Despair
 item.tool/souleater.name=Souleater
-
-
 
 //-----Armor-----
 item.armor/arcanite_helmet.name=Arcanite Helmet
@@ -212,8 +203,6 @@ item.armor/katcheen_helmet.name=Katcheen Helmet
 item.armor/katcheen_chestplate.name=Katcheen Chestplate
 item.armor/katcheen_leggings.name=Katcheen Leggings
 item.armor/katcheen_boots.name=Katcheen Boots
-
-
 
 //-----Achievements-----
 achievement.ea:alchemical_compendium=And so it begins!
@@ -242,8 +231,11 @@ achievement.ea:mine_soularite_ore.desc=Mine some Soularite Ore.
 achievement.ea:ebonheart=Power level's over 9000!
 achievement.ea:ebonheart.desc=Obtain an Ebonheart Gemstone.
 
-achievement.ea:empowered_sword=One step closer!
-achievement.ea:empowered_sword.desc=Craft an Empowered Sword.
+achievement.ea:empowered_blade=One step closer!
+achievement.ea:empowered_blade.desc=Craft an Empowered Blade.
+
+achievement.ea:deception=Illusion of truth!
+achievement.ea:deception.desc=Craft the ultimate weapon, Deception.
 
 achievement.ea:frostbite=Icebound doom!
 achievement.ea:frostbite.desc=Craft the ultimate weapon, Frostbite.
@@ -269,30 +261,22 @@ achievement.ea:smelt_draconium_dust.desc=Smelt Draconium Dust.
 //-----Music Discs-----
 item.shimmering_disc.desc=Lost Woods
 
+
+
+//-----Archived-----
 item.mystic_dust.name=Mystic Dust
-
 item.purified_mystic_dust.name=Purified Mystic Dust
-
 item.tier_1_catalyst.name=Catalyst (Tier 1)
 item.tier_2_catalyst.name=Catalyst (Tier 2)
 item.tier_3_catalyst.name=Catalyst (Tier 3)
 item.tier_4_catalyst.name=Catalyst (Tier 4)
-
-item.banana.name=Banana
-
-item.gem/ebonheart.name=Ebonheart Gemstone
-
-item.dragon_fruit.name=Dragon Fruit
-
+item.gem/arcanite_shard.name=Arcanite Shard
+item.ebon_sigil.name=Ebon Sigil
+item.gem/innate_arcanite.name=Innate Arcanite
 tile.dragonwoodplant.name=Dragonwood Sapling
-
 tile.purified_mystic_block.name=Purified Mystic Block
-
 tile.ebon_alter.name=Ebon Alter
-
-
-
-
-
 death.attack.electric=%1$s was roasted by electric current.
 death.attack.electric.player=%1$s was roasted by electric current while fighting %2$s.
+tile.fence/innate_arcanite_fence_normal.name=Innate Arcanite Fence
+item.ebon_tome.name=Ebon Tome-WIP

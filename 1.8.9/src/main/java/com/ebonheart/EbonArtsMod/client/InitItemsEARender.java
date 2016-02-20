@@ -20,6 +20,7 @@ public final class InitItemsEARender extends ItemsEA {
 		registerRender(soularite);
 		registerRender(ebonheart);
 		
+		registerRender(empowered_blade);
 		registerRender(shimmering_disc);
 		
 		registerRender(arcanite_pickaxe);
@@ -42,7 +43,8 @@ public final class InitItemsEARender extends ItemsEA {
 		registerRender(katcheen_leggings);
 		registerRender(katcheen_boots);
 		
-		registerRender(empowered_sword);
+		
+		registerRender(deception);
 		registerRender(frostbite);
 		registerRender(massacre);
 		registerRender(blazefury);

@@ -15,23 +15,22 @@ import net.minecraftforge.fml.relauncher.SideOnly;
 
 public class ItemKatcheen extends Item {
 	
-	public ItemKatcheen() {
-		
-	 this.setUnlocalizedName("gem/katcheen");
-	 this.setCreativeTab(EbonArtsMod.tabEbonArtsItems);
-	 
+	public ItemKatcheen() 
+	{
+		this.setUnlocalizedName("gem/katcheen");
+		this.setCreativeTab(EbonArtsMod.tabEbonArtsItems);
 	}
 	
 	@SideOnly(Side.CLIENT)
-    public void addInformation(ItemStack stack, EntityPlayer playerIn, List toolTip, boolean advanced) {
-		toolTip.add("This gem gives off a steady");
-		toolTip.add("wave of warmth when held.");
-		
+    public void addInformation(ItemStack stack, EntityPlayer playerIn, List toolTip, boolean advanced) 
+	{
+		toolTip.add(EnumChatFormatting.DARK_AQUA + "This gem gives off a steady");
+		toolTip.add(EnumChatFormatting.DARK_AQUA + "wave of warmth when held.");
 	}
 	
-
 	public EnumRarity getRarity(ItemStack stack)
     {
         return EnumRarity.RARE;
     }
+	
 }

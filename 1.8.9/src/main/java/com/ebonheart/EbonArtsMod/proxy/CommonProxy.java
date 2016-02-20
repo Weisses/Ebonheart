@@ -41,6 +41,7 @@ public class CommonProxy {
 		InitAchievementsEA.init();
 		WorldChestHooks.init();
 		
+		
 		GameRegistry.registerWorldGenerator(new WorldGeneratorEA(), 0);
 		NetworkRegistry.INSTANCE.registerGuiHandler(EbonArtsMod.instance, new GuiHandler());
 	}

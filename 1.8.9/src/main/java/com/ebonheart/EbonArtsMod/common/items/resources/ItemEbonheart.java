@@ -19,20 +19,19 @@ import net.minecraftforge.fml.relauncher.SideOnly;
 
 public class ItemEbonheart extends Item {
 	
-	public ItemEbonheart() {
-		
-	 this.setUnlocalizedName("gem/ebonheart");
-	 this.setCreativeTab(EbonArtsMod.tabEbonArtsItems);
-	 this.setMaxStackSize(16);
-	 
+	public ItemEbonheart() 
+	{
+		this.setUnlocalizedName("gem/ebonheart");
+		this.setCreativeTab(EbonArtsMod.tabEbonArtsItems);
+		this.setMaxStackSize(64);
 	}
 	
 	@SideOnly(Side.CLIENT)
-    public void addInformation(ItemStack stack, EntityPlayer playerIn, List toolTip, boolean advanced) {
-		toolTip.add("The heart of lost knowledge.");
-		toolTip.add("Hold shift to unleash the");
-		toolTip.add("experience within.");
-		
+    public void addInformation(ItemStack stack, EntityPlayer playerIn, List toolTip, boolean advanced) 
+	{
+		toolTip.add(EnumChatFormatting.DARK_AQUA + "The heart of lost knowledge.");
+		toolTip.add(EnumChatFormatting.DARK_AQUA + "Hold " + EnumChatFormatting.WHITE + "[Shift + Right-Click]" + EnumChatFormatting.DARK_AQUA + " to throw this");
+		toolTip.add(EnumChatFormatting.DARK_AQUA + "item and unleash the experience within.");
 	}
 	
 	@SideOnly(Side.CLIENT)
@@ -40,27 +39,6 @@ public class ItemEbonheart extends Item {
     {
         return true;
     }
-	
-	
-	//@Override
-	//public boolean onItemUse(ItemStack stack, EntityPlayer playerIn, World worldIn, BlockPos pos, EnumFacing side, float hitX, float hitY, float hitZ)
-	//{
-	//	if(!playerIn.isSneaking())
-	//	{
-	//		if(stack.getTagCompound() == null)
-	//		{
-	//			stack.setTagCompound(new NBTTagCompound());
-	//		}
-	//		NBTTagCompound nbt = new NBTTagCompound();
-	//		nbt.setInteger("dim", playerIn.dimension);
-	//		nbt.setInteger("posX", pos.getX());
-	//		nbt.setInteger("posY", pos.getY());
-	//		nbt.setInteger("posZ", pos.getZ());
-	//		stack.getTagCompound().setTag("coords", nbt);
-	//		stack.setStackDisplayName(EnumChatFormatting.DARK_PURPLE + "Coordinate Cache");
-	//	}
-	//	return false;
-	//}
 	
 	@Override
 	public ItemStack onItemRightClick(ItemStack stack, World worldIn, EntityPlayer playerIn)
@@ -78,42 +56,14 @@ public class ItemEbonheart extends Item {
 	        {
 	            worldIn.spawnEntityInWorld(new EntityEbonheart(worldIn, playerIn));
 	        }
-
-	        //playerIn.triggerAchievement(StatList.objectUseStats[Item.getIdFromItem(this)]);
 	        return stack;
 		}
         return stack;
     }
 	
-	
-	
-	
-	
-	
-	
-	
-    //public ItemStack onItemRightClick(ItemStack itemStackIn, World worldIn, EntityPlayer playerIn)
-    //{
-    //    if (!playerIn.capabilities.isCreativeMode)
-    //    {
-    //        --itemStackIn.stackSize;
-    //    }
-
-    //    worldIn.playSoundAtEntity(playerIn, "random.bow", 0.5F, 0.4F / (itemRand.nextFloat() * 0.4F + 0.8F));
-
-    //    if (!worldIn.isRemote)
-    //    {
-    //        worldIn.spawnEntityInWorld(new EntityEbonheart(worldIn, playerIn));
-    //    }
-
-        //playerIn.triggerAchievement(StatList.objectUseStats[Item.getIdFromItem(this)]);
-    //    return itemStackIn;
-    //}
-	
-
 	public EnumRarity getRarity(ItemStack stack)
     {
-        return EnumRarity.EPIC;
+        return EnumRarity.RARE;
     }
 	
 }

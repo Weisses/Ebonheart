@@ -15,23 +15,22 @@ import net.minecraftforge.fml.relauncher.SideOnly;
 
 public class ItemGlowstoneShard extends Item {
 	
-	public ItemGlowstoneShard() {
-		
-	 this.setUnlocalizedName("gem/glowstone_shard");
-	 this.setCreativeTab(EbonArtsMod.tabEbonArtsItems);
-	 
+	public ItemGlowstoneShard() 
+	{
+		this.setUnlocalizedName("gem/glowstone_shard");
+		this.setCreativeTab(EbonArtsMod.tabEbonArtsItems);
 	}
 	
 	@SideOnly(Side.CLIENT)
-    public void addInformation(ItemStack stack, EntityPlayer playerIn, List toolTip, boolean advanced) {
-		toolTip.add("Crystalline imbued pieces");
-		toolTip.add("of glowstone.");
-		
+    public void addInformation(ItemStack stack, EntityPlayer playerIn, List toolTip, boolean advanced) 
+	{
+		toolTip.add(EnumChatFormatting.GOLD + "Crystalline imbued pieces");
+		toolTip.add(EnumChatFormatting.GOLD + "of Glowstone.");
 	}
 	
-
 	public EnumRarity getRarity(ItemStack stack)
     {
         return EnumRarity.UNCOMMON;
     }
+	
 }

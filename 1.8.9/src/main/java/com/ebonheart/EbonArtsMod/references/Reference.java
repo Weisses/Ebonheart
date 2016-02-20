@@ -22,7 +22,8 @@ public class Reference {
 	public static final String MINE_EBON_ORE = "mine_ebon_ore";
 	
 	public static final String EBONHEART = "ebonheart";
-	public static final String EMPOWERED_SWORD = "empowered_sword";
+	public static final String EMPOWERED_BLADE = "empowered_blade";
+	public static final String DECEPTION = "deception";
 	public static final String FROSTBITE = "frostbite";
 	public static final String MASSACRE = "massacre";
 	public static final String BLAZEFURY = "blazefury";

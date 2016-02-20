@@ -7,7 +7,7 @@ import net.minecraft.client.resources.model.ModelResourceLocation;
 import net.minecraft.item.Item;
 import net.minecraftforge.fml.client.registry.ClientRegistry;
 
-import com.ebonheart.EbonArtsMod.client.render.models.RenderEbonheart;
+import com.ebonheart.EbonArtsMod.client.render.projectile.RenderEbonheart;
 import com.ebonheart.EbonArtsMod.common.entity.tile.TileEntityTutorial;
 import com.ebonheart.EbonArtsMod.init.InitBlocksEA;
 import com.ebonheart.EbonArtsMod.references.BlocksEA;
