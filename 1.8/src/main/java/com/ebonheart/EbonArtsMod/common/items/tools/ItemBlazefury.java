@@ -8,10 +8,13 @@ import com.ebonheart.EbonArtsMod.common.items.ItemHelper;
 
 import net.minecraft.entity.EntityLivingBase;
 import net.minecraft.entity.player.EntityPlayer;
+import net.minecraft.item.EnumRarity;
 import net.minecraft.item.ItemStack;
 import net.minecraft.item.ItemSword;
 import net.minecraft.potion.Potion;
 import net.minecraft.potion.PotionEffect;
+import net.minecraft.util.EnumChatFormatting;
+import net.minecraft.util.EnumParticleTypes;
 import net.minecraft.world.World;
 import net.minecraftforge.fml.relauncher.Side;
 import net.minecraftforge.fml.relauncher.SideOnly;
@@ -32,7 +35,7 @@ public class ItemBlazefury extends ItemSword {
 		Random rand = new Random();
 		int d = rand.nextInt(100) + 1;
 		
-		if (d < 35)
+		if (d < 30)
 		{
 			Potion potion = Potion.fireResistance;
 			EntityPlayer playerIn = attacker.getEntityWorld().getPlayerEntityByUUID(attacker.getUniqueID());
@@ -43,11 +46,19 @@ public class ItemBlazefury extends ItemSword {
         return true;
     }
 	
-	
-	
 	@SideOnly(Side.CLIENT)
     public void addInformation(ItemStack stack, EntityPlayer playerIn, List toolTip, boolean advanced) {
-		toolTip.add("Let the flames consume all");
-		toolTip.add("that stand before you.");
+		toolTip.add(EnumChatFormatting.DARK_PURPLE + "\"Let the flames consume all");
+		toolTip.add(EnumChatFormatting.DARK_PURPLE + "that stand before you.\"");
+		toolTip.add(" ");
+		toolTip.add(EnumChatFormatting.GOLD + "30% chance on hit:");
+		toolTip.add(EnumChatFormatting.RED + "Target - Set on fire for 4 seconds.");
+		toolTip.add(EnumChatFormatting.GREEN + "Self - Fire Resistance for 5 seconds.");
 	}
+	
+	public EnumRarity getRarity(ItemStack stack)
+    {
+        return EnumRarity.EPIC;
+    }
+	
 }

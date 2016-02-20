@@ -4,8 +4,8 @@ public class Reference {
 	
 	//Main
 	public static final String MOD_ID = "ea";
-	public static final String MOD_NAME = "Ebon Arts Mod";
-	public static final String MOD_VERSION = "v1.2.38a";
+	public static final String MOD_NAME = "Ebon Arts";
+	public static final String MOD_VERSION = "v1.3.2a-mc1.8";
 	public static final String CONFIG_GUI = "com.ebonheart.EbonArtsMod.api.EAGuiFactory";
 	public static final String CLIENT_PROXY_CLASS = "com.ebonheart.EbonArtsMod.proxy.ClientProxy";
 	public static final String SERVER_PROXY_CLASS = "com.ebonheart.EbonArtsMod.proxy.ServerProxy";
@@ -22,7 +22,8 @@ public class Reference {
 	public static final String MINE_EBON_ORE = "mine_ebon_ore";
 	
 	public static final String EBONHEART = "ebonheart";
-	public static final String EMPOWERED_SWORD = "empowered_sword";
+	public static final String EMPOWERED_BLADE = "empowered_blade";
+	public static final String DECEPTION = "deception";
 	public static final String FROSTBITE = "frostbite";
 	public static final String MASSACRE = "massacre";
 	public static final String BLAZEFURY = "blazefury";

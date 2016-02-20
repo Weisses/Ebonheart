@@ -21,10 +21,10 @@ public class ItemsEA {
 	
 	public static Item shimmering_disc;
 	
-	public static Item tier_1_catalyst;
-	public static Item tier_2_catalyst;
-	public static Item tier_3_catalyst;
-	public static Item tier_4_catalyst;
+	//public static Item tier_1_catalyst;
+	//public static Item tier_2_catalyst;
+	//public static Item tier_3_catalyst;
+	//public static Item tier_4_catalyst;
 	
 	public static Item arcanite_pickaxe;
 	public static Item arcanite_axe;
@@ -48,7 +48,8 @@ public class ItemsEA {
 	public static Item katcheen_leggings;
 	public static Item katcheen_boots;
 	
-	public static Item empowered_sword;
+	public static Item empowered_blade;
+	public static Item deception;
 	public static Item blazefury;
 	public static Item despair;
 	public static Item frostbite;

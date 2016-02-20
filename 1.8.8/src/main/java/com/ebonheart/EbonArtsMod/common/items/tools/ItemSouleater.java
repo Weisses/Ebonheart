@@ -9,9 +9,11 @@ import com.ebonheart.EbonArtsMod.init.InitItemsEA;
 
 import net.minecraft.entity.EntityLivingBase;
 import net.minecraft.entity.player.EntityPlayer;
+import net.minecraft.item.EnumRarity;
 import net.minecraft.item.ItemStack;
 import net.minecraft.item.ItemSword;
 import net.minecraft.potion.Potion;
+import net.minecraft.util.EnumChatFormatting;
 import net.minecraft.world.World;
 import net.minecraftforge.fml.relauncher.Side;
 import net.minecraftforge.fml.relauncher.SideOnly;
@@ -48,7 +50,17 @@ public class ItemSouleater extends ItemSword {
 	
 	@SideOnly(Side.CLIENT)
     public void addInformation(ItemStack stack, EntityPlayer playerIn, List toolTip, boolean advanced) {
-		toolTip.add("Pain and suffering can");
-		toolTip.add("heal all wounds.");
+		toolTip.add(EnumChatFormatting.DARK_PURPLE + "\"Pain and suffering can");
+		toolTip.add(EnumChatFormatting.DARK_PURPLE + "heal all wounds.\"");
+		toolTip.add(" ");
+		toolTip.add(EnumChatFormatting.GOLD + "25% chance on hit:");
+		toolTip.add(EnumChatFormatting.GREEN + "Self - Heal for 1/2 to 1 1/2 hearts.");
+		toolTip.add(EnumChatFormatting.GREEN + "Self - Absorption for 4 seconds.");
 	}
+	
+	public EnumRarity getRarity(ItemStack stack)
+    {
+        return EnumRarity.EPIC;
+    }
+	
 }

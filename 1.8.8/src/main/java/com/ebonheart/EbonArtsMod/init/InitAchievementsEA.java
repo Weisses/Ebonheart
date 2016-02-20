@@ -34,7 +34,8 @@ public class InitAchievementsEA
 	public static Achievement shimmering_disc;
 	
 	public static Achievement ebonheart;
-	public static Achievement empowered_sword;
+	public static Achievement empowered_blade;
+	public static Achievement deception;
 	public static Achievement frostbite;
 	public static Achievement massacre;
 	public static Achievement blazefury;
@@ -61,12 +62,13 @@ public class InitAchievementsEA
 		
 		ebonheart = new AchievementHelper(Reference.EBONHEART, 1, 0, InitItemsEA.ebonheart, (Achievement)null);//.func_180788_c();
 		
-		empowered_sword = new AchievementHelper(Reference.EMPOWERED_SWORD, 1, 2, InitItemsEA.empowered_sword, (Achievement)ebonheart);//.func_180788_c();
-		frostbite = new AchievementHelper(Reference.FROSTBITE, -1, 3, InitItemsEA.frostbite, (Achievement)empowered_sword).setSpecial();//.func_180788_c();
-		massacre = new AchievementHelper(Reference.MASSACRE, -1, 4, InitItemsEA.massacre, (Achievement)empowered_sword).setSpecial();//.func_180788_c();
-		blazefury = new AchievementHelper(Reference.BLAZEFURY, 1, 5, InitItemsEA.blazefury, (Achievement)empowered_sword).setSpecial();//.func_180788_c();
-		despair = new AchievementHelper(Reference.DESPAIR, 3, 4, InitItemsEA.despair, (Achievement)empowered_sword).setSpecial();//.func_180788_c();
-		souleater = new AchievementHelper(Reference.SOULEATER, 3, 3, InitItemsEA.souleater, (Achievement)empowered_sword).setSpecial();//.func_180788_c();
+		empowered_blade = new AchievementHelper(Reference.EMPOWERED_BLADE, 1, 2, InitItemsEA.empowered_blade, (Achievement)ebonheart);//.func_180788_c();
+		deception = new AchievementHelper(Reference.DECEPTION, -1, 3, InitItemsEA.deception, (Achievement)empowered_blade).setSpecial();//.func_180788_c();
+		frostbite = new AchievementHelper(Reference.FROSTBITE, -1, 4, InitItemsEA.frostbite, (Achievement)empowered_blade).setSpecial();//.func_180788_c();
+		massacre = new AchievementHelper(Reference.MASSACRE, -1, 5, InitItemsEA.massacre, (Achievement)empowered_blade).setSpecial();//.func_180788_c();
+		blazefury = new AchievementHelper(Reference.BLAZEFURY, 3, 3, InitItemsEA.blazefury, (Achievement)empowered_blade).setSpecial();//.func_180788_c();
+		despair = new AchievementHelper(Reference.DESPAIR, 3, 4, InitItemsEA.despair, (Achievement)empowered_blade).setSpecial();//.func_180788_c();
+		souleater = new AchievementHelper(Reference.SOULEATER, 3, 5, InitItemsEA.souleater, (Achievement)empowered_blade).setSpecial();//.func_180788_c();
 		
 		nether_bound = new AchievementHelper(Reference.NETHER_BOUND, 1, -2, InitItemsEA.glowstone_shards, (Achievement)null).setSpecial();//.func_180788_c();
 		

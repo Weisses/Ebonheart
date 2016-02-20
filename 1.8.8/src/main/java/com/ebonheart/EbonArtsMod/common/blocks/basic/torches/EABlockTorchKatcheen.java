@@ -276,12 +276,12 @@ public class EABlockTorchKatcheen extends Block {
 	        {
 	            EnumFacing enumfacing1 = enumfacing.getOpposite();
 	            worldIn.spawnParticle(EnumParticleTypes.SPELL_MOB_AMBIENT, d0 + d4 * (double)enumfacing1.getFrontOffsetX(), d1 + d3, d2 + d4 * (double)enumfacing1.getFrontOffsetZ(), 1.0D, -5.0D, 0.0D, new int[0]);
-	            worldIn.spawnParticle(EnumParticleTypes.REDSTONE, d0 + d4 * (double)enumfacing1.getFrontOffsetX(), d1 + d3, d2 + d4 * (double)enumfacing1.getFrontOffsetZ(), 0.0D, 0.0D, 0.0D, new int[0]);
+	            worldIn.spawnParticle(EnumParticleTypes.REDSTONE, d0 + d4 * (double)enumfacing1.getFrontOffsetX(), d1 + d3, d2 + d4 * (double)enumfacing1.getFrontOffsetZ(), 0.0D, 5.0D, 3.4D, new int[0]);
 	        }
 	        else
 	        {
 	            worldIn.spawnParticle(EnumParticleTypes.SPELL_MOB_AMBIENT, d0, d1, d2, 1.0D, -5.0D, 0.0D, new int[0]);
-	            worldIn.spawnParticle(EnumParticleTypes.REDSTONE, d0, d1, d2, 0.0D, 0.0D, 0.0D, new int[0]);
+	            worldIn.spawnParticle(EnumParticleTypes.REDSTONE, d0, d1, d2, 0.0D, 5.0D, 3.4D, new int[0]);
 	        }
 	    }
 

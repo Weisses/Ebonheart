@@ -61,7 +61,7 @@ public class EABlockPillar extends BlockRotatedPillar {
     
     public boolean isFullCube()
     {
-        return false;
+        return true;
     }
 
     /**

@@ -77,9 +77,14 @@ public class AchievementsEA {
 			event.player.triggerAchievement(InitAchievementsEA.shimmering_disc);
 		}
 		
-		if(event.crafting.getItem() == InitItemsEA.empowered_sword) 
+		if(event.crafting.getItem() == InitItemsEA.empowered_blade) 
 		{
-			event.player.triggerAchievement(InitAchievementsEA.empowered_sword);
+			event.player.triggerAchievement(InitAchievementsEA.empowered_blade);
+		}
+		
+		if(event.crafting.getItem() == InitItemsEA.deception) 
+		{
+			event.player.triggerAchievement(InitAchievementsEA.deception);
 		}
 		
 		if(event.crafting.getItem() == InitItemsEA.frostbite) 

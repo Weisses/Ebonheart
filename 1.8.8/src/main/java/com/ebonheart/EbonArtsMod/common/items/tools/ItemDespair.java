@@ -8,9 +8,11 @@ import com.ebonheart.EbonArtsMod.common.items.ItemHelper;
 
 import net.minecraft.entity.EntityLivingBase;
 import net.minecraft.entity.player.EntityPlayer;
+import net.minecraft.item.EnumRarity;
 import net.minecraft.item.ItemStack;
 import net.minecraft.item.ItemSword;
 import net.minecraft.potion.Potion;
+import net.minecraft.util.EnumChatFormatting;
 import net.minecraft.world.World;
 import net.minecraftforge.fml.relauncher.Side;
 import net.minecraftforge.fml.relauncher.SideOnly;
@@ -29,7 +31,7 @@ public class ItemDespair extends ItemSword {
 		Random rand = new Random();
 		int d = rand.nextInt(100) + 1;
 		
-		if (d < 35)
+		if (d < 30)
 		{
 			Potion potion = Potion.wither;
 			Potion potion2 = Potion.confusion;
@@ -39,13 +41,21 @@ public class ItemDespair extends ItemSword {
 			stack.damageItem(1, playerIn);
 		}
         return true;
-        
     }
 	
 	@SideOnly(Side.CLIENT)
     public void addInformation(ItemStack stack, EntityPlayer playerIn, List toolTip, boolean advanced) {
-		toolTip.add("All things will be reduced");
-		toolTip.add("to nothingness.");
+		toolTip.add(EnumChatFormatting.DARK_PURPLE + "\"Let all things be reduced");
+		toolTip.add(EnumChatFormatting.DARK_PURPLE + "to nothingness.\"");
+		toolTip.add(" ");
+		toolTip.add(EnumChatFormatting.GOLD + "30% chance on hit:");
+		toolTip.add(EnumChatFormatting.RED + "Target - Wither for 4 seconds.");
+		toolTip.add(EnumChatFormatting.RED + "Target - Nausea for 3 seconds.");
 	}
+	
+	public EnumRarity getRarity(ItemStack stack)
+    {
+        return EnumRarity.EPIC;
+    }
 
 }

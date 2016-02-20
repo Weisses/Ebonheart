@@ -7,6 +7,7 @@ import com.ebonheart.EbonArtsMod.common.entity.EntityEbonheart;
 
 import net.minecraft.entity.item.EntityExpBottle;
 import net.minecraft.entity.player.EntityPlayer;
+import net.minecraft.item.EnumRarity;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
 import net.minecraft.stats.StatList;
@@ -18,20 +19,19 @@ import net.minecraftforge.fml.relauncher.SideOnly;
 
 public class ItemEbonheart extends Item {
 	
-	public ItemEbonheart() {
-		
-	 this.setUnlocalizedName("gem/ebonheart");
-	 this.setCreativeTab(EbonArtsMod.tabEbonArtsItems);
-	 this.setMaxStackSize(16);
-	 
+	public ItemEbonheart() 
+	{
+		this.setUnlocalizedName("gem/ebonheart");
+		this.setCreativeTab(EbonArtsMod.tabEbonArtsItems);
+		this.setMaxStackSize(64);
 	}
 	
 	@SideOnly(Side.CLIENT)
-    public void addInformation(ItemStack stack, EntityPlayer playerIn, List toolTip, boolean advanced) {
-		toolTip.add("Experience from centuries past is");
-		toolTip.add("trapped within. The greatest mysteries");
-		toolTip.add("are truly black and white.");
-		
+    public void addInformation(ItemStack stack, EntityPlayer playerIn, List toolTip, boolean advanced) 
+	{
+		toolTip.add(EnumChatFormatting.DARK_AQUA + "The heart of lost knowledge.");
+		toolTip.add(EnumChatFormatting.DARK_AQUA + "Hold " + EnumChatFormatting.WHITE + "[Shift + Right-Click]" + EnumChatFormatting.DARK_AQUA + " to throw this");
+		toolTip.add(EnumChatFormatting.DARK_AQUA + "item and unleash the experience within.");
 	}
 	
 	@SideOnly(Side.CLIENT)
@@ -40,24 +40,30 @@ public class ItemEbonheart extends Item {
         return true;
     }
 	
-    public ItemStack onItemRightClick(ItemStack itemStackIn, World worldIn, EntityPlayer playerIn)
+	@Override
+	public ItemStack onItemRightClick(ItemStack stack, World worldIn, EntityPlayer playerIn)
     {
-        if (!playerIn.capabilities.isCreativeMode)
-        {
-            --itemStackIn.stackSize;
-        }
+		if(playerIn.isSneaking())
+		{
+			if (!playerIn.capabilities.isCreativeMode)
+	        {
+	            --stack.stackSize;
+	        }
 
-        worldIn.playSoundAtEntity(playerIn, "random.bow", 0.5F, 0.4F / (itemRand.nextFloat() * 0.4F + 0.8F));
+	        worldIn.playSoundAtEntity(playerIn, "random.bow", 0.5F, 0.4F / (itemRand.nextFloat() * 0.4F + 0.8F));
 
-        if (!worldIn.isRemote)
-        {
-            worldIn.spawnEntityInWorld(new EntityEbonheart(worldIn, playerIn));
-        }
-
-        //playerIn.triggerAchievement(StatList.objectUseStats[Item.getIdFromItem(this)]);
-        return itemStackIn;
+	        if (!worldIn.isRemote)
+	        {
+	            worldIn.spawnEntityInWorld(new EntityEbonheart(worldIn, playerIn));
+	        }
+	        return stack;
+		}
+        return stack;
     }
 	
-	
+	public EnumRarity getRarity(ItemStack stack)
+    {
+        return EnumRarity.RARE;
+    }
 	
 }

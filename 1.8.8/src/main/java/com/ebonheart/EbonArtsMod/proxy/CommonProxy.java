@@ -8,9 +8,11 @@ import net.minecraftforge.fml.common.registry.GameRegistry;
 
 import com.ebonheart.EbonArtsMod.EbonArtsMod;
 import com.ebonheart.EbonArtsMod.api.GuiHandler;
+import com.ebonheart.EbonArtsMod.common.world.WorldChestHooks;
 import com.ebonheart.EbonArtsMod.common.world.WorldGeneratorEA;
 import com.ebonheart.EbonArtsMod.init.InitAchievementsEA;
 import com.ebonheart.EbonArtsMod.init.InitBlocksEA;
+import com.ebonheart.EbonArtsMod.init.InitEntityEA;
 import com.ebonheart.EbonArtsMod.init.InitItemsEA;
 import com.ebonheart.EbonArtsMod.init.InitRecipesEA;
 
@@ -22,9 +24,13 @@ public class CommonProxy {
 		InitItemsEA.register();
 		InitBlocksEA.preInit();
 		InitBlocksEA.register();
+		InitEntityEA.preInit();
+		InitEntityEA.register();
+		
+		
+		
 		//InitTileEntitiesEA.init();
 		//InitTileEntitiesEA.register();
-		
 	}
 	
 	public void init(FMLInitializationEvent event) 
@@ -33,6 +39,8 @@ public class CommonProxy {
 		InitRecipesEA.initShapelessRecipe();
 		InitRecipesEA.initSmeltingRecipe();
 		InitAchievementsEA.init();
+		WorldChestHooks.init();
+		
 		
 		GameRegistry.registerWorldGenerator(new WorldGeneratorEA(), 0);
 		NetworkRegistry.INSTANCE.registerGuiHandler(EbonArtsMod.instance, new GuiHandler());

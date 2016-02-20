@@ -14,17 +14,17 @@ import net.minecraftforge.fml.relauncher.SideOnly;
 
 public class ItemDraconiumDust extends Item {
 	
-	public ItemDraconiumDust() {
-		
-	 this.setUnlocalizedName("gem/draconium_dust");
-	 this.setCreativeTab(EbonArtsMod.tabEbonArtsItems);
-	 
+	public ItemDraconiumDust() 
+	{
+		this.setUnlocalizedName("gem/draconium_dust");
+		this.setCreativeTab(EbonArtsMod.tabEbonArtsItems);
 	}
 	
 	@SideOnly(Side.CLIENT)
-    public void addInformation(ItemStack stack, EntityPlayer playerIn, List toolTip, boolean advanced) {
-		toolTip.add("Dragon blood imbues this item");
-		toolTip.add("with unique properties.");
-		
+    public void addInformation(ItemStack stack, EntityPlayer playerIn, List toolTip, boolean advanced) 
+	{
+		toolTip.add("Dragon blood is said to imbue this");
+		toolTip.add("dust with unique properties.");
 	}
+	
 }

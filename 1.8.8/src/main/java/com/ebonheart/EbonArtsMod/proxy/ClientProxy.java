@@ -5,7 +5,9 @@ import net.minecraftforge.fml.common.event.FMLPostInitializationEvent;
 import net.minecraftforge.fml.common.event.FMLPreInitializationEvent;
 
 import com.ebonheart.EbonArtsMod.client.InitBlocksEARender;
+import com.ebonheart.EbonArtsMod.client.InitEntityEARender;
 import com.ebonheart.EbonArtsMod.client.InitItemsEARender;
+import com.ebonheart.EbonArtsMod.init.InitEntityEA;
 
 public class ClientProxy extends CommonProxy {
 	
@@ -28,10 +30,12 @@ public class ClientProxy extends CommonProxy {
 		
 		InitItemsEARender.registerRenders();
 		InitBlocksEARender.registerRenders();
-		InitBlocksEARender.registerSpecialRenders();
-		//InitTileEntitiesEA.registerRenders();
-		//InitTileEntitiesEA.clientRegisterRenders();
-				
+		InitEntityEARender.registerRenders();
+		
+		//InitEntityEARender.registerParticle(null, null);
+		
+		
+		//InitBlocksEARender.registerSpecialRenders();
 	}
 	
 	@Override

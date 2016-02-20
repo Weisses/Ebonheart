@@ -19,7 +19,6 @@ public class TestTileEntity extends TileEntity implements IInventory{
 		this.inventory = new ItemStack[this.getSizeInventory()];
 	}
 
-	
 	public String getName() {
 		return this.hasCustomName() ? this.customName : "container.tile_entity";
 	}
@@ -74,12 +73,7 @@ public class TestTileEntity extends TileEntity implements IInventory{
 		}
 	}
 
-	@Override
-	public ItemStack getStackInSlotOnClosing(int index) {
-		ItemStack stack = this.getStackInSlot(index);
-		this.setInventorySlotContents(index, null);
-		return stack;
-	}
+	
 
 	@Override
 	public void setInventorySlotContents(int index, ItemStack stack) {
@@ -182,6 +176,19 @@ public class TestTileEntity extends TileEntity implements IInventory{
 		if (this.hasCustomName()) {
 			nbt.setString("CustomName", this.getCustomName());
 		}
+	}
+
+	public ItemStack removeStackFromSlot(int index) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+	
+	
+
+	public ItemStack getStackInSlotOnClosing(int index) {
+		ItemStack stack = this.getStackInSlot(index);
+		this.setInventorySlotContents(index, null);
+		return stack;
 	}
 
 	@Override

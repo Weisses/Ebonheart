@@ -5,6 +5,7 @@ import java.util.List;
 import com.ebonheart.EbonArtsMod.EbonArtsMod;
 
 import net.minecraft.entity.player.EntityPlayer;
+import net.minecraft.item.EnumRarity;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemFood;
 import net.minecraft.item.ItemStack;
@@ -15,23 +16,18 @@ import net.minecraftforge.fml.relauncher.SideOnly;
 
 public class ItemDragonFruit extends ItemFood {
 	
-	
-	
-	
-	public ItemDragonFruit(int amount, float saturation, boolean isWolfFood) {
+	public ItemDragonFruit(int amount, float saturation, boolean isWolfFood) 
+	{
 		super(amount, saturation, isWolfFood);
-		
 		this.setUnlocalizedName("dragon_fruit");
-		//this.setCreativeTab(EbonArtsMod.tabEbonArtsItems);
-			 
-			
+		this.setCreativeTab(EbonArtsMod.tabEbonArtsItems);
 	}
-
+	
 	@SideOnly(Side.CLIENT)
-    public void addInformation(ItemStack stack, EntityPlayer playerIn, List toolTip, boolean advanced) {
-		toolTip.add("An ancient fruit with the");
-		toolTip.add("power of a dragon.");
-		
+    public void addInformation(ItemStack stack, EntityPlayer playerIn, List toolTip, boolean advanced) 
+	{
+		toolTip.add(EnumChatFormatting.GOLD + "An ancient fruit that");
+		toolTip.add(EnumChatFormatting.GOLD + "makes a healthy meal.");
 	}
 	
     @SideOnly(Side.CLIENT)
@@ -39,7 +35,9 @@ public class ItemDragonFruit extends ItemFood {
     {
         return true;
     }
-
     
-
+	public EnumRarity getRarity(ItemStack stack)
+    {
+        return EnumRarity.UNCOMMON;
+    }
 }

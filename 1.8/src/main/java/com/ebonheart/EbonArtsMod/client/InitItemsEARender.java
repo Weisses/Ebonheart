@@ -11,7 +11,6 @@ public final class InitItemsEARender extends ItemsEA {
 
 	public static void registerRenders()
 	{
-		registerRender(ebon_tome);
 		
 		registerRender(draconium_dust);
 		registerRender(velious);
@@ -21,6 +20,7 @@ public final class InitItemsEARender extends ItemsEA {
 		registerRender(soularite);
 		registerRender(ebonheart);
 		
+		registerRender(empowered_blade);
 		registerRender(shimmering_disc);
 		
 		registerRender(arcanite_pickaxe);
@@ -28,7 +28,6 @@ public final class InitItemsEARender extends ItemsEA {
 		registerRender(arcanite_shovel);
 		registerRender(arcanite_hoe);
 		registerRender(arcanite_sword);
-		
 		registerRender(arcanite_helmet);
 		registerRender(arcanite_chestplate);
 		registerRender(arcanite_leggings);
@@ -39,13 +38,13 @@ public final class InitItemsEARender extends ItemsEA {
 		registerRender(katcheen_shovel);
 		registerRender(katcheen_hoe);
 		registerRender(katcheen_sword);
-		
 		registerRender(katcheen_helmet);
 		registerRender(katcheen_chestplate);
 		registerRender(katcheen_leggings);
 		registerRender(katcheen_boots);
 		
-		registerRender(empowered_sword);
+		
+		registerRender(deception);
 		registerRender(frostbite);
 		registerRender(massacre);
 		registerRender(blazefury);
@@ -54,24 +53,6 @@ public final class InitItemsEARender extends ItemsEA {
 		
 		registerRender(obsidian_shards);
 		registerRender(glowstone_shards);
-		
-		
-		
-		//registerRender(test_liquid_bucket);
-		
-		//registerRender(mystic_dust);
-		//registerRender(purified_mystic_dust);
-		//registerRender(ebon_sigil);
-		
-		//registerRender(innate_arcanite);
-		//registerRender(arcanite_shard);
-				
-		//registerRender(tier_1_catalyst);
-		//registerRender(tier_2_catalyst);
-		//registerRender(tier_3_catalyst);
-		//registerRender(tier_4_catalyst);
-		
-		
 		
 		registerRender(banana);
 		registerRender(dragon_fruit);

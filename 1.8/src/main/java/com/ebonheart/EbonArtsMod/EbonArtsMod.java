@@ -1,5 +1,6 @@
 package com.ebonheart.EbonArtsMod;
 
+import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.common.config.Configuration;
 import net.minecraftforge.fml.client.event.ConfigChangedEvent;
 import net.minecraftforge.fml.common.FMLCommonHandler;
@@ -53,7 +54,8 @@ public class EbonArtsMod {
 				LogHelper.info("Configuration changed, saved.");
 			}
 		}
-		FMLCommonHandler.instance().bus().register(instance);
+		MinecraftForge.EVENT_BUS.register(instance);
+		//FMLCommonHandler.instance().bus().register(instance);
 		EbonArtsConfiguration.syncConfig();
 		
 		this.proxy.preInit(event);

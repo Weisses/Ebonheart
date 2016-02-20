@@ -1,0 +1,11 @@
+{
+    "records.shimmering_disc": {
+        "category": "record",
+        "sounds": [
+            {
+            "name": "ea:records/shimmering_disc",
+            "stream": true
+            }
+        ]
+    }
+}

@@ -1,17 +1,19 @@
 package com.ebonheart.EbonArtsMod.init;
 
-import net.minecraft.block.Block;
-import net.minecraft.block.BlockDoor;
-import net.minecraft.block.BlockLadder;
 import net.minecraft.block.material.Material;
-import net.minecraft.client.Minecraft;
-import net.minecraft.client.resources.model.ModelBakery;
-import net.minecraft.client.resources.model.ModelResourceLocation;
-import net.minecraft.item.Item;
 import net.minecraftforge.fml.common.registry.GameRegistry;
 
 import com.ebonheart.EbonArtsMod.api.meta.ItemBlockMeta;
 import com.ebonheart.EbonArtsMod.common.blocks.basic.BlockArcanite;
+import com.ebonheart.EbonArtsMod.common.blocks.basic.BlockBrickArcanite;
+import com.ebonheart.EbonArtsMod.common.blocks.basic.BlockBrickDraconium;
+import com.ebonheart.EbonArtsMod.common.blocks.basic.BlockBrickEbonheart;
+import com.ebonheart.EbonArtsMod.common.blocks.basic.BlockBrickGlowstone;
+import com.ebonheart.EbonArtsMod.common.blocks.basic.BlockBrickKatcheen;
+import com.ebonheart.EbonArtsMod.common.blocks.basic.BlockBrickNecrocite;
+import com.ebonheart.EbonArtsMod.common.blocks.basic.BlockBrickObsidian;
+import com.ebonheart.EbonArtsMod.common.blocks.basic.BlockBrickSoularite;
+import com.ebonheart.EbonArtsMod.common.blocks.basic.BlockBrickVelious;
 import com.ebonheart.EbonArtsMod.common.blocks.basic.BlockDraconium;
 import com.ebonheart.EbonArtsMod.common.blocks.basic.BlockEbonheart;
 import com.ebonheart.EbonArtsMod.common.blocks.basic.BlockGlowstone;
@@ -28,8 +30,8 @@ import com.ebonheart.EbonArtsMod.common.blocks.basic.BlockVelious;
 import com.ebonheart.EbonArtsMod.common.blocks.basic.EABlockFence;
 import com.ebonheart.EbonArtsMod.common.blocks.basic.EABlockFenceGate;
 import com.ebonheart.EbonArtsMod.common.blocks.basic.EABlockLadder;
-import com.ebonheart.EbonArtsMod.common.blocks.basic.EABlockPillar;
 import com.ebonheart.EbonArtsMod.common.blocks.basic.EABlockMeta;
+import com.ebonheart.EbonArtsMod.common.blocks.basic.EABlockPillar;
 import com.ebonheart.EbonArtsMod.common.blocks.basic.EABlockStairs;
 import com.ebonheart.EbonArtsMod.common.blocks.basic.EABlockWall;
 import com.ebonheart.EbonArtsMod.common.blocks.basic.slabs.BlockDoubleSlabArcanite;
@@ -68,8 +70,6 @@ import com.ebonheart.EbonArtsMod.common.blocks.basic.torches.EABlockTorchNecroci
 import com.ebonheart.EbonArtsMod.common.blocks.basic.torches.EABlockTorchObsidian;
 import com.ebonheart.EbonArtsMod.common.blocks.basic.torches.EABlockTorchSoularite;
 import com.ebonheart.EbonArtsMod.common.blocks.basic.torches.EABlockTorchVelious;
-import com.ebonheart.EbonArtsMod.common.blocks.devices.BlockColorAtrium;
-import com.ebonheart.EbonArtsMod.common.blocks.devices.EABlockDoor;
 import com.ebonheart.EbonArtsMod.common.blocks.world.BlockMultiOre;
 import com.ebonheart.EbonArtsMod.common.blocks.world.BlockOreArcanite;
 import com.ebonheart.EbonArtsMod.common.blocks.world.BlockOreDraconium;
@@ -77,9 +77,7 @@ import com.ebonheart.EbonArtsMod.common.blocks.world.BlockOreKatcheen;
 import com.ebonheart.EbonArtsMod.common.blocks.world.BlockOreNecrocite;
 import com.ebonheart.EbonArtsMod.common.blocks.world.BlockOreSoularite;
 import com.ebonheart.EbonArtsMod.common.blocks.world.BlockOreVelious;
-import com.ebonheart.EbonArtsMod.common.tileentities.BlockTutorialTileEntity;
 import com.ebonheart.EbonArtsMod.references.BlocksEA;
-import com.ebonheart.EbonArtsMod.references.Reference;
 
 public class InitBlocksEA extends BlocksEA {
 	
@@ -104,15 +102,15 @@ public class InitBlocksEA extends BlocksEA {
 		glowstone_block = new BlockGlowstone("gem/glowstone/glowstone_block").setHardness(5.0F).setResistance(45.0F).setLightLevel(1.0f);;
 		ebonheart_block = new BlockEbonheart("gem/ebonheart/ebonheart_block").setHardness(5.0F).setResistance(2000.0F);
 		
-		draconium_block_brick = new BlockDraconium("gem/draconium/draconium_block_brick").setHardness(5.0F).setResistance(4.0F);
-		velious_block_brick = new BlockVelious("gem/velious/velious_block_brick").setHardness(5.0F).setResistance(15.0F);
-		arcanite_block_brick = new BlockArcanite("gem/arcanite/arcanite_block_brick").setHardness(5.0F).setResistance(30.0F);
-		katcheen_block_brick = new BlockKatcheen("gem/katcheen/katcheen_block_brick").setHardness(5.0F).setResistance(2000.0F);
-		necrocite_block_brick = new BlockNecrocite("gem/necrocite/necrocite_block_brick").setHardness(5.0F).setResistance(45.0F);
-		soularite_block_brick = new BlockSoularite("gem/soularite/soularite_block_brick").setHardness(5.0F).setResistance(45.0F);
-		obsidian_block_brick = new BlockObsidian("gem/obsidian/obsidian_block_brick").setHardness(5.0F).setResistance(2000.0F);
-		glowstone_block_brick = new BlockGlowstone("gem/glowstone/glowstone_block_brick").setHardness(5.0F).setResistance(45.0F).setLightLevel(1.0f);
-		ebonheart_block_brick = new BlockEbonheart("gem/ebonheart/ebonheart_block_brick").setHardness(5.0F).setResistance(2000.0F);
+		draconium_block_brick = new BlockBrickDraconium("gem/draconium/draconium_block_brick").setHardness(5.0F).setResistance(4.0F);
+		velious_block_brick = new BlockBrickVelious("gem/velious/velious_block_brick").setHardness(5.0F).setResistance(15.0F);
+		arcanite_block_brick = new BlockBrickArcanite("gem/arcanite/arcanite_block_brick").setHardness(5.0F).setResistance(30.0F);
+		katcheen_block_brick = new BlockBrickKatcheen("gem/katcheen/katcheen_block_brick").setHardness(5.0F).setResistance(2000.0F);
+		necrocite_block_brick = new BlockBrickNecrocite("gem/necrocite/necrocite_block_brick").setHardness(5.0F).setResistance(45.0F);
+		soularite_block_brick = new BlockBrickSoularite("gem/soularite/soularite_block_brick").setHardness(5.0F).setResistance(45.0F);
+		obsidian_block_brick = new BlockBrickObsidian("gem/obsidian/obsidian_block_brick").setHardness(5.0F).setResistance(2000.0F);
+		glowstone_block_brick = new BlockBrickGlowstone("gem/glowstone/glowstone_block_brick").setHardness(5.0F).setResistance(45.0F).setLightLevel(1.0f);
+		ebonheart_block_brick = new BlockBrickEbonheart("gem/ebonheart/ebonheart_block_brick").setHardness(5.0F).setResistance(2000.0F);
 		
 		double_draconium_slab = new BlockDoubleSlabDraconium("slab/draconium/double_draconium_slab").setHardness(5.0F).setResistance(4.0F);
 		double_velious_slab = new BlockDoubleSlabVelious("slab/velious/double_velious_slab").setHardness(5.0F).setResistance(15.0F);
