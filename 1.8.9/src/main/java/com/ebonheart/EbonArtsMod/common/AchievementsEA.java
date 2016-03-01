@@ -72,9 +72,34 @@ public class AchievementsEA {
 			event.player.triggerAchievement(InitAchievementsEA.nether_bound);
 		}
 		
+		if(event.crafting.getItem() == InitItemsEA.glowing_disc) 
+		{
+			event.player.triggerAchievement(InitAchievementsEA.glowing_disc);
+		}
+		
 		if(event.crafting.getItem() == InitItemsEA.shimmering_disc) 
 		{
 			event.player.triggerAchievement(InitAchievementsEA.shimmering_disc);
+		}
+		
+		if(event.crafting.getItem() == InitItemsEA.laminate_disc) 
+		{
+			event.player.triggerAchievement(InitAchievementsEA.laminate_disc);
+		}
+		
+		if(event.crafting.getItem() == InitItemsEA.resilient_disc) 
+		{
+			event.player.triggerAchievement(InitAchievementsEA.resilient_disc);
+		}
+		
+		if(event.crafting.getItem() == InitItemsEA.dismal_disc) 
+		{
+			event.player.triggerAchievement(InitAchievementsEA.dismal_disc);
+		}
+		
+		if(event.crafting.getItem() == InitItemsEA.ethereal_disc) 
+		{
+			event.player.triggerAchievement(InitAchievementsEA.ethereal_disc);
 		}
 		
 		if(event.crafting.getItem() == InitItemsEA.empowered_blade) 

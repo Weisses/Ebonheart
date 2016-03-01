@@ -1,7 +1,7 @@
 {
     "parent": "builtin/generated",
     "textures": {
-        "layer0": "ea:items/shimmering_disc"
+        "layer0": "ea:items/discs/laminate_disc"
     },
     "display": {
         "thirdperson": {

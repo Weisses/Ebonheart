@@ -14,9 +14,18 @@ public class InitRecipesEA {
 	
 	public static void initShapedRecipe()
 	{
-		GameRegistry.addShapedRecipe(new ItemStack(InitItemsEA.shimmering_disc, 1), new Object[]{"VVV", "VDV", "VVV", 'D', Items.diamond,'V', InitItemsEA.velious});
 		
-		GameRegistry.addShapedRecipe(new ItemStack(InitBlocksEA.mystic_block_normal), new Object[]{"CCC", "CDC", "CCC", 'D', InitItemsEA.draconium_dust, 'C', Blocks.cobblestone});
+		
+		
+		GameRegistry.addShapedRecipe(new ItemStack(InitItemsEA.glowing_disc, 1), new Object[]{"DDD", "D#D", "DDD", '#', Items.diamond,'D', InitItemsEA.draconium_dust});
+		GameRegistry.addShapedRecipe(new ItemStack(InitItemsEA.shimmering_disc, 1), new Object[]{"VVV", "V#V", "VVV", '#', Items.diamond,'V', InitItemsEA.velious});
+		GameRegistry.addShapedRecipe(new ItemStack(InitItemsEA.laminate_disc, 1), new Object[]{"AAA", "A#A", "AAA", '#', Items.diamond,'A', InitItemsEA.arcanite});
+		GameRegistry.addShapedRecipe(new ItemStack(InitItemsEA.resilient_disc, 1), new Object[]{"KKK", "K#K", "KKK", '#', Items.diamond,'K', InitItemsEA.katcheen});
+		GameRegistry.addShapedRecipe(new ItemStack(InitItemsEA.dismal_disc, 1), new Object[]{"NNN", "N#N", "NNN", '#', Items.diamond,'N', InitItemsEA.necrocite});
+		GameRegistry.addShapedRecipe(new ItemStack(InitItemsEA.ethereal_disc, 1), new Object[]{"SSS", "S#S", "SSS", '#', Items.diamond,'S', InitItemsEA.soularite});
+		
+		
+		GameRegistry.addShapedRecipe(new ItemStack(InitBlocksEA.mystic_block_normal, 8), new Object[]{"CCC", "CEC", "CCC", 'E', InitItemsEA.ebonheart, 'C', Blocks.cobblestone});
 		
 		//GameRegistry.addShapedRecipe(new ItemStack(InitTileEntitiesEA.Banana_Plant), new Object[]{"DN", "ND", 'D', InitItemsEA.draconium_dust, 'N', Items.quartz});
 		//GameRegistry.addShapedRecipe(new ItemStack(InitBlocksEA.ebonheart_block), new Object[]{"EEE", "EEE", "EEE", 'E', InitItemsEA.ebonheart});
@@ -213,14 +222,14 @@ public class InitRecipesEA {
 			GameRegistry.addShapedRecipe(new ItemStack(InitItemsEA.arcanite_sword), new Object[]{"A", "A", "S", 'A', InitItemsEA.arcanite, 'S', Items.stick});
 			GameRegistry.addShapedRecipe(new ItemStack(InitItemsEA.katcheen_sword), new Object[]{"K", "K", "S", 'K', InitItemsEA.katcheen, 'S', Items.stick});
 			
-			GameRegistry.addShapedRecipe(new ItemStack(InitItemsEA.empowered_blade), new Object[]{" E ", "E#E", " E ", '#', Items.diamond_sword, 'E', InitItemsEA.ebonheart});
+			GameRegistry.addShapedRecipe(new ItemStack(InitItemsEA.empowered_blade), new Object[]{" E#", "E#E", "#E ", '#', Items.diamond, 'E', InitItemsEA.ebonheart});
 			
-			GameRegistry.addShapedRecipe(new ItemStack(InitItemsEA.deception), new Object[]{"DDD", "D#D", "DED", 'D', InitItemsEA.draconium_dust, '#', InitItemsEA.empowered_blade, 'E', InitItemsEA.ebonheart});
-			GameRegistry.addShapedRecipe(new ItemStack(InitItemsEA.frostbite), new Object[]{"VVV", "V#V", "VEV", 'V', InitItemsEA.velious, '#', InitItemsEA.empowered_blade, 'E', InitItemsEA.ebonheart});
-			GameRegistry.addShapedRecipe(new ItemStack(InitItemsEA.massacre), new Object[]{"AAA", "A#A", "AEA", 'A', InitItemsEA.arcanite, '#', InitItemsEA.empowered_blade, 'E', InitItemsEA.ebonheart});
-			GameRegistry.addShapedRecipe(new ItemStack(InitItemsEA.blazefury), new Object[]{"KKK", "K#K", "KEK", 'K', InitItemsEA.katcheen, '#', InitItemsEA.empowered_blade, 'E', InitItemsEA.ebonheart});
-			GameRegistry.addShapedRecipe(new ItemStack(InitItemsEA.despair), new Object[]{"NNN", "N#N", "NEN", 'N', InitItemsEA.necrocite, '#', InitItemsEA.empowered_blade, 'E', InitItemsEA.ebonheart});
-			GameRegistry.addShapedRecipe(new ItemStack(InitItemsEA.souleater), new Object[]{"SSS", "S#S", "SES", 'S', InitItemsEA.soularite, '#', InitItemsEA.empowered_blade, 'E', InitItemsEA.ebonheart});
+			GameRegistry.addShapedRecipe(new ItemStack(InitItemsEA.deception), new Object[]{"DDD", "D#D", "DED", 'D', InitItemsEA.draconium_dust, '#', InitItemsEA.empowered_blade, 'E', Items.stick});
+			GameRegistry.addShapedRecipe(new ItemStack(InitItemsEA.frostbite), new Object[]{"VVV", "V#V", "VEV", 'V', InitItemsEA.velious, '#', InitItemsEA.empowered_blade, 'E', Items.stick});
+			GameRegistry.addShapedRecipe(new ItemStack(InitItemsEA.massacre), new Object[]{"AAA", "A#A", "AEA", 'A', InitItemsEA.arcanite, '#', InitItemsEA.empowered_blade, 'E', Items.stick});
+			GameRegistry.addShapedRecipe(new ItemStack(InitItemsEA.blazefury), new Object[]{"KKK", "K#K", "KEK", 'K', InitItemsEA.katcheen, '#', InitItemsEA.empowered_blade, 'E', Items.stick});
+			GameRegistry.addShapedRecipe(new ItemStack(InitItemsEA.despair), new Object[]{"NNN", "N#N", "NEN", 'N', InitItemsEA.necrocite, '#', InitItemsEA.empowered_blade, 'E', Items.stick});
+			GameRegistry.addShapedRecipe(new ItemStack(InitItemsEA.souleater), new Object[]{"SSS", "S#S", "SES", 'S', InitItemsEA.soularite, '#', InitItemsEA.empowered_blade, 'E', Items.stick});
 		}
 		else
 		{
@@ -250,7 +259,7 @@ public class InitRecipesEA {
 		
 		if(!EbonArtsConfiguration.musicRecipe)
 		{
-			
+			GameRegistry.addShapedRecipe(new ItemStack(InitItemsEA.mirroring_disc, 1), new Object[]{"GGG", "D#D", "GGG", '#', Items.diamond,'D', InitItemsEA.draconium_dust,'G', Blocks.glass});
 		}
 		else
 		{
@@ -275,7 +284,25 @@ public class InitRecipesEA {
 	
 	public static void initShapelessRecipe()
 	{
+		//conversion back from dye block to normal block
+		GameRegistry.addShapelessRecipe(new ItemStack(InitBlocksEA.mystic_block_normal), new ItemStack(InitBlocksEA.mystic_block, 1, 0));
+		GameRegistry.addShapelessRecipe(new ItemStack(InitBlocksEA.mystic_block_normal), new ItemStack(InitBlocksEA.mystic_block, 1, 1));
+		GameRegistry.addShapelessRecipe(new ItemStack(InitBlocksEA.mystic_block_normal), new ItemStack(InitBlocksEA.mystic_block, 1, 2));
+		GameRegistry.addShapelessRecipe(new ItemStack(InitBlocksEA.mystic_block_normal), new ItemStack(InitBlocksEA.mystic_block, 1, 3));
+		GameRegistry.addShapelessRecipe(new ItemStack(InitBlocksEA.mystic_block_normal), new ItemStack(InitBlocksEA.mystic_block, 1, 4));
+		GameRegistry.addShapelessRecipe(new ItemStack(InitBlocksEA.mystic_block_normal), new ItemStack(InitBlocksEA.mystic_block, 1, 5));
+		GameRegistry.addShapelessRecipe(new ItemStack(InitBlocksEA.mystic_block_normal), new ItemStack(InitBlocksEA.mystic_block, 1, 6));
+		GameRegistry.addShapelessRecipe(new ItemStack(InitBlocksEA.mystic_block_normal), new ItemStack(InitBlocksEA.mystic_block, 1, 7));
+		GameRegistry.addShapelessRecipe(new ItemStack(InitBlocksEA.mystic_block_normal), new ItemStack(InitBlocksEA.mystic_block, 1, 8));
+		GameRegistry.addShapelessRecipe(new ItemStack(InitBlocksEA.mystic_block_normal), new ItemStack(InitBlocksEA.mystic_block, 1, 9));
+		GameRegistry.addShapelessRecipe(new ItemStack(InitBlocksEA.mystic_block_normal), new ItemStack(InitBlocksEA.mystic_block, 1, 10));
+		GameRegistry.addShapelessRecipe(new ItemStack(InitBlocksEA.mystic_block_normal), new ItemStack(InitBlocksEA.mystic_block, 1, 11));
+		GameRegistry.addShapelessRecipe(new ItemStack(InitBlocksEA.mystic_block_normal), new ItemStack(InitBlocksEA.mystic_block, 1, 12));
+		GameRegistry.addShapelessRecipe(new ItemStack(InitBlocksEA.mystic_block_normal), new ItemStack(InitBlocksEA.mystic_block, 1, 13));
+		GameRegistry.addShapelessRecipe(new ItemStack(InitBlocksEA.mystic_block_normal), new ItemStack(InitBlocksEA.mystic_block, 1, 14));
+		GameRegistry.addShapelessRecipe(new ItemStack(InitBlocksEA.mystic_block_normal), new ItemStack(InitBlocksEA.mystic_block, 1, 15));
 		
+		//Recipes that dye the basic block into any color
 		GameRegistry.addShapelessRecipe(new ItemStack(InitBlocksEA.mystic_block, 1, 0), InitBlocksEA.mystic_block_normal, new ItemStack(Items.dye, 1, 15));
 		GameRegistry.addShapelessRecipe(new ItemStack(InitBlocksEA.mystic_block, 1, 1), InitBlocksEA.mystic_block_normal, new ItemStack(Items.dye, 1, 14));
 		GameRegistry.addShapelessRecipe(new ItemStack(InitBlocksEA.mystic_block, 1, 2), InitBlocksEA.mystic_block_normal, new ItemStack(Items.dye, 1, 13));
@@ -298,18 +325,18 @@ public class InitRecipesEA {
 		if(!EbonArtsConfiguration.musicRecipe)
 		{
 			
-			GameRegistry.addShapelessRecipe(new ItemStack(Items.record_13), InitItemsEA.shimmering_disc, new ItemStack(Items.dye, 1, 11));
-			GameRegistry.addShapelessRecipe(new ItemStack(Items.record_cat), InitItemsEA.shimmering_disc, new ItemStack(Items.dye, 1, 2));
-			GameRegistry.addShapelessRecipe(new ItemStack(Items.record_blocks), InitItemsEA.shimmering_disc, new ItemStack(Items.dye, 1, 14));
-			GameRegistry.addShapelessRecipe(new ItemStack(Items.record_chirp), InitItemsEA.shimmering_disc, new ItemStack(Items.dye, 1, 1));
-			GameRegistry.addShapelessRecipe(new ItemStack(Items.record_far), InitItemsEA.shimmering_disc, new ItemStack(Items.dye, 1, 10));
-			GameRegistry.addShapelessRecipe(new ItemStack(Items.record_mall), InitItemsEA.shimmering_disc, new ItemStack(Items.dye, 1, 4));
-			GameRegistry.addShapelessRecipe(new ItemStack(Items.record_mellohi), InitItemsEA.shimmering_disc, new ItemStack(Items.dye, 1, 5));
-			GameRegistry.addShapelessRecipe(new ItemStack(Items.record_stal), InitItemsEA.shimmering_disc, new ItemStack(Items.dye, 1, 0));
-			GameRegistry.addShapelessRecipe(new ItemStack(Items.record_strad), InitItemsEA.shimmering_disc, new ItemStack(Items.dye, 1, 15));
-			GameRegistry.addShapelessRecipe(new ItemStack(Items.record_ward), InitItemsEA.shimmering_disc, new ItemStack(Items.dye, 1, 6));
-			GameRegistry.addShapelessRecipe(new ItemStack(Items.record_11), InitItemsEA.shimmering_disc, new ItemStack(Items.dye, 1, 8));
-			GameRegistry.addShapelessRecipe(new ItemStack(Items.record_wait), InitItemsEA.shimmering_disc, new ItemStack(Items.dye, 1, 12));
+			GameRegistry.addShapelessRecipe(new ItemStack(Items.record_13), InitItemsEA.mirroring_disc, new ItemStack(Items.dye, 1, 11));
+			GameRegistry.addShapelessRecipe(new ItemStack(Items.record_cat), InitItemsEA.mirroring_disc, new ItemStack(Items.dye, 1, 2));
+			GameRegistry.addShapelessRecipe(new ItemStack(Items.record_blocks), InitItemsEA.mirroring_disc, new ItemStack(Items.dye, 1, 14));
+			GameRegistry.addShapelessRecipe(new ItemStack(Items.record_chirp), InitItemsEA.mirroring_disc, new ItemStack(Items.dye, 1, 1));
+			GameRegistry.addShapelessRecipe(new ItemStack(Items.record_far), InitItemsEA.mirroring_disc, new ItemStack(Items.dye, 1, 10));
+			GameRegistry.addShapelessRecipe(new ItemStack(Items.record_mall), InitItemsEA.mirroring_disc, new ItemStack(Items.dye, 1, 4));
+			GameRegistry.addShapelessRecipe(new ItemStack(Items.record_mellohi), InitItemsEA.mirroring_disc, new ItemStack(Items.dye, 1, 5));
+			GameRegistry.addShapelessRecipe(new ItemStack(Items.record_stal), InitItemsEA.mirroring_disc, new ItemStack(Items.dye, 1, 0));
+			GameRegistry.addShapelessRecipe(new ItemStack(Items.record_strad), InitItemsEA.mirroring_disc, new ItemStack(Items.dye, 1, 15));
+			GameRegistry.addShapelessRecipe(new ItemStack(Items.record_ward), InitItemsEA.mirroring_disc, new ItemStack(Items.dye, 1, 6));
+			GameRegistry.addShapelessRecipe(new ItemStack(Items.record_11), InitItemsEA.mirroring_disc, new ItemStack(Items.dye, 1, 8));
+			GameRegistry.addShapelessRecipe(new ItemStack(Items.record_wait), InitItemsEA.mirroring_disc, new ItemStack(Items.dye, 1, 12));
 			
 		}
 		else

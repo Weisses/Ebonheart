@@ -57,12 +57,12 @@ public class InitEntityEA extends ItemsEA {
 	
 	public static void register()
 	{
-		//int modEntityID = 0;
-		//EntityRegistry.registerModEntity(EntityEbonheart.class, "Ebonheart", ++modEntityID, this, 64, 10, true);
+		int modEntityID = 0;
+		EntityRegistry.registerModEntity(EntityEbonheart.class, "Ebonheart", ++modEntityID, Reference.MOD_ID, 64, 10, true);
+		
+		
 		
 		//EntityRegistry.registerModEntity(EntityEbonheart.class, "Ebonheart", EntityRegistry.findGlobalUniqueEntityId(), Reference.MOD_ID, 64, 10, true);
-		
-		EntityRegistry.registerModEntity(EntityEbonheart.class, "Ebonheart", EntityRegistry.findGlobalUniqueEntityId(), Reference.MOD_ID, 64, 10, true);
 		
 	}
 }

@@ -1,9 +1,63 @@
 {
+    "records.glowing_disc": {
+        "category": "record",
+        "sounds": [
+            {
+            "name": "ea:records/glowing_disc",
+            "stream": true
+            }
+        ]
+    },
     "records.shimmering_disc": {
         "category": "record",
         "sounds": [
             {
             "name": "ea:records/shimmering_disc",
+            "stream": true
+            }
+        ]
+    },
+    "records.laminate_disc": {
+        "category": "record",
+        "sounds": [
+            {
+            "name": "ea:records/laminate_disc",
+            "stream": true
+            }
+        ]
+    },
+    "records.resilient_disc": {
+        "category": "record",
+        "sounds": [
+            {
+            "name": "ea:records/resilient_disc",
+            "stream": true
+            }
+        ]
+    },
+    "records.dismal_disc": {
+        "category": "record",
+        "sounds": [
+            {
+            "name": "ea:records/dismal_disc",
+            "stream": true
+            }
+        ]
+    },
+    "records.ethereal_disc": {
+        "category": "record",
+        "sounds": [
+            {
+            "name": "ea:records/ethereal_disc",
+            "stream": true
+            }
+        ]
+    },
+    "records.chrono_disc": {
+        "category": "record",
+        "sounds": [
+            {
+            "name": "ea:records/chrono_disc",
             "stream": true
             }
         ]
