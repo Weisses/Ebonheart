@@ -14,6 +14,7 @@ import com.ebonheart.EbonArtsMod.common.items.resources.ItemArcanite;
 import com.ebonheart.EbonArtsMod.common.items.resources.ItemDraconiumDust;
 import com.ebonheart.EbonArtsMod.common.items.resources.ItemDragonFruit;
 import com.ebonheart.EbonArtsMod.common.items.resources.ItemEbonheart;
+import com.ebonheart.EbonArtsMod.common.items.resources.ItemEnchantedEbonheart;
 import com.ebonheart.EbonArtsMod.common.items.resources.ItemEmpoweredBlade;
 import com.ebonheart.EbonArtsMod.common.items.resources.ItemGlowstoneShard;
 import com.ebonheart.EbonArtsMod.common.items.resources.ItemKatcheen;
@@ -61,11 +62,11 @@ public class InitItemsEA extends ItemsEA {
 		katcheen = new ItemKatcheen();
 		necrocite = new ItemNecrocite();
 		soularite = new ItemSoularite();
-		
+		ebonheart = new ItemEbonheart();
 		obsidian_shards = new ItemObsidianShard();
 		glowstone_shards = new ItemGlowstoneShard();
 		
-		ebonheart = new ItemEbonheart();
+		
 		
 		
 		
@@ -82,6 +83,8 @@ public class InitItemsEA extends ItemsEA {
 		mirroring_disc = new ItemMirroringDisc();
 		
 		empowered_blade = new ItemEmpoweredBlade("tool/empowered_blade");
+		
+		enchanted_ebonheart = new ItemEnchantedEbonheart();
 		
 		dragon_fruit = (ItemFood) new ItemDragonFruit(6, 1.0F, true);
 		
@@ -131,11 +134,11 @@ public class InitItemsEA extends ItemsEA {
 		GameRegistry.registerItem(katcheen, katcheen.getUnlocalizedName().substring(5));
 		GameRegistry.registerItem(necrocite, necrocite.getUnlocalizedName().substring(5));
 		GameRegistry.registerItem(soularite, soularite.getUnlocalizedName().substring(5));
+		GameRegistry.registerItem(ebonheart, ebonheart.getUnlocalizedName().substring(5));
 		
 		GameRegistry.registerItem(obsidian_shards, obsidian_shards.getUnlocalizedName().substring(5));
 		GameRegistry.registerItem(glowstone_shards, glowstone_shards.getUnlocalizedName().substring(5));
 		
-		GameRegistry.registerItem(ebonheart, ebonheart.getUnlocalizedName().substring(5));
 		
 		
 		
@@ -151,8 +154,8 @@ public class InitItemsEA extends ItemsEA {
 		GameRegistry.registerItem(mirroring_disc, mirroring_disc.getUnlocalizedName().substring(5));
 		
 		GameRegistry.registerItem(empowered_blade, empowered_blade.getUnlocalizedName().substring(5));
+		GameRegistry.registerItem(enchanted_ebonheart, enchanted_ebonheart.getUnlocalizedName().substring(5));
 		
-		GameRegistry.registerItem(dragon_fruit, dragon_fruit.getUnlocalizedName().substring(5));
 		
 		
 		
@@ -182,6 +185,8 @@ public class InitItemsEA extends ItemsEA {
 		GameRegistry.registerItem(blazefury, blazefury.getUnlocalizedName().substring(5));
 		GameRegistry.registerItem(despair, despair.getUnlocalizedName().substring(5));
 		GameRegistry.registerItem(souleater, souleater.getUnlocalizedName().substring(5));
+		
+		GameRegistry.registerItem(dragon_fruit, dragon_fruit.getUnlocalizedName().substring(5));
 		
 		
 		//GameRegistry.registerItem(omniplex, omniplex.getUnlocalizedName().substring(5));

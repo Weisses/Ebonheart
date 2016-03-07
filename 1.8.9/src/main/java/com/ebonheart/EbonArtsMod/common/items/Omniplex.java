@@ -3,7 +3,7 @@ package com.ebonheart.EbonArtsMod.common.items;
 import java.util.List;
 
 import com.ebonheart.EbonArtsMod.EbonArtsMod;
-import com.ebonheart.EbonArtsMod.common.entity.EntityEbonheart;
+import com.ebonheart.EbonArtsMod.common.entity.EntityEnchantedEbonheart;
 
 import net.minecraft.block.Block;
 import net.minecraft.creativetab.CreativeTabs;

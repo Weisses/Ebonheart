@@ -15,14 +15,14 @@ import net.minecraftforge.fml.common.registry.GameRegistry;
 
 import com.ebonheart.EbonArtsMod.api.EntityParticleEA;
 import com.ebonheart.EbonArtsMod.client.entity.EntityCandleFX;
-import com.ebonheart.EbonArtsMod.client.render.projectile.RenderEbonheart;
-import com.ebonheart.EbonArtsMod.common.entity.EntityEbonheart;
+import com.ebonheart.EbonArtsMod.client.render.projectile.RenderEnchantedEbonheart;
+import com.ebonheart.EbonArtsMod.common.entity.EntityEnchantedEbonheart;
 import com.ebonheart.EbonArtsMod.common.items.ItemMusicDiscEA;
 import com.ebonheart.EbonArtsMod.common.items.armor.ItemArcaniteArmor;
 import com.ebonheart.EbonArtsMod.common.items.resources.ItemArcanite;
 import com.ebonheart.EbonArtsMod.common.items.resources.ItemDraconiumDust;
 import com.ebonheart.EbonArtsMod.common.items.resources.ItemDragonFruit;
-import com.ebonheart.EbonArtsMod.common.items.resources.ItemEbonheart;
+import com.ebonheart.EbonArtsMod.common.items.resources.ItemEnchantedEbonheart;
 import com.ebonheart.EbonArtsMod.common.items.resources.ItemEmpoweredBlade;
 import com.ebonheart.EbonArtsMod.common.items.resources.ItemGlowstoneShard;
 import com.ebonheart.EbonArtsMod.common.items.resources.ItemKatcheen;
@@ -58,7 +58,7 @@ public class InitEntityEA extends ItemsEA {
 	public static void register()
 	{
 		int modEntityID = 0;
-		EntityRegistry.registerModEntity(EntityEbonheart.class, "Ebonheart", ++modEntityID, Reference.MOD_ID, 64, 10, true);
+		EntityRegistry.registerModEntity(EntityEnchantedEbonheart.class, "Ebonheart", ++modEntityID, Reference.MOD_ID, 64, 10, true);
 		
 		
 		

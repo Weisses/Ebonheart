@@ -16,6 +16,8 @@ public class ItemsEA {
 	public static Item soularite;
 	public static Item ebonheart;
 	
+	public static Item enchanted_ebonheart;
+	
 	public static Item obsidian_shards;
 	public static Item glowstone_shards;
 	

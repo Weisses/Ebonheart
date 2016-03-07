@@ -20,6 +20,8 @@ public final class InitItemsEARender extends ItemsEA {
 		registerRender(soularite);
 		registerRender(ebonheart);
 		
+		registerRender(enchanted_ebonheart);
+		
 		registerRender(empowered_blade);
 		
 		registerRender(glowing_disc);
