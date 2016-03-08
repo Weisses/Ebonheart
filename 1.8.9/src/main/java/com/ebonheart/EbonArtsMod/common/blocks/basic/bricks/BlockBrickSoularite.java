@@ -1,4 +1,4 @@
-package com.ebonheart.EbonArtsMod.common.blocks.basic;
+package com.ebonheart.EbonArtsMod.common.blocks.basic.bricks;
 
 import com.ebonheart.EbonArtsMod.EbonArtsMod;
 
@@ -10,9 +10,9 @@ import net.minecraftforge.fml.relauncher.Side;
 import net.minecraftforge.fml.relauncher.SideOnly;
 
 
-public class BlockBrickNecrocite extends Block {
+public class BlockBrickSoularite extends Block {
 
-	public BlockBrickNecrocite(String unlocalizedName) 
+	public BlockBrickSoularite(String unlocalizedName) 
 	{
 		super(Material.rock);
 		this.setUnlocalizedName(unlocalizedName);

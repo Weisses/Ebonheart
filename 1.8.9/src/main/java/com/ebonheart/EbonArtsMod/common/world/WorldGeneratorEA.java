@@ -23,7 +23,7 @@ public class WorldGeneratorEA implements IWorldGenerator
 	private WorldGenerator gen_ebon_ore; //Generates Ebon Ore (used in Overworld)
 	private WorldGenerator gen_necrocite_ore; //Generates Necrocite Ore (used in Nether)
 	private WorldGenerator gen_soularite_ore; //Generates Soularite Ore (used in Nether)
-	private WorldGenerator gen_ebonheart_ore; //Generates Soularite Ore (used in Nether)
+	private WorldGenerator gen_ebonheart_ore; //Generates Ebonheart Ore (used in Nether)
 	private WorldGenerator gen_ebon_ore_nether; //Generates Ebon Ore (used in Nether)
 	
 	//private WorldGenerator gen_multi_ore; //Generates Multi Ore (used in Overworld)
@@ -38,7 +38,7 @@ public class WorldGeneratorEA implements IWorldGenerator
 		this.gen_katcheen_ore = new WorldGenMinable(InitBlocksEA.katcheen_ore.getDefaultState(), 4, BlockHelper.forBlock(Blocks.stone));
 		this.gen_necrocite_ore = new WorldGenMinable(InitBlocksEA.necrocite_ore.getDefaultState(), 3, BlockHelper.forBlock(Blocks.netherrack));
 		this.gen_soularite_ore = new WorldGenMinable(InitBlocksEA.soularite_ore.getDefaultState(), 3, BlockHelper.forBlock(Blocks.netherrack));
-		this.gen_ebonheart_ore = new WorldGenMinable(InitBlocksEA.ebonheart_ore.getDefaultState(), 2, BlockHelper.forBlock(Blocks.netherrack));
+		this.gen_ebonheart_ore = new WorldGenMinable(InitBlocksEA.ebonheart_ore.getDefaultState(), 3, BlockHelper.forBlock(Blocks.netherrack));
 		
 		//for single ore gens
 		this.gen_ebon_ore = new WorldGenSingleMinable(InitBlocksEA.ebon_ore.getDefaultState(), BlockHelper.forBlock(Blocks.netherrack));
@@ -70,7 +70,7 @@ public class WorldGeneratorEA implements IWorldGenerator
 			//for multi ore gen
 			this.runGenerator(this.gen_necrocite_ore, world, random, chunkX, chunkZ, 32, 15, 125);
 			this.runGenerator(this.gen_soularite_ore, world, random, chunkX, chunkZ, 32, 15, 125);
-			this.runGenerator(this.gen_ebonheart_ore, world, random, chunkX, chunkZ, 24, 15, 125);
+			this.runGenerator(this.gen_ebonheart_ore, world, random, chunkX, chunkZ, 32, 15, 125);
 			
 			//for single ore gen
 			this.runGenerator(this.gen_ebon_ore_nether, world, random, chunkX, chunkZ, 8, 15, 125);

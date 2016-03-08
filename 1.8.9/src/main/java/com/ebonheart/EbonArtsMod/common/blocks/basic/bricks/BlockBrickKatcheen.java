@@ -1,4 +1,4 @@
-package com.ebonheart.EbonArtsMod.common.blocks.basic;
+package com.ebonheart.EbonArtsMod.common.blocks.basic.bricks;
 
 import com.ebonheart.EbonArtsMod.EbonArtsMod;
 
@@ -10,9 +10,9 @@ import net.minecraftforge.fml.relauncher.Side;
 import net.minecraftforge.fml.relauncher.SideOnly;
 
 
-public class BlockBrickDraconium extends Block {
+public class BlockBrickKatcheen extends Block {
 
-	public BlockBrickDraconium(String unlocalizedName) 
+	public BlockBrickKatcheen(String unlocalizedName) 
 	{
 		super(Material.rock);
 		this.setUnlocalizedName(unlocalizedName);

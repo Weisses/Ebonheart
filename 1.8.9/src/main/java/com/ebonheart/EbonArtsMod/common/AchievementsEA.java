@@ -67,6 +67,7 @@ public class AchievementsEA {
 		{
 			event.player.triggerAchievement(InitAchievementsEA.nether_bound);
 		}
+		
 		if(event.crafting.getItem() == InitItemsEA.glowstone_shards) 
 		{
 			event.player.triggerAchievement(InitAchievementsEA.nether_bound);
@@ -135,6 +136,11 @@ public class AchievementsEA {
 		if(event.crafting.getItem() == InitItemsEA.souleater) 
 		{
 			event.player.triggerAchievement(InitAchievementsEA.souleater);
+		}
+		
+		if(event.crafting.getItem() == InitItemsEA.enchanted_ebonheart) 
+		{
+			event.player.triggerAchievement(InitAchievementsEA.enchanted_ebonheart);
 		}
 	}
 	

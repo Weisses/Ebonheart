@@ -15,7 +15,7 @@ public class InitRecipesEA {
 	public static void initShapedRecipe()
 	{
 		
-		
+		GameRegistry.addShapedRecipe(new ItemStack(InitItemsEA.enchanted_ebonheart, 1), new Object[]{"EGE", "G#G", "EGE", 'G', Items.glowstone_dust, 'E', Items.ender_pearl, '#', InitItemsEA.ebonheart});
 		
 		GameRegistry.addShapedRecipe(new ItemStack(InitItemsEA.glowing_disc, 1), new Object[]{"DDD", "D#D", "DDD", '#', Items.diamond,'D', InitItemsEA.draconium_dust});
 		GameRegistry.addShapedRecipe(new ItemStack(InitItemsEA.shimmering_disc, 1), new Object[]{"VVV", "V#V", "VVV", '#', Items.diamond,'V', InitItemsEA.velious});
@@ -224,12 +224,12 @@ public class InitRecipesEA {
 			
 			GameRegistry.addShapedRecipe(new ItemStack(InitItemsEA.empowered_blade), new Object[]{" E#", "E#E", "#E ", '#', Items.diamond, 'E', InitItemsEA.ebonheart});
 			
-			GameRegistry.addShapedRecipe(new ItemStack(InitItemsEA.deception), new Object[]{"DDD", "D#D", "DED", 'D', InitItemsEA.draconium_dust, '#', InitItemsEA.empowered_blade, 'E', Items.iron_ingot});
-			GameRegistry.addShapedRecipe(new ItemStack(InitItemsEA.frostbite), new Object[]{"VVV", "V#V", "VEV", 'V', InitItemsEA.velious, '#', InitItemsEA.empowered_blade, 'E', Items.iron_ingot});
-			GameRegistry.addShapedRecipe(new ItemStack(InitItemsEA.massacre), new Object[]{"AAA", "A#A", "AEA", 'A', InitItemsEA.arcanite, '#', InitItemsEA.empowered_blade, 'E', Items.iron_ingot});
-			GameRegistry.addShapedRecipe(new ItemStack(InitItemsEA.blazefury), new Object[]{"KKK", "K#K", "KEK", 'K', InitItemsEA.katcheen, '#', InitItemsEA.empowered_blade, 'E', Items.iron_ingot});
-			GameRegistry.addShapedRecipe(new ItemStack(InitItemsEA.despair), new Object[]{"NNN", "N#N", "NEN", 'N', InitItemsEA.necrocite, '#', InitItemsEA.empowered_blade, 'E', Items.iron_ingot});
-			GameRegistry.addShapedRecipe(new ItemStack(InitItemsEA.souleater), new Object[]{"SSS", "S#S", "SES", 'S', InitItemsEA.soularite, '#', InitItemsEA.empowered_blade, 'E', Items.iron_ingot});
+			GameRegistry.addShapedRecipe(new ItemStack(InitItemsEA.deception), new Object[]{"DED", "D#D", "DID", 'D', InitItemsEA.draconium_dust, 'E', InitItemsEA.empowered_blade, '#', InitItemsEA.enchanted_ebonheart, 'I', Items.iron_ingot});
+			GameRegistry.addShapedRecipe(new ItemStack(InitItemsEA.frostbite), new Object[]{"VEV", "V#V", "VIV", 'V', InitItemsEA.velious, 'E', InitItemsEA.empowered_blade, '#', InitItemsEA.enchanted_ebonheart, 'I', Items.iron_ingot});
+			GameRegistry.addShapedRecipe(new ItemStack(InitItemsEA.massacre), new Object[]{"AEA", "A#A", "AIA", 'A', InitItemsEA.arcanite, 'E', InitItemsEA.empowered_blade, '#', InitItemsEA.enchanted_ebonheart, 'I', Items.iron_ingot});
+			GameRegistry.addShapedRecipe(new ItemStack(InitItemsEA.blazefury), new Object[]{"KEK", "K#K", "KIK", 'K', InitItemsEA.katcheen, 'E', InitItemsEA.empowered_blade, '#', InitItemsEA.enchanted_ebonheart, 'I', Items.iron_ingot});
+			GameRegistry.addShapedRecipe(new ItemStack(InitItemsEA.despair), new Object[]{"NEN", "N#N", "NIN", 'N', InitItemsEA.necrocite, 'E', InitItemsEA.empowered_blade, '#', InitItemsEA.enchanted_ebonheart, 'I', Items.iron_ingot});
+			GameRegistry.addShapedRecipe(new ItemStack(InitItemsEA.souleater), new Object[]{"SES", "S#S", "SIS", 'S', InitItemsEA.soularite, 'E', InitItemsEA.empowered_blade, '#', InitItemsEA.enchanted_ebonheart, 'I', Items.iron_ingot});
 		}
 		else
 		{

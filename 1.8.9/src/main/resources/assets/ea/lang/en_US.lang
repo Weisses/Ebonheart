@@ -254,22 +254,25 @@ achievement.ea:empowered_blade=One step closer!
 achievement.ea:empowered_blade.desc=Craft an Empowered Blade.
 
 achievement.ea:deception=Illusion of truth!
-achievement.ea:deception.desc=Craft the ultimate weapon, Deception.
+achievement.ea:deception.desc=Craft the legendary weapon, Deception.
 
 achievement.ea:frostbite=Icebound doom!
-achievement.ea:frostbite.desc=Craft the ultimate weapon, Frostbite.
+achievement.ea:frostbite.desc=Craft the legendary weapon, Frostbite.
 
 achievement.ea:massacre=Leave no survivors!
-achievement.ea:massacre.desc=Craft the ultimate weapon, Massacre.
+achievement.ea:massacre.desc=Craft the legendary weapon, Massacre.
 
 achievement.ea:blazefury=Let the world burn!
-achievement.ea:blazefury.desc=Craft the ultimate weapon, Blazefury.
+achievement.ea:blazefury.desc=Craft the legendary weapon, Blazefury.
 
 achievement.ea:despair=Abandon all hope!
-achievement.ea:despair.desc=Craft the ultimate weapon, Despair.
+achievement.ea:despair.desc=Craft the legendary weapon, Despair.
 
 achievement.ea:souleater=From death to life!
-achievement.ea:souleater.desc=Craft the ultimate weapon, Souleater.
+achievement.ea:souleater.desc=Craft the legendary weapon, Souleater.
+
+achievement.ea:enchanted_ebonheart=Powering up!
+achievement.ea:enchanted_ebonheart.desc=Craft an Enchanted Ebonheart.
 
 achievement.ea:nether_bound=Nether bound!
 achievement.ea:nether_bound.desc=Craft either Obsidian or Glowstone Shards.
@@ -283,7 +286,7 @@ item.disc/shimmering_disc.desc=Lost Woods
 item.disc/laminate_disc.desc=Lost2 Woods
 item.disc/resilient_disc.desc=Lost3 Woods
 item.disc/dismal_disc.desc=Lost4 Woods
-item.disc/etherial_disc.desc=Lost5 Woods
+item.disc/ethereal_disc.desc=Lost5 Woods
 item.disc/chrono_disc.desc=Lost6 Woods
 item.disc/mirror_disc.desc=Lost7 Woods
 

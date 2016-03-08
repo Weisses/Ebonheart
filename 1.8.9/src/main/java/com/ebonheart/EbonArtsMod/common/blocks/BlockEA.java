@@ -1,5 +1,7 @@
 package com.ebonheart.EbonArtsMod.common.blocks;
 
+import com.ebonheart.EbonArtsMod.api.helper.LogHelper;
+
 import net.minecraft.block.Block;
 import net.minecraft.block.material.Material;
 import net.minecraft.block.properties.IProperty;
@@ -36,7 +38,10 @@ public class BlockEA extends Block {
 	  {
 	    String unlocalizedName = state.toString().toLowerCase();
 	    		//.func_177230_c().func_149739_a();
+	    LogHelper.info(unlocalizedName.substring(unlocalizedName.indexOf(".") + 1));
 	    return unlocalizedName.substring(unlocalizedName.indexOf(".") + 1);
+	    
+	    
 	  }
 	  
 	  public boolean defineVariantsForItemBlock()

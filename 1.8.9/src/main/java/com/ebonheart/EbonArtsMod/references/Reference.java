@@ -28,6 +28,7 @@ public class Reference {
 	public static final String ETHEREAL_DISC = "ethereal_disc";
 	
 	public static final String EBONHEART = "ebonheart";
+	public static final String ENCHANTED_EBONHEART = "enchanted_ebonheart";
 	public static final String EMPOWERED_BLADE = "empowered_blade";
 	public static final String DECEPTION = "deception";
 	public static final String FROSTBITE = "frostbite";
