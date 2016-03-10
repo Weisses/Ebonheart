@@ -38,8 +38,10 @@ public class BlockEA extends Block {
 	  {
 	    String unlocalizedName = state.toString().toLowerCase();
 	    		//.func_177230_c().func_149739_a();
+	    System.out.println(unlocalizedName.indexOf(".") + 1);
 	    LogHelper.info(unlocalizedName.substring(unlocalizedName.indexOf(".") + 1));
 	    return unlocalizedName.substring(unlocalizedName.indexOf(".") + 1);
+	    
 	    
 	    
 	  }

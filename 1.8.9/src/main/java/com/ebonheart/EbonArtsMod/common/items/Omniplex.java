@@ -3,12 +3,15 @@ package com.ebonheart.EbonArtsMod.common.items;
 import java.util.List;
 
 import com.ebonheart.EbonArtsMod.EbonArtsMod;
+import com.ebonheart.EbonArtsMod.api.helper.LogHelper;
 import com.ebonheart.EbonArtsMod.common.entity.EntityEnchantedEbonheart;
 
 import net.minecraft.block.Block;
 import net.minecraft.creativetab.CreativeTabs;
 import net.minecraft.entity.Entity;
 import net.minecraft.entity.player.EntityPlayer;
+import net.minecraft.event.ClickEvent;
+import net.minecraft.event.ClickEvent.Action;
 import net.minecraft.init.Blocks;
 import net.minecraft.init.Items;
 import net.minecraft.item.Item;
@@ -31,13 +34,12 @@ import net.minecraftforge.fml.relauncher.SideOnly;
 public class Omniplex extends Item {
 	
 	
-	//public static int NOTE_EMPTY = -1;
 	private static final String KEY_SIGN0 = "sign_0";
 	private static final String KEY_SIGN1 = "sign_1";
 	private static final String KEY_SIGN2 = "sign_2";
 	private static final String KEY_SIGN3 = "sign_3";
-	//private static final String KEY_NOTE = "note";
-	private static TileEntitySign sign1;// = "sign";
+	
+	//private static TileEntitySign sign1;// = "sign";
 	
 	public Omniplex()
 	{  
@@ -47,72 +49,167 @@ public class Omniplex extends Item {
 	}
 	
 	
-	
-	public void testea(TileEntitySign sign)
-	{
-		
-		//sign1 = new sign;
-		//TileEntitySign sign1 = sign;
-	}
-	
+	 /**
+     * Called when a Block is right-clicked with this Item
+     */
 	@Override
-	public boolean onItemUse(ItemStack stack, EntityPlayer playerIn, World worldIn, BlockPos pos, EnumFacing side, float hitX, float hitY, float hitZ
-			
-			//, TileEntitySign sign
-			
-			)
+	public boolean onItemUse(ItemStack stack, EntityPlayer playerIn, World worldIn, BlockPos pos, EnumFacing side, float hitX, float hitY, float hitZ)
 	{
 		
-		TileEntitySign sign = sign1;
-		if(!playerIn.isSneaking())
+		TileEntitySign sign = new TileEntitySign();
+		
+		if(!playerIn.isSneaking() && pos=Items.sign )
 		{
+
+			if()
+			
 			if(stack.getTagCompound() == null)
 			{
 				stack.setTagCompound(new NBTTagCompound());
 			}
 			NBTTagCompound nbt = new NBTTagCompound();
-			
-			//nbt.setString(KEY_SIGN0, sign.signText[0].getUnformattedText());
-			
-			nbt.setInteger("dim", playerIn.dimension);
-			nbt.setInteger("posX", pos.getX());
-			nbt.setInteger("posY", pos.getY());
+
+			nbt.setString(KEY_SIGN0, sign.signText[0].getUnformattedText());
+			nbt.setString(KEY_SIGN1, sign.signText[1].getFormattedText());
+			//nbt.setInteger("dim", playerIn.dimension);
+			//nbt.setInteger("posX", pos.getX());
+			//nbt.setInteger("posY", pos.getY());
 			nbt.setInteger("posZ", pos.getZ());
-			stack.getTagCompound().setTag("coords", nbt);
-			stack.setStackDisplayName(EnumChatFormatting.DARK_PURPLE + "Coordinate Cache");
+			//nbt.setString(KEY_SIGN1, sign);
+			//nbt.setString("Sign line 1 = ", KEY_SIGN0);
+			stack.getTagCompound().setTag("signtext", nbt);
+			
+			stack.setStackDisplayName(EnumChatFormatting.DARK_PURPLE + "Sign copied.");
 		}
+
+		LogHelper.info("stack " + KEY_SIGN0 + "   " + KEY_SIGN1 + "   " +sign.signText[0].getUnformattedText());
 		return false;
 	}
 	
+	
+	/**
+     * Called whenever this item is equipped and the right mouse button is pressed. Args: itemStack, world, entityPlayer
+     */
 	@Override
-	public ItemStack onItemRightClick(ItemStack stack, World worldIn, EntityPlayer playerIn)
+	public ItemStack onItemRightClick(ItemStack stack, World worldIn, EntityPlayer playerIn
+			//, PlayerInteractEvent event
+			)
     {
+		
+		
+		
 		if(playerIn.isSneaking())
 		{
 			if(stack.getTagCompound() != null)
 			{
-				stack.getTagCompound().removeTag("coords");
+				stack.getTagCompound().removeTag("signtext");
 				stack.clearCustomName();
 			}
 		}
         return stack;
     }
 	
+	
+	
+	public static void rightClickBlock(PlayerInteractEvent event) 
+	{
+		ItemStack stack = event.entityPlayer.getCurrentEquippedItem();
+		Block block_clicked = event.world.getBlockState(event.pos).getBlock(); 
+		TileEntity container = event.world.getTileEntity(event.pos);
+		World world = event.world;
+		EntityPlayer entityPlayer = event.entityPlayer;
+		
+		boolean isValid = false;
+		boolean wasCopy = false;
+		boolean isEmpty = (stack.getTagCompound() == null);
+ 
+		if((block_clicked == Blocks.wall_sign || block_clicked == Blocks.standing_sign) &&  container instanceof TileEntitySign)
+		{
+			
+			TileEntitySign sign = (TileEntitySign)container;
+			 
+			if(isEmpty) 
+			{ 
+				Omniplex.copySign(world,entityPlayer,sign,stack); 
+				wasCopy = true;
+			}
+			else
+			{
+				Omniplex.pasteSign(world,entityPlayer,sign,stack); 
+				wasCopy = false;
+			} 
+			
+			isValid = true; 
+		}
+		
+		
+		if(isValid)
+		{
+			if(event.world.isRemote)
+			{	
+				//spawnParticle(event.world, EnumParticleTypes.PORTAL,event.pos.getX(),event.pos.getY(),event.pos.getZ()); 
+			}
+	//		else
+	//		{ 
+	//			if(wasCopy == false)//on paste, we consume the item
+	//			{
+	//				if (entityPlayer.capabilities.isCreativeMode == false)
+	//		        {
+	//					entityPlayer.inventory.decrStackSize(entityPlayer.inventory.currentItem, 1);
+	//		        }
+	//			}
+	//		}
+	//		
+			//playSoundAt(event.entityPlayer, "random.fizz"); 
+		}  
+	}  
+	
+	
+	
+	
+	
 	@Override
 	@SideOnly(Side.CLIENT)
     public void addInformation(ItemStack stack, EntityPlayer playerIn, List toolTip, boolean advanced) 
 	{
+		
+		boolean isEmpty = (stack.getTagCompound() == null);
+			if(isEmpty)
+			{
+				toolTip.add("Click to copy a sign!"); 
+				return;
+			}
+		//	 
+			String sign = getItemStackNBT(stack, KEY_SIGN0)
+					+ getItemStackNBT(stack, KEY_SIGN1)
+					+ getItemStackNBT(stack, KEY_SIGN2)
+					+ getItemStackNBT(stack, KEY_SIGN3);
+			
+			if(sign.length() > 0)
+			{ 
+				toolTip.add(getItemStackNBT(stack, KEY_SIGN0));
+				toolTip.add(getItemStackNBT(stack, KEY_SIGN1));
+				toolTip.add(getItemStackNBT(stack, KEY_SIGN2));
+				toolTip.add(getItemStackNBT(stack, KEY_SIGN3));
+			}
+	 
+			
+		
+		
 		if(stack.getTagCompound() != null)
 		{
-			if(stack.getTagCompound().hasKey("coords"))
+			if(stack.getTagCompound().hasKey("signtext"))
 			{
-				NBTTagCompound nbt = (NBTTagCompound) stack.getTagCompound().getTag("coords");
+				NBTTagCompound nbt = (NBTTagCompound) stack.getTagCompound().getTag("signtext");
 				String sign1 = nbt.getString(KEY_SIGN0);
 				int dim = nbt.getInteger("dim");
-				int posX = nbt.getInteger("posX");
-				int posY = nbt.getInteger("posY");
+				//int posX = nbt.getInteger("posX");
+				//int posY = nbt.getInteger("posY");
 				int posZ = nbt.getInteger("posZ");
-				toolTip.add("Dim: " + sign1 + " X: " + posX + " Y: " + posY + " Z: " + posZ);
+				toolTip.add("Dim: " + sign1 + 
+						//" X: " + 
+				//posX + " Y: " + posY + 
+						" Z: " + posZ);
 			}
 		}
 	}
@@ -123,7 +220,7 @@ public class Omniplex extends Item {
     {
 		if(stack.getTagCompound() != null)
 		{
-			return stack.getTagCompound().hasKey("coords");
+			return stack.getTagCompound().hasKey("signtext");
 		}
 		return false;
     }
@@ -134,49 +231,47 @@ public class Omniplex extends Item {
 	
 	
 	
-	//public static void setItemStackNBT(ItemStack item, String prop, String value) 
-	//{
-	//	item.getTagCompound().setString(prop, value);
-	//} 
+	public static void setItemStackNBT(ItemStack item, String prop, String value) 
+	{
+		item.getTagCompound().setString(prop, value);
+	} 
 	
-	//public static String getItemStackNBT(ItemStack item, String prop) 
-	//{
-	//	String s = item.getTagCompound().getString(prop);
-	//	if(s == null) { s = ""; }
-	//	return s;
-	//} 
-	
-	
+	public static String getItemStackNBT(ItemStack item, String prop) 
+	{
+		String s = item.getTagCompound().getString(prop);
+		if(s == null) { s = ""; }
+		return s;
+	} 
 	
 	
 	
-	//public static void copySign(World world, EntityPlayer entityPlayer,	TileEntitySign sign, ItemStack held) 
-	//{  
-	//	if(held.getTagCompound() == null) {held.setTagCompound(new NBTTagCompound());}
-	//	setItemStackNBT(held, KEY_SIGN0, sign.signText[0].getUnformattedText());
-	///	setItemStackNBT(held, KEY_SIGN1, sign.signText[1].getUnformattedText());
-	////	setItemStackNBT(held, KEY_SIGN2, sign.signText[2].getUnformattedText());
-	//	setItemStackNBT(held, KEY_SIGN3, sign.signText[3].getUnformattedText());
+	
+	
+	public static void copySign(World world, EntityPlayer entityPlayer,	TileEntitySign sign, ItemStack stack) 
+	{  
+		if(stack.getTagCompound() == null) {stack.setTagCompound(new NBTTagCompound());}
+		setItemStackNBT(stack, KEY_SIGN0, sign.signText[0].getUnformattedText());
+		setItemStackNBT(stack, KEY_SIGN1, sign.signText[1].getUnformattedText());
+		setItemStackNBT(stack, KEY_SIGN2, sign.signText[2].getUnformattedText());
+		setItemStackNBT(stack, KEY_SIGN3, sign.signText[3].getUnformattedText());
 
-		//held.getTagCompound().setByte(KEY_NOTE,(byte)NOTE_EMPTY); 
-		
-		//entityPlayer.swingItem(); 
-	//}
+		entityPlayer.swingItem(); 
+	}
 	
 	
 	
-	//public static void pasteSign(World world, EntityPlayer entityPlayer, TileEntitySign sign, ItemStack held) 
-	//{   
-	//	if(held.getTagCompound() == null) {held.setTagCompound(new NBTTagCompound());}
-	//	sign.signText[0] = new ChatComponentText(getItemStackNBT(held, KEY_SIGN0));
-	//	sign.signText[1] = new ChatComponentText(getItemStackNBT(held, KEY_SIGN1));
-	//	sign.signText[2] = new ChatComponentText(getItemStackNBT(held, KEY_SIGN2));
-	//	sign.signText[3] = new ChatComponentText(getItemStackNBT(held, KEY_SIGN3));
+	public static void pasteSign(World world, EntityPlayer entityPlayer, TileEntitySign sign, ItemStack stack) 
+	{   
+		if(stack.getTagCompound() == null) {stack.setTagCompound(new NBTTagCompound());}
+		sign.signText[0] = new ChatComponentText(getItemStackNBT(stack, KEY_SIGN0));
+		sign.signText[1] = new ChatComponentText(getItemStackNBT(stack, KEY_SIGN1));
+		sign.signText[2] = new ChatComponentText(getItemStackNBT(stack, KEY_SIGN2));
+		sign.signText[3] = new ChatComponentText(getItemStackNBT(stack, KEY_SIGN3));
   
-	//	world.markBlockForUpdate(sign.getPos());//so update is refreshed on client side
+		world.markBlockForUpdate(sign.getPos());//so update is refreshed on client side
 
-		//entityPlayer.swingItem();
-	//}
+		entityPlayer.swingItem();
+	}
 
 	
 	
@@ -411,10 +506,10 @@ public class Omniplex extends Item {
 	//	} 
 	//}
 	
-	public static void playSoundAt(Entity player, String sound)
-	{ 
-		player.worldObj.playSoundAtEntity(player, sound, 1.0F, 1.0F);
-	}
+	//public static void playSoundAt(Entity player, String sound)
+	//{ 
+	//	player.worldObj.playSoundAtEntity(player, sound, 1.0F, 1.0F);
+	//}
 	
 	//public static String noteToString(byte note) 
 	//{

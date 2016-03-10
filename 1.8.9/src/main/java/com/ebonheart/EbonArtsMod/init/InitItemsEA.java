@@ -117,7 +117,7 @@ public class InitItemsEA extends ItemsEA {
 		
 		
 		
-		//omniplex = new Omniplex().setUnlocalizedName("omniplex");
+		omniplex = new Omniplex().setUnlocalizedName("omniplex");
 		
 		//banana = (ItemFood) new ItemFood(3, 0.3F, false).setUnlocalizedName("banana");
 		
@@ -189,7 +189,7 @@ public class InitItemsEA extends ItemsEA {
 		GameRegistry.registerItem(dragon_fruit, dragon_fruit.getUnlocalizedName().substring(5));
 		
 		
-		//GameRegistry.registerItem(omniplex, omniplex.getUnlocalizedName().substring(5));
+		GameRegistry.registerItem(omniplex, omniplex.getUnlocalizedName().substring(5));
 		
 		//GameRegistry.registerItem(banana, banana.getUnlocalizedName().substring(5));
 		

@@ -64,7 +64,7 @@ public final class InitItemsEARender extends ItemsEA {
 		registerRender(obsidian_shards);
 		registerRender(glowstone_shards);
 		
-		//registerRender(omniplex);
+		registerRender(omniplex);
 		//registerRender(banana);
 		registerRender(dragon_fruit);
 	}

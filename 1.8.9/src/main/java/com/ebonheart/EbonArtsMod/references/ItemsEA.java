@@ -72,7 +72,7 @@ public class ItemsEA {
 	//public static ItemFood banana;
 	public static ItemFood dragon_fruit;
 	
-	//public static Item omniplex;
+	public static Item omniplex;
 	
 	//public static Item test_liquid_bucket;
 	//public static Item iron_catalyst;
