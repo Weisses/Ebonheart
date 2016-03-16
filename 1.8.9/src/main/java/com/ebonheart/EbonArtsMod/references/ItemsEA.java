@@ -6,7 +6,7 @@ import net.minecraft.item.ItemFood;
 public class ItemsEA {
 	
 	//Items
-	public static Item ebon_tome;
+	//public static Item ebon_tome;
 	
 	public static Item draconium_dust;
 	public static Item velious;
@@ -29,7 +29,7 @@ public class ItemsEA {
 	public static Item resilient_disc;
 	public static Item dismal_disc;
 	public static Item ethereal_disc;
-	public static Item chrono_disc;
+	//public static Item chrono_disc;
 	
 	
 	
@@ -72,7 +72,7 @@ public class ItemsEA {
 	//public static ItemFood banana;
 	public static ItemFood dragon_fruit;
 	
-	public static Item omniplex;
+	//public static Item omniplex;
 	
 	//public static Item test_liquid_bucket;
 	//public static Item iron_catalyst;

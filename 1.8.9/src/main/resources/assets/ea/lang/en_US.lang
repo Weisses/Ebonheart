@@ -11,21 +11,20 @@ item.gem/arcanite.name=Arcanite
 item.gem/katcheen.name=Katcheen
 item.gem/necrocite.name=Necrocite
 item.gem/soularite.name=Soularite
-item.gem/ebonheart.name=Ebonheart Gemstone
-item.gem/enchanted_ebonheart.name=Enchanted Ebonheart Gemstone
+item.gem/ebonheart.name=Ebonheart
+item.gem/enchanted_ebonheart.name=Enchanted Ebonheart
+item.gem/obsidian_shard.name=Obsidian Shard
+item.gem/glowstone_shard.name=Glowstone Shard
 item.tool/empowered_blade.name=Empowered Blade
+item.dragon_fruit.name=Dragon Fruit
+
 item.disc/glowing_disc.name=Glowing Disc
 item.disc/shimmering_disc.name=Shimmering Disc
 item.disc/laminate_disc.name=Laminate Disc
 item.disc/resilient_disc.name=Resilient Disc
 item.disc/dismal_disc.name=Dismal Disc
 item.disc/ethereal_disc.name=Ethereal Disc
-item.disc/chrono_disc.name=Chrono Disc
 item.disc/mirroring_disc.name=Mirroring Disc
-item.gem/obsidian_shard.name=Obsidian Shard
-item.gem/glowstone_shard.name=Glowstone Shard
-item.banana.name=Banana
-item.dragon_fruit.name=Dragon Fruit
 
 //-----Ores-----
 tile.ore/draconium_ore.name=Draconium Ore
@@ -281,14 +280,14 @@ achievement.ea:smelt_draconium_dust=From dragons to dust!
 achievement.ea:smelt_draconium_dust.desc=Smelt Draconium Dust.
 
 //-----Music Discs-----
-item.disc/glowing_disc.desc=Lost1 Woods
-item.disc/shimmering_disc.desc=Lost Woods
-item.disc/laminate_disc.desc=Lost2 Woods
-item.disc/resilient_disc.desc=Lost3 Woods
-item.disc/dismal_disc.desc=Lost4 Woods
-item.disc/ethereal_disc.desc=Lost5 Woods
-item.disc/chrono_disc.desc=Lost6 Woods
-item.disc/mirror_disc.desc=Lost7 Woods
+item.disc/glowing_disc.desc=Island
+item.disc/shimmering_disc.desc=Dire
+item.disc/laminate_disc.desc=Marble
+item.disc/resilient_disc.desc=Strength
+item.disc/dismal_disc.desc=Castle
+item.disc/ethereal_disc.desc=Timescar
+item.disc/chrono_disc.desc=WIP
+item.disc/mirroring_disc.desc=Lost Woods
 
 
 
@@ -308,4 +307,7 @@ tile.ebon_alter.name=Ebon Alter
 death.attack.electric=%1$s was roasted by electric current.
 death.attack.electric.player=%1$s was roasted by electric current while fighting %2$s.
 tile.fence/innate_arcanite_fence_normal.name=Innate Arcanite Fence
+item.banana.name=Banana
+
 item.ebon_tome.name=Ebon Tome-WIP
+item.disc/chrono_disc.name=Chrono Disc - WIP

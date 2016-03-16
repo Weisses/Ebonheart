@@ -58,10 +58,12 @@ public class Omniplex extends Item {
 		
 		TileEntitySign sign = new TileEntitySign();
 		
-		if(!playerIn.isSneaking() && pos=Items.sign )
+		if(!playerIn.isSneaking()
+				//&& pos=Items.sign 
+				)
 		{
 
-			if()
+			
 			
 			if(stack.getTagCompound() == null)
 			{

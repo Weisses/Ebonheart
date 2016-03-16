@@ -81,7 +81,7 @@ public class ItemMusicDiscEA extends ItemRecord {
 	{
 
 		toolTip.add(EnumChatFormatting.DARK_AQUA + "This "  + stack.getDisplayName().toLowerCase() + " plays the ");
-		toolTip.add(EnumChatFormatting.DARK_AQUA + "record " + this.getRecordNameLocal() + ".");
+		toolTip.add(EnumChatFormatting.DARK_AQUA + "record, \"" + this.getRecordNameLocal() + "\".");
 		
 	}
 	

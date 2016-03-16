@@ -61,5 +61,14 @@
             "stream": true
             }
         ]
+    },
+    "records.mirroring_disc": {
+        "category": "record",
+        "sounds": [
+            {
+            "name": "ea:records/mirroring_disc",
+            "stream": true
+            }
+        ]
     }
 }

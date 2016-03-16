@@ -80,7 +80,7 @@ public class InitItemsEA extends ItemsEA {
 		ethereal_disc = new ItemMusicDiscEA("disc/ethereal_disc", "records.ethereal_disc");
 		//chrono_disc = new ItemMusicDiscEA("disc/chrono_disc", "records.chrono_disc");
 		
-		mirroring_disc = new ItemMirroringDisc();
+		mirroring_disc = new ItemMirroringDisc("disc/mirroring_disc", "records.mirroring_disc");
 		
 		empowered_blade = new ItemEmpoweredBlade("tool/empowered_blade");
 		
@@ -117,7 +117,7 @@ public class InitItemsEA extends ItemsEA {
 		
 		
 		
-		omniplex = new Omniplex().setUnlocalizedName("omniplex");
+		//omniplex = new Omniplex().setUnlocalizedName("omniplex");
 		
 		//banana = (ItemFood) new ItemFood(3, 0.3F, false).setUnlocalizedName("banana");
 		
@@ -189,7 +189,7 @@ public class InitItemsEA extends ItemsEA {
 		GameRegistry.registerItem(dragon_fruit, dragon_fruit.getUnlocalizedName().substring(5));
 		
 		
-		GameRegistry.registerItem(omniplex, omniplex.getUnlocalizedName().substring(5));
+		//GameRegistry.registerItem(omniplex, omniplex.getUnlocalizedName().substring(5));
 		
 		//GameRegistry.registerItem(banana, banana.getUnlocalizedName().substring(5));
 		

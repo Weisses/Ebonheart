@@ -16,7 +16,8 @@ public class BlocksEA {
 	public static Block ebon_ore_nether;
 	
 	
-	public static Block tutorialTileEntity;
+	//public static Block tutorialTileEntity;
+	
 	//public static Block onyxius_ore;
 	//public static Block carnelian_ore;
 	//public static Block velium_ore;
