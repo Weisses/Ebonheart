@@ -5,9 +5,10 @@ import net.minecraft.client.Minecraft;
 import net.minecraft.client.resources.model.ModelBakery;
 import net.minecraft.client.resources.model.ModelResourceLocation;
 import net.minecraft.item.Item;
+import net.minecraft.util.ResourceLocation;
 import net.minecraftforge.fml.client.registry.ClientRegistry;
 
-import com.ebonheart.EbonArtsMod.client.render.projectile.RenderEbonheart;
+import com.ebonheart.EbonArtsMod.client.render.projectile.RenderEnchantedEbonheart;
 import com.ebonheart.EbonArtsMod.common.entity.tile.TileEntityTutorial;
 import com.ebonheart.EbonArtsMod.init.InitBlocksEA;
 import com.ebonheart.EbonArtsMod.references.BlocksEA;
@@ -17,41 +18,46 @@ public final class InitBlocksEARender extends BlocksEA {
 	
 	public static void preInit() 
 	{
-		ModelBakery.addVariantName(Item.getItemFromBlock(InitBlocksEA.mystic_block), 
-				"ea:gem/mystic/mystic_block_white", 
-				"ea:gem/mystic/mystic_block_orange", 
-				"ea:gem/mystic/mystic_block_magenta", 
-				"ea:gem/mystic/mystic_block_lightblue", 
-				"ea:gem/mystic/mystic_block_yellow", 
-				"ea:gem/mystic/mystic_block_lime", 
-				"ea:gem/mystic/mystic_block_pink", 
-				"ea:gem/mystic/mystic_block_gray", 
-				"ea:gem/mystic/mystic_block_lightgray", 
-				"ea:gem/mystic/mystic_block_cyan", 
-				"ea:gem/mystic/mystic_block_purple", 
-				"ea:gem/mystic/mystic_block_blue", 
-				"ea:gem/mystic/mystic_block_brown", 
-				"ea:gem/mystic/mystic_block_green", 
-				"ea:gem/mystic/mystic_block_red", 
-				"ea:gem/mystic/mystic_block_black");
 		
-		ModelBakery.addVariantName(Item.getItemFromBlock(InitBlocksEA.innate_mystic_block), 
-				"ea:gem/mystic/innate_mystic_block_white", 
-				"ea:gem/mystic/innate_mystic_block_orange", 
-				"ea:gem/mystic/innate_mystic_block_magenta", 
-				"ea:gem/mystic/innate_mystic_block_lightblue", 
-				"ea:gem/mystic/innate_mystic_block_yellow", 
-				"ea:gem/mystic/innate_mystic_block_lime", 
-				"ea:gem/mystic/innate_mystic_block_pink", 
-				"ea:gem/mystic/innate_mystic_block_gray", 
-				"ea:gem/mystic/innate_mystic_block_lightgray", 
-				"ea:gem/mystic/innate_mystic_block_cyan", 
-				"ea:gem/mystic/innate_mystic_block_purple", 
-				"ea:gem/mystic/innate_mystic_block_blue", 
-				"ea:gem/mystic/innate_mystic_block_brown", 
-				"ea:gem/mystic/innate_mystic_block_green", 
-				"ea:gem/mystic/innate_mystic_block_red", 
-				"ea:gem/mystic/innate_mystic_block_black");
+		
+		ModelBakery.registerItemVariants(Item.getItemFromBlock(InitBlocksEA.cobble_mystic_block), 
+				new ResourceLocation(Reference.MOD_ID + ":gem/mystic/cobble_mystic_block_white"),
+				new ResourceLocation(Reference.MOD_ID + ":gem/mystic/cobble_mystic_block_orange"),
+				new ResourceLocation(Reference.MOD_ID + ":gem/mystic/cobble_mystic_block_magenta"),
+				new ResourceLocation(Reference.MOD_ID + ":gem/mystic/cobble_mystic_block_lightblue"),
+				new ResourceLocation(Reference.MOD_ID + ":gem/mystic/cobble_mystic_block_yellow"),
+				new ResourceLocation(Reference.MOD_ID + ":gem/mystic/cobble_mystic_block_lime"),
+				new ResourceLocation(Reference.MOD_ID + ":gem/mystic/cobble_mystic_block_pink"),
+				new ResourceLocation(Reference.MOD_ID + ":gem/mystic/cobble_mystic_block_gray"),
+				new ResourceLocation(Reference.MOD_ID + ":gem/mystic/cobble_mystic_block_lightgray"),
+				new ResourceLocation(Reference.MOD_ID + ":gem/mystic/cobble_mystic_block_cyan"),
+				new ResourceLocation(Reference.MOD_ID + ":gem/mystic/cobble_mystic_block_purple"),
+				new ResourceLocation(Reference.MOD_ID + ":gem/mystic/cobble_mystic_block_blue"),
+				new ResourceLocation(Reference.MOD_ID + ":gem/mystic/cobble_mystic_block_brown"),
+				new ResourceLocation(Reference.MOD_ID + ":gem/mystic/cobble_mystic_block_green"),
+				new ResourceLocation(Reference.MOD_ID + ":gem/mystic/cobble_mystic_block_red"),
+				new ResourceLocation(Reference.MOD_ID + ":gem/mystic/cobble_mystic_block_black"));
+				
+		
+		ModelBakery.registerItemVariants(Item.getItemFromBlock(InitBlocksEA.mystic_block), 
+				new ResourceLocation(Reference.MOD_ID + ":gem/mystic/mystic_block_white"),
+				new ResourceLocation(Reference.MOD_ID + ":gem/mystic/mystic_block_orange"),
+				new ResourceLocation(Reference.MOD_ID + ":gem/mystic/mystic_block_magenta"),
+				new ResourceLocation(Reference.MOD_ID + ":gem/mystic/mystic_block_lightblue"),
+				new ResourceLocation(Reference.MOD_ID + ":gem/mystic/mystic_block_yellow"),
+				new ResourceLocation(Reference.MOD_ID + ":gem/mystic/mystic_block_lime"),
+				new ResourceLocation(Reference.MOD_ID + ":gem/mystic/mystic_block_pink"),
+				new ResourceLocation(Reference.MOD_ID + ":gem/mystic/mystic_block_gray"),
+				new ResourceLocation(Reference.MOD_ID + ":gem/mystic/mystic_block_lightgray"),
+				new ResourceLocation(Reference.MOD_ID + ":gem/mystic/mystic_block_cyan"),
+				new ResourceLocation(Reference.MOD_ID + ":gem/mystic/mystic_block_purple"),
+				new ResourceLocation(Reference.MOD_ID + ":gem/mystic/mystic_block_blue"),
+				new ResourceLocation(Reference.MOD_ID + ":gem/mystic/mystic_block_brown"),
+				new ResourceLocation(Reference.MOD_ID + ":gem/mystic/mystic_block_green"),
+				new ResourceLocation(Reference.MOD_ID + ":gem/mystic/mystic_block_red"),
+				new ResourceLocation(Reference.MOD_ID + ":gem/mystic/mystic_block_black"));
+		
+		
 		
 	}
 	
@@ -63,6 +69,7 @@ public final class InitBlocksEARender extends BlocksEA {
 		registerRender(katcheen_ore);
 		registerRender(necrocite_ore);
 		registerRender(soularite_ore);
+		registerRender(ebonheart_ore);
 		registerRender(ebon_ore);
 		registerRender(ebon_ore_nether);
 		
@@ -85,24 +92,24 @@ public final class InitBlocksEARender extends BlocksEA {
 		registerRender(InitBlocksEA.mystic_block, 14, "gem/mystic/mystic_block_red");
 		registerRender(InitBlocksEA.mystic_block, 15, "gem/mystic/mystic_block_black");
 		
-		registerRender(innate_mystic_block_normal);
-		registerRender(innate_mystic_block);
-		registerRender(InitBlocksEA.innate_mystic_block, 0, "gem/mystic/innate_mystic_block_white");
-		registerRender(InitBlocksEA.innate_mystic_block, 1, "gem/mystic/innate_mystic_block_orange");
-		registerRender(InitBlocksEA.innate_mystic_block, 2, "gem/mystic/innate_mystic_block_magenta");
-		registerRender(InitBlocksEA.innate_mystic_block, 3, "gem/mystic/innate_mystic_block_lightblue");
-		registerRender(InitBlocksEA.innate_mystic_block, 4, "gem/mystic/innate_mystic_block_yellow");
-		registerRender(InitBlocksEA.innate_mystic_block, 5, "gem/mystic/innate_mystic_block_lime");
-		registerRender(InitBlocksEA.innate_mystic_block, 6, "gem/mystic/innate_mystic_block_pink");
-		registerRender(InitBlocksEA.innate_mystic_block, 7, "gem/mystic/innate_mystic_block_gray");
-		registerRender(InitBlocksEA.innate_mystic_block, 8, "gem/mystic/innate_mystic_block_lightgray");
-		registerRender(InitBlocksEA.innate_mystic_block, 9, "gem/mystic/innate_mystic_block_cyan");
-		registerRender(InitBlocksEA.innate_mystic_block, 10, "gem/mystic/innate_mystic_block_purple");
-		registerRender(InitBlocksEA.innate_mystic_block, 11, "gem/mystic/innate_mystic_block_blue");
-		registerRender(InitBlocksEA.innate_mystic_block, 12, "gem/mystic/innate_mystic_block_brown");
-		registerRender(InitBlocksEA.innate_mystic_block, 13, "gem/mystic/innate_mystic_block_green");
-		registerRender(InitBlocksEA.innate_mystic_block, 14, "gem/mystic/innate_mystic_block_red");
-		registerRender(InitBlocksEA.innate_mystic_block, 15, "gem/mystic/innate_mystic_block_black");
+		registerRender(cobble_mystic_block_normal);
+		registerRender(cobble_mystic_block);
+		registerRender(InitBlocksEA.cobble_mystic_block, 0, "gem/mystic/cobble_mystic_block_white");
+		registerRender(InitBlocksEA.cobble_mystic_block, 1, "gem/mystic/cobble_mystic_block_orange");
+		registerRender(InitBlocksEA.cobble_mystic_block, 2, "gem/mystic/cobble_mystic_block_magenta");
+		registerRender(InitBlocksEA.cobble_mystic_block, 3, "gem/mystic/cobble_mystic_block_lightblue");
+		registerRender(InitBlocksEA.cobble_mystic_block, 4, "gem/mystic/cobble_mystic_block_yellow");
+		registerRender(InitBlocksEA.cobble_mystic_block, 5, "gem/mystic/cobble_mystic_block_lime");
+		registerRender(InitBlocksEA.cobble_mystic_block, 6, "gem/mystic/cobble_mystic_block_pink");
+		registerRender(InitBlocksEA.cobble_mystic_block, 7, "gem/mystic/cobble_mystic_block_gray");
+		registerRender(InitBlocksEA.cobble_mystic_block, 8, "gem/mystic/cobble_mystic_block_lightgray");
+		registerRender(InitBlocksEA.cobble_mystic_block, 9, "gem/mystic/cobble_mystic_block_cyan");
+		registerRender(InitBlocksEA.cobble_mystic_block, 10, "gem/mystic/cobble_mystic_block_purple");
+		registerRender(InitBlocksEA.cobble_mystic_block, 11, "gem/mystic/cobble_mystic_block_blue");
+		registerRender(InitBlocksEA.cobble_mystic_block, 12, "gem/mystic/cobble_mystic_block_brown");
+		registerRender(InitBlocksEA.cobble_mystic_block, 13, "gem/mystic/cobble_mystic_block_green");
+		registerRender(InitBlocksEA.cobble_mystic_block, 14, "gem/mystic/cobble_mystic_block_red");
+		registerRender(InitBlocksEA.cobble_mystic_block, 15, "gem/mystic/cobble_mystic_block_black");
 		
 		registerRender(draconium_block);
 		registerRender(velious_block);

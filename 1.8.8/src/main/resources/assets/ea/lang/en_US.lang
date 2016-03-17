@@ -11,13 +11,20 @@ item.gem/arcanite.name=Arcanite
 item.gem/katcheen.name=Katcheen
 item.gem/necrocite.name=Necrocite
 item.gem/soularite.name=Soularite
-item.gem/ebonheart.name=Ebonheart Gemstone
-item.tool/empowered_blade.name=Empowered Blade
-item.shimmering_disc.name=Shimmering Disc
+item.gem/ebonheart.name=Ebonheart
+item.gem/enchanted_ebonheart.name=Enchanted Ebonheart
 item.gem/obsidian_shard.name=Obsidian Shard
 item.gem/glowstone_shard.name=Glowstone Shard
-item.banana.name=Banana
+item.tool/empowered_blade.name=Empowered Blade
 item.dragon_fruit.name=Dragon Fruit
+
+item.disc/glowing_disc.name=Glowing Disc
+item.disc/shimmering_disc.name=Shimmering Disc
+item.disc/laminate_disc.name=Laminate Disc
+item.disc/resilient_disc.name=Resilient Disc
+item.disc/dismal_disc.name=Dismal Disc
+item.disc/ethereal_disc.name=Ethereal Disc
+item.disc/mirroring_disc.name=Mirroring Disc
 
 //-----Ores-----
 tile.ore/draconium_ore.name=Draconium Ore
@@ -27,44 +34,45 @@ tile.ore/katcheen_ore.name=Katcheen Ore
 tile.ore/ebon_ore.name=Ebon Ore
 tile.ore/necrocite_ore.name=Necrocite Ore
 tile.ore/soularite_ore.name=Soularite Ore
+tile.ore/ebonheart_ore.name=Ebonheart Ore
 tile.ore/ebon_ore_nether.name=Ebon Ore
 
 //-----Blocks-----
-tile.gem/mystic/mystic_block_normal.name=Mystic Block
-tile.gem/mystic/mystic_block.white.name=White Mystic Block
-tile.gem/mystic/mystic_block.orange.name=Orange Mystic Block
-tile.gem/mystic/mystic_block.magenta.name=Magenta Mystic Block
-tile.gem/mystic/mystic_block.lightblue.name=Light Blue Mystic Block
-tile.gem/mystic/mystic_block.yellow.name=Yellow Mystic Block
-tile.gem/mystic/mystic_block.lime.name=Lime Mystic Block
-tile.gem/mystic/mystic_block.pink.name=Pink Mystic Block
-tile.gem/mystic/mystic_block.gray.name=Gray Mystic Block
-tile.gem/mystic/mystic_block.lightgray.name=Light Gray Mystic Block
-tile.gem/mystic/mystic_block.cyan.name=Cyan Mystic Block
-tile.gem/mystic/mystic_block.purple.name=Purple Mystic Block
-tile.gem/mystic/mystic_block.blue.name=Blue Mystic Block
-tile.gem/mystic/mystic_block.brown.name=Brown Mystic Block
-tile.gem/mystic/mystic_block.green.name=Green Mystic Block
-tile.gem/mystic/mystic_block.red.name=Red Mystic Block
-tile.gem/mystic/mystic_block.black.name=Black Mystic Block
+tile.gem/mystic/mystic_block_normal.name=Mystic Stone
+tile.gem/mystic/mystic_block.white.name=White Mystic Stone
+tile.gem/mystic/mystic_block.orange.name=Orange Mystic Stone
+tile.gem/mystic/mystic_block.magenta.name=Magenta Mystic Stone
+tile.gem/mystic/mystic_block.lightblue.name=Light Blue Mystic Stone
+tile.gem/mystic/mystic_block.yellow.name=Yellow Mystic Stone
+tile.gem/mystic/mystic_block.lime.name=Lime Mystic Stone
+tile.gem/mystic/mystic_block.pink.name=Pink Mystic Stone
+tile.gem/mystic/mystic_block.gray.name=Gray Mystic Stone
+tile.gem/mystic/mystic_block.lightgray.name=Light Gray Mystic Stone
+tile.gem/mystic/mystic_block.cyan.name=Cyan Mystic Stone
+tile.gem/mystic/mystic_block.purple.name=Purple Mystic Stone
+tile.gem/mystic/mystic_block.blue.name=Blue Mystic Stone
+tile.gem/mystic/mystic_block.brown.name=Brown Mystic Stone
+tile.gem/mystic/mystic_block.green.name=Green Mystic Stone
+tile.gem/mystic/mystic_block.red.name=Red Mystic Stone
+tile.gem/mystic/mystic_block.black.name=Black Mystic Stone
 
-tile.gem/mystic/innate_mystic_block_normal.name=Innate Mystic Block
-tile.gem/mystic/innate_mystic_block.white.name=White Innate Mystic Block
-tile.gem/mystic/innate_mystic_block.orange.name=Orange Innate Mystic Block
-tile.gem/mystic/innate_mystic_block.magenta.name=Magenta Innate Mystic Block
-tile.gem/mystic/innate_mystic_block.lightblue.name=Light Blue Innate Mystic Block
-tile.gem/mystic/innate_mystic_block.yellow.name=Yellow Innate Mystic Block
-tile.gem/mystic/innate_mystic_block.lime.name=Lime Innate Mystic Block
-tile.gem/mystic/innate_mystic_block.pink.name=Pink Innate Mystic Block
-tile.gem/mystic/innate_mystic_block.gray.name=Gray Innate Mystic Block
-tile.gem/mystic/innate_mystic_block.lightgray.name=Light Gray Innate Mystic Block
-tile.gem/mystic/innate_mystic_block.cyan.name=Cyan Innate Mystic Block
-tile.gem/mystic/innate_mystic_block.purple.name=Purple Innate Mystic Block
-tile.gem/mystic/innate_mystic_block.blue.name=Blue Innate Mystic Block
-tile.gem/mystic/innate_mystic_block.brown.name=Brown Innate Mystic Block
-tile.gem/mystic/innate_mystic_block.green.name=Green Innate Mystic Block
-tile.gem/mystic/innate_mystic_block.red.name=Red Innate Mystic Block
-tile.gem/mystic/innate_mystic_block.black.name=Black Innate Mystic Block
+tile.gem/mystic/cobble_mystic_block_normal.name=Mystic Cobblestone
+tile.gem/mystic/cobble_mystic_block.white.name=White Mystic Cobblestone
+tile.gem/mystic/cobble_mystic_block.orange.name=Orange Mystic Cobblestone
+tile.gem/mystic/cobble_mystic_block.magenta.name=Magenta Mystic Cobblestone
+tile.gem/mystic/cobble_mystic_block.lightblue.name=Light Blue Mystic Cobblestone
+tile.gem/mystic/cobble_mystic_block.yellow.name=Yellow Mystic Cobblestone
+tile.gem/mystic/cobble_mystic_block.lime.name=Lime Mystic Cobblestone
+tile.gem/mystic/cobble_mystic_block.pink.name=Pink Mystic Cobblestone
+tile.gem/mystic/cobble_mystic_block.gray.name=Gray Mystic Cobblestone
+tile.gem/mystic/cobble_mystic_block.lightgray.name=Light Gray Mystic Cobblestone
+tile.gem/mystic/cobble_mystic_block.cyan.name=Cyan Mystic Cobblestone
+tile.gem/mystic/cobble_mystic_block.purple.name=Purple Mystic Cobblestone
+tile.gem/mystic/cobble_mystic_block.blue.name=Blue Mystic Cobblestone
+tile.gem/mystic/cobble_mystic_block.brown.name=Brown Mystic Cobblestone
+tile.gem/mystic/cobble_mystic_block.green.name=Green Mystic Cobblestone
+tile.gem/mystic/cobble_mystic_block.red.name=Red Mystic Cobblestone
+tile.gem/mystic/cobble_mystic_block.black.name=Black Mystic Cobblestone
 
 tile.gem/draconium/draconium_block.name=Block of Draconium
 tile.gem/velious/velious_block.name=Block of Velious
@@ -210,23 +218,33 @@ achievement.ea:alchemical_compendium.desc=Obtain an Alchemical Compendium.
 
 achievement.ea:mine_draconium_ore=A touch of Dragon!
 achievement.ea:mine_draconium_ore.desc=Mine some Draconium Ore.
+achievement.ea:glowing_disc=Chant of Dragons!
+achievement.ea:glowing_disc.desc=Craft a Glowing Disc.
 
 achievement.ea:mine_velious_ore=Discovery of Velious!
 achievement.ea:mine_velious_ore.desc=Mine some Velious Ore.
-achievement.ea:shimmering_disc=What songs may come!
+achievement.ea:shimmering_disc=Melody of Ice!
 achievement.ea:shimmering_disc.desc=Craft a Shimmering Disc.
 
 achievement.ea:mine_arcanite_ore=Might of Arcanite!
 achievement.ea:mine_arcanite_ore.desc=Mine some Arcanite Ore.
+achievement.ea:laminate_disc=Song of Gaia!
+achievement.ea:laminate_disc.desc=Craft a Laminate Disc.
 
 achievement.ea:mine_katcheen_ore=What Diamonds should be!
 achievement.ea:mine_katcheen_ore.desc=Mine some Katcheen Ore.
+achievement.ea:resilient_disc=Chorus of Strength!
+achievement.ea:resilient_disc.desc=Craft a Resilient Disc.
 
 achievement.ea:mine_necrocite_ore=Blight of Necrocite!
 achievement.ea:mine_necrocite_ore.desc=Mine some Necrocite Ore.
+achievement.ea:dismal_disc=Symphony of the Night!
+achievement.ea:dismal_disc.desc=Craft a Dismal Disc.
 
 achievement.ea:mine_soularite_ore=Reap the Soularite!
 achievement.ea:mine_soularite_ore.desc=Mine some Soularite Ore.
+achievement.ea:ethereal_disc=Harmony of Light!
+achievement.ea:ethereal_disc.desc=Craft a Ethereal Disc.
 
 achievement.ea:ebonheart=Power level's over 9000!
 achievement.ea:ebonheart.desc=Obtain an Ebonheart Gemstone.
@@ -235,22 +253,25 @@ achievement.ea:empowered_blade=One step closer!
 achievement.ea:empowered_blade.desc=Craft an Empowered Blade.
 
 achievement.ea:deception=Illusion of truth!
-achievement.ea:deception.desc=Craft the ultimate weapon, Deception.
+achievement.ea:deception.desc=Craft the legendary weapon, Deception.
 
 achievement.ea:frostbite=Icebound doom!
-achievement.ea:frostbite.desc=Craft the ultimate weapon, Frostbite.
+achievement.ea:frostbite.desc=Craft the legendary weapon, Frostbite.
 
 achievement.ea:massacre=Leave no survivors!
-achievement.ea:massacre.desc=Craft the ultimate weapon, Massacre.
+achievement.ea:massacre.desc=Craft the legendary weapon, Massacre.
 
 achievement.ea:blazefury=Let the world burn!
-achievement.ea:blazefury.desc=Craft the ultimate weapon, Blazefury.
+achievement.ea:blazefury.desc=Craft the legendary weapon, Blazefury.
 
 achievement.ea:despair=Abandon all hope!
-achievement.ea:despair.desc=Craft the ultimate weapon, Despair.
+achievement.ea:despair.desc=Craft the legendary weapon, Despair.
 
 achievement.ea:souleater=From death to life!
-achievement.ea:souleater.desc=Craft the ultimate weapon, Souleater.
+achievement.ea:souleater.desc=Craft the legendary weapon, Souleater.
+
+achievement.ea:enchanted_ebonheart=Powering up!
+achievement.ea:enchanted_ebonheart.desc=Craft an Enchanted Ebonheart.
 
 achievement.ea:nether_bound=Nether bound!
 achievement.ea:nether_bound.desc=Craft either Obsidian or Glowstone Shards.
@@ -259,7 +280,14 @@ achievement.ea:smelt_draconium_dust=From dragons to dust!
 achievement.ea:smelt_draconium_dust.desc=Smelt Draconium Dust.
 
 //-----Music Discs-----
-item.shimmering_disc.desc=Lost Woods
+item.disc/glowing_disc.desc=Island
+item.disc/shimmering_disc.desc=Dire
+item.disc/laminate_disc.desc=Marble
+item.disc/resilient_disc.desc=Strength
+item.disc/dismal_disc.desc=Castle
+item.disc/ethereal_disc.desc=Timescar
+item.disc/chrono_disc.desc=WIP
+item.disc/mirroring_disc.desc=Lost Woods
 
 
 
@@ -279,4 +307,7 @@ tile.ebon_alter.name=Ebon Alter
 death.attack.electric=%1$s was roasted by electric current.
 death.attack.electric.player=%1$s was roasted by electric current while fighting %2$s.
 tile.fence/innate_arcanite_fence_normal.name=Innate Arcanite Fence
+item.banana.name=Banana
+
 item.ebon_tome.name=Ebon Tome-WIP
+item.disc/chrono_disc.name=Chrono Disc - WIP

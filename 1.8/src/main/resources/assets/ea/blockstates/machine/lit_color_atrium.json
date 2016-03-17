@@ -1,8 +1,0 @@
-{
-    "variants": {
-        "facing=north": { "model": "ea:machine/lit_color_atrium" },
-        "facing=south": { "model": "ea:machine/lit_color_atrium", "y": 180 },
-        "facing=west":  { "model": "ea:machine/lit_color_atrium", "y": 270 },
-        "facing=east":  { "model": "ea:machine/lit_color_atrium", "y": 90 }
-    }
-}

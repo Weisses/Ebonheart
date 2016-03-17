@@ -1,8 +1,0 @@
-{
-    "parent": "block/orientable",
-    "textures": {
-        "top": "ea:blocks/machines/color_atrium_top",
-        "front": "ea:blocks/machines/color_atrium_front_off",
-        "side": "ea:blocks/machines/color_atrium_side"
-    }
-}

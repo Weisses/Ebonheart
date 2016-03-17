@@ -22,8 +22,6 @@ public class BlockMystic extends Block {
 		this.setUnlocalizedName("gem/mystic/mystic_block_normal");
 		this.setCreativeTab(EbonArtsMod.tabEbonArtsBlocks);
 		this.setHarvestLevel("pickaxe", 2);
-		this.setHardness(5f);
-		this.setResistance(1000f);
 		this.setStepSound(soundTypeStone);
 	}
 }

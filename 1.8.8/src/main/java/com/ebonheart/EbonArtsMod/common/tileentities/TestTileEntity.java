@@ -19,6 +19,7 @@ public class TestTileEntity extends TileEntity implements IInventory{
 		this.inventory = new ItemStack[this.getSizeInventory()];
 	}
 
+	
 	public String getName() {
 		return this.hasCustomName() ? this.customName : "container.tile_entity";
 	}
@@ -178,6 +179,7 @@ public class TestTileEntity extends TileEntity implements IInventory{
 		}
 	}
 
+	//@Override
 	public ItemStack removeStackFromSlot(int index) {
 		// TODO Auto-generated method stub
 		return null;
@@ -190,6 +192,7 @@ public class TestTileEntity extends TileEntity implements IInventory{
 		this.setInventorySlotContents(index, null);
 		return stack;
 	}
+
 
 	@Override
 	public String getCommandSenderName() {

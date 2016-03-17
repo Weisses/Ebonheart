@@ -8,6 +8,7 @@ import com.ebonheart.EbonArtsMod.client.InitBlocksEARender;
 import com.ebonheart.EbonArtsMod.client.InitEntityEARender;
 import com.ebonheart.EbonArtsMod.client.InitItemsEARender;
 import com.ebonheart.EbonArtsMod.init.InitEntityEA;
+import com.ebonheart.EbonArtsMod.init.InitTileEntitiesEA;
 
 public class ClientProxy extends CommonProxy {
 	
@@ -17,10 +18,10 @@ public class ClientProxy extends CommonProxy {
 		super.preInit(event);
 		
 		InitBlocksEARender.preInit();
-		//InitTileEntitiesEA.init();
-		//InitTileEntitiesEA.register();
 		
 		
+		
+		//InitTileEntitiesEA.registerRenders();
 	}
 	
 	@Override
@@ -32,9 +33,9 @@ public class ClientProxy extends CommonProxy {
 		InitBlocksEARender.registerRenders();
 		InitEntityEARender.registerRenders();
 		
+		
+		
 		//InitEntityEARender.registerParticle(null, null);
-		
-		
 		//InitBlocksEARender.registerSpecialRenders();
 	}
 	

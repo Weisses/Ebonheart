@@ -1,6 +1,7 @@
 {
     "ambientocclusion": false,
     "textures": {
+        "particle": "ea:blocks/gems/katcheen/katcheen_block_side",
         "0": "ea:blocks/gems/katcheen/katcheen_block_side",
         "1": "blocks/torch_on"
     },

@@ -9,12 +9,15 @@ public class BlocksEA {
 	public static Block velious_ore;
 	public static Block arcanite_ore;
 	public static Block katcheen_ore;
-	public static Block ebon_ore;
 	public static Block necrocite_ore;
 	public static Block soularite_ore;
+	public static Block ebonheart_ore;
+	public static Block ebon_ore;
 	public static Block ebon_ore_nether;
 	
-	public static Block tutorialTileEntity;
+	
+	//public static Block tutorialTileEntity;
+	
 	//public static Block onyxius_ore;
 	//public static Block carnelian_ore;
 	//public static Block velium_ore;
@@ -142,11 +145,13 @@ public class BlocksEA {
 	//public static Block necrocite_door;
 	//public static Block soularite_door;
 	
+	public static Block cobble_mystic_block;
+	public static Block cobble_mystic_block_normal;
+	
 	public static Block mystic_block;
 	public static Block mystic_block_normal;
 	
-	public static Block innate_mystic_block;
-	public static Block innate_mystic_block_normal;
+	
 	
 	public static Block paper_block;
 	public static Block leather_block;

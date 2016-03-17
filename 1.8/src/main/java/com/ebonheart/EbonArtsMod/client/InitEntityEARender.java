@@ -2,7 +2,6 @@ package com.ebonheart.EbonArtsMod.client;
 
 import net.minecraft.client.Minecraft;
 import net.minecraft.client.particle.EntityFX;
-import net.minecraft.client.renderer.entity.RenderFireball;
 import net.minecraft.client.renderer.entity.RenderManager;
 import net.minecraft.entity.Entity;
 import net.minecraft.util.BlockPos;
@@ -10,8 +9,8 @@ import net.minecraft.world.World;
 import net.minecraftforge.fml.client.registry.RenderingRegistry;
 
 import com.ebonheart.EbonArtsMod.client.entity.EntityCandleFX;
-import com.ebonheart.EbonArtsMod.client.render.projectile.RenderEbonheart;
-import com.ebonheart.EbonArtsMod.common.entity.EntityEbonheart;
+import com.ebonheart.EbonArtsMod.client.render.projectile.RenderEnchantedEbonheart;
+import com.ebonheart.EbonArtsMod.common.entity.EntityEnchantedEbonheart;
 import com.ebonheart.EbonArtsMod.references.ItemsEA;
 
 public final class InitEntityEARender extends ItemsEA {
@@ -33,7 +32,7 @@ public final class InitEntityEARender extends ItemsEA {
 	{
 			
 		
-		registerRender(EntityEbonheart.class);
+		registerRender(EntityEnchantedEbonheart.class);
 		
 		
 	}
@@ -43,9 +42,8 @@ public final class InitEntityEARender extends ItemsEA {
 		
 		EARender = Minecraft.getMinecraft().getRenderManager(); 
 
-		RenderingRegistry.registerEntityRenderingHandler(classIn, new RenderEbonheart(EARender, 0.5f));
+		RenderingRegistry.registerEntityRenderingHandler(classIn, new RenderEnchantedEbonheart(EARender, 0.5f));
 		
-		//RenderingRegistry.registerEntityRenderingHandler(EntityEbonheart.class, new RenderFireball(EARender, 0));
 		
 		
 	}

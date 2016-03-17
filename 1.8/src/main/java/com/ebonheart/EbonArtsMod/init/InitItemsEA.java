@@ -7,15 +7,18 @@ import net.minecraftforge.common.util.EnumHelper;
 import net.minecraftforge.fml.common.registry.GameRegistry;
 
 import com.ebonheart.EbonArtsMod.common.items.ItemMusicDiscEA;
+import com.ebonheart.EbonArtsMod.common.items.Omniplex;
 import com.ebonheart.EbonArtsMod.common.items.armor.ItemArcaniteArmor;
 import com.ebonheart.EbonArtsMod.common.items.armor.ItemKatcheenArmor;
 import com.ebonheart.EbonArtsMod.common.items.resources.ItemArcanite;
 import com.ebonheart.EbonArtsMod.common.items.resources.ItemDraconiumDust;
 import com.ebonheart.EbonArtsMod.common.items.resources.ItemDragonFruit;
 import com.ebonheart.EbonArtsMod.common.items.resources.ItemEbonheart;
+import com.ebonheart.EbonArtsMod.common.items.resources.ItemEnchantedEbonheart;
 import com.ebonheart.EbonArtsMod.common.items.resources.ItemEmpoweredBlade;
 import com.ebonheart.EbonArtsMod.common.items.resources.ItemGlowstoneShard;
 import com.ebonheart.EbonArtsMod.common.items.resources.ItemKatcheen;
+import com.ebonheart.EbonArtsMod.common.items.resources.ItemMirroringDisc;
 import com.ebonheart.EbonArtsMod.common.items.resources.ItemNecrocite;
 import com.ebonheart.EbonArtsMod.common.items.resources.ItemObsidianShard;
 import com.ebonheart.EbonArtsMod.common.items.resources.ItemSoularite;
@@ -60,10 +63,30 @@ public class InitItemsEA extends ItemsEA {
 		necrocite = new ItemNecrocite();
 		soularite = new ItemSoularite();
 		ebonheart = new ItemEbonheart();
+		obsidian_shards = new ItemObsidianShard();
+		glowstone_shards = new ItemGlowstoneShard();
+		
+		
+		
+		
+		
+		
+		
+		glowing_disc = new ItemMusicDiscEA("disc/glowing_disc", "records.glowing_disc");
+		shimmering_disc = new ItemMusicDiscEA("disc/shimmering_disc", "records.shimmering_disc");
+		laminate_disc = new ItemMusicDiscEA("disc/laminate_disc", "records.laminate_disc");
+		resilient_disc = new ItemMusicDiscEA("disc/resilient_disc", "records.resilient_disc");
+		dismal_disc = new ItemMusicDiscEA("disc/dismal_disc", "records.dismal_disc");
+		ethereal_disc = new ItemMusicDiscEA("disc/ethereal_disc", "records.ethereal_disc");
+		//chrono_disc = new ItemMusicDiscEA("disc/chrono_disc", "records.chrono_disc");
+		
+		mirroring_disc = new ItemMirroringDisc("disc/mirroring_disc", "records.mirroring_disc");
 		
 		empowered_blade = new ItemEmpoweredBlade("tool/empowered_blade");
 		
-		shimmering_disc = new ItemMusicDiscEA("shimmering_disc", "records.shimmering_disc");
+		enchanted_ebonheart = new ItemEnchantedEbonheart();
+		
+		dragon_fruit = (ItemFood) new ItemDragonFruit(6, 1.0F, true);
 		
 		arcanite_pickaxe = new ItemArcanitePickaxe("tool/arcanite_pickaxe", arcaniteToolMaterial);
 		arcanite_axe = new ItemArcaniteAxe("tool/arcanite_axe", arcaniteToolMaterial);
@@ -92,12 +115,12 @@ public class InitItemsEA extends ItemsEA {
 		despair = new ItemDespair("tool/despair", specialToolMaterial);
 		souleater = new ItemSouleater("tool/souleater", specialToolMaterial);
 		
-		obsidian_shards = new ItemObsidianShard();
-		glowstone_shards = new ItemGlowstoneShard();
 		
 		
-		banana = (ItemFood) new ItemFood(3, 0.3F, false).setUnlocalizedName("banana");
-		dragon_fruit = (ItemFood) new ItemDragonFruit(6, 1.0F, true);
+		//omniplex = new Omniplex().setUnlocalizedName("omniplex");
+		
+		//banana = (ItemFood) new ItemFood(3, 0.3F, false).setUnlocalizedName("banana");
+		
 		
 	}
 	
@@ -113,9 +136,28 @@ public class InitItemsEA extends ItemsEA {
 		GameRegistry.registerItem(soularite, soularite.getUnlocalizedName().substring(5));
 		GameRegistry.registerItem(ebonheart, ebonheart.getUnlocalizedName().substring(5));
 		
-		GameRegistry.registerItem(empowered_blade, empowered_blade.getUnlocalizedName().substring(5));
+		GameRegistry.registerItem(obsidian_shards, obsidian_shards.getUnlocalizedName().substring(5));
+		GameRegistry.registerItem(glowstone_shards, glowstone_shards.getUnlocalizedName().substring(5));
 		
+		
+		
+		
+		
+		GameRegistry.registerItem(glowing_disc, glowing_disc.getUnlocalizedName().substring(5));
 		GameRegistry.registerItem(shimmering_disc, shimmering_disc.getUnlocalizedName().substring(5));
+		GameRegistry.registerItem(laminate_disc, laminate_disc.getUnlocalizedName().substring(5));
+		GameRegistry.registerItem(resilient_disc, resilient_disc.getUnlocalizedName().substring(5));
+		GameRegistry.registerItem(dismal_disc, dismal_disc.getUnlocalizedName().substring(5));
+		GameRegistry.registerItem(ethereal_disc, ethereal_disc.getUnlocalizedName().substring(5));
+		//GameRegistry.registerItem(chrono_disc, chrono_disc.getUnlocalizedName().substring(5));
+		
+		GameRegistry.registerItem(mirroring_disc, mirroring_disc.getUnlocalizedName().substring(5));
+		
+		GameRegistry.registerItem(empowered_blade, empowered_blade.getUnlocalizedName().substring(5));
+		GameRegistry.registerItem(enchanted_ebonheart, enchanted_ebonheart.getUnlocalizedName().substring(5));
+		
+		
+		
 		
 		GameRegistry.registerItem(arcanite_pickaxe, arcanite_pickaxe.getUnlocalizedName().substring(5));
 		GameRegistry.registerItem(arcanite_axe, arcanite_axe.getUnlocalizedName().substring(5));
@@ -144,12 +186,12 @@ public class InitItemsEA extends ItemsEA {
 		GameRegistry.registerItem(despair, despair.getUnlocalizedName().substring(5));
 		GameRegistry.registerItem(souleater, souleater.getUnlocalizedName().substring(5));
 		
-		GameRegistry.registerItem(obsidian_shards, obsidian_shards.getUnlocalizedName().substring(5));
-		GameRegistry.registerItem(glowstone_shards, glowstone_shards.getUnlocalizedName().substring(5));
-		
-		
-		
-		GameRegistry.registerItem(banana, banana.getUnlocalizedName().substring(5));
 		GameRegistry.registerItem(dragon_fruit, dragon_fruit.getUnlocalizedName().substring(5));
+		
+		
+		//GameRegistry.registerItem(omniplex, omniplex.getUnlocalizedName().substring(5));
+		
+		//GameRegistry.registerItem(banana, banana.getUnlocalizedName().substring(5));
+		
 	}
 }

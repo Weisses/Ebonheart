@@ -20,8 +20,18 @@ public final class InitItemsEARender extends ItemsEA {
 		registerRender(soularite);
 		registerRender(ebonheart);
 		
+		registerRender(enchanted_ebonheart);
+		
 		registerRender(empowered_blade);
+		
+		registerRender(glowing_disc);
 		registerRender(shimmering_disc);
+		registerRender(laminate_disc);
+		registerRender(resilient_disc);
+		registerRender(dismal_disc);
+		registerRender(ethereal_disc);
+		//registerRender(chrono_disc);
+		registerRender(mirroring_disc);
 		
 		registerRender(arcanite_pickaxe);
 		registerRender(arcanite_axe);
@@ -54,7 +64,8 @@ public final class InitItemsEARender extends ItemsEA {
 		registerRender(obsidian_shards);
 		registerRender(glowstone_shards);
 		
-		registerRender(banana);
+		//registerRender(omniplex);
+		//registerRender(banana);
 		registerRender(dragon_fruit);
 	}
 	
