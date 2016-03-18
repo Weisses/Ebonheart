@@ -38,22 +38,22 @@ public final class InitBlocksEARender extends BlocksEA {
 				"ea:gem/mystic/mystic_block_black");
 		
 		ModelBakery.addVariantName(Item.getItemFromBlock(InitBlocksEA.cobble_mystic_block), 
-				"ea:gem/mystic/innate_mystic_block_white", 
-				"ea:gem/mystic/innate_mystic_block_orange", 
-				"ea:gem/mystic/innate_mystic_block_magenta", 
-				"ea:gem/mystic/innate_mystic_block_lightblue", 
-				"ea:gem/mystic/innate_mystic_block_yellow", 
-				"ea:gem/mystic/innate_mystic_block_lime", 
-				"ea:gem/mystic/innate_mystic_block_pink", 
-				"ea:gem/mystic/innate_mystic_block_gray", 
-				"ea:gem/mystic/innate_mystic_block_lightgray", 
-				"ea:gem/mystic/innate_mystic_block_cyan", 
-				"ea:gem/mystic/innate_mystic_block_purple", 
-				"ea:gem/mystic/innate_mystic_block_blue", 
-				"ea:gem/mystic/innate_mystic_block_brown", 
-				"ea:gem/mystic/innate_mystic_block_green", 
-				"ea:gem/mystic/innate_mystic_block_red", 
-				"ea:gem/mystic/innate_mystic_block_black");
+				"ea:gem/mystic/cobble_mystic_block_white", 
+				"ea:gem/mystic/cobble_mystic_block_orange", 
+				"ea:gem/mystic/cobble_mystic_block_magenta", 
+				"ea:gem/mystic/cobble_mystic_block_lightblue", 
+				"ea:gem/mystic/cobble_mystic_block_yellow", 
+				"ea:gem/mystic/cobble_mystic_block_lime", 
+				"ea:gem/mystic/cobble_mystic_block_pink", 
+				"ea:gem/mystic/cobble_mystic_block_gray", 
+				"ea:gem/mystic/cobble_mystic_block_lightgray", 
+				"ea:gem/mystic/cobble_mystic_block_cyan", 
+				"ea:gem/mystic/cobble_mystic_block_purple", 
+				"ea:gem/mystic/cobble_mystic_block_blue", 
+				"ea:gem/mystic/cobble_mystic_block_brown", 
+				"ea:gem/mystic/cobble_mystic_block_green", 
+				"ea:gem/mystic/cobble_mystic_block_red", 
+				"ea:gem/mystic/cobble_mystic_block_black");
 		
 		
 	}
