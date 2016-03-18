@@ -22,7 +22,7 @@ plugins {
 */
 version = "v1.4.1a-mc1.8.8"
 group= "com.ebonheart.EbonArtsMod" // http://maven.apache.org/guides/mini/guide-naming-conventions.html
-archivesBaseName = "EbonArtsMod"
+archivesBaseName = "EbonArts"
 
 minecraft {
     version = "1.8.8-11.15.0.1655"
