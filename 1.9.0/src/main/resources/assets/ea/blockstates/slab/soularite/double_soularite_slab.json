@@ -1,0 +1,6 @@
+{
+    "variants": {
+        "variant=false": { "model": "ea:slab/soularite/full_soularite_slab" },
+        "variant=true":    { "model": "ea:slab/soularite/full_soularite_slab" }
+    }
+}
