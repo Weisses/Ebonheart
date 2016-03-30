@@ -5,7 +5,7 @@ import com.ebonheart.EbonArtsMod.init.InitItemsEA;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
 import net.minecraft.util.WeightedRandomChestContent;
-import net.minecraftforge.common.ChestGenHooks;
+//import net.minecraftforge.common.ChestGenHooks;
 
 public class WorldChestHooks extends InitItemsEA {
 

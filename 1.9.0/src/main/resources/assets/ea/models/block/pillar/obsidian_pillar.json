@@ -1,4 +1,5 @@
 {
+    "parent": "block/cube_all",
     "textures": {
         "particle": "ea:blocks/gems/obsidian/obsidian_pillar_side",
         "0": "ea:blocks/gems/obsidian/obsidian_pillar_side",

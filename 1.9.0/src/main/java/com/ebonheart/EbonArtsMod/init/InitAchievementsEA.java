@@ -6,6 +6,7 @@ import net.minecraft.item.ItemStack;
 import net.minecraft.stats.Achievement;
 import net.minecraft.stats.AchievementList;
 import net.minecraftforge.common.AchievementPage;
+import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.fml.common.FMLCommonHandler;
 import net.minecraftforge.fml.common.eventhandler.SubscribeEvent;
 import net.minecraftforge.fml.common.gameevent.PlayerEvent;
@@ -102,7 +103,7 @@ public class InitAchievementsEA
 		pageIndex = AchievementPage.getAchievementPages().size();
 		ebon_arts_page = new AchievementPage(Reference.MOD_NAME, AchievementHelper.achievements.toArray(new Achievement[AchievementHelper.achievements.size()]));
 		AchievementPage.registerAchievementPage(ebon_arts_page);
-	
+	//MinecraftForge.EVENT_BUS(new AchievementsEA());
 	FMLCommonHandler.instance().bus().register(new AchievementsEA());
 	}
 	

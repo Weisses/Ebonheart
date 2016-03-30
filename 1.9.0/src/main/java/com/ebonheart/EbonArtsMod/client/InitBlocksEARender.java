@@ -21,7 +21,6 @@ public final class InitBlocksEARender extends BlocksEA {
 	public static void preInit() 
 	{
 		
-		
 		ModelBakery.registerItemVariants(Item.getItemFromBlock(InitBlocksEA.cobble_mystic_block), 
 				new ResourceLocation(Reference.MOD_ID + ":gem/mystic/cobble_mystic_block_white"),
 				new ResourceLocation(Reference.MOD_ID + ":gem/mystic/cobble_mystic_block_orange"),

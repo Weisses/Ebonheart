@@ -38,8 +38,8 @@ public class CommonProxy {
 		InitRecipesEA.initShapedRecipe();
 		InitRecipesEA.initShapelessRecipe();
 		InitRecipesEA.initSmeltingRecipe();
-		InitAchievementsEA.init();
-		WorldChestHooks.init();
+		//InitAchievementsEA.init();
+		//WorldChestHooks.init();
 		
 		
 		GameRegistry.registerWorldGenerator(new WorldGeneratorEA(), 0);

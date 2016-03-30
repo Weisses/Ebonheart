@@ -6,7 +6,7 @@ import net.minecraft.creativetab.CreativeTabs;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
-import net.minecraft.util.BlockPos;
+import net.minecraft.util.math.BlockPos;
 import net.minecraft.util.EnumFacing;
 import net.minecraft.world.World;
 
@@ -53,19 +53,19 @@ public class ItemDoor extends Item
             }
             else
             {
-                placeDoor(worldIn, pos, EnumFacing.fromAngle((double)playerIn.rotationYaw), this.block);
+                placeDoor(worldIn, pos, EnumFacing.fromAngle((double)playerIn.rotationYaw), this.block, iblockstate);
                 --stack.stackSize;
                 return true;
             }
         }
     }
 
-    public static void placeDoor(World worldIn, BlockPos pos, EnumFacing facing, Block door)
+    public static void placeDoor(World worldIn, BlockPos pos, EnumFacing facing, Block door, IBlockState state)
     {
         BlockPos blockpos1 = pos.offset(facing.rotateY());
         BlockPos blockpos2 = pos.offset(facing.rotateYCCW());
-        int i = (worldIn.getBlockState(blockpos2).getBlock().isNormalCube() ? 1 : 0) + (worldIn.getBlockState(blockpos2.up()).getBlock().isNormalCube() ? 1 : 0);
-        int j = (worldIn.getBlockState(blockpos1).getBlock().isNormalCube() ? 1 : 0) + (worldIn.getBlockState(blockpos1.up()).getBlock().isNormalCube() ? 1 : 0);
+        int i = (worldIn.getBlockState(blockpos2).getBlock().isNormalCube(state) ? 1 : 0) + (worldIn.getBlockState(blockpos2.up()).getBlock().isNormalCube(state) ? 1 : 0);
+        int j = (worldIn.getBlockState(blockpos1).getBlock().isNormalCube(state) ? 1 : 0) + (worldIn.getBlockState(blockpos1.up()).getBlock().isNormalCube(state) ? 1 : 0);
         boolean flag = worldIn.getBlockState(blockpos2).getBlock() == door || worldIn.getBlockState(blockpos2.up()).getBlock() == door;
         boolean flag1 = worldIn.getBlockState(blockpos1).getBlock() == door || worldIn.getBlockState(blockpos1.up()).getBlock() == door;
         boolean flag2 = false;

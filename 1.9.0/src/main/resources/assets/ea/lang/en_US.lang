@@ -3,6 +3,7 @@
 //-----Creative Tabs-----
 itemGroup.tabEbonArtsBlocks=Ebon Arts Blocks
 itemGroup.tabEbonArtsItems=Ebon Arts Items
+itemGroup.tabEbonArtsDyeables=Ebon Arts Dyeables
 
 //-----Items-----
 item.gem/draconium_dust.name=Draconium Dust
@@ -80,6 +81,9 @@ tile.gem/arcanite/arcanite_block.name=Block of Arcanite
 tile.gem/katcheen/katcheen_block.name=Block of Katcheen
 tile.gem/necrocite/necrocite_block.name=Block of Necrocite
 tile.gem/soularite/soularite_block.name=Block of Soularite
+tile.gem/obsidian/obsidian_block.name=Block of Purified Obsidian
+tile.gem/glowstone/glowstone_block.name=Block of Purified Glowstone
+tile.gem/ebonheart/ebonheart_block.name=Block of Ebonheart
 
 tile.gem/draconium/draconium_block_brick.name=Draconium Brick
 tile.gem/velious/velious_block_brick.name=Velious Brick
@@ -87,6 +91,9 @@ tile.gem/arcanite/arcanite_block_brick.name=Arcanite Brick
 tile.gem/katcheen/katcheen_block_brick.name=Katcheen Brick
 tile.gem/necrocite/necrocite_block_brick.name=Necrocite Brick
 tile.gem/soularite/soularite_block_brick.name=Soularite Brick
+tile.gem/obsidian/obsidian_block_brick.name=Purified Obsidian Brick
+tile.gem/glowstone/glowstone_block_brick.name=Purified Glowstone Brick
+tile.gem/ebonheart/ebonheart_block_brick.name=Ebonheart Brick
 
 tile.fence/draconium_fence.name=Draconium Fence
 tile.fence/velious_fence.name=Velious Fence
@@ -94,6 +101,9 @@ tile.fence/arcanite_fence.name=Arcanite Fence
 tile.fence/katcheen_fence.name=Katcheen Fence
 tile.fence/necrocite_fence.name=Necrocite Fence
 tile.fence/soularite_fence.name=Soularite Fence
+tile.fence/obsidian_fence.name=Purified Obsidian Fence
+tile.fence/glowstone_fence.name=Purified Glowstone Fence
+tile.fence/ebonheart_fence.name=Ebonheart Fence
 
 tile.fence/draconium_fence_gate.name=Draconium Gate
 tile.fence/velious_fence_gate.name=Velious Gate
@@ -101,6 +111,9 @@ tile.fence/arcanite_fence_gate.name=Arcanite Gate
 tile.fence/katcheen_fence_gate.name=Katcheen Gate
 tile.fence/necrocite_fence_gate.name=Necrocite Gate
 tile.fence/soularite_fence_gate.name=Soularite Gate
+tile.fence/obsidian_fence_gate.name=Purified Obsidian Gate
+tile.fence/glowstone_fence_gate.name=Purified Glowstone Gate
+tile.fence/ebonheart_fence_gate.name=Ebonheart Gate
 
 tile.wall/draconium_wall.name=Draconium Wall
 tile.wall/velious_wall.name=Velious Wall
@@ -108,6 +121,9 @@ tile.wall/arcanite_wall.name=Arcanite Wall
 tile.wall/katcheen_wall.name=Katcheen Wall
 tile.wall/necrocite_wall.name=Necrocite Wall
 tile.wall/soularite_wall.name=Soularite Wall
+tile.wall/obsidian_wall.name=Purified Obsidian Wall
+tile.wall/glowstone_wall.name=Purified Glowstone Wall
+tile.wall/ebonheart_wall.name=Ebonheart Wall
 
 tile.stairs/draconium_stairs.name=Draconium Stairs
 tile.stairs/velious_stairs.name=Velious Stairs
@@ -115,6 +131,9 @@ tile.stairs/arcanite_stairs.name=Arcanite Stairs
 tile.stairs/katcheen_stairs.name=Katcheen Stairs
 tile.stairs/necrocite_stairs.name=Necrocite Stairs
 tile.stairs/soularite_stairs.name=Soularite Stairs
+tile.stairs/obsidian_stairs.name=Purified Obsidian Stairs
+tile.stairs/glowstone_stairs.name=Purified Glowstone Stairs
+tile.stairs/ebonheart_stairs.name=Ebonheart Stairs
 
 tile.slab/draconium/draconium_slab.name=Draconium Slab
 tile.slab/velious/velious_slab.name=Velious Slab
@@ -122,6 +141,9 @@ tile.slab/arcanite/arcanite_slab.name=Arcanite Slab
 tile.slab/katcheen/katcheen_slab.name=Katcheen Slab
 tile.slab/necrocite/necrocite_slab.name=Necrocite Slab
 tile.slab/soularite/soularite_slab.name=Soularite Slab
+tile.slab/obsidian/obsidian_slab.name=Purified Obsidian Slab
+tile.slab/glowstone/glowstone_slab.name=Purified Glowstone Slab
+tile.slab/ebonheart/ebonheart_slab.name=Ebonheart Slab
 
 tile.gem/draconium/draconium_torch.name=Draconium Torch
 tile.gem/velious/velious_torch.name=Velious Torch
@@ -129,6 +151,9 @@ tile.gem/arcanite/arcanite_torch.name=Arcanite Torch
 tile.gem/katcheen/katcheen_torch.name=Katcheen Torch
 tile.gem/necrocite/necrocite_torch.name=Necrocite Torch
 tile.gem/soularite/soularite_torch.name=Soularite Torch
+tile.gem/obsidian/obsidian_torch.name=Purified Obsidian Torch
+tile.gem/glowstone/glowstone_torch.name=Purified Glowstone Torch
+tile.gem/ebonheart/ebonheart_torch.name=Ebonheart Torch
 
 tile.ladder/draconium_ladder.name=Draconium Ladder
 tile.ladder/velious_ladder.name=Velious Ladder
@@ -136,6 +161,9 @@ tile.ladder/arcanite_ladder.name=Arcanite Ladder
 tile.ladder/katcheen_ladder.name=Katcheen Ladder
 tile.ladder/necrocite_ladder.name=Necrocite Ladder
 tile.ladder/soularite_ladder.name=Soularite Ladder
+tile.ladder/obsidian_ladder.name=Purified Obsidian Ladder
+tile.ladder/glowstone_ladder.name=Purified Glowstone Ladder
+tile.ladder/ebonheart_ladder.name=Ebonheart Ladder
 
 tile.pillar/draconium_pillar.name=Draconium Pillar
 tile.pillar/velious_pillar.name=Velious Pillar
@@ -143,43 +171,13 @@ tile.pillar/arcanite_pillar.name=Arcanite Pillar
 tile.pillar/katcheen_pillar.name=Katcheen Pillar
 tile.pillar/necrocite_pillar.name=Necrocite Pillar
 tile.pillar/soularite_pillar.name=Soularite Pillar
+tile.pillar/obsidian_pillar.name=Purified Obsidian Pillar
+tile.pillar/glowstone_pillar.name=Purified Glowstone Pillar
+tile.pillar/ebonheart_pillar.name=Ebonheart Pillar
 
 tile.paper_block.name=Block of Paper
 tile.leather_block.name=Block of Leather
 tile.reed_block.name=Block of Sugar Cane
-
-tile.gem/glowstone/glowstone_block.name=Block of Purified Glowstone
-tile.gem/glowstone/glowstone_block_brick.name=Purified Glowstone Brick
-tile.fence/glowstone_fence.name=Purified Glowstone Fence
-tile.fence/glowstone_fence_gate.name=Purified Glowstone Gate
-tile.wall/glowstone_wall.name=Purified Glowstone Wall
-tile.stairs/glowstone_stairs.name=Purified Glowstone Stairs
-tile.slab/glowstone/glowstone_slab.name=Purified Glowstone Slab
-tile.gem/glowstone/glowstone_torch.name=Purified Glowstone Torch
-tile.ladder/glowstone_ladder.name=Purified Glowstone Ladder
-tile.pillar/glowstone_pillar.name=Purified Glowstone Pillar
-
-tile.gem/obsidian/obsidian_block.name=Block of Purified Obsidian
-tile.gem/obsidian/obsidian_block_brick.name=Purified Obsidian Brick
-tile.fence/obsidian_fence.name=Purified Obsidian Fence
-tile.fence/obsidian_fence_gate.name=Purified Obsidian Gate
-tile.wall/obsidian_wall.name=Purified Obsidian Wall
-tile.stairs/obsidian_stairs.name=Purified Obsidian Stairs
-tile.slab/obsidian/obsidian_slab.name=Purified Obsidian Slab
-tile.gem/obsidian/obsidian_torch.name=Purified Obsidian Torch
-tile.ladder/obsidian_ladder.name=Purified Obsidian Ladder
-tile.pillar/obsidian_pillar.name=Purified Obsidian Pillar
-
-tile.gem/ebonheart/ebonheart_block.name=Block of Ebonheart
-tile.gem/ebonheart/ebonheart_block_brick.name=Ebonheart Brick
-tile.fence/ebonheart_fence.name=Ebonheart Fence
-tile.fence/ebonheart_fence_gate.name=Ebonheart Gate
-tile.wall/ebonheart_wall.name=Ebonheart Wall
-tile.stairs/ebonheart_stairs.name=Ebonheart Stairs
-tile.slab/ebonheart/ebonheart_slab.name=Ebonheart Slab
-tile.gem/ebonheart/ebonheart_torch.name=Ebonheart Torch
-tile.ladder/ebonheart_ladder.name=Ebonheart Ladder
-tile.pillar/ebonheart_pillar.name=Ebonheart Pillar
 
 //-----Tools-----
 item.tool/arcanite_pickaxe.name=Arcanite Pickaxe

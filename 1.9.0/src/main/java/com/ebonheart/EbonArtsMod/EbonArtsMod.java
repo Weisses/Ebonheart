@@ -13,6 +13,7 @@ import net.minecraftforge.fml.common.event.FMLPreInitializationEvent;
 import net.minecraftforge.fml.common.eventhandler.SubscribeEvent;
 
 import com.ebonheart.EbonArtsMod.api.creative.EbonArtsTabBlocks;
+import com.ebonheart.EbonArtsMod.api.creative.EbonArtsTabDyeables;
 import com.ebonheart.EbonArtsMod.api.creative.EbonArtsTabItems;
 import com.ebonheart.EbonArtsMod.api.helper.LogHelper;
 import com.ebonheart.EbonArtsMod.configs.EbonArtsConfiguration;
@@ -28,6 +29,7 @@ public class EbonArtsMod {
 	
 	public static final EbonArtsTabBlocks tabEbonArtsBlocks = new EbonArtsTabBlocks("tabEbonArtsBlocks");
 	public static final EbonArtsTabItems tabEbonArtsItems = new EbonArtsTabItems("tabEbonArtsItems");
+	public static final EbonArtsTabDyeables tabEbonArtsDyeables = new EbonArtsTabDyeables("tabEbonArtsDyeables");
 	
 	@Mod.Instance(Reference.MOD_ID)
 	public static EbonArtsMod instance;
@@ -66,7 +68,9 @@ public class EbonArtsMod {
 	@SubscribeEvent
 	public void onConfigChanged(ConfigChangedEvent.OnConfigChangedEvent event)
 	{
-		if(event.modID.equals(Reference.MOD_ID))
+		if(event.getModID()
+				//.modID
+				.equals(Reference.MOD_ID))
 		{
 			EbonArtsConfiguration.syncConfig();
 			LogHelper.info("Configuration synced.");

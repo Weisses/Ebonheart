@@ -1,13 +1,16 @@
 package com.ebonheart.EbonArtsMod.init;
 
+import net.minecraft.init.SoundEvents;
 import net.minecraft.inventory.EntityEquipmentSlot;
 import net.minecraft.item.Item;
 import net.minecraft.item.Item.ToolMaterial;
 import net.minecraft.item.ItemArmor;
 import net.minecraft.item.ItemFood;
+import net.minecraft.item.ItemShield;
 import net.minecraftforge.common.util.EnumHelper;
 import net.minecraftforge.fml.common.registry.GameRegistry;
 
+import com.ebonheart.EbonArtsMod.api.SoundEventsEA;
 import com.ebonheart.EbonArtsMod.common.items.ItemMusicDiscEA;
 import com.ebonheart.EbonArtsMod.common.items.Omniplex;
 import com.ebonheart.EbonArtsMod.common.items.armor.ItemArcaniteArmor;
@@ -41,6 +44,7 @@ import com.ebonheart.EbonArtsMod.common.items.tools.ItemKatcheenShovel;
 import com.ebonheart.EbonArtsMod.common.items.tools.ItemKatcheenSword;
 import com.ebonheart.EbonArtsMod.common.items.tools.ItemMassacre;
 import com.ebonheart.EbonArtsMod.common.items.tools.ItemSouleater;
+import com.ebonheart.EbonArtsMod.common.items.tools.ItemTestShield;
 import com.ebonheart.EbonArtsMod.references.ItemsEA;
 
 public class InitItemsEA extends ItemsEA {
@@ -74,15 +78,18 @@ public class InitItemsEA extends ItemsEA {
 		
 		
 		
-		glowing_disc = new ItemMusicDiscEA("disc/glowing_disc", "records.glowing_disc", null);
-		shimmering_disc = new ItemMusicDiscEA("disc/shimmering_disc", "records.shimmering_disc", null);
-		laminate_disc = new ItemMusicDiscEA("disc/laminate_disc", "records.laminate_disc", null);
-		resilient_disc = new ItemMusicDiscEA("disc/resilient_disc", "records.resilient_disc", null);
-		dismal_disc = new ItemMusicDiscEA("disc/dismal_disc", "records.dismal_disc", null);
-		ethereal_disc = new ItemMusicDiscEA("disc/ethereal_disc", "records.ethereal_disc", null);
+		glowing_disc = new ItemMusicDiscEA("disc/glowing_disc", "glowing_disc", 
+				//SoundEvents.record_ward
+				SoundEventsEA.record_glowing_disc
+				);
+		//shimmering_disc = new ItemMusicDiscEA("disc/shimmering_disc", "records.shimmering_disc", null);
+		//laminate_disc = new ItemMusicDiscEA("disc/laminate_disc", "records.laminate_disc", null);
+		//resilient_disc = new ItemMusicDiscEA("disc/resilient_disc", "records.resilient_disc", null);
+		//dismal_disc = new ItemMusicDiscEA("disc/dismal_disc", "records.dismal_disc", null);
+		//ethereal_disc = new ItemMusicDiscEA("disc/ethereal_disc", "records.ethereal_disc", null);
 		//chrono_disc = new ItemMusicDiscEA("disc/chrono_disc", "records.chrono_disc");
 		
-		mirroring_disc = new ItemMirroringDisc("disc/mirroring_disc", "records.mirroring_disc", null);
+		//mirroring_disc = new ItemMirroringDisc("disc/mirroring_disc", "records.mirroring_disc", null);
 		
 		empowered_blade = new ItemEmpoweredBlade("tool/empowered_blade");
 		
@@ -121,7 +128,9 @@ public class InitItemsEA extends ItemsEA {
 		despair = new ItemDespair("tool/despair", specialToolMaterial);
 		souleater = new ItemSouleater("tool/souleater", specialToolMaterial);
 		
-		
+		//test_shield = new ItemShield(
+				//"tool/shield/test_shield"
+		//		);
 		
 		//omniplex = new Omniplex().setUnlocalizedName("omniplex");
 		
@@ -150,14 +159,14 @@ public class InitItemsEA extends ItemsEA {
 		
 		
 		GameRegistry.registerItem(glowing_disc, glowing_disc.getUnlocalizedName().substring(5));
-		GameRegistry.registerItem(shimmering_disc, shimmering_disc.getUnlocalizedName().substring(5));
-		GameRegistry.registerItem(laminate_disc, laminate_disc.getUnlocalizedName().substring(5));
-		GameRegistry.registerItem(resilient_disc, resilient_disc.getUnlocalizedName().substring(5));
-		GameRegistry.registerItem(dismal_disc, dismal_disc.getUnlocalizedName().substring(5));
-		GameRegistry.registerItem(ethereal_disc, ethereal_disc.getUnlocalizedName().substring(5));
+		//GameRegistry.registerItem(shimmering_disc, shimmering_disc.getUnlocalizedName().substring(5));
+		//GameRegistry.registerItem(laminate_disc, laminate_disc.getUnlocalizedName().substring(5));
+		//GameRegistry.registerItem(resilient_disc, resilient_disc.getUnlocalizedName().substring(5));
+		//GameRegistry.registerItem(dismal_disc, dismal_disc.getUnlocalizedName().substring(5));
+		//GameRegistry.registerItem(ethereal_disc, ethereal_disc.getUnlocalizedName().substring(5));
 		//GameRegistry.registerItem(chrono_disc, chrono_disc.getUnlocalizedName().substring(5));
 		
-		GameRegistry.registerItem(mirroring_disc, mirroring_disc.getUnlocalizedName().substring(5));
+		//GameRegistry.registerItem(mirroring_disc, mirroring_disc.getUnlocalizedName().substring(5));
 		
 		GameRegistry.registerItem(empowered_blade, empowered_blade.getUnlocalizedName().substring(5));
 		GameRegistry.registerItem(enchanted_ebonheart, enchanted_ebonheart.getUnlocalizedName().substring(5));
@@ -191,6 +200,9 @@ public class InitItemsEA extends ItemsEA {
 		GameRegistry.registerItem(blazefury, blazefury.getUnlocalizedName().substring(5));
 		GameRegistry.registerItem(despair, despair.getUnlocalizedName().substring(5));
 		GameRegistry.registerItem(souleater, souleater.getUnlocalizedName().substring(5));
+		
+		//GameRegistry.registerItem(test_shield, test_shield.getUnlocalizedName().substring(5));
+		
 		
 		GameRegistry.registerItem(dragon_fruit, dragon_fruit.getUnlocalizedName().substring(5));
 		

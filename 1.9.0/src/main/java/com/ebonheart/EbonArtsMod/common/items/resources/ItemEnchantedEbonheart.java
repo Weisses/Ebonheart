@@ -10,13 +10,16 @@ import net.minecraft.block.state.IBlockState;
 import net.minecraft.entity.item.EntityExpBottle;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.init.Blocks;
+import net.minecraft.init.SoundEvents;
 import net.minecraft.item.EnumRarity;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
 import net.minecraft.stats.StatList;
+import net.minecraft.util.ActionResult;
 import net.minecraft.util.EnumActionResult;
 import net.minecraft.util.EnumFacing;
 import net.minecraft.util.EnumHand;
+import net.minecraft.util.SoundCategory;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.util.text.TextFormatting;
 import net.minecraft.world.World;
@@ -46,6 +49,37 @@ public class ItemEnchantedEbonheart extends Item {
         return true;
     }
 	
+	
+	public ActionResult<ItemStack> onItemRightClick(ItemStack itemStackIn, World worldIn, EntityPlayer playerIn, EnumHand hand)
+    {
+		if(playerIn.isSneaking())
+		{
+			if (!playerIn.capabilities.isCreativeMode)
+			{
+				--itemStackIn.stackSize;
+			}
+
+			worldIn.playSound((EntityPlayer)null, playerIn.posX, playerIn.posY, playerIn.posZ, SoundEvents.entity_experience_bottle_throw, SoundCategory.NEUTRAL, 0.5F, 0.4F / (itemRand.nextFloat() * 0.4F + 0.8F));
+
+			if (!worldIn.isRemote)
+			{
+				//EntityEnchantedEbonheart
+        	
+				EntityEnchantedEbonheart entityenchantedebonheart = new EntityEnchantedEbonheart(worldIn, playerIn);
+				entityenchantedebonheart.func_184538_a(playerIn, playerIn.rotationPitch, playerIn.rotationYaw, -20.0F, 0.7F, 1.0F);
+				worldIn.spawnEntityInWorld(entityenchantedebonheart);
+        	
+        	//EntityExpBottle entityexpbottle = new EntityExpBottle(worldIn, playerIn);
+            //entityexpbottle.func_184538_a(playerIn, playerIn.rotationPitch, playerIn.rotationYaw, -20.0F, 0.7F, 1.0F);
+            //worldIn.spawnEntityInWorld(entityexpbottle);
+			}
+
+			playerIn.addStat(StatList.func_188057_b(this));
+			return new ActionResult(EnumActionResult.SUCCESS, itemStackIn);
+		}
+		return new ActionResult(EnumActionResult.SUCCESS, itemStackIn);
+    }
+	
 	//@Override
 	//public ItemStack onItemRightClick(ItemStack stack, World worldIn, EntityPlayer playerIn)
     //{
@@ -67,28 +101,28 @@ public class ItemEnchantedEbonheart extends Item {
     //    return stack;
     //}
 	
-	
-	public EnumActionResult onItemUse(ItemStack stack, EntityPlayer playerIn, World worldIn, BlockPos pos, EnumHand hand, EnumFacing facing, float hitX, float hitY, float hitZ)
-    {
-        IBlockState iblockstate = worldIn.getBlockState(pos);
+	//@Override
+	//public EnumActionResult onItemUse(ItemStack stack, EntityPlayer playerIn, World worldIn, BlockPos pos, EnumHand hand, EnumFacing facing, float hitX, float hitY, float hitZ)
+    //{
+    //    IBlockState iblockstate = worldIn.getBlockState(pos);
 
-        if (iblockstate.getBlock() == Blocks.jukebox && !((Boolean)iblockstate.getValue(BlockJukebox.HAS_RECORD)).booleanValue())
-        {
-            if (!worldIn.isRemote)
-            {
-                ((BlockJukebox)Blocks.jukebox).insertRecord(worldIn, pos, iblockstate, stack);
-                worldIn.playAuxSFXAtEntity((EntityPlayer)null, 1010, pos, Item.getIdFromItem(this));
-                --stack.stackSize;
-                playerIn.addStat(StatList.recordPlayed);
-            }
+    //    if (iblockstate.getBlock() == Blocks.jukebox && !((Boolean)iblockstate.getValue(BlockJukebox.HAS_RECORD)).booleanValue())
+    //    {
+    //        if (!worldIn.isRemote)
+    //        {
+    //            ((BlockJukebox)Blocks.jukebox).insertRecord(worldIn, pos, iblockstate, stack);
+    //            worldIn.playAuxSFXAtEntity((EntityPlayer)null, 1010, pos, Item.getIdFromItem(this));
+    //            --stack.stackSize;
+    //            playerIn.addStat(StatList.recordPlayed);
+    //        }
 
-            return EnumActionResult.SUCCESS;
-        }
-        else
-        {
-            return EnumActionResult.PASS;
-        }
-    }
+    //        return EnumActionResult.SUCCESS;
+    //    }
+    //    else
+    //    {
+    ///        return EnumActionResult.PASS;
+    //    }
+    //}
 	
 	
 	public EnumRarity getRarity(ItemStack stack)

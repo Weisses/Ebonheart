@@ -1,7 +1,7 @@
 package com.ebonheart.EbonArtsMod.common.blocks.basic;
 
 import com.ebonheart.EbonArtsMod.EbonArtsMod;
-import com.ebonheart.EbonArtsMod.common.blocks.basic.EABlockMeta.EnumType;
+import com.ebonheart.EbonArtsMod.common.blocks.basic.dyeables.EABlockMeta.EnumType;
 
 import net.minecraft.block.Block;
 import net.minecraft.block.BlockDirectional;

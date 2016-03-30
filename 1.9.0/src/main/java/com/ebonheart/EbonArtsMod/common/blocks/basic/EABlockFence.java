@@ -3,7 +3,7 @@ package com.ebonheart.EbonArtsMod.common.blocks.basic;
 import java.util.List;
 
 import com.ebonheart.EbonArtsMod.EbonArtsMod;
-import com.ebonheart.EbonArtsMod.common.blocks.basic.EABlockMeta.EnumType;
+import com.ebonheart.EbonArtsMod.common.blocks.basic.dyeables.EABlockMeta.EnumType;
 
 import net.minecraft.block.Block;
 import net.minecraft.block.BlockFence;
@@ -30,11 +30,20 @@ public class EABlockFence extends BlockFence {
 
 	public EABlockFence(String unlocalizedName) 
 	{
-		super(Material.rock, null);
+		super(
+				//Material.rock
+				Material.wood, null);
+		
+		
 		this.setUnlocalizedName(unlocalizedName);
 		this.setCreativeTab(EbonArtsMod.tabEbonArtsBlocks);
 		this.setHarvestLevel("pickaxe", 2);
 		this.setStepSound(stepSound.STONE);
+	}
+	
+	public void isFlamable(World worldIn, BlockPos posIn, EnumFacing face)
+	{
+		this.isFlammable(worldIn, posIn, face);
 	}
 	
 }

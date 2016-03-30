@@ -27,10 +27,7 @@ import com.ebonheart.EbonArtsMod.EbonArtsMod;
 import com.google.common.base.Predicate;
 
 public class EABlockTorchArcanite extends BlockTorch {
-
-	    
-	    
-
+		
 	    public EABlockTorchArcanite(String unlocalizedName)
 	    {
 	        super();
@@ -42,25 +39,25 @@ public class EABlockTorchArcanite extends BlockTorch {
 	    }
 	    
 	    @SideOnly(Side.CLIENT)
-	    public void randomDisplayTick(World worldIn, BlockPos pos, IBlockState state, Random rand)
+	    public void randomDisplayTick(IBlockState worldIn, World pos, BlockPos state, Random rand)
 	    {
-	        EnumFacing enumfacing = (EnumFacing)state.getValue(FACING);
-	        double d0 = (double)pos.getX() + 0.5D;
-	        double d1 = (double)pos.getY() + 0.7D;
-	        double d2 = (double)pos.getZ() + 0.5D;
+	        EnumFacing enumfacing = (EnumFacing)worldIn.getValue(FACING);
+	        double d0 = (double)state.getX() + 0.5D;
+	        double d1 = (double)state.getY() + 0.7D;
+	        double d2 = (double)state.getZ() + 0.5D;
 	        double d3 = 0.22D;
 	        double d4 = 0.27D;
 
 	        if (enumfacing.getAxis().isHorizontal())
 	        {
 	            EnumFacing enumfacing1 = enumfacing.getOpposite();
-	            worldIn.spawnParticle(EnumParticleTypes.SPELL_MOB_AMBIENT, d0 + d4 * (double)enumfacing1.getFrontOffsetX(), d1 + d3, d2 + d4 * (double)enumfacing1.getFrontOffsetZ(), 0.0D, 5.0D, 2.0D, new int[0]);
-	            worldIn.spawnParticle(EnumParticleTypes.REDSTONE, d0 + d4 * (double)enumfacing1.getFrontOffsetX(), d1 + d3, d2 + d4 * (double)enumfacing1.getFrontOffsetZ(), 0.0D, 5.1D, 3.4D, new int[0]);
+	            pos.spawnParticle(EnumParticleTypes.SPELL_MOB_AMBIENT, d0 + d4 * (double)enumfacing1.getFrontOffsetX(), d1 + d3, d2 + d4 * (double)enumfacing1.getFrontOffsetZ(), 0.0D, 5.0D, 2.0D, new int[0]);
+	            pos.spawnParticle(EnumParticleTypes.REDSTONE, d0 + d4 * (double)enumfacing1.getFrontOffsetX(), d1 + d3, d2 + d4 * (double)enumfacing1.getFrontOffsetZ(), 0.0D, 5.1D, 3.4D, new int[0]);
 	        }
 	        else
 	        {
-	            worldIn.spawnParticle(EnumParticleTypes.SPELL_MOB_AMBIENT, d0, d1, d2, 0.0D, 5.0D, 2.0D, new int[0]);
-	            worldIn.spawnParticle(EnumParticleTypes.REDSTONE, d0, d1, d2, 0.0D, 5.1D, 3.4D, new int[0]);
+	            pos.spawnParticle(EnumParticleTypes.SPELL_MOB_AMBIENT, d0, d1, d2, 0.0D, 5.0D, 2.0D, new int[0]);
+	            pos.spawnParticle(EnumParticleTypes.REDSTONE, d0, d1, d2, 0.0D, 5.1D, 3.4D, new int[0]);
 	        }
 	    }
 

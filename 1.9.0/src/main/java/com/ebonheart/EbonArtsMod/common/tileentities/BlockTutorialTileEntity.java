@@ -19,12 +19,12 @@ public class BlockTutorialTileEntity extends BlockContainer {
 		return new TileEntityTutorial();
 	}
 
-	@Override
+	//@Override
 	public boolean isOpaqueCube() {
 		return false;
 	}
 
-	@Override
+	//@Override
 	public int getRenderType() {
 		return -1;
 	}

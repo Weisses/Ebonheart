@@ -5,14 +5,17 @@ import com.ebonheart.EbonArtsMod.common.tileentities.TestTileEntity;
 
 import net.minecraft.client.gui.inventory.GuiContainer;
 import net.minecraft.client.renderer.GlStateManager;
-import net.minecraft.inventory.Container;
 import net.minecraft.inventory.IInventory;
 import net.minecraft.util.ResourceLocation;
+import net.minecraft.util.text.ITextComponent;
+
+
 
 public class GuiTestTileEntity extends GuiContainer {
 
     private IInventory playerInv;
     private TestTileEntity te;
+    private ITextComponent icc;
     
 	public GuiTestTileEntity(IInventory playerInv, TestTileEntity te) {
 		super(new ContainerTestTileEntity(playerInv, te));
@@ -33,9 +36,7 @@ public class GuiTestTileEntity extends GuiContainer {
 
 	@Override
 	protected void drawGuiContainerForegroundLayer(int mouseX, int mouseY) {
-		String s = this.te
-				//.getDisplayName()
-				.getUnformattedText();
+		String s = this.te.getDisplayName().getUnformattedText();
         this.fontRendererObj.drawString(s, 88 - this.fontRendererObj.getStringWidth(s) / 2, 6, 4210752);		//#404040
         this.fontRendererObj.drawString(this.playerInv.getDisplayName().getUnformattedText(), 8, 72, 4210752);	//#404040
 	}

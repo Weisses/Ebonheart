@@ -6,6 +6,7 @@ import net.minecraft.block.Block;
 import net.minecraft.block.BlockLog;
 import net.minecraft.block.BlockRotatedPillar;
 import net.minecraft.block.material.Material;
+import net.minecraft.block.state.IBlockState;
 import net.minecraftforge.fml.relauncher.Side;
 import net.minecraftforge.fml.relauncher.SideOnly;
 
@@ -22,7 +23,7 @@ public class BlockBrickNecrocite extends Block {
 		this.useNeighborBrightness=true;
 	}
     
-    public boolean isOpaqueCube()
+    public boolean isOpaqueCube(IBlockState state)
     {
     	return false;
     }

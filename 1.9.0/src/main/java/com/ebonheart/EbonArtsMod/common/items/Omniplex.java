@@ -113,19 +113,19 @@ public class Omniplex extends Item {
 	public static void rightClickBlock(PlayerInteractEvent event) 
 	{
 		//ItemStack stack = event.entityPlayer.getCurrentEquippedItem();
-		Block block_clicked = event.world.getBlockState(event.pos).getBlock(); 
-		TileEntity container = event.world.getTileEntity(event.pos);
-		World world = event.world;
-		EntityPlayer entityPlayer = event.entityPlayer;
+		//Block block_clicked = event.world.getBlockState(event.pos).getBlock(); 
+		//TileEntity container = event.world.getTileEntity(event.pos);
+		//World world = event.world;
+		//EntityPlayer entityPlayer = event.entityPlayer;
 		
 		boolean isValid = false;
 		boolean wasCopy = false;
 		//boolean isEmpty = (stack.getTagCompound() == null);
  
-		if((block_clicked == Blocks.wall_sign || block_clicked == Blocks.standing_sign) &&  container instanceof TileEntitySign)
-		{
+		//if((block_clicked == Blocks.wall_sign || block_clicked == Blocks.standing_sign) &&  container instanceof TileEntitySign)
+		//{
 			
-			TileEntitySign sign = (TileEntitySign)container;
+		//	TileEntitySign sign = (TileEntitySign)container;
 			 
 			//if(isEmpty) 
 			//{ 
@@ -139,15 +139,15 @@ public class Omniplex extends Item {
 			//} 
 			
 			//isValid = true; 
-		}
+		//}
 		
 		
-		if(isValid)
-		{
-			if(event.world.isRemote)
-			{	
+		//if(isValid)
+		//{
+		//	if(event.world.isRemote)
+		//	{	
 				//spawnParticle(event.world, EnumParticleTypes.PORTAL,event.pos.getX(),event.pos.getY(),event.pos.getZ()); 
-			}
+		//	}
 	//		else
 	//		{ 
 	//			if(wasCopy == false)//on paste, we consume the item
@@ -160,7 +160,7 @@ public class Omniplex extends Item {
 	//		}
 	//		
 			//playSoundAt(event.entityPlayer, "random.fizz"); 
-		}  
+		//}  
 	}  
 	
 	

@@ -17,10 +17,4 @@ public class BlockDoubleSlabObsidian extends EABlockSlabObsidian {
 	{
 		return true;
 	}
-
-	@Override
-	public Comparable<?> getTypeForItem(ItemStack stack) {
-		// TODO Auto-generated method stub
-		return null;
-	}
 }

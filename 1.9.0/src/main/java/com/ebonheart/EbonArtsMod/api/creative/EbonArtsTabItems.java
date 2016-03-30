@@ -16,6 +16,6 @@ public class EbonArtsTabItems extends CreativeTabs {
 	@Override
 	public Item getTabIconItem() 
 	{
-		return InitItemsEA.ebonheart;
+		return InitItemsEA.necrocite;
 	}
 }

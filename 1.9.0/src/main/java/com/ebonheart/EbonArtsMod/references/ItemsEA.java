@@ -69,6 +69,8 @@ public class ItemsEA {
 	public static Item massacre;
 	public static Item souleater;
 	
+	public static Item test_shield;
+	
 	//public static ItemFood banana;
 	public static ItemFood dragon_fruit;
 	

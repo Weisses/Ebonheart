@@ -1,0 +1,6 @@
+{
+    "parent": "block/fence_side",
+    "textures": {
+        "texture": "ea:blocks/gems/obsidian/obsidian_block_brick_base"
+    }
+}

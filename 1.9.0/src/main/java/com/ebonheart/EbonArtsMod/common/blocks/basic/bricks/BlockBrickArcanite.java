@@ -26,7 +26,7 @@ public class BlockBrickArcanite extends Block {
 		this.useNeighborBrightness=true;
 	}
     
-    public boolean isOpaqueCube()
+    public boolean isOpaqueCube(IBlockState state)
     {
     	return false;
     }

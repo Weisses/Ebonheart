@@ -11,7 +11,7 @@ import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.inventory.InventoryHelper;
 import net.minecraft.item.ItemStack;
 import net.minecraft.tileentity.TileEntity;
-import net.minecraft.util.BlockPos;
+import net.minecraft.util.math.BlockPos;
 import net.minecraft.util.EnumFacing;
 import net.minecraft.world.World;
 
@@ -46,7 +46,7 @@ public class TestBlockTileEntity extends BlockContainer {
 		}
 	}
 	
-	@Override
+	//@Override
 	public boolean onBlockActivated(World world, BlockPos pos, IBlockState state, EntityPlayer player, EnumFacing side, float hitX, float hitY, float hitZ) {
 		if (!world.isRemote) {
 			player.openGui(EbonArtsMod.instance, GuiHandler.TEST_TILE_ENTITY_GUI, world, pos.getX(), pos.getY(), pos.getZ());
@@ -54,7 +54,7 @@ public class TestBlockTileEntity extends BlockContainer {
 		return true;
 	}
 
-	@Override
+	//@Override
 	public int getRenderType() {
 		return 3;
 	}
