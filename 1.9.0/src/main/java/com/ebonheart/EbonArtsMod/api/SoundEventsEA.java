@@ -2,6 +2,7 @@ package com.ebonheart.EbonArtsMod.api;
 
 import com.ebonheart.EbonArtsMod.api.helper.LogHelper;
 import com.ebonheart.EbonArtsMod.references.Reference;
+import com.ebonheart.EbonArtsMod.references.SoundsEA;
 
 import net.minecraft.init.Bootstrap;
 import net.minecraft.util.ResourceLocation;
@@ -12,20 +13,21 @@ import net.minecraftforge.fml.relauncher.SideOnly;
 
 
 
-public class SoundEventsEA
+public class SoundEventsEA extends SoundsEA
 {
     
-    public static final SoundEvent record_glowing_disc;
+    //public static final SoundEvent record_glowing_disc;
 
 
     private static SoundEvent getRegisteredSoundEvent(String id)
     {
         SoundEvent soundevent = (SoundEvent)SoundEvent.soundEventRegistry.getObject(new ResourceLocation(
-        		Reference.MOD_ID + ":" + 
+        		//Reference.MOD_ID + ":" + 
         id));
 
-        LogHelper.info("MUSIC TEST : " + Reference.MOD_ID + ":" + 
-                id);
+        LogHelper.warn("MUSIC TEST : " + //(SoundEvent)SoundEvent.soundEventRegistry.getObject(new ResourceLocation(
+        		//Reference.MOD_ID + ":" + 
+        id);
         
         if (soundevent == null)
         {
@@ -46,7 +48,8 @@ public class SoundEventsEA
         else
         {
             
-            record_glowing_disc = getRegisteredSoundEvent("ea:sounds.records.glowing_disc"
+        	
+            record_glowing_disc = getRegisteredSoundEvent("sounds/records/glowing_disc"
             		//"record.ward"
             		);
 

@@ -6,6 +6,7 @@ import java.util.Map;
 
 import com.ebonheart.EbonArtsMod.EbonArtsMod;
 import com.ebonheart.EbonArtsMod.api.SoundEventsEA;
+import com.ebonheart.EbonArtsMod.api.helper.LogHelper;
 import com.ebonheart.EbonArtsMod.init.InitItemsEA;
 import com.ebonheart.EbonArtsMod.references.Reference;
 import com.google.common.collect.Maps;
@@ -33,21 +34,28 @@ import net.minecraft.world.World;
 import net.minecraftforge.fml.relauncher.Side;
 import net.minecraftforge.fml.relauncher.SideOnly;
 
-public class ItemMusicDiscEA extends ItemRecord {
+public class ItemMusicDiscEA extends Item {
 	
     private static final Map<SoundEvent, ItemMusicDiscEA> RECORDS = Maps.<SoundEvent, ItemMusicDiscEA>newHashMap();
     private final SoundEvent sound;
-    private final String field_185077_c;
+    //private final String field_185077_c;
+    private final String music;
 
-    public ItemMusicDiscEA(String unlocalizedName, String p_i46742_1_, SoundEvent soundIn)
+    public ItemMusicDiscEA(
+    		String unlocalizedName, 
+    		String name, SoundEvent soundIn)
     {
-    	super(p_i46742_1_, soundIn);
-        this.field_185077_c = "item.record." + p_i46742_1_ + ".desc";
+    	//super(name, soundIn);
+        this.music = "item.record." + name + ".desc";
         this.sound = soundIn;
         this.maxStackSize = 1;
         this.setCreativeTab(EbonArtsMod.tabEbonArtsItems);
         RECORDS.put(this.sound, this);
+        
+        
         this.setUnlocalizedName(unlocalizedName);
+        
+        //LogHelper.info("ItemMusicDiscEA : " + field_185077_c);
     }
 
     /**
@@ -87,7 +95,7 @@ public class ItemMusicDiscEA extends ItemRecord {
     @SideOnly(Side.CLIENT)
     public String getRecordNameLocal()
     {
-        return I18n.translateToLocal(this.field_185077_c);
+        return I18n.translateToLocal(this.music);
     }
 
     /**
@@ -104,7 +112,7 @@ public class ItemMusicDiscEA extends ItemRecord {
      * @param name The name of the record to play
      * @return The resource location for the audio, null to use default.
      */
-    //public net.minecraft.util.ResourceLocation getRecordResource(String name)
+    public net.minecraft.util.ResourceLocation getRecordResource(String name)
     //{
         
         //ResourceLocation location = super.getRecordResource(Reference.MOD_ID + ":");
@@ -112,10 +120,14 @@ public class ItemMusicDiscEA extends ItemRecord {
     //	return new net.minecraft.util.ResourceLocation(name);
     //}
 
-    @Override
-	public ResourceLocation getRecordResource(String record) {
-		ResourceLocation location = super.getRecordResource(Reference.MOD_ID + ":" + this.field_185077_c);
-		return location;
+    //@Override
+	//public ResourceLocation getRecordResource(String record) 
+    {
+    	//LogHelper.info(name);
+    	return new net.minecraft.util.ResourceLocation(Reference.MOD_ID + ":" + "sounds/records/" + name);
+    	
+		//ResourceLocation location = super.getRecordResource(Reference.MOD_ID + ":" + this.music);
+		//return location;
 	}
     
     @SideOnly(Side.CLIENT)

@@ -1,13 +1,15 @@
 package com.ebonheart.EbonArtsMod.api;
 
+import com.ebonheart.EbonArtsMod.api.helper.LogHelper;
 import com.ebonheart.EbonArtsMod.references.Reference;
+import com.ebonheart.EbonArtsMod.references.SoundsEA;
 
 import net.minecraft.util.ResourceLocation;
 import net.minecraft.util.registry.RegistryNamespaced;
 import net.minecraftforge.fml.relauncher.Side;
 import net.minecraftforge.fml.relauncher.SideOnly;
 
-public class SoundEventEA
+public class SoundEventEA extends SoundsEA
 {
     public static final RegistryNamespaced<ResourceLocation, SoundEventEA> SoundEventEARegistry = new RegistryNamespaced();
     private final ResourceLocation soundName;
@@ -44,13 +46,16 @@ public class SoundEventEA
         //registerSound("record.stal");
         //registerSound("record.strad");
         //registerSound("record.wait");
-        registerSound("records.glowing_disc");
+        registerSound("sounds/records/glowing_disc");
         
     }
 
     private static void registerSound(String soundNameIn)
     {
-        ResourceLocation resourcelocation = new ResourceLocation(soundNameIn);
+        ResourceLocation resourcelocation = new ResourceLocation(Reference.MOD_ID + ":" +  soundNameIn);
         SoundEventEARegistry.register(SoundEventEAId++, resourcelocation, new SoundEventEA(resourcelocation));
+        
+        //LogHelper.info("SoundEventEA : " + (SoundEventEAId) + resourcelocation + new SoundEventEA(resourcelocation));
+        
     }
 }

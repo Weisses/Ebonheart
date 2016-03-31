@@ -78,10 +78,12 @@ public class InitItemsEA extends ItemsEA {
 		
 		
 		
-		glowing_disc = new ItemMusicDiscEA("disc/glowing_disc", "glowing_disc", 
+		//glowing_disc = new ItemMusicDiscEA(
+		//		"disc/glowing_disc", 
+		//		"glowing_disc", 
 				//SoundEvents.record_ward
-				SoundEventsEA.record_glowing_disc
-				);
+		//		SoundEventsEA.record_glowing_disc
+		//		);
 		//shimmering_disc = new ItemMusicDiscEA("disc/shimmering_disc", "records.shimmering_disc", null);
 		//laminate_disc = new ItemMusicDiscEA("disc/laminate_disc", "records.laminate_disc", null);
 		//resilient_disc = new ItemMusicDiscEA("disc/resilient_disc", "records.resilient_disc", null);
@@ -158,7 +160,7 @@ public class InitItemsEA extends ItemsEA {
 		
 		
 		
-		GameRegistry.registerItem(glowing_disc, glowing_disc.getUnlocalizedName().substring(5));
+		//GameRegistry.registerItem(glowing_disc, glowing_disc.getUnlocalizedName().substring(5));
 		//GameRegistry.registerItem(shimmering_disc, shimmering_disc.getUnlocalizedName().substring(5));
 		//GameRegistry.registerItem(laminate_disc, laminate_disc.getUnlocalizedName().substring(5));
 		//GameRegistry.registerItem(resilient_disc, resilient_disc.getUnlocalizedName().substring(5));

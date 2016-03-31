@@ -21,6 +21,7 @@ public class ClientProxy extends CommonProxy {
 		
 		InitBlocksEARender.preInit();
 		SoundEventEA.registerSounds();
+		
 		//SoundEventEA.registerSounds();
 		
 		//---------------------------
