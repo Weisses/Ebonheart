@@ -9,7 +9,7 @@ import net.minecraft.util.WeightedRandomChestContent;
 
 public class WorldChestHooks extends InitItemsEA {
 
-	
+	/**
 	public static void init()
 	{
 		//Common
@@ -154,4 +154,6 @@ public class WorldChestHooks extends InitItemsEA {
 		ChestGenHooks.getInfo(ChestGenHooks.STRONGHOLD_LIBRARY).addItem(new WeightedRandomChestContent(new ItemStack(item), 1, 1, 1));
 		//ChestGenHooks.getInfo(ChestGenHooks.VILLAGE_BLACKSMITH).addItem(new WeightedRandomChestContent(new ItemStack(item), 1, 1, 1));
 	}
+	
+	**/
 }

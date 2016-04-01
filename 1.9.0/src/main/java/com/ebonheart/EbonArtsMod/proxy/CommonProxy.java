@@ -38,7 +38,7 @@ public class CommonProxy {
 		InitRecipesEA.initShapedRecipe();
 		InitRecipesEA.initShapelessRecipe();
 		InitRecipesEA.initSmeltingRecipe();
-		//InitAchievementsEA.init();
+		InitAchievementsEA.init();
 		//WorldChestHooks.init();
 		
 		

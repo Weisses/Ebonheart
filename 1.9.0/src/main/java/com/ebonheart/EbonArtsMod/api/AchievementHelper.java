@@ -5,6 +5,7 @@ import java.util.List;
 
 import com.ebonheart.EbonArtsMod.init.InitAchievementsEA;
 import com.ebonheart.EbonArtsMod.init.InitItemsEA;
+import com.google.common.collect.Lists;
 
 import net.minecraft.block.Block;
 import net.minecraft.item.Item;
@@ -15,11 +16,12 @@ import net.minecraftforge.fml.common.gameevent.PlayerEvent;
 
 public class AchievementHelper extends Achievement {
 	
-	public static List<Achievement> achievements = new ArrayList();
+	public static List<Achievement> achievements = Lists.<Achievement>newArrayList();
+	//List<Achievement> achievements = new ArrayList();
 	
-	public AchievementHelper(String name, int x, int y, ItemStack icon, Achievement parent) 
+	public AchievementHelper(String name, int column, int row, ItemStack icon, Achievement parent) 
 	{
-		super("achievement.ea:" + name, "ea:" + name, x, y, icon, parent);
+		super("achievement.ea:" + name, "ea:" + name, column, row, icon, parent);
 		achievements.add(this);
 		registerStat();
 	}

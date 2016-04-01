@@ -1,5 +1,22 @@
 Changelog:
-Build 1811:
+Build 1816:
+	LexManos: Make NoteBlockEvent raw constructor protected to allow subclasses. Closes #2153
+
+Build 1.9-12.16.0.1815-1.9:
+	LexManos: Fix EntityPlayer still running old armor logic. Closes #2670
+	LexManos: Fix shrubs not generating correctly. Closes #2663
+	LexManos: Fix bows not animating properly when picking up ammo while using. Closes #2672
+
+Build 1.9-12.16.0.1814-1.9:
+	mezz: Fix Block.getPickBlock returning an ItemStack with a null Item
+
+Build 1.9-12.16.0.1813-1.9:
+	fry: Fixed StackOverflow caused by the previous commit, closes #2669.
+
+Build 1.9-12.16.0.1812-1.9:
+	fry: Prevent missing model from loading multiple times.
+
+Build 1.9-12.16.0.1811-1.9:
 	fry: Enabled diffuse lighting by default in UnpackedBakedQuad.Builder.
 	fry: Fixed crosshair always being white, closes #2653.
 

@@ -54,7 +54,7 @@ public class ChestGenHooksEA {
 	        }
 
 	        hasInit = true;
-	        // This causes the classes static initializers to run
+	          //This causes the classes static initializers to run
 	        new WorldGenDungeons();
 	        new DesertPyramid();
 	        new JunglePyramid();
@@ -65,10 +65,10 @@ public class ChestGenHooksEA {
 	        new StructureStrongholdPieces.RoomCrossing();
 	        new StructureVillagePieces.House2();
 	        new StructureNetherBridgePieces.Corridor();
-	        WorldServer.fillChestHook();
+	        //WorldServer.fillChestHook();
 	    }
 
-	    // INTERNAL DO NO USE
+	      //INTERNAL DO NO USE
 	    public static void init(String category, List<WeightedRandomChestContent> items, int min, int max)
 	    {
 	        chestInfo.put(category, new ChestGenHooksEA(category, items, min, max));
@@ -76,7 +76,7 @@ public class ChestGenHooksEA {
 
 	    static void addDungeonLoot(ChestGenHooksEA dungeon, ItemStack item, int weight, int min, int max)
 	    {
-	        dungeon.addItem(new WeightedRandomChestContent(item, min, max, weight));
+	        //dungeon.addItem(new WeightedRandomChestContent(item, min, max, weight));
 	    }
 
 	    /**
@@ -85,14 +85,14 @@ public class ChestGenHooksEA {
 	     * @param category The category name
 	     * @return A instance of ChestGenHooks for the specified category.
 	     */
-	    public static ChestGenHooksEA getInfo(String category)
-	    {
-	        if (!chestInfo.containsKey(category))
-	        {
-	            chestInfo.put(category, new ChestGenHooksEA(category));
-	        }
-	        return chestInfo.get(category);
-	    }
+ 	    public static ChestGenHooksEA getInfo(String category)
+ 	    {
+ 	        if (!chestInfo.containsKey(category))
+ 	        {
+ 	            chestInfo.put(category, new ChestGenHooksEA(category));
+ 	        }
+ 	        return chestInfo.get(category);
+ 	    }
 
 	    /**
 	     * Generates an array of items based on the input min/max count.
@@ -132,14 +132,14 @@ public class ChestGenHooksEA {
 	        return ret;
 	    }
 
-	    //shortcut functions, See the non-static versions below
+	     //shortcut functions, See the non-static versions below
 	    public static List<WeightedRandomChestContent> getItems(String category, Random rnd){ return getInfo(category).getItems(rnd); }
 	    public static int getCount(String category, Random rand){ return getInfo(category).getCount(rand); }
 	    public static void addItem(String category, WeightedRandomChestContent item){ getInfo(category).addItem(item); }
 	    public static void removeItem(String category, ItemStack item){ getInfo(category).removeItem(item); }
 	    public static ItemStack getOneItem(String category, Random rand){ return getInfo(category).getOneItem(rand); }
 
-	    @SuppressWarnings("unused")
+	    //@SuppressWarnings("unused")
 	    private String category;
 	    private int countMin = 0;
 	    private int countMax = 0;
@@ -166,10 +166,10 @@ public class ChestGenHooksEA {
 	     *
 	     * @param item The item to add.
 	     */
-	    public void addItem(WeightedRandomChestContent item)
-	    {
-	        contents.add(item);
-	    }
+	     public void addItem(WeightedRandomChestContent item)
+	     {
+	         contents.add(item);
+	     }
 
 	    /**
 	     * Removes all items that match the input item stack, Only metadata and item ID are checked.
@@ -177,44 +177,44 @@ public class ChestGenHooksEA {
 	     *
 	     * @param item The item to check
 	     */
-	    public void removeItem(ItemStack item)
-	    {
-	        Iterator<WeightedRandomChestContent> itr = contents.iterator();
-	        while(itr.hasNext())
-	        {
-	            WeightedRandomChestContent cont = itr.next();
-	            if (item.isItemEqual(cont.theItemId) || (item.getItemDamage() == OreDictionary.WILDCARD_VALUE && item.getItem() == cont.theItemId.getItem()))
-	            {
-	                itr.remove();
-	            }
-	        }
-	    }
+	     public void removeItem(ItemStack item)
+	     {
+	         Iterator<WeightedRandomChestContent> itr = contents.iterator();
+	         while(itr.hasNext())
+	         {
+	             WeightedRandomChestContent cont = itr.next();
+	             if (item.isItemEqual(cont.theItemId) || (item.getItemDamage() == OreDictionary.WILDCARD_VALUE && item.getItem() == cont.theItemId.getItem()))
+	             {
+	                 itr.remove();
+	             }
+	         }
+	     }
 
 	    /**
 	     * Gets an array of all random objects that are associated with this category.
 	     *
 	     * @return The random objects
 	     */
-	    public List<WeightedRandomChestContent> getItems(Random rnd)
-	    {
-	        ArrayList<WeightedRandomChestContent> ret = new ArrayList<WeightedRandomChestContent>();
+	     public List<WeightedRandomChestContent> getItems(Random rnd)
+	     {
+	         ArrayList<WeightedRandomChestContent> ret = new ArrayList<WeightedRandomChestContent>();
+ 
+	         for (WeightedRandomChestContent orig : contents)
+	         {
+	             Item item = orig.theItemId.getItem();
+ 
+	             if (item != null)
+	             {
+	                 //WeightedRandomChestContent n = item.getChestGenBase(this, rnd, orig);
+	                 //if (n != null)
+	                 //{
+	                 //    ret.add(n);
+	                 //}
+	             }
+	         }
 
-	        for (WeightedRandomChestContent orig : contents)
-	        {
-	            Item item = orig.theItemId.getItem();
-
-	            if (item != null)
-	            {
-	                WeightedRandomChestContent n = item.getChestGenBase(this, rnd, orig);
-	                if (n != null)
-	                {
-	                    ret.add(n);
-	                }
-	            }
-	        }
-
-	        return ret;
-	    }
+	         return ret;
+	     }
 
 	    /**
 	     * Gets a random number between countMin and countMax.
@@ -222,10 +222,10 @@ public class ChestGenHooksEA {
 	     * @param rand A RNG
 	     * @return A random number where countMin <= num <= countMax
 	     */
-	    public int getCount(Random rand)
-	    {
-	        return countMin < countMax ? countMin + rand.nextInt(countMax - countMin) : countMin;
-	    }
+	     public int getCount(Random rand)
+	     {
+	         return countMin < countMax ? countMin + rand.nextInt(countMax - countMin) : countMin;
+	     }
 
 	    /**
 	     * Returns a single ItemStack from the possible items in this registry,
@@ -241,9 +241,10 @@ public class ChestGenHooksEA {
 	        return (stacks.length > 0 ? stacks[0] : null);
 	    }
 
-	    //Accessors
+	     //Accessors
 	    public int getMin(){ return countMin; }
 	    public int getMax(){ return countMax; }
 	    public void setMin(int value){ countMin = value; }
 	    public void setMax(int value){ countMax = value; }
 	}
+	    

@@ -25,7 +25,7 @@ public class ItemArcaniteArmor extends ItemArmor
 		canRepair = true;
 		
 	}
-
+/**
 	@Override
 	public void onArmorTick(World world, EntityPlayer player, ItemStack itemStack) {
 		//if (itemStack.getItem() == InitItemsEA.katcheen_helmet) {
@@ -41,10 +41,16 @@ public class ItemArcaniteArmor extends ItemArmor
 		//	effectPlayer(player, Potion.jump, 1, false);
 		//} 
 		
-		if (player.inventory.armorItemInSlot(3) != null && player.inventory.armorItemInSlot(3).getItem() == InitItemsEA.arcanite_helmet
-		        && player.inventory.armorItemInSlot(2) != null && player.inventory.armorItemInSlot(2).getItem() == InitItemsEA.arcanite_chestplate
-		        && player.inventory.armorItemInSlot(1) != null && player.inventory.armorItemInSlot(1).getItem() == InitItemsEA.arcanite_leggings
-		        && player.inventory.armorItemInSlot(0) != null && player.inventory.armorItemInSlot(0).getItem() == InitItemsEA.arcanite_boots) 
+		if (       player.inventory.armorItemInSlot(3) != null 
+				&& 
+				player.inventory.armorItemInSlot(3).getItem() == InitItemsEA.arcanite_helmet
+				)
+		        //&& player.inventory.armorItemInSlot(2) != null 
+		        //&& player.inventory.armorItemInSlot(2).getItem() == InitItemsEA.arcanite_chestplate
+		        //&& player.inventory.armorItemInSlot(1) != null 
+		        //&& player.inventory.armorItemInSlot(1).getItem() == InitItemsEA.arcanite_leggings
+		        //&& player.inventory.armorItemInSlot(0) != null 
+		        //&& player.inventory.armorItemInSlot(0).getItem() == InitItemsEA.arcanite_boots) 
 		{
 		        //this.effectPlayer(player, Potion.resistance, 0, true);
 			this.effectPlayer(player, Potion.getPotionById(3)
@@ -78,6 +84,7 @@ public class ItemArcaniteArmor extends ItemArmor
 	        		, 159, strength, true, showParticles));
 	} 
 	
+	**/
 
 	public EnumRarity getRarity(ItemStack stack)
     {

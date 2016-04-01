@@ -55,7 +55,7 @@ public class InitAchievementsEA
 	
 	public static void init()
 	{
-		
+		//alchemical_compendium = (new Achievement("alchemical_compendium", "overpowered", 6, 4, new ItemStack(Items.golden_apple, 1, 1), mine_draconium_ore)).setSpecial().registerStat();
 		//alchemical_compendium = new AchievementHelper(Reference.ALCHEMICAL_COMPENDIUM, 0, 0, InitItemsEA.alchemical_compendium, (Achievement)null).setSpecial();//.setSpecial() makes spikes, they are the hard to get achievements
 		
 		mine_draconium_ore = new AchievementHelper(Reference.MINE_DRACONIUM_ORE, -1, -1, InitBlocksEA.draconium_ore, (Achievement)null);//.func_180788_c();

@@ -24,7 +24,7 @@ public class ItemKatcheenArmor extends ItemArmor
 		this.setCreativeTab(EbonArtsMod.tabEbonArtsItems);
 		
 	}
-
+/**
 	@Override
 	public void onArmorTick(World world, EntityPlayer player, ItemStack itemStack) {
 		//if (itemStack.getItem() == InitItemsEA.katcheen_helmet) {
@@ -76,7 +76,7 @@ public class ItemKatcheenArmor extends ItemArmor
 	        		//.id
 	        		, 159, strength, true, showParticles));
 	} 
-	
+	**/
 
 	public EnumRarity getRarity(ItemStack stack)
     {
