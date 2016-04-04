@@ -26,7 +26,7 @@ public final class InitItemsEARender extends ItemsEA {
 		
 		registerRender(empowered_blade);
 		
-		//registerRender(glowing_disc);
+		registerRender(glowing_disc);
 		//registerRender(shimmering_disc);
 		//registerRender(laminate_disc);
 		//registerRender(resilient_disc);

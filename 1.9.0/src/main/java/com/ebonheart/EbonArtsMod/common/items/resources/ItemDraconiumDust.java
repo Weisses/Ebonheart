@@ -14,6 +14,7 @@ public class ItemDraconiumDust extends Item {
 	
 	public ItemDraconiumDust() 
 	{
+		this.setRegistryName("gem/draconium_dust");
 		this.setUnlocalizedName("gem/draconium_dust");
 		this.setCreativeTab(EbonArtsMod.tabEbonArtsItems);
 	}

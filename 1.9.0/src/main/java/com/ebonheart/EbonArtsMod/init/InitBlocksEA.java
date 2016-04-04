@@ -80,6 +80,7 @@ import com.ebonheart.EbonArtsMod.common.blocks.world.BlockOreNecrocite;
 import com.ebonheart.EbonArtsMod.common.blocks.world.BlockOreSoularite;
 import com.ebonheart.EbonArtsMod.common.blocks.world.BlockOreVelious;
 import com.ebonheart.EbonArtsMod.references.BlocksEA;
+import com.ebonheart.EbonArtsMod.references.Reference;
 
 public class InitBlocksEA extends BlocksEA {
 	
@@ -240,6 +241,8 @@ public class InitBlocksEA extends BlocksEA {
 	
 	public static void register()
 	{
+		//GameRegistry.register(draconium_ore);//.setRegistryName(Reference.MOD_ID, "draconium_ore");
+		
 		GameRegistry.registerBlock(draconium_ore, draconium_ore.getUnlocalizedName().substring(5));
 		GameRegistry.registerBlock(velious_ore, velious_ore.getUnlocalizedName().substring(5));
 		GameRegistry.registerBlock(arcanite_ore, arcanite_ore.getUnlocalizedName().substring(5));

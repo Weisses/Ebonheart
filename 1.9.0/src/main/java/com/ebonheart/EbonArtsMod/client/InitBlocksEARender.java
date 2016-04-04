@@ -64,7 +64,7 @@ public final class InitBlocksEARender extends BlocksEA {
 	
 	public static void registerRenders()
 	{
-		registerRender(draconium_ore);
+		//registerRender(draconium_ore);
 		registerRender(velious_ore);
 		registerRender(arcanite_ore);
 		registerRender(katcheen_ore);

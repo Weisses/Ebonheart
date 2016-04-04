@@ -4,13 +4,22 @@ import com.ebonheart.EbonArtsMod.api.helper.LogHelper;
 import com.ebonheart.EbonArtsMod.references.Reference;
 import com.ebonheart.EbonArtsMod.references.SoundsEA;
 
+import net.minecraft.client.audio.ISound;
+import net.minecraft.client.audio.SoundManager;
+//import net.minecraft.client.audio.SoundManager;
 import net.minecraft.util.ResourceLocation;
 import net.minecraft.util.registry.RegistryNamespaced;
+import net.minecraftforge.client.event.sound.SoundEvent;
+import net.minecraftforge.client.event.sound.SoundLoadEvent;
+//import net.minecraftforge.client.event.sound.SoundEvent;
 import net.minecraftforge.fml.relauncher.Side;
 import net.minecraftforge.fml.relauncher.SideOnly;
+//import net.minecraft.client.audio.SoundManager;
 
 public class SoundEventEA extends SoundsEA
 {
+
+
     public static final RegistryNamespaced<ResourceLocation, SoundEventEA> SoundEventEARegistry = new RegistryNamespaced();
     private final ResourceLocation soundName;
     private static int SoundEventEAId = 0;
@@ -46,16 +55,19 @@ public class SoundEventEA extends SoundsEA
         //registerSound("record.stal");
         //registerSound("record.strad");
         //registerSound("record.wait");
-        registerSound("sounds/records/glowing_disc");
+        registerSound("record_glowing_disc");
         
     }
 
     private static void registerSound(String soundNameIn)
     {
-        ResourceLocation resourcelocation = new ResourceLocation(Reference.MOD_ID + ":" +  soundNameIn);
+        ResourceLocation resourcelocation = new ResourceLocation(Reference.MOD_ID + ":" + "sounds/records/" + soundNameIn);
         SoundEventEARegistry.register(SoundEventEAId++, resourcelocation, new SoundEventEA(resourcelocation));
         
         //LogHelper.info("SoundEventEA : " + (SoundEventEAId) + resourcelocation + new SoundEventEA(resourcelocation));
         
     }
+    
+    
+    
 }

@@ -23,6 +23,7 @@ public class BlockOreDraconium extends Block {
 	public BlockOreDraconium(int harvestlevel, float lightlevel, float hardness) 
 	{
 		super(Material.rock);
+		this.setRegistryName("ore/draconium_ore");
 		this.setUnlocalizedName("ore/draconium_ore");
 		this.setCreativeTab(EbonArtsMod.tabEbonArtsBlocks);
 		this.setHarvestLevel("pickaxe", harvestlevel); //("pickaxe", 2) is iron
