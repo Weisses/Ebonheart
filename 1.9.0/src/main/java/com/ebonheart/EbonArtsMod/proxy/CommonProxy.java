@@ -8,6 +8,7 @@ import net.minecraftforge.fml.common.registry.GameRegistry;
 
 import com.ebonheart.EbonArtsMod.EbonArtsMod;
 import com.ebonheart.EbonArtsMod.api.GuiHandler;
+import com.ebonheart.EbonArtsMod.api.SoundEventsEA;
 import com.ebonheart.EbonArtsMod.common.world.WorldChestHooks;
 import com.ebonheart.EbonArtsMod.common.world.WorldGeneratorEA;
 import com.ebonheart.EbonArtsMod.init.InitAchievementsEA;
@@ -20,8 +21,9 @@ public class CommonProxy {
 	
 	public void preInit(FMLPreInitializationEvent event) 
 	{
+		SoundEventsEA.registerSounds();
 		InitItemsEA.preInit();
-		InitItemsEA.register();
+		//InitItemsEA.register();
 		InitBlocksEA.preInit();
 		InitBlocksEA.register();
 		InitEntityEA.preInit();

@@ -1,6 +1,7 @@
 package com.ebonheart.EbonArtsMod.common.blocks.basic.blocks;
 
 import com.ebonheart.EbonArtsMod.EbonArtsMod;
+import com.ebonheart.EbonArtsMod.common.blocks.BlockHelper;
 
 import net.minecraft.block.Block;
 import net.minecraft.block.BlockLog;
@@ -12,12 +13,13 @@ import net.minecraftforge.fml.relauncher.SideOnly;
 
 public class BlockKatcheen extends Block {
 
-	public BlockKatcheen(String unlocalizedName) 
+	public BlockKatcheen() 
 	{
 		super(Material.rock);
-		this.setUnlocalizedName(unlocalizedName);
-		this.setCreativeTab(EbonArtsMod.tabEbonArtsBlocks);
+		BlockHelper.setBlockName(this, "gem/katcheen/katcheen_block");
+		
 		this.setHarvestLevel("pickaxe", 2);
+		this.setHardness(5.0F);
 		this.setStepSound(stepSound.STONE);
 		this.useNeighborBrightness=true;
 	}

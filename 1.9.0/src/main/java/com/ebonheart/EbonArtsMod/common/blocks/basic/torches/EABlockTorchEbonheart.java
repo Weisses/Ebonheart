@@ -19,17 +19,18 @@ import net.minecraftforge.fml.relauncher.Side;
 import net.minecraftforge.fml.relauncher.SideOnly;
 
 import com.ebonheart.EbonArtsMod.EbonArtsMod;
+import com.ebonheart.EbonArtsMod.common.blocks.BlockHelper;
 import com.google.common.base.Predicate;
 
 public class EABlockTorchEbonheart extends BlockTorch {
 		
-	    public EABlockTorchEbonheart(String unlocalizedName)
+	    public EABlockTorchEbonheart()
 	    {
 	        super();
-	        this.setUnlocalizedName(unlocalizedName);
+	        BlockHelper.setBlockName(this, "gem/ebonheart/ebonheart_torch");
+	        
 	        this.setDefaultState(this.blockState.getBaseState().withProperty(FACING, EnumFacing.UP));
 	        this.setTickRandomly(true);
-	        this.setCreativeTab(EbonArtsMod.tabEbonArtsBlocks);
 	        this.setLightLevel(0.9375F);
 	    }
 	    

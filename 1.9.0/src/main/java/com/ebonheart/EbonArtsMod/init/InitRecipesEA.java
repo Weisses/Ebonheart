@@ -283,7 +283,7 @@ public class InitRecipesEA {
 	
 	public static void initShapelessRecipe()
 	{
-		
+		/**
 	        for (int i = 0; i < 16; ++i)
 	        {
 	        	GameRegistry.addShapelessRecipe(new ItemStack(InitBlocksEA.cobble_mystic_block_normal), new Object[] {new ItemStack(InitBlocksEA.cobble_mystic_block, 1, i)});
@@ -297,7 +297,7 @@ public class InitRecipesEA {
 	            
 	            
 	        }
-	    
+	    **/
 		//Mystic Cobblestone
 		//conversion back from dye block to normal block
 		//GameRegistry.addShapelessRecipe(new ItemStack(InitBlocksEA.cobble_mystic_block_normal), new ItemStack(InitBlocksEA.cobble_mystic_block, 1, 0));

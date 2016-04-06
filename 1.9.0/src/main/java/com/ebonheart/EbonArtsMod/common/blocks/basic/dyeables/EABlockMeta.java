@@ -3,6 +3,7 @@ package com.ebonheart.EbonArtsMod.common.blocks.basic.dyeables;
 import java.util.List;
 
 import net.minecraft.block.Block;
+import net.minecraft.block.material.MapColor;
 import net.minecraft.block.material.Material;
 import net.minecraft.block.properties.IProperty;
 import net.minecraft.block.properties.PropertyEnum;
@@ -20,6 +21,7 @@ import net.minecraft.world.World;
 
 import com.ebonheart.EbonArtsMod.EbonArtsMod;
 import com.ebonheart.EbonArtsMod.api.meta.IMetaBlockName;
+import com.ebonheart.EbonArtsMod.common.blocks.BlockHelper;
 
 
 public class EABlockMeta extends Block implements IMetaBlockName {
@@ -29,7 +31,8 @@ public class EABlockMeta extends Block implements IMetaBlockName {
 	public EABlockMeta(String unlocalizedName, Material materialIn) 
 	{
 		super(materialIn);
-		this.setUnlocalizedName(unlocalizedName);
+		BlockHelper.setBlockName(this, unlocalizedName);
+		
 		this.setCreativeTab(EbonArtsMod.tabEbonArtsDyeables);
 		this.setHarvestLevel("pickaxe", 2);
 		this.setStepSound(stepSound.STONE);
@@ -208,35 +211,50 @@ public class EABlockMeta extends Block implements IMetaBlockName {
 	{
 	    return new ItemStack(Item.getItemFromBlock(this), 1, this.getMetaFromState(world.getBlockState(pos)));
 	}
+	
+	/**
+     * Get the MapColor for this Block and the given BlockState
+     */
+    public MapColor getMapColor(IBlockState state)
+    {
+        return ((EABlockMeta.EnumType)state.getValue(TYPE)).func_181074_c();
+    }
 
 	//Simple Enum enclosed class.
 	public enum EnumType implements IStringSerializable 
 	{
-	    WHITE(0, "white"),
-	    ORANGE(1, "orange"),
-	    MAGENTA(2, "magenta"),
-	    LIGHTBLUE(3, "lightblue"),
-	    YELLOW(4, "yellow"),
-	    LIME(5, "lime"),
-	    PINK(6, "pink"),
-	    GRAY(7, "gray"),
-	    LIGHTGRAY(8, "lightgray"),
-	    CYAN(9, "cyan"),
-	    PURPLE(10, "purple"),
-	    BLUE(11, "blue"),
-	    BROWN(12, "brown"),
-	    GREEN(13, "green"),
-	    RED(14, "red"),
-	    BLACK(15, "black");
+	    WHITE(0, null, "white"),
+	    ORANGE(1, null, "orange"),
+	    MAGENTA(2, null, "magenta"),
+	    LIGHTBLUE(3, null, "lightblue"),
+	    YELLOW(4, null, "yellow"),
+	    LIME(5, null, "lime"),
+	    PINK(6, null, "pink"),
+	    GRAY(7, null, "gray"),
+	    LIGHTGRAY(8, null, "lightgray"),
+	    CYAN(9, null, "cyan"),
+	    PURPLE(10, null, "purple"),
+	    BLUE(11, null, "blue"),
+	    BROWN(12, null, "brown"),
+	    GREEN(13, null, "green"),
+	    RED(14, null, "red"),
+	    BLACK(15, null, "black");
 
 	    private int ID;
 	    private String name;
+	    private final MapColor mapColorIn;
 	    
-	    private EnumType(int ID, String name) 
+	    private EnumType(int ID, MapColor p_i46382_4_, String name) 
 	    {
 	        this.ID = ID;
 	        this.name = name;
+	        this.mapColorIn = p_i46382_4_;
 	    }
+	    
+	    public MapColor func_181074_c()
+        {
+            return this.mapColorIn;
+        }
 	    
 	    @Override
 	    public String getName() 

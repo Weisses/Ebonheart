@@ -1,5 +1,7 @@
 package com.ebonheart.EbonArtsMod.references;
 
+import com.ebonheart.EbonArtsMod.common.blocks.BlockColoredSlab;
+
 import net.minecraft.block.Block;
 
 public class BlocksEA {
@@ -15,7 +17,8 @@ public class BlocksEA {
 	public static Block ebon_ore;
 	public static Block ebon_ore_nether;
 	
-	
+
+	//public static BlockColoredSlab.ColouredSlabGroup testSlabs;
 	//public static Block tutorialTileEntity;
 	
 	//public static Block onyxius_ore;
@@ -145,13 +148,32 @@ public class BlocksEA {
 	//public static Block necrocite_door;
 	//public static Block soularite_door;
 	
-	public static Block cobble_mystic_block;
+	///public static Block cobble_mystic_block;
 	public static Block cobble_mystic_block_normal;
+	public static Block cobble_mystic_block_white;
+	public static Block cobble_mystic_block_orange;
+	public static Block cobble_mystic_block_magenta;
+	public static Block cobble_mystic_block_lightblue;
+	public static Block cobble_mystic_block_yellow;
+	public static Block cobble_mystic_block_lime;
+	public static Block cobble_mystic_block_pink;
+	public static Block cobble_mystic_block_gray;
+	public static Block cobble_mystic_block_lightgray;
+	public static Block cobble_mystic_block_cyan;
+	public static Block cobble_mystic_block_purple;
+	public static Block cobble_mystic_block_blue;
+	public static Block cobble_mystic_block_brown;
+	public static Block cobble_mystic_block_green;
+	public static Block cobble_mystic_block_red;
+	public static Block cobble_mystic_block_black;
+	public static Block cobble_mystic_block_glass;
 	
-	public static Block mystic_block;
+	///public static Block mystic_block;
 	public static Block mystic_block_normal;
 	
-	
+	///public static Block wood_mystic_block;
+	public static Block wood_mystic_block_normal;
+	public static Block wood_mystic_block_white;
 	
 	public static Block paper_block;
 	public static Block leather_block;

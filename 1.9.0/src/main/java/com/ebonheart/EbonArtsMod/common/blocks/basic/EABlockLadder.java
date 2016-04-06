@@ -3,6 +3,7 @@ package com.ebonheart.EbonArtsMod.common.blocks.basic;
 import java.util.Iterator;
 
 import com.ebonheart.EbonArtsMod.EbonArtsMod;
+import com.ebonheart.EbonArtsMod.common.blocks.BlockHelper;
 
 import net.minecraft.block.Block;
 import net.minecraft.block.BlockLadder;
@@ -19,17 +20,16 @@ import net.minecraftforge.fml.relauncher.Side;
 import net.minecraftforge.fml.relauncher.SideOnly;
 
 
-public class EABlockLadder extends BlockLadder
-{
-    public static final PropertyDirection FACING = PropertyDirection.create("facing", EnumFacing.Plane.HORIZONTAL);
+public class EABlockLadder extends BlockLadder {
     
     public EABlockLadder(String unlocalizedName)
     {
         super();
+        BlockHelper.setBlockName(this, unlocalizedName);
+        
         this.useNeighborBrightness = true;
         this.setDefaultState(this.blockState.getBaseState().withProperty(FACING, EnumFacing.NORTH));
-        this.setUnlocalizedName(unlocalizedName);
-        this.setCreativeTab(EbonArtsMod.tabEbonArtsBlocks);
+        this.setHardness(5.0F);
     }
 
 }

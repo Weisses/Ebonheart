@@ -10,59 +10,47 @@ import net.minecraft.init.Bootstrap;
 import net.minecraft.util.ResourceLocation;
 import net.minecraft.util.SoundEvent;
 import net.minecraft.util.registry.RegistryNamespaced;
+import net.minecraftforge.fml.common.registry.GameRegistry;
 import net.minecraftforge.fml.relauncher.Side;
 import net.minecraftforge.fml.relauncher.SideOnly;
 
 
 
-public class SoundEventsEA extends net.minecraftforge.client.event.sound.SoundEvent
-{
+public class SoundEventsEA {
     
-    public SoundEventsEA(SoundManager manager) {
-		super(manager);
-		// TODO Auto-generated constructor stub
-	}
+    	public static SoundEvent island;
+    	public static SoundEvent dire;
+    	public static SoundEvent marble;
+    	public static SoundEvent strength;
+    	public static SoundEvent castle;
+    	public static SoundEvent timescar;
+    	
+    	public static SoundEvent lostwoods;
+    	
+    	
+    	/**
+    	 * Register the {@link SoundEvent}s.
+    	 */
+    	public static void registerSounds() {
+    		island = registerSound("record.glowing_disc");
+    		dire = registerSound("record.shimmering_disc");
+    		marble = registerSound("record.laminate_disc");
+    		strength = registerSound("record.resilient_disc");
+    		castle = registerSound("record.dismal_disc");
+    		timescar = registerSound("record.ethereal_disc");
+    		lostwoods = registerSound("record.mirroring_disc");
+    		
+    	}
 
-	public static final SoundEvent record_glowing_disc;
-
-
-    private static SoundEvent getRegisteredSoundEvent(String id)
-    {
-        SoundEvent soundevent = (SoundEvent)SoundEvent.soundEventRegistry.getObject(new ResourceLocation(
-    //    		Reference.MOD_ID + ":" + "sounds/records/" +
-        id));
-
-        
-        //LogHelper.warn("MUSIC TEST : " + //(SoundEvent)SoundEvent.soundEventRegistry.getObject(new ResourceLocation(
-        		//Reference.MOD_ID + ":" + 
-        //id);
-        
-        if (soundevent == null)
-        {
-            throw new IllegalStateException("Invalid Sound requested: " + id);
-        }
-        else
-        {
-            return soundevent;
-        }
-    }
-
-    static
-    {
-        if (!Bootstrap.isRegistered())
-        {
-            throw new RuntimeException("Accessed Sounds before Bootstrap!");
-        }
-        else
-        {
-            
-        	
-            record_glowing_disc = getRegisteredSoundEvent(//"record_
-            		//"glowing_disc"
-            		"record.ward"
-            		);
-            
-
-        }
-    }
+    	/**
+    	 * Register a {@link SoundEvent}.
+    	 *
+    	 * @param soundName The SoundEvent's name without the testmod3 prefix
+    	 * @return The SoundEvent
+    	 */
+    	private static SoundEvent registerSound(String soundName) {
+    		final ResourceLocation soundID = new ResourceLocation(Reference.MOD_ID, soundName);
+    		return GameRegistry.register(new SoundEvent(soundID).setRegistryName(soundID));
+    	}
+    	
 }

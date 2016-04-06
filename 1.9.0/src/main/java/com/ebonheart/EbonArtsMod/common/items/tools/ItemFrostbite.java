@@ -5,6 +5,7 @@ import java.util.Random;
 
 import com.ebonheart.EbonArtsMod.EbonArtsMod;
 import com.ebonheart.EbonArtsMod.common.items.ItemHelper;
+import com.ebonheart.EbonArtsMod.common.items.WeaponHelper;
 
 import net.minecraft.entity.EntityLivingBase;
 import net.minecraft.entity.player.EntityPlayer;
@@ -19,11 +20,10 @@ import net.minecraftforge.fml.relauncher.SideOnly;
 
 public class ItemFrostbite extends ItemSword {
 
-	public ItemFrostbite(String unlocalizedName, ToolMaterial material) 
+	public ItemFrostbite(ToolMaterial material) 
 	{
 		super(material);
-		this.setUnlocalizedName(unlocalizedName);
-		this.setCreativeTab(EbonArtsMod.tabEbonArtsItems);
+		ItemHelper.setItemName(this, "tool/frostbite");
 	}
 	
 	public boolean hitEntity(ItemStack stack, EntityLivingBase target, EntityLivingBase attacker)
@@ -38,8 +38,8 @@ public class ItemFrostbite extends ItemSword {
 			Potion potion2 = Potion.getPotionById(18);
 					//.weakness;
 			EntityPlayer playerIn = attacker.getEntityWorld().getPlayerEntityByUUID(attacker.getUniqueID());
-			ItemHelper.addPotionEffectToTarget(target, potion1, 3, 2);
-			ItemHelper.addPotionEffectToTarget(target, potion2, 5, 2);
+			WeaponHelper.addPotionEffectToTarget(target, potion1, 3, 2);
+			WeaponHelper.addPotionEffectToTarget(target, potion2, 5, 2);
 			stack.damageItem(1, playerIn);
 		}
         return true;

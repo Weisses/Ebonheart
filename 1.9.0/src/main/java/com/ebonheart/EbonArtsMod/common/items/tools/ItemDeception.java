@@ -5,6 +5,7 @@ import java.util.Random;
 
 import com.ebonheart.EbonArtsMod.EbonArtsMod;
 import com.ebonheart.EbonArtsMod.common.items.ItemHelper;
+import com.ebonheart.EbonArtsMod.common.items.WeaponHelper;
 import com.ebonheart.EbonArtsMod.init.InitItemsEA;
 
 import net.minecraft.client.Minecraft;
@@ -21,25 +22,11 @@ import net.minecraftforge.fml.relauncher.Side;
 import net.minecraftforge.fml.relauncher.SideOnly;
 
 public class ItemDeception extends ItemSword {
-
-	protected Minecraft mc;
 	
-	public ItemDeception(String unlocalizedName, ToolMaterial material) 
+	public ItemDeception(ToolMaterial material) 
 	{
 		super(material);
-		this.setUnlocalizedName(unlocalizedName);
-		this.setCreativeTab(EbonArtsMod.tabEbonArtsItems);
-	}
-	
-	@SideOnly(Side.CLIENT)
-    public void addInformation(ItemStack stack, EntityPlayer playerIn, List toolTip, boolean advanced) 
-	{
-		toolTip.add(TextFormatting.DARK_PURPLE + "\"All minds can bend as");
-		toolTip.add(TextFormatting.DARK_PURPLE + "reality shifts.\"");
-		toolTip.add(" ");
-		toolTip.add(TextFormatting.GOLD + "40% chance on hit:");
-		toolTip.add(TextFormatting.RED + "Target - Blinds for 3 seconds.");
-		toolTip.add(TextFormatting.GREEN + "Self - Invisibility for 5 seconds.");
+		ItemHelper.setItemName(this, "tool/deception");
 	}
 	
 	public boolean hitEntity(ItemStack stack, EntityLivingBase target, EntityLivingBase attacker)
@@ -54,15 +41,27 @@ public class ItemDeception extends ItemSword {
 			Potion potion2 = Potion.getPotionById(14);
 					//.invisibility;
 			EntityPlayer playerIn = attacker.getEntityWorld().getPlayerEntityByUUID(attacker.getUniqueID());
-			ItemHelper.addPotionEffectToTarget(target, potion1, 3, 0);
-			ItemHelper.addPotionEffectToTarget(playerIn, potion2, 5, 0);
+			WeaponHelper.addPotionEffectToTarget(target, potion1, 3, 0);
+			WeaponHelper.addPotionEffectToTarget(playerIn, potion2, 5, 0);
 			stack.damageItem(1, playerIn);
 		}
         return true;
     }
 	
+	@SideOnly(Side.CLIENT)
+    public void addInformation(ItemStack stack, EntityPlayer playerIn, List toolTip, boolean advanced) 
+	{
+		toolTip.add(TextFormatting.DARK_PURPLE + "\"All minds can bend as");
+		toolTip.add(TextFormatting.DARK_PURPLE + "reality shifts.\"");
+		toolTip.add(" ");
+		toolTip.add(TextFormatting.GOLD + "40% chance on hit:");
+		toolTip.add(TextFormatting.RED + "Target - Blinds for 3 seconds.");
+		toolTip.add(TextFormatting.GREEN + "Self - Invisibility for 5 seconds.");
+	}
+	
 	public EnumRarity getRarity(ItemStack stack)
     {
         return EnumRarity.EPIC;
     }
+	
 }

@@ -5,6 +5,7 @@ import java.util.Random;
 
 import com.ebonheart.EbonArtsMod.EbonArtsMod;
 import com.ebonheart.EbonArtsMod.common.items.ItemHelper;
+import com.ebonheart.EbonArtsMod.common.items.WeaponHelper;
 
 import net.minecraft.entity.EntityLivingBase;
 import net.minecraft.entity.player.EntityPlayer;
@@ -19,11 +20,10 @@ import net.minecraftforge.fml.relauncher.SideOnly;
 
 public class ItemMassacre extends ItemSword {
 
-	public ItemMassacre(String unlocalizedName, ToolMaterial material) 
+	public ItemMassacre(ToolMaterial material) 
 	{
 		super(material);
-		this.setUnlocalizedName(unlocalizedName);
-		this.setCreativeTab(EbonArtsMod.tabEbonArtsItems);
+		ItemHelper.setItemName(this, "tool/massacre");
 	}
 	
 	public boolean hitEntity(ItemStack stack, EntityLivingBase target, EntityLivingBase attacker)
@@ -38,8 +38,8 @@ public class ItemMassacre extends ItemSword {
 			Potion potion2 = Potion.getPotionById(1);
 					//.moveSpeed;
 			EntityPlayer playerIn = attacker.getEntityWorld().getPlayerEntityByUUID(attacker.getUniqueID());
-			ItemHelper.addPotionEffectToTarget(playerIn, potion, 5, 0);
-			ItemHelper.addPotionEffectToTarget(playerIn, potion2, 3, 0);
+			WeaponHelper.addPotionEffectToTarget(playerIn, potion, 5, 0);
+			WeaponHelper.addPotionEffectToTarget(playerIn, potion2, 3, 0);
 			stack.damageItem(1, playerIn);
 		}
 		return true;

@@ -15,6 +15,7 @@ import net.minecraft.world.IBlockAccess;
 import net.minecraft.world.World;
 
 import com.ebonheart.EbonArtsMod.EbonArtsMod;
+import com.ebonheart.EbonArtsMod.common.blocks.BlockHelper;
 import com.ebonheart.EbonArtsMod.init.InitBlocksEA;
 import com.ebonheart.EbonArtsMod.init.InitItemsEA;
 
@@ -23,8 +24,8 @@ public class BlockOreEbonheart extends Block {
 	public BlockOreEbonheart(int harvestlevel, float hardness) 
 	{
 		super(Material.rock);
-		this.setUnlocalizedName("ore/ebonheart_ore");
-		this.setCreativeTab(EbonArtsMod.tabEbonArtsBlocks);
+		BlockHelper.setBlockName(this, "ore/ebonheart_ore");
+		
 		this.setHarvestLevel("pickaxe", harvestlevel); //("pickaxe", 2) is iron
 		this.setHardness(hardness);
 		this.setResistance(5f);

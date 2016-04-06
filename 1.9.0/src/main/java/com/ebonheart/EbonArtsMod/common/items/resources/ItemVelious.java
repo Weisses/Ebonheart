@@ -3,6 +3,7 @@ package com.ebonheart.EbonArtsMod.common.items.resources;
 import java.util.List;
 
 import com.ebonheart.EbonArtsMod.EbonArtsMod;
+import com.ebonheart.EbonArtsMod.common.items.ItemHelper;
 
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.item.EnumRarity;
@@ -16,8 +17,7 @@ public class ItemVelious extends Item {
 	
 	public ItemVelious() 
 	{
-		this.setUnlocalizedName("gem/velious");
-	 	this.setCreativeTab(EbonArtsMod.tabEbonArtsItems);
+		ItemHelper.setItemName(this, "gem/velious");
 	}
 	
 	@SideOnly(Side.CLIENT)
@@ -31,4 +31,5 @@ public class ItemVelious extends Item {
     {
         return EnumRarity.UNCOMMON;
     }
+	
 }

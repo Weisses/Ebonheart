@@ -43,7 +43,8 @@ import com.ebonheart.EbonArtsMod.common.items.tools.ItemKatcheenSword;
 import com.ebonheart.EbonArtsMod.references.ItemsEA;
 import com.ebonheart.EbonArtsMod.references.Reference;
 
-public class InitEntityEA extends ItemsEA {
+public class InitEntityEA //extends ItemsEA 
+{
 	
 	
 	public static void preInit()

@@ -5,6 +5,7 @@ import java.util.Random;
 
 import com.ebonheart.EbonArtsMod.EbonArtsMod;
 import com.ebonheart.EbonArtsMod.common.items.ItemHelper;
+import com.ebonheart.EbonArtsMod.common.items.WeaponHelper;
 import com.ebonheart.EbonArtsMod.init.InitItemsEA;
 
 import net.minecraft.entity.EntityLivingBase;
@@ -20,11 +21,9 @@ import net.minecraftforge.fml.relauncher.SideOnly;
 
 public class ItemEmpoweredBlade extends Item {
 
-	public ItemEmpoweredBlade(String unlocalizedName) 
+	public ItemEmpoweredBlade() 
 	{
-		super();
-		this.setUnlocalizedName(unlocalizedName);
-		this.setCreativeTab(EbonArtsMod.tabEbonArtsItems);
+		ItemHelper.setItemName(this, "tool/empowered_blade");
 	}
 	
 	@SideOnly(Side.CLIENT)
@@ -44,4 +43,5 @@ public class ItemEmpoweredBlade extends Item {
     {
         return EnumRarity.RARE;
     }
+	
 }

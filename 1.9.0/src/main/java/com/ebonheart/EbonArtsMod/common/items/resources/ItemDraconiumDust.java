@@ -3,6 +3,9 @@ package com.ebonheart.EbonArtsMod.common.items.resources;
 import java.util.List;
 
 import com.ebonheart.EbonArtsMod.EbonArtsMod;
+import com.ebonheart.EbonArtsMod.common.items.ItemHelper;
+import com.ebonheart.EbonArtsMod.common.items.WeaponHelper;
+import com.ebonheart.EbonArtsMod.init.InitItemsEA;
 
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.item.Item;
@@ -14,9 +17,7 @@ public class ItemDraconiumDust extends Item {
 	
 	public ItemDraconiumDust() 
 	{
-		this.setRegistryName("gem/draconium_dust");
-		this.setUnlocalizedName("gem/draconium_dust");
-		this.setCreativeTab(EbonArtsMod.tabEbonArtsItems);
+		ItemHelper.setItemName(this, "gem/draconium_dust");
 	}
 	
 	@SideOnly(Side.CLIENT)

@@ -24,17 +24,18 @@ import net.minecraftforge.fml.relauncher.Side;
 import net.minecraftforge.fml.relauncher.SideOnly;
 
 import com.ebonheart.EbonArtsMod.EbonArtsMod;
+import com.ebonheart.EbonArtsMod.common.blocks.BlockHelper;
 import com.google.common.base.Predicate;
 
 public class EABlockTorchArcanite extends BlockTorch {
 		
-	    public EABlockTorchArcanite(String unlocalizedName)
+	    public EABlockTorchArcanite()
 	    {
 	        super();
-	        this.setUnlocalizedName(unlocalizedName);
+	        BlockHelper.setBlockName(this, "gem/arcanite/arcanite_torch");
+	        
 	        this.setDefaultState(this.blockState.getBaseState().withProperty(FACING, EnumFacing.UP));
 	        this.setTickRandomly(true);
-	        this.setCreativeTab(EbonArtsMod.tabEbonArtsBlocks);
 	        this.setLightLevel(0.9375F);
 	    }
 	    

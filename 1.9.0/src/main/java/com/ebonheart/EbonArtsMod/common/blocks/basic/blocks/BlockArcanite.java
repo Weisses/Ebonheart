@@ -1,6 +1,7 @@
 package com.ebonheart.EbonArtsMod.common.blocks.basic.blocks;
 
 import com.ebonheart.EbonArtsMod.EbonArtsMod;
+import com.ebonheart.EbonArtsMod.common.blocks.BlockHelper;
 
 import net.minecraft.block.Block;
 import net.minecraft.block.BlockLog;
@@ -13,12 +14,13 @@ import net.minecraftforge.fml.relauncher.SideOnly;
 
 public class BlockArcanite extends Block {
 
-	public BlockArcanite(String unlocalizedName) 
+	public BlockArcanite() 
 	{
 		super(Material.rock);
-		this.setUnlocalizedName(unlocalizedName);
-		this.setCreativeTab(EbonArtsMod.tabEbonArtsBlocks);
+		BlockHelper.setBlockName(this, "gem/arcanite/arcanite_block");
+		
 		this.setHarvestLevel("pickaxe", 2);
+		this.setHardness(5.0F);
 		this.setStepSound(stepSound.STONE);
 		this.useNeighborBrightness=true;
 	}

@@ -1,6 +1,7 @@
 package com.ebonheart.EbonArtsMod.common.blocks.basic.storage;
 
 import com.ebonheart.EbonArtsMod.EbonArtsMod;
+import com.ebonheart.EbonArtsMod.common.blocks.BlockHelper;
 
 import net.minecraft.block.Block;
 import net.minecraft.block.BlockDirectional;
@@ -29,9 +30,10 @@ public class BlockLeather extends BlockHorizontal {
 	public BlockLeather() 
 	{
 		super(Material.cloth);
-		this.setUnlocalizedName("leather_block");
+		BlockHelper.setBlockName(this, "leather_block");
+		
 		this.setDefaultState(this.blockState.getBaseState().withProperty(FACING, EnumFacing.NORTH));
-		this.setCreativeTab(EbonArtsMod.tabEbonArtsBlocks);
+		this.setHardness(1.0F);
 		this.setStepSound(stepSound.STONE);
 		this.useNeighborBrightness=true;
 	}
@@ -41,10 +43,10 @@ public class BlockLeather extends BlockHorizontal {
         return false;
     }
 	
-    public boolean canPlaceBlockAt(World worldIn, BlockPos pos)
-    {
-        return worldIn.getBlockState(pos).getBlock().isReplaceable(worldIn, pos) && worldIn.getBlockState(pos.down()).isSideSolid(worldIn, pos, EnumFacing.UP);
-    }
+    //public boolean canPlaceBlockAt(World worldIn, BlockPos pos)
+    //{
+    //    return worldIn.getBlockState(pos).getBlock().isReplaceable(worldIn, pos) && worldIn.getBlockState(pos.down()).isSideSolid(worldIn, pos, EnumFacing.UP);
+    //}
     
     public IBlockState withRotation(IBlockState state, Rotation rot)
     {

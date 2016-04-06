@@ -5,6 +5,7 @@ import java.util.Random;
 
 import com.ebonheart.EbonArtsMod.EbonArtsMod;
 import com.ebonheart.EbonArtsMod.common.items.ItemHelper;
+import com.ebonheart.EbonArtsMod.common.items.WeaponHelper;
 
 import net.minecraft.entity.EntityLivingBase;
 import net.minecraft.entity.player.EntityPlayer;
@@ -19,11 +20,10 @@ import net.minecraftforge.fml.relauncher.SideOnly;
 
 public class ItemDespair extends ItemSword {
 
-	public ItemDespair(String unlocalizedName, ToolMaterial material) 
+	public ItemDespair(ToolMaterial material) 
 	{
 		super(material);
-		this.setUnlocalizedName(unlocalizedName);
-		this.setCreativeTab(EbonArtsMod.tabEbonArtsItems);
+		ItemHelper.setItemName(this, "tool/despair");
 	}
 	
 	public boolean hitEntity(ItemStack stack, EntityLivingBase target, EntityLivingBase attacker)
@@ -38,8 +38,8 @@ public class ItemDespair extends ItemSword {
 			Potion potion2 = Potion.getPotionById(9);
 					//.confusion;
 			EntityPlayer playerIn = attacker.getEntityWorld().getPlayerEntityByUUID(attacker.getUniqueID());
-			ItemHelper.addPotionEffectToTarget(target, potion, 4, 1);
-			ItemHelper.addPotionEffectToTarget(target, potion2, 3, 1);
+			WeaponHelper.addPotionEffectToTarget(target, potion, 4, 1);
+			WeaponHelper.addPotionEffectToTarget(target, potion2, 3, 1);
 			stack.damageItem(1, playerIn);
 		}
         return true;

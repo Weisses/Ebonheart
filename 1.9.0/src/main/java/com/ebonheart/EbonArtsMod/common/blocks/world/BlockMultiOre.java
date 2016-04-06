@@ -12,14 +12,15 @@ import net.minecraft.util.math.BlockPos;
 import net.minecraft.world.IBlockAccess;
 
 import com.ebonheart.EbonArtsMod.EbonArtsMod;
+import com.ebonheart.EbonArtsMod.common.blocks.BlockHelper;
 import com.ebonheart.EbonArtsMod.init.InitItemsEA;
 
 public class BlockMultiOre extends Block {
 
 	public BlockMultiOre(String unlocalizedName) {
 		super(Material.rock);
-		this.setUnlocalizedName(unlocalizedName);
-		this.setCreativeTab(EbonArtsMod.tabEbonArtsBlocks);
+		BlockHelper.setBlockName(this, unlocalizedName);
+		
 		this.setStepSound(stepSound.STONE);
 		this.setHardness(40.0f);
 		this.setResistance(2000f);

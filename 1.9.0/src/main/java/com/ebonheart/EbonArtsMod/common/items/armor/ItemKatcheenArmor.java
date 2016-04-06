@@ -12,17 +12,16 @@ import net.minecraftforge.fml.relauncher.Side;
 import net.minecraftforge.fml.relauncher.SideOnly;
 
 import com.ebonheart.EbonArtsMod.EbonArtsMod;
+import com.ebonheart.EbonArtsMod.common.items.ItemHelper;
 import com.ebonheart.EbonArtsMod.init.InitItemsEA;
 
-public class ItemKatcheenArmor extends ItemArmor 
-{
+public class ItemKatcheenArmor extends ItemArmor {
 
 	public ItemKatcheenArmor(String unlocalizedName, ArmorMaterial material, int renderIndex, EntityEquipmentSlot armorType) 
 	{
 		super(material, renderIndex, armorType);
-		this.setUnlocalizedName(unlocalizedName);
-		this.setCreativeTab(EbonArtsMod.tabEbonArtsItems);
-		
+		ItemHelper.setItemName(this, unlocalizedName);
+		canRepair = true;		
 	}
 /**
 	@Override

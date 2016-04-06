@@ -14,15 +14,17 @@ import net.minecraft.util.Rotation;
 import net.minecraft.world.World;
 
 import com.ebonheart.EbonArtsMod.EbonArtsMod;
+import com.ebonheart.EbonArtsMod.common.blocks.BlockHelper;
 
 public class BlockReed extends BlockHorizontal {
 
 	public BlockReed() 
 	{
 		super(Material.cloth);
-		this.setUnlocalizedName("reed_block");
+		BlockHelper.setBlockName(this, "reed_block");
+		
 		this.setDefaultState(this.blockState.getBaseState().withProperty(FACING, EnumFacing.NORTH));
-		this.setCreativeTab(EbonArtsMod.tabEbonArtsBlocks);
+		this.setHardness(1.0F);
 		this.setStepSound(stepSound.STONE);
 		this.useNeighborBrightness=true;
 	}
@@ -32,10 +34,10 @@ public class BlockReed extends BlockHorizontal {
         return false;
     }
 	
-    public boolean canPlaceBlockAt(World worldIn, BlockPos pos)
-    {
-        return worldIn.getBlockState(pos).getBlock().isReplaceable(worldIn, pos) && worldIn.getBlockState(pos.down()).isSideSolid(worldIn, pos, EnumFacing.UP);
-    }
+    //public boolean canPlaceBlockAt(World worldIn, BlockPos pos)
+    //{
+    //    return worldIn.getBlockState(pos).getBlock().isReplaceable(worldIn, pos) && worldIn.getBlockState(pos.down()).isSideSolid(worldIn, pos, EnumFacing.UP);
+    //}
     
     public IBlockState withRotation(IBlockState state, Rotation rot)
     {

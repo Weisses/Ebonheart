@@ -4,6 +4,7 @@ import java.util.Iterator;
 import java.util.List;
 
 import com.ebonheart.EbonArtsMod.EbonArtsMod;
+import com.ebonheart.EbonArtsMod.common.blocks.BlockHelper;
 import com.ebonheart.EbonArtsMod.init.InitBlocksEA;
 import com.google.common.base.Predicate;
 
@@ -29,41 +30,28 @@ import net.minecraft.world.World;
 import net.minecraftforge.fml.relauncher.Side;
 import net.minecraftforge.fml.relauncher.SideOnly;
 
-//public class EABlockPillar extends BlockRotatedPillar {
-	
-//  public EABlockPillar()
-//  {
-//      super(Material.rock);
-//       //this.setDefaultState(this.blockState.getBaseState().withProperty(VARIANT, EABlockPillar.EnumType.DEFAULT));
-//      this.setCreativeTab(EbonArtsMod.tabEbonArtsBlocks);
-//      this.setUnlocalizedName("column");
-//  }
-//}
-
 public class EABlockPillar extends BlockRotatedPillar {
 	
+	public EABlockPillar(String unlocalizedName)
+	{
+		super(Material.rock);
+		BlockHelper.setBlockName(this, unlocalizedName);
+		
+		this.setHarvestLevel("pickaxe", 2);
+		this.setHardness(5.0F);
+		this.setStepSound(stepSound.STONE);
+		this.useNeighborBrightness = true;
+	}
 	
-  
-  public EABlockPillar(String unlocalizedName)
-  {
-  	super(Material.rock);
-  	this.setUnlocalizedName(unlocalizedName);
-  	this.setCreativeTab(EbonArtsMod.tabEbonArtsBlocks);
-  	this.setHarvestLevel("pickaxe", 2);
-  	this.setStepSound(stepSound.STONE);
-  	this.useNeighborBrightness = true;
-  }
-  
-  //@Override
-  public boolean isOpaqueCube(IBlockState state)
-  {
-  	return false;
-  }
-  
-  public boolean isFullCube()
-  {
-      return true;
-  }
-
+	public boolean isOpaqueCube(IBlockState state)
+	{
+		return false;
+	}
+	
+	public boolean isFullCube()
+	{
+		return true;
+	}
+	
 }
 

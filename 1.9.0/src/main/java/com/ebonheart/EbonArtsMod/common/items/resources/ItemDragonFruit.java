@@ -3,6 +3,7 @@ package com.ebonheart.EbonArtsMod.common.items.resources;
 import java.util.List;
 
 import com.ebonheart.EbonArtsMod.EbonArtsMod;
+import com.ebonheart.EbonArtsMod.common.items.ItemHelper;
 
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.item.EnumRarity;
@@ -18,8 +19,7 @@ public class ItemDragonFruit extends ItemFood {
 	public ItemDragonFruit(int amount, float saturation, boolean isWolfFood) 
 	{
 		super(amount, saturation, isWolfFood);
-		this.setUnlocalizedName("dragon_fruit");
-		this.setCreativeTab(EbonArtsMod.tabEbonArtsItems);
+		ItemHelper.setItemName(this, "dragon_fruit");
 	}
 	
 	@SideOnly(Side.CLIENT)
@@ -39,4 +39,5 @@ public class ItemDragonFruit extends ItemFood {
     {
         return EnumRarity.UNCOMMON;
     }
+	
 }

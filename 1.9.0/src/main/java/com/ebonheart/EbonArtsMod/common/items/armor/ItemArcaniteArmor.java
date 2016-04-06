@@ -12,18 +12,16 @@ import net.minecraftforge.fml.relauncher.Side;
 import net.minecraftforge.fml.relauncher.SideOnly;
 
 import com.ebonheart.EbonArtsMod.EbonArtsMod;
+import com.ebonheart.EbonArtsMod.common.items.ItemHelper;
 import com.ebonheart.EbonArtsMod.init.InitItemsEA;
 
-public class ItemArcaniteArmor extends ItemArmor 
-{
-
+public class ItemArcaniteArmor extends ItemArmor {
+	
 	public ItemArcaniteArmor(String unlocalizedName, ArmorMaterial material, int renderIndex, EntityEquipmentSlot armorType) 
 	{
 		super(material, renderIndex, armorType);
-		this.setUnlocalizedName(unlocalizedName);
-		this.setCreativeTab(EbonArtsMod.tabEbonArtsItems);
+		ItemHelper.setItemName(this, unlocalizedName);
 		canRepair = true;
-		
 	}
 /**
 	@Override
@@ -41,16 +39,10 @@ public class ItemArcaniteArmor extends ItemArmor
 		//	effectPlayer(player, Potion.jump, 1, false);
 		//} 
 		
-		if (       player.inventory.armorItemInSlot(3) != null 
-				&& 
-				player.inventory.armorItemInSlot(3).getItem() == InitItemsEA.arcanite_helmet
-				)
-		        //&& player.inventory.armorItemInSlot(2) != null 
-		        //&& player.inventory.armorItemInSlot(2).getItem() == InitItemsEA.arcanite_chestplate
-		        //&& player.inventory.armorItemInSlot(1) != null 
-		        //&& player.inventory.armorItemInSlot(1).getItem() == InitItemsEA.arcanite_leggings
-		        //&& player.inventory.armorItemInSlot(0) != null 
-		        //&& player.inventory.armorItemInSlot(0).getItem() == InitItemsEA.arcanite_boots) 
+		if (player.inventory.armorItemInSlot(3) != null && player.inventory.armorItemInSlot(3).getItem() == InitItemsEA.arcanite_helmet
+				&& player.inventory.armorItemInSlot(2) != null && player.inventory.armorItemInSlot(2).getItem() == InitItemsEA.arcanite_chestplate
+		        && player.inventory.armorItemInSlot(1) != null && player.inventory.armorItemInSlot(1).getItem() == InitItemsEA.arcanite_leggings
+		        && player.inventory.armorItemInSlot(0) != null && player.inventory.armorItemInSlot(0).getItem() == InitItemsEA.arcanite_boots) 
 		{
 		        //this.effectPlayer(player, Potion.resistance, 0, true);
 			this.effectPlayer(player, Potion.getPotionById(3)

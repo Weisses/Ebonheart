@@ -5,6 +5,7 @@ import java.util.Random;
 
 import com.ebonheart.EbonArtsMod.EbonArtsMod;
 import com.ebonheart.EbonArtsMod.common.items.ItemHelper;
+import com.ebonheart.EbonArtsMod.common.items.WeaponHelper;
 
 import net.minecraft.entity.EntityLivingBase;
 import net.minecraft.entity.player.EntityPlayer;
@@ -21,14 +22,11 @@ import net.minecraftforge.fml.relauncher.SideOnly;
 
 public class ItemBlazefury extends ItemSword {
 
-	public ItemBlazefury(String unlocalizedName, ToolMaterial material) 
+	public ItemBlazefury(ToolMaterial material) 
 	{
 		super(material);
-		this.setUnlocalizedName(unlocalizedName);
-		this.setCreativeTab(EbonArtsMod.tabEbonArtsItems);
+		ItemHelper.setItemName(this, "tool/blazefury");
 	}
-	
-	
 	
 	public boolean hitEntity(ItemStack stack, EntityLivingBase target, EntityLivingBase attacker)
     {
@@ -41,7 +39,7 @@ public class ItemBlazefury extends ItemSword {
 					//.fireResistance;
 			EntityPlayer playerIn = attacker.getEntityWorld().getPlayerEntityByUUID(attacker.getUniqueID());
 			target.setFire(4);
-			ItemHelper.addPotionEffectToTarget(playerIn, potion, 5, 0);
+			WeaponHelper.addPotionEffectToTarget(playerIn, potion, 5, 0);
 			stack.damageItem(1, playerIn);
 		}
         return true;

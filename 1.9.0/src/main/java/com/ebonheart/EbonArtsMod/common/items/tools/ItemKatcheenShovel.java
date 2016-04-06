@@ -1,6 +1,7 @@
 package com.ebonheart.EbonArtsMod.common.items.tools;
 
 import com.ebonheart.EbonArtsMod.EbonArtsMod;
+import com.ebonheart.EbonArtsMod.common.items.ItemHelper;
 import com.ebonheart.EbonArtsMod.init.InitItemsEA;
 
 import net.minecraft.item.EnumRarity;
@@ -9,11 +10,10 @@ import net.minecraft.item.ItemStack;
 
 public class ItemKatcheenShovel extends ItemSpade {
 	
-	public ItemKatcheenShovel(String unlocalizedName, ToolMaterial material) 
+	public ItemKatcheenShovel(ToolMaterial material) 
 	{
 		super(material);
-		this.setUnlocalizedName(unlocalizedName);
-		this.setCreativeTab(EbonArtsMod.tabEbonArtsItems);
+		ItemHelper.setItemName(this, "tool/katcheen_shovel");
 	}
 	
 	public boolean getIsRepairable(ItemStack par1ItemStack, ItemStack par2ItemStack)
@@ -25,4 +25,5 @@ public class ItemKatcheenShovel extends ItemSpade {
     {
         return EnumRarity.RARE;
     }
+	
 }

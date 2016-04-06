@@ -22,6 +22,7 @@ import net.minecraft.util.Rotation;
 import net.minecraft.world.World;
 
 import com.ebonheart.EbonArtsMod.EbonArtsMod;
+import com.ebonheart.EbonArtsMod.common.blocks.BlockHelper;
 import com.ebonheart.EbonArtsMod.init.InitBlocksEA;
 import com.google.common.base.Predicate;
 
@@ -30,9 +31,10 @@ public class BlockPaper extends BlockHorizontal {
 	public BlockPaper() 
 	{
 		super(Material.cloth);
-		this.setUnlocalizedName("paper_block");
+		BlockHelper.setBlockName(this, "paper_block");
+		
 		this.setDefaultState(this.blockState.getBaseState().withProperty(FACING, EnumFacing.NORTH));
-		this.setCreativeTab(EbonArtsMod.tabEbonArtsBlocks);
+		this.setHardness(1.0F);
 		this.setStepSound(stepSound.STONE);
 		this.useNeighborBrightness=true;
 	}
@@ -42,10 +44,10 @@ public class BlockPaper extends BlockHorizontal {
         return false;
     }
 	
-    public boolean canPlaceBlockAt(World worldIn, BlockPos pos)
-    {
-        return worldIn.getBlockState(pos).getBlock().isReplaceable(worldIn, pos) && worldIn.getBlockState(pos.down()).isSideSolid(worldIn, pos, EnumFacing.UP);
-    }
+    //public boolean canPlaceBlockAt(World worldIn, BlockPos pos)
+    //{
+    //    return worldIn.getBlockState(pos).getBlock().isReplaceable(worldIn, pos) && worldIn.getBlockState(pos.down()).isSideSolid(worldIn, pos, EnumFacing.UP);
+    //}
     
     public IBlockState withRotation(IBlockState state, Rotation rot)
     {

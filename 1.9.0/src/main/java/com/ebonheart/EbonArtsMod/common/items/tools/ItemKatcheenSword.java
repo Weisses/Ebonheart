@@ -14,15 +14,15 @@ import net.minecraft.util.DamageSource;
 import com.ebonheart.EbonArtsMod.EbonArtsMod;
 import com.ebonheart.EbonArtsMod.api.damagesources.EADamageSources;
 import com.ebonheart.EbonArtsMod.api.damagesources.EntityDamageSourceElectric;
+import com.ebonheart.EbonArtsMod.common.items.ItemHelper;
 import com.ebonheart.EbonArtsMod.init.InitItemsEA;
 
 public class ItemKatcheenSword extends ItemSword {
 	
-	public ItemKatcheenSword(String unlocalizedName, ToolMaterial material) 
+	public ItemKatcheenSword(ToolMaterial material) 
 	{
 		super(material);
-		this.setUnlocalizedName(unlocalizedName);
-		this.setCreativeTab(EbonArtsMod.tabEbonArtsItems);
+		ItemHelper.setItemName(this, "tool/katcheen_sword");
 	}
 	
 	public boolean getIsRepairable(ItemStack par1ItemStack, ItemStack par2ItemStack)
@@ -34,16 +34,5 @@ public class ItemKatcheenSword extends ItemSword {
     {
 		return EnumRarity.RARE;
     }
-	
-	//entity.attackEntityFrom(DamageSource source, float damage)
-	
-    //public boolean hitEntity(ItemStack stack, EntityLivingBase target, EntityLivingBase attacker)
-    //{
-        
-    	//target.attackEntityFrom(EntityDamageSourceElectric.causeElectricDamage(target, attacker), 50.0f);
-        
-    	//System.out.println("electric damage");
-        //return true;
-    //}
 	
 }

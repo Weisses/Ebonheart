@@ -1,6 +1,7 @@
 package com.ebonheart.EbonArtsMod.common.blocks.basic.slabs;
 
 import com.ebonheart.EbonArtsMod.EbonArtsMod;
+import com.ebonheart.EbonArtsMod.common.blocks.BlockHelper;
 
 import net.minecraft.block.BlockStoneSlab;
 import net.minecraft.block.BlockSlab.EnumBlockHalf;
@@ -13,10 +14,11 @@ import net.minecraft.item.ItemStack;
 //Double slab.
 public class BlockDoubleSlabDraconium extends EABlockSlabDraconium {
 	
-    public BlockDoubleSlabDraconium(String setUnlocalizedName) 
+    public BlockDoubleSlabDraconium(String unlocalizedName) 
     {
         super();
-        this.setUnlocalizedName(setUnlocalizedName);
+        BlockHelper.setBlockName(this, unlocalizedName);
+        //this.setUnlocalizedName(setUnlocalizedName);
     }
 
 	@Override

@@ -3,6 +3,7 @@ package com.ebonheart.EbonArtsMod.common.items.resources;
 import java.util.List;
 
 import com.ebonheart.EbonArtsMod.EbonArtsMod;
+import com.ebonheart.EbonArtsMod.common.items.ItemHelper;
 
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.item.EnumRarity;
@@ -16,8 +17,7 @@ public class ItemNecrocite extends Item {
 	
 	public ItemNecrocite() 
 	{
-		this.setUnlocalizedName("gem/necrocite");
-		this.setCreativeTab(EbonArtsMod.tabEbonArtsItems);
+		ItemHelper.setItemName(this, "gem/necrocite");
 	}
 	
 	@SideOnly(Side.CLIENT)

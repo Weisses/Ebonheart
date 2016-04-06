@@ -1,5 +1,7 @@
 package com.ebonheart.EbonArtsMod.references;
 
+import com.ebonheart.EbonArtsMod.EbonArtsMod;
+
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemFood;
 
@@ -92,4 +94,7 @@ public class ItemsEA {
 	//public static Item purified_mystic_dust;
 	
 	//public static Item mans_steak;
+	
+	
+	
 }

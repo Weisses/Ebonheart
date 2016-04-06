@@ -4,6 +4,7 @@ import java.util.List;
 
 import com.ebonheart.EbonArtsMod.EbonArtsMod;
 import com.ebonheart.EbonArtsMod.common.entity.EntityEnchantedEbonheart;
+import com.ebonheart.EbonArtsMod.common.items.ItemHelper;
 
 import net.minecraft.block.BlockJukebox;
 import net.minecraft.block.state.IBlockState;
@@ -30,9 +31,8 @@ public class ItemEnchantedEbonheart extends Item {
 	
 	public ItemEnchantedEbonheart() 
 	{
-		this.setUnlocalizedName("gem/enchanted_ebonheart");
-		this.setCreativeTab(EbonArtsMod.tabEbonArtsItems);
-		this.setMaxStackSize(64);
+		ItemHelper.setItemName(this, "gem/enchanted_ebonheart");
+		this.setMaxStackSize(16);
 	}
 	
 	@SideOnly(Side.CLIENT)

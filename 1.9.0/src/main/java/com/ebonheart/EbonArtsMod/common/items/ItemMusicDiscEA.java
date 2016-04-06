@@ -36,26 +36,17 @@ import net.minecraftforge.fml.relauncher.SideOnly;
 
 public class ItemMusicDiscEA extends ItemRecord {
 	
-    private static final Map<SoundEvent, ItemMusicDiscEA> RECORDS = Maps.<SoundEvent, ItemMusicDiscEA>newHashMap();
-    private final SoundEvent sound;
-    //private final String field_185077_c;
-    private final String music;
-
-    public ItemMusicDiscEA(
-    		String unlocalizedName, 
-    		String name, SoundEvent soundIn)
+    public ItemMusicDiscEA(String unlocalizedName, SoundEvent soundIn)
     {
-    	super(name, soundIn);
-        this.music = "item.record." + name + ".desc";
-        this.sound = soundIn;
-        this.maxStackSize = 1;
-        this.setCreativeTab(EbonArtsMod.tabEbonArtsItems);
-        RECORDS.put(this.sound, this);
-        
-        
-        this.setUnlocalizedName(unlocalizedName);
-        
-        //LogHelper.info("ItemMusicDiscEA : " + field_185077_c);
+    	super(Reference.MOD_ID + ":" + unlocalizedName, soundIn);
+    	ItemHelper.setItemName(this, unlocalizedName);
     }
+    
+    @SideOnly(Side.CLIENT)
+    public void addInformation(ItemStack stack, EntityPlayer playerIn, List toolTip, boolean advanced) 
+	{
+		toolTip.add(TextFormatting.DARK_AQUA + "This "  + stack.getDisplayName().toLowerCase() + " plays the ");
+		toolTip.add(TextFormatting.DARK_AQUA + "record, \"" + this.getRecordNameLocal() + "\".");
+	}
 
 }

@@ -4,7 +4,6 @@ import net.minecraftforge.fml.common.event.FMLInitializationEvent;
 import net.minecraftforge.fml.common.event.FMLPostInitializationEvent;
 import net.minecraftforge.fml.common.event.FMLPreInitializationEvent;
 
-import com.ebonheart.EbonArtsMod.api.SoundEventEA;
 import com.ebonheart.EbonArtsMod.api.SoundEventsEA;
 import com.ebonheart.EbonArtsMod.client.InitBlocksEARender;
 import com.ebonheart.EbonArtsMod.client.InitEntityEARender;
@@ -20,9 +19,8 @@ public class ClientProxy extends CommonProxy {
 		super.preInit(event);
 		
 		InitBlocksEARender.preInit();
-		//SoundEventEA.registerSounds();
 		
-		//SoundEventEA.registerSounds();
+		
 		
 		//---------------------------
 		//InitTileEntitiesEA.registerRenders();

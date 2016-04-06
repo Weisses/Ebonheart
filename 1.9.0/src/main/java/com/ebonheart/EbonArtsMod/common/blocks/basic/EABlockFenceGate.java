@@ -1,6 +1,7 @@
 package com.ebonheart.EbonArtsMod.common.blocks.basic;
 
 import com.ebonheart.EbonArtsMod.EbonArtsMod;
+import com.ebonheart.EbonArtsMod.common.blocks.BlockHelper;
 import com.ebonheart.EbonArtsMod.common.blocks.basic.dyeables.EABlockMeta.EnumType;
 
 import net.minecraft.block.Block;
@@ -25,18 +26,14 @@ import net.minecraftforge.fml.relauncher.SideOnly;
 
 public class EABlockFenceGate extends BlockFenceGate {
 	
-	public static final PropertyBool OPEN = PropertyBool.create("open");
-    public static final PropertyBool POWERED = PropertyBool.create("powered");
-    public static final PropertyBool IN_WALL = PropertyBool.create("in_wall");
-
 	public EABlockFenceGate(String unlocalizedName) 
 	{
 		super(BlockPlanks.EnumType.OAK);
-        //super(Material.wood);
-		this.setUnlocalizedName(unlocalizedName);
-        this.setCreativeTab(EbonArtsMod.tabEbonArtsBlocks);
+		BlockHelper.setBlockName(this, unlocalizedName);
+		
 		this.setDefaultState(this.blockState.getBaseState().withProperty(OPEN, Boolean.valueOf(false)).withProperty(POWERED, Boolean.valueOf(false)).withProperty(IN_WALL, Boolean.valueOf(false)));
         this.setHarvestLevel("pickaxe", 2);
+        this.setHardness(5.0F);
         this.setStepSound(stepSound.STONE);
 	}
 	

@@ -21,21 +21,19 @@ import net.minecraftforge.fml.relauncher.Side;
 import net.minecraftforge.fml.relauncher.SideOnly;
 
 import com.ebonheart.EbonArtsMod.EbonArtsMod;
+import com.ebonheart.EbonArtsMod.common.blocks.BlockHelper;
 import com.ebonheart.EbonArtsMod.proxy.CommonProxy;
 
 
-public class EABlockWall extends BlockWall
-//EABlockFence 
-{
-	//protected final Material blockMaterial;
+public class EABlockWall extends BlockWall {
 	
 	public EABlockWall(String unlocalizedName, Block blockIn) 
     {
 		super(blockIn);
-		//super(Blocks.brick_block, 0);
-		this.setUnlocalizedName(unlocalizedName);
-		this.setCreativeTab(EbonArtsMod.tabEbonArtsBlocks);
+		BlockHelper.setBlockName(this, unlocalizedName);
+		
 		this.setHarvestLevel("pickaxe", 2);
+		this.setHardness(5.0F);
 		this.setStepSound(stepSound.STONE);
 	}
 	
@@ -44,6 +42,5 @@ public class EABlockWall extends BlockWall
     {
 		list.add(new ItemStack(itemIn, 1));
     }
-
 
 }

@@ -14,15 +14,15 @@ import net.minecraft.util.DamageSource;
 import com.ebonheart.EbonArtsMod.EbonArtsMod;
 import com.ebonheart.EbonArtsMod.api.damagesources.EADamageSources;
 import com.ebonheart.EbonArtsMod.api.damagesources.EntityDamageSourceElectric;
+import com.ebonheart.EbonArtsMod.common.items.ItemHelper;
 import com.ebonheart.EbonArtsMod.init.InitItemsEA;
 
 public class ItemArcaniteSword extends ItemSword {
 	
-	public ItemArcaniteSword(String unlocalizedName, ToolMaterial material) 
+	public ItemArcaniteSword(ToolMaterial material) 
 	{
 		super(material);
-		this.setUnlocalizedName(unlocalizedName);
-		this.setCreativeTab(EbonArtsMod.tabEbonArtsItems);
+		ItemHelper.setItemName(this, "tool/arcanite_sword");
 	}
 	
 	public boolean getIsRepairable(ItemStack par1ItemStack, ItemStack par2ItemStack)
