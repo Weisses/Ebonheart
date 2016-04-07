@@ -1,4 +1,4 @@
-package com.ebonheart.EbonArtsMod.common.blocks.basic.dyeables.wood;
+package com.ebonheart.EbonArtsMod.common.blocks.basic.dyeables;
 
 import com.ebonheart.EbonArtsMod.EbonArtsMod;
 import com.ebonheart.EbonArtsMod.common.blocks.BlockHelper;
@@ -26,6 +26,7 @@ public class BlockMysticWood extends BlockHorizontal {
 		this.setCreativeTab(EbonArtsMod.tabEbonArtsDyeables);
 		this.setHarvestLevel("axe", 2);
 		this.setHardness(5.0F);
+		this.setResistance(100.0F);
 		this.setStepSound(stepSound.WOOD);
 	}
 	

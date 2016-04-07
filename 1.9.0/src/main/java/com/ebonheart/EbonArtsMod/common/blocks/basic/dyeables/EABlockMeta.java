@@ -31,8 +31,8 @@ public class EABlockMeta extends Block implements IMetaBlockName {
 	public EABlockMeta(String unlocalizedName, Material materialIn) 
 	{
 		super(materialIn);
-		BlockHelper.setBlockName(this, unlocalizedName);
-		
+		//BlockHelper.setBlockName(this, unlocalizedName);
+		this.setUnlocalizedName(unlocalizedName);
 		this.setCreativeTab(EbonArtsMod.tabEbonArtsDyeables);
 		this.setHarvestLevel("pickaxe", 2);
 		this.setStepSound(stepSound.STONE);

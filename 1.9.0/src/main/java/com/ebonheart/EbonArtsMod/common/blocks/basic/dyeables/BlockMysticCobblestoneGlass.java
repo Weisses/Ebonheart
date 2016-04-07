@@ -56,9 +56,13 @@ public class BlockMysticCobblestoneGlass extends BlockRotatedPillar {
     {
         IBlockState iblockstate = blockAccess.getBlockState(pos.offset(side));
         Block block = iblockstate.getBlock();
+        
+        IBlockState test = blockAccess.getBlockState(pos.offset(side));
+        Block test1 = iblockstate.getBlock();
 
         if (this == InitBlocksEA.cobble_mystic_block_glass)
         {
+        	
             if (blockState != iblockstate)
             {
                 return true;
@@ -72,4 +76,5 @@ public class BlockMysticCobblestoneGlass extends BlockRotatedPillar {
 
         return !this.ignoreSimilarity && block == this ? false : super.shouldSideBeRendered(blockState, blockAccess, pos, side);
     }
+    
 }

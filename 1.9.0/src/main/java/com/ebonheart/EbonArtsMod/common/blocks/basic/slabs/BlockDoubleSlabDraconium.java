@@ -17,8 +17,8 @@ public class BlockDoubleSlabDraconium extends EABlockSlabDraconium {
     public BlockDoubleSlabDraconium(String unlocalizedName) 
     {
         super();
-        BlockHelper.setBlockName(this, unlocalizedName);
-        //this.setUnlocalizedName(setUnlocalizedName);
+        //BlockHelper.setBlockName(this, unlocalizedName);
+        this.setUnlocalizedName(unlocalizedName);
     }
 
 	@Override

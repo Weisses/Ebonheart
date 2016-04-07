@@ -170,10 +170,43 @@ public class BlocksEA {
 	
 	///public static Block mystic_block;
 	public static Block mystic_block_normal;
+	public static Block mystic_block_white;
+	public static Block mystic_block_orange;
+	public static Block mystic_block_magenta;
+	public static Block mystic_block_lightblue;
+	public static Block mystic_block_yellow;
+	public static Block mystic_block_lime;
+	public static Block mystic_block_pink;
+	public static Block mystic_block_gray;
+	public static Block mystic_block_lightgray;
+	public static Block mystic_block_cyan;
+	public static Block mystic_block_purple;
+	public static Block mystic_block_blue;
+	public static Block mystic_block_brown;
+	public static Block mystic_block_green;
+	public static Block mystic_block_red;
+	public static Block mystic_block_black;
+	public static Block mystic_block_glass;
 	
 	///public static Block wood_mystic_block;
 	public static Block wood_mystic_block_normal;
 	public static Block wood_mystic_block_white;
+	public static Block wood_mystic_block_orange;
+	public static Block wood_mystic_block_magenta;
+	public static Block wood_mystic_block_lightblue;
+	public static Block wood_mystic_block_yellow;
+	public static Block wood_mystic_block_lime;
+	public static Block wood_mystic_block_pink;
+	public static Block wood_mystic_block_gray;
+	public static Block wood_mystic_block_lightgray;
+	public static Block wood_mystic_block_cyan;
+	public static Block wood_mystic_block_purple;
+	public static Block wood_mystic_block_blue;
+	public static Block wood_mystic_block_brown;
+	public static Block wood_mystic_block_green;
+	public static Block wood_mystic_block_red;
+	public static Block wood_mystic_block_black;
+	public static Block wood_mystic_block_glass;
 	
 	public static Block paper_block;
 	public static Block leather_block;

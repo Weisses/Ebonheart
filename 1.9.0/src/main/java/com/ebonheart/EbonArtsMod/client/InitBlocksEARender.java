@@ -111,6 +111,25 @@ public final class InitBlocksEARender extends BlocksEA {
 		registerRender(cobble_mystic_block_red);
 		registerRender(cobble_mystic_block_black);
 		
+		registerRender(mystic_block_normal);
+		registerRender(mystic_block_glass);
+		registerRender(mystic_block_white);
+		registerRender(mystic_block_orange);
+		registerRender(mystic_block_magenta);
+		registerRender(mystic_block_lightblue);
+		registerRender(mystic_block_yellow);
+		registerRender(mystic_block_lime);
+		registerRender(mystic_block_pink);
+		registerRender(mystic_block_gray);
+		registerRender(mystic_block_lightgray);
+		registerRender(mystic_block_cyan);
+		registerRender(mystic_block_purple);
+		registerRender(mystic_block_blue);
+		registerRender(mystic_block_brown);
+		registerRender(mystic_block_green);
+		registerRender(mystic_block_red);
+		registerRender(mystic_block_black);
+		
 		//registerRender(cobble_mystic_block_normal);
 		
 	/**	registerRender(cobble_mystic_block);
@@ -131,7 +150,7 @@ public final class InitBlocksEARender extends BlocksEA {
 		registerRender(InitBlocksEA.cobble_mystic_block, 14, "gem/mystic/cobblestone/cobble_mystic_block_red");
 		registerRender(InitBlocksEA.cobble_mystic_block, 15, "gem/mystic/cobblestone/cobble_mystic_block_black");
 **/		
-		registerRender(mystic_block_normal);
+		//registerRender(mystic_block_normal);
 /**		registerRender(mystic_block);
 		registerRender(InitBlocksEA.mystic_block, 0, "gem/mystic/stone/mystic_block_white");
 		registerRender(InitBlocksEA.mystic_block, 1, "gem/mystic/stone/mystic_block_orange");
@@ -150,8 +169,26 @@ public final class InitBlocksEARender extends BlocksEA {
 		registerRender(InitBlocksEA.mystic_block, 14, "gem/mystic/stone/mystic_block_red");
 		registerRender(InitBlocksEA.mystic_block, 15, "gem/mystic/stone/mystic_block_black");
 	**/			
+		
+		
 		registerRender(wood_mystic_block_normal);
+		registerRender(wood_mystic_block_glass);
 		registerRender(wood_mystic_block_white);
+		registerRender(wood_mystic_block_orange);
+		registerRender(wood_mystic_block_magenta);
+		registerRender(wood_mystic_block_lightblue);
+		registerRender(wood_mystic_block_yellow);
+		registerRender(wood_mystic_block_lime);
+		registerRender(wood_mystic_block_pink);
+		registerRender(wood_mystic_block_gray);
+		registerRender(wood_mystic_block_lightgray);
+		registerRender(wood_mystic_block_cyan);
+		registerRender(wood_mystic_block_purple);
+		registerRender(wood_mystic_block_blue);
+		registerRender(wood_mystic_block_brown);
+		registerRender(wood_mystic_block_green);
+		registerRender(wood_mystic_block_red);
+		registerRender(wood_mystic_block_black);
 		
 		/**
 		registerRender(wood_mystic_block);
@@ -192,7 +229,7 @@ public final class InitBlocksEARender extends BlocksEA {
 		registerRender(glowstone_block_brick);
 		registerRender(ebonheart_block_brick);
 		
-		//registerRender(double_draconium_slab);
+		registerRender(double_draconium_slab);
 		registerRender(double_velious_slab);
 		registerRender(double_arcanite_slab);
 		registerRender(double_katcheen_slab);
@@ -202,7 +239,7 @@ public final class InitBlocksEARender extends BlocksEA {
 		registerRender(double_glowstone_slab);
 		registerRender(double_ebonheart_slab);
 		
-		//registerRender(draconium_slab);
+		registerRender(draconium_slab);
 		registerRender(velious_slab);
 		registerRender(arcanite_slab);
 		registerRender(katcheen_slab);

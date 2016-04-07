@@ -76,7 +76,24 @@ tile.ea:gem/mystic/cobblestone/cobble_mystic_block_red.name=Red Mystic Cobblesto
 tile.ea:gem/mystic/cobblestone/cobble_mystic_block_black.name=Black Mystic Cobblestone
 tile.ea:gem/mystic/cobblestone/cobble_mystic_block_glass.name=Clear Mystic Cobblestone
 
-tile.ea:gem/mystic/wood/wood_mystic_block_normal.name=Mystic Planks
+tile.ea:gem/mystic/wood/wood_mystic_block_normal.name=Mystic Wood Planks
+tile.ea:gem/mystic/wood/wood_mystic_block_white.name=White Mystic Wood Planks
+tile.ea:gem/mystic/wood/wood_mystic_block_orange.name=Orange Mystic Wood Planks
+tile.ea:gem/mystic/wood/wood_mystic_block_magenta.name=Magenta Mystic Wood Planks
+tile.ea:gem/mystic/wood/wood_mystic_block_lightblue.name=Light Blue Mystic Wood Planks
+tile.ea:gem/mystic/wood/wood_mystic_block_yellow.name=Yellow Mystic Wood Planks
+tile.ea:gem/mystic/wood/wood_mystic_block_lime.name=Lime Mystic Wood Planks
+tile.ea:gem/mystic/wood/wood_mystic_block_pink.name=Pink Mystic Wood Planks
+tile.ea:gem/mystic/wood/wood_mystic_block_gray.name=Gray Mystic Wood Planks
+tile.ea:gem/mystic/wood/wood_mystic_block_lightgray.name=Light Gray Mystic Wood Planks
+tile.ea:gem/mystic/wood/wood_mystic_block_cyan.name=Cyan Mystic Wood Planks
+tile.ea:gem/mystic/wood/wood_mystic_block_purple.name=Purple Mystic Wood Planks
+tile.ea:gem/mystic/wood/wood_mystic_block_blue.name=Blue Mystic Wood Planks
+tile.ea:gem/mystic/wood/wood_mystic_block_brown.name=Brown Mystic Wood Planks
+tile.ea:gem/mystic/wood/wood_mystic_block_green.name=Green Mystic Wood Planks
+tile.ea:gem/mystic/wood/wood_mystic_block_red.name=Red Mystic Wood Planks
+tile.ea:gem/mystic/wood/wood_mystic_block_black.name=Black Mystic Wood Planks
+tile.ea:gem/mystic/wood/wood_mystic_block_glass.name=Clear Mystic Wood Planks
 
 tile.ea:gem/draconium/draconium_block.name=Block of Draconium
 tile.ea:gem/velious/velious_block.name=Block of Velious
