@@ -28,20 +28,14 @@ public class InitRecipesEA {
 		
 		GameRegistry.addShapedRecipe(new ItemStack(InitBlocksEA.cobble_mystic_block_normal, 8), new Object[]{"CCC", "CEC", "CCC", 'E', InitItemsEA.ebonheart, 'C', Blocks.cobblestone});
 		GameRegistry.addShapedRecipe(new ItemStack(InitBlocksEA.mystic_block_normal, 8), new Object[]{"SSS", "SES", "SSS", 'E', InitItemsEA.ebonheart, 'S', Blocks.stone});
-		
-		//GameRegistry.addShapedRecipe(new ItemStack(InitTileEntitiesEA.Banana_Plant), new Object[]{"DN", "ND", 'D', InitItemsEA.draconium_dust, 'N', Items.quartz});
-		//GameRegistry.addShapedRecipe(new ItemStack(InitBlocksEA.ebonheart_block), new Object[]{"EEE", "EEE", "EEE", 'E', InitItemsEA.ebonheart});
-		//GameRegistry.addShapedRecipe(new ItemStack(InitItemsEA.ebonheart, 9), new Object[]{"E", 'E', InitBlocksEA.ebonheart_block});
+		GameRegistry.addShapedRecipe(new ItemStack(InitBlocksEA.wood_mystic_block_normal, 8), new Object[]{"WWW", "WEW", "WWW", 'E', InitItemsEA.ebonheart, 'W', Blocks.planks});
 		
 		GameRegistry.addShapedRecipe(new ItemStack(InitBlocksEA.paper_block), new Object[]{"PPP", "PPP", "PPP", 'P', Items.paper});
-		
 		GameRegistry.addShapedRecipe(new ItemStack(InitBlocksEA.reed_block), new Object[]{"RRR", "RRR", "RRR", 'R', Items.reeds});
-		
 		GameRegistry.addShapedRecipe(new ItemStack(InitBlocksEA.leather_block), new Object[]{"LLL", "LLL", "LLL", 'L', Items.leather});
 		
 		GameRegistry.addShapedRecipe(new ItemStack(InitItemsEA.obsidian_shards), new Object[]{"DGD", "GQG", "DGD", 'D', InitItemsEA.draconium_dust, 'G', Items.gunpowder, 'Q', Items.quartz});
 		GameRegistry.addShapedRecipe(new ItemStack(InitItemsEA.obsidian_shards, 4), new Object[]{"DGD", "GQG", "DGD", 'D', InitItemsEA.draconium_dust, 'G', Items.gunpowder, 'Q', Blocks.obsidian});
-		
 		GameRegistry.addShapedRecipe(new ItemStack(InitItemsEA.glowstone_shards), new Object[]{"DGD", "GQG", "DGD", 'D', InitItemsEA.draconium_dust, 'G', Items.gunpowder, 'Q', Items.glowstone_dust});
 		GameRegistry.addShapedRecipe(new ItemStack(InitItemsEA.glowstone_shards, 4), new Object[]{"DGD", "GQG", "DGD", 'D', InitItemsEA.draconium_dust, 'G', Items.gunpowder, 'Q', Blocks.glowstone});
 		
@@ -283,96 +277,132 @@ public class InitRecipesEA {
 	
 	public static void initShapelessRecipe()
 	{
-		/**
-	        for (int i = 0; i < 16; ++i)
-	        {
-	        	GameRegistry.addShapelessRecipe(new ItemStack(InitBlocksEA.cobble_mystic_block_normal), new Object[] {new ItemStack(InitBlocksEA.cobble_mystic_block, 1, i)});
-	        	GameRegistry.addShapelessRecipe(new ItemStack(InitBlocksEA.cobble_mystic_block, 1, i), new Object[] {new ItemStack(Items.dye, 1, 15 - i), new ItemStack(Item.getItemFromBlock(InitBlocksEA.cobble_mystic_block_normal))});
-	        	
-	        	GameRegistry.addShapelessRecipe(new ItemStack(InitBlocksEA.mystic_block_normal), new Object[] {new ItemStack(InitBlocksEA.mystic_block, 1, i)});
-	            GameRegistry.addShapelessRecipe(new ItemStack(InitBlocksEA.mystic_block, 1, i), new Object[] {new ItemStack(Items.dye, 1, 15 - i), new ItemStack(Item.getItemFromBlock(InitBlocksEA.mystic_block_normal))});
-	            //GameRegistry.addRecipe(new ItemStack(Blocks.stained_hardened_clay, 8, 15 - i), new Object[] {"###", "#X#", "###", '#', new ItemStack(Blocks.hardened_clay), 'X', new ItemStack(Items.dye, 1, i)});
-	            //GameRegistry.addRecipe(new ItemStack(Blocks.stained_glass, 8, 15 - i), new Object[] {"###", "#X#", "###", '#', new ItemStack(Blocks.glass), 'X', new ItemStack(Items.dye, 1, i)});
-	            //GameRegistry.addRecipe(new ItemStack(Blocks.stained_glass_pane, 16, i), new Object[] {"###", "###", '#', new ItemStack(Blocks.stained_glass, 1, i)});
-	            
-	            
-	        }
-	    **/
+		//Mystic Cobblestone
+		//Recipes that dye the basic block into any color
+		GameRegistry.addShapelessRecipe(new ItemStack(InitBlocksEA.cobble_mystic_block_white), InitBlocksEA.cobble_mystic_block_normal, new ItemStack(Items.dye, 1, 15));
+		GameRegistry.addShapelessRecipe(new ItemStack(InitBlocksEA.cobble_mystic_block_orange), InitBlocksEA.cobble_mystic_block_normal, new ItemStack(Items.dye, 1, 14));
+		GameRegistry.addShapelessRecipe(new ItemStack(InitBlocksEA.cobble_mystic_block_magenta), InitBlocksEA.cobble_mystic_block_normal, new ItemStack(Items.dye, 1, 13));
+		GameRegistry.addShapelessRecipe(new ItemStack(InitBlocksEA.cobble_mystic_block_lightblue), InitBlocksEA.cobble_mystic_block_normal, new ItemStack(Items.dye, 1, 12));
+		GameRegistry.addShapelessRecipe(new ItemStack(InitBlocksEA.cobble_mystic_block_yellow), InitBlocksEA.cobble_mystic_block_normal, new ItemStack(Items.dye, 1, 11));
+		GameRegistry.addShapelessRecipe(new ItemStack(InitBlocksEA.cobble_mystic_block_lime), InitBlocksEA.cobble_mystic_block_normal, new ItemStack(Items.dye, 1, 10));
+		GameRegistry.addShapelessRecipe(new ItemStack(InitBlocksEA.cobble_mystic_block_pink), InitBlocksEA.cobble_mystic_block_normal, new ItemStack(Items.dye, 1, 9));
+		GameRegistry.addShapelessRecipe(new ItemStack(InitBlocksEA.cobble_mystic_block_gray), InitBlocksEA.cobble_mystic_block_normal, new ItemStack(Items.dye, 1, 8));
+		GameRegistry.addShapelessRecipe(new ItemStack(InitBlocksEA.cobble_mystic_block_lightgray), InitBlocksEA.cobble_mystic_block_normal, new ItemStack(Items.dye, 1, 7));
+		GameRegistry.addShapelessRecipe(new ItemStack(InitBlocksEA.cobble_mystic_block_cyan), InitBlocksEA.cobble_mystic_block_normal, new ItemStack(Items.dye, 1, 6));
+		GameRegistry.addShapelessRecipe(new ItemStack(InitBlocksEA.cobble_mystic_block_purple), InitBlocksEA.cobble_mystic_block_normal, new ItemStack(Items.dye, 1, 5));
+		GameRegistry.addShapelessRecipe(new ItemStack(InitBlocksEA.cobble_mystic_block_blue), InitBlocksEA.cobble_mystic_block_normal, new ItemStack(Items.dye, 1, 4));
+		GameRegistry.addShapelessRecipe(new ItemStack(InitBlocksEA.cobble_mystic_block_brown), InitBlocksEA.cobble_mystic_block_normal, new ItemStack(Items.dye, 1, 3));
+		GameRegistry.addShapelessRecipe(new ItemStack(InitBlocksEA.cobble_mystic_block_green), InitBlocksEA.cobble_mystic_block_normal, new ItemStack(Items.dye, 1, 2));
+		GameRegistry.addShapelessRecipe(new ItemStack(InitBlocksEA.cobble_mystic_block_red), InitBlocksEA.cobble_mystic_block_normal, new ItemStack(Items.dye, 1, 1));
+		GameRegistry.addShapelessRecipe(new ItemStack(InitBlocksEA.cobble_mystic_block_black), InitBlocksEA.cobble_mystic_block_normal, new ItemStack(Items.dye, 1, 0));
+		GameRegistry.addShapelessRecipe(new ItemStack(InitBlocksEA.cobble_mystic_block_glass), InitBlocksEA.cobble_mystic_block_normal, new ItemStack(Blocks.glass));		
+		
 		//Mystic Cobblestone
 		//conversion back from dye block to normal block
-		//GameRegistry.addShapelessRecipe(new ItemStack(InitBlocksEA.cobble_mystic_block_normal), new ItemStack(InitBlocksEA.cobble_mystic_block, 1, 0));
-		//GameRegistry.addShapelessRecipe(new ItemStack(InitBlocksEA.cobble_mystic_block_normal), new ItemStack(InitBlocksEA.cobble_mystic_block, 1, 1));
-		//GameRegistry.addShapelessRecipe(new ItemStack(InitBlocksEA.cobble_mystic_block_normal), new ItemStack(InitBlocksEA.cobble_mystic_block, 1, 2));
-		//GameRegistry.addShapelessRecipe(new ItemStack(InitBlocksEA.cobble_mystic_block_normal), new ItemStack(InitBlocksEA.cobble_mystic_block, 1, 3));
-		//GameRegistry.addShapelessRecipe(new ItemStack(InitBlocksEA.cobble_mystic_block_normal), new ItemStack(InitBlocksEA.cobble_mystic_block, 1, 4));
-		//GameRegistry.addShapelessRecipe(new ItemStack(InitBlocksEA.cobble_mystic_block_normal), new ItemStack(InitBlocksEA.cobble_mystic_block, 1, 5));
-		//GameRegistry.addShapelessRecipe(new ItemStack(InitBlocksEA.cobble_mystic_block_normal), new ItemStack(InitBlocksEA.cobble_mystic_block, 1, 6));
-		//GameRegistry.addShapelessRecipe(new ItemStack(InitBlocksEA.cobble_mystic_block_normal), new ItemStack(InitBlocksEA.cobble_mystic_block, 1, 7));
-		//GameRegistry.addShapelessRecipe(new ItemStack(InitBlocksEA.cobble_mystic_block_normal), new ItemStack(InitBlocksEA.cobble_mystic_block, 1, 8));
-		//GameRegistry.addShapelessRecipe(new ItemStack(InitBlocksEA.cobble_mystic_block_normal), new ItemStack(InitBlocksEA.cobble_mystic_block, 1, 9));
-		//GameRegistry.addShapelessRecipe(new ItemStack(InitBlocksEA.cobble_mystic_block_normal), new ItemStack(InitBlocksEA.cobble_mystic_block, 1, 10));
-		//GameRegistry.addShapelessRecipe(new ItemStack(InitBlocksEA.cobble_mystic_block_normal), new ItemStack(InitBlocksEA.cobble_mystic_block, 1, 11));
-		//GameRegistry.addShapelessRecipe(new ItemStack(InitBlocksEA.cobble_mystic_block_normal), new ItemStack(InitBlocksEA.cobble_mystic_block, 1, 12));
-		//GameRegistry.addShapelessRecipe(new ItemStack(InitBlocksEA.cobble_mystic_block_normal), new ItemStack(InitBlocksEA.cobble_mystic_block, 1, 13));
-		//GameRegistry.addShapelessRecipe(new ItemStack(InitBlocksEA.cobble_mystic_block_normal), new ItemStack(InitBlocksEA.cobble_mystic_block, 1, 14));
-		//GameRegistry.addShapelessRecipe(new ItemStack(InitBlocksEA.cobble_mystic_block_normal), new ItemStack(InitBlocksEA.cobble_mystic_block, 1, 15));
+		GameRegistry.addShapelessRecipe(new ItemStack(InitBlocksEA.cobble_mystic_block_normal), new ItemStack(InitBlocksEA.cobble_mystic_block_glass));
+		GameRegistry.addShapelessRecipe(new ItemStack(InitBlocksEA.cobble_mystic_block_normal), new ItemStack(InitBlocksEA.cobble_mystic_block_white));
+		GameRegistry.addShapelessRecipe(new ItemStack(InitBlocksEA.cobble_mystic_block_normal), new ItemStack(InitBlocksEA.cobble_mystic_block_orange));
+		GameRegistry.addShapelessRecipe(new ItemStack(InitBlocksEA.cobble_mystic_block_normal), new ItemStack(InitBlocksEA.cobble_mystic_block_magenta));
+		GameRegistry.addShapelessRecipe(new ItemStack(InitBlocksEA.cobble_mystic_block_normal), new ItemStack(InitBlocksEA.cobble_mystic_block_lightblue));
+		GameRegistry.addShapelessRecipe(new ItemStack(InitBlocksEA.cobble_mystic_block_normal), new ItemStack(InitBlocksEA.cobble_mystic_block_yellow));
+		GameRegistry.addShapelessRecipe(new ItemStack(InitBlocksEA.cobble_mystic_block_normal), new ItemStack(InitBlocksEA.cobble_mystic_block_lime));
+		GameRegistry.addShapelessRecipe(new ItemStack(InitBlocksEA.cobble_mystic_block_normal), new ItemStack(InitBlocksEA.cobble_mystic_block_pink));
+		GameRegistry.addShapelessRecipe(new ItemStack(InitBlocksEA.cobble_mystic_block_normal), new ItemStack(InitBlocksEA.cobble_mystic_block_gray));
+		GameRegistry.addShapelessRecipe(new ItemStack(InitBlocksEA.cobble_mystic_block_normal), new ItemStack(InitBlocksEA.cobble_mystic_block_lightgray));
+		GameRegistry.addShapelessRecipe(new ItemStack(InitBlocksEA.cobble_mystic_block_normal), new ItemStack(InitBlocksEA.cobble_mystic_block_cyan));
+		GameRegistry.addShapelessRecipe(new ItemStack(InitBlocksEA.cobble_mystic_block_normal), new ItemStack(InitBlocksEA.cobble_mystic_block_purple));
+		GameRegistry.addShapelessRecipe(new ItemStack(InitBlocksEA.cobble_mystic_block_normal), new ItemStack(InitBlocksEA.cobble_mystic_block_blue));
+		GameRegistry.addShapelessRecipe(new ItemStack(InitBlocksEA.cobble_mystic_block_normal), new ItemStack(InitBlocksEA.cobble_mystic_block_brown));
+		GameRegistry.addShapelessRecipe(new ItemStack(InitBlocksEA.cobble_mystic_block_normal), new ItemStack(InitBlocksEA.cobble_mystic_block_green));
+		GameRegistry.addShapelessRecipe(new ItemStack(InitBlocksEA.cobble_mystic_block_normal), new ItemStack(InitBlocksEA.cobble_mystic_block_red));		
+		GameRegistry.addShapelessRecipe(new ItemStack(InitBlocksEA.cobble_mystic_block_normal), new ItemStack(InitBlocksEA.cobble_mystic_block_black));
 		
-		//Recipes that dye the basic block into any color
-		//GameRegistry.addShapelessRecipe(new ItemStack(InitBlocksEA.cobble_mystic_block, 1, 0), InitBlocksEA.cobble_mystic_block_normal, new ItemStack(Items.dye, 1, 15));//EnumDyeColor.BLACK.getDyeDamage()
-		//GameRegistry.addShapelessRecipe(new ItemStack(InitBlocksEA.cobble_mystic_block, 1, 1), InitBlocksEA.cobble_mystic_block_normal, new ItemStack(Items.dye, 1, 14));
-		//GameRegistry.addShapelessRecipe(new ItemStack(InitBlocksEA.cobble_mystic_block, 1, 2), InitBlocksEA.cobble_mystic_block_normal, new ItemStack(Items.dye, 1, 13));
-		//GameRegistry.addShapelessRecipe(new ItemStack(InitBlocksEA.cobble_mystic_block, 1, 3), InitBlocksEA.cobble_mystic_block_normal, new ItemStack(Items.dye, 1, 12));
-		//GameRegistry.addShapelessRecipe(new ItemStack(InitBlocksEA.cobble_mystic_block, 1, 4), InitBlocksEA.cobble_mystic_block_normal, new ItemStack(Items.dye, 1, 11));
-		//GameRegistry.addShapelessRecipe(new ItemStack(InitBlocksEA.cobble_mystic_block, 1, 5), InitBlocksEA.cobble_mystic_block_normal, new ItemStack(Items.dye, 1, 10));
-		//GameRegistry.addShapelessRecipe(new ItemStack(InitBlocksEA.cobble_mystic_block, 1, 6), InitBlocksEA.cobble_mystic_block_normal, new ItemStack(Items.dye, 1, 9));
-		//GameRegistry.addShapelessRecipe(new ItemStack(InitBlocksEA.cobble_mystic_block, 1, 7), InitBlocksEA.cobble_mystic_block_normal, new ItemStack(Items.dye, 1, 8));
-		//GameRegistry.addShapelessRecipe(new ItemStack(InitBlocksEA.cobble_mystic_block, 1, 8), InitBlocksEA.cobble_mystic_block_normal, new ItemStack(Items.dye, 1, 7));
-		//GameRegistry.addShapelessRecipe(new ItemStack(InitBlocksEA.cobble_mystic_block, 1, 9), InitBlocksEA.cobble_mystic_block_normal, new ItemStack(Items.dye, 1, 6));
-		//GameRegistry.addShapelessRecipe(new ItemStack(InitBlocksEA.cobble_mystic_block, 1, 10), InitBlocksEA.cobble_mystic_block_normal, new ItemStack(Items.dye, 1, 5));
-		//GameRegistry.addShapelessRecipe(new ItemStack(InitBlocksEA.cobble_mystic_block, 1, 11), InitBlocksEA.cobble_mystic_block_normal, new ItemStack(Items.dye, 1, 4));
-		//GameRegistry.addShapelessRecipe(new ItemStack(InitBlocksEA.cobble_mystic_block, 1, 12), InitBlocksEA.cobble_mystic_block_normal, new ItemStack(Items.dye, 1, 3));
-		//GameRegistry.addShapelessRecipe(new ItemStack(InitBlocksEA.cobble_mystic_block, 1, 13), InitBlocksEA.cobble_mystic_block_normal, new ItemStack(Items.dye, 1, 2));
-		//GameRegistry.addShapelessRecipe(new ItemStack(InitBlocksEA.cobble_mystic_block, 1, 14), InitBlocksEA.cobble_mystic_block_normal, new ItemStack(Items.dye, 1, 1));
-		//GameRegistry.addShapelessRecipe(new ItemStack(InitBlocksEA.cobble_mystic_block, 1, 15), InitBlocksEA.cobble_mystic_block_normal, new ItemStack(Items.dye, 1, 0));
 		
 		
 		//Mystic Stone
-		//conversion back from dye block to normal block
-		//GameRegistry.addShapelessRecipe(new ItemStack(InitBlocksEA.mystic_block_normal), new ItemStack(InitBlocksEA.mystic_block, 1, 0));
-		//GameRegistry.addShapelessRecipe(new ItemStack(InitBlocksEA.mystic_block_normal), new ItemStack(InitBlocksEA.mystic_block, 1, 1));
-		//GameRegistry.addShapelessRecipe(new ItemStack(InitBlocksEA.mystic_block_normal), new ItemStack(InitBlocksEA.mystic_block, 1, 2));
-		//GameRegistry.addShapelessRecipe(new ItemStack(InitBlocksEA.mystic_block_normal), new ItemStack(InitBlocksEA.mystic_block, 1, 3));
-		//GameRegistry.addShapelessRecipe(new ItemStack(InitBlocksEA.mystic_block_normal), new ItemStack(InitBlocksEA.mystic_block, 1, 4));
-		//GameRegistry.addShapelessRecipe(new ItemStack(InitBlocksEA.mystic_block_normal), new ItemStack(InitBlocksEA.mystic_block, 1, 5));
-		//GameRegistry.addShapelessRecipe(new ItemStack(InitBlocksEA.mystic_block_normal), new ItemStack(InitBlocksEA.mystic_block, 1, 6));
-		//GameRegistry.addShapelessRecipe(new ItemStack(InitBlocksEA.mystic_block_normal), new ItemStack(InitBlocksEA.mystic_block, 1, 7));
-		//GameRegistry.addShapelessRecipe(new ItemStack(InitBlocksEA.mystic_block_normal), new ItemStack(InitBlocksEA.mystic_block, 1, 8));
-		//GameRegistry.addShapelessRecipe(new ItemStack(InitBlocksEA.mystic_block_normal), new ItemStack(InitBlocksEA.mystic_block, 1, 9));
-		//GameRegistry.addShapelessRecipe(new ItemStack(InitBlocksEA.mystic_block_normal), new ItemStack(InitBlocksEA.mystic_block, 1, 10));
-		//GameRegistry.addShapelessRecipe(new ItemStack(InitBlocksEA.mystic_block_normal), new ItemStack(InitBlocksEA.mystic_block, 1, 11));
-		//GameRegistry.addShapelessRecipe(new ItemStack(InitBlocksEA.mystic_block_normal), new ItemStack(InitBlocksEA.mystic_block, 1, 12));
-		//GameRegistry.addShapelessRecipe(new ItemStack(InitBlocksEA.mystic_block_normal), new ItemStack(InitBlocksEA.mystic_block, 1, 13));
-		//GameRegistry.addShapelessRecipe(new ItemStack(InitBlocksEA.mystic_block_normal), new ItemStack(InitBlocksEA.mystic_block, 1, 14));
-		//GameRegistry.addShapelessRecipe(new ItemStack(InitBlocksEA.mystic_block_normal), new ItemStack(InitBlocksEA.mystic_block, 1, 15));
-				
 		//Recipes that dye the basic block into any color
-		//GameRegistry.addShapelessRecipe(new ItemStack(InitBlocksEA.mystic_block, 1, 0), InitBlocksEA.mystic_block_normal, new ItemStack(Items.dye, 1, 15));
-		//GameRegistry.addShapelessRecipe(new ItemStack(InitBlocksEA.mystic_block, 1, 1), InitBlocksEA.mystic_block_normal, new ItemStack(Items.dye, 1, 14));
-		//GameRegistry.addShapelessRecipe(new ItemStack(InitBlocksEA.mystic_block, 1, 2), InitBlocksEA.mystic_block_normal, new ItemStack(Items.dye, 1, 13));
-		//GameRegistry.addShapelessRecipe(new ItemStack(InitBlocksEA.mystic_block, 1, 3), InitBlocksEA.mystic_block_normal, new ItemStack(Items.dye, 1, 12));
-		//GameRegistry.addShapelessRecipe(new ItemStack(InitBlocksEA.mystic_block, 1, 4), InitBlocksEA.mystic_block_normal, new ItemStack(Items.dye, 1, 11));
-		//GameRegistry.addShapelessRecipe(new ItemStack(InitBlocksEA.mystic_block, 1, 5), InitBlocksEA.mystic_block_normal, new ItemStack(Items.dye, 1, 10));
-		//GameRegistry.addShapelessRecipe(new ItemStack(InitBlocksEA.mystic_block, 1, 6), InitBlocksEA.mystic_block_normal, new ItemStack(Items.dye, 1, 9));
-		//GameRegistry.addShapelessRecipe(new ItemStack(InitBlocksEA.mystic_block, 1, 7), InitBlocksEA.mystic_block_normal, new ItemStack(Items.dye, 1, 8));
-		//GameRegistry.addShapelessRecipe(new ItemStack(InitBlocksEA.mystic_block, 1, 8), InitBlocksEA.mystic_block_normal, new ItemStack(Items.dye, 1, 7));
-		//GameRegistry.addShapelessRecipe(new ItemStack(InitBlocksEA.mystic_block, 1, 9), InitBlocksEA.mystic_block_normal, new ItemStack(Items.dye, 1, 6));
-		//GameRegistry.addShapelessRecipe(new ItemStack(InitBlocksEA.mystic_block, 1, 10), InitBlocksEA.mystic_block_normal, new ItemStack(Items.dye, 1, 5));
-		//GameRegistry.addShapelessRecipe(new ItemStack(InitBlocksEA.mystic_block, 1, 11), InitBlocksEA.mystic_block_normal, new ItemStack(Items.dye, 1, 4));
-		//GameRegistry.addShapelessRecipe(new ItemStack(InitBlocksEA.mystic_block, 1, 12), InitBlocksEA.mystic_block_normal, new ItemStack(Items.dye, 1, 3));
-		//GameRegistry.addShapelessRecipe(new ItemStack(InitBlocksEA.mystic_block, 1, 13), InitBlocksEA.mystic_block_normal, new ItemStack(Items.dye, 1, 2));
-		//GameRegistry.addShapelessRecipe(new ItemStack(InitBlocksEA.mystic_block, 1, 14), InitBlocksEA.mystic_block_normal, new ItemStack(Items.dye, 1, 1));
-		//GameRegistry.addShapelessRecipe(new ItemStack(InitBlocksEA.mystic_block, 1, 15), InitBlocksEA.mystic_block_normal, new ItemStack(Items.dye, 1, 0));
+		GameRegistry.addShapelessRecipe(new ItemStack(InitBlocksEA.mystic_block_white), InitBlocksEA.mystic_block_normal, new ItemStack(Items.dye, 1, 15));
+		GameRegistry.addShapelessRecipe(new ItemStack(InitBlocksEA.mystic_block_orange), InitBlocksEA.mystic_block_normal, new ItemStack(Items.dye, 1, 14));
+		GameRegistry.addShapelessRecipe(new ItemStack(InitBlocksEA.mystic_block_magenta), InitBlocksEA.mystic_block_normal, new ItemStack(Items.dye, 1, 13));
+		GameRegistry.addShapelessRecipe(new ItemStack(InitBlocksEA.mystic_block_lightblue), InitBlocksEA.mystic_block_normal, new ItemStack(Items.dye, 1, 12));
+		GameRegistry.addShapelessRecipe(new ItemStack(InitBlocksEA.mystic_block_yellow), InitBlocksEA.mystic_block_normal, new ItemStack(Items.dye, 1, 11));
+		GameRegistry.addShapelessRecipe(new ItemStack(InitBlocksEA.mystic_block_lime), InitBlocksEA.mystic_block_normal, new ItemStack(Items.dye, 1, 10));
+		GameRegistry.addShapelessRecipe(new ItemStack(InitBlocksEA.mystic_block_pink), InitBlocksEA.mystic_block_normal, new ItemStack(Items.dye, 1, 9));
+		GameRegistry.addShapelessRecipe(new ItemStack(InitBlocksEA.mystic_block_gray), InitBlocksEA.mystic_block_normal, new ItemStack(Items.dye, 1, 8));
+		GameRegistry.addShapelessRecipe(new ItemStack(InitBlocksEA.mystic_block_lightgray), InitBlocksEA.mystic_block_normal, new ItemStack(Items.dye, 1, 7));
+		GameRegistry.addShapelessRecipe(new ItemStack(InitBlocksEA.mystic_block_cyan), InitBlocksEA.mystic_block_normal, new ItemStack(Items.dye, 1, 6));
+		GameRegistry.addShapelessRecipe(new ItemStack(InitBlocksEA.mystic_block_purple), InitBlocksEA.mystic_block_normal, new ItemStack(Items.dye, 1, 5));
+		GameRegistry.addShapelessRecipe(new ItemStack(InitBlocksEA.mystic_block_blue), InitBlocksEA.mystic_block_normal, new ItemStack(Items.dye, 1, 4));
+		GameRegistry.addShapelessRecipe(new ItemStack(InitBlocksEA.mystic_block_brown), InitBlocksEA.mystic_block_normal, new ItemStack(Items.dye, 1, 3));
+		GameRegistry.addShapelessRecipe(new ItemStack(InitBlocksEA.mystic_block_green), InitBlocksEA.mystic_block_normal, new ItemStack(Items.dye, 1, 2));
+		GameRegistry.addShapelessRecipe(new ItemStack(InitBlocksEA.mystic_block_red), InitBlocksEA.mystic_block_normal, new ItemStack(Items.dye, 1, 1));
+		GameRegistry.addShapelessRecipe(new ItemStack(InitBlocksEA.mystic_block_black), InitBlocksEA.mystic_block_normal, new ItemStack(Items.dye, 1, 0));
+		GameRegistry.addShapelessRecipe(new ItemStack(InitBlocksEA.mystic_block_glass), InitBlocksEA.mystic_block_normal, new ItemStack(Blocks.glass));		
 				
+		//Mystic Stone
+		//conversion back from dye block to normal block
+		GameRegistry.addShapelessRecipe(new ItemStack(InitBlocksEA.mystic_block_normal), new ItemStack(InitBlocksEA.mystic_block_glass));
+		GameRegistry.addShapelessRecipe(new ItemStack(InitBlocksEA.mystic_block_normal), new ItemStack(InitBlocksEA.mystic_block_white));
+		GameRegistry.addShapelessRecipe(new ItemStack(InitBlocksEA.mystic_block_normal), new ItemStack(InitBlocksEA.mystic_block_orange));
+		GameRegistry.addShapelessRecipe(new ItemStack(InitBlocksEA.mystic_block_normal), new ItemStack(InitBlocksEA.mystic_block_magenta));
+		GameRegistry.addShapelessRecipe(new ItemStack(InitBlocksEA.mystic_block_normal), new ItemStack(InitBlocksEA.mystic_block_lightblue));
+		GameRegistry.addShapelessRecipe(new ItemStack(InitBlocksEA.mystic_block_normal), new ItemStack(InitBlocksEA.mystic_block_yellow));
+		GameRegistry.addShapelessRecipe(new ItemStack(InitBlocksEA.mystic_block_normal), new ItemStack(InitBlocksEA.mystic_block_lime));
+		GameRegistry.addShapelessRecipe(new ItemStack(InitBlocksEA.mystic_block_normal), new ItemStack(InitBlocksEA.mystic_block_pink));
+		GameRegistry.addShapelessRecipe(new ItemStack(InitBlocksEA.mystic_block_normal), new ItemStack(InitBlocksEA.mystic_block_gray));
+		GameRegistry.addShapelessRecipe(new ItemStack(InitBlocksEA.mystic_block_normal), new ItemStack(InitBlocksEA.mystic_block_lightgray));
+		GameRegistry.addShapelessRecipe(new ItemStack(InitBlocksEA.mystic_block_normal), new ItemStack(InitBlocksEA.mystic_block_cyan));
+		GameRegistry.addShapelessRecipe(new ItemStack(InitBlocksEA.mystic_block_normal), new ItemStack(InitBlocksEA.mystic_block_purple));
+		GameRegistry.addShapelessRecipe(new ItemStack(InitBlocksEA.mystic_block_normal), new ItemStack(InitBlocksEA.mystic_block_blue));
+		GameRegistry.addShapelessRecipe(new ItemStack(InitBlocksEA.mystic_block_normal), new ItemStack(InitBlocksEA.mystic_block_brown));
+		GameRegistry.addShapelessRecipe(new ItemStack(InitBlocksEA.mystic_block_normal), new ItemStack(InitBlocksEA.mystic_block_green));
+		GameRegistry.addShapelessRecipe(new ItemStack(InitBlocksEA.mystic_block_normal), new ItemStack(InitBlocksEA.mystic_block_red));		
+		GameRegistry.addShapelessRecipe(new ItemStack(InitBlocksEA.mystic_block_normal), new ItemStack(InitBlocksEA.mystic_block_black));
+		
+		
+		
+		//Mystic Wood Planks
+		//Recipes that dye the basic block into any color
+		GameRegistry.addShapelessRecipe(new ItemStack(InitBlocksEA.wood_mystic_block_white), InitBlocksEA.wood_mystic_block_normal, new ItemStack(Items.dye, 1, 15));
+		GameRegistry.addShapelessRecipe(new ItemStack(InitBlocksEA.wood_mystic_block_orange), InitBlocksEA.wood_mystic_block_normal, new ItemStack(Items.dye, 1, 14));
+		GameRegistry.addShapelessRecipe(new ItemStack(InitBlocksEA.wood_mystic_block_magenta), InitBlocksEA.wood_mystic_block_normal, new ItemStack(Items.dye, 1, 13));
+		GameRegistry.addShapelessRecipe(new ItemStack(InitBlocksEA.wood_mystic_block_lightblue), InitBlocksEA.wood_mystic_block_normal, new ItemStack(Items.dye, 1, 12));
+		GameRegistry.addShapelessRecipe(new ItemStack(InitBlocksEA.wood_mystic_block_yellow), InitBlocksEA.wood_mystic_block_normal, new ItemStack(Items.dye, 1, 11));
+		GameRegistry.addShapelessRecipe(new ItemStack(InitBlocksEA.wood_mystic_block_lime), InitBlocksEA.wood_mystic_block_normal, new ItemStack(Items.dye, 1, 10));
+		GameRegistry.addShapelessRecipe(new ItemStack(InitBlocksEA.wood_mystic_block_pink), InitBlocksEA.wood_mystic_block_normal, new ItemStack(Items.dye, 1, 9));
+		GameRegistry.addShapelessRecipe(new ItemStack(InitBlocksEA.wood_mystic_block_gray), InitBlocksEA.wood_mystic_block_normal, new ItemStack(Items.dye, 1, 8));
+		GameRegistry.addShapelessRecipe(new ItemStack(InitBlocksEA.wood_mystic_block_lightgray), InitBlocksEA.wood_mystic_block_normal, new ItemStack(Items.dye, 1, 7));
+		GameRegistry.addShapelessRecipe(new ItemStack(InitBlocksEA.wood_mystic_block_cyan), InitBlocksEA.wood_mystic_block_normal, new ItemStack(Items.dye, 1, 6));
+		GameRegistry.addShapelessRecipe(new ItemStack(InitBlocksEA.wood_mystic_block_purple), InitBlocksEA.wood_mystic_block_normal, new ItemStack(Items.dye, 1, 5));
+		GameRegistry.addShapelessRecipe(new ItemStack(InitBlocksEA.wood_mystic_block_blue), InitBlocksEA.wood_mystic_block_normal, new ItemStack(Items.dye, 1, 4));
+		GameRegistry.addShapelessRecipe(new ItemStack(InitBlocksEA.wood_mystic_block_brown), InitBlocksEA.wood_mystic_block_normal, new ItemStack(Items.dye, 1, 3));
+		GameRegistry.addShapelessRecipe(new ItemStack(InitBlocksEA.wood_mystic_block_green), InitBlocksEA.wood_mystic_block_normal, new ItemStack(Items.dye, 1, 2));
+		GameRegistry.addShapelessRecipe(new ItemStack(InitBlocksEA.wood_mystic_block_red), InitBlocksEA.wood_mystic_block_normal, new ItemStack(Items.dye, 1, 1));
+		GameRegistry.addShapelessRecipe(new ItemStack(InitBlocksEA.wood_mystic_block_black), InitBlocksEA.wood_mystic_block_normal, new ItemStack(Items.dye, 1, 0));
+		GameRegistry.addShapelessRecipe(new ItemStack(InitBlocksEA.wood_mystic_block_glass), InitBlocksEA.wood_mystic_block_normal, new ItemStack(Blocks.glass));		
+		
+		//Mystic Wood Planks
+		//conversion back from dye block to normal block
+		GameRegistry.addShapelessRecipe(new ItemStack(InitBlocksEA.wood_mystic_block_normal), new ItemStack(InitBlocksEA.wood_mystic_block_glass));
+		GameRegistry.addShapelessRecipe(new ItemStack(InitBlocksEA.wood_mystic_block_normal), new ItemStack(InitBlocksEA.wood_mystic_block_white));
+		GameRegistry.addShapelessRecipe(new ItemStack(InitBlocksEA.wood_mystic_block_normal), new ItemStack(InitBlocksEA.wood_mystic_block_orange));
+		GameRegistry.addShapelessRecipe(new ItemStack(InitBlocksEA.wood_mystic_block_normal), new ItemStack(InitBlocksEA.wood_mystic_block_magenta));
+		GameRegistry.addShapelessRecipe(new ItemStack(InitBlocksEA.wood_mystic_block_normal), new ItemStack(InitBlocksEA.wood_mystic_block_lightblue));
+		GameRegistry.addShapelessRecipe(new ItemStack(InitBlocksEA.wood_mystic_block_normal), new ItemStack(InitBlocksEA.wood_mystic_block_yellow));
+		GameRegistry.addShapelessRecipe(new ItemStack(InitBlocksEA.wood_mystic_block_normal), new ItemStack(InitBlocksEA.wood_mystic_block_lime));
+		GameRegistry.addShapelessRecipe(new ItemStack(InitBlocksEA.wood_mystic_block_normal), new ItemStack(InitBlocksEA.wood_mystic_block_pink));
+		GameRegistry.addShapelessRecipe(new ItemStack(InitBlocksEA.wood_mystic_block_normal), new ItemStack(InitBlocksEA.wood_mystic_block_gray));
+		GameRegistry.addShapelessRecipe(new ItemStack(InitBlocksEA.wood_mystic_block_normal), new ItemStack(InitBlocksEA.wood_mystic_block_lightgray));
+		GameRegistry.addShapelessRecipe(new ItemStack(InitBlocksEA.wood_mystic_block_normal), new ItemStack(InitBlocksEA.wood_mystic_block_cyan));
+		GameRegistry.addShapelessRecipe(new ItemStack(InitBlocksEA.wood_mystic_block_normal), new ItemStack(InitBlocksEA.wood_mystic_block_purple));
+		GameRegistry.addShapelessRecipe(new ItemStack(InitBlocksEA.wood_mystic_block_normal), new ItemStack(InitBlocksEA.wood_mystic_block_blue));
+		GameRegistry.addShapelessRecipe(new ItemStack(InitBlocksEA.wood_mystic_block_normal), new ItemStack(InitBlocksEA.wood_mystic_block_brown));
+		GameRegistry.addShapelessRecipe(new ItemStack(InitBlocksEA.wood_mystic_block_normal), new ItemStack(InitBlocksEA.wood_mystic_block_green));
+		GameRegistry.addShapelessRecipe(new ItemStack(InitBlocksEA.wood_mystic_block_normal), new ItemStack(InitBlocksEA.wood_mystic_block_red));		
+		GameRegistry.addShapelessRecipe(new ItemStack(InitBlocksEA.wood_mystic_block_normal), new ItemStack(InitBlocksEA.wood_mystic_block_black));
+		
+		
+		
 		GameRegistry.addRecipe(new ItemStack(Items.paper, 9), new Object[]{"P", 'P', InitBlocksEA.paper_block});
 		GameRegistry.addRecipe(new ItemStack(Items.reeds, 9), new Object[]{"R", 'R', InitBlocksEA.reed_block});
 		GameRegistry.addRecipe(new ItemStack(Items.leather, 9), new Object[]{"L", 'L', InitBlocksEA.leather_block});
@@ -381,18 +411,18 @@ public class InitRecipesEA {
 		if(!EbonArtsConfiguration.musicRecipe)
 		{
 			
-		//	GameRegistry.addRecipe(new ItemStack(Items.record_13), InitItemsEA.mirroring_disc, new ItemStack(Items.dye, 1, 11));
-		//	GameRegistry.addRecipe(new ItemStack(Items.record_cat), InitItemsEA.mirroring_disc, new ItemStack(Items.dye, 1, 2));
-		//	GameRegistry.addRecipe(new ItemStack(Items.record_blocks), InitItemsEA.mirroring_disc, new ItemStack(Items.dye, 1, 14));
-		//	GameRegistry.addRecipe(new ItemStack(Items.record_chirp), InitItemsEA.mirroring_disc, new ItemStack(Items.dye, 1, 1));
-		//	GameRegistry.addRecipe(new ItemStack(Items.record_far), InitItemsEA.mirroring_disc, new ItemStack(Items.dye, 1, 10));
-		//	GameRegistry.addRecipe(new ItemStack(Items.record_mall), InitItemsEA.mirroring_disc, new ItemStack(Items.dye, 1, 4));
-		//	GameRegistry.addRecipe(new ItemStack(Items.record_mellohi), InitItemsEA.mirroring_disc, new ItemStack(Items.dye, 1, 5));
-		//	GameRegistry.addRecipe(new ItemStack(Items.record_stal), InitItemsEA.mirroring_disc, new ItemStack(Items.dye, 1, 0));
-		//	GameRegistry.addRecipe(new ItemStack(Items.record_strad), InitItemsEA.mirroring_disc, new ItemStack(Items.dye, 1, 15));
-		//	GameRegistry.addRecipe(new ItemStack(Items.record_ward), InitItemsEA.mirroring_disc, new ItemStack(Items.dye, 1, 6));
-		//	GameRegistry.addRecipe(new ItemStack(Items.record_11), InitItemsEA.mirroring_disc, new ItemStack(Items.dye, 1, 8));
-		//	GameRegistry.addRecipe(new ItemStack(Items.record_wait), InitItemsEA.mirroring_disc, new ItemStack(Items.dye, 1, 12));
+			GameRegistry.addShapelessRecipe(new ItemStack(Items.record_13), InitItemsEA.mirroring_disc, new ItemStack(Items.dye, 1, 11));
+			GameRegistry.addShapelessRecipe(new ItemStack(Items.record_cat), InitItemsEA.mirroring_disc, new ItemStack(Items.dye, 1, 2));
+			GameRegistry.addShapelessRecipe(new ItemStack(Items.record_blocks), InitItemsEA.mirroring_disc, new ItemStack(Items.dye, 1, 14));
+			GameRegistry.addShapelessRecipe(new ItemStack(Items.record_chirp), InitItemsEA.mirroring_disc, new ItemStack(Items.dye, 1, 1));
+			GameRegistry.addShapelessRecipe(new ItemStack(Items.record_far), InitItemsEA.mirroring_disc, new ItemStack(Items.dye, 1, 10));
+			GameRegistry.addShapelessRecipe(new ItemStack(Items.record_mall), InitItemsEA.mirroring_disc, new ItemStack(Items.dye, 1, 4));
+			GameRegistry.addShapelessRecipe(new ItemStack(Items.record_mellohi), InitItemsEA.mirroring_disc, new ItemStack(Items.dye, 1, 5));
+			GameRegistry.addShapelessRecipe(new ItemStack(Items.record_stal), InitItemsEA.mirroring_disc, new ItemStack(Items.dye, 1, 0));
+			GameRegistry.addShapelessRecipe(new ItemStack(Items.record_strad), InitItemsEA.mirroring_disc, new ItemStack(Items.dye, 1, 15));
+			GameRegistry.addShapelessRecipe(new ItemStack(Items.record_ward), InitItemsEA.mirroring_disc, new ItemStack(Items.dye, 1, 6));
+			GameRegistry.addShapelessRecipe(new ItemStack(Items.record_11), InitItemsEA.mirroring_disc, new ItemStack(Items.dye, 1, 8));
+			GameRegistry.addShapelessRecipe(new ItemStack(Items.record_wait), InitItemsEA.mirroring_disc, new ItemStack(Items.dye, 1, 12));
 			
 		}
 		else
@@ -511,7 +541,142 @@ public class InitRecipesEA {
 		
 		
 		
-		//if(!EbonArtsConfiguration.decraftRecipe2)
+		
+		
+	}
+	
+	public static void initSmeltingRecipe()
+	{
+		//GameRegistry.addSmelting(new ItemStack(InitBlocksEA.draconium_ore), new ItemStack(InitItemsEA.draconium_dust), 10f);
+		
+		
+		//smelt stone back into cobblestone.
+		//GameRegistry.addSmelting(new ItemStack(Blocks.cobblestone), new ItemStack(Blocks.stone), 0.1f);
+		
+		
+	}
+	
+}
+	
+		
+		
+		//Examples I created
+		
+		//GameRegistry.addRecipe(new ItemStack(ModBlocks.tutorialBlock),	"##","##",	'#', ModItems.tutorialItem);
+		//or: GameRegistry.addRecipe(new ItemStack(ModBlocks.tutorialBlock), new Object[]{"##","##", '#', ModItems.tutorialItem});
+
+		//GameRegistry.addShapelessRecipe(new ItemStack(ModItems.tutorialItem), Items.redstone, new ItemStack(Items.dye, 1, 4));
+		//or: GameRegistry.addShapelessRecipe(new ItemStack(ModItems.tutorialItem), new Object[]{Items.redstone, new ItemStack(Items.dye, 1, 4)});
+
+		//GameRegistry.addSmelting(Items.diamond, new ItemStack(ModItems.tutorialItem), 1.0f);
+	
+	//}
+	
+	
+	/**
+	 * 
+	 * Archived old code
+	 * 
+	 * 
+
+
+	        for (int i = 0; i < 16; ++i)
+	        {
+	        	GameRegistry.addShapelessRecipe(new ItemStack(InitBlocksEA.cobble_mystic_block_normal), new Object[] {new ItemStack(InitBlocksEA.cobble_mystic_block, 1, i)});
+	        	GameRegistry.addShapelessRecipe(new ItemStack(InitBlocksEA.cobble_mystic_block, 1, i), new Object[] {new ItemStack(Items.dye, 1, 15 - i), new ItemStack(Item.getItemFromBlock(InitBlocksEA.cobble_mystic_block_normal))});
+	        	
+	        	GameRegistry.addShapelessRecipe(new ItemStack(InitBlocksEA.mystic_block_normal), new Object[] {new ItemStack(InitBlocksEA.mystic_block, 1, i)});
+	            GameRegistry.addShapelessRecipe(new ItemStack(InitBlocksEA.mystic_block, 1, i), new Object[] {new ItemStack(Items.dye, 1, 15 - i), new ItemStack(Item.getItemFromBlock(InitBlocksEA.mystic_block_normal))});
+	            //GameRegistry.addRecipe(new ItemStack(Blocks.stained_hardened_clay, 8, 15 - i), new Object[] {"###", "#X#", "###", '#', new ItemStack(Blocks.hardened_clay), 'X', new ItemStack(Items.dye, 1, i)});
+	            //GameRegistry.addRecipe(new ItemStack(Blocks.stained_glass, 8, 15 - i), new Object[] {"###", "#X#", "###", '#', new ItemStack(Blocks.glass), 'X', new ItemStack(Items.dye, 1, i)});
+	            //GameRegistry.addRecipe(new ItemStack(Blocks.stained_glass_pane, 16, i), new Object[] {"###", "###", '#', new ItemStack(Blocks.stained_glass, 1, i)});
+	            
+	            
+	        }
+	    
+		//Mystic Cobblestone
+		//conversion back from dye block to normal block
+		//GameRegistry.addShapelessRecipe(new ItemStack(InitBlocksEA.cobble_mystic_block_normal), new ItemStack(InitBlocksEA.cobble_mystic_block, 1, 0));
+		//GameRegistry.addShapelessRecipe(new ItemStack(InitBlocksEA.cobble_mystic_block_normal), new ItemStack(InitBlocksEA.cobble_mystic_block, 1, 1));
+		//GameRegistry.addShapelessRecipe(new ItemStack(InitBlocksEA.cobble_mystic_block_normal), new ItemStack(InitBlocksEA.cobble_mystic_block, 1, 2));
+		//GameRegistry.addShapelessRecipe(new ItemStack(InitBlocksEA.cobble_mystic_block_normal), new ItemStack(InitBlocksEA.cobble_mystic_block, 1, 3));
+		//GameRegistry.addShapelessRecipe(new ItemStack(InitBlocksEA.cobble_mystic_block_normal), new ItemStack(InitBlocksEA.cobble_mystic_block, 1, 4));
+		//GameRegistry.addShapelessRecipe(new ItemStack(InitBlocksEA.cobble_mystic_block_normal), new ItemStack(InitBlocksEA.cobble_mystic_block, 1, 5));
+		//GameRegistry.addShapelessRecipe(new ItemStack(InitBlocksEA.cobble_mystic_block_normal), new ItemStack(InitBlocksEA.cobble_mystic_block, 1, 6));
+		//GameRegistry.addShapelessRecipe(new ItemStack(InitBlocksEA.cobble_mystic_block_normal), new ItemStack(InitBlocksEA.cobble_mystic_block, 1, 7));
+		//GameRegistry.addShapelessRecipe(new ItemStack(InitBlocksEA.cobble_mystic_block_normal), new ItemStack(InitBlocksEA.cobble_mystic_block, 1, 8));
+		//GameRegistry.addShapelessRecipe(new ItemStack(InitBlocksEA.cobble_mystic_block_normal), new ItemStack(InitBlocksEA.cobble_mystic_block, 1, 9));
+		//GameRegistry.addShapelessRecipe(new ItemStack(InitBlocksEA.cobble_mystic_block_normal), new ItemStack(InitBlocksEA.cobble_mystic_block, 1, 10));
+		//GameRegistry.addShapelessRecipe(new ItemStack(InitBlocksEA.cobble_mystic_block_normal), new ItemStack(InitBlocksEA.cobble_mystic_block, 1, 11));
+		//GameRegistry.addShapelessRecipe(new ItemStack(InitBlocksEA.cobble_mystic_block_normal), new ItemStack(InitBlocksEA.cobble_mystic_block, 1, 12));
+		//GameRegistry.addShapelessRecipe(new ItemStack(InitBlocksEA.cobble_mystic_block_normal), new ItemStack(InitBlocksEA.cobble_mystic_block, 1, 13));
+		//GameRegistry.addShapelessRecipe(new ItemStack(InitBlocksEA.cobble_mystic_block_normal), new ItemStack(InitBlocksEA.cobble_mystic_block, 1, 14));
+		//GameRegistry.addShapelessRecipe(new ItemStack(InitBlocksEA.cobble_mystic_block_normal), new ItemStack(InitBlocksEA.cobble_mystic_block, 1, 15));
+		
+		//Recipes that dye the basic block into any color
+		//GameRegistry.addShapelessRecipe(new ItemStack(InitBlocksEA.cobble_mystic_block, 1, 0), InitBlocksEA.cobble_mystic_block_normal, new ItemStack(Items.dye, 1, 15));//EnumDyeColor.BLACK.getDyeDamage()
+		//GameRegistry.addShapelessRecipe(new ItemStack(InitBlocksEA.cobble_mystic_block, 1, 1), InitBlocksEA.cobble_mystic_block_normal, new ItemStack(Items.dye, 1, 14));
+		//GameRegistry.addShapelessRecipe(new ItemStack(InitBlocksEA.cobble_mystic_block, 1, 2), InitBlocksEA.cobble_mystic_block_normal, new ItemStack(Items.dye, 1, 13));
+		//GameRegistry.addShapelessRecipe(new ItemStack(InitBlocksEA.cobble_mystic_block, 1, 3), InitBlocksEA.cobble_mystic_block_normal, new ItemStack(Items.dye, 1, 12));
+		//GameRegistry.addShapelessRecipe(new ItemStack(InitBlocksEA.cobble_mystic_block, 1, 4), InitBlocksEA.cobble_mystic_block_normal, new ItemStack(Items.dye, 1, 11));
+		//GameRegistry.addShapelessRecipe(new ItemStack(InitBlocksEA.cobble_mystic_block, 1, 5), InitBlocksEA.cobble_mystic_block_normal, new ItemStack(Items.dye, 1, 10));
+		//GameRegistry.addShapelessRecipe(new ItemStack(InitBlocksEA.cobble_mystic_block, 1, 6), InitBlocksEA.cobble_mystic_block_normal, new ItemStack(Items.dye, 1, 9));
+		//GameRegistry.addShapelessRecipe(new ItemStack(InitBlocksEA.cobble_mystic_block, 1, 7), InitBlocksEA.cobble_mystic_block_normal, new ItemStack(Items.dye, 1, 8));
+		//GameRegistry.addShapelessRecipe(new ItemStack(InitBlocksEA.cobble_mystic_block, 1, 8), InitBlocksEA.cobble_mystic_block_normal, new ItemStack(Items.dye, 1, 7));
+		//GameRegistry.addShapelessRecipe(new ItemStack(InitBlocksEA.cobble_mystic_block, 1, 9), InitBlocksEA.cobble_mystic_block_normal, new ItemStack(Items.dye, 1, 6));
+		//GameRegistry.addShapelessRecipe(new ItemStack(InitBlocksEA.cobble_mystic_block, 1, 10), InitBlocksEA.cobble_mystic_block_normal, new ItemStack(Items.dye, 1, 5));
+		//GameRegistry.addShapelessRecipe(new ItemStack(InitBlocksEA.cobble_mystic_block, 1, 11), InitBlocksEA.cobble_mystic_block_normal, new ItemStack(Items.dye, 1, 4));
+		//GameRegistry.addShapelessRecipe(new ItemStack(InitBlocksEA.cobble_mystic_block, 1, 12), InitBlocksEA.cobble_mystic_block_normal, new ItemStack(Items.dye, 1, 3));
+		//GameRegistry.addShapelessRecipe(new ItemStack(InitBlocksEA.cobble_mystic_block, 1, 13), InitBlocksEA.cobble_mystic_block_normal, new ItemStack(Items.dye, 1, 2));
+		//GameRegistry.addShapelessRecipe(new ItemStack(InitBlocksEA.cobble_mystic_block, 1, 14), InitBlocksEA.cobble_mystic_block_normal, new ItemStack(Items.dye, 1, 1));
+		//GameRegistry.addShapelessRecipe(new ItemStack(InitBlocksEA.cobble_mystic_block, 1, 15), InitBlocksEA.cobble_mystic_block_normal, new ItemStack(Items.dye, 1, 0));
+		
+		
+		//Mystic Stone
+		//conversion back from dye block to normal block
+		//GameRegistry.addShapelessRecipe(new ItemStack(InitBlocksEA.mystic_block_normal), new ItemStack(InitBlocksEA.mystic_block, 1, 0));
+		//GameRegistry.addShapelessRecipe(new ItemStack(InitBlocksEA.mystic_block_normal), new ItemStack(InitBlocksEA.mystic_block, 1, 1));
+		//GameRegistry.addShapelessRecipe(new ItemStack(InitBlocksEA.mystic_block_normal), new ItemStack(InitBlocksEA.mystic_block, 1, 2));
+		//GameRegistry.addShapelessRecipe(new ItemStack(InitBlocksEA.mystic_block_normal), new ItemStack(InitBlocksEA.mystic_block, 1, 3));
+		//GameRegistry.addShapelessRecipe(new ItemStack(InitBlocksEA.mystic_block_normal), new ItemStack(InitBlocksEA.mystic_block, 1, 4));
+		//GameRegistry.addShapelessRecipe(new ItemStack(InitBlocksEA.mystic_block_normal), new ItemStack(InitBlocksEA.mystic_block, 1, 5));
+		//GameRegistry.addShapelessRecipe(new ItemStack(InitBlocksEA.mystic_block_normal), new ItemStack(InitBlocksEA.mystic_block, 1, 6));
+		//GameRegistry.addShapelessRecipe(new ItemStack(InitBlocksEA.mystic_block_normal), new ItemStack(InitBlocksEA.mystic_block, 1, 7));
+		//GameRegistry.addShapelessRecipe(new ItemStack(InitBlocksEA.mystic_block_normal), new ItemStack(InitBlocksEA.mystic_block, 1, 8));
+		//GameRegistry.addShapelessRecipe(new ItemStack(InitBlocksEA.mystic_block_normal), new ItemStack(InitBlocksEA.mystic_block, 1, 9));
+		//GameRegistry.addShapelessRecipe(new ItemStack(InitBlocksEA.mystic_block_normal), new ItemStack(InitBlocksEA.mystic_block, 1, 10));
+		//GameRegistry.addShapelessRecipe(new ItemStack(InitBlocksEA.mystic_block_normal), new ItemStack(InitBlocksEA.mystic_block, 1, 11));
+		//GameRegistry.addShapelessRecipe(new ItemStack(InitBlocksEA.mystic_block_normal), new ItemStack(InitBlocksEA.mystic_block, 1, 12));
+		//GameRegistry.addShapelessRecipe(new ItemStack(InitBlocksEA.mystic_block_normal), new ItemStack(InitBlocksEA.mystic_block, 1, 13));
+		//GameRegistry.addShapelessRecipe(new ItemStack(InitBlocksEA.mystic_block_normal), new ItemStack(InitBlocksEA.mystic_block, 1, 14));
+		//GameRegistry.addShapelessRecipe(new ItemStack(InitBlocksEA.mystic_block_normal), new ItemStack(InitBlocksEA.mystic_block, 1, 15));
+				
+		//Recipes that dye the basic block into any color
+		//GameRegistry.addShapelessRecipe(new ItemStack(InitBlocksEA.mystic_block, 1, 0), InitBlocksEA.mystic_block_normal, new ItemStack(Items.dye, 1, 15));
+		//GameRegistry.addShapelessRecipe(new ItemStack(InitBlocksEA.mystic_block, 1, 1), InitBlocksEA.mystic_block_normal, new ItemStack(Items.dye, 1, 14));
+		//GameRegistry.addShapelessRecipe(new ItemStack(InitBlocksEA.mystic_block, 1, 2), InitBlocksEA.mystic_block_normal, new ItemStack(Items.dye, 1, 13));
+		//GameRegistry.addShapelessRecipe(new ItemStack(InitBlocksEA.mystic_block, 1, 3), InitBlocksEA.mystic_block_normal, new ItemStack(Items.dye, 1, 12));
+		//GameRegistry.addShapelessRecipe(new ItemStack(InitBlocksEA.mystic_block, 1, 4), InitBlocksEA.mystic_block_normal, new ItemStack(Items.dye, 1, 11));
+		//GameRegistry.addShapelessRecipe(new ItemStack(InitBlocksEA.mystic_block, 1, 5), InitBlocksEA.mystic_block_normal, new ItemStack(Items.dye, 1, 10));
+		//GameRegistry.addShapelessRecipe(new ItemStack(InitBlocksEA.mystic_block, 1, 6), InitBlocksEA.mystic_block_normal, new ItemStack(Items.dye, 1, 9));
+		//GameRegistry.addShapelessRecipe(new ItemStack(InitBlocksEA.mystic_block, 1, 7), InitBlocksEA.mystic_block_normal, new ItemStack(Items.dye, 1, 8));
+		//GameRegistry.addShapelessRecipe(new ItemStack(InitBlocksEA.mystic_block, 1, 8), InitBlocksEA.mystic_block_normal, new ItemStack(Items.dye, 1, 7));
+		//GameRegistry.addShapelessRecipe(new ItemStack(InitBlocksEA.mystic_block, 1, 9), InitBlocksEA.mystic_block_normal, new ItemStack(Items.dye, 1, 6));
+		//GameRegistry.addShapelessRecipe(new ItemStack(InitBlocksEA.mystic_block, 1, 10), InitBlocksEA.mystic_block_normal, new ItemStack(Items.dye, 1, 5));
+		//GameRegistry.addShapelessRecipe(new ItemStack(InitBlocksEA.mystic_block, 1, 11), InitBlocksEA.mystic_block_normal, new ItemStack(Items.dye, 1, 4));
+		//GameRegistry.addShapelessRecipe(new ItemStack(InitBlocksEA.mystic_block, 1, 12), InitBlocksEA.mystic_block_normal, new ItemStack(Items.dye, 1, 3));
+		//GameRegistry.addShapelessRecipe(new ItemStack(InitBlocksEA.mystic_block, 1, 13), InitBlocksEA.mystic_block_normal, new ItemStack(Items.dye, 1, 2));
+		//GameRegistry.addShapelessRecipe(new ItemStack(InitBlocksEA.mystic_block, 1, 14), InitBlocksEA.mystic_block_normal, new ItemStack(Items.dye, 1, 1));
+		//GameRegistry.addShapelessRecipe(new ItemStack(InitBlocksEA.mystic_block, 1, 15), InitBlocksEA.mystic_block_normal, new ItemStack(Items.dye, 1, 0));
+		
+		
+		
+		//GameRegistry.addShapedRecipe(new ItemStack(InitTileEntitiesEA.Banana_Plant), new Object[]{"DN", "ND", 'D', InitItemsEA.draconium_dust, 'N', Items.quartz});
+		//GameRegistry.addShapedRecipe(new ItemStack(InitBlocksEA.ebonheart_block), new Object[]{"EEE", "EEE", "EEE", 'E', InitItemsEA.ebonheart});
+		//GameRegistry.addShapedRecipe(new ItemStack(InitItemsEA.ebonheart, 9), new Object[]{"E", 'E', InitBlocksEA.ebonheart_block});
+		
+
+//if(!EbonArtsConfiguration.decraftRecipe2)
 		//{
 		//	
 		//	GameRegistry.addShapelessRecipe(new ItemStack(Items.quartz, 4), new ItemStack(Blocks.quartz_block, 1, 0));
@@ -570,32 +735,5 @@ public class InitRecipesEA {
 		//{
 			
 		//}
-		
-	}
-	
-	public static void initSmeltingRecipe()
-	{
-		//GameRegistry.addSmelting(new ItemStack(InitBlocksEA.draconium_ore), new ItemStack(InitItemsEA.draconium_dust), 10f);
-		
-		
-		//smelt stone back into cobblestone.
-		//GameRegistry.addSmelting(new ItemStack(Blocks.cobblestone), new ItemStack(Blocks.stone), 0.1f);
-		
-		
-	}
-	
-	
-		
-		
-		//Examples I created
-		
-		//GameRegistry.addRecipe(new ItemStack(ModBlocks.tutorialBlock),	"##","##",	'#', ModItems.tutorialItem);
-		//or: GameRegistry.addRecipe(new ItemStack(ModBlocks.tutorialBlock), new Object[]{"##","##", '#', ModItems.tutorialItem});
 
-		//GameRegistry.addShapelessRecipe(new ItemStack(ModItems.tutorialItem), Items.redstone, new ItemStack(Items.dye, 1, 4));
-		//or: GameRegistry.addShapelessRecipe(new ItemStack(ModItems.tutorialItem), new Object[]{Items.redstone, new ItemStack(Items.dye, 1, 4)});
-
-		//GameRegistry.addSmelting(Items.diamond, new ItemStack(ModItems.tutorialItem), 1.0f);
-	
-	//}
-}
+	 */
