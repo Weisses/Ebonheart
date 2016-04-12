@@ -110,7 +110,6 @@ public class InitItemsEA extends ItemsEA {
 		
 		enchanted_ebonheart = registerItem(new ItemEnchantedEbonheart());
 		
-		dragon_fruit = (ItemFood) registerItem(new ItemDragonFruit(6, 1.0F, true));
 		
 		arcanite_pickaxe = registerItem(new ItemArcanitePickaxe(arcaniteToolMaterial));
 		arcanite_axe = registerItem(new ItemArcaniteAxe(ToolMaterial.IRON));
@@ -141,9 +140,12 @@ public class InitItemsEA extends ItemsEA {
 		despair = registerItem(new ItemDespair(legendaryToolMaterial));
 		souleater = registerItem(new ItemSouleater(legendaryToolMaterial));
 		
-		//test_shield = new ItemShield(
-				//"tool/shield/test_shield"
-		//		);
+		
+		dragon_fruit = (ItemFood) registerItem(new ItemDragonFruit(6, 1.0F, true));
+		
+		
+		
+		//test_shield = registerItem(new ItemTestShield());
 		
 		//omniplex = new Omniplex().setUnlocalizedName("omniplex");
 		

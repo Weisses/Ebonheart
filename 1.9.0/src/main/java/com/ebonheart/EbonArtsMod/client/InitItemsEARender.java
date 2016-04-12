@@ -70,7 +70,7 @@ public final class InitItemsEARender extends ItemsEA {
 		registerRender(despair);
 		registerRender(souleater);
 		
-		//registerRender(test_shield);
+		
 		
 		registerRender(obsidian_shards);
 		registerRender(glowstone_shards);
@@ -78,6 +78,9 @@ public final class InitItemsEARender extends ItemsEA {
 		//registerRender(omniplex);
 		//registerRender(banana);
 		registerRender(dragon_fruit);
+		
+		//registerRender(test_shield);
+		
 	}
 	
 	public static void registerRender(Item item)

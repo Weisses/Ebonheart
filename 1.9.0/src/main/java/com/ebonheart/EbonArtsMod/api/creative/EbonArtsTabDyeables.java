@@ -19,6 +19,6 @@ public class EbonArtsTabDyeables extends CreativeTabs {
 	@Override
 	public Item getTabIconItem() 
 	{
-		return Item.getItemFromBlock(BlocksEA.mystic_block_normal);
+		return Item.getItemFromBlock(BlocksEA.mystic_block_glass);
 	}
 }

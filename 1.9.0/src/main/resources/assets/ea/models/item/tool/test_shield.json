@@ -42,7 +42,7 @@
             "predicate": {
                 "blocking": 1
             },
-            "model": "item/shield_blocking"
+            "model": "ea:item/tool/shield/test_shield_blocking"
         }
     ]
 }

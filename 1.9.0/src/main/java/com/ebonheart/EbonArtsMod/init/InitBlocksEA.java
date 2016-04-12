@@ -191,15 +191,15 @@ public class InitBlocksEA extends BlocksEA {
 		obsidian_fence_gate = registerBlock(new EABlockFenceGate("fence/obsidian_fence_gate").setResistance(2000.0F));
 		glowstone_fence_gate = registerBlock(new EABlockFenceGate("fence/glowstone_fence_gate").setResistance(45.0F).setLightLevel(1.0f));
 		
-		draconium_wall = registerBlock(new EABlockWall("wall/draconium_wall", draconium_block).setResistance(4.0F));
-		velious_wall = registerBlock(new EABlockWall("wall/velious_wall", velious_block).setResistance(15.0F));
-		arcanite_wall = registerBlock(new EABlockWall("wall/arcanite_wall", arcanite_block).setResistance(30.0F));
-		katcheen_wall = registerBlock(new EABlockWall("wall/katcheen_wall", katcheen_block).setResistance(100.0F));
-		necrocite_wall = registerBlock(new EABlockWall("wall/necrocite_wall", necrocite_block).setResistance(45.0F));
-		soularite_wall = registerBlock(new EABlockWall("wall/soularite_wall", soularite_block).setResistance(45.0F));
-		ebonheart_wall = registerBlock(new EABlockWall("wall/ebonheart_wall", ebonheart_block).setResistance(2000.0F));
-		obsidian_wall = registerBlock(new EABlockWall("wall/obsidian_wall", obsidian_block).setResistance(2000.0F));
-		glowstone_wall = registerBlock(new EABlockWall("wall/glowstone_wall", glowstone_block).setResistance(45.0F).setLightLevel(1.0f));
+		draconium_wall = registerBlock(new EABlockWall("wall/draconium_wall").setResistance(4.0F));
+		velious_wall = registerBlock(new EABlockWall("wall/velious_wall").setResistance(15.0F));
+		arcanite_wall = registerBlock(new EABlockWall("wall/arcanite_wall").setResistance(30.0F));
+		katcheen_wall = registerBlock(new EABlockWall("wall/katcheen_wall").setResistance(100.0F));
+		necrocite_wall = registerBlock(new EABlockWall("wall/necrocite_wall").setResistance(45.0F));
+		soularite_wall = registerBlock(new EABlockWall("wall/soularite_wall").setResistance(45.0F));
+		ebonheart_wall = registerBlock(new EABlockWall("wall/ebonheart_wall").setResistance(2000.0F));
+		obsidian_wall = registerBlock(new EABlockWall("wall/obsidian_wall").setResistance(2000.0F));
+		glowstone_wall = registerBlock(new EABlockWall("wall/glowstone_wall").setResistance(45.0F).setLightLevel(1.0f));
 		
 		draconium_torch = registerBlock(new EABlockTorchDraconium().setResistance(4.0F));
 		velious_torch = registerBlock(new EABlockTorchVelious().setResistance(15.0F));

@@ -14,6 +14,7 @@ import net.minecraft.creativetab.CreativeTabs;
 import net.minecraft.init.Blocks;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
+import net.minecraft.util.EnumFacing;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.world.IBlockAccess;
 import net.minecraftforge.fml.common.registry.GameRegistry;
@@ -27,9 +28,9 @@ import com.ebonheart.EbonArtsMod.proxy.CommonProxy;
 
 public class EABlockWall extends BlockWall {
 	
-	public EABlockWall(String unlocalizedName, Block blockIn) 
+	public EABlockWall(String unlocalizedName) 
     {
-		super(blockIn);
+		super(Blocks.stonebrick);
 		BlockHelper.setBlockName(this, unlocalizedName);
 		
 		this.setHarvestLevel("pickaxe", 2);
@@ -37,10 +38,25 @@ public class EABlockWall extends BlockWall {
 		this.setStepSound(stepSound.STONE);
 	}
 	
+	
+	
 	@SideOnly(Side.CLIENT)
     public void getSubBlocks(Item itemIn, CreativeTabs tab, List<ItemStack> list)
     {
 		list.add(new ItemStack(itemIn, 1));
     }
 
+	@Override
+	public boolean canPlaceTorchOnTop(IBlockState state, IBlockAccess world, BlockPos pos)
+    {
+        if (state.isSideSolid(world, pos, EnumFacing.UP))
+        {
+            return true;
+        }
+        else
+        {
+            return this instanceof EABlockWall || this == net.minecraft.init.Blocks.glass || this == net.minecraft.init.Blocks.cobblestone_wall;
+        }
+		
+    }
 }
