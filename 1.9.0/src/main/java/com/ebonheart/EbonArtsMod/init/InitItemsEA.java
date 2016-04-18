@@ -18,8 +18,11 @@ import com.ebonheart.EbonArtsMod.api.SoundEventsEA;
 import com.ebonheart.EbonArtsMod.common.items.ItemMirroringDisc;
 import com.ebonheart.EbonArtsMod.common.items.ItemMusicDiscEA;
 import com.ebonheart.EbonArtsMod.common.items.Omniplex;
-import com.ebonheart.EbonArtsMod.common.items.armor.ItemArcaniteArmor;
-import com.ebonheart.EbonArtsMod.common.items.armor.ItemKatcheenArmor;
+import com.ebonheart.EbonArtsMod.common.items.armor.EAMaterialHelper;
+import com.ebonheart.EbonArtsMod.common.items.armor.ItemBurnishedArmor;
+import com.ebonheart.EbonArtsMod.common.items.armor.ItemCelestialArmor;
+import com.ebonheart.EbonArtsMod.common.items.armor.ItemScalemailArmor;
+import com.ebonheart.EbonArtsMod.common.items.armor.ItemVengeanceArmor;
 import com.ebonheart.EbonArtsMod.common.items.resources.ItemArcanite;
 import com.ebonheart.EbonArtsMod.common.items.resources.ItemDraconiumDust;
 import com.ebonheart.EbonArtsMod.common.items.resources.ItemDragonFruit;
@@ -63,6 +66,8 @@ public class InitItemsEA extends ItemsEA {
 	
 	public static final ItemArmor.ArmorMaterial arcaniteArmorMaterial = EnumHelper.addArmorMaterial("arcaniteArmorMaterial", "ea:arcanite", 18, new int[]{2, 6, 5, 2}, 10, SoundEvents.item_armor_equip_chain);
 	public static final ItemArmor.ArmorMaterial katcheenArmorMaterial = EnumHelper.addArmorMaterial("katcheenArmorMaterial", "ea:katcheen", 36, new int[]{3, 8, 6, 3}, 30, SoundEvents.item_armor_equip_chain);
+	
+	
 	
 	//public static final ItemArmor.ArmorMaterial arcaniteArmorMaterial = EnumHelper.addArmorMaterial(name, textureName, durability, reductionAmounts, enchantability);
 
@@ -117,10 +122,33 @@ public class InitItemsEA extends ItemsEA {
 		arcanite_hoe = registerItem(new ItemArcaniteHoe(arcaniteToolMaterial));
 		arcanite_sword = registerItem(new ItemArcaniteSword(arcaniteToolMaterial));
 		
-		arcanite_helmet = registerItem(new ItemArcaniteArmor("armor/arcanite_helmet", arcaniteArmorMaterial, 0, EntityEquipmentSlot.HEAD));
-		arcanite_chestplate = registerItem(new ItemArcaniteArmor("armor/arcanite_chestplate", arcaniteArmorMaterial, 0, EntityEquipmentSlot.CHEST));
-		arcanite_leggings = registerItem(new ItemArcaniteArmor("armor/arcanite_leggings", arcaniteArmorMaterial, 0, EntityEquipmentSlot.LEGS));
-		arcanite_boots = registerItem(new ItemArcaniteArmor("armor/arcanite_boots", arcaniteArmorMaterial, 0, EntityEquipmentSlot.FEET));
+		
+		burnished_helmet = registerItem(new ItemBurnishedArmor("armor/burnished_helmet", 0, EntityEquipmentSlot.HEAD));
+		burnished_chestplate = registerItem(new ItemBurnishedArmor("armor/burnished_chestplate", 0, EntityEquipmentSlot.CHEST));
+		burnished_leggings = registerItem(new ItemBurnishedArmor("armor/burnished_leggings", 0, EntityEquipmentSlot.LEGS));
+		burnished_boots = registerItem(new ItemBurnishedArmor("armor/burnished_boots", 0, EntityEquipmentSlot.FEET));
+		
+		scalemail_helmet = registerItem(new ItemScalemailArmor("armor/scalemail_helmet", 0, EntityEquipmentSlot.HEAD));
+		scalemail_chestplate = registerItem(new ItemScalemailArmor("armor/scalemail_chestplate", 0, EntityEquipmentSlot.CHEST));
+		scalemail_leggings = registerItem(new ItemScalemailArmor("armor/scalemail_leggings", 0, EntityEquipmentSlot.LEGS));
+		scalemail_boots = registerItem(new ItemScalemailArmor("armor/scalemail_boots", 0, EntityEquipmentSlot.FEET));
+		
+		vengeance_helmet = registerItem(new ItemVengeanceArmor("armor/vengeance_helmet", 0, EntityEquipmentSlot.HEAD));
+		vengeance_chestplate = registerItem(new ItemVengeanceArmor("armor/vengeance_chestplate", 0, EntityEquipmentSlot.CHEST));
+		vengeance_leggings = registerItem(new ItemVengeanceArmor("armor/vengeance_leggings", 0, EntityEquipmentSlot.LEGS));
+		vengeance_boots = registerItem(new ItemVengeanceArmor("armor/vengeance_boots", 0, EntityEquipmentSlot.FEET));
+		
+		celestial_helmet = registerItem(new ItemCelestialArmor("armor/celestial_helmet", 0, EntityEquipmentSlot.HEAD));
+		celestial_chestplate = registerItem(new ItemCelestialArmor("armor/celestial_chestplate", 0, EntityEquipmentSlot.CHEST));
+		celestial_leggings = registerItem(new ItemCelestialArmor("armor/celestial_leggings", 0, EntityEquipmentSlot.LEGS));
+		celestial_boots = registerItem(new ItemCelestialArmor("armor/celestial_boots", 0, EntityEquipmentSlot.FEET));
+		
+		//burnished_helmet = registerItem(new ItemBurnishedArmor("armor/burnished_helmet", 0, EntityEquipmentSlot.HEAD));
+		//burnished_chestplate = registerItem(new ItemBurnishedArmor("armor/burnished_chestplate", 0, EntityEquipmentSlot.CHEST));
+		//burnished_leggings = registerItem(new ItemBurnishedArmor("armor/burnished_leggings", 0, EntityEquipmentSlot.LEGS));
+		//burnished_boots = registerItem(new ItemBurnishedArmor("armor/burnished_boots", 0, EntityEquipmentSlot.FEET));
+		
+		
 		
 		katcheen_pickaxe = registerItem(new ItemKatcheenPickaxe(katcheenToolMaterial));
 		katcheen_axe = registerItem(new ItemKatcheenAxe(ToolMaterial.DIAMOND));
@@ -128,10 +156,7 @@ public class InitItemsEA extends ItemsEA {
 		katcheen_hoe = registerItem(new ItemKatcheenHoe(katcheenToolMaterial));
 		katcheen_sword = registerItem(new ItemKatcheenSword(katcheenToolMaterial));
 		
-		katcheen_helmet = registerItem(new ItemKatcheenArmor("armor/katcheen_helmet", katcheenArmorMaterial, 0, EntityEquipmentSlot.HEAD));
-		katcheen_chestplate = registerItem(new ItemKatcheenArmor("armor/katcheen_chestplate", katcheenArmorMaterial, 0, EntityEquipmentSlot.CHEST));
-		katcheen_leggings = registerItem(new ItemKatcheenArmor("armor/katcheen_leggings", katcheenArmorMaterial, 0, EntityEquipmentSlot.LEGS));
-		katcheen_boots = registerItem(new ItemKatcheenArmor("armor/katcheen_boots", katcheenArmorMaterial, 0, EntityEquipmentSlot.FEET));
+		
 		
 		deception = registerItem(new ItemDeception(legendaryToolMaterial));
 		frostbite = registerItem(new ItemFrostbite(legendaryToolMaterial));

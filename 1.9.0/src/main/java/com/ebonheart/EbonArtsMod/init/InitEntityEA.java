@@ -17,7 +17,6 @@ import com.ebonheart.EbonArtsMod.client.entity.EntityCandleFX;
 import com.ebonheart.EbonArtsMod.client.render.projectile.RenderEnchantedEbonheart;
 import com.ebonheart.EbonArtsMod.common.entity.EntityEnchantedEbonheart;
 import com.ebonheart.EbonArtsMod.common.items.ItemMusicDiscEA;
-import com.ebonheart.EbonArtsMod.common.items.armor.ItemArcaniteArmor;
 import com.ebonheart.EbonArtsMod.common.items.resources.ItemArcanite;
 import com.ebonheart.EbonArtsMod.common.items.resources.ItemDraconiumDust;
 import com.ebonheart.EbonArtsMod.common.items.resources.ItemDragonFruit;

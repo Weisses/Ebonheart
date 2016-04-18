@@ -233,15 +233,15 @@ public class InitRecipesEA {
 		
 		if(!EbonArtsConfiguration.armorRecipe)
 		{
-			GameRegistry.addShapedRecipe(new ItemStack(InitItemsEA.arcanite_helmet), new Object[]{"AEA", "A A", 'A', InitItemsEA.arcanite, 'E', InitItemsEA.ebonheart});
-			GameRegistry.addShapedRecipe(new ItemStack(InitItemsEA.arcanite_chestplate), new Object[]{"A A", "AAA", "EEE", 'A', InitItemsEA.arcanite, 'E', InitItemsEA.ebonheart});
-			GameRegistry.addShapedRecipe(new ItemStack(InitItemsEA.arcanite_leggings), new Object[]{"EEE", "A A", "A A", 'A', InitItemsEA.arcanite, 'E', InitItemsEA.ebonheart});
-			GameRegistry.addShapedRecipe(new ItemStack(InitItemsEA.arcanite_boots), new Object[]{"E E", "A A", 'A', InitItemsEA.arcanite, 'E', InitItemsEA.ebonheart});
+			GameRegistry.addShapedRecipe(new ItemStack(InitItemsEA.burnished_helmet), new Object[]{"AEA", "A A", 'A', InitItemsEA.arcanite, 'E', InitItemsEA.ebonheart});
+			GameRegistry.addShapedRecipe(new ItemStack(InitItemsEA.burnished_chestplate), new Object[]{"A A", "AAA", "EEE", 'A', InitItemsEA.arcanite, 'E', InitItemsEA.ebonheart});
+			GameRegistry.addShapedRecipe(new ItemStack(InitItemsEA.burnished_leggings), new Object[]{"EEE", "A A", "A A", 'A', InitItemsEA.arcanite, 'E', InitItemsEA.ebonheart});
+			GameRegistry.addShapedRecipe(new ItemStack(InitItemsEA.burnished_boots), new Object[]{"E E", "A A", 'A', InitItemsEA.arcanite, 'E', InitItemsEA.ebonheart});
 			
-			GameRegistry.addShapedRecipe(new ItemStack(InitItemsEA.katcheen_helmet), new Object[]{"KEK", "K K", 'K', InitItemsEA.katcheen, 'E', InitItemsEA.ebonheart});
-			GameRegistry.addShapedRecipe(new ItemStack(InitItemsEA.katcheen_chestplate), new Object[]{"K K", "KKK", "EEE", 'K', InitItemsEA.katcheen, 'E', InitItemsEA.ebonheart});
-			GameRegistry.addShapedRecipe(new ItemStack(InitItemsEA.katcheen_leggings), new Object[]{"EEE", "K K", "K K", 'K', InitItemsEA.katcheen, 'E', InitItemsEA.ebonheart});
-			GameRegistry.addShapedRecipe(new ItemStack(InitItemsEA.katcheen_boots), new Object[]{"E E", "K K", 'K', InitItemsEA.katcheen, 'E', InitItemsEA.ebonheart});
+			GameRegistry.addShapedRecipe(new ItemStack(InitItemsEA.scalemail_helmet), new Object[]{"KEK", "K K", 'K', InitItemsEA.katcheen, 'E', InitItemsEA.ebonheart});
+			GameRegistry.addShapedRecipe(new ItemStack(InitItemsEA.scalemail_chestplate), new Object[]{"K K", "KKK", "EEE", 'K', InitItemsEA.katcheen, 'E', InitItemsEA.ebonheart});
+			GameRegistry.addShapedRecipe(new ItemStack(InitItemsEA.scalemail_leggings), new Object[]{"EEE", "K K", "K K", 'K', InitItemsEA.katcheen, 'E', InitItemsEA.ebonheart});
+			GameRegistry.addShapedRecipe(new ItemStack(InitItemsEA.scalemail_boots), new Object[]{"E E", "K K", 'K', InitItemsEA.katcheen, 'E', InitItemsEA.ebonheart});
 		}
 		else
 		{

@@ -24,7 +24,7 @@ public class ItemArcanite extends Item {
     public void addInformation(ItemStack stack, EntityPlayer playerIn, List toolTip, boolean advanced) 
 	{
 		toolTip.add(TextFormatting.GOLD + "Sharp, slate like material that");
-		toolTip.add(TextFormatting.GOLD + "is stronger than iron.");
+		toolTip.add(TextFormatting.GOLD + "is stronger than Iron.");
 	}
 	
 	public EnumRarity getRarity(ItemStack stack)

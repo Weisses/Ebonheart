@@ -36,6 +36,33 @@ public class ItemsEA {
 	
 	
 	
+	
+	
+	public static Item burnished_helmet;
+	public static Item burnished_chestplate;
+	public static Item burnished_leggings;
+	public static Item burnished_boots;
+	
+	public static Item scalemail_helmet;
+	public static Item scalemail_chestplate;
+	public static Item scalemail_leggings;
+	public static Item scalemail_boots;
+	
+	public static Item vengeance_helmet;
+	public static Item vengeance_chestplate;
+	public static Item vengeance_leggings;
+	public static Item vengeance_boots;
+	
+	public static Item celestial_helmet;
+	public static Item celestial_chestplate;
+	public static Item celestial_leggings;
+	public static Item celestial_boots;
+	
+	public static Item ebonheart_helmet;
+	public static Item ebonheart_chestplate;
+	public static Item ebonheart_leggings;
+	public static Item ebonheart_boots;
+	
 	//public static Item tier_1_catalyst;
 	//public static Item tier_2_catalyst;
 	//public static Item tier_3_catalyst;
@@ -47,21 +74,11 @@ public class ItemsEA {
 	public static Item arcanite_hoe;
 	public static Item arcanite_sword;
 	
-	public static Item arcanite_helmet;
-	public static Item arcanite_chestplate;
-	public static Item arcanite_leggings;
-	public static Item arcanite_boots;
-	
 	public static Item katcheen_pickaxe;
 	public static Item katcheen_axe;
 	public static Item katcheen_shovel;
 	public static Item katcheen_hoe;
 	public static Item katcheen_sword;
-	
-	public static Item katcheen_helmet;
-	public static Item katcheen_chestplate;
-	public static Item katcheen_leggings;
-	public static Item katcheen_boots;
 	
 	public static Item empowered_blade;
 	public static Item deception;

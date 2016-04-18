@@ -12,7 +12,7 @@ import com.ebonheart.EbonArtsMod.init.InitEntityEA;
 import com.ebonheart.EbonArtsMod.init.InitTileEntitiesEA;
 
 public class ClientProxy extends CommonProxy {
-	
+	public float fovModifierHand = 0F;
 	@Override
 	public void preInit(FMLPreInitializationEvent event) 
 	{
@@ -45,5 +45,7 @@ public class ClientProxy extends CommonProxy {
 	public void postInit(FMLPostInitializationEvent event) 
 	{
 		super.postInit(event);
+		
 	}
+	
 }
