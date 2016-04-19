@@ -1,5 +1,35 @@
 Changelog:
-Build 1858:
+Build 1865:
+	vincent.lee:
+		Boss bar render event (#2701)
+		
+		Allow control over increment height
+
+Build 1.9-12.16.0.1864-1.9:
+	izooDee5:
+		Fix forge:default-block transformation. (#2760)
+		
+		The first-person left-hand rotation was a little bit of.
+
+Build 1.9-12.16.0.1863-1.9:
+	LexManos: Expose a central place to access all of Vanilla and Forge's registries using the new registry API.
+
+Build 1.9-12.16.0.1862-1.9:
+	LexManos: Fix log spam from invalid key modifiers (#2746)
+
+Build 1.9-12.16.0.1861-1.9:
+	LexManos: make WorldSavedData implement NBTSerializable (#2745)
+
+Build 1.9-12.16.0.1860-1.9:
+	LexManos: Don't use import static with net.minecraft classes. Using the latest MCP snapshots this causes an import conflict. (#2742)
+
+Build 1.9-12.16.0.1859-1.9:
+	LexManos:
+		Add cancelable event for Potions shifting the gui position (#2667)
+		
+		Add cancelable event for Potions shifting the gui position
+
+Build 1.9-12.16.0.1858-1.9:
 	LexManos: Fix ForgeChunkManager world unloading check (#2736)
 
 Build 1.9-12.16.0.1857-1.9:
