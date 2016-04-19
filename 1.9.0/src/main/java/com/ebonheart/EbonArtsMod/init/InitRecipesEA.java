@@ -244,12 +244,12 @@ public class InitRecipesEA {
 			GameRegistry.addShapedRecipe(new ItemStack(InitItemsEA.scalemail_boots), new Object[]{"E E", "K K", 'K', InitItemsEA.katcheen, 'E', InitItemsEA.enchanted_ebonheart});
 			
 			GameRegistry.addShapedRecipe(new ItemStack(InitItemsEA.vengeance_helmet), new Object[]{"NEN", "N N", 'N', InitItemsEA.necrocite, 'E', InitItemsEA.enchanted_ebonheart});
-			GameRegistry.addShapedRecipe(new ItemStack(InitItemsEA.vengeance_chestplate), new Object[]{"N N", "NPN", "EEE", 'N', InitItemsEA.necrocite, 'E', InitItemsEA.enchanted_ebonheart, 'P', Items.ender_eye});
+			GameRegistry.addShapedRecipe(new ItemStack(InitItemsEA.vengeance_chestplate), new Object[]{"N N", "NCN", "EEE", 'N', InitItemsEA.necrocite, 'E', InitItemsEA.enchanted_ebonheart, 'C', Items.end_crystal});
 			GameRegistry.addShapedRecipe(new ItemStack(InitItemsEA.vengeance_leggings), new Object[]{"EEE", "N N", "N N", 'N', InitItemsEA.necrocite, 'E', InitItemsEA.enchanted_ebonheart});
 			GameRegistry.addShapedRecipe(new ItemStack(InitItemsEA.vengeance_boots), new Object[]{"E E", "N N", 'N', InitItemsEA.necrocite, 'E', InitItemsEA.enchanted_ebonheart});
 			
 			GameRegistry.addShapedRecipe(new ItemStack(InitItemsEA.celestial_helmet), new Object[]{"SES", "S S", 'S', InitItemsEA.soularite, 'E', InitItemsEA.enchanted_ebonheart});
-			GameRegistry.addShapedRecipe(new ItemStack(InitItemsEA.celestial_chestplate), new Object[]{"S S", "SCS", "EEE", 'S', InitItemsEA.soularite, 'E', InitItemsEA.enchanted_ebonheart, 'C', Items.end_crystal});
+			GameRegistry.addShapedRecipe(new ItemStack(InitItemsEA.celestial_chestplate), new Object[]{"S S", "SNS", "EEE", 'S', InitItemsEA.soularite, 'E', InitItemsEA.enchanted_ebonheart, 'N', Items.nether_star});
 			GameRegistry.addShapedRecipe(new ItemStack(InitItemsEA.celestial_leggings), new Object[]{"EEE", "S S", "S S", 'S', InitItemsEA.soularite, 'E', InitItemsEA.enchanted_ebonheart});
 			GameRegistry.addShapedRecipe(new ItemStack(InitItemsEA.celestial_boots), new Object[]{"E E", "S S", 'S', InitItemsEA.soularite, 'E', InitItemsEA.enchanted_ebonheart});
 		}
