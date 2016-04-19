@@ -57,7 +57,7 @@ public class ItemScalemailArmor extends ItemArmor {
 		toolTip.add(TextFormatting.WHITE + "Set Bonus:");
 		toolTip.add(TextFormatting.GREEN + "Ability - Double Jump.");
 		toolTip.add(TextFormatting.GREEN + "Ability - Safe Fall.");
-		toolTip.add(TextFormatting.GREEN + "Speed increased by 110%");
+		//toolTip.add(TextFormatting.GREEN + "Speed increased by 110%");
 	}
 	
 	public EnumRarity getRarity(ItemStack stack)

@@ -73,7 +73,7 @@ public class AchievementsEA {
 		
 		if(event.crafting.getItem() == InitItemsEA.glowstone_shards) 
 		{
-			event.player.addStat(InitAchievementsEA.nether_bound);//.triggerAchievement(InitAchievementsEA.nether_bound);
+			event.player.addStat(InitAchievementsEA.nether_doomed);//.triggerAchievement(InitAchievementsEA.nether_bound);
 		}
 		
 		if(event.crafting.getItem() == InitItemsEA.glowing_disc) 
@@ -145,6 +145,39 @@ public class AchievementsEA {
 		{
 			event.player.addStat(InitAchievementsEA.enchanted_ebonheart);//.triggerAchievement(InitAchievementsEA.enchanted_ebonheart);
 		}
+		
+		if(event.crafting.getItem() == InitItemsEA.burnished_helmet
+		|| event.crafting.getItem() == InitItemsEA.burnished_chestplate
+		|| event.crafting.getItem() == InitItemsEA.burnished_leggings
+		|| event.crafting.getItem() == InitItemsEA.burnished_boots) 
+		{
+			event.player.addStat(InitAchievementsEA.burnished_armor);
+		}
+		
+		if(event.crafting.getItem() == InitItemsEA.scalemail_helmet
+		|| event.crafting.getItem() == InitItemsEA.scalemail_chestplate
+		|| event.crafting.getItem() == InitItemsEA.scalemail_leggings
+		|| event.crafting.getItem() == InitItemsEA.scalemail_boots) 
+		{
+			event.player.addStat(InitAchievementsEA.scalemail_armor);
+		}
+		
+		if(event.crafting.getItem() == InitItemsEA.vengeance_helmet
+		|| event.crafting.getItem() == InitItemsEA.vengeance_chestplate
+		|| event.crafting.getItem() == InitItemsEA.vengeance_leggings
+		|| event.crafting.getItem() == InitItemsEA.vengeance_boots) 
+		{
+			event.player.addStat(InitAchievementsEA.vengeance_armor);
+		}
+		
+		if(event.crafting.getItem() == InitItemsEA.celestial_helmet
+		|| event.crafting.getItem() == InitItemsEA.celestial_chestplate
+		|| event.crafting.getItem() == InitItemsEA.celestial_leggings
+		|| event.crafting.getItem() == InitItemsEA.celestial_boots) 
+		{
+			event.player.addStat(InitAchievementsEA.celestial_armor);
+		}
+		
 	}
 	
 	

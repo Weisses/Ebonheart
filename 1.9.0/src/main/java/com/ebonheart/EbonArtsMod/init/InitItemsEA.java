@@ -128,6 +128,16 @@ public class InitItemsEA extends ItemsEA {
 		burnished_leggings = registerItem(new ItemBurnishedArmor("armor/burnished_leggings", 0, EntityEquipmentSlot.LEGS));
 		burnished_boots = registerItem(new ItemBurnishedArmor("armor/burnished_boots", 0, EntityEquipmentSlot.FEET));
 		
+		
+		
+		katcheen_pickaxe = registerItem(new ItemKatcheenPickaxe(katcheenToolMaterial));
+		katcheen_axe = registerItem(new ItemKatcheenAxe(ToolMaterial.DIAMOND));
+		katcheen_shovel = registerItem(new ItemKatcheenShovel(katcheenToolMaterial));
+		katcheen_hoe = registerItem(new ItemKatcheenHoe(katcheenToolMaterial));
+		katcheen_sword = registerItem(new ItemKatcheenSword(katcheenToolMaterial));
+		
+		
+		
 		scalemail_helmet = registerItem(new ItemScalemailArmor("armor/scalemail_helmet", 0, EntityEquipmentSlot.HEAD));
 		scalemail_chestplate = registerItem(new ItemScalemailArmor("armor/scalemail_chestplate", 0, EntityEquipmentSlot.CHEST));
 		scalemail_leggings = registerItem(new ItemScalemailArmor("armor/scalemail_leggings", 0, EntityEquipmentSlot.LEGS));
@@ -150,11 +160,7 @@ public class InitItemsEA extends ItemsEA {
 		
 		
 		
-		katcheen_pickaxe = registerItem(new ItemKatcheenPickaxe(katcheenToolMaterial));
-		katcheen_axe = registerItem(new ItemKatcheenAxe(ToolMaterial.DIAMOND));
-		katcheen_shovel = registerItem(new ItemKatcheenShovel(katcheenToolMaterial));
-		katcheen_hoe = registerItem(new ItemKatcheenHoe(katcheenToolMaterial));
-		katcheen_sword = registerItem(new ItemKatcheenSword(katcheenToolMaterial));
+		dragon_fruit = (ItemFood) registerItem(new ItemDragonFruit(6, 1.0F, true));
 		
 		
 		
@@ -166,7 +172,6 @@ public class InitItemsEA extends ItemsEA {
 		souleater = registerItem(new ItemSouleater(legendaryToolMaterial));
 		
 		
-		dragon_fruit = (ItemFood) registerItem(new ItemDragonFruit(6, 1.0F, true));
 		
 		
 		

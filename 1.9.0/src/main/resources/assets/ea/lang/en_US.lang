@@ -273,7 +273,7 @@ achievement.ea:dismal_disc.desc=Craft a Dismal Disc.
 achievement.ea:mine_soularite_ore=Reap the Soularite!
 achievement.ea:mine_soularite_ore.desc=Mine some Soularite Ore.
 achievement.ea:ethereal_disc=Harmony of Light!
-achievement.ea:ethereal_disc.desc=Craft a Ethereal Disc.
+achievement.ea:ethereal_disc.desc=Craft an Ethereal Disc.
 
 achievement.ea:ebonheart=Power level's over 9000!
 achievement.ea:ebonheart.desc=Obtain an Ebonheart Gemstone.
@@ -303,10 +303,24 @@ achievement.ea:enchanted_ebonheart=Powering up!
 achievement.ea:enchanted_ebonheart.desc=Craft an Enchanted Ebonheart.
 
 achievement.ea:nether_bound=Nether bound!
-achievement.ea:nether_bound.desc=Craft either Obsidian or Glowstone Shards.
+achievement.ea:nether_bound.desc=Craft an Obsidian Shard.
 
-achievement.ea:smelt_draconium_dust=From dragons to dust!
-achievement.ea:smelt_draconium_dust.desc=Smelt Draconium Dust.
+achievement.ea:nether_doomed=Nether doomed!
+achievement.ea:nether_doomed.desc=Craft a Glowstone Shard.
+
+achievement.ea:burnished_armor=Stealthy velocity!
+achievement.ea:burnished_armor.desc=Craft any piece of the Burnished Armor set.
+
+achievement.ea:scalemail_armor=Athletic prowess!
+achievement.ea:scalemail_armor.desc=Craft any piece of the Scalemail Armor set.
+
+achievement.ea:vengeance_armor=Shadowy catastrophe!
+achievement.ea:vengeance_armor.desc=Craft any piece of the Vengeance Armor set.
+
+achievement.ea:celestial_armor=Hallowed light!
+achievement.ea:celestial_armor.desc=Craft any piece of the Celestial Armor set.
+
+
 
 //-----Music Discs-----
 item.record.ea:disc/glowing_disc.desc=Island

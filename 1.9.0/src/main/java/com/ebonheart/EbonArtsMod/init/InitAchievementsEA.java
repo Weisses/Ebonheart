@@ -50,6 +50,12 @@ public class InitAchievementsEA
 	public static Achievement souleater;
 	
 	public static Achievement nether_bound;
+	public static Achievement nether_doomed;
+	
+	public static Achievement burnished_armor;
+	public static Achievement scalemail_armor;
+	public static Achievement vengeance_armor;
+	public static Achievement celestial_armor;
 	//public static Achievement smeltMysticDust;
 	//public static Achievement craftEbonSigil;
 	
@@ -77,7 +83,7 @@ public class InitAchievementsEA
 		ethereal_disc = new AchievementHelper(Reference.ETHEREAL_DISC, 5, 2, InitItemsEA.ethereal_disc, (Achievement)mine_soularite_ore);//.func_180788_c();
 		
 		ebonheart = new AchievementHelper(Reference.EBONHEART, 1, 0, InitItemsEA.ebonheart, (Achievement)null);//.func_180788_c();
-		enchanted_ebonheart = new AchievementHelper(Reference.ENCHANTED_EBONHEART, 1, -2, InitItemsEA.enchanted_ebonheart, (Achievement)ebonheart).setSpecial();//.func_180788_c();
+		enchanted_ebonheart = new AchievementHelper(Reference.ENCHANTED_EBONHEART, 1, -2, InitItemsEA.enchanted_ebonheart, (Achievement)ebonheart);//.func_180788_c();
 		
 		empowered_blade = new AchievementHelper(Reference.EMPOWERED_BLADE, 1, 2, InitItemsEA.empowered_blade, (Achievement)ebonheart);//.func_180788_c();
 		deception = new AchievementHelper(Reference.DECEPTION, -1, 3, InitItemsEA.deception, (Achievement)empowered_blade).setSpecial();//.func_180788_c();
@@ -87,7 +93,13 @@ public class InitAchievementsEA
 		despair = new AchievementHelper(Reference.DESPAIR, 3, 4, InitItemsEA.despair, (Achievement)empowered_blade).setSpecial();//.func_180788_c();
 		souleater = new AchievementHelper(Reference.SOULEATER, 3, 5, InitItemsEA.souleater, (Achievement)empowered_blade).setSpecial();//.func_180788_c();
 		
-		nether_bound = new AchievementHelper(Reference.NETHER_BOUND, 1, -4, InitItemsEA.glowstone_shards, (Achievement)null);//.func_180788_c();
+		nether_bound = new AchievementHelper(Reference.NETHER_BOUND, -3, 4, InitItemsEA.obsidian_shards, (Achievement)null);//.func_180788_c();
+		nether_doomed = new AchievementHelper(Reference.NETHER_DOOMED, 5, 4, InitItemsEA.glowstone_shards, (Achievement)null);//.func_180788_c();
+		
+		burnished_armor = new AchievementHelper(Reference.BURNISHED_ARMOR, -1, -3, InitItemsEA.burnished_chestplate, (Achievement)enchanted_ebonheart).setSpecial();//.func_180788_c();
+		scalemail_armor = new AchievementHelper(Reference.SCALEMAIL_ARMOR, 3, -3, InitItemsEA.scalemail_chestplate, (Achievement)enchanted_ebonheart).setSpecial();//.func_180788_c();
+		vengeance_armor = new AchievementHelper(Reference.VENGEANCE_ARMOR, -1, -4, InitItemsEA.vengeance_chestplate, (Achievement)enchanted_ebonheart).setSpecial();//.func_180788_c();
+		celestial_armor = new AchievementHelper(Reference.CELESTIAL_ARMOR, 3, -4, InitItemsEA.celestial_chestplate, (Achievement)enchanted_ebonheart).setSpecial();//.func_180788_c();
 		
 	//mine_arcanite_ore = new Achievement("achievement.mine_arcanite_ore", "mine_arcanite_ore", -1, -1, InitItemsEA.arcanite, (Achievement)null).func_180788_c();
 	//smeltMysticDust = new Achievement("achievement.smeltMysticDust", "smeltMysticDust", -3, -1, EbonArtsBlocks.arcanite_ore, mineMysticDust).func_180788_c();
@@ -104,7 +116,8 @@ public class InitAchievementsEA
 		ebon_arts_page = new AchievementPage(Reference.MOD_NAME, AchievementHelper.achievements.toArray(new Achievement[AchievementHelper.achievements.size()]));
 		AchievementPage.registerAchievementPage(ebon_arts_page);
 	//MinecraftForge.EVENT_BUS(new AchievementsEA());
-	FMLCommonHandler.instance().bus().register(new AchievementsEA());
+		MinecraftForge.EVENT_BUS.register(new AchievementsEA());
+	//FMLCommonHandler.instance().bus().register(new AchievementsEA());
 	}
 	
 	

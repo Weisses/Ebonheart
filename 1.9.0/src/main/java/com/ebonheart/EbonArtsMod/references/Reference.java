@@ -38,5 +38,11 @@ public class Reference {
 	public static final String SOULEATER = "souleater";
 	
 	public static final String NETHER_BOUND = "nether_bound";
+	public static final String NETHER_DOOMED = "nether_doomed";
+	
+	public static final String BURNISHED_ARMOR = "burnished_armor";
+	public static final String SCALEMAIL_ARMOR = "scalemail_armor";
+	public static final String VENGEANCE_ARMOR = "vengeance_armor";
+	public static final String CELESTIAL_ARMOR = "celestial_armor";
 	
 }
