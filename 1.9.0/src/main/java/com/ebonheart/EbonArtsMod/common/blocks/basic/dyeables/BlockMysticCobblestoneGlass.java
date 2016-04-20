@@ -60,7 +60,9 @@ public class BlockMysticCobblestoneGlass extends BlockRotatedPillar {
         IBlockState test = blockAccess.getBlockState(pos.offset(side));
         Block test1 = iblockstate.getBlock();
 
-        if (this == InitBlocksEA.cobble_mystic_block_glass)
+        if (this == InitBlocksEA.cobble_mystic_block_glass
+         || this == InitBlocksEA.mystic_block_glass
+         || this == InitBlocksEA.wood_mystic_block_glass)
         {
         	
             if (blockState != iblockstate)

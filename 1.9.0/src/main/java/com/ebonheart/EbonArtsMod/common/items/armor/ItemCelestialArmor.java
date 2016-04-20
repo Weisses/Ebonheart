@@ -11,12 +11,14 @@ import net.minecraft.client.Minecraft;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.entity.player.PlayerCapabilities;
 import net.minecraft.init.Items;
+import net.minecraft.init.MobEffects;
 import net.minecraft.init.SoundEvents;
 import net.minecraft.inventory.EntityEquipmentSlot;
 import net.minecraft.item.EnumRarity;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemArmor;
 import net.minecraft.entity.EntityLiving;
+import net.minecraft.entity.EntityLivingBase;
 import net.minecraft.entity.SharedMonsterAttributes;
 import net.minecraft.item.ItemStack;
 import net.minecraft.potion.Potion;
@@ -79,16 +81,26 @@ public class ItemCelestialArmor extends ItemArmor {
 					player.capabilities.allowFlying = true;
 				}
 				
-				if (player.capabilities.isFlying)
+				if (world.isRemote)
 				{
-					if(!player.getEntityAttribute(SharedMonsterAttributes.MOVEMENT_SPEED).hasModifier(EAAttributeModifier.CELESTIAL_FLY_BONUS))
+					if (player.capabilities.isFlying)
 					{
-						player.getEntityAttribute(SharedMonsterAttributes.MOVEMENT_SPEED).applyModifier(EAAttributeModifier.CELESTIAL_FLY_BONUS);
+					
+						player.setVelocity((player.motionX - (player.motionX * .7)), (player.motionY - (player.motionY * .3)), (player.motionZ - (player.motionZ * .7)));
+					//player.capabilities.getFlySpeed();
+					//if (player instanceof EntityLivingBase) { // If the Entity is an instance of EntityLivingBase,
+					//	((EntityLivingBase) player).addPotionEffect(new PotionEffect(MobEffects.moveSlowdown, 10, 8)); // Apply Slowness II (amplifier = 1) for 10 ticks (0.5 seconds)
+					//}
+					//if(!player.getEntityAttribute(SharedMonsterAttributes.MOVEMENT_SPEED).hasModifier(EAAttributeModifier.CELESTIAL_FLY_BONUS))
+					//{
+					//	player.getEntityAttribute(SharedMonsterAttributes.MOVEMENT_SPEED).applyModifier(EAAttributeModifier.CELESTIAL_FLY_BONUS);
+					//}
 					}
 				}
 				if (!player.capabilities.isFlying)
 				{
-					player.getEntityAttribute(SharedMonsterAttributes.MOVEMENT_SPEED).removeModifier(EAAttributeModifier.CELESTIAL_FLY_BONUS);
+					
+					//player.getEntityAttribute(SharedMonsterAttributes.MOVEMENT_SPEED).removeModifier(EAAttributeModifier.CELESTIAL_FLY_BONUS);
 				}
 			}
 		}
