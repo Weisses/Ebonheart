@@ -61,7 +61,17 @@ public final class InitItemsEARender extends ItemsEA {
 		registerRender(celestial_chestplate);
 		registerRender(celestial_leggings);
 		registerRender(celestial_boots);
+		/**
+		registerRender(void_helmet);
+		registerRender(void_chestplate);
+		registerRender(void_leggings);
+		registerRender(void_boots);
 		
+		registerRender(infernal_helmet);
+		registerRender(infernal_chestplate);
+		registerRender(infernal_leggings);
+		registerRender(infernal_boots);
+		**/
 		//registerRender(burnished_helmet);
 		//registerRender(burnished_chestplate);
 		//registerRender(burnished_leggings);

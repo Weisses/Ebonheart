@@ -30,14 +30,14 @@ import net.minecraft.world.World;
 import net.minecraftforge.fml.relauncher.Side;
 import net.minecraftforge.fml.relauncher.SideOnly;
 
-//Katcheen
-public class ItemScalemailArmor extends ItemArmor {
+//Ender
+public class ItemVoidArmor extends ItemArmor {
 	
-	public static boolean isDoubleJumping;
+	public static boolean isTeleported;
 	
-	public ItemScalemailArmor(String unlocalizedName, int renderIndexIn, EntityEquipmentSlot equipmentSlotIn)
+	public ItemVoidArmor(String unlocalizedName, int renderIndexIn, EntityEquipmentSlot equipmentSlotIn)
 	{
-		super(EAMaterialHelper.SCALEMAIL, renderIndexIn, equipmentSlotIn);
+		super(EAMaterialHelper.VOID, renderIndexIn, equipmentSlotIn);
 		
 		ItemHelper.setItemName(this, unlocalizedName);
 		this.setCreativeTab(EbonArtsMod.tabEbonArtsItems);
@@ -45,7 +45,7 @@ public class ItemScalemailArmor extends ItemArmor {
 	
 	public boolean getIsRepairable(ItemStack toRepair, ItemStack repair)
     {
-        return InitItemsEA.katcheen == repair.getItem() ? true : super.getIsRepairable(toRepair, repair);
+        return Items.ender_eye == repair.getItem() ? true : super.getIsRepairable(toRepair, repair);
     }
 	
 	@SideOnly(Side.CLIENT)
@@ -68,10 +68,10 @@ public class ItemScalemailArmor extends ItemArmor {
 	@Override
 	public void onArmorTick(World world, EntityPlayer player, ItemStack itemStack) 
 	{
-		if (player.getItemStackFromSlot(EntityEquipmentSlot.HEAD) != null && player.getItemStackFromSlot(EntityEquipmentSlot.HEAD).getItem() == InitItemsEA.scalemail_helmet
-			&& player.getItemStackFromSlot(EntityEquipmentSlot.CHEST) != null && player.getItemStackFromSlot(EntityEquipmentSlot.CHEST).getItem() == InitItemsEA.scalemail_chestplate
-			&& player.getItemStackFromSlot(EntityEquipmentSlot.LEGS) != null && player.getItemStackFromSlot(EntityEquipmentSlot.LEGS).getItem() == InitItemsEA.scalemail_leggings
-			&& player.getItemStackFromSlot(EntityEquipmentSlot.FEET) != null && player.getItemStackFromSlot(EntityEquipmentSlot.FEET).getItem() == InitItemsEA.scalemail_boots) 
+		if (player.getItemStackFromSlot(EntityEquipmentSlot.HEAD) != null && player.getItemStackFromSlot(EntityEquipmentSlot.HEAD).getItem() == InitItemsEA.void_helmet
+			&& player.getItemStackFromSlot(EntityEquipmentSlot.CHEST) != null && player.getItemStackFromSlot(EntityEquipmentSlot.CHEST).getItem() == InitItemsEA.void_chestplate
+			&& player.getItemStackFromSlot(EntityEquipmentSlot.LEGS) != null && player.getItemStackFromSlot(EntityEquipmentSlot.LEGS).getItem() == InitItemsEA.void_leggings
+			&& player.getItemStackFromSlot(EntityEquipmentSlot.FEET) != null && player.getItemStackFromSlot(EntityEquipmentSlot.FEET).getItem() == InitItemsEA.void_boots) 
 		{
 			player.fallDistance = 0;
 			if(!player.getEntityAttribute(SharedMonsterAttributes.MOVEMENT_SPEED).hasModifier(EAAttributeModifier.SCALEMAIL_SPEED_BONUS))
@@ -82,18 +82,19 @@ public class ItemScalemailArmor extends ItemArmor {
 			
 			if(player.onGround) 
 			{
-				isDoubleJumping = false;
+				isTeleported = false;
 			}
 			
 			if (world.isRemote)
 			{
 				if(Minecraft.getMinecraft().gameSettings.keyBindJump.isPressed())
 				{
-					if(!player.onGround && !isDoubleJumping)
+					if(!player.onGround && !isTeleported)
 					{
-						player.addVelocity(0, (-(player.motionY) + 0.6F), 0);
-						//player.setVelocity(player.motionX, 0.6F, player.motionZ);
-						isDoubleJumping = true;
+						
+						//player.rayTrace(10, 5)
+						player.addVelocity(player.motionX, 0.6F, player.motionZ);
+						isTeleported = true;
 					}
 				}
 			}

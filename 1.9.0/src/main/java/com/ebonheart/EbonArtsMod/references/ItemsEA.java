@@ -58,6 +58,16 @@ public class ItemsEA {
 	public static Item celestial_leggings;
 	public static Item celestial_boots;
 	
+	public static Item void_helmet;
+	public static Item void_chestplate;
+	public static Item void_leggings;
+	public static Item void_boots;
+	
+	public static Item infernal_helmet;
+	public static Item infernal_chestplate;
+	public static Item infernal_leggings;
+	public static Item infernal_boots;
+	
 	public static Item ebonheart_helmet;
 	public static Item ebonheart_chestplate;
 	public static Item ebonheart_leggings;

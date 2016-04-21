@@ -31,11 +31,11 @@ import net.minecraftforge.fml.relauncher.Side;
 import net.minecraftforge.fml.relauncher.SideOnly;
 
 //Katcheen
-public class ItemScalemailArmor extends ItemArmor {
+public class ItemInfernalArmor extends ItemArmor {
 	
 	public static boolean isDoubleJumping;
 	
-	public ItemScalemailArmor(String unlocalizedName, int renderIndexIn, EntityEquipmentSlot equipmentSlotIn)
+	public ItemInfernalArmor(String unlocalizedName, int renderIndexIn, EntityEquipmentSlot equipmentSlotIn)
 	{
 		super(EAMaterialHelper.SCALEMAIL, renderIndexIn, equipmentSlotIn);
 		
@@ -91,7 +91,7 @@ public class ItemScalemailArmor extends ItemArmor {
 				{
 					if(!player.onGround && !isDoubleJumping)
 					{
-						player.addVelocity(0, (-(player.motionY) + 0.6F), 0);
+						player.addVelocity(0, 0.6F, 0);
 						//player.setVelocity(player.motionX, 0.6F, player.motionZ);
 						isDoubleJumping = true;
 					}
