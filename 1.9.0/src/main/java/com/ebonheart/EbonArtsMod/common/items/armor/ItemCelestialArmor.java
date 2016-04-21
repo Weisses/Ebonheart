@@ -85,8 +85,9 @@ public class ItemCelestialArmor extends ItemArmor {
 				{
 					if (player.capabilities.isFlying)
 					{
-					
-						player.setVelocity((player.motionX - (player.motionX * .7)), (player.motionY - (player.motionY * .3)), (player.motionZ - (player.motionZ * .7)));
+						
+						player.addVelocity(-(player.motionX * .1), -(player.motionY * .15), -(player.motionZ * .1));
+						//player.setVelocity((player.motionX - (player.motionX * .7)), (player.motionY - (player.motionY * .3)), (player.motionZ - (player.motionZ * .7)));
 					//player.capabilities.getFlySpeed();
 					//if (player instanceof EntityLivingBase) { // If the Entity is an instance of EntityLivingBase,
 					//	((EntityLivingBase) player).addPotionEffect(new PotionEffect(MobEffects.moveSlowdown, 10, 8)); // Apply Slowness II (amplifier = 1) for 10 ticks (0.5 seconds)

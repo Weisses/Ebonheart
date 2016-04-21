@@ -91,7 +91,8 @@ public class ItemScalemailArmor extends ItemArmor {
 				{
 					if(!player.onGround && !isDoubleJumping)
 					{
-						player.setVelocity(player.motionX, 0.6F, player.motionZ);
+						player.addVelocity(0, 0.6F, 0);
+						//player.setVelocity(player.motionX, 0.6F, player.motionZ);
 						isDoubleJumping = true;
 					}
 				}
