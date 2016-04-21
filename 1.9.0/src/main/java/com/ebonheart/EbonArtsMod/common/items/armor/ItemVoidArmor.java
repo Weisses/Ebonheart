@@ -1,13 +1,16 @@
 package com.ebonheart.EbonArtsMod.common.items.armor;
 
 import java.util.List;
+import java.util.Vector;
 
 import com.ebonheart.EbonArtsMod.EbonArtsMod;
+import com.ebonheart.EbonArtsMod.api.helper.LogHelper;
 import com.ebonheart.EbonArtsMod.api.modifiers.EAAttributeModifier;
 import com.ebonheart.EbonArtsMod.common.items.ItemHelper;
 import com.ebonheart.EbonArtsMod.init.InitItemsEA;
 
 import net.minecraft.client.Minecraft;
+import net.minecraft.client.renderer.Vector3d;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.init.Items;
 import net.minecraft.init.MobEffects;
@@ -25,6 +28,10 @@ import net.minecraft.util.ActionResult;
 import net.minecraft.util.EnumActionResult;
 import net.minecraft.util.EnumHand;
 import net.minecraft.util.SoundEvent;
+import net.minecraft.util.math.BlockPos;
+import net.minecraft.util.math.Vec3d;
+import net.minecraft.util.math.Vec3i;
+import net.minecraft.util.math.Vec4b;
 import net.minecraft.util.text.TextFormatting;
 import net.minecraft.world.World;
 import net.minecraftforge.fml.relauncher.Side;
@@ -91,10 +98,87 @@ public class ItemVoidArmor extends ItemArmor {
 				{
 					if(!player.onGround && !isTeleported)
 					{
+						int blockReachDistance = 10;
+						float partialTicks = 1.0F;
+						double posX = 0;
+						double posY = 0;
+						double posZ = 0;
 						
-						//player.rayTrace(10, 5)
-						player.addVelocity(player.motionX, 0.6F, player.motionZ);
-						isTeleported = true;
+						double playerPosX;
+						double playerPosY;
+						double playerPosZ;
+						
+						double test1;
+						double test2;
+						double test3;
+						
+						//player.posX = posX;
+						//player.posY = posY;
+						//player.posZ = posZ;
+						
+						//;
+						playerPosX = player.getPosition().getX();
+						playerPosY = player.getPosition().getY();
+						playerPosZ = player.getPosition().getZ();
+						
+						
+						//player.rayTrace(blockReachDistance, partialTicks);
+						BlockPos pos = new BlockPos(player.rayTrace(10, 1).getBlockPos());
+						//BlockPos pos = new BlockPos(player.rayTrace(10, 1).sideHit.getDirectionVec());
+						//BlockPos pos = new BlockPos(player.rayTrace(10, 1).getBlockPos().getDistance(this.getX(), p_185332_2_, p_185332_3_));
+						
+						posX = pos.getX();
+						posY = pos.getY();
+						posZ = pos.getZ();
+						
+						
+						//if (//playerPosX + 10 <= posX
+						//		posX != null
+								//posX <= playerPosX + 10 || posX >= playerPosX - 10
+						 //&& posY <= playerPosY + 10 || posY >= playerPosY - 10
+						 //&& posZ <= playerPosZ + 10 || posZ >= playerPosZ - 10
+						//		)
+						//{
+						/**
+						//test = (posD - posY);
+						//test1 = posX >= 10 || posX <= -10; 
+						if (posX <= playerPosX + 10 || posX >= playerPosX - 10
+						 && posY <= playerPosY + 10 || posY >= playerPosY - 10
+						 && posZ <= playerPosZ + 10 || posZ >= playerPosZ - 10)
+						{
+						**/
+						
+						player.addVelocity((posX - playerPosX) * 0.1, (posY - playerPosY) * 0.1, (posZ - playerPosZ) * 0.1);
+						
+						
+						//player.addVelocity((posX - playerPosX), (posY - playerPosY), (posZ - playerPosZ));
+							//player.teleportTo_(posX, posY, posZ);
+							LogHelper.info("Teleport SUCCESS!");
+							LogHelper.info("Player  Coors:" +  "X: " + playerPosX + " | Y: " + playerPosY + " | Z: " + playerPosZ);
+							LogHelper.info("Raycast Coors:" +  "X: " + posX + " | Y: " + posY + " | Z: " + posZ);
+							
+							isTeleported = true;
+							
+							
+						//}
+						//else
+						//{
+						//	LogHelper.info("Teleport FAILED!");
+						//	LogHelper.info("Player  Coors:" +  "X: " + playerPosX + " | Y: " + playerPosY + " | Z: " + playerPosZ);
+						//	LogHelper.info("Raycast Coors:" +  "X: " + posX + " | Y: " + posY + " | Z: " + posZ);
+							
+						//}
+						
+						
+						//player.teleportTo_(posX, posY, posZ);
+						//LogHelper.info("Teleported!");
+						//LogHelper.info("Player  Coors:" +  "X: " + playerPosX + " | Y: " + playerPosY + " | Z: " + playerPosZ);
+						//LogHelper.info("Raycast Coors:" +  "X: " + posX + " | Y: " + posY + " | Z: " + posZ);
+						
+						
+						//player.teleportTo_(posX, posY, posZ);
+						//isTeleported = true;
+						//LogHelper.info("Coors:" +  "X: " + posX + " | Y: " + pos.getY() + " | Z: " + posZ);
 					}
 				}
 			}
