@@ -44,10 +44,11 @@ import net.minecraftforge.fml.relauncher.SideOnly;
 //Ender
 public class ItemVoidArmor extends ItemArmor {
 	
-	public static boolean isTeleported;
+	public static boolean isTeleported = false;
 	Random random = new Random();
 	public float width;
 	public float height;
+	private static int cooldown;
 	
 	public ItemVoidArmor(String unlocalizedName, int renderIndexIn, EntityEquipmentSlot equipmentSlotIn)
 	{
@@ -95,10 +96,10 @@ public class ItemVoidArmor extends ItemArmor {
 			//	player.fallDistance = 0;
 			//}
 			
-			if(player.onGround) 
-			{
-				isTeleported = false;
-			}
+			//if(player.onGround) 
+			//{
+			//	isTeleported = false;
+			//}
 			
 			if (world.isRemote)
 			{
@@ -149,15 +150,26 @@ public class ItemVoidArmor extends ItemArmor {
 				        }
 							
 						player.moveToBlockPosAndAngles(pos, player.getRotationYawHead(), 1);
+						player.resetCooldown();
+						player.getCooldownPeriod();
+						
+						for (int cooldown = 0; cooldown < 201; ++cooldown)
+				        {
 							
+							if(cooldown > 199)
+							{
+								isTeleported = false;
+							}
+							
+				        }
 					}
 				}
 			}
 		}
-		else
-		{
-			player.getEntityAttribute(SharedMonsterAttributes.MOVEMENT_SPEED).removeModifier(EAAttributeModifier.SCALEMAIL_SPEED_BONUS);
-		}
+		//else
+		//{
+		//	player.getEntityAttribute(SharedMonsterAttributes.MOVEMENT_SPEED).removeModifier(EAAttributeModifier.SCALEMAIL_SPEED_BONUS);
+		//}
 	}
 }
 
