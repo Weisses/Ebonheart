@@ -10,6 +10,7 @@ import com.ebonheart.EbonArtsMod.api.modifiers.EAAttributeModifier;
 import com.ebonheart.EbonArtsMod.common.items.ItemHelper;
 import com.ebonheart.EbonArtsMod.init.InitItemsEA;
 
+import net.minecraft.block.state.IBlockState;
 import net.minecraft.client.Minecraft;
 import net.minecraft.client.gui.spectator.categories.TeleportToPlayer;
 import net.minecraft.client.renderer.Vector3d;
@@ -21,6 +22,7 @@ import net.minecraft.inventory.EntityEquipmentSlot;
 import net.minecraft.item.EnumRarity;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemArmor;
+import net.minecraft.entity.EntityCreature;
 import net.minecraft.entity.EntityLiving;
 import net.minecraft.entity.SharedMonsterAttributes;
 import net.minecraft.item.ItemStack;
@@ -49,6 +51,7 @@ public class ItemVoidArmor extends ItemArmor {
 	public float width;
 	public float height;
 	private static int cooldown;
+	boolean flag = false;
 	
 	public ItemVoidArmor(String unlocalizedName, int renderIndexIn, EntityEquipmentSlot equipmentSlotIn)
 	{
@@ -96,72 +99,135 @@ public class ItemVoidArmor extends ItemArmor {
 			//	player.fallDistance = 0;
 			//}
 			
-			//if(player.onGround) 
-			//{
-			//	isTeleported = false;
-			//}
+			if(isTeleported) 
+			{
+				//if(player.onGround)
+				//{
+					cooldown++;
+					
+					if(cooldown > 1000)
+					{
+						isTeleported = false;
+						LogHelper.info("isTeleport is false!");
+						cooldown = 0;
+					}
+				//}
+				
+			}
+			
 			
 			if (world.isRemote)
 			{
 				if(Minecraft.getMinecraft().gameSettings.keyBindJump.isPressed())
 				{
+					
 					if(!player.onGround && !isTeleported)
 					{
+						
 						int blockReachDistance = 10;
 						float partialTicks = 10.1F;
+						
 						double posX;
 						double posY;
 						double posZ;
 						double playerPosX;
 						double playerPosY;
 						double playerPosZ;
-						int i = 128;
+						int i = 512;
 						
 						playerPosX = player.getPosition().getX();
 						playerPosY = player.getPosition().getY();
 						playerPosZ = player.getPosition().getZ();
 						
-						BlockPos pos = new BlockPos(player.rayTrace(10, partialTicks).getBlockPos());
+						BlockPos pos = new BlockPos(player.rayTrace(blockReachDistance, partialTicks).getBlockPos().);//.getBlockPos());
 						posX = pos.getX();
 						posY = pos.getY();
 						posZ = pos.getZ();
 						
+						//.offset(player.getHorizontalFacing())
+						//player.getTeleportDirection()
 						
-						player.teleportTo_(posX, posY, posZ);
+						//player.teleportTo_(posX, posY, posZ);
+						
 						LogHelper.info("Teleport SUCCESS!");
 						LogHelper.info("Player  Coors:" +  "X: " + playerPosX + " | Y: " + playerPosY + " | Z: " + playerPosZ);
 						LogHelper.info("Raycast Coors:" +  pos);
 							
-						isTeleported = true;
-
-							
+						
+						double d0 = playerPosX;
+				        double d1 = playerPosY;
+				        double d2 = playerPosZ;
+						
+				        
 						for (int j = 0; j < i; ++j)
 				        {
+							
 							double d6 = (double)j / ((double)i - 1.0D);
 							float f = (random.nextFloat() - 0.5F) * 0.2F;
 			                float f1 = (random.nextFloat() - 0.5F) * 0.2F;
 			                float f2 = (random.nextFloat() - 0.5F) * 0.2F;
-			                double d3 = playerPosX + (playerPosX - playerPosX) * d6 + (random.nextDouble() - 0.5D) * (double)this.width * 2.0D;
-			                double d4 = playerPosY + (playerPosY - playerPosY) * d6 + random.nextDouble() * (double)this.height;
-			                double d5 = playerPosZ + (playerPosZ - playerPosZ) * d6 + (random.nextDouble() - 0.5D) * (double)this.width * 2.0D;
+			                double d3 = d0 + (posX - player.getPosition().getX()) * d6 + (random.nextDouble() - 0.5D) * (double)this.width * 4.0D;
+			                double d4 = d1 + (posY - player.getPosition().getY()) * d6 + random.nextDouble() * (double)this.height;
+			                double d5 = d2 + (posZ - player.getPosition().getZ()) * d6 + (random.nextDouble() - 0.5D) * (double)this.width * 4.0D;
 			                
 			                world.spawnParticle(EnumParticleTypes.PORTAL, d3, d4, d5, (double)f, (double)f1, (double)f2, new int[0]);
 						
 				        }
-							
-						player.moveToBlockPosAndAngles(pos, player.getRotationYawHead(), 1);
-						player.resetCooldown();
-						player.getCooldownPeriod();
+						if(player.facing notyh)
+						{
+							player.setPosition(posX, posY, posZ);
+						}
+						player.setPosition(posX, posY, posZ);
+						//player.moveEntity(posX, posY, posZ);
+						//player.moveToBlockPosAndAngles(pos, player.rotationYaw, player.rotationPitch);
+						isTeleported = true;
+						LogHelper.info("teleport is true!");
 						
-						for (int cooldown = 0; cooldown < 201; ++cooldown)
-				        {
+						
+						//if (!flag)
+				        //{
+						//	if (world.getCubes(player, player.getEntityBoundingBox()).isEmpty() && !world.isAnyLiquid(player.getEntityBoundingBox()))
+			            //    {
+			             //       flag = true;
+			             //   }
+							//player.moveToBlockPosAndAngles(pos, player.rotationYaw, player.rotationPitch);
+						//	player.setPositionAndUpdate(posX, posY, posZ);
+						//	for (int j = 0; j < i; ++j)
+				        //    {
+				        //        double d6 = (double)j / ((double)i - 1.0D);
+				        //        float f = (random.nextFloat() - 0.5F) * 0.2F;
+				        //        float f1 = (random.nextFloat() - 0.5F) * 0.2F;
+				         //       float f2 = (random.nextFloat() - 0.5F) * 0.2F;
+				        //        double d3 = playerPosX + (playerPosX - playerPosX) * d6 + (random.nextDouble() - 0.5D) * (double)this.width * 2.0D;
+				       //         double d4 = playerPosY + (playerPosY - playerPosY) * d6 + random.nextDouble() * (double)this.height;
+				        //        double d5 = playerPosZ + (playerPosZ - playerPosZ) * d6 + (random.nextDouble() - 0.5D) * (double)this.width * 2.0D;
+				       //         world.spawnParticle(EnumParticleTypes.PORTAL, d3, d4, d5, (double)f, (double)f1, (double)f2, new int[0]);
+				       //     }
 							
-							if(cooldown > 199)
-							{
-								isTeleported = false;
-							}
+				            //player.setPositionAndUpdate(posX, posY, posZ);
+				            //return false;
+				        //}
+				        //else
+				        //{
+				            //int i = 128;
+
+				            
+
+				            
+				       // }
+						
+						//player.resetCooldown();
+						//player.getCooldownPeriod();
+						
+						//for (int cooldown = 0; cooldown < 501; ++cooldown)
+				        //{
 							
-				        }
+						//	if(cooldown > 499)
+						//	{
+						//		isTeleported = false;
+						//	}
+							
+				        //}
 					}
 				}
 			}
