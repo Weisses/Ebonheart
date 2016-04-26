@@ -1,6 +1,7 @@
 package com.ebonheart.EbonArtsMod.common.items.armor;
 
 import java.util.List;
+import java.util.Random;
 import java.util.UUID;
 
 import com.ebonheart.EbonArtsMod.EbonArtsMod;
@@ -31,6 +32,7 @@ import net.minecraft.util.ActionResult;
 import net.minecraft.util.DamageSource;
 import net.minecraft.util.EnumActionResult;
 import net.minecraft.util.EnumHand;
+import net.minecraft.util.EnumParticleTypes;
 import net.minecraft.util.SoundEvent;
 import net.minecraft.util.text.TextFormatting;
 import net.minecraft.world.World;
@@ -40,12 +42,18 @@ import net.minecraftforge.fml.relauncher.SideOnly;
 //Necrocite
 public class ItemVengeanceArmor extends ItemArmor {
 	
+	double playerPosX;
+	double playerPosY;
+	double playerPosZ;
+	Random random = new Random();
+	
 	public ItemVengeanceArmor(String unlocalizedName, int renderIndexIn, EntityEquipmentSlot equipmentSlotIn)
 	{
 		super(EAMaterialHelper.VENGEANCE, renderIndexIn, equipmentSlotIn);
 		
 		ItemHelper.setItemName(this, unlocalizedName);
 		this.setCreativeTab(EbonArtsMod.tabEbonArtsItems);
+		
 	}
 	
 	public boolean getIsRepairable(ItemStack toRepair, ItemStack repair)
@@ -93,6 +101,53 @@ public class ItemVengeanceArmor extends ItemArmor {
 			{
 				player.getEntityAttribute(SharedMonsterAttributes.ATTACK_DAMAGE).applyModifier(EAAttributeModifier.VENGEANCE_ATTACK_BONUS);
 			}
+			//LogHelper.info("held item: " + player.getHeldItem(EnumHand.MAIN_HAND).getMaxDamage());
+			
+			
+			//player.onKillEntity(player);;
+			//ItemStack test = player.getHeldItem(EnumHand.MAIN_HAND);
+			if(player.getItemStackFromSlot(EntityEquipmentSlot.MAINHAND) != null)
+			{
+				
+				playerPosX = player.getPositionVector().xCoord;
+				playerPosY = player.getPositionVector().yCoord;
+				playerPosZ = player.getPositionVector().zCoord;
+					
+				world.spawnParticle(EnumParticleTypes.CRIT_MAGIC, playerPosX, playerPosY, playerPosZ, (double)((random.nextFloat() - 0.5F) * 0.2F), (double)((random.nextFloat() - 0.5F) * 0.2F), (double)((random.nextFloat() - 0.5F) * 0.2F), new int[0]);
+					
+			}
+			
+			//Blocking with shield
+			if (player.isHandActive())
+			{
+				playerPosX = player.getPosition().getX();
+				playerPosY = player.getPosition().getY();
+				playerPosZ = player.getPosition().getZ();
+				
+				world.spawnParticle(EnumParticleTypes.SPELL_WITCH, playerPosX, playerPosY, playerPosZ, (double)((random.nextFloat() - 0.5F) * 0.2F), (double)((random.nextFloat() - 0.5F) * 0.2F), (double)((random.nextFloat() - 0.5F) * 0.2F), new int[0]);
+				
+			}
+			
+			
+			
+			//Entity entityIn = entityIn.getRidingEntity();
+			
+			
+			//itemStack.hitEntity((EntityLivingBase) entityIn, player);
+			
+			//if(player.getHeldItemMainhand().getActiveHand() != null)
+			//{
+				
+			//	playerPosX = player.getPosition().getX();
+			//	playerPosY = player.getPosition().getY();
+			//	playerPosZ = player.getPosition().getZ();
+				
+			//	world.spawnParticle(EnumParticleTypes.EXPLOSION_NORMAL, playerPosX, playerPosY, playerPosZ, (double)((random.nextFloat() - 0.5F) * 0.2F), (double)((random.nextFloat() - 0.5F) * 0.2F), (double)((random.nextFloat() - 0.5F) * 0.2F), new int[0]);
+				
+			//}
+			
+			
+			
 		}
 		else
 		{

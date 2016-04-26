@@ -1,6 +1,7 @@
 package com.ebonheart.EbonArtsMod.common.items.armor;
 
 import java.util.List;
+import java.util.Random;
 import java.util.UUID;
 
 import com.ebonheart.EbonArtsMod.EbonArtsMod;
@@ -30,6 +31,7 @@ import net.minecraft.potion.PotionEffect;
 import net.minecraft.util.ActionResult;
 import net.minecraft.util.EnumActionResult;
 import net.minecraft.util.EnumHand;
+import net.minecraft.util.EnumParticleTypes;
 import net.minecraft.util.SoundEvent;
 import net.minecraft.util.math.MathHelper;
 import net.minecraft.util.text.TextFormatting;
@@ -40,6 +42,11 @@ import net.minecraftforge.fml.relauncher.SideOnly;
 
 //Arcanite
 public class ItemBurnishedArmor extends ItemArmor {
+	
+	double playerPosX;
+	double playerPosY;
+	double playerPosZ;
+	Random random = new Random();
 	
 	public ItemBurnishedArmor(String unlocalizedName, int renderIndexIn, EntityEquipmentSlot equipmentSlotIn)
 	{
@@ -86,7 +93,18 @@ public class ItemBurnishedArmor extends ItemArmor {
 			
 			if(player.isSprinting())
 			{
-				player.setInvisible(true);
+				
+				playerPosX = player.getPosition().getX();
+				playerPosY = player.getPosition().getY();
+				playerPosZ = player.getPosition().getZ();
+				
+				if(!player.isInvisible())
+				{
+					player.setInvisible(true);
+				}
+				
+				world.spawnParticle(EnumParticleTypes.CLOUD, playerPosX, playerPosY, playerPosZ, (double)((random.nextFloat() - 0.5F) * 0.2F), (double)((random.nextFloat() - 0.5F) * 0.2F), (double)((random.nextFloat() - 0.5F) * 0.2F), new int[0]);
+				
 			}
 			else
 			{
@@ -109,47 +127,5 @@ public class ItemBurnishedArmor extends ItemArmor {
 	        		//.id
 	        		, 159, strength, true, showParticles));
 	}
-	
-	*
-	*
-	if(player.onGround) 
-			{
-				
-				isDoubleJumping = false;
-				
-			}
-			
-			if (world.isRemote)
-			{
-				
-				//if(Minecraft.getMinecraft().gameSettings.keyBindJump.isPressed())
-				//{
-					
-				//	if(!player.onGround && !isDoubleJumping)
-				//	{
-						
-				//		player.setVelocity(player.motionX, 0.6F, player.motionZ);
-				//		isDoubleJumping = true;
-						
-				//	}
-					
-				//}
-				
-				//if(Minecraft.getMinecraft().gameSettings.keyBindSneak.isKeyDown())
-				//{
-					
-				//	if(!player.onGround && !isDoubleJumping)
-				//	{
-						
-				//		for(tick = 1; tick > 1000; tick++)
-				//		{
-				//			player.setVelocity(player.motionX, 0.0F, player.motionZ);
-							//isDoubleJumping = true;
-				//		}
-						
-						
-						
-				//	}
 	**/
-	
 }

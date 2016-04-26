@@ -1,6 +1,7 @@
 package com.ebonheart.EbonArtsMod.common.items.armor;
 
 import java.util.List;
+import java.util.Random;
 
 import com.ebonheart.EbonArtsMod.EbonArtsMod;
 import com.ebonheart.EbonArtsMod.api.modifiers.EAAttributeModifier;
@@ -24,6 +25,7 @@ import net.minecraft.potion.PotionEffect;
 import net.minecraft.util.ActionResult;
 import net.minecraft.util.EnumActionResult;
 import net.minecraft.util.EnumHand;
+import net.minecraft.util.EnumParticleTypes;
 import net.minecraft.util.SoundEvent;
 import net.minecraft.util.text.TextFormatting;
 import net.minecraft.world.World;
@@ -34,6 +36,10 @@ import net.minecraftforge.fml.relauncher.SideOnly;
 public class ItemScalemailArmor extends ItemArmor {
 	
 	public static boolean isDoubleJumping;
+	double playerPosX;
+	double playerPosY;
+	double playerPosZ;
+	Random random = new Random();
 	
 	public ItemScalemailArmor(String unlocalizedName, int renderIndexIn, EntityEquipmentSlot equipmentSlotIn)
 	{
@@ -87,14 +93,43 @@ public class ItemScalemailArmor extends ItemArmor {
 			
 			if (world.isRemote)
 			{
+				
+				if (isDoubleJumping)
+				{
+					playerPosX = player.getPosition().getX();
+					playerPosY = player.getPosition().getY();
+					playerPosZ = player.getPosition().getZ();
+					
+					world.spawnParticle(EnumParticleTypes.SPELL_WITCH, playerPosX, playerPosY, playerPosZ, (double)((random.nextFloat() - 0.5F) * 0.2F), (double)((random.nextFloat() - 0.5F) * 0.2F), (double)((random.nextFloat() - 0.5F) * 0.2F), new int[0]);
+					
+				}
+				
 				if(Minecraft.getMinecraft().gameSettings.keyBindJump.isPressed())
 				{
 					if(!player.onGround && !isDoubleJumping)
 					{
+						
+						isDoubleJumping = true;
+						
+						
 						player.addVelocity(0, (-(player.motionY) + 0.6F), 0);
 						//player.setVelocity(player.motionX, 0.6F, player.motionZ);
-						isDoubleJumping = true;
+						
+						//world.spawnParticle(EnumParticleTypes.CLOUD, playerPosX, playerPosY, playerPosZ, (double)((random.nextFloat() - 0.5F) * 0.2F), (double)((random.nextFloat() - 0.5F) * 0.2F), (double)((random.nextFloat() - 0.5F) * 0.2F), new int[0]);
+						
+						
 					}
+					
+					
+					
+					//if(isDoubleJumping)
+					//{
+						
+						
+						
+						//world.spawnParticle(EnumParticleTypes.SPELL_WITCH, playerPosX, playerPosY, playerPosZ, (double)((random.nextFloat() - 0.5F) * 0.2F), (double)((random.nextFloat() - 0.5F) * 0.2F), (double)((random.nextFloat() - 0.5F) * 0.2F), new int[0]);
+						
+					//}
 				}
 			}
 		}

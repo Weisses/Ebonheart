@@ -30,10 +30,12 @@ import net.minecraft.potion.Potion;
 import net.minecraft.potion.PotionEffect;
 import net.minecraft.util.ActionResult;
 import net.minecraft.util.EnumActionResult;
+import net.minecraft.util.EnumFacing;
 import net.minecraft.util.EnumHand;
 import net.minecraft.util.EnumParticleTypes;
 import net.minecraft.util.SoundEvent;
 import net.minecraft.util.math.BlockPos;
+import net.minecraft.util.math.MathHelper;
 import net.minecraft.util.math.Vec3d;
 import net.minecraft.util.math.Vec3i;
 import net.minecraft.util.math.Vec4b;
@@ -133,25 +135,27 @@ public class ItemVoidArmor extends ItemArmor {
 						double playerPosX;
 						double playerPosY;
 						double playerPosZ;
+						
 						int i = 512;
 						
-						playerPosX = player.getPosition().getX();
-						playerPosY = player.getPosition().getY();
-						playerPosZ = player.getPosition().getZ();
+						playerPosX = player.getPositionVector().xCoord;
+						playerPosY = player.getPositionVector().yCoord;
+						playerPosZ = player.getPositionVector().zCoord;
 						
-						BlockPos pos = new BlockPos(player.rayTrace(blockReachDistance, partialTicks).getBlockPos().);//.getBlockPos());
-						posX = pos.getX();
-						posY = pos.getY();
-						posZ = pos.getZ();
+						//EnumFacing playerFacing = player.getHorizontalFacing();
+						//BlockPos pos = new BlockPos(player.rayTrace(blockReachDistance, partialTicks).hitVec.xCoord, player.rayTrace(blockReachDistance, partialTicks).hitVec.yCoord, player.rayTrace(blockReachDistance, partialTicks).hitVec.zCoord);//.getBlockPos());
+						posX = player.rayTrace(blockReachDistance, partialTicks).hitVec.xCoord;
+						posY = player.rayTrace(blockReachDistance, partialTicks).hitVec.yCoord;
+						posZ = player.rayTrace(blockReachDistance, partialTicks).hitVec.zCoord;
 						
 						//.offset(player.getHorizontalFacing())
 						//player.getTeleportDirection()
 						
 						//player.teleportTo_(posX, posY, posZ);
 						
-						LogHelper.info("Teleport SUCCESS!");
+						//LogHelper.info("Teleport SUCCESS!");
 						LogHelper.info("Player  Coors:" +  "X: " + playerPosX + " | Y: " + playerPosY + " | Z: " + playerPosZ);
-						LogHelper.info("Raycast Coors:" +  pos);
+						LogHelper.info("Raycast Coors:" +  "X: " + posX + " | Y: " + posY + " | Z: " + posZ);
 							
 						
 						double d0 = playerPosX;
@@ -173,15 +177,40 @@ public class ItemVoidArmor extends ItemArmor {
 			                world.spawnParticle(EnumParticleTypes.PORTAL, d3, d4, d5, (double)f, (double)f1, (double)f2, new int[0]);
 						
 				        }
-						if(player.facing notyh)
+						
+						
+						
+						//if (posZ > 0)
+						//{
+						//	double minusOne = posZ - 1;
+						//}
+						//=====================================
+						
+						while (posX - playerPosX > 2)
 						{
-							player.setPosition(posX, posY, posZ);
+						player.addVelocity(player.motionX + 1, player.motionY + 1, player.motionZ + 1);
 						}
-						player.setPosition(posX, posY, posZ);
+						
+						//else
+						//{
+						//	player.addVelocity(0, 0, 0 );
+						//}
+						//player.setPosition(posX - 0.1 , posY - 0.1, posZ - 0.1);
+						
+						
+						//====================================
+						//if(playerFacing == EnumFacing.NORTH)
+						//{
+							
+							
+							
+						//}
+						//player.setPosition(posX, posY, posZ);
 						//player.moveEntity(posX, posY, posZ);
 						//player.moveToBlockPosAndAngles(pos, player.rotationYaw, player.rotationPitch);
 						isTeleported = true;
 						LogHelper.info("teleport is true!");
+						//LogHelper.info("facing: " + player.getHorizontalFacing());
 						
 						
 						//if (!flag)
