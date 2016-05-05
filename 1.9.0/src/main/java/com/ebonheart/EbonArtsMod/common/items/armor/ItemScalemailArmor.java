@@ -6,6 +6,7 @@ import java.util.Random;
 import com.ebonheart.EbonArtsMod.EbonArtsMod;
 import com.ebonheart.EbonArtsMod.api.modifiers.EAAttributeModifier;
 import com.ebonheart.EbonArtsMod.common.items.ItemHelper;
+import com.ebonheart.EbonArtsMod.configs.EbonArtsConfiguration;
 import com.ebonheart.EbonArtsMod.init.InitItemsEA;
 
 import net.minecraft.client.Minecraft;
@@ -79,12 +80,12 @@ public class ItemScalemailArmor extends ItemArmor {
 			&& player.getItemStackFromSlot(EntityEquipmentSlot.LEGS) != null && player.getItemStackFromSlot(EntityEquipmentSlot.LEGS).getItem() == InitItemsEA.scalemail_leggings
 			&& player.getItemStackFromSlot(EntityEquipmentSlot.FEET) != null && player.getItemStackFromSlot(EntityEquipmentSlot.FEET).getItem() == InitItemsEA.scalemail_boots) 
 		{
-			player.fallDistance = 0;
-			if(!player.getEntityAttribute(SharedMonsterAttributes.MOVEMENT_SPEED).hasModifier(EAAttributeModifier.SCALEMAIL_SPEED_BONUS))
+			if(player.fallDistance >= 2)
 			{
-				player.getEntityAttribute(SharedMonsterAttributes.MOVEMENT_SPEED).applyModifier(EAAttributeModifier.SCALEMAIL_SPEED_BONUS);
 				player.fallDistance = 0;
 			}
+			
+			//player.fallDistance = 0;
 			
 			if(player.onGround) 
 			{
@@ -96,46 +97,54 @@ public class ItemScalemailArmor extends ItemArmor {
 				
 				if (isDoubleJumping)
 				{
-					playerPosX = player.getPosition().getX();
-					playerPosY = player.getPosition().getY();
-					playerPosZ = player.getPosition().getZ();
 					
-					world.spawnParticle(EnumParticleTypes.SPELL_WITCH, playerPosX, playerPosY, playerPosZ, (double)((random.nextFloat() - 0.5F) * 0.2F), (double)((random.nextFloat() - 0.5F) * 0.2F), (double)((random.nextFloat() - 0.5F) * 0.2F), new int[0]);
+					if(!EbonArtsConfiguration.armorParticle)
+					{
+						
+						if(world.isRemote)
+						{
+							
+							playerPosX = player.getPositionVector().xCoord;
+							playerPosY = player.getPositionVector().yCoord;
+							playerPosZ = player.getPositionVector().zCoord;
+							
+							int d = random.nextInt(100) + 1;
+							
+							if (d <= 25)
+							{
+								
+								world.spawnParticle(EnumParticleTypes.FIREWORKS_SPARK
+									//.SPELL_WITCH
+									, playerPosX, playerPosY, playerPosZ, (double)((random.nextFloat() - 0.5F) * 0.2F), (double)((random.nextFloat() - 0.5F) * 0.2F), (double)((random.nextFloat() - 0.5F) * 0.2F), new int[0]);
+							
+							}
+							
+						}
+						
+					}
 					
 				}
 				
 				if(Minecraft.getMinecraft().gameSettings.keyBindJump.isPressed())
 				{
+					
 					if(!player.onGround && !isDoubleJumping)
 					{
 						
 						isDoubleJumping = true;
 						
-						
 						player.addVelocity(0, (-(player.motionY) + 0.6F), 0);
-						//player.setVelocity(player.motionX, 0.6F, player.motionZ);
-						
-						//world.spawnParticle(EnumParticleTypes.CLOUD, playerPosX, playerPosY, playerPosZ, (double)((random.nextFloat() - 0.5F) * 0.2F), (double)((random.nextFloat() - 0.5F) * 0.2F), (double)((random.nextFloat() - 0.5F) * 0.2F), new int[0]);
-						
 						
 					}
 					
-					
-					
-					//if(isDoubleJumping)
-					//{
-						
-						
-						
-						//world.spawnParticle(EnumParticleTypes.SPELL_WITCH, playerPosX, playerPosY, playerPosZ, (double)((random.nextFloat() - 0.5F) * 0.2F), (double)((random.nextFloat() - 0.5F) * 0.2F), (double)((random.nextFloat() - 0.5F) * 0.2F), new int[0]);
-						
-					//}
 				}
+				
 			}
+			
 		}
 		else
 		{
-			player.getEntityAttribute(SharedMonsterAttributes.MOVEMENT_SPEED).removeModifier(EAAttributeModifier.SCALEMAIL_SPEED_BONUS);
+			
 		}
 	}
 }

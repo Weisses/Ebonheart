@@ -8,6 +8,8 @@ import com.ebonheart.EbonArtsMod.common.items.ItemHelper;
 import com.ebonheart.EbonArtsMod.init.InitItemsEA;
 
 import net.minecraft.client.Minecraft;
+import net.minecraft.enchantment.Enchantment;
+import net.minecraft.enchantment.EnchantmentThorns;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.init.Items;
 import net.minecraft.init.MobEffects;
@@ -22,11 +24,14 @@ import net.minecraft.item.ItemStack;
 import net.minecraft.potion.Potion;
 import net.minecraft.potion.PotionEffect;
 import net.minecraft.util.ActionResult;
+import net.minecraft.util.DamageSource;
+import net.minecraft.util.EntityDamageSource;
 import net.minecraft.util.EnumActionResult;
 import net.minecraft.util.EnumHand;
 import net.minecraft.util.SoundEvent;
 import net.minecraft.util.text.TextFormatting;
 import net.minecraft.world.World;
+import net.minecraftforge.event.entity.living.LivingAttackEvent;
 import net.minecraftforge.fml.relauncher.Side;
 import net.minecraftforge.fml.relauncher.SideOnly;
 
@@ -51,12 +56,12 @@ public class ItemInfernalArmor extends ItemArmor {
 	@SideOnly(Side.CLIENT)
     public void addInformation(ItemStack stack, EntityPlayer playerIn, List toolTip, boolean advanced) 
 	{
-		toolTip.add(TextFormatting.DARK_AQUA + "Strong scales are woven in a flexible");
-		toolTip.add(TextFormatting.DARK_AQUA + "mesh, enhancing acrobatics.");
+		toolTip.add(TextFormatting.DARK_AQUA + "Fire resistance???");
+		toolTip.add(TextFormatting.DARK_AQUA + "Maaayyybbbbeeeeee?????");
 		toolTip.add(" ");
-		toolTip.add(TextFormatting.WHITE + "Set Bonus:");
-		toolTip.add(TextFormatting.GREEN + "Ability - Double Jump.");
-		toolTip.add(TextFormatting.GREEN + "Ability - Safe Fall.");
+		toolTip.add(TextFormatting.WHITE + " ");
+		toolTip.add(TextFormatting.GREEN + "-");
+		toolTip.add(TextFormatting.GREEN + "-");
 		//toolTip.add(TextFormatting.GREEN + "Speed increased by 110%");
 	}
 	
@@ -68,11 +73,95 @@ public class ItemInfernalArmor extends ItemArmor {
 	@Override
 	public void onArmorTick(World world, EntityPlayer player, ItemStack itemStack) 
 	{
-		if (player.getItemStackFromSlot(EntityEquipmentSlot.HEAD) != null && player.getItemStackFromSlot(EntityEquipmentSlot.HEAD).getItem() == InitItemsEA.scalemail_helmet
-			&& player.getItemStackFromSlot(EntityEquipmentSlot.CHEST) != null && player.getItemStackFromSlot(EntityEquipmentSlot.CHEST).getItem() == InitItemsEA.scalemail_chestplate
-			&& player.getItemStackFromSlot(EntityEquipmentSlot.LEGS) != null && player.getItemStackFromSlot(EntityEquipmentSlot.LEGS).getItem() == InitItemsEA.scalemail_leggings
-			&& player.getItemStackFromSlot(EntityEquipmentSlot.FEET) != null && player.getItemStackFromSlot(EntityEquipmentSlot.FEET).getItem() == InitItemsEA.scalemail_boots) 
+		if (player.getItemStackFromSlot(EntityEquipmentSlot.HEAD) != null && player.getItemStackFromSlot(EntityEquipmentSlot.HEAD).getItem() == InitItemsEA.infernal_helmet
+			&& player.getItemStackFromSlot(EntityEquipmentSlot.CHEST) != null && player.getItemStackFromSlot(EntityEquipmentSlot.CHEST).getItem() == InitItemsEA.infernal_chestplate
+			&& player.getItemStackFromSlot(EntityEquipmentSlot.LEGS) != null && player.getItemStackFromSlot(EntityEquipmentSlot.LEGS).getItem() == InitItemsEA.infernal_leggings
+			&& player.getItemStackFromSlot(EntityEquipmentSlot.FEET) != null && player.getItemStackFromSlot(EntityEquipmentSlot.FEET).getItem() == InitItemsEA.infernal_boots) 
 		{
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			//if(!player.isImmuneToFire())
+			//{
+			//	player.isImmuneToFire();
+			//}
+			
+			//if(EntityDamageSource.lava != null)
+			//{
+				
+				
+			//LivingAttackEvent event = new LivingAttackEvent(player, null, damageReduceAmount);
+			
+			
+				//player.setEntityInvulnerable(EntityDamageSource.inFire);
+				//player.setEntityInvulnerable(player.isEntityInvulnerable(EntityDamageSource.lava));
+				//player.setEntityInvulnerable(player.isEntityInvulnerable(EntityDamageSource.onFire));
+				
+				//player.isEntityInvulnerable(EntityDamageSource.lava);
+				
+				//player.setEntityInvulnerable(EntityDamageSource.lava.setFireDamage());
+				
+				//player.isEntityInvulnerable(EntityDamageSource.onFire);
+				//player.isEntityInvulnerable(EntityDamageSource.inFire);
+				
+				//@ForgeSubscribe
+				//public void onBurnDamage(LivingAttackEvent event)
+				//{
+				    //if(event.entity instanceof EntityPlayer)
+				    //{
+				
+				        //EntityPlayer player = (EntityPlayer)event.getSource();
+				    	//if(event.equals(DamageSource.lava) 
+				    	//    || event.equals(DamageSource.inFire) 
+				    	//    || event.equals(DamageSource.onFire))
+				    	//    {
+				                 //if(player.ridingEntity instanceof EntityChocoboPurple)
+				    		//{
+				    	//	    event.setCanceled(true);
+				    		//}
+				    	//    }
+				       //}
+				   //}
+				//}
+				
+			//}
+			//EntityPlayer.isImmuneToFire();
+			//player.isImmuneToFire();
+			//player.isImmuneToExplosions();
+			
+			//player.fireResistance = 99;
+			
+			//player.extinguish();
+			
+			
+			//Enchantment.getEnchantmentByID(1);
+			//player.isBurning();
+			
+			
+			
+			//if(player.isInLava())
+			//{
+				
+			//	player.isImmuneToFire();
+			//	player.extinguish();
+				
+			//}
+			
+			//if(player.isBurning())
+			//{
+
+			//	player.isImmuneToFire();
+			//	player.extinguish();
+				
+			//}
+			
+			/**
 			player.fallDistance = 0;
 			if(!player.getEntityAttribute(SharedMonsterAttributes.MOVEMENT_SPEED).hasModifier(EAAttributeModifier.SCALEMAIL_SPEED_BONUS))
 			{
@@ -101,6 +190,8 @@ public class ItemInfernalArmor extends ItemArmor {
 		else
 		{
 			player.getEntityAttribute(SharedMonsterAttributes.MOVEMENT_SPEED).removeModifier(EAAttributeModifier.SCALEMAIL_SPEED_BONUS);
+		**/
 		}
+		
 	}
 }

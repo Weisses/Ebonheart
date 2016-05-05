@@ -1,10 +1,12 @@
 package com.ebonheart.EbonArtsMod.common.items.armor;
 
 import java.util.List;
+import java.util.Random;
 
 import com.ebonheart.EbonArtsMod.EbonArtsMod;
 import com.ebonheart.EbonArtsMod.api.modifiers.EAAttributeModifier;
 import com.ebonheart.EbonArtsMod.common.items.ItemHelper;
+import com.ebonheart.EbonArtsMod.configs.EbonArtsConfiguration;
 import com.ebonheart.EbonArtsMod.init.InitItemsEA;
 
 import net.minecraft.client.Minecraft;
@@ -26,6 +28,7 @@ import net.minecraft.potion.PotionEffect;
 import net.minecraft.util.ActionResult;
 import net.minecraft.util.EnumActionResult;
 import net.minecraft.util.EnumHand;
+import net.minecraft.util.EnumParticleTypes;
 import net.minecraft.util.SoundEvent;
 import net.minecraft.util.text.TextFormatting;
 import net.minecraft.world.World;
@@ -35,6 +38,11 @@ import net.minecraftforge.fml.relauncher.SideOnly;
 
 //Soularite
 public class ItemCelestialArmor extends ItemArmor {
+	
+	double playerPosX;
+	double playerPosY;
+	double playerPosZ;
+	Random random = new Random();
 	
 	public ItemCelestialArmor(String unlocalizedName, int renderIndexIn, EntityEquipmentSlot equipmentSlotIn)
 	{
@@ -74,8 +82,10 @@ public class ItemCelestialArmor extends ItemArmor {
 			&& player.getItemStackFromSlot(EntityEquipmentSlot.LEGS) != null && player.getItemStackFromSlot(EntityEquipmentSlot.LEGS).getItem() == InitItemsEA.celestial_leggings
 			&& player.getItemStackFromSlot(EntityEquipmentSlot.FEET) != null && player.getItemStackFromSlot(EntityEquipmentSlot.FEET).getItem() == InitItemsEA.celestial_boots) 
 		{
+			
 			if (!player.capabilities.isCreativeMode)
 			{
+				
 				if (!player.capabilities.allowFlying)
 				{
 					player.capabilities.allowFlying = true;
@@ -87,36 +97,45 @@ public class ItemCelestialArmor extends ItemArmor {
 					{
 						
 						player.addVelocity(-(player.motionX * .1), -(player.motionY * .15), -(player.motionZ * .1));
-						//player.setVelocity((player.motionX - (player.motionX * .7)), (player.motionY - (player.motionY * .3)), (player.motionZ - (player.motionZ * .7)));
-					//player.capabilities.getFlySpeed();
-					//if (player instanceof EntityLivingBase) { // If the Entity is an instance of EntityLivingBase,
-					//	((EntityLivingBase) player).addPotionEffect(new PotionEffect(MobEffects.moveSlowdown, 10, 8)); // Apply Slowness II (amplifier = 1) for 10 ticks (0.5 seconds)
-					//}
-					//if(!player.getEntityAttribute(SharedMonsterAttributes.MOVEMENT_SPEED).hasModifier(EAAttributeModifier.CELESTIAL_FLY_BONUS))
-					//{
-					//	player.getEntityAttribute(SharedMonsterAttributes.MOVEMENT_SPEED).applyModifier(EAAttributeModifier.CELESTIAL_FLY_BONUS);
-					//}
+						
+						if(!EbonArtsConfiguration.armorParticle)
+						{
+							
+							if(world.isRemote)
+							{
+								int d = random.nextInt(100) + 1;
+								
+								if (d <= 25)
+								{
+									
+									playerPosX = player.getPositionVector().xCoord;
+									playerPosY = player.getPositionVector().yCoord;
+									playerPosZ = player.getPositionVector().zCoord;
+									
+									world.spawnParticle(EnumParticleTypes.ENCHANTMENT_TABLE, playerPosX, playerPosY + 1D, playerPosZ, (double)((random.nextFloat() - 0.5F) * 0.2F), (double)((random.nextFloat() - 0.5F) * 0.2F), (double)((random.nextFloat() - 0.5F) * 0.2F), new int[0]);
+								
+								}
+								
+							}
+							
+						}
+						
 					}
-				}
-				if (!player.capabilities.isFlying)
-				{
 					
-					//player.getEntityAttribute(SharedMonsterAttributes.MOVEMENT_SPEED).removeModifier(EAAttributeModifier.CELESTIAL_FLY_BONUS);
 				}
+				
 			}
+			
 		}
 		else
 		{
+			
 			if (!player.capabilities.isCreativeMode)
 			{
 				player.capabilities.isFlying = false;
 				player.capabilities.allowFlying = false;
 			}
 			
-			if(player.getEntityAttribute(SharedMonsterAttributes.MOVEMENT_SPEED).hasModifier(EAAttributeModifier.CELESTIAL_FLY_BONUS))
-			{
-				player.getEntityAttribute(SharedMonsterAttributes.MOVEMENT_SPEED).removeModifier(EAAttributeModifier.CELESTIAL_FLY_BONUS);
-			}
 		}
 	}
 }

@@ -9,6 +9,7 @@ import net.minecraftforge.fml.client.config.GuiConfig;
 
 import com.ebonheart.EbonArtsMod.EbonArtsMod;
 import com.ebonheart.EbonArtsMod.api.helper.LogHelper;
+import com.ebonheart.EbonArtsMod.client.InitItemsEARender;
 import com.ebonheart.EbonArtsMod.init.InitRecipesEA;
 import com.ebonheart.EbonArtsMod.references.Reference;
 
@@ -44,6 +45,10 @@ public class ConfigGui extends GuiConfig {
 		{
 			EbonArtsMod.config.save();	
 			LogHelper.info("Configuration saved.");
+			
+			//EbonArtsMod.config.;
+			//InitItemsEARender.registerRenders();
+			//LogHelper.info("Configuration loaded.");
 		}
 	}
 }

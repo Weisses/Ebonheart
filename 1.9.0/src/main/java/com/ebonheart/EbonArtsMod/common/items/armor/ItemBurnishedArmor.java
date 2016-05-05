@@ -7,6 +7,7 @@ import java.util.UUID;
 import com.ebonheart.EbonArtsMod.EbonArtsMod;
 import com.ebonheart.EbonArtsMod.api.modifiers.EAAttributeModifier;
 import com.ebonheart.EbonArtsMod.common.items.ItemHelper;
+import com.ebonheart.EbonArtsMod.configs.EbonArtsConfiguration;
 import com.ebonheart.EbonArtsMod.init.InitItemsEA;
 
 import net.minecraft.client.Minecraft;
@@ -43,9 +44,14 @@ import net.minecraftforge.fml.relauncher.SideOnly;
 //Arcanite
 public class ItemBurnishedArmor extends ItemArmor {
 	
+	int iPlayerPosX;
+	int iPlayerPosY;
+	int iPlayerPosZ;
+	
 	double playerPosX;
 	double playerPosY;
 	double playerPosZ;
+	
 	Random random = new Random();
 	
 	public ItemBurnishedArmor(String unlocalizedName, int renderIndexIn, EntityEquipmentSlot equipmentSlotIn)
@@ -91,19 +97,50 @@ public class ItemBurnishedArmor extends ItemArmor {
 				player.getEntityAttribute(SharedMonsterAttributes.MOVEMENT_SPEED).applyModifier(EAAttributeModifier.BURNISHED_SPEED_BONUS);
 			}
 			
+			if(player.capabilities.isCreativeMode)
+			{
+				if(player.getEntityAttribute(SharedMonsterAttributes.MOVEMENT_SPEED).hasModifier(EAAttributeModifier.BURNISHED_SPEED_BONUS))
+				{
+					player.getEntityAttribute(SharedMonsterAttributes.MOVEMENT_SPEED).removeModifier(EAAttributeModifier.BURNISHED_SPEED_BONUS);
+				}
+			}
+			
 			if(player.isSprinting())
 			{
-				
-				playerPosX = player.getPosition().getX();
-				playerPosY = player.getPosition().getY();
-				playerPosZ = player.getPosition().getZ();
 				
 				if(!player.isInvisible())
 				{
 					player.setInvisible(true);
 				}
 				
-				world.spawnParticle(EnumParticleTypes.CLOUD, playerPosX, playerPosY, playerPosZ, (double)((random.nextFloat() - 0.5F) * 0.2F), (double)((random.nextFloat() - 0.5F) * 0.2F), (double)((random.nextFloat() - 0.5F) * 0.2F), new int[0]);
+				if(!EbonArtsConfiguration.armorParticle)
+				{
+					
+					if(world.isRemote)
+					{
+						
+						iPlayerPosX = player.getPosition().getX();
+						iPlayerPosY = player.getPosition().getY();
+						iPlayerPosZ = player.getPosition().getZ();
+						playerPosX = player.getPositionVector().xCoord;
+						playerPosY = player.getPositionVector().yCoord;
+						playerPosZ = player.getPositionVector().zCoord;
+						
+						int d = random.nextInt(100) + 1;
+						
+						if (d <= 10)
+						{
+							world.spawnParticle(EnumParticleTypes.CRIT_MAGIC, playerPosX, playerPosY + 1.5D, playerPosZ, (double)((random.nextFloat() - 0.5F) * 0.2F), (double)((random.nextFloat() - 0.5F) * 0.2F), (double)((random.nextFloat() - 0.5F) * 0.2F), new int[0]);
+						}
+						
+						if (d <= 50)
+						{
+							world.spawnParticle(EnumParticleTypes.CLOUD, iPlayerPosX, iPlayerPosY, iPlayerPosZ, (double)((random.nextFloat() - 0.5F) * 0.2F), (double)((random.nextFloat() - 0.5F) * 0.2F), (double)((random.nextFloat() - 0.5F) * 0.2F), new int[0]);
+						}
+						
+					}
+					
+				}
 				
 			}
 			else
@@ -113,8 +150,14 @@ public class ItemBurnishedArmor extends ItemArmor {
 		}
 		else
 		{
-			player.getEntityAttribute(SharedMonsterAttributes.MOVEMENT_SPEED).removeModifier(EAAttributeModifier.BURNISHED_SPEED_BONUS);
+			
+			if(player.getEntityAttribute(SharedMonsterAttributes.MOVEMENT_SPEED).hasModifier(EAAttributeModifier.BURNISHED_SPEED_BONUS))
+			{
+				player.getEntityAttribute(SharedMonsterAttributes.MOVEMENT_SPEED).removeModifier(EAAttributeModifier.BURNISHED_SPEED_BONUS);
+			}
+			
 		}
+		
 	}
 	
 	

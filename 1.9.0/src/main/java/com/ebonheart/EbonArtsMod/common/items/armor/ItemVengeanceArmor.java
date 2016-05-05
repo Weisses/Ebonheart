@@ -9,6 +9,7 @@ import com.ebonheart.EbonArtsMod.api.damagesources.EntityDamageSourceElectric;
 import com.ebonheart.EbonArtsMod.api.helper.LogHelper;
 import com.ebonheart.EbonArtsMod.api.modifiers.EAAttributeModifier;
 import com.ebonheart.EbonArtsMod.common.items.ItemHelper;
+import com.ebonheart.EbonArtsMod.configs.EbonArtsConfiguration;
 import com.ebonheart.EbonArtsMod.init.InitItemsEA;
 
 import net.minecraft.enchantment.Enchantment;
@@ -87,6 +88,7 @@ public class ItemVengeanceArmor extends ItemArmor {
 			&& player.getItemStackFromSlot(EntityEquipmentSlot.LEGS) != null && player.getItemStackFromSlot(EntityEquipmentSlot.LEGS).getItem() == InitItemsEA.vengeance_leggings
 			&& player.getItemStackFromSlot(EntityEquipmentSlot.FEET) != null && player.getItemStackFromSlot(EntityEquipmentSlot.FEET).getItem() == InitItemsEA.vengeance_boots) 
 		{
+			
 			if(!player.getEntityAttribute(SharedMonsterAttributes.MOVEMENT_SPEED).hasModifier(EAAttributeModifier.VENGEANCE_SPEED_BONUS))
 			{
 				player.getEntityAttribute(SharedMonsterAttributes.MOVEMENT_SPEED).applyModifier(EAAttributeModifier.VENGEANCE_SPEED_BONUS);
@@ -101,59 +103,98 @@ public class ItemVengeanceArmor extends ItemArmor {
 			{
 				player.getEntityAttribute(SharedMonsterAttributes.ATTACK_DAMAGE).applyModifier(EAAttributeModifier.VENGEANCE_ATTACK_BONUS);
 			}
+			
+			if(player.capabilities.isCreativeMode)
+			{
+				
+				if(player.getEntityAttribute(SharedMonsterAttributes.MOVEMENT_SPEED).hasModifier(EAAttributeModifier.VENGEANCE_SPEED_BONUS))
+				{
+					player.getEntityAttribute(SharedMonsterAttributes.MOVEMENT_SPEED).removeModifier(EAAttributeModifier.VENGEANCE_SPEED_BONUS);
+				}
+				
+				if(player.getEntityAttribute(SharedMonsterAttributes.MAX_HEALTH).hasModifier(EAAttributeModifier.VENGEANCE_HP_BONUS))
+				{
+					player.getEntityAttribute(SharedMonsterAttributes.MAX_HEALTH).removeModifier(EAAttributeModifier.VENGEANCE_HP_BONUS);
+				}
+				
+				if(player.getEntityAttribute(SharedMonsterAttributes.ATTACK_DAMAGE).hasModifier(EAAttributeModifier.VENGEANCE_ATTACK_BONUS))
+				{
+					player.getEntityAttribute(SharedMonsterAttributes.ATTACK_DAMAGE).removeModifier(EAAttributeModifier.VENGEANCE_ATTACK_BONUS);
+				}
+				
+			}
+			
 			//LogHelper.info("held item: " + player.getHeldItem(EnumHand.MAIN_HAND).getMaxDamage());
 			
 			
-			//player.onKillEntity(player);;
-			//ItemStack test = player.getHeldItem(EnumHand.MAIN_HAND);
-			if(player.getItemStackFromSlot(EntityEquipmentSlot.MAINHAND) != null)
+			
+			if(!EbonArtsConfiguration.armorParticle)
 			{
-				
-				playerPosX = player.getPositionVector().xCoord;
-				playerPosY = player.getPositionVector().yCoord;
-				playerPosZ = player.getPositionVector().zCoord;
+				if(world.isRemote)
+				{
 					
-				world.spawnParticle(EnumParticleTypes.CRIT_MAGIC, playerPosX, playerPosY, playerPosZ, (double)((random.nextFloat() - 0.5F) * 0.2F), (double)((random.nextFloat() - 0.5F) * 0.2F), (double)((random.nextFloat() - 0.5F) * 0.2F), new int[0]);
+					if(player.getItemStackFromSlot(EntityEquipmentSlot.MAINHAND) != null)
+					{
+						
+						int d = random.nextInt(100) + 1;
+						
+						if (d <= 1)
+						{
+							
+							playerPosX = player.getPositionVector().xCoord;
+							playerPosY = player.getPositionVector().yCoord;
+							playerPosZ = player.getPositionVector().zCoord;
+							
+							EbonArtsMod.proxy.generateUnholyParticles(player);
+							
+						}
+						
+					}
 					
+				
+			
+					//Blocking with shield
+					if (player.isHandActive())
+					{
+						
+						int d = random.nextInt(100) + 1;
+						
+						if (d <= 25)
+						{
+							
+							playerPosX = player.getPositionVector().xCoord;
+							playerPosY = player.getPositionVector().yCoord;
+							playerPosZ = player.getPositionVector().zCoord;
+							
+							world.spawnParticle(EnumParticleTypes.SPELL_WITCH, playerPosX, playerPosY, playerPosZ, (double)((random.nextFloat() - 0.5F) * 0.2F), (double)((random.nextFloat() - 0.5F) * 0.2F), (double)((random.nextFloat() - 0.5F) * 0.2F), new int[0]);
+							
+						}
+					
+					}
+				
+				}
+				
 			}
-			
-			//Blocking with shield
-			if (player.isHandActive())
-			{
-				playerPosX = player.getPosition().getX();
-				playerPosY = player.getPosition().getY();
-				playerPosZ = player.getPosition().getZ();
-				
-				world.spawnParticle(EnumParticleTypes.SPELL_WITCH, playerPosX, playerPosY, playerPosZ, (double)((random.nextFloat() - 0.5F) * 0.2F), (double)((random.nextFloat() - 0.5F) * 0.2F), (double)((random.nextFloat() - 0.5F) * 0.2F), new int[0]);
-				
-			}
-			
-			
-			
-			//Entity entityIn = entityIn.getRidingEntity();
-			
-			
-			//itemStack.hitEntity((EntityLivingBase) entityIn, player);
-			
-			//if(player.getHeldItemMainhand().getActiveHand() != null)
-			//{
-				
-			//	playerPosX = player.getPosition().getX();
-			//	playerPosY = player.getPosition().getY();
-			//	playerPosZ = player.getPosition().getZ();
-				
-			//	world.spawnParticle(EnumParticleTypes.EXPLOSION_NORMAL, playerPosX, playerPosY, playerPosZ, (double)((random.nextFloat() - 0.5F) * 0.2F), (double)((random.nextFloat() - 0.5F) * 0.2F), (double)((random.nextFloat() - 0.5F) * 0.2F), new int[0]);
-				
-			//}
-			
-			
 			
 		}
 		else
 		{
-			player.getEntityAttribute(SharedMonsterAttributes.MOVEMENT_SPEED).removeModifier(EAAttributeModifier.VENGEANCE_SPEED_BONUS);
-			player.getEntityAttribute(SharedMonsterAttributes.MAX_HEALTH).removeModifier(EAAttributeModifier.VENGEANCE_HP_BONUS);
-			player.getEntityAttribute(SharedMonsterAttributes.ATTACK_DAMAGE).removeModifier(EAAttributeModifier.VENGEANCE_ATTACK_BONUS);
+			
+			if(player.getEntityAttribute(SharedMonsterAttributes.MOVEMENT_SPEED).hasModifier(EAAttributeModifier.VENGEANCE_SPEED_BONUS))
+			{
+				player.getEntityAttribute(SharedMonsterAttributes.MOVEMENT_SPEED).removeModifier(EAAttributeModifier.VENGEANCE_SPEED_BONUS);
+			}
+			
+			if(player.getEntityAttribute(SharedMonsterAttributes.MAX_HEALTH).hasModifier(EAAttributeModifier.VENGEANCE_HP_BONUS))
+			{
+				player.getEntityAttribute(SharedMonsterAttributes.MAX_HEALTH).removeModifier(EAAttributeModifier.VENGEANCE_HP_BONUS);
+			}
+			
+			if(player.getEntityAttribute(SharedMonsterAttributes.ATTACK_DAMAGE).hasModifier(EAAttributeModifier.VENGEANCE_ATTACK_BONUS))
+			{
+				player.getEntityAttribute(SharedMonsterAttributes.ATTACK_DAMAGE).removeModifier(EAAttributeModifier.VENGEANCE_ATTACK_BONUS);
+			}
+			
 		}
 	}
 }

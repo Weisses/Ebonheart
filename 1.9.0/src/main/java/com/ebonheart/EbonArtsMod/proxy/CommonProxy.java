@@ -1,5 +1,6 @@
 package com.ebonheart.EbonArtsMod.proxy;
 
+import net.minecraft.entity.Entity;
 import net.minecraftforge.fml.common.event.FMLInitializationEvent;
 import net.minecraftforge.fml.common.event.FMLPostInitializationEvent;
 import net.minecraftforge.fml.common.event.FMLPreInitializationEvent;
@@ -52,4 +53,10 @@ public class CommonProxy {
 	{
 		
 	}
+	
+	public void generateMysteriousParticles(Entity theEntity) { }
+	
+	public void generateUnholyParticles(Entity theEntity) { }
+	
+	
 }
