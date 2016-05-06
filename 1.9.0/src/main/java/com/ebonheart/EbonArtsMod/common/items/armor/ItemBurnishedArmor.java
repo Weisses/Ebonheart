@@ -161,7 +161,6 @@ public class ItemBurnishedArmor extends ItemArmor {
 	}
 	
 	
-	
 	/**
 	private void effectPlayer(EntityPlayer player, Potion potion, int strength, boolean showParticles) {
 	    //Always effect for 8 seconds, then refresh
