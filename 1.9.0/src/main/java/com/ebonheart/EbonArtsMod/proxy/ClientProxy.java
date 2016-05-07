@@ -12,7 +12,9 @@ import com.ebonheart.EbonArtsMod.client.InitBlocksEARender;
 import com.ebonheart.EbonArtsMod.client.InitEntityEARender;
 import com.ebonheart.EbonArtsMod.client.InitItemsEARender;
 import com.ebonheart.EbonArtsMod.client.entity.EntityCandleFX;
-import com.ebonheart.EbonArtsMod.client.entity.EntityUnholyFX;
+import com.ebonheart.EbonArtsMod.client.particle.EntityFlightFX;
+import com.ebonheart.EbonArtsMod.client.particle.EntitySprintFX;
+import com.ebonheart.EbonArtsMod.client.particle.EntityUnholyFX;
 import com.ebonheart.EbonArtsMod.init.InitEntityEA;
 import com.ebonheart.EbonArtsMod.init.InitTileEntitiesEA;
 
@@ -53,13 +55,17 @@ public class ClientProxy extends CommonProxy {
 		
 	}
 	
+	/**
+	 * Particles
+	 */
+	
 	@Override
-	public void generateMysteriousParticles(Entity theEntity)
+	public void generateSprintParticles(Entity theEntity)
 	{
 	    double motionX = theEntity.worldObj.rand.nextGaussian() * 0.02D;
 	    double motionY = theEntity.worldObj.rand.nextGaussian() * 0.02D;
 	    double motionZ = theEntity.worldObj.rand.nextGaussian() * 0.02D;
-	    EntityFX particleMysterious = new EntityCandleFX(
+	    EntityFX particleSprint = new EntitySprintFX(
 	          theEntity.worldObj, 
 	          theEntity.posX + theEntity.worldObj.rand.nextFloat() * theEntity.width 
 	                * 2.0F - theEntity.width, 
@@ -70,7 +76,7 @@ public class ClientProxy extends CommonProxy {
 	          motionX, 
 	          motionY, 
 	          motionZ);
-	    Minecraft.getMinecraft().effectRenderer.addEffect(particleMysterious);        
+	    Minecraft.getMinecraft().effectRenderer.addEffect(particleSprint);        
 	}
 	
 	@Override
@@ -91,6 +97,26 @@ public class ClientProxy extends CommonProxy {
 	          motionY, 
 	          motionZ);
 	    Minecraft.getMinecraft().effectRenderer.addEffect(particleUnholy);        
+	}
+	
+	@Override
+	public void generateFlightParticles(Entity theEntity)
+	{
+	    double motionX = theEntity.worldObj.rand.nextGaussian() * 0.02D;
+	    double motionY = theEntity.worldObj.rand.nextGaussian() * 0.02D;
+	    double motionZ = theEntity.worldObj.rand.nextGaussian() * 0.02D;
+	    EntityFX particleFlight = new EntityFlightFX(
+	          theEntity.worldObj, 
+	          theEntity.posX + theEntity.worldObj.rand.nextFloat() * theEntity.width 
+	                * 2.0F - theEntity.width, 
+	          theEntity.posY + 0.5D + theEntity.worldObj.rand.nextFloat() 
+	                * theEntity.height, 
+	          theEntity.posZ + theEntity.worldObj.rand.nextFloat() * theEntity.width 
+	                * 2.0F - theEntity.width, 
+	          motionX, 
+	          motionY, 
+	          motionZ);
+	    Minecraft.getMinecraft().effectRenderer.addEffect(particleFlight);        
 	}
 	
 }

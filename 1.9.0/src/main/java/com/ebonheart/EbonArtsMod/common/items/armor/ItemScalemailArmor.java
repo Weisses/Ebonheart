@@ -113,6 +113,7 @@ public class ItemScalemailArmor extends ItemArmor {
 							if (d <= 25)
 							{
 								
+								
 								world.spawnParticle(EnumParticleTypes.FIREWORKS_SPARK
 									//.SPELL_WITCH
 									, playerPosX, playerPosY, playerPosZ, (double)((random.nextFloat() - 0.5F) * 0.2F), (double)((random.nextFloat() - 0.5F) * 0.2F), (double)((random.nextFloat() - 0.5F) * 0.2F), new int[0]);

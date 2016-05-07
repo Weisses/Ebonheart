@@ -138,12 +138,12 @@ public class ItemVengeanceArmor extends ItemArmor {
 						
 						int d = random.nextInt(100) + 1;
 						
-						if (d <= 1)
+						if (d <= 2)
 						{
 							
-							playerPosX = player.getPositionVector().xCoord;
-							playerPosY = player.getPositionVector().yCoord;
-							playerPosZ = player.getPositionVector().zCoord;
+							//playerPosX = player.getPositionVector().xCoord;
+							//playerPosY = player.getPositionVector().yCoord;
+							//playerPosZ = player.getPositionVector().zCoord;
 							
 							EbonArtsMod.proxy.generateUnholyParticles(player);
 							

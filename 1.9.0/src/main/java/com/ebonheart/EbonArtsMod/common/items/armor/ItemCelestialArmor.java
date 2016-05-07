@@ -103,17 +103,23 @@ public class ItemCelestialArmor extends ItemArmor {
 							
 							if(world.isRemote)
 							{
-								int d = random.nextInt(100) + 1;
 								
-								if (d <= 25)
+								if(player.motionX != 0 || player.motionY != 0 || player.motionX != 0)
 								{
-									
-									playerPosX = player.getPositionVector().xCoord;
-									playerPosY = player.getPositionVector().yCoord;
-									playerPosZ = player.getPositionVector().zCoord;
-									
-									world.spawnParticle(EnumParticleTypes.ENCHANTMENT_TABLE, playerPosX, playerPosY + 1D, playerPosZ, (double)((random.nextFloat() - 0.5F) * 0.2F), (double)((random.nextFloat() - 0.5F) * 0.2F), (double)((random.nextFloat() - 0.5F) * 0.2F), new int[0]);
+									int d = random.nextInt(100) + 1;
 								
+									if (d <= 25)
+									{
+										
+										//playerPosX = player.getPositionVector().xCoord;
+										//playerPosY = player.getPositionVector().yCoord;
+										//playerPosZ = player.getPositionVector().zCoord;
+									
+										EbonArtsMod.proxy.generateFlightParticles(player);
+									
+										//world.spawnParticle(EnumParticleTypes.ENCHANTMENT_TABLE, playerPosX, playerPosY + 1D, playerPosZ, (double)((random.nextFloat() - 0.5F) * 0.2F), (double)((random.nextFloat() - 0.5F) * 0.2F), (double)((random.nextFloat() - 0.5F) * 0.2F), new int[0]);
+									}
+									
 								}
 								
 							}

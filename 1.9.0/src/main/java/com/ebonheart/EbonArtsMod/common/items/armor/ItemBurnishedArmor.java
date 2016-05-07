@@ -122,15 +122,17 @@ public class ItemBurnishedArmor extends ItemArmor {
 						iPlayerPosX = player.getPosition().getX();
 						iPlayerPosY = player.getPosition().getY();
 						iPlayerPosZ = player.getPosition().getZ();
-						playerPosX = player.getPositionVector().xCoord;
-						playerPosY = player.getPositionVector().yCoord;
-						playerPosZ = player.getPositionVector().zCoord;
+						//playerPosX = player.getPositionVector().xCoord;
+						//playerPosY = player.getPositionVector().yCoord;
+						//playerPosZ = player.getPositionVector().zCoord;
 						
 						int d = random.nextInt(100) + 1;
 						
 						if (d <= 10)
 						{
-							world.spawnParticle(EnumParticleTypes.CRIT_MAGIC, playerPosX, playerPosY + 1.5D, playerPosZ, (double)((random.nextFloat() - 0.5F) * 0.2F), (double)((random.nextFloat() - 0.5F) * 0.2F), (double)((random.nextFloat() - 0.5F) * 0.2F), new int[0]);
+							EbonArtsMod.proxy.generateSprintParticles(player);
+							
+							//world.spawnParticle(EnumParticleTypes.CRIT_MAGIC, playerPosX, playerPosY + 1.5D, playerPosZ, (double)((random.nextFloat() - 0.5F) * 0.2F), (double)((random.nextFloat() - 0.5F) * 0.2F), (double)((random.nextFloat() - 0.5F) * 0.2F), new int[0]);
 						}
 						
 						if (d <= 50)

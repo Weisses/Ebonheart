@@ -54,9 +54,11 @@ public class CommonProxy {
 		
 	}
 	
-	public void generateMysteriousParticles(Entity theEntity) { }
+	public void generateSprintParticles(Entity entity) { }
 	
-	public void generateUnholyParticles(Entity theEntity) { }
+	public void generateUnholyParticles(Entity entity) { }
+	
+	public void generateFlightParticles(Entity entity) { }
 	
 	
 }
