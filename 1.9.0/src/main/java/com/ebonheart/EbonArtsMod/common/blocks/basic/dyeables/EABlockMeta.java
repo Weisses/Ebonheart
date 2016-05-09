@@ -20,8 +20,8 @@ import net.minecraft.util.IStringSerializable;
 import net.minecraft.world.World;
 
 import com.ebonheart.EbonArtsMod.EbonArtsMod;
-import com.ebonheart.EbonArtsMod.api.meta.IMetaBlockName;
 import com.ebonheart.EbonArtsMod.common.blocks.BlockHelper;
+import com.ebonheart.EbonArtsMod.common.utils.meta.IMetaBlockName;
 
 
 public class EABlockMeta extends Block implements IMetaBlockName {

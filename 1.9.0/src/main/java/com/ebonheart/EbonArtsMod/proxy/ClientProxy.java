@@ -7,7 +7,6 @@ import net.minecraftforge.fml.common.event.FMLInitializationEvent;
 import net.minecraftforge.fml.common.event.FMLPostInitializationEvent;
 import net.minecraftforge.fml.common.event.FMLPreInitializationEvent;
 
-import com.ebonheart.EbonArtsMod.api.SoundEventsEA;
 import com.ebonheart.EbonArtsMod.client.InitBlocksEARender;
 import com.ebonheart.EbonArtsMod.client.InitEntityEARender;
 import com.ebonheart.EbonArtsMod.client.InitItemsEARender;
@@ -15,11 +14,12 @@ import com.ebonheart.EbonArtsMod.client.entity.EntityCandleFX;
 import com.ebonheart.EbonArtsMod.client.particle.EntityFlightFX;
 import com.ebonheart.EbonArtsMod.client.particle.EntitySprintFX;
 import com.ebonheart.EbonArtsMod.client.particle.EntityUnholyFX;
+import com.ebonheart.EbonArtsMod.common.utils.SoundEventsEA;
 import com.ebonheart.EbonArtsMod.init.InitEntityEA;
 import com.ebonheart.EbonArtsMod.init.InitTileEntitiesEA;
 
 public class ClientProxy extends CommonProxy {
-	public float fovModifierHand = 0F;
+	
 	@Override
 	public void preInit(FMLPreInitializationEvent event) 
 	{

@@ -1,7 +1,7 @@
 package com.ebonheart.EbonArtsMod.common.tileentities;
 
 import com.ebonheart.EbonArtsMod.EbonArtsMod;
-import com.ebonheart.EbonArtsMod.api.GuiHandler;
+import com.ebonheart.EbonArtsMod.common.utils.gui.GuiHandler;
 
 import net.minecraft.block.BlockContainer;
 import net.minecraft.block.material.Material;

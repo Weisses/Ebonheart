@@ -3,7 +3,8 @@ package com.ebonheart.EbonArtsMod.common.items.armor;
 import java.util.List;
 
 import com.ebonheart.EbonArtsMod.EbonArtsMod;
-import com.ebonheart.EbonArtsMod.api.modifiers.EAAttributeModifier;
+import com.ebonheart.EbonArtsMod.common.entity.modifiers.EAAttributeModifier;
+import com.ebonheart.EbonArtsMod.common.items.MaterialHelper;
 import com.ebonheart.EbonArtsMod.common.items.ItemHelper;
 import com.ebonheart.EbonArtsMod.init.InitItemsEA;
 
@@ -42,7 +43,7 @@ public class ItemInfernalArmor extends ItemArmor {
 	
 	public ItemInfernalArmor(String unlocalizedName, int renderIndexIn, EntityEquipmentSlot equipmentSlotIn)
 	{
-		super(EAMaterialHelper.SCALEMAIL, renderIndexIn, equipmentSlotIn);
+		super(MaterialHelper.SCALEMAIL, renderIndexIn, equipmentSlotIn);
 		
 		ItemHelper.setItemName(this, unlocalizedName);
 		this.setCreativeTab(EbonArtsMod.tabEbonArtsItems);

@@ -5,7 +5,8 @@ import java.util.Random;
 import java.util.UUID;
 
 import com.ebonheart.EbonArtsMod.EbonArtsMod;
-import com.ebonheart.EbonArtsMod.api.modifiers.EAAttributeModifier;
+import com.ebonheart.EbonArtsMod.common.entity.modifiers.EAAttributeModifier;
+import com.ebonheart.EbonArtsMod.common.items.MaterialHelper;
 import com.ebonheart.EbonArtsMod.common.items.ItemHelper;
 import com.ebonheart.EbonArtsMod.configs.EbonArtsConfiguration;
 import com.ebonheart.EbonArtsMod.init.InitItemsEA;
@@ -56,7 +57,7 @@ public class ItemBurnishedArmor extends ItemArmor {
 	
 	public ItemBurnishedArmor(String unlocalizedName, int renderIndexIn, EntityEquipmentSlot equipmentSlotIn)
 	{
-		super(EAMaterialHelper.BURNISHED, renderIndexIn, equipmentSlotIn);
+		super(MaterialHelper.BURNISHED, renderIndexIn, equipmentSlotIn);
 		
 		ItemHelper.setItemName(this, unlocalizedName);
 		this.setCreativeTab(EbonArtsMod.tabEbonArtsItems);

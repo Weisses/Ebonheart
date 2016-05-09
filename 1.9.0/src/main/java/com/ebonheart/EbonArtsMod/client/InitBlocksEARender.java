@@ -249,6 +249,10 @@ public final class InitBlocksEARender extends BlocksEA {
 		registerRender(glowstone_slab);
 		registerRender(ebonheart_slab);
 		
+		//registerRender(stainedClaySlabs);
+		//registerRender(double_test_slab);
+		//registerRender(test_slab);
+		
 		registerRender(draconium_stairs);
 		registerRender(velious_stairs);
 		registerRender(arcanite_stairs);
@@ -329,7 +333,8 @@ public final class InitBlocksEARender extends BlocksEA {
 		registerRender(paper_block);
 		registerRender(leather_block);
 		registerRender(reed_block);
-		//registerRender(testSlabs);
+		
+		//registerRender(OmniTool);
 	}
 	
 	public static void registerSpecialRenders()

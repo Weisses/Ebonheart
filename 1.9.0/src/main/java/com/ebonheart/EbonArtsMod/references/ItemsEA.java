@@ -90,6 +90,9 @@ public class ItemsEA {
 	public static Item katcheen_hoe;
 	public static Item katcheen_sword;
 	
+	public static Item consecration;
+	public static Item necrosis;
+	
 	public static Item empowered_blade;
 	public static Item deception;
 	public static Item blazefury;
@@ -122,6 +125,6 @@ public class ItemsEA {
 	
 	//public static Item mans_steak;
 	
-	
+	public static Item OmniTool;
 	
 }

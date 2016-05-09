@@ -12,10 +12,10 @@ import net.minecraftforge.fml.common.event.FMLPostInitializationEvent;
 import net.minecraftforge.fml.common.event.FMLPreInitializationEvent;
 import net.minecraftforge.fml.common.eventhandler.SubscribeEvent;
 
-import com.ebonheart.EbonArtsMod.api.creative.EbonArtsTabBlocks;
-import com.ebonheart.EbonArtsMod.api.creative.EbonArtsTabDyeables;
-import com.ebonheart.EbonArtsMod.api.creative.EbonArtsTabItems;
-import com.ebonheart.EbonArtsMod.api.helper.LogHelper;
+import com.ebonheart.EbonArtsMod.common.utils.LogHelper;
+import com.ebonheart.EbonArtsMod.common.utils.creative.EbonArtsTabBlocks;
+import com.ebonheart.EbonArtsMod.common.utils.creative.EbonArtsTabDyeables;
+import com.ebonheart.EbonArtsMod.common.utils.creative.EbonArtsTabItems;
 import com.ebonheart.EbonArtsMod.configs.EbonArtsConfiguration;
 import com.ebonheart.EbonArtsMod.proxy.CommonProxy;
 import com.ebonheart.EbonArtsMod.references.Reference;
@@ -57,7 +57,6 @@ public class EbonArtsMod {
 			}
 		}
 		MinecraftForge.EVENT_BUS.register(instance);
-		//FMLCommonHandler.instance().bus().register(instance);
 		EbonArtsConfiguration.syncConfig();
 		
 		this.proxy.preInit(event);
@@ -68,9 +67,7 @@ public class EbonArtsMod {
 	@SubscribeEvent
 	public void onConfigChanged(ConfigChangedEvent.OnConfigChangedEvent event)
 	{
-		if(event.getModID()
-				//.modID
-				.equals(Reference.MOD_ID))
+		if(event.getModID().equals(Reference.MOD_ID))
 		{
 			EbonArtsConfiguration.syncConfig();
 			LogHelper.info("Configuration synced.");

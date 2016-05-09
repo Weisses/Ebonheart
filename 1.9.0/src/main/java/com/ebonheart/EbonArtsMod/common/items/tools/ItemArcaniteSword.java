@@ -12,9 +12,9 @@ import net.minecraft.potion.PotionEffect;
 import net.minecraft.util.DamageSource;
 
 import com.ebonheart.EbonArtsMod.EbonArtsMod;
-import com.ebonheart.EbonArtsMod.api.damagesources.EADamageSources;
-import com.ebonheart.EbonArtsMod.api.damagesources.EntityDamageSourceElectric;
 import com.ebonheart.EbonArtsMod.common.items.ItemHelper;
+import com.ebonheart.EbonArtsMod.common.utils.damagesources.EADamageSources;
+import com.ebonheart.EbonArtsMod.common.utils.damagesources.EntityDamageSourceElectric;
 import com.ebonheart.EbonArtsMod.init.InitItemsEA;
 
 public class ItemArcaniteSword extends ItemSword {

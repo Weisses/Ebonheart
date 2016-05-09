@@ -1,6 +1,6 @@
 package com.ebonheart.EbonArtsMod.references;
 
-import com.ebonheart.EbonArtsMod.api.SoundEventsEA;
+import com.ebonheart.EbonArtsMod.common.utils.SoundEventsEA;
 
 import net.minecraft.init.Bootstrap;
 import net.minecraft.util.ResourceLocation;

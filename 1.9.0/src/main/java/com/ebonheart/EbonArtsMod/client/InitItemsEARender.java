@@ -38,7 +38,7 @@ public final class InitItemsEARender extends ItemsEA {
 		registerRender(dismal_disc);
 		registerRender(ethereal_disc);
 		
-		//registerRender(chrono_disc);
+		
 		
 		registerRender(mirroring_disc);
 		
@@ -87,7 +87,8 @@ public final class InitItemsEARender extends ItemsEA {
 		registerRender(katcheen_hoe);
 		registerRender(katcheen_sword);
 		
-		
+		registerRender(consecration);
+		registerRender(necrosis);
 		
 		registerRender(deception);
 		registerRender(frostbite);

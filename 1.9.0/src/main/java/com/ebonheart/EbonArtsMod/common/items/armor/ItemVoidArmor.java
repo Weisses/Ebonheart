@@ -5,9 +5,10 @@ import java.util.Random;
 import java.util.Vector;
 
 import com.ebonheart.EbonArtsMod.EbonArtsMod;
-import com.ebonheart.EbonArtsMod.api.helper.LogHelper;
-import com.ebonheart.EbonArtsMod.api.modifiers.EAAttributeModifier;
+import com.ebonheart.EbonArtsMod.common.entity.modifiers.EAAttributeModifier;
+import com.ebonheart.EbonArtsMod.common.items.MaterialHelper;
 import com.ebonheart.EbonArtsMod.common.items.ItemHelper;
+import com.ebonheart.EbonArtsMod.common.utils.LogHelper;
 import com.ebonheart.EbonArtsMod.init.InitItemsEA;
 
 import net.minecraft.block.state.IBlockState;
@@ -57,7 +58,7 @@ public class ItemVoidArmor extends ItemArmor {
 	
 	public ItemVoidArmor(String unlocalizedName, int renderIndexIn, EntityEquipmentSlot equipmentSlotIn)
 	{
-		super(EAMaterialHelper.VOID, renderIndexIn, equipmentSlotIn);
+		super(MaterialHelper.VOID, renderIndexIn, equipmentSlotIn);
 		
 		ItemHelper.setItemName(this, unlocalizedName);
 		this.setCreativeTab(EbonArtsMod.tabEbonArtsItems);

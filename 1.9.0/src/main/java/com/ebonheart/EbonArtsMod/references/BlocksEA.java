@@ -1,6 +1,6 @@
 package com.ebonheart.EbonArtsMod.references;
 
-import com.ebonheart.EbonArtsMod.common.blocks.BlockColoredSlab;
+import com.ebonheart.EbonArtsMod.zzztest.BlockColouredSlab;
 
 import net.minecraft.block.Block;
 
@@ -17,8 +17,12 @@ public class BlocksEA {
 	public static Block ebon_ore;
 	public static Block ebon_ore_nether;
 	
-
-	//public static BlockColoredSlab.ColouredSlabGroup testSlabs;
+	//public static BlockColouredSlab.ColouredSlabGroup stainedClaySlabs;
+	
+	public static Block double_test_slab;
+	
+	public static Block test_slab;
+	
 	//public static Block tutorialTileEntity;
 	
 	//public static Block onyxius_ore;

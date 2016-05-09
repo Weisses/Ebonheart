@@ -1,6 +1,6 @@
 package com.ebonheart.EbonArtsMod.client.particle;
 
-import com.ebonheart.EbonArtsMod.api.helper.LogHelper;
+import com.ebonheart.EbonArtsMod.common.utils.LogHelper;
 import com.ebonheart.EbonArtsMod.references.Reference;
 
 import net.minecraft.client.particle.EntityAuraFX;
