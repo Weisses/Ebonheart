@@ -1,6 +1,7 @@
 package com.ebonheart.EbonArtsMod.common.items.tools;
 
 import java.util.Collections;
+import java.util.List;
 import java.util.Set;
 
 import net.minecraft.block.Block;
@@ -9,12 +10,17 @@ import net.minecraft.block.state.IBlockState;
 import net.minecraft.entity.EntityLivingBase;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.init.Blocks;
+import net.minecraft.item.EnumRarity;
 import net.minecraft.item.ItemStack;
 import net.minecraft.item.ItemTool;
 import net.minecraft.item.Item.ToolMaterial;
 import net.minecraft.util.math.BlockPos;
+import net.minecraft.util.text.TextFormatting;
 import net.minecraft.world.IBlockAccess;
+import net.minecraft.world.World;
 import net.minecraftforge.common.ForgeHooks;
+import net.minecraftforge.fml.relauncher.Side;
+import net.minecraftforge.fml.relauncher.SideOnly;
 
 import com.ebonheart.EbonArtsMod.EbonArtsMod;
 import com.ebonheart.EbonArtsMod.common.items.ItemHelper;
@@ -62,6 +68,21 @@ public class ItemConsecration extends ItemTool {
 
 		setCreativeTab(EbonArtsMod.tabEbonArtsItems);
 	}
+	
+	@SideOnly(Side.CLIENT)
+    public void addInformation(ItemStack stack, EntityPlayer playerIn, List toolTip, boolean advanced) {
+		toolTip.add(TextFormatting.DARK_PURPLE + "\"Divine might rules over");
+		toolTip.add(TextFormatting.DARK_PURPLE + "all of creation.\"");
+		toolTip.add(" ");
+		toolTip.add(TextFormatting.GOLD + "Multi-Tool");
+		toolTip.add(TextFormatting.GREEN + "Pickaxe");
+		toolTip.add(TextFormatting.GREEN + "Shovel");
+	}
+	
+	public EnumRarity getRarity(ItemStack stack)
+    {
+        return EnumRarity.EPIC;
+    }
 
 	/**
 	 * The {@link Material}s that this tool is effective on.
@@ -121,7 +142,11 @@ public class ItemConsecration extends ItemTool {
 
 		return DIG_SPEED_DEFAULT;
 	}
-
+	
+	
+	
+	
+	
 	//public boolean hitEntity(ItemStack itemStack, EntityLivingBase target, EntityLivingBase attacker) {
 	//	itemStack.damageItem(1, attacker); // Only reduce the durability by 1 point (like swords do) instead of 2 (like tools do)
 	//	return true;

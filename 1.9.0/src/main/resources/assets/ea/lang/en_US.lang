@@ -213,6 +213,9 @@ item.ea:tool/katcheen_shovel.name=Katcheen Shovel
 item.ea:tool/katcheen_hoe.name=Katcheen Hoe
 item.ea:tool/katcheen_sword.name=Katcheen Sword
 
+item.ea:tool/necrosis.name=Necrosis
+item.ea:tool/consecration.name=Consecration
+
 item.ea:tool/deception.name=Deception
 item.ea:tool/frostbite.name=Frostbite
 item.ea:tool/massacre.name=Massacre
