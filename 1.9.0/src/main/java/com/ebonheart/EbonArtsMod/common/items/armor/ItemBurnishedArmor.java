@@ -98,13 +98,13 @@ public class ItemBurnishedArmor extends ItemArmor {
 				player.getEntityAttribute(SharedMonsterAttributes.MOVEMENT_SPEED).applyModifier(EAAttributeModifier.BURNISHED_SPEED_BONUS);
 			}
 			
-			if(player.capabilities.isCreativeMode)
-			{
-				if(player.getEntityAttribute(SharedMonsterAttributes.MOVEMENT_SPEED).hasModifier(EAAttributeModifier.BURNISHED_SPEED_BONUS))
-				{
-					player.getEntityAttribute(SharedMonsterAttributes.MOVEMENT_SPEED).removeModifier(EAAttributeModifier.BURNISHED_SPEED_BONUS);
-				}
-			}
+			//if(player.capabilities.isCreativeMode)
+			//{
+			//	if(player.getEntityAttribute(SharedMonsterAttributes.MOVEMENT_SPEED).hasModifier(EAAttributeModifier.BURNISHED_SPEED_BONUS))
+			//	{
+			//		player.getEntityAttribute(SharedMonsterAttributes.MOVEMENT_SPEED).removeModifier(EAAttributeModifier.BURNISHED_SPEED_BONUS);
+			//	}
+			//}
 			
 			if(player.isSprinting())
 			{
@@ -151,15 +151,15 @@ public class ItemBurnishedArmor extends ItemArmor {
 				player.setInvisible(false);
 			}
 		}
-		else
-		{
+		//else
+		//{
 			
-			if(player.getEntityAttribute(SharedMonsterAttributes.MOVEMENT_SPEED).hasModifier(EAAttributeModifier.BURNISHED_SPEED_BONUS))
-			{
-				player.getEntityAttribute(SharedMonsterAttributes.MOVEMENT_SPEED).removeModifier(EAAttributeModifier.BURNISHED_SPEED_BONUS);
-			}
+		//	if(player.getEntityAttribute(SharedMonsterAttributes.MOVEMENT_SPEED).hasModifier(EAAttributeModifier.BURNISHED_SPEED_BONUS))
+		//	{
+		//		player.getEntityAttribute(SharedMonsterAttributes.MOVEMENT_SPEED).removeModifier(EAAttributeModifier.BURNISHED_SPEED_BONUS);
+		//	}
 			
-		}
+		//}
 		
 	}
 	

@@ -25,8 +25,6 @@ public class ClientProxy extends CommonProxy {
 	{
 		super.preInit(event);
 		
-		InitBlocksEARender.preInit();
-		
 		
 		
 		//---------------------------

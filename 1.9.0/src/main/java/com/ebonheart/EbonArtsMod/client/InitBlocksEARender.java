@@ -18,68 +18,6 @@ import com.ebonheart.EbonArtsMod.references.Reference;
 
 public final class InitBlocksEARender extends BlocksEA {
 	
-	public static void preInit() 
-	{
-		
-		/**ModelBakery.registerItemVariants(Item.getItemFromBlock(InitBlocksEA.cobble_mystic_block), 
-				new ResourceLocation(Reference.MOD_ID + ":gem/mystic/cobblestone/cobble_mystic_block_white"),
-				new ResourceLocation(Reference.MOD_ID + ":gem/mystic/cobblestone/cobble_mystic_block_orange"),
-				new ResourceLocation(Reference.MOD_ID + ":gem/mystic/cobblestone/cobble_mystic_block_magenta"),
-				new ResourceLocation(Reference.MOD_ID + ":gem/mystic/cobblestone/cobble_mystic_block_lightblue"),
-				new ResourceLocation(Reference.MOD_ID + ":gem/mystic/cobblestone/cobble_mystic_block_yellow"),
-				new ResourceLocation(Reference.MOD_ID + ":gem/mystic/cobblestone/cobble_mystic_block_lime"),
-				new ResourceLocation(Reference.MOD_ID + ":gem/mystic/cobblestone/cobble_mystic_block_pink"),
-				new ResourceLocation(Reference.MOD_ID + ":gem/mystic/cobblestone/cobble_mystic_block_gray"),
-				new ResourceLocation(Reference.MOD_ID + ":gem/mystic/cobblestone/cobble_mystic_block_lightgray"),
-				new ResourceLocation(Reference.MOD_ID + ":gem/mystic/cobblestone/cobble_mystic_block_cyan"),
-				new ResourceLocation(Reference.MOD_ID + ":gem/mystic/cobblestone/cobble_mystic_block_purple"),
-				new ResourceLocation(Reference.MOD_ID + ":gem/mystic/cobblestone/cobble_mystic_block_blue"),
-				new ResourceLocation(Reference.MOD_ID + ":gem/mystic/cobblestone/cobble_mystic_block_brown"),
-				new ResourceLocation(Reference.MOD_ID + ":gem/mystic/cobblestone/cobble_mystic_block_green"),
-				new ResourceLocation(Reference.MOD_ID + ":gem/mystic/cobblestone/cobble_mystic_block_red"),
-				new ResourceLocation(Reference.MOD_ID + ":gem/mystic/cobblestone/cobble_mystic_block_black"));
-				
-		
-		ModelBakery.registerItemVariants(Item.getItemFromBlock(InitBlocksEA.mystic_block), 
-				new ResourceLocation(Reference.MOD_ID + ":gem/mystic/stone/mystic_block_white"),
-				new ResourceLocation(Reference.MOD_ID + ":gem/mystic/stone/mystic_block_orange"),
-				new ResourceLocation(Reference.MOD_ID + ":gem/mystic/stone/mystic_block_magenta"),
-				new ResourceLocation(Reference.MOD_ID + ":gem/mystic/stone/mystic_block_lightblue"),
-				new ResourceLocation(Reference.MOD_ID + ":gem/mystic/stone/mystic_block_yellow"),
-				new ResourceLocation(Reference.MOD_ID + ":gem/mystic/stone/mystic_block_lime"),
-				new ResourceLocation(Reference.MOD_ID + ":gem/mystic/stone/mystic_block_pink"),
-				new ResourceLocation(Reference.MOD_ID + ":gem/mystic/stone/mystic_block_gray"),
-				new ResourceLocation(Reference.MOD_ID + ":gem/mystic/stone/mystic_block_lightgray"),
-				new ResourceLocation(Reference.MOD_ID + ":gem/mystic/stone/mystic_block_cyan"),
-				new ResourceLocation(Reference.MOD_ID + ":gem/mystic/stone/mystic_block_purple"),
-				new ResourceLocation(Reference.MOD_ID + ":gem/mystic/stone/mystic_block_blue"),
-				new ResourceLocation(Reference.MOD_ID + ":gem/mystic/stone/mystic_block_brown"),
-				new ResourceLocation(Reference.MOD_ID + ":gem/mystic/stone/mystic_block_green"),
-				new ResourceLocation(Reference.MOD_ID + ":gem/mystic/stone/mystic_block_red"),
-				new ResourceLocation(Reference.MOD_ID + ":gem/mystic/stone/mystic_block_black"));
-				
-		/**
-		ModelBakery.registerItemVariants(Item.getItemFromBlock(InitBlocksEA.wood_mystic_block), 
-				new ResourceLocation(Reference.MOD_ID + ":gem/mystic/wood/wood_mystic_block_white"),
-				new ResourceLocation(Reference.MOD_ID + ":gem/mystic/wood/wood_mystic_block_orange"),
-				new ResourceLocation(Reference.MOD_ID + ":gem/mystic/wood/wood_mystic_block_magenta"),
-				new ResourceLocation(Reference.MOD_ID + ":gem/mystic/wood/wood_mystic_block_lightblue"),
-				new ResourceLocation(Reference.MOD_ID + ":gem/mystic/wood/wood_mystic_block_yellow"),
-				new ResourceLocation(Reference.MOD_ID + ":gem/mystic/wood/wood_mystic_block_lime"),
-				new ResourceLocation(Reference.MOD_ID + ":gem/mystic/wood/wood_mystic_block_pink"),
-				new ResourceLocation(Reference.MOD_ID + ":gem/mystic/wood/wood_mystic_block_gray"),
-				new ResourceLocation(Reference.MOD_ID + ":gem/mystic/wood/wood_mystic_block_lightgray"),
-				new ResourceLocation(Reference.MOD_ID + ":gem/mystic/wood/wood_mystic_block_cyan"),
-				new ResourceLocation(Reference.MOD_ID + ":gem/mystic/wood/wood_mystic_block_purple"),
-				new ResourceLocation(Reference.MOD_ID + ":gem/mystic/wood/wood_mystic_block_blue"),
-				new ResourceLocation(Reference.MOD_ID + ":gem/mystic/wood/wood_mystic_block_brown"),
-				new ResourceLocation(Reference.MOD_ID + ":gem/mystic/wood/wood_mystic_block_green"),
-				new ResourceLocation(Reference.MOD_ID + ":gem/mystic/wood/wood_mystic_block_red"),
-				new ResourceLocation(Reference.MOD_ID + ":gem/mystic/wood/wood_mystic_block_black"));
-				
-		**/
-	}
-	
 	public static void registerRenders()
 	{
 		registerRender(draconium_ore);
@@ -130,47 +68,6 @@ public final class InitBlocksEARender extends BlocksEA {
 		registerRender(mystic_block_red);
 		registerRender(mystic_block_black);
 		
-		//registerRender(cobble_mystic_block_normal);
-		
-	/**	registerRender(cobble_mystic_block);
-		registerRender(InitBlocksEA.cobble_mystic_block, 0, "gem/mystic/cobblestone/cobble_mystic_block_white");
-		registerRender(InitBlocksEA.cobble_mystic_block, 1, "gem/mystic/cobblestone/cobble_mystic_block_orange");
-		registerRender(InitBlocksEA.cobble_mystic_block, 2, "gem/mystic/cobblestone/cobble_mystic_block_magenta");
-		registerRender(InitBlocksEA.cobble_mystic_block, 3, "gem/mystic/cobblestone/cobble_mystic_block_lightblue");
-		registerRender(InitBlocksEA.cobble_mystic_block, 4, "gem/mystic/cobblestone/cobble_mystic_block_yellow");
-		registerRender(InitBlocksEA.cobble_mystic_block, 5, "gem/mystic/cobblestone/cobble_mystic_block_lime");
-		registerRender(InitBlocksEA.cobble_mystic_block, 6, "gem/mystic/cobblestone/cobble_mystic_block_pink");
-		registerRender(InitBlocksEA.cobble_mystic_block, 7, "gem/mystic/cobblestone/cobble_mystic_block_gray");
-		registerRender(InitBlocksEA.cobble_mystic_block, 8, "gem/mystic/cobblestone/cobble_mystic_block_lightgray");
-		registerRender(InitBlocksEA.cobble_mystic_block, 9, "gem/mystic/cobblestone/cobble_mystic_block_cyan");
-		registerRender(InitBlocksEA.cobble_mystic_block, 10, "gem/mystic/cobblestone/cobble_mystic_block_purple");
-		registerRender(InitBlocksEA.cobble_mystic_block, 11, "gem/mystic/cobblestone/cobble_mystic_block_blue");
-		registerRender(InitBlocksEA.cobble_mystic_block, 12, "gem/mystic/cobblestone/cobble_mystic_block_brown");
-		registerRender(InitBlocksEA.cobble_mystic_block, 13, "gem/mystic/cobblestone/cobble_mystic_block_green");
-		registerRender(InitBlocksEA.cobble_mystic_block, 14, "gem/mystic/cobblestone/cobble_mystic_block_red");
-		registerRender(InitBlocksEA.cobble_mystic_block, 15, "gem/mystic/cobblestone/cobble_mystic_block_black");
-**/		
-		//registerRender(mystic_block_normal);
-/**		registerRender(mystic_block);
-		registerRender(InitBlocksEA.mystic_block, 0, "gem/mystic/stone/mystic_block_white");
-		registerRender(InitBlocksEA.mystic_block, 1, "gem/mystic/stone/mystic_block_orange");
-		registerRender(InitBlocksEA.mystic_block, 2, "gem/mystic/stone/mystic_block_magenta");
-		registerRender(InitBlocksEA.mystic_block, 3, "gem/mystic/stone/mystic_block_lightblue");
-		registerRender(InitBlocksEA.mystic_block, 4, "gem/mystic/stone/mystic_block_yellow");
-		registerRender(InitBlocksEA.mystic_block, 5, "gem/mystic/stone/mystic_block_lime");
-		registerRender(InitBlocksEA.mystic_block, 6, "gem/mystic/stone/mystic_block_pink");
-		registerRender(InitBlocksEA.mystic_block, 7, "gem/mystic/stone/mystic_block_gray");
-		registerRender(InitBlocksEA.mystic_block, 8, "gem/mystic/stone/mystic_block_lightgray");
-		registerRender(InitBlocksEA.mystic_block, 9, "gem/mystic/stone/mystic_block_cyan");
-		registerRender(InitBlocksEA.mystic_block, 10, "gem/mystic/stone/mystic_block_purple");
-		registerRender(InitBlocksEA.mystic_block, 11, "gem/mystic/stone/mystic_block_blue");
-		registerRender(InitBlocksEA.mystic_block, 12, "gem/mystic/stone/mystic_block_brown");
-		registerRender(InitBlocksEA.mystic_block, 13, "gem/mystic/stone/mystic_block_green");
-		registerRender(InitBlocksEA.mystic_block, 14, "gem/mystic/stone/mystic_block_red");
-		registerRender(InitBlocksEA.mystic_block, 15, "gem/mystic/stone/mystic_block_black");
-	**/			
-		
-		
 		registerRender(wood_mystic_block_normal);
 		registerRender(wood_mystic_block_glass);
 		registerRender(wood_mystic_block_white);
@@ -190,25 +87,6 @@ public final class InitBlocksEARender extends BlocksEA {
 		registerRender(wood_mystic_block_red);
 		registerRender(wood_mystic_block_black);
 		
-		/**
-		registerRender(wood_mystic_block);
-		registerRender(InitBlocksEA.wood_mystic_block, 0, "gem/mystic/wood/wood_mystic_block_white");
-		registerRender(InitBlocksEA.wood_mystic_block, 1, "gem/mystic/wood/wood_mystic_block_orange");
-		registerRender(InitBlocksEA.wood_mystic_block, 2, "gem/mystic/wood/wood_mystic_block_magenta");
-		registerRender(InitBlocksEA.wood_mystic_block, 3, "gem/mystic/wood/wood_mystic_block_lightblue");
-		registerRender(InitBlocksEA.wood_mystic_block, 4, "gem/mystic/wood/wood_mystic_block_yellow");
-		registerRender(InitBlocksEA.wood_mystic_block, 5, "gem/mystic/wood/wood_mystic_block_lime");
-		registerRender(InitBlocksEA.wood_mystic_block, 6, "gem/mystic/wood/wood_mystic_block_pink");
-		registerRender(InitBlocksEA.wood_mystic_block, 7, "gem/mystic/wood/wood_mystic_block_gray");
-		registerRender(InitBlocksEA.wood_mystic_block, 8, "gem/mystic/wood/wood_mystic_block_lightgray");
-		registerRender(InitBlocksEA.wood_mystic_block, 9, "gem/mystic/wood/wood_mystic_block_cyan");
-		registerRender(InitBlocksEA.wood_mystic_block, 10, "gem/mystic/wood/wood_mystic_block_purple");
-		registerRender(InitBlocksEA.wood_mystic_block, 11, "gem/mystic/wood/wood_mystic_block_blue");
-		registerRender(InitBlocksEA.wood_mystic_block, 12, "gem/mystic/wood/wood_mystic_block_brown");
-		registerRender(InitBlocksEA.wood_mystic_block, 13, "gem/mystic/wood/wood_mystic_block_green");
-		registerRender(InitBlocksEA.wood_mystic_block, 14, "gem/mystic/wood/wood_mystic_block_red");
-		registerRender(InitBlocksEA.wood_mystic_block, 15, "gem/mystic/wood/wood_mystic_block_black");
-		**/
 		registerRender(draconium_block);
 		registerRender(velious_block);
 		registerRender(arcanite_block);
@@ -248,10 +126,6 @@ public final class InitBlocksEARender extends BlocksEA {
 		registerRender(obsidian_slab);
 		registerRender(glowstone_slab);
 		registerRender(ebonheart_slab);
-		
-		//registerRender(stainedClaySlabs);
-		//registerRender(double_test_slab);
-		//registerRender(test_slab);
 		
 		registerRender(draconium_stairs);
 		registerRender(velious_stairs);
@@ -334,7 +208,8 @@ public final class InitBlocksEARender extends BlocksEA {
 		registerRender(leather_block);
 		registerRender(reed_block);
 		
-		//registerRender(OmniTool);
+		
+		
 	}
 	
 	public static void registerSpecialRenders()
@@ -348,8 +223,7 @@ public final class InitBlocksEARender extends BlocksEA {
 	public static void registerRender(Block block)
 	{
 		Item item = Item.getItemFromBlock(block);
-		Minecraft.getMinecraft().getRenderItem().getItemModelMesher().register(item, 0, new ModelResourceLocation(//Reference.MOD_ID + ":" + item.getUnlocalizedName().substring(5)
-				block.getRegistryName().toString(), "inventory"));
+		Minecraft.getMinecraft().getRenderItem().getItemModelMesher().register(item, 0, new ModelResourceLocation(block.getRegistryName().toString(), "inventory"));
 	}
 	
 	public static void registerRender(Block block, int meta, String file) 
@@ -357,3 +231,140 @@ public final class InitBlocksEARender extends BlocksEA {
 		Minecraft.getMinecraft().getRenderItem().getItemModelMesher().register(Item.getItemFromBlock(block), meta, new ModelResourceLocation(Reference.MOD_ID + ":" + file, "inventory"));
 	}
 }
+
+/**
+ * Archived Code
+ */
+
+/**
+public static void preInit() 
+{
+	
+	ModelBakery.registerItemVariants(Item.getItemFromBlock(InitBlocksEA.cobble_mystic_block), 
+			new ResourceLocation(Reference.MOD_ID + ":gem/mystic/cobblestone/cobble_mystic_block_white"),
+			new ResourceLocation(Reference.MOD_ID + ":gem/mystic/cobblestone/cobble_mystic_block_orange"),
+			new ResourceLocation(Reference.MOD_ID + ":gem/mystic/cobblestone/cobble_mystic_block_magenta"),
+			new ResourceLocation(Reference.MOD_ID + ":gem/mystic/cobblestone/cobble_mystic_block_lightblue"),
+			new ResourceLocation(Reference.MOD_ID + ":gem/mystic/cobblestone/cobble_mystic_block_yellow"),
+			new ResourceLocation(Reference.MOD_ID + ":gem/mystic/cobblestone/cobble_mystic_block_lime"),
+			new ResourceLocation(Reference.MOD_ID + ":gem/mystic/cobblestone/cobble_mystic_block_pink"),
+			new ResourceLocation(Reference.MOD_ID + ":gem/mystic/cobblestone/cobble_mystic_block_gray"),
+			new ResourceLocation(Reference.MOD_ID + ":gem/mystic/cobblestone/cobble_mystic_block_lightgray"),
+			new ResourceLocation(Reference.MOD_ID + ":gem/mystic/cobblestone/cobble_mystic_block_cyan"),
+			new ResourceLocation(Reference.MOD_ID + ":gem/mystic/cobblestone/cobble_mystic_block_purple"),
+			new ResourceLocation(Reference.MOD_ID + ":gem/mystic/cobblestone/cobble_mystic_block_blue"),
+			new ResourceLocation(Reference.MOD_ID + ":gem/mystic/cobblestone/cobble_mystic_block_brown"),
+			new ResourceLocation(Reference.MOD_ID + ":gem/mystic/cobblestone/cobble_mystic_block_green"),
+			new ResourceLocation(Reference.MOD_ID + ":gem/mystic/cobblestone/cobble_mystic_block_red"),
+			new ResourceLocation(Reference.MOD_ID + ":gem/mystic/cobblestone/cobble_mystic_block_black"));
+			
+	
+	ModelBakery.registerItemVariants(Item.getItemFromBlock(InitBlocksEA.mystic_block), 
+			new ResourceLocation(Reference.MOD_ID + ":gem/mystic/stone/mystic_block_white"),
+			new ResourceLocation(Reference.MOD_ID + ":gem/mystic/stone/mystic_block_orange"),
+			new ResourceLocation(Reference.MOD_ID + ":gem/mystic/stone/mystic_block_magenta"),
+			new ResourceLocation(Reference.MOD_ID + ":gem/mystic/stone/mystic_block_lightblue"),
+			new ResourceLocation(Reference.MOD_ID + ":gem/mystic/stone/mystic_block_yellow"),
+			new ResourceLocation(Reference.MOD_ID + ":gem/mystic/stone/mystic_block_lime"),
+			new ResourceLocation(Reference.MOD_ID + ":gem/mystic/stone/mystic_block_pink"),
+			new ResourceLocation(Reference.MOD_ID + ":gem/mystic/stone/mystic_block_gray"),
+			new ResourceLocation(Reference.MOD_ID + ":gem/mystic/stone/mystic_block_lightgray"),
+			new ResourceLocation(Reference.MOD_ID + ":gem/mystic/stone/mystic_block_cyan"),
+			new ResourceLocation(Reference.MOD_ID + ":gem/mystic/stone/mystic_block_purple"),
+			new ResourceLocation(Reference.MOD_ID + ":gem/mystic/stone/mystic_block_blue"),
+			new ResourceLocation(Reference.MOD_ID + ":gem/mystic/stone/mystic_block_brown"),
+			new ResourceLocation(Reference.MOD_ID + ":gem/mystic/stone/mystic_block_green"),
+			new ResourceLocation(Reference.MOD_ID + ":gem/mystic/stone/mystic_block_red"),
+			new ResourceLocation(Reference.MOD_ID + ":gem/mystic/stone/mystic_block_black"));
+			
+	/**
+	ModelBakery.registerItemVariants(Item.getItemFromBlock(InitBlocksEA.wood_mystic_block), 
+			new ResourceLocation(Reference.MOD_ID + ":gem/mystic/wood/wood_mystic_block_white"),
+			new ResourceLocation(Reference.MOD_ID + ":gem/mystic/wood/wood_mystic_block_orange"),
+			new ResourceLocation(Reference.MOD_ID + ":gem/mystic/wood/wood_mystic_block_magenta"),
+			new ResourceLocation(Reference.MOD_ID + ":gem/mystic/wood/wood_mystic_block_lightblue"),
+			new ResourceLocation(Reference.MOD_ID + ":gem/mystic/wood/wood_mystic_block_yellow"),
+			new ResourceLocation(Reference.MOD_ID + ":gem/mystic/wood/wood_mystic_block_lime"),
+			new ResourceLocation(Reference.MOD_ID + ":gem/mystic/wood/wood_mystic_block_pink"),
+			new ResourceLocation(Reference.MOD_ID + ":gem/mystic/wood/wood_mystic_block_gray"),
+			new ResourceLocation(Reference.MOD_ID + ":gem/mystic/wood/wood_mystic_block_lightgray"),
+			new ResourceLocation(Reference.MOD_ID + ":gem/mystic/wood/wood_mystic_block_cyan"),
+			new ResourceLocation(Reference.MOD_ID + ":gem/mystic/wood/wood_mystic_block_purple"),
+			new ResourceLocation(Reference.MOD_ID + ":gem/mystic/wood/wood_mystic_block_blue"),
+			new ResourceLocation(Reference.MOD_ID + ":gem/mystic/wood/wood_mystic_block_brown"),
+			new ResourceLocation(Reference.MOD_ID + ":gem/mystic/wood/wood_mystic_block_green"),
+			new ResourceLocation(Reference.MOD_ID + ":gem/mystic/wood/wood_mystic_block_red"),
+			new ResourceLocation(Reference.MOD_ID + ":gem/mystic/wood/wood_mystic_block_black"));
+			
+	
+}
+**/
+
+
+//registerRender(cobble_mystic_block_normal);
+
+/**	registerRender(cobble_mystic_block);
+registerRender(InitBlocksEA.cobble_mystic_block, 0, "gem/mystic/cobblestone/cobble_mystic_block_white");
+registerRender(InitBlocksEA.cobble_mystic_block, 1, "gem/mystic/cobblestone/cobble_mystic_block_orange");
+registerRender(InitBlocksEA.cobble_mystic_block, 2, "gem/mystic/cobblestone/cobble_mystic_block_magenta");
+registerRender(InitBlocksEA.cobble_mystic_block, 3, "gem/mystic/cobblestone/cobble_mystic_block_lightblue");
+registerRender(InitBlocksEA.cobble_mystic_block, 4, "gem/mystic/cobblestone/cobble_mystic_block_yellow");
+registerRender(InitBlocksEA.cobble_mystic_block, 5, "gem/mystic/cobblestone/cobble_mystic_block_lime");
+registerRender(InitBlocksEA.cobble_mystic_block, 6, "gem/mystic/cobblestone/cobble_mystic_block_pink");
+registerRender(InitBlocksEA.cobble_mystic_block, 7, "gem/mystic/cobblestone/cobble_mystic_block_gray");
+registerRender(InitBlocksEA.cobble_mystic_block, 8, "gem/mystic/cobblestone/cobble_mystic_block_lightgray");
+registerRender(InitBlocksEA.cobble_mystic_block, 9, "gem/mystic/cobblestone/cobble_mystic_block_cyan");
+registerRender(InitBlocksEA.cobble_mystic_block, 10, "gem/mystic/cobblestone/cobble_mystic_block_purple");
+registerRender(InitBlocksEA.cobble_mystic_block, 11, "gem/mystic/cobblestone/cobble_mystic_block_blue");
+registerRender(InitBlocksEA.cobble_mystic_block, 12, "gem/mystic/cobblestone/cobble_mystic_block_brown");
+registerRender(InitBlocksEA.cobble_mystic_block, 13, "gem/mystic/cobblestone/cobble_mystic_block_green");
+registerRender(InitBlocksEA.cobble_mystic_block, 14, "gem/mystic/cobblestone/cobble_mystic_block_red");
+registerRender(InitBlocksEA.cobble_mystic_block, 15, "gem/mystic/cobblestone/cobble_mystic_block_black");
+**/		
+//registerRender(mystic_block_normal);
+/**		registerRender(mystic_block);
+registerRender(InitBlocksEA.mystic_block, 0, "gem/mystic/stone/mystic_block_white");
+registerRender(InitBlocksEA.mystic_block, 1, "gem/mystic/stone/mystic_block_orange");
+registerRender(InitBlocksEA.mystic_block, 2, "gem/mystic/stone/mystic_block_magenta");
+registerRender(InitBlocksEA.mystic_block, 3, "gem/mystic/stone/mystic_block_lightblue");
+registerRender(InitBlocksEA.mystic_block, 4, "gem/mystic/stone/mystic_block_yellow");
+registerRender(InitBlocksEA.mystic_block, 5, "gem/mystic/stone/mystic_block_lime");
+registerRender(InitBlocksEA.mystic_block, 6, "gem/mystic/stone/mystic_block_pink");
+registerRender(InitBlocksEA.mystic_block, 7, "gem/mystic/stone/mystic_block_gray");
+registerRender(InitBlocksEA.mystic_block, 8, "gem/mystic/stone/mystic_block_lightgray");
+registerRender(InitBlocksEA.mystic_block, 9, "gem/mystic/stone/mystic_block_cyan");
+registerRender(InitBlocksEA.mystic_block, 10, "gem/mystic/stone/mystic_block_purple");
+registerRender(InitBlocksEA.mystic_block, 11, "gem/mystic/stone/mystic_block_blue");
+registerRender(InitBlocksEA.mystic_block, 12, "gem/mystic/stone/mystic_block_brown");
+registerRender(InitBlocksEA.mystic_block, 13, "gem/mystic/stone/mystic_block_green");
+registerRender(InitBlocksEA.mystic_block, 14, "gem/mystic/stone/mystic_block_red");
+registerRender(InitBlocksEA.mystic_block, 15, "gem/mystic/stone/mystic_block_black");
+**/			
+
+
+/**
+registerRender(wood_mystic_block);
+registerRender(InitBlocksEA.wood_mystic_block, 0, "gem/mystic/wood/wood_mystic_block_white");
+registerRender(InitBlocksEA.wood_mystic_block, 1, "gem/mystic/wood/wood_mystic_block_orange");
+registerRender(InitBlocksEA.wood_mystic_block, 2, "gem/mystic/wood/wood_mystic_block_magenta");
+registerRender(InitBlocksEA.wood_mystic_block, 3, "gem/mystic/wood/wood_mystic_block_lightblue");
+registerRender(InitBlocksEA.wood_mystic_block, 4, "gem/mystic/wood/wood_mystic_block_yellow");
+registerRender(InitBlocksEA.wood_mystic_block, 5, "gem/mystic/wood/wood_mystic_block_lime");
+registerRender(InitBlocksEA.wood_mystic_block, 6, "gem/mystic/wood/wood_mystic_block_pink");
+registerRender(InitBlocksEA.wood_mystic_block, 7, "gem/mystic/wood/wood_mystic_block_gray");
+registerRender(InitBlocksEA.wood_mystic_block, 8, "gem/mystic/wood/wood_mystic_block_lightgray");
+registerRender(InitBlocksEA.wood_mystic_block, 9, "gem/mystic/wood/wood_mystic_block_cyan");
+registerRender(InitBlocksEA.wood_mystic_block, 10, "gem/mystic/wood/wood_mystic_block_purple");
+registerRender(InitBlocksEA.wood_mystic_block, 11, "gem/mystic/wood/wood_mystic_block_blue");
+registerRender(InitBlocksEA.wood_mystic_block, 12, "gem/mystic/wood/wood_mystic_block_brown");
+registerRender(InitBlocksEA.wood_mystic_block, 13, "gem/mystic/wood/wood_mystic_block_green");
+registerRender(InitBlocksEA.wood_mystic_block, 14, "gem/mystic/wood/wood_mystic_block_red");
+registerRender(InitBlocksEA.wood_mystic_block, 15, "gem/mystic/wood/wood_mystic_block_black");
+**/
+
+
+//registerRender(stainedClaySlabs);
+//registerRender(double_test_slab);
+//registerRender(test_slab);
+
+//registerRender(OmniTool);

@@ -120,6 +120,13 @@ public final class InitItemsEARender extends ItemsEA {
 						//.getUnlocalizedName().substring(5)
 						, "inventory"));
 	}
+}
+
+
+
+/**
+ * Archived Code
+ */
 	/**
 	//==========================================================
 	
@@ -168,4 +175,4 @@ public final class InitItemsEARender extends ItemsEA {
 		ModelLoader.setCustomModelResourceLocation(item, metadata, modelResourceLocation);
 	}
 	**/
-}
+
