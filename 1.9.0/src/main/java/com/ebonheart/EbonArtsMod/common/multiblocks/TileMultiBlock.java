@@ -3,9 +3,7 @@ package com.ebonheart.EbonArtsMod.common.multiblocks;
 import net.minecraft.nbt.NBTTagCompound;
 import net.minecraft.tileentity.TileEntity;
 
-public class TileMultiBlock extends TileEntity 
-{
-	
+public class TileMultiBlock extends TileEntity {
 	
 	private boolean hasMaster, isMaster;
     private int masterX, masterY, masterZ;

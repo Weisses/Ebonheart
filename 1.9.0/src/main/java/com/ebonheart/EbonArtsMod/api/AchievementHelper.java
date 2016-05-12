@@ -17,7 +17,6 @@ import net.minecraftforge.fml.common.gameevent.PlayerEvent;
 public class AchievementHelper extends Achievement {
 	
 	public static List<Achievement> achievements = Lists.<Achievement>newArrayList();
-	//List<Achievement> achievements = new ArrayList();
 	
 	public AchievementHelper(String name, int column, int row, ItemStack icon, Achievement parent) 
 	{

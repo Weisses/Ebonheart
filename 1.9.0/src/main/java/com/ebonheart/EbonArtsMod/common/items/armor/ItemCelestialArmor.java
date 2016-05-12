@@ -43,6 +43,7 @@ public class ItemCelestialArmor extends ItemArmor {
 	double playerPosX;
 	double playerPosY;
 	double playerPosZ;
+	
 	Random random = new Random();
 	
 	public ItemCelestialArmor(String unlocalizedName, int renderIndexIn, EntityEquipmentSlot equipmentSlotIn)
@@ -112,13 +113,8 @@ public class ItemCelestialArmor extends ItemArmor {
 									if (d <= 25)
 									{
 										
-										//playerPosX = player.getPositionVector().xCoord;
-										//playerPosY = player.getPositionVector().yCoord;
-										//playerPosZ = player.getPositionVector().zCoord;
-									
 										EbonArtsMod.proxy.generateFlightParticles(player);
-									
-										//world.spawnParticle(EnumParticleTypes.ENCHANTMENT_TABLE, playerPosX, playerPosY + 1D, playerPosZ, (double)((random.nextFloat() - 0.5F) * 0.2F), (double)((random.nextFloat() - 0.5F) * 0.2F), (double)((random.nextFloat() - 0.5F) * 0.2F), new int[0]);
+										
 									}
 									
 								}

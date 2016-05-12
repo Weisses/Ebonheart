@@ -6,18 +6,16 @@ import net.minecraft.item.Item;
 
 public class ItemHelper extends Item {
 
-	public ItemHelper(String itemName) {
+	public ItemHelper(String itemName) 
+	{
 		setItemName(this, itemName);
-		//setCreativeTab(EbonArtsMod.tabEbonArtsItems);
+		
 	}
 
-	/**
-	 * Set the registry name of {@code item} to {@code itemName} and the unlocalised name to the full registry name.
-	 *
-	 * @param item     The item
-	 * @param itemName The item's name
-	 */
-	public static void setItemName(Item item, String itemName) {
+	//Set the registry name of {@code block} to {@code blockName} 
+	//and the unlocalised name to the full registry name.
+	public static void setItemName(Item item, String itemName) 
+	{
 		item.setRegistryName(itemName);
 		item.setUnlocalizedName(item.getRegistryName().toString());
 		item.setCreativeTab(EbonArtsMod.tabEbonArtsItems);

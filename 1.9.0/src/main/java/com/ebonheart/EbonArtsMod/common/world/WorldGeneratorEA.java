@@ -103,10 +103,8 @@ public class WorldGeneratorEA implements IWorldGenerator
 	        int z = chunk_Z * 16 + rand.nextInt(16);
 	        generator.generate(world, rand, new BlockPos(x, y, z));
 	    }
+	    
 	}
-
-
-
 	
 }
 	

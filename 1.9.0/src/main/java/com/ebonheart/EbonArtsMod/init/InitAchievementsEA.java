@@ -101,12 +101,6 @@ public class InitAchievementsEA
 		vengeance_armor = new AchievementHelper(Reference.VENGEANCE_ARMOR, -1, -4, InitItemsEA.vengeance_chestplate, (Achievement)enchanted_ebonheart).setSpecial();//.func_180788_c();
 		celestial_armor = new AchievementHelper(Reference.CELESTIAL_ARMOR, 3, -4, InitItemsEA.celestial_chestplate, (Achievement)enchanted_ebonheart).setSpecial();//.func_180788_c();
 		
-	//mine_arcanite_ore = new Achievement("achievement.mine_arcanite_ore", "mine_arcanite_ore", -1, -1, InitItemsEA.arcanite, (Achievement)null).func_180788_c();
-	//smeltMysticDust = new Achievement("achievement.smeltMysticDust", "smeltMysticDust", -3, -1, EbonArtsBlocks.arcanite_ore, mineMysticDust).func_180788_c();
-	//craftEbonSigil = new Achievement("achievement.craftEbonSigil", "craftEbonSigil", -5, -2, EbonArtsBlocks.arcanite_ore, mineMysticDust).func_180788_c();
-	
-	//public static final Achievement dust = new Achievement(200, "Dusttt", 12, 0, Items.apple, null).registerAchievement().setIndependent();
-	
 	
 	
 	

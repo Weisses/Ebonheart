@@ -20,19 +20,13 @@ import net.minecraftforge.fml.relauncher.Side;
 import net.minecraftforge.fml.relauncher.SideOnly;
 
 @SideOnly(Side.CLIENT)
-public class EntitySprintFX extends EntitySpellParticleFX
-{
+public class EntitySprintFX extends EntitySpellParticleFX {
     
-
-    public EntitySprintFX(World parWorld,
+	public EntitySprintFX(World parWorld,
             double parX, double parY, double parZ,
             double parMotionX, double parMotionY, double parMotionZ) 
     {
         super(parWorld, parX, parY, parZ, parMotionX, parMotionY, parMotionZ);
-        //ResourceLocation test = new ResourceLocation(Reference.MOD_ID + ":particles/test.png");
-        //setParticleTextureIndex(65); // same as happy villager
-        //this.setParticleTexture(particleTexture);
-        //particleScale = 2.0F;
         setRBGColorF(0, 15, 25);
     }
     

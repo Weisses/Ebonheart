@@ -27,47 +27,29 @@ import com.ebonheart.EbonArtsMod.common.items.ItemHelper;
 import com.google.common.collect.ImmutableSet;
 
 public class ItemNecrosis extends ItemTool {
-
-	/**
-	 * The speed at which Cobwebs are harvested
-	 */
+	
 	private static final float DIG_SPEED_WEB = 15.0f;
-
-	/**
-	 * The speed at which Sword-effective {@link Material}s are harvested
-	 */
 	private static final float DIG_SPEED_SWORD = 1.5f;
-
-	/**
-	 * The speed at which blocks are harvested if this isn't their correct tool
-	 */
 	private static final float DIG_SPEED_DEFAULT = 1.0f;
-
-	/**
-	 * The base attack damage before the {@link net.minecraft.item.Item.ToolMaterial}'s attack damage is factored in
-	 */
 	private static final float BASE_DAMAGE = 3.0f;
-
-	/**
-	 * The attack speed
-	 */
 	private static final float ATTACK_SPEED = -2.4f;
-
-	public ItemNecrosis(ToolMaterial toolMaterial) {
+	
+	public ItemNecrosis(ToolMaterial toolMaterial) 
+	{
 		super(BASE_DAMAGE, ATTACK_SPEED, toolMaterial, Collections.emptySet());
-
 		ItemHelper.setItemName(this, "tool/necrosis");
-
+		
 		setHarvestLevel("axe", toolMaterial.getHarvestLevel());
+		setCreativeTab(EbonArtsMod.tabEbonArtsItems);
 		
 		// Waila Harvestability sets the harvest tool of Cobwebs to "sword"
 		setHarvestLevel("sword", toolMaterial.getHarvestLevel());
-
-		setCreativeTab(EbonArtsMod.tabEbonArtsItems);
+		
 	}
 	
 	@SideOnly(Side.CLIENT)
-    public void addInformation(ItemStack stack, EntityPlayer playerIn, List toolTip, boolean advanced) {
+    public void addInformation(ItemStack stack, EntityPlayer playerIn, List toolTip, boolean advanced) 
+	{
 		toolTip.add(TextFormatting.DARK_PURPLE + "\"Organic matter must yield");
 		toolTip.add(TextFormatting.DARK_PURPLE + "to darkness.\"");
 		toolTip.add(" ");
@@ -80,66 +62,46 @@ public class ItemNecrosis extends ItemTool {
     {
         return EnumRarity.EPIC;
     }
-
-	/**
-	 * The {@link Material}s that this tool is effective on.
-	 */
+	
 	private static final Set<Material> EFFECTIVE_MATERIALS = ImmutableSet.of(
 			
 			// Axe
 			Material.wood, Material.gourd, Material.plants, Material.vine
 			
 	);
-
-	/**
-	 * The {@link Material}s that Swords are effective on.
-	 */
+	
 	private static final Set<Material> SWORD_MATERIALS = ImmutableSet.of(
 			Material.plants, Material.vine, Material.coral, Material.leaves, Material.gourd
 	);
-
-	/**
-	 * Can this tool harvest the {@link IBlockState}?
-	 * <p>
-	 * This should only be used by {@link ForgeHooks#canHarvestBlock(Block, EntityPlayer, IBlockAccess, BlockPos)},
-	 * use the tool class/harvest level system where possible.
-	 *
-	 * @param state The IBlockState
-	 * @param stack The tool
-	 * @return Is this tool effective on the {@link IBlockState}'s {@link Material}?
-	 */
-	//@Override
-	//public boolean canHarvestBlock(IBlockState state, ItemStack stack) {
-	//	return EFFECTIVE_MATERIALS.contains(state.getMaterial()) || state.getBlock() == Blocks.web;
-	//}
-
+	
 	@Override
-	public float getStrVsBlock(ItemStack stack, IBlockState state) {
-		if (state.getBlock() == Blocks.web) {
+	public float getStrVsBlock(ItemStack stack, IBlockState state) 
+	{
+		if (state.getBlock() == Blocks.web) 
+		{
 			return DIG_SPEED_WEB;
 		}
 
-		for (String type : getToolClasses(stack)) {
+		for (String type : getToolClasses(stack)) 
+		{
 			if (state.getBlock().isToolEffective(type, state))
 				return efficiencyOnProperMaterial;
 		}
 
 		// Not all blocks have a harvest tool/level set, so we need to fall back to checking the Material like the vanilla tools do
-		if (EFFECTIVE_MATERIALS.contains(state.getMaterial())) {
+		if (EFFECTIVE_MATERIALS.contains(state.getMaterial())) 
+		{
 			return efficiencyOnProperMaterial;
 		}
 
-		if (SWORD_MATERIALS.contains(state.getMaterial())) {
+		if (SWORD_MATERIALS.contains(state.getMaterial())) 
+		{
 			return DIG_SPEED_SWORD;
 		}
 
 		return DIG_SPEED_DEFAULT;
 	}
-
 	
-	 /**
-     * Called when a Block is destroyed using this Item. Return true to trigger the "Use Item" statistic.
-     */
 	@Override
     public boolean onBlockDestroyed(ItemStack stack, World worldIn, IBlockState blockIn, BlockPos pos, EntityLivingBase entityLiving)
     {
@@ -147,26 +109,15 @@ public class ItemNecrosis extends ItemTool {
         Block block = blockIn.getBlock();
         return blockIn.getMaterial() != Material.leaves && block != Blocks.web && block != Blocks.tallgrass && block != Blocks.vine && block != Blocks.tripwire && block != Blocks.wool && !(blockIn instanceof net.minecraftforge.common.IShearable) ? super.onBlockDestroyed(stack, worldIn, blockIn, pos, entityLiving) : true;
     }
-
-    /**
-     * Check whether this Item can harvest the given Block
-     */
+	
     public boolean canHarvestBlock(IBlockState blockIn)
     {
         Block block = blockIn.getBlock();
         return block == Blocks.web || block == Blocks.redstone_wire || block == Blocks.tripwire;
     }
-
-    //public float getStrVsBlock(ItemStack stack, IBlockState state)
-    //{
-    //    Block block = state.getBlock();
-    //    return block != Blocks.web && state.getMaterial() != Material.leaves ? (block == Blocks.wool ? 5.0F : super.getStrVsBlock(stack, state)) : 15.0F;
-    //}
-
-
-    /**
-     * Returns true if the item can be used on the given entity, e.g. shears on sheep.
-     */
+    
+    
+    
     @Override
     public boolean itemInteractionForEntity(ItemStack itemstack, net.minecraft.entity.player.EntityPlayer player, EntityLivingBase entity, net.minecraft.util.EnumHand hand)
     {
@@ -233,8 +184,4 @@ public class ItemNecrosis extends ItemTool {
         return false;
     }
 	
-	
-	//public boolean hitEntity(ItemStack itemStack, EntityLivingBase target, EntityLivingBase attacker) {
-	//	itemStack.damageItem(1, attacker); // Only reduce the durability by 1 point (like swords do) instead of 2 (like tools do)
-	//	return true;
-	}
+}

@@ -18,7 +18,6 @@ public class EbonArtsTabBlocks extends CreativeTabs {
 		this.setBackgroundImageName("ebonarts.png");
 	}
 
-	
 	@Override
 	@SideOnly(Side.CLIENT)
 	public Item getTabIconItem() 

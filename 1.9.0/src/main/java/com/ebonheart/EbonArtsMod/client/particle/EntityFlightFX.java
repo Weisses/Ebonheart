@@ -21,6 +21,7 @@ import net.minecraftforge.fml.relauncher.SideOnly;
 
 @SideOnly(Side.CLIENT)
 public class EntityFlightFX extends EntityEnchantmentTableParticleFX {
+	
 	Random random = new Random();
 
     public EntityFlightFX(World parWorld,
@@ -29,14 +30,12 @@ public class EntityFlightFX extends EntityEnchantmentTableParticleFX {
     {
         super(parWorld, parX, parY, parZ, parMotionX, parMotionY, parMotionZ);
         
-        int d = random.nextInt(250) + 1;
+        int d1 = random.nextInt(150) + 1;
+        int d2 = random.nextInt(150) + 1;
+        int d3 = random.nextInt(150) + 1;
         
-        //ResourceLocation test = new ResourceLocation(Reference.MOD_ID + ":particles/test.png");
-        //setParticleTextureIndex(65); // same as happy villager
-        //this.setParticleTexture(particleTexture);
         particleScale = 0.5F;
-        
-        setRBGColorF(d, d, d);
+        setRBGColorF(d1, d2, d3);
         
     }
     

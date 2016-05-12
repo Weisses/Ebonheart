@@ -23,13 +23,6 @@ public class BlockMysticWoodGlass extends BlockMysticWood {
 	public BlockMysticWoodGlass(String unlocalizedName) 
 	{
 		super(unlocalizedName);
-		//super(Material.rock);
-		//BlockHelper.setBlockName(this, unlocalizedName);
-		
-		//this.setCreativeTab(EbonArtsMod.tabEbonArtsDyeables);
-		//this.setHarvestLevel("pickaxe", 2);
-		//this.setHardness(5.0F);
-		//this.setStepSound(stepSound.STONE);
 	}
 	
 	

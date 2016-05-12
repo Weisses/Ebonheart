@@ -47,6 +47,7 @@ public class ItemVengeanceArmor extends ItemArmor {
 	double playerPosX;
 	double playerPosY;
 	double playerPosZ;
+	
 	Random random = new Random();
 	
 	public ItemVengeanceArmor(String unlocalizedName, int renderIndexIn, EntityEquipmentSlot equipmentSlotIn)
@@ -105,30 +106,6 @@ public class ItemVengeanceArmor extends ItemArmor {
 				player.getEntityAttribute(SharedMonsterAttributes.ATTACK_DAMAGE).applyModifier(EAAttributeModifier.VENGEANCE_ATTACK_BONUS);
 			}
 			
-			if(player.capabilities.isCreativeMode)
-			{
-				
-				if(player.getEntityAttribute(SharedMonsterAttributes.MOVEMENT_SPEED).hasModifier(EAAttributeModifier.VENGEANCE_SPEED_BONUS))
-				{
-					player.getEntityAttribute(SharedMonsterAttributes.MOVEMENT_SPEED).removeModifier(EAAttributeModifier.VENGEANCE_SPEED_BONUS);
-				}
-				
-				if(player.getEntityAttribute(SharedMonsterAttributes.MAX_HEALTH).hasModifier(EAAttributeModifier.VENGEANCE_HP_BONUS))
-				{
-					player.getEntityAttribute(SharedMonsterAttributes.MAX_HEALTH).removeModifier(EAAttributeModifier.VENGEANCE_HP_BONUS);
-				}
-				
-				if(player.getEntityAttribute(SharedMonsterAttributes.ATTACK_DAMAGE).hasModifier(EAAttributeModifier.VENGEANCE_ATTACK_BONUS))
-				{
-					player.getEntityAttribute(SharedMonsterAttributes.ATTACK_DAMAGE).removeModifier(EAAttributeModifier.VENGEANCE_ATTACK_BONUS);
-				}
-				
-			}
-			
-			//LogHelper.info("held item: " + player.getHeldItem(EnumHand.MAIN_HAND).getMaxDamage());
-			
-			
-			
 			if(!EbonArtsConfiguration.armorParticle)
 			{
 				if(world.isRemote)
@@ -141,19 +118,11 @@ public class ItemVengeanceArmor extends ItemArmor {
 						
 						if (d <= 2)
 						{
-							
-							//playerPosX = player.getPositionVector().xCoord;
-							//playerPosY = player.getPositionVector().yCoord;
-							//playerPosZ = player.getPositionVector().zCoord;
-							
 							EbonArtsMod.proxy.generateUnholyParticles(player);
-							
 						}
 						
 					}
 					
-				
-			
 					//Blocking with shield
 					if (player.isHandActive())
 					{
@@ -178,24 +147,7 @@ public class ItemVengeanceArmor extends ItemArmor {
 			}
 			
 		}
-		else
-		{
-			
-			if(player.getEntityAttribute(SharedMonsterAttributes.MOVEMENT_SPEED).hasModifier(EAAttributeModifier.VENGEANCE_SPEED_BONUS))
-			{
-				player.getEntityAttribute(SharedMonsterAttributes.MOVEMENT_SPEED).removeModifier(EAAttributeModifier.VENGEANCE_SPEED_BONUS);
-			}
-			
-			if(player.getEntityAttribute(SharedMonsterAttributes.MAX_HEALTH).hasModifier(EAAttributeModifier.VENGEANCE_HP_BONUS))
-			{
-				player.getEntityAttribute(SharedMonsterAttributes.MAX_HEALTH).removeModifier(EAAttributeModifier.VENGEANCE_HP_BONUS);
-			}
-			
-			if(player.getEntityAttribute(SharedMonsterAttributes.ATTACK_DAMAGE).hasModifier(EAAttributeModifier.VENGEANCE_ATTACK_BONUS))
-			{
-				player.getEntityAttribute(SharedMonsterAttributes.ATTACK_DAMAGE).removeModifier(EAAttributeModifier.VENGEANCE_ATTACK_BONUS);
-			}
-			
-		}
+		
 	}
+	
 }

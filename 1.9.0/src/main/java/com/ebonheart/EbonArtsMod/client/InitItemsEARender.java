@@ -112,67 +112,7 @@ public final class InitItemsEARender extends ItemsEA {
 	
 	public static void registerRender(Item item)
 	{
-		Minecraft.getMinecraft().getRenderItem().getItemModelMesher().register(item, 0, new ModelResourceLocation
-				(//Reference.MOD_ID + ":" + 
-						item
-						//.getRegistryName()
-						.getRegistryName().toString()
-						//.getUnlocalizedName().substring(5)
-						, "inventory"));
+		Minecraft.getMinecraft().getRenderItem().getItemModelMesher().register(item, 0, new ModelResourceLocation(item.getRegistryName().toString(), "inventory"));
 	}
 }
-
-
-
-/**
- * Archived Code
- */
-	/**
-	//==========================================================
-	
-	private final static Set<Item> itemsRegistered = new HashSet<>();
-	
-	private static void registerItemModels() 
-	{
-		// Register items with custom model names first
-		//registerItemModel(ModItems.snowballLauncher, "minecraft:fishing_rod");
-		
-		
-		// Then register items with default model names
-		InitItemsEA.
-		//ModItems.
-		items.stream().filter(item -> !itemsRegistered.contains(item)).forEach(this::registerItemModel);
-	}
-		
-		
-	
-	
-	private void registerItemModel(Item item) {
-		registerItemModel(item, item.getRegistryName().toString());
-	}
-
-	private void registerItemModel(Item item, String modelLocation) {
-		final ModelResourceLocation fullModelLocation = new ModelResourceLocation(modelLocation, "inventory");
-		registerItemModel(item, fullModelLocation);
-	}
-
-	private void registerItemModel(Item item, ModelResourceLocation fullModelLocation) {
-		ModelBakery.registerItemVariants(item, fullModelLocation); // Ensure the custom model is loaded and prevent the default model from being loaded
-		registerItemModel(item, MeshDefinitionFix.create(stack -> fullModelLocation));
-	}
-
-	private void registerItemModel(Item item, ItemMeshDefinition meshDefinition) {
-		itemsRegistered.add(item);
-		ModelLoader.setCustomMeshDefinition(item, meshDefinition);
-	}
-
-	private void registerItemModelForMeta(Item item, int metadata, String variant) {
-		registerItemModelForMeta(item, metadata, new ModelResourceLocation(item.getRegistryName(), variant));
-	}
-
-	private void registerItemModelForMeta(Item item, int metadata, ModelResourceLocation modelResourceLocation) {
-		itemsRegistered.add(item);
-		ModelLoader.setCustomModelResourceLocation(item, metadata, modelResourceLocation);
-	}
-	**/
 

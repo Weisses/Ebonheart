@@ -34,7 +34,6 @@ public class EABlockDoor extends BlockDoor
     	super(Material.rock);
     	this.setUnlocalizedName(unlocalizedName);
         this.disableStats();
-        //this.block = block;
         this.setCreativeTab(EbonArtsMod.tabEbonArtsBlocks);
         this.setDefaultState(this.blockState.getBaseState().withProperty(FACING, EnumFacing.NORTH).withProperty(OPEN, Boolean.valueOf(false)).withProperty(HINGE, EABlockDoor.EnumHingePosition.LEFT).withProperty(POWERED, Boolean.valueOf(false)).withProperty(HALF, EABlockDoor.EnumDoorHalf.LOWER));
     }

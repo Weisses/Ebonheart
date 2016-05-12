@@ -38,9 +38,11 @@ import net.minecraftforge.fml.relauncher.SideOnly;
 public class ItemScalemailArmor extends ItemArmor {
 	
 	public static boolean isDoubleJumping;
+	
 	double playerPosX;
 	double playerPosY;
 	double playerPosZ;
+	
 	Random random = new Random();
 	
 	public ItemScalemailArmor(String unlocalizedName, int renderIndexIn, EntityEquipmentSlot equipmentSlotIn)
@@ -86,8 +88,6 @@ public class ItemScalemailArmor extends ItemArmor {
 				player.fallDistance = 0;
 			}
 			
-			//player.fallDistance = 0;
-			
 			if(player.onGround) 
 			{
 				isDoubleJumping = false;
@@ -114,11 +114,8 @@ public class ItemScalemailArmor extends ItemArmor {
 							if (d <= 25)
 							{
 								
+								world.spawnParticle(EnumParticleTypes.FIREWORKS_SPARK, playerPosX, playerPosY, playerPosZ, (double)((random.nextFloat() - 0.5F) * 0.2F), (double)((random.nextFloat() - 0.5F) * 0.2F), (double)((random.nextFloat() - 0.5F) * 0.2F), new int[0]);
 								
-								world.spawnParticle(EnumParticleTypes.FIREWORKS_SPARK
-									//.SPELL_WITCH
-									, playerPosX, playerPosY, playerPosZ, (double)((random.nextFloat() - 0.5F) * 0.2F), (double)((random.nextFloat() - 0.5F) * 0.2F), (double)((random.nextFloat() - 0.5F) * 0.2F), new int[0]);
-							
 							}
 							
 						}
@@ -132,11 +129,8 @@ public class ItemScalemailArmor extends ItemArmor {
 					
 					if(!player.onGround && !isDoubleJumping)
 					{
-						
 						isDoubleJumping = true;
-						
 						player.addVelocity(0, (-(player.motionY) + 0.6F), 0);
-						
 					}
 					
 				}
@@ -144,9 +138,7 @@ public class ItemScalemailArmor extends ItemArmor {
 			}
 			
 		}
-		else
-		{
-			
-		}
+		
 	}
+	
 }

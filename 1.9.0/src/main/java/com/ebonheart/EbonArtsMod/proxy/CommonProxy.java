@@ -64,5 +64,5 @@ public class CommonProxy {
 	
 	public void generateFlightParticles(Entity entity) { }
 	
-	
+	public void generateEnchEbonParticles(Entity entity) { }
 }

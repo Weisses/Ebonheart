@@ -13,8 +13,6 @@ import net.minecraftforge.fml.common.registry.GameRegistry;
 import net.minecraftforge.fml.relauncher.Side;
 import net.minecraftforge.fml.relauncher.SideOnly;
 
-
-
 public class SoundEventsEA {
     
     	public static SoundEvent island;
@@ -23,14 +21,12 @@ public class SoundEventsEA {
     	public static SoundEvent strength;
     	public static SoundEvent castle;
     	public static SoundEvent timescar;
-    	
     	public static SoundEvent lostwoods;
     	
     	
-    	/**
-    	 * Register the {@link SoundEvent}s.
-    	 */
-    	public static void registerSounds() {
+    	//Register the {@link SoundEvent}s.
+    	public static void registerSounds() 
+    	{
     		island = registerSound("record.glowing_disc");
     		dire = registerSound("record.shimmering_disc");
     		marble = registerSound("record.laminate_disc");
@@ -41,12 +37,6 @@ public class SoundEventsEA {
     		
     	}
 
-    	/**
-    	 * Register a {@link SoundEvent}.
-    	 *
-    	 * @param soundName The SoundEvent's name without the testmod3 prefix
-    	 * @return The SoundEvent
-    	 */
     	private static SoundEvent registerSound(String soundName) {
     		final ResourceLocation soundID = new ResourceLocation(Reference.MOD_ID, soundName);
     		return GameRegistry.register(new SoundEvent(soundID).setRegistryName(soundID));

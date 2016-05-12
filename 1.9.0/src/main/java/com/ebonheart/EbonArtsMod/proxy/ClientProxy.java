@@ -11,6 +11,7 @@ import com.ebonheart.EbonArtsMod.client.InitBlocksEARender;
 import com.ebonheart.EbonArtsMod.client.InitEntityEARender;
 import com.ebonheart.EbonArtsMod.client.InitItemsEARender;
 import com.ebonheart.EbonArtsMod.client.entity.EntityCandleFX;
+import com.ebonheart.EbonArtsMod.client.particle.EntityEnchEbonFX;
 import com.ebonheart.EbonArtsMod.client.particle.EntityFlightFX;
 import com.ebonheart.EbonArtsMod.client.particle.EntitySprintFX;
 import com.ebonheart.EbonArtsMod.client.particle.EntityUnholyFX;
@@ -52,6 +53,8 @@ public class ClientProxy extends CommonProxy {
 		super.postInit(event);
 		
 	}
+	
+	//=============================================================
 	
 	/**
 	 * Particles
@@ -115,6 +118,26 @@ public class ClientProxy extends CommonProxy {
 	          motionY, 
 	          motionZ);
 	    Minecraft.getMinecraft().effectRenderer.addEffect(particleFlight);        
+	}
+	
+	@Override
+	public void generateEnchEbonParticles(Entity theEntity)
+	{
+	    double motionX = theEntity.worldObj.rand.nextGaussian() * 0.02D;
+	    double motionY = theEntity.worldObj.rand.nextGaussian() * 0.02D;
+	    double motionZ = theEntity.worldObj.rand.nextGaussian() * 0.02D;
+	    EntityFX particleEnchEbon = new EntityEnchEbonFX(
+	          theEntity.worldObj, 
+	          theEntity.posX + theEntity.worldObj.rand.nextFloat() * theEntity.width 
+	                * 2.0F - theEntity.width, 
+	          theEntity.posY + 0.1D + theEntity.worldObj.rand.nextFloat() 
+	                * theEntity.height, 
+	          theEntity.posZ + theEntity.worldObj.rand.nextFloat() * theEntity.width 
+	                * 2.0F - theEntity.width, 
+	          motionX, 
+	          motionY, 
+	          motionZ);
+	    Minecraft.getMinecraft().effectRenderer.addEffect(particleEnchEbon);        
 	}
 	
 }

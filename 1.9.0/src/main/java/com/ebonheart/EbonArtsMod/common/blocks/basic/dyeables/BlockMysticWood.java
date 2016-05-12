@@ -35,11 +35,6 @@ public class BlockMysticWood extends BlockHorizontal {
         return false;
     }
 	
-    //public boolean canPlaceBlockAt(World worldIn, BlockPos pos)
-    //{
-    //    return worldIn.getBlockState(pos).getBlock().isReplaceable(worldIn, pos) && worldIn.getBlockState(pos.down()).isSideSolid(worldIn, pos, EnumFacing.UP);
-    //}
-    
     public IBlockState withRotation(IBlockState state, Rotation rot)
     {
         return state.withProperty(FACING, rot.rotate((EnumFacing)state.getValue(FACING)));

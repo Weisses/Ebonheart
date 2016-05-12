@@ -21,10 +21,6 @@ public class AchievementsEA {
 	@SubscribeEvent
 	public void onPickup(PlayerEvent.ItemPickupEvent event) 
 	{
-		//if(event.pickedUp.getEntityItem().isItemEqual(new ItemStack(InitItemsEA.ebon_tome)))
-		//{
-		//	event.player.triggerAchievement(InitAchievementsEA.alchemical_compendium);
-		//}
 		
 		if(event.pickedUp.getEntityItem().isItemEqual(new ItemStack(InitItemsEA.draconium_dust)))
 		{

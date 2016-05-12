@@ -45,13 +45,9 @@ import net.minecraftforge.fml.relauncher.SideOnly;
 //Arcanite
 public class ItemBurnishedArmor extends ItemArmor {
 	
-	int iPlayerPosX;
-	int iPlayerPosY;
-	int iPlayerPosZ;
-	
-	double playerPosX;
-	double playerPosY;
-	double playerPosZ;
+	int playerPosX;
+	int playerPosY;
+	int playerPosZ;
 	
 	Random random = new Random();
 	
@@ -98,14 +94,6 @@ public class ItemBurnishedArmor extends ItemArmor {
 				player.getEntityAttribute(SharedMonsterAttributes.MOVEMENT_SPEED).applyModifier(EAAttributeModifier.BURNISHED_SPEED_BONUS);
 			}
 			
-			//if(player.capabilities.isCreativeMode)
-			//{
-			//	if(player.getEntityAttribute(SharedMonsterAttributes.MOVEMENT_SPEED).hasModifier(EAAttributeModifier.BURNISHED_SPEED_BONUS))
-			//	{
-			//		player.getEntityAttribute(SharedMonsterAttributes.MOVEMENT_SPEED).removeModifier(EAAttributeModifier.BURNISHED_SPEED_BONUS);
-			//	}
-			//}
-			
 			if(player.isSprinting())
 			{
 				
@@ -120,25 +108,20 @@ public class ItemBurnishedArmor extends ItemArmor {
 					if(world.isRemote)
 					{
 						
-						iPlayerPosX = player.getPosition().getX();
-						iPlayerPosY = player.getPosition().getY();
-						iPlayerPosZ = player.getPosition().getZ();
-						//playerPosX = player.getPositionVector().xCoord;
-						//playerPosY = player.getPositionVector().yCoord;
-						//playerPosZ = player.getPositionVector().zCoord;
+						playerPosX = player.getPosition().getX();
+						playerPosY = player.getPosition().getY();
+						playerPosZ = player.getPosition().getZ();
 						
 						int d = random.nextInt(100) + 1;
 						
 						if (d <= 10)
 						{
 							EbonArtsMod.proxy.generateSprintParticles(player);
-							
-							//world.spawnParticle(EnumParticleTypes.CRIT_MAGIC, playerPosX, playerPosY + 1.5D, playerPosZ, (double)((random.nextFloat() - 0.5F) * 0.2F), (double)((random.nextFloat() - 0.5F) * 0.2F), (double)((random.nextFloat() - 0.5F) * 0.2F), new int[0]);
 						}
 						
 						if (d <= 50)
 						{
-							world.spawnParticle(EnumParticleTypes.CLOUD, iPlayerPosX, iPlayerPosY, iPlayerPosZ, (double)((random.nextFloat() - 0.5F) * 0.2F), (double)((random.nextFloat() - 0.5F) * 0.2F), (double)((random.nextFloat() - 0.5F) * 0.2F), new int[0]);
+							world.spawnParticle(EnumParticleTypes.CLOUD, playerPosX, playerPosY, playerPosZ, (double)((random.nextFloat() - 0.5F) * 0.2F), (double)((random.nextFloat() - 0.5F) * 0.2F), (double)((random.nextFloat() - 0.5F) * 0.2F), new int[0]);
 						}
 						
 					}
@@ -150,27 +133,11 @@ public class ItemBurnishedArmor extends ItemArmor {
 			{
 				player.setInvisible(false);
 			}
+			
 		}
-		//else
-		//{
-			
-		//	if(player.getEntityAttribute(SharedMonsterAttributes.MOVEMENT_SPEED).hasModifier(EAAttributeModifier.BURNISHED_SPEED_BONUS))
-		//	{
-		//		player.getEntityAttribute(SharedMonsterAttributes.MOVEMENT_SPEED).removeModifier(EAAttributeModifier.BURNISHED_SPEED_BONUS);
-		//	}
-			
-		//}
 		
 	}
 	
 	
-	/**
-	private void effectPlayer(EntityPlayer player, Potion potion, int strength, boolean showParticles) {
-	    //Always effect for 8 seconds, then refresh
-	    if (player.getActivePotionEffect(potion) == null || player.getActivePotionEffect(potion).getDuration() <= 1)
-	        player.addPotionEffect(new PotionEffect(potion
-	        		//.id
-	        		, 159, strength, true, showParticles));
-	}
-	**/
+	
 }
