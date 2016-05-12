@@ -100,45 +100,45 @@ public class ItemCelestialArmor extends ItemArmor {
 						
 						player.addVelocity(-(player.motionX * .1), -(player.motionY * .15), -(player.motionZ * .1));
 						
-						if(!EbonArtsConfiguration.armorParticle)
-						{
-							
-							if(world.isRemote)
-							{
-								
-								if(player.motionX != 0 || player.motionY != 0 || player.motionX != 0)
-								{
-									int d = random.nextInt(100) + 1;
-								
-									if (d <= 25)
-									{
-										
-										EbonArtsMod.proxy.generateFlightParticles(player);
-										
-									}
-									
-								}
-								
-							}
-							
-						}
-						
 					}
 					
 				}
 				
 			}
 			
+			if(!EbonArtsConfiguration.armorParticle)
+			{
+				if (world.isRemote)
+				{
+					if (player.capabilities.isFlying)
+					{
+						if(player.motionX != 0 || player.motionY != 0 || player.motionX != 0)
+						{
+							int d = random.nextInt(100) + 1;
+							
+							if (d <= 25)
+							{
+									
+								EbonArtsMod.proxy.generateFlightParticles(player);
+									
+							}
+								
+						}
+							
+					}
+						
+				}
+					
+			}
+				
 		}
 		else
 		{
-			
 			if (!player.capabilities.isCreativeMode)
 			{
 				player.capabilities.isFlying = false;
 				player.capabilities.allowFlying = false;
 			}
-			
 		}
 	}
 }
