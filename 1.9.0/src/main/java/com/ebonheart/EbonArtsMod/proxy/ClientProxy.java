@@ -18,6 +18,7 @@ import com.ebonheart.EbonArtsMod.client.particle.EntityUnholyFX;
 import com.ebonheart.EbonArtsMod.common.utils.SoundEventsEA;
 import com.ebonheart.EbonArtsMod.init.InitEntityEA;
 import com.ebonheart.EbonArtsMod.init.InitTileEntitiesEA;
+import com.ebonheart.EbonArtsMod.init.TestAchievement;
 
 public class ClientProxy extends CommonProxy {
 	

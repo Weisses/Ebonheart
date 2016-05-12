@@ -11,11 +11,15 @@ import net.minecraftforge.fml.common.gameevent.PlayerEvent;
 
 
 
+
+
 import com.ebonheart.EbonArtsMod.init.InitAchievementsEA;
 import com.ebonheart.EbonArtsMod.init.InitBlocksEA;
 import com.ebonheart.EbonArtsMod.init.InitItemsEA;
+import com.ebonheart.EbonArtsMod.init.TestAchievement;
+import com.ebonheart.EbonArtsMod.references.AchievementsEA;
 
-public class AchievementsEA {
+public class AchievementTriggersEA extends TestAchievement {
 
 	//Pickup an item achievement
 	@SubscribeEvent
@@ -24,37 +28,37 @@ public class AchievementsEA {
 		
 		if(event.pickedUp.getEntityItem().isItemEqual(new ItemStack(InitItemsEA.draconium_dust)))
 		{
-			event.player.addStat(InitAchievementsEA.mine_draconium_ore);//.triggerAchievement(InitAchievementsEA.mine_draconium_ore);
+			event.player.addStat(mine_draconium_ore);//.triggerAchievement(InitAchievementsEA.mine_draconium_ore);
 		}
 		
 		if(event.pickedUp.getEntityItem().isItemEqual(new ItemStack(InitItemsEA.velious)))
 		{
-			event.player.addStat(InitAchievementsEA.mine_velious_ore);//.triggerAchievement(InitAchievementsEA.mine_velious_ore);
+			event.player.addStat(mine_velious_ore);//.triggerAchievement(InitAchievementsEA.mine_velious_ore);
 		}
 		
 		if(event.pickedUp.getEntityItem().isItemEqual(new ItemStack(InitItemsEA.arcanite)))
 		{
-			event.player.addStat(InitAchievementsEA.mine_arcanite_ore);//.triggerAchievement(InitAchievementsEA.mine_arcanite_ore);
+			event.player.addStat(mine_arcanite_ore);//.triggerAchievement(InitAchievementsEA.mine_arcanite_ore);
 		}
 		
 		if(event.pickedUp.getEntityItem().isItemEqual(new ItemStack(InitItemsEA.katcheen)))
 		{
-			event.player.addStat(InitAchievementsEA.mine_katcheen_ore);//.triggerAchievement(InitAchievementsEA.mine_katcheen_ore);
+			event.player.addStat(mine_katcheen_ore);//.triggerAchievement(InitAchievementsEA.mine_katcheen_ore);
 		}
 		
 		if(event.pickedUp.getEntityItem().isItemEqual(new ItemStack(InitItemsEA.necrocite)))
 		{
-			event.player.addStat(InitAchievementsEA.mine_necrocite_ore);//.triggerAchievement(InitAchievementsEA.mine_necrocite_ore);
+			event.player.addStat(mine_necrocite_ore);//.triggerAchievement(InitAchievementsEA.mine_necrocite_ore);
 		}
 		
 		if(event.pickedUp.getEntityItem().isItemEqual(new ItemStack(InitItemsEA.soularite)))
 		{
-			event.player.addStat(InitAchievementsEA.mine_soularite_ore);//.triggerAchievement(InitAchievementsEA.mine_soularite_ore);
+			event.player.addStat(mine_soularite_ore);//.triggerAchievement(InitAchievementsEA.mine_soularite_ore);
 		}
 		
 		if(event.pickedUp.getEntityItem().isItemEqual(new ItemStack(InitItemsEA.ebonheart)))
 		{
-			event.player.addStat(InitAchievementsEA.ebonheart);//.triggerAchievement(InitAchievementsEA.ebonheart);
+			event.player.addStat(ebonheart);//.triggerAchievement(InitAchievementsEA.ebonheart);
 		}
 	}
 	
@@ -64,82 +68,82 @@ public class AchievementsEA {
 	{
 		if(event.crafting.getItem() == InitItemsEA.obsidian_shards) 
 		{
-			event.player.addStat(InitAchievementsEA.nether_bound);//.triggerAchievement(InitAchievementsEA.nether_bound);
+			event.player.addStat(nether_bound);//.triggerAchievement(InitAchievementsEA.nether_bound);
 		}
 		
 		if(event.crafting.getItem() == InitItemsEA.glowstone_shards) 
 		{
-			event.player.addStat(InitAchievementsEA.nether_doomed);//.triggerAchievement(InitAchievementsEA.nether_bound);
+			event.player.addStat(nether_doomed);//.triggerAchievement(InitAchievementsEA.nether_bound);
 		}
 		
 		if(event.crafting.getItem() == InitItemsEA.glowing_disc) 
 		{
-			event.player.addStat(InitAchievementsEA.glowing_disc);//.triggerAchievement(InitAchievementsEA.glowing_disc);
+			event.player.addStat(glowing_disc);//.triggerAchievement(InitAchievementsEA.glowing_disc);
 		}
 		
 		if(event.crafting.getItem() == InitItemsEA.shimmering_disc) 
 		{
-			event.player.addStat(InitAchievementsEA.shimmering_disc);//.triggerAchievement(InitAchievementsEA.shimmering_disc);
+			event.player.addStat(shimmering_disc);//.triggerAchievement(InitAchievementsEA.shimmering_disc);
 		}
 		
 		if(event.crafting.getItem() == InitItemsEA.laminate_disc) 
 		{
-			event.player.addStat(InitAchievementsEA.laminate_disc);//.triggerAchievement(InitAchievementsEA.laminate_disc);
+			event.player.addStat(laminate_disc);//.triggerAchievement(InitAchievementsEA.laminate_disc);
 		}
 		
 		if(event.crafting.getItem() == InitItemsEA.resilient_disc) 
 		{
-			event.player.addStat(InitAchievementsEA.resilient_disc);//.triggerAchievement(InitAchievementsEA.resilient_disc);
+			event.player.addStat(resilient_disc);//.triggerAchievement(InitAchievementsEA.resilient_disc);
 		}
 		
 		if(event.crafting.getItem() == InitItemsEA.dismal_disc) 
 		{
-			event.player.addStat(InitAchievementsEA.dismal_disc);//.triggerAchievement(InitAchievementsEA.dismal_disc);
+			event.player.addStat(dismal_disc);//.triggerAchievement(InitAchievementsEA.dismal_disc);
 		}
 		
 		if(event.crafting.getItem() == InitItemsEA.ethereal_disc) 
 		{
-			event.player.addStat(InitAchievementsEA.ethereal_disc);//.triggerAchievement(InitAchievementsEA.ethereal_disc);
+			event.player.addStat(ethereal_disc);//.triggerAchievement(InitAchievementsEA.ethereal_disc);
 		}
 		
 		if(event.crafting.getItem() == InitItemsEA.empowered_blade) 
 		{
-			event.player.addStat(InitAchievementsEA.empowered_blade);//.triggerAchievement(InitAchievementsEA.empowered_blade);
+			event.player.addStat(empowered_blade);//.triggerAchievement(InitAchievementsEA.empowered_blade);
 		}
 		
 		if(event.crafting.getItem() == InitItemsEA.deception) 
 		{
-			event.player.addStat(InitAchievementsEA.deception);//.triggerAchievement(InitAchievementsEA.deception);
+			event.player.addStat(deception);//.triggerAchievement(InitAchievementsEA.deception);
 		}
 		
 		if(event.crafting.getItem() == InitItemsEA.frostbite) 
 		{
-			event.player.addStat(InitAchievementsEA.frostbite);//.triggerAchievement(InitAchievementsEA.frostbite);
+			event.player.addStat(frostbite);//.triggerAchievement(InitAchievementsEA.frostbite);
 		}
 		
 		if(event.crafting.getItem() == InitItemsEA.massacre) 
 		{
-			event.player.addStat(InitAchievementsEA.massacre);//.triggerAchievement(InitAchievementsEA.massacre);
+			event.player.addStat(massacre);//.triggerAchievement(InitAchievementsEA.massacre);
 		}
 		
 		if(event.crafting.getItem() == InitItemsEA.blazefury) 
 		{
-			event.player.addStat(InitAchievementsEA.blazefury);//.triggerAchievement(InitAchievementsEA.blazefury);
+			event.player.addStat(blazefury);//.triggerAchievement(InitAchievementsEA.blazefury);
 		}
 		
 		if(event.crafting.getItem() == InitItemsEA.despair) 
 		{
-			event.player.addStat(InitAchievementsEA.despair);//.triggerAchievement(InitAchievementsEA.despair);
+			event.player.addStat(despair);//.triggerAchievement(InitAchievementsEA.despair);
 		}
 		
 		if(event.crafting.getItem() == InitItemsEA.souleater) 
 		{
-			event.player.addStat(InitAchievementsEA.souleater);//.triggerAchievement(InitAchievementsEA.souleater);
+			event.player.addStat(souleater);//.triggerAchievement(InitAchievementsEA.souleater);
 		}
 		
 		if(event.crafting.getItem() == InitItemsEA.enchanted_ebonheart) 
 		{
-			event.player.addStat(InitAchievementsEA.enchanted_ebonheart);//.triggerAchievement(InitAchievementsEA.enchanted_ebonheart);
+			event.player.addStat(enchanted_ebonheart);//.triggerAchievement(InitAchievementsEA.enchanted_ebonheart);
 		}
 		
 		if(event.crafting.getItem() == InitItemsEA.burnished_helmet
@@ -147,7 +151,7 @@ public class AchievementsEA {
 		|| event.crafting.getItem() == InitItemsEA.burnished_leggings
 		|| event.crafting.getItem() == InitItemsEA.burnished_boots) 
 		{
-			event.player.addStat(InitAchievementsEA.burnished_armor);
+			event.player.addStat(burnished_armor);
 		}
 		
 		if(event.crafting.getItem() == InitItemsEA.scalemail_helmet
@@ -155,7 +159,7 @@ public class AchievementsEA {
 		|| event.crafting.getItem() == InitItemsEA.scalemail_leggings
 		|| event.crafting.getItem() == InitItemsEA.scalemail_boots) 
 		{
-			event.player.addStat(InitAchievementsEA.scalemail_armor);
+			event.player.addStat(scalemail_armor);
 		}
 		
 		if(event.crafting.getItem() == InitItemsEA.vengeance_helmet
@@ -163,7 +167,7 @@ public class AchievementsEA {
 		|| event.crafting.getItem() == InitItemsEA.vengeance_leggings
 		|| event.crafting.getItem() == InitItemsEA.vengeance_boots) 
 		{
-			event.player.addStat(InitAchievementsEA.vengeance_armor);
+			event.player.addStat(vengeance_armor);
 		}
 		
 		if(event.crafting.getItem() == InitItemsEA.celestial_helmet
@@ -171,7 +175,17 @@ public class AchievementsEA {
 		|| event.crafting.getItem() == InitItemsEA.celestial_leggings
 		|| event.crafting.getItem() == InitItemsEA.celestial_boots) 
 		{
-			event.player.addStat(InitAchievementsEA.celestial_armor);
+			event.player.addStat(celestial_armor);
+		}
+		
+		if(event.crafting.getItem() == InitItemsEA.necrosis) 
+		{
+			event.player.addStat(necrosis);
+		}
+		
+		if(event.crafting.getItem() == InitItemsEA.consecration) 
+		{
+			event.player.addStat(consecration);
 		}
 		
 	}

@@ -35,13 +35,13 @@ public class ItemConsecration extends ItemTool {
 	private static final float BASE_DAMAGE = 3.0f;
 	private static final float ATTACK_SPEED = -2.4f;
 	
-	public ItemConsecration(ToolMaterial toolMaterial) 
+	public ItemConsecration(ToolMaterial material) 
 	{
-		super(BASE_DAMAGE, ATTACK_SPEED, toolMaterial, Collections.emptySet());
+		super(BASE_DAMAGE, ATTACK_SPEED, material, Collections.emptySet());
 		ItemHelper.setItemName(this, "tool/consecration");
 
-		setHarvestLevel("pickaxe", toolMaterial.getHarvestLevel());
-		setHarvestLevel("shovel", toolMaterial.getHarvestLevel());
+		setHarvestLevel("pickaxe", material.getHarvestLevel());
+		setHarvestLevel("shovel", material.getHarvestLevel());
 		setCreativeTab(EbonArtsMod.tabEbonArtsItems);
 	}
 	

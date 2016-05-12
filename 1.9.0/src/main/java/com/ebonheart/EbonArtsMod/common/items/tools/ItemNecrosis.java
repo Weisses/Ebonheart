@@ -34,16 +34,16 @@ public class ItemNecrosis extends ItemTool {
 	private static final float BASE_DAMAGE = 3.0f;
 	private static final float ATTACK_SPEED = -2.4f;
 	
-	public ItemNecrosis(ToolMaterial toolMaterial) 
+	public ItemNecrosis(ToolMaterial material) 
 	{
-		super(BASE_DAMAGE, ATTACK_SPEED, toolMaterial, Collections.emptySet());
+		super(BASE_DAMAGE, ATTACK_SPEED, material, Collections.emptySet());
 		ItemHelper.setItemName(this, "tool/necrosis");
 		
-		setHarvestLevel("axe", toolMaterial.getHarvestLevel());
+		setHarvestLevel("axe", material.getHarvestLevel());
 		setCreativeTab(EbonArtsMod.tabEbonArtsItems);
 		
 		// Waila Harvestability sets the harvest tool of Cobwebs to "sword"
-		setHarvestLevel("sword", toolMaterial.getHarvestLevel());
+		setHarvestLevel("sword", material.getHarvestLevel());
 		
 	}
 	

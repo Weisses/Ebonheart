@@ -65,7 +65,9 @@ public class InitItemsEA extends ItemsEA {
 	
 	public static final Item.ToolMaterial arcaniteToolMaterial = EnumHelper.addToolMaterial("arcaniteToolMaterial", 2, 315, 6.5F, 2.5F, 15);
 	public static final Item.ToolMaterial katcheenToolMaterial = EnumHelper.addToolMaterial("katcheenToolMaterial", 3, 1600, 8.5F, 4.0F, 20);
-	public static final Item.ToolMaterial legendaryToolMaterial = EnumHelper.addToolMaterial("legendaryToolMaterial", 3, 1661, 9.5F, 6.0F, 30);
+	public static final Item.ToolMaterial legendaryWeaponMaterial = EnumHelper.addToolMaterial("legendaryWeaponMaterial", 3, 1661, 9.5F, 6.0F, 30);
+	public static final Item.ToolMaterial legendaryToolMaterial = EnumHelper.addToolMaterial("legendaryToolMaterial", 4, 1000, 9.5F, 2.5F, 30);
+	
 	
 	public static void preInit()
 	{
@@ -138,19 +140,19 @@ public class InitItemsEA extends ItemsEA {
 		
 		
 		
-		deception = registerItem(new ItemDeception(legendaryToolMaterial));
-		frostbite = registerItem(new ItemFrostbite(legendaryToolMaterial));
-		massacre = registerItem(new ItemMassacre(legendaryToolMaterial));
-		blazefury = registerItem(new ItemBlazefury(legendaryToolMaterial));
-		despair = registerItem(new ItemDespair(legendaryToolMaterial));
-		souleater = registerItem(new ItemSouleater(legendaryToolMaterial));
+		deception = registerItem(new ItemDeception(legendaryWeaponMaterial));
+		frostbite = registerItem(new ItemFrostbite(legendaryWeaponMaterial));
+		massacre = registerItem(new ItemMassacre(legendaryWeaponMaterial));
+		blazefury = registerItem(new ItemBlazefury(legendaryWeaponMaterial));
+		despair = registerItem(new ItemDespair(legendaryWeaponMaterial));
+		souleater = registerItem(new ItemSouleater(legendaryWeaponMaterial));
 		
 		//test_shield = registerItem(new ItemTestShield());
 		//omniplex = new Omniplex().setUnlocalizedName("omniplex");
 		//banana = (ItemFood) new ItemFood(3, 0.3F, false).setUnlocalizedName("banana");
 		
-		consecration = registerItem(new ItemConsecration(Item.ToolMaterial.DIAMOND));
-		necrosis = registerItem(new ItemNecrosis(Item.ToolMaterial.DIAMOND));
+		consecration = registerItem(new ItemConsecration(legendaryToolMaterial));
+		necrosis = registerItem(new ItemNecrosis(legendaryToolMaterial));
 		
 	}
 	

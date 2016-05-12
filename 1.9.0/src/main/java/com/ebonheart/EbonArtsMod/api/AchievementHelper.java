@@ -23,6 +23,7 @@ public class AchievementHelper extends Achievement {
 		super("achievement.ea:" + name, "ea:" + name, column, row, icon, parent);
 		achievements.add(this);
 		registerStat();
+		
 	}
 
 	public AchievementHelper(String name, int x, int y, Item icon, Achievement parent) 
