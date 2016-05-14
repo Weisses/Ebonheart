@@ -5,11 +5,11 @@ import java.util.List;
 import java.util.Map;
 
 import com.ebonheart.EbonArtsMod.EbonArtsMod;
+import com.ebonheart.EbonArtsMod.api.Reference;
 import com.ebonheart.EbonArtsMod.common.items.ItemHelper;
 import com.ebonheart.EbonArtsMod.common.utils.LogHelper;
 import com.ebonheart.EbonArtsMod.common.utils.SoundEventsEA;
 import com.ebonheart.EbonArtsMod.init.InitItemsEA;
-import com.ebonheart.EbonArtsMod.references.Reference;
 import com.google.common.collect.Maps;
 
 import net.minecraft.block.BlockJukebox;

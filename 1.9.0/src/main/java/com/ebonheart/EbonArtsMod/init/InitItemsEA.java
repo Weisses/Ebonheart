@@ -14,6 +14,7 @@ import net.minecraftforge.common.util.EnumHelper;
 import net.minecraftforge.fml.common.registry.GameRegistry;
 
 import com.ebonheart.EbonArtsMod.EbonArtsMod;
+import com.ebonheart.EbonArtsMod.api.ItemsEA;
 import com.ebonheart.EbonArtsMod.common.items.MaterialHelper;
 import com.ebonheart.EbonArtsMod.common.items.armor.ItemBurnishedArmor;
 import com.ebonheart.EbonArtsMod.common.items.armor.ItemCelestialArmor;
@@ -55,8 +56,6 @@ import com.ebonheart.EbonArtsMod.common.items.tools.ItemNecrosis;
 import com.ebonheart.EbonArtsMod.common.items.tools.ItemSouleater;
 import com.ebonheart.EbonArtsMod.common.items.tools.ItemTestShield;
 import com.ebonheart.EbonArtsMod.common.utils.SoundEventsEA;
-import com.ebonheart.EbonArtsMod.references.ItemsEA;
-import com.ebonheart.EbonArtsMod.zzztest.Omniplex;
 
 //@SuppressWarnings("WeakerAccess")
 public class InitItemsEA extends ItemsEA {

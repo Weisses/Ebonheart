@@ -4,7 +4,7 @@ import net.minecraftforge.fml.common.FMLLog;
 
 import org.apache.logging.log4j.Level;
 
-import com.ebonheart.EbonArtsMod.references.Reference;
+import com.ebonheart.EbonArtsMod.api.Reference;
 
 public class LogHelper {
 	

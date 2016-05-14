@@ -12,13 +12,13 @@ import net.minecraftforge.fml.common.event.FMLPostInitializationEvent;
 import net.minecraftforge.fml.common.event.FMLPreInitializationEvent;
 import net.minecraftforge.fml.common.eventhandler.SubscribeEvent;
 
+import com.ebonheart.EbonArtsMod.api.Reference;
 import com.ebonheart.EbonArtsMod.common.utils.LogHelper;
 import com.ebonheart.EbonArtsMod.common.utils.creative.EbonArtsTabBlocks;
 import com.ebonheart.EbonArtsMod.common.utils.creative.EbonArtsTabDyeables;
 import com.ebonheart.EbonArtsMod.common.utils.creative.EbonArtsTabItems;
 import com.ebonheart.EbonArtsMod.configs.EbonArtsConfiguration;
 import com.ebonheart.EbonArtsMod.proxy.CommonProxy;
-import com.ebonheart.EbonArtsMod.references.Reference;
 
 @Mod(modid = Reference.MOD_ID, name = Reference.MOD_NAME, version = Reference.MOD_VERSION, guiFactory = Reference.CONFIG_GUI)
 public class EbonArtsMod {

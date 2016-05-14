@@ -3,9 +3,9 @@ package com.ebonheart.EbonArtsMod.client;
 import java.util.HashSet;
 import java.util.Set;
 
+import com.ebonheart.EbonArtsMod.api.ItemsEA;
+import com.ebonheart.EbonArtsMod.api.Reference;
 import com.ebonheart.EbonArtsMod.init.InitItemsEA;
-import com.ebonheart.EbonArtsMod.references.ItemsEA;
-import com.ebonheart.EbonArtsMod.references.Reference;
 
 import net.minecraft.client.Minecraft;
 import net.minecraft.client.renderer.ItemMeshDefinition;

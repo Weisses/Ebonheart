@@ -15,12 +15,11 @@ import com.ebonheart.EbonArtsMod.common.utils.SoundEventsEA;
 import com.ebonheart.EbonArtsMod.common.utils.gui.GuiHandler;
 import com.ebonheart.EbonArtsMod.common.world.WorldChestHooks;
 import com.ebonheart.EbonArtsMod.common.world.WorldGeneratorEA;
-import com.ebonheart.EbonArtsMod.init.InitAchievementsEA;
 import com.ebonheart.EbonArtsMod.init.InitBlocksEA;
 import com.ebonheart.EbonArtsMod.init.InitEntityEA;
 import com.ebonheart.EbonArtsMod.init.InitItemsEA;
 import com.ebonheart.EbonArtsMod.init.InitRecipesEA;
-import com.ebonheart.EbonArtsMod.init.TestAchievement;
+import com.ebonheart.EbonArtsMod.init.InitAchievementsEA;
 
 public class CommonProxy {
 	
@@ -32,7 +31,7 @@ public class CommonProxy {
 		InitBlocksEA.preInit();
 		InitBlocksEA.register();
 		InitEntityEA.preInit();
-		InitEntityEA.register();
+		InitEntityEA.preInit();
 		//InitAchievementsEA.init();
 		
 		//=======================================//
@@ -46,7 +45,7 @@ public class CommonProxy {
 		InitRecipesEA.initShapelessRecipe();
 		InitRecipesEA.initSmeltingRecipe();
 		
-		TestAchievement.init();
+		InitAchievementsEA.init();
 		
 		//WorldChestHooks.init();
 		

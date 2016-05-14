@@ -1,7 +1,7 @@
 package com.ebonheart.EbonArtsMod.common.utils;
 
-import com.ebonheart.EbonArtsMod.references.Reference;
-import com.ebonheart.EbonArtsMod.references.SoundsEA;
+import com.ebonheart.EbonArtsMod.api.Reference;
+import com.ebonheart.EbonArtsMod.api.SoundsEA;
 
 import net.minecraft.client.audio.SoundManager;
 import net.minecraft.init.Bootstrap;
@@ -13,15 +13,9 @@ import net.minecraftforge.fml.common.registry.GameRegistry;
 import net.minecraftforge.fml.relauncher.Side;
 import net.minecraftforge.fml.relauncher.SideOnly;
 
-public class SoundEventsEA {
+public class SoundEventsEA extends SoundsEA {
     
-    	public static SoundEvent island;
-    	public static SoundEvent dire;
-    	public static SoundEvent marble;
-    	public static SoundEvent strength;
-    	public static SoundEvent castle;
-    	public static SoundEvent timescar;
-    	public static SoundEvent lostwoods;
+    	
     	
     	
     	//Register the {@link SoundEvent}s.

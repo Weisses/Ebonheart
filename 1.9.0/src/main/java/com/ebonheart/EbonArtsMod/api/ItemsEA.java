@@ -1,4 +1,4 @@
-package com.ebonheart.EbonArtsMod.references;
+package com.ebonheart.EbonArtsMod.api;
 
 import com.ebonheart.EbonArtsMod.EbonArtsMod;
 
@@ -7,9 +7,6 @@ import net.minecraft.item.ItemFood;
 
 public class ItemsEA {
 	
-	//Items
-	//public static Item ebon_tome;
-	
 	public static Item draconium_dust;
 	public static Item velious;
 	public static Item arcanite;
@@ -17,14 +14,11 @@ public class ItemsEA {
 	public static Item necrocite;
 	public static Item soularite;
 	public static Item ebonheart;
-	
 	public static Item enchanted_ebonheart;
-	
 	public static Item obsidian_shards;
 	public static Item glowstone_shards;
 	
 	public static Item mirroring_disc;
-	
 	public static Item glowing_disc;
 	public static Item shimmering_disc;
 	public static Item laminate_disc;
@@ -32,11 +26,6 @@ public class ItemsEA {
 	public static Item dismal_disc;
 	public static Item ethereal_disc;
 	//public static Item chrono_disc;
-	
-	
-	
-	
-	
 	
 	public static Item burnished_helmet;
 	public static Item burnished_chestplate;
@@ -68,15 +57,10 @@ public class ItemsEA {
 	public static Item infernal_leggings;
 	public static Item infernal_boots;
 	
-	public static Item ebonheart_helmet;
-	public static Item ebonheart_chestplate;
-	public static Item ebonheart_leggings;
-	public static Item ebonheart_boots;
-	
-	//public static Item tier_1_catalyst;
-	//public static Item tier_2_catalyst;
-	//public static Item tier_3_catalyst;
-	//public static Item tier_4_catalyst;
+	//public static Item ebonheart_helmet;
+	//public static Item ebonheart_chestplate;
+	//public static Item ebonheart_leggings;
+	//public static Item ebonheart_boots;
 	
 	public static Item arcanite_pickaxe;
 	public static Item arcanite_axe;
@@ -101,10 +85,9 @@ public class ItemsEA {
 	public static Item massacre;
 	public static Item souleater;
 	
-	public static Item test_shield;
-	
-	//public static ItemFood banana;
 	public static ItemFood dragon_fruit;
+	
+	public static Item test_shield;
 	
 	//public static Item omniplex;
 	
@@ -124,7 +107,11 @@ public class ItemsEA {
 	//public static Item purified_mystic_dust;
 	
 	//public static Item mans_steak;
-	
-	public static Item OmniTool;
+	//public static Item ebon_tome;
+	//public static Item tier_1_catalyst;
+	//public static Item tier_2_catalyst;
+	//public static Item tier_3_catalyst;
+	//public static Item tier_4_catalyst;
+	//public static Item OmniTool;
 	
 }

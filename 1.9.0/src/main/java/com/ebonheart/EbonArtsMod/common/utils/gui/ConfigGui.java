@@ -8,10 +8,10 @@ import net.minecraftforge.common.config.Configuration;
 import net.minecraftforge.fml.client.config.GuiConfig;
 
 import com.ebonheart.EbonArtsMod.EbonArtsMod;
+import com.ebonheart.EbonArtsMod.api.Reference;
 import com.ebonheart.EbonArtsMod.client.InitItemsEARender;
 import com.ebonheart.EbonArtsMod.common.utils.LogHelper;
 import com.ebonheart.EbonArtsMod.init.InitRecipesEA;
-import com.ebonheart.EbonArtsMod.references.Reference;
 
 public class ConfigGui extends GuiConfig {
 

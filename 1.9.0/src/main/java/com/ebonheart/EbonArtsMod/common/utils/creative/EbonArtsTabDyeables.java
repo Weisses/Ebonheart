@@ -4,9 +4,9 @@ import net.minecraft.block.Block;
 import net.minecraft.creativetab.CreativeTabs;
 import net.minecraft.item.Item;
 
+import com.ebonheart.EbonArtsMod.api.BlocksEA;
 import com.ebonheart.EbonArtsMod.init.InitBlocksEA;
 import com.ebonheart.EbonArtsMod.init.InitItemsEA;
-import com.ebonheart.EbonArtsMod.references.BlocksEA;
 
 public class EbonArtsTabDyeables extends CreativeTabs {
 

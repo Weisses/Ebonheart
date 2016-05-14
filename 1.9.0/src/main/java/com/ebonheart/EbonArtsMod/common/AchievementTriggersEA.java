@@ -5,21 +5,15 @@ import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
 import net.minecraft.stats.Achievement;
 import net.minecraft.stats.AchievementList;
-//import net.minecraftforge.event.entity.player.PlayerEvent;
 import net.minecraftforge.fml.common.eventhandler.SubscribeEvent;
 import net.minecraftforge.fml.common.gameevent.PlayerEvent;
 
-
-
-
-
-import com.ebonheart.EbonArtsMod.init.InitAchievementsEA;
+import com.ebonheart.EbonArtsMod.api.AchievementsEA;
 import com.ebonheart.EbonArtsMod.init.InitBlocksEA;
 import com.ebonheart.EbonArtsMod.init.InitItemsEA;
-import com.ebonheart.EbonArtsMod.init.TestAchievement;
-import com.ebonheart.EbonArtsMod.references.AchievementsEA;
+import com.ebonheart.EbonArtsMod.init.InitAchievementsEA;
 
-public class AchievementTriggersEA extends TestAchievement {
+public class AchievementTriggersEA extends InitAchievementsEA {
 
 	//Pickup an item achievement
 	@SubscribeEvent

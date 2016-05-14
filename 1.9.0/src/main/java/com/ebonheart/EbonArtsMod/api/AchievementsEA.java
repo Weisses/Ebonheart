@@ -1,12 +1,9 @@
-package com.ebonheart.EbonArtsMod.references;
+package com.ebonheart.EbonArtsMod.api;
 
 import net.minecraft.stats.Achievement;
-import net.minecraftforge.common.AchievementPage;
 
 public class AchievementsEA {
 	
-	//Achievements
-	//public static Achievement alchemical_compendium;
 	public static Achievement mine_draconium_ore;
 	public static Achievement mine_velious_ore;
 	public static Achievement mine_arcanite_ore;

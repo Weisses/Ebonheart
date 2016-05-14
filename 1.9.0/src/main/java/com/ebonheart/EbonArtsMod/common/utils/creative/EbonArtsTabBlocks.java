@@ -6,9 +6,9 @@ import net.minecraft.item.Item;
 import net.minecraftforge.fml.relauncher.Side;
 import net.minecraftforge.fml.relauncher.SideOnly;
 
+import com.ebonheart.EbonArtsMod.api.BlocksEA;
 import com.ebonheart.EbonArtsMod.init.InitBlocksEA;
 import com.ebonheart.EbonArtsMod.init.InitItemsEA;
-import com.ebonheart.EbonArtsMod.references.BlocksEA;
 
 public class EbonArtsTabBlocks extends CreativeTabs {
 

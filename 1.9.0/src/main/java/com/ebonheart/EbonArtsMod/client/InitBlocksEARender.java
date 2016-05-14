@@ -10,11 +10,11 @@ import net.minecraft.item.Item;
 import net.minecraft.util.ResourceLocation;
 import net.minecraftforge.fml.client.registry.ClientRegistry;
 
-import com.ebonheart.EbonArtsMod.client.render.projectile.RenderEnchantedEbonheart;
+import com.ebonheart.EbonArtsMod.api.BlocksEA;
+import com.ebonheart.EbonArtsMod.api.Reference;
+import com.ebonheart.EbonArtsMod.client.projectile.RenderEnchantedEbonheart;
 import com.ebonheart.EbonArtsMod.common.entity.tile.TileEntityTutorial;
 import com.ebonheart.EbonArtsMod.init.InitBlocksEA;
-import com.ebonheart.EbonArtsMod.references.BlocksEA;
-import com.ebonheart.EbonArtsMod.references.Reference;
 
 public final class InitBlocksEARender extends BlocksEA {
 	

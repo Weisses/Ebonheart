@@ -1,5 +1,8 @@
 package com.ebonheart.EbonArtsMod.zzztest;
 
+import net.minecraft.util.math.BlockPos;
+import net.minecraft.world.World;
+
 /**
  * Archived Code
  */
@@ -735,6 +738,18 @@ registerRender(InitBlocksEA.wood_mystic_block, 15, "gem/mystic/wood/wood_mystic_
 	
 	
 	
-	
+//InitEntityEARender
+	/**
+	 * public static void registerParticle(World worldIn, BlockPos pos)
+	{
+		//double d0 = (double)pos.getX() + 0.5D;
+        //double d1 = (double)pos.getY() + 0.7D;
+        ////double d2 = (double)pos.getZ() + 0.5D;
+		//EntityFX candleFlame = new EntityCandleFX(worldIn, d0, d1, d2, 0.0D, 0.0D, 0.0D);
+		//Minecraft.getMinecraft().effectRenderer.addEffect(candleFlame);
+		
+		
+	}
+	 */
 
 }

@@ -2,8 +2,8 @@ package com.ebonheart.EbonArtsMod.client.particle;
 
 import java.util.Random;
 
+import com.ebonheart.EbonArtsMod.api.Reference;
 import com.ebonheart.EbonArtsMod.common.utils.LogHelper;
-import com.ebonheart.EbonArtsMod.references.Reference;
 
 import net.minecraft.client.particle.EntityAuraFX;
 import net.minecraft.client.particle.EntityEnchantmentTableParticleFX;

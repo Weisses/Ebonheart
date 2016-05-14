@@ -1,5 +1,6 @@
-package com.ebonheart.EbonArtsMod.client.render.projectile;
+package com.ebonheart.EbonArtsMod.client.projectile;
 
+import com.ebonheart.EbonArtsMod.api.Reference;
 import com.ebonheart.EbonArtsMod.common.entity.EntityEnchantedEbonheart;
 import com.ebonheart.EbonArtsMod.init.InitItemsEA;
 
@@ -24,12 +25,14 @@ import net.minecraftforge.fml.relauncher.SideOnly;
 @SideOnly(Side.CLIENT)
 public class RenderEnchantedEbonheart extends Render<EntityEnchantedEbonheart>
 {
+	
+	public static final ResourceLocation ENTITY_TEXTURE = new ResourceLocation(Reference.MOD_ID, "textures/items/gems/enchanted_ebonheart.png");
     private float scale;
-
-    public RenderEnchantedEbonheart(RenderManager renderManagerIn, float scaleIn)
+    
+    public RenderEnchantedEbonheart(RenderManager renderManagerIn)
     {
         super(renderManagerIn);
-        this.scale = scaleIn;
+        this.scale = 0.5f;
         
         this.shadowSize = 0.15F;
         this.shadowOpaque = 0.75F;
@@ -76,8 +79,10 @@ public class RenderEnchantedEbonheart extends Render<EntityEnchantedEbonheart>
     /**
      * Returns the location of an entity's texture. Doesn't seem to be called unless you call Render.bindEntityTexture.
      */
+    @Override
     protected ResourceLocation getEntityTexture(EntityEnchantedEbonheart entity)
     {
-        return TextureMap.locationBlocksTexture;
+        return //ENTITY_TEXTURE;
+        		TextureMap.locationBlocksTexture;
     }
 }

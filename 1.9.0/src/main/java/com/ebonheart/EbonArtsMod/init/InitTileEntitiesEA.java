@@ -11,8 +11,9 @@ import net.minecraftforge.fml.common.registry.GameRegistry;
 
 
 
+
+import com.ebonheart.EbonArtsMod.api.Reference;
 import com.ebonheart.EbonArtsMod.common.blocks.basic.storage.BlockPaper;
-import com.ebonheart.EbonArtsMod.references.Reference;
 
 
 

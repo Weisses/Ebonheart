@@ -3,7 +3,7 @@ package com.ebonheart.EbonArtsMod.common.items.resources;
 import java.util.List;
 
 import com.ebonheart.EbonArtsMod.EbonArtsMod;
-import com.ebonheart.EbonArtsMod.references.Reference;
+import com.ebonheart.EbonArtsMod.api.Reference;
 
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.item.EnumRarity;

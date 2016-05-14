@@ -18,6 +18,8 @@ import net.minecraft.util.IStringSerializable;
 import net.minecraftforge.fml.common.registry.GameRegistry;
 
 import com.ebonheart.EbonArtsMod.EbonArtsMod;
+import com.ebonheart.EbonArtsMod.api.BlocksEA;
+import com.ebonheart.EbonArtsMod.api.Reference;
 import com.ebonheart.EbonArtsMod.common.blocks.basic.EABlockFence;
 import com.ebonheart.EbonArtsMod.common.blocks.basic.EABlockFenceGate;
 import com.ebonheart.EbonArtsMod.common.blocks.basic.EABlockLadder;
@@ -97,13 +99,6 @@ import com.ebonheart.EbonArtsMod.common.blocks.world.BlockOreNecrocite;
 import com.ebonheart.EbonArtsMod.common.blocks.world.BlockOreSoularite;
 import com.ebonheart.EbonArtsMod.common.blocks.world.BlockOreVelious;
 import com.ebonheart.EbonArtsMod.common.utils.meta.ItemBlockMeta;
-import com.ebonheart.EbonArtsMod.references.BlocksEA;
-import com.ebonheart.EbonArtsMod.references.Reference;
-import com.ebonheart.EbonArtsMod.zzztest.BlockColouredSlab;
-import com.ebonheart.EbonArtsMod.zzztest.BlockDoubleSlabTest;
-import com.ebonheart.EbonArtsMod.zzztest.BlockHalfSlabTest;
-import com.ebonheart.EbonArtsMod.zzztest.BlockPurpurSlab;
-import com.ebonheart.EbonArtsMod.zzztest.BlockSlabTestMod3;
 import com.google.common.collect.ObjectArrays;
 
 public class InitBlocksEA extends BlocksEA {

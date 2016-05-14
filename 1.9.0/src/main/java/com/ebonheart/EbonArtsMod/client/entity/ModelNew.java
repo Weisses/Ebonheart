@@ -1,5 +1,5 @@
 
-package com.ebonheart.EbonArtsMod.client.models;
+package com.ebonheart.EbonArtsMod.client.entity;
 
 import net.minecraft.client.model.ModelBase;
 import net.minecraft.client.model.ModelRenderer;
