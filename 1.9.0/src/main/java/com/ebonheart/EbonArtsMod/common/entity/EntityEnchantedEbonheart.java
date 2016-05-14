@@ -53,6 +53,13 @@ public class EntityEnchantedEbonheart extends EntityThrowable {
      */
     protected void onImpact(RayTraceResult result)
     {
+    	if (this.worldObj.isRemote)
+    	{
+    		for (int ii = 0; ii < 6; ++ii)
+            {
+            	EbonArtsMod.proxy.generateEnchEbonParticles(this);
+            }
+    	}
         if (!this.worldObj.isRemote)
         {
             this.worldObj.playAuxSFX(2002, new BlockPos(this), 0);
@@ -64,10 +71,7 @@ public class EntityEnchantedEbonheart extends EntityThrowable {
                 i -= j;
                 this.worldObj.spawnEntityInWorld(new EntityXPOrb(this.worldObj, this.posX, this.posY, this.posZ, j));
                 
-                for (int ii = 0; ii < 6; ++ii)
-                {
-                	EbonArtsMod.proxy.generateEnchEbonParticles(this);
-                }
+                
                     
             }
 
