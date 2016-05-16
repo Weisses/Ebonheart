@@ -10,8 +10,8 @@ import net.minecraftforge.fml.common.registry.GameRegistry;
 
 import com.ebonheart.EbonArtsMod.EbonArtsMod;
 import com.ebonheart.EbonArtsMod.common.AchievementTriggersEA;
-import com.ebonheart.EbonArtsMod.common.utils.EventHandler;
 import com.ebonheart.EbonArtsMod.common.utils.SoundEventsEA;
+import com.ebonheart.EbonArtsMod.common.utils.events.ArmorBuffHandler;
 import com.ebonheart.EbonArtsMod.common.utils.gui.GuiHandler;
 import com.ebonheart.EbonArtsMod.common.world.WorldChestHooks;
 import com.ebonheart.EbonArtsMod.common.world.WorldGeneratorEA;
@@ -32,7 +32,7 @@ public class CommonProxy {
 		InitBlocksEA.register();
 		InitEntityEA.preInit();
 		InitEntityEA.preInit();
-		//InitAchievementsEA.init();
+		
 		
 		//=======================================//
 		//InitTileEntitiesEA.init();
@@ -44,14 +44,13 @@ public class CommonProxy {
 		InitRecipesEA.initShapedRecipe();
 		InitRecipesEA.initShapelessRecipe();
 		InitRecipesEA.initSmeltingRecipe();
-		
 		InitAchievementsEA.init();
 		
 		//WorldChestHooks.init();
 		
 		MinecraftForge.EVENT_BUS.register(new AchievementTriggersEA());
-		MinecraftForge.EVENT_BUS.register(new EventHandler());
-	     //FMLCommonHandler.instance().bus().register(new EventHandler());
+		MinecraftForge.EVENT_BUS.register(new ArmorBuffHandler());
+	    
 		
 		GameRegistry.registerWorldGenerator(new WorldGeneratorEA(), 0);
 		NetworkRegistry.INSTANCE.registerGuiHandler(EbonArtsMod.instance, new GuiHandler());

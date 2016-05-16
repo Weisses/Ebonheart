@@ -208,7 +208,7 @@ public final class InitBlocksEARender extends BlocksEA {
 		registerRender(leather_block);
 		registerRender(reed_block);
 		
-		
+		registerRender(dragon_fruit);
 		
 	}
 	

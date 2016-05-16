@@ -18,7 +18,7 @@ public class BlocksEA {
 	public static Block double_test_slab;
 	public static Block test_slab;
 	
-	
+	public static Block dragon_fruit;
 	//public static Block tutorialTileEntity;
 	
 	

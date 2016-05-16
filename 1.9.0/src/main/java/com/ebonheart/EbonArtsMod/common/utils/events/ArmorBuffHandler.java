@@ -1,4 +1,4 @@
-package com.ebonheart.EbonArtsMod.common.utils;
+package com.ebonheart.EbonArtsMod.common.utils.events;
 
 import com.ebonheart.EbonArtsMod.common.entity.modifiers.EAAttributeModifier;
 import com.ebonheart.EbonArtsMod.init.InitItemsEA;
@@ -11,7 +11,7 @@ import net.minecraft.item.ItemStack;
 import net.minecraftforge.fml.common.eventhandler.SubscribeEvent;
 import net.minecraftforge.fml.common.gameevent.TickEvent;
 
-public class EventHandler {
+public class ArmorBuffHandler {
 	
     @SubscribeEvent
     public void onPlayerTick(TickEvent.PlayerTickEvent event) 
@@ -67,7 +67,6 @@ public class EventHandler {
     			event.player.getEntityAttribute(SharedMonsterAttributes.MOVEMENT_SPEED).removeModifier(EAAttributeModifier.VENGEANCE_SPEED_BONUS);
     			event.player.getEntityAttribute(SharedMonsterAttributes.MAX_HEALTH).removeModifier(EAAttributeModifier.VENGEANCE_HP_BONUS);
     			event.player.getEntityAttribute(SharedMonsterAttributes.ATTACK_DAMAGE).removeModifier(EAAttributeModifier.VENGEANCE_ATTACK_BONUS);
-    			
     			//LogHelper.info("Vengeance buff removed!");
     			
     	    }
