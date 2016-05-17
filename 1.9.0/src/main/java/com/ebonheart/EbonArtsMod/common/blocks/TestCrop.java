@@ -1,5 +1,6 @@
 package com.ebonheart.EbonArtsMod.common.blocks;
 
+import com.ebonheart.EbonArtsMod.EbonArtsMod;
 import com.ebonheart.EbonArtsMod.init.InitItemsEA;
 
 import net.minecraft.block.BlockCrops;
@@ -17,6 +18,7 @@ public class TestCrop extends BlockCrops {
 	public TestCrop() 
 	{
 		BlockHelper.setBlockName(this, "dragon_fruit_crop");
+		setCreativeTab(null);
 	}
 	
 	protected Item getSeed()

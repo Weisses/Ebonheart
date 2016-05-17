@@ -3,6 +3,7 @@ package com.ebonheart.EbonArtsMod.init;
 import java.util.HashSet;
 import java.util.Set;
 
+import net.minecraft.init.Blocks;
 import net.minecraft.init.SoundEvents;
 import net.minecraft.inventory.EntityEquipmentSlot;
 import net.minecraft.item.Item;
@@ -115,7 +116,7 @@ public class InitItemsEA extends ItemsEA {
 		scalemail_leggings = registerItem(new ItemScalemailArmor("armor/scalemail_leggings", 0, EntityEquipmentSlot.LEGS));
 		scalemail_boots = registerItem(new ItemScalemailArmor("armor/scalemail_boots", 0, EntityEquipmentSlot.FEET));
 		
-		dragon_fruit = (ItemFood) registerItem(new ItemDragonFruit(6, 1.0F, true));
+		dragon_fruit = (ItemFood) registerItem(new ItemDragonFruit(3, 0.6F, InitBlocksEA.dragon_fruit, Blocks.sand));
 		
 		vengeance_helmet = registerItem(new ItemVengeanceArmor("armor/vengeance_helmet", 0, EntityEquipmentSlot.HEAD));
 		vengeance_chestplate = registerItem(new ItemVengeanceArmor("armor/vengeance_chestplate", 0, EntityEquipmentSlot.CHEST));
