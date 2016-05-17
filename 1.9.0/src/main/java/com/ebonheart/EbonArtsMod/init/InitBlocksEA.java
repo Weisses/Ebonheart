@@ -20,7 +20,8 @@ import net.minecraftforge.fml.common.registry.GameRegistry;
 import com.ebonheart.EbonArtsMod.EbonArtsMod;
 import com.ebonheart.EbonArtsMod.api.BlocksEA;
 import com.ebonheart.EbonArtsMod.api.Reference;
-import com.ebonheart.EbonArtsMod.common.blocks.TestCrop;
+import com.ebonheart.EbonArtsMod.common.blocks.DragonFruitCrop;
+import com.ebonheart.EbonArtsMod.common.blocks.EACrop;
 import com.ebonheart.EbonArtsMod.common.blocks.basic.EABlockFence;
 import com.ebonheart.EbonArtsMod.common.blocks.basic.EABlockFenceGate;
 import com.ebonheart.EbonArtsMod.common.blocks.basic.EABlockLadder;
@@ -324,7 +325,7 @@ public class InitBlocksEA extends BlocksEA {
 		//registerBlock(204, "purpur_double_slab", (new BlockPurpurSlab.Double()).setHardness(2.0F).setResistance(10.0F).setStepSound(SoundType.STONE).setUnlocalizedName("purpurSlab"));
         //registerBlock(205, "purpur_slab", (new BlockPurpurSlab.Half()).setHardness(2.0F).setResistance(10.0F).setStepSound(SoundType.STONE).setUnlocalizedName("purpurSlab"));
         
-		dragon_fruit = registerBlock(new TestCrop());
+		dragon_fruit = registerBlock(new DragonFruitCrop());
 		
 	}
 	
