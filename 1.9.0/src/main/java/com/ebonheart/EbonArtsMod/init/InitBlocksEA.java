@@ -324,6 +324,7 @@ public class InitBlocksEA extends BlocksEA {
 		//registerBlock(204, "purpur_double_slab", (new BlockPurpurSlab.Double()).setHardness(2.0F).setResistance(10.0F).setStepSound(SoundType.STONE).setUnlocalizedName("purpurSlab"));
         //registerBlock(205, "purpur_slab", (new BlockPurpurSlab.Half()).setHardness(2.0F).setResistance(10.0F).setStepSound(SoundType.STONE).setUnlocalizedName("purpurSlab"));
         
+		coldfire_fruit = registerBlock(new DragonFruitCrop());
 		dragon_fruit = registerBlock(new DragonFruitCrop());
 		
 	}

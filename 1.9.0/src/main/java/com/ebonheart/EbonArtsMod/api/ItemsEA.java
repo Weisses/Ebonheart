@@ -85,9 +85,25 @@ public class ItemsEA {
 	public static Item massacre;
 	public static Item souleater;
 	
+	public static ItemFood wrathful_fruit;
 	public static ItemFood dragon_fruit;
 	
 	public static Item test_shield;
+	
+	//Pandemic
+	//Bloodcoil
+	//Underworld
+	//Soulrot
+	//Nightshade
+	//Painbringer
+	//Malice
+	//Soulrend
+	//Blasphemy
+	//Harbinger
+	//Sacrament
+	
+	
+	
 	
 	//public static Item omniplex;
 	

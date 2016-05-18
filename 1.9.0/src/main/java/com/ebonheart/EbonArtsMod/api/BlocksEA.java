@@ -14,24 +14,6 @@ public class BlocksEA {
 	public static Block ebon_ore;
 	public static Block ebon_ore_nether;
 	
-	
-	public static Block double_test_slab;
-	public static Block test_slab;
-	
-	public static Block dragon_fruit;
-	//public static Block tutorialTileEntity;
-	
-	
-	//public static Block onyxius_ore;
-	//public static Block carnelian_ore;
-	//public static Block velium_ore;
-	//public static Block amplimet_ore;
-	//public static Block enstatite_ore;
-	//public static Block velium_ore;
-	//public static Block infernus_ore;
-	//public static Block norn_stone;
-	//public static Block mystalite_ore;
-	
 	public static Block draconium_block;
 	public static Block velious_block;
 	public static Block arcanite_block;
@@ -213,6 +195,10 @@ public class BlocksEA {
 	public static Block leather_block;
 	public static Block reed_block;
 	
+	public static Block coldfire_fruit;
+	public static Block dragon_fruit;
+	
+	
 	
 	//public static Block purified_mystic_block;
 	
@@ -224,4 +210,20 @@ public class BlocksEA {
 	
 	//public static Block color_atrium;
 	//public static Block lit_color_atrium;
+
+	//public static Block double_test_slab;
+	//public static Block test_slab;
+	
+	//public static Block tutorialTileEntity;
+	
+	//public static Block onyxius_ore;
+	//public static Block carnelian_ore;
+	//public static Block velium_ore;
+	//public static Block amplimet_ore;
+	//public static Block enstatite_ore;
+	//public static Block velium_ore;
+	//public static Block infernus_ore;
+	//public static Block norn_stone;
+	//public static Block mystalite_ore;
+	
 }
