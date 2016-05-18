@@ -1,5 +1,6 @@
-package com.ebonheart.EbonArtsMod.common.blocks;
+package com.ebonheart.EbonArtsMod.common.blocks.world;
 
+import com.ebonheart.EbonArtsMod.common.blocks.BlockHelper;
 import com.ebonheart.EbonArtsMod.init.InitItemsEA;
 
 import net.minecraft.block.BlockCrops;

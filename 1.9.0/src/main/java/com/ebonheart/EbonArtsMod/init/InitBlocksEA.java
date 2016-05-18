@@ -20,8 +20,6 @@ import net.minecraftforge.fml.common.registry.GameRegistry;
 import com.ebonheart.EbonArtsMod.EbonArtsMod;
 import com.ebonheart.EbonArtsMod.api.BlocksEA;
 import com.ebonheart.EbonArtsMod.api.Reference;
-import com.ebonheart.EbonArtsMod.common.blocks.DragonFruitCrop;
-import com.ebonheart.EbonArtsMod.common.blocks.EACrop;
 import com.ebonheart.EbonArtsMod.common.blocks.basic.EABlockFence;
 import com.ebonheart.EbonArtsMod.common.blocks.basic.EABlockFenceGate;
 import com.ebonheart.EbonArtsMod.common.blocks.basic.EABlockLadder;
@@ -100,6 +98,7 @@ import com.ebonheart.EbonArtsMod.common.blocks.world.BlockOreKatcheen;
 import com.ebonheart.EbonArtsMod.common.blocks.world.BlockOreNecrocite;
 import com.ebonheart.EbonArtsMod.common.blocks.world.BlockOreSoularite;
 import com.ebonheart.EbonArtsMod.common.blocks.world.BlockOreVelious;
+import com.ebonheart.EbonArtsMod.common.blocks.world.DragonFruitCrop;
 import com.ebonheart.EbonArtsMod.common.utils.meta.ItemBlockMeta;
 import com.google.common.collect.ObjectArrays;
 
