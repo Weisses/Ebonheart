@@ -1,6 +1,6 @@
 {
     "parent": "block/crop",
     "textures": {
-        "crop": "ea:blocks/carrots_stage_3"
+        "crop": "ea:blocks/plants/sacredfruit_stage_3"
     }
 }

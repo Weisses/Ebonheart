@@ -1,6 +1,6 @@
 {
     "parent": "block/crop",
     "textures": {
-        "crop": "ea:blocks/carrots_stage_2"
+        "crop": "ea:blocks/plants/dragonfruit_stage_1"
     }
 }

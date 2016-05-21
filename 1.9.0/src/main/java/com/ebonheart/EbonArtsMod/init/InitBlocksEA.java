@@ -99,6 +99,8 @@ import com.ebonheart.EbonArtsMod.common.blocks.world.BlockOreNecrocite;
 import com.ebonheart.EbonArtsMod.common.blocks.world.BlockOreSoularite;
 import com.ebonheart.EbonArtsMod.common.blocks.world.BlockOreVelious;
 import com.ebonheart.EbonArtsMod.common.blocks.world.DragonFruitCrop;
+import com.ebonheart.EbonArtsMod.common.blocks.world.HellionFruitCrop;
+import com.ebonheart.EbonArtsMod.common.blocks.world.SacredFruitCrop;
 import com.ebonheart.EbonArtsMod.common.utils.meta.ItemBlockMeta;
 import com.google.common.collect.ObjectArrays;
 
@@ -324,7 +326,8 @@ public class InitBlocksEA extends BlocksEA {
 		//registerBlock(204, "purpur_double_slab", (new BlockPurpurSlab.Double()).setHardness(2.0F).setResistance(10.0F).setStepSound(SoundType.STONE).setUnlocalizedName("purpurSlab"));
         //registerBlock(205, "purpur_slab", (new BlockPurpurSlab.Half()).setHardness(2.0F).setResistance(10.0F).setStepSound(SoundType.STONE).setUnlocalizedName("purpurSlab"));
         
-		coldfire_fruit = registerBlock(new DragonFruitCrop());
+		hellion_fruit = registerBlock(new HellionFruitCrop());
+		sacred_fruit = registerBlock(new SacredFruitCrop());
 		dragon_fruit = registerBlock(new DragonFruitCrop());
 		
 	}

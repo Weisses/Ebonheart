@@ -26,38 +26,21 @@ import net.minecraftforge.common.IPlantable;
 import net.minecraftforge.fml.relauncher.Side;
 import net.minecraftforge.fml.relauncher.SideOnly;
 
-public class ItemDragonFruit extends ItemFood implements IPlantable {
+public class ItemSacredFruit extends ItemFood implements IPlantable {
 	
-	//private Block crop;
-    /** Block ID of the soil this seed food should be planted on. */
-    //private Block soilId;
-	
-	public ItemDragonFruit(int healAmount, float saturation
-			//,
-			//Block crops, 
-			//Block soil
-			) 
+	public ItemSacredFruit(int healAmount, float saturation) 
 	{
 		super(healAmount, saturation, false);
-		ItemHelper.setItemName(this, "plant/dragon_fruit");
-		
-		
-        //this.crop = crops;
-        //this.soilId = soil;
+		ItemHelper.setItemName(this, "plant/sacred_fruit");
 		
 	}
-	/**
-     * Called when a Block is right-clicked with this Item
-     */
+	
     public EnumActionResult onItemUse(ItemStack stack, EntityPlayer playerIn, World worldIn, BlockPos pos, EnumHand hand, EnumFacing facing, float hitX, float hitY, float hitZ)
     {
         net.minecraft.block.state.IBlockState state = worldIn.getBlockState(pos);
         if (facing == EnumFacing.UP && playerIn.canPlayerEdit(pos.offset(facing), facing, stack) && state.getBlock().canSustainPlant(state, worldIn, pos, EnumFacing.UP, this) && worldIn.isAirBlock(pos.up()))
         {
-            worldIn.setBlockState(pos.up(), //this.crop.
-            		InitBlocksEA.dragon_fruit.
-            		getDefaultState() 
-            		,11);
+            worldIn.setBlockState(pos.up(), InitBlocksEA.sacred_fruit.getDefaultState(), 11);
             --stack.stackSize;
             return EnumActionResult.SUCCESS;
         }
@@ -76,8 +59,7 @@ public class ItemDragonFruit extends ItemFood implements IPlantable {
 	@Override
 	public IBlockState getPlant(IBlockAccess world, BlockPos pos)
 	{
-	    //return this.crop.getDefaultState();
-		return InitBlocksEA.dragon_fruit.getDefaultState();
+		return InitBlocksEA.sacred_fruit.getDefaultState();
 	}
 	
 	
@@ -88,7 +70,7 @@ public class ItemDragonFruit extends ItemFood implements IPlantable {
     @SideOnly(Side.CLIENT)
     public void addInformation(ItemStack stack, EntityPlayer playerIn, List toolTip, boolean advanced) 
 	{
-		toolTip.add(TextFormatting.GOLD + "An ancient fruit that");
+		toolTip.add(TextFormatting.GOLD + "A sacred fruit that");
 		toolTip.add(TextFormatting.GOLD + "makes a healthy meal.");
 	}
 	

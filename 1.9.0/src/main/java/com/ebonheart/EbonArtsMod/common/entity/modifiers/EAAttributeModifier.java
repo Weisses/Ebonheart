@@ -24,6 +24,7 @@ public class EAAttributeModifier {
 	public static AttributeModifier CELESTIAL_SPEED_BONUS = new AttributeModifier(UUID.fromString("d607b1a8-a17e-4ffd-b346-0d5f00000401"), "Celestial Speed Boost", 0.00, 2);
 	public static AttributeModifier CELESTIAL_FLY_BONUS = new AttributeModifier(UUID.fromString("d607b1a8-a17e-4ffd-b346-0d5f00000402"), "Celestial Fly Speed Boost", 0.00, 2);
 	
+	public static AttributeModifier HELLIONFRUIT_BONUS = new AttributeModifier(UUID.fromString("d607b1a8-a17e-4ffd-b346-0d5f00000402"), "Hellion Fruit Boost", 0.00, 2);
 	
 	/**
 	 * 

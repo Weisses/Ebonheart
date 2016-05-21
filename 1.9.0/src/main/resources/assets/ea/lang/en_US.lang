@@ -17,7 +17,9 @@ item.ea:gem/enchanted_ebonheart.name=Enchanted Ebonheart
 item.ea:gem/obsidian_shard.name=Obsidian Shard
 item.ea:gem/glowstone_shard.name=Glowstone Shard
 item.ea:tool/empowered_blade.name=Empowered Blade
-item.ea:dragon_fruit.name=Dragon Fruit
+item.ea:plant/hellion_fruit.name=Hellion Fruit
+item.ea:plant/sacred_fruit.name=Sacred Fruit
+item.ea:plant/dragon_fruit.name=Dragon Fruit
 
 item.ea:disc/glowing_disc.name=Glowing Disc
 item.ea:disc/shimmering_disc.name=Shimmering Disc
@@ -39,6 +41,9 @@ tile.ea:ore/ebonheart_ore.name=Ebonheart Ore
 tile.ea:ore/ebon_ore_nether.name=Ebon Ore
 
 //-----Blocks-----
+tile.ea:plant/hellion_fruit_crop.name=Hellion Fruit Plant
+tile.ea:plant/sacred_fruit_crop.name=Sacred Fruit Plant
+tile.ea:plant/dragon_fruit_crop.name=Dragon Fruit Plant
 tile.ea:gem/mystic/stone/mystic_block_normal.name=Mystic Stone
 tile.ea:gem/mystic/stone/mystic_block_white.name=White Mystic Stone
 tile.ea:gem/mystic/stone/mystic_block_orange.name=Orange Mystic Stone

@@ -28,7 +28,6 @@ public final class InitItemsEARender extends ItemsEA {
 		registerRender(ebonheart);
 		
 		registerRender(enchanted_ebonheart);
-		
 		registerRender(empowered_blade);
 		
 		registerRender(glowing_disc);
@@ -37,9 +36,6 @@ public final class InitItemsEARender extends ItemsEA {
 		registerRender(resilient_disc);
 		registerRender(dismal_disc);
 		registerRender(ethereal_disc);
-		
-		
-		
 		registerRender(mirroring_disc);
 		
 		registerRender(burnished_helmet);
@@ -78,9 +74,6 @@ public final class InitItemsEARender extends ItemsEA {
 		registerRender(arcanite_hoe);
 		registerRender(arcanite_sword);
 		
-		
-		
-		
 		registerRender(katcheen_pickaxe);
 		registerRender(katcheen_axe);
 		registerRender(katcheen_shovel);
@@ -97,13 +90,13 @@ public final class InitItemsEARender extends ItemsEA {
 		registerRender(despair);
 		registerRender(souleater);
 		
-		
-		
 		registerRender(obsidian_shards);
 		registerRender(glowstone_shards);
 		
-		//registerRender(omniplex);
-		//registerRender(banana);
+		
+		
+		registerRender(hellion_fruit);
+		registerRender(sacred_fruit);
 		registerRender(dragon_fruit);
 		
 		//registerRender(test_shield);

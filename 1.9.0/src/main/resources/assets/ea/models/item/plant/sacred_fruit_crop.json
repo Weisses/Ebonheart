@@ -1,6 +1,6 @@
 {
     "parent": "item/generated",
     "textures": {
-        "layer0": "ea:items/food/dragon_fruit"
+        "layer0": "ea:items/plants/sacred_fruit"
     }
 }

@@ -30,11 +30,13 @@ import com.ebonheart.EbonArtsMod.common.items.resources.ItemEbonheart;
 import com.ebonheart.EbonArtsMod.common.items.resources.ItemEnchantedEbonheart;
 import com.ebonheart.EbonArtsMod.common.items.resources.ItemEmpoweredBlade;
 import com.ebonheart.EbonArtsMod.common.items.resources.ItemGlowstoneShard;
+import com.ebonheart.EbonArtsMod.common.items.resources.ItemHellionFruit;
 import com.ebonheart.EbonArtsMod.common.items.resources.ItemKatcheen;
 import com.ebonheart.EbonArtsMod.common.items.resources.ItemMirroringDisc;
 import com.ebonheart.EbonArtsMod.common.items.resources.ItemMusicDiscEA;
 import com.ebonheart.EbonArtsMod.common.items.resources.ItemNecrocite;
 import com.ebonheart.EbonArtsMod.common.items.resources.ItemObsidianShard;
+import com.ebonheart.EbonArtsMod.common.items.resources.ItemSacredFruit;
 import com.ebonheart.EbonArtsMod.common.items.resources.ItemSoularite;
 import com.ebonheart.EbonArtsMod.common.items.resources.ItemVelious;
 import com.ebonheart.EbonArtsMod.common.items.tools.ItemArcaniteAxe;
@@ -116,7 +118,8 @@ public class InitItemsEA extends ItemsEA {
 		scalemail_leggings = registerItem(new ItemScalemailArmor("armor/scalemail_leggings", 0, EntityEquipmentSlot.LEGS));
 		scalemail_boots = registerItem(new ItemScalemailArmor("armor/scalemail_boots", 0, EntityEquipmentSlot.FEET));
 		
-		wrathful_fruit = registerItem(new ItemDragonFruit(3, 0.6F));
+		hellion_fruit = registerItem(new ItemHellionFruit(3, 0.6F));
+		sacred_fruit = registerItem(new ItemSacredFruit(3, 0.6F));
 		dragon_fruit = //(ItemFood) 
 				registerItem(new ItemDragonFruit(3, 0.6F//, InitBlocksEA.dragon_fruit, 
 						//Blocks.farmland

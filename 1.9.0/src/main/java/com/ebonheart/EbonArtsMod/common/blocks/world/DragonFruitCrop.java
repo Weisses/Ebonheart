@@ -17,7 +17,8 @@ public class DragonFruitCrop extends BlockCrops {
 
 	public DragonFruitCrop()
 	{
-		BlockHelper.setBlockName(this, "dragon_fruit_crop");
+		BlockHelper.setBlockName(this, "plant/dragon_fruit_crop");
+		setCreativeTab(null);
 	}
 	protected Item getSeed()
     {

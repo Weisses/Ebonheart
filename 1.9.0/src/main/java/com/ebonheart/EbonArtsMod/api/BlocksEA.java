@@ -195,7 +195,8 @@ public class BlocksEA {
 	public static Block leather_block;
 	public static Block reed_block;
 	
-	public static Block coldfire_fruit;
+	public static Block hellion_fruit;
+	public static Block sacred_fruit;
 	public static Block dragon_fruit;
 	
 	

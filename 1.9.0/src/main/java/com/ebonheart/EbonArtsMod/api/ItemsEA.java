@@ -85,10 +85,14 @@ public class ItemsEA {
 	public static Item massacre;
 	public static Item souleater;
 	
-	public static ItemFood wrathful_fruit;
+	public static ItemFood hellion_fruit;
+	public static ItemFood sacred_fruit;
 	public static ItemFood dragon_fruit;
 	
 	public static Item test_shield;
+	
+	
+	//Diablo
 	
 	//Pandemic
 	//Bloodcoil
@@ -102,7 +106,13 @@ public class ItemsEA {
 	//Harbinger
 	//Sacrament
 	
-	
+	//Gluttony
+	//Envy
+	//Lust
+	//Greed
+	//Sloth
+	//Wrath
+	//Pride
 	
 	
 	//public static Item omniplex;

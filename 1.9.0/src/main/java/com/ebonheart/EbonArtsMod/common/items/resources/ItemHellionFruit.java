@@ -3,11 +3,13 @@ package com.ebonheart.EbonArtsMod.common.items.resources;
 import java.util.List;
 
 import com.ebonheart.EbonArtsMod.EbonArtsMod;
+import com.ebonheart.EbonArtsMod.common.entity.modifiers.EAAttributeModifier;
 import com.ebonheart.EbonArtsMod.common.items.ItemHelper;
 import com.ebonheart.EbonArtsMod.init.InitBlocksEA;
 
 import net.minecraft.block.Block;
 import net.minecraft.block.state.IBlockState;
+import net.minecraft.entity.SharedMonsterAttributes;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.item.EnumRarity;
 import net.minecraft.item.Item;
@@ -26,38 +28,25 @@ import net.minecraftforge.common.IPlantable;
 import net.minecraftforge.fml.relauncher.Side;
 import net.minecraftforge.fml.relauncher.SideOnly;
 
-public class ItemDragonFruit extends ItemFood implements IPlantable {
+public class ItemHellionFruit extends ItemFood implements IPlantable {
 	
-	//private Block crop;
-    /** Block ID of the soil this seed food should be planted on. */
-    //private Block soilId;
-	
-	public ItemDragonFruit(int healAmount, float saturation
-			//,
-			//Block crops, 
-			//Block soil
-			) 
+	public ItemHellionFruit(int healAmount, float saturation) 
 	{
 		super(healAmount, saturation, false);
-		ItemHelper.setItemName(this, "plant/dragon_fruit");
-		
-		
-        //this.crop = crops;
-        //this.soilId = soil;
+		ItemHelper.setItemName(this, "plant/hellion_fruit");
 		
 	}
-	/**
-     * Called when a Block is right-clicked with this Item
-     */
+	
     public EnumActionResult onItemUse(ItemStack stack, EntityPlayer playerIn, World worldIn, BlockPos pos, EnumHand hand, EnumFacing facing, float hitX, float hitY, float hitZ)
     {
+    	
+    	//playerIn.getEntityAttribute(SharedMonsterAttributes.MOVEMENT_SPEED).applyModifier(EAAttributeModifier.HELLIONFRUIT_BONUS);
+        
+    	
         net.minecraft.block.state.IBlockState state = worldIn.getBlockState(pos);
         if (facing == EnumFacing.UP && playerIn.canPlayerEdit(pos.offset(facing), facing, stack) && state.getBlock().canSustainPlant(state, worldIn, pos, EnumFacing.UP, this) && worldIn.isAirBlock(pos.up()))
         {
-            worldIn.setBlockState(pos.up(), //this.crop.
-            		InitBlocksEA.dragon_fruit.
-            		getDefaultState() 
-            		,11);
+            worldIn.setBlockState(pos.up(),	InitBlocksEA.hellion_fruit.getDefaultState(), 11);
             --stack.stackSize;
             return EnumActionResult.SUCCESS;
         }
@@ -65,6 +54,12 @@ public class ItemDragonFruit extends ItemFood implements IPlantable {
         {
             return EnumActionResult.FAIL;
         }
+        
+        
+        //if(!playerIn.getEntityAttribute(SharedMonsterAttributes.MOVEMENT_SPEED).hasModifier(EAAttributeModifier.HELLIONFRUIT_BONUS))
+		//{
+		//	player.getEntityAttribute(SharedMonsterAttributes.MOVEMENT_SPEED).applyModifier(EAAttributeModifier.HELLIONFRUIT_BONUS);
+		//}
     }
     
     @Override
@@ -76,8 +71,7 @@ public class ItemDragonFruit extends ItemFood implements IPlantable {
 	@Override
 	public IBlockState getPlant(IBlockAccess world, BlockPos pos)
 	{
-	    //return this.crop.getDefaultState();
-		return InitBlocksEA.dragon_fruit.getDefaultState();
+		return InitBlocksEA.hellion_fruit.getDefaultState();
 	}
 	
 	
@@ -88,7 +82,7 @@ public class ItemDragonFruit extends ItemFood implements IPlantable {
     @SideOnly(Side.CLIENT)
     public void addInformation(ItemStack stack, EntityPlayer playerIn, List toolTip, boolean advanced) 
 	{
-		toolTip.add(TextFormatting.GOLD + "An ancient fruit that");
+		toolTip.add(TextFormatting.GOLD + "A hellish fruit that");
 		toolTip.add(TextFormatting.GOLD + "makes a healthy meal.");
 	}
 	
