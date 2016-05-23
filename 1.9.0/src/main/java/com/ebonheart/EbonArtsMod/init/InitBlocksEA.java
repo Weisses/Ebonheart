@@ -25,6 +25,7 @@ import com.ebonheart.EbonArtsMod.common.blocks.basic.EABlockFenceGate;
 import com.ebonheart.EbonArtsMod.common.blocks.basic.EABlockLadder;
 import com.ebonheart.EbonArtsMod.common.blocks.basic.EABlockPillar;
 import com.ebonheart.EbonArtsMod.common.blocks.basic.EABlockStairs;
+import com.ebonheart.EbonArtsMod.common.blocks.basic.EABlockTrapDoor;
 import com.ebonheart.EbonArtsMod.common.blocks.basic.EABlockWall;
 import com.ebonheart.EbonArtsMod.common.blocks.basic.blocks.BlockArcanite;
 import com.ebonheart.EbonArtsMod.common.blocks.basic.blocks.BlockDraconium;
@@ -213,6 +214,16 @@ public class InitBlocksEA extends BlocksEA {
 		ebonheart_torch = registerBlock(new EABlockTorchEbonheart().setResistance(2000.0F));
 		obsidian_torch = registerBlock(new EABlockTorchObsidian().setResistance(2000.0F));
 		glowstone_torch = registerBlock(new EABlockTorchGlowstone().setResistance(45.0F));
+		
+		draconium_trapdoor = registerBlock(new EABlockTrapDoor("door/draconium_trapdoor").setResistance(4.0F));
+		velious_trapdoor = registerBlock(new EABlockTrapDoor("door/velious_trapdoor").setResistance(4.0F));
+		arcanite_trapdoor = registerBlock(new EABlockTrapDoor("door/arcanite_trapdoor").setResistance(4.0F));
+		katcheen_trapdoor = registerBlock(new EABlockTrapDoor("door/katcheen_trapdoor").setResistance(4.0F));
+		necrocite_trapdoor = registerBlock(new EABlockTrapDoor("door/necrocite_trapdoor").setResistance(4.0F));
+		soularite_trapdoor = registerBlock(new EABlockTrapDoor("door/soularite_trapdoor").setResistance(4.0F));
+		ebonheart_trapdoor = registerBlock(new EABlockTrapDoor("door/ebonheart_trapdoor").setResistance(4.0F));
+		obsidian_trapdoor = registerBlock(new EABlockTrapDoor("door/obsidian_trapdoor").setResistance(4.0F));
+		glowstone_trapdoor = registerBlock(new EABlockTrapDoor("door/glowstone_trapdoor").setResistance(4.0F));
 		
 		//draconium_door = new EABlockDoor("door/draconium_door").setHardness(5.0F).setResistance(4.0F);
 		//velious_door = new EABlockDoor("door/velious_door").setHardness(5.0F).setResistance(15.0F);

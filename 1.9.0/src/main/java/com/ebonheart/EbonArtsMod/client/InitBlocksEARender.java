@@ -177,6 +177,15 @@ public final class InitBlocksEARender extends BlocksEA {
 		registerRender(glowstone_torch);
 		registerRender(ebonheart_torch);
 		
+		registerRender(draconium_trapdoor);
+		registerRender(velious_trapdoor);
+		registerRender(arcanite_trapdoor);
+		registerRender(katcheen_trapdoor);
+		registerRender(necrocite_trapdoor);
+		registerRender(soularite_trapdoor);
+		registerRender(obsidian_trapdoor);
+		registerRender(glowstone_trapdoor);
+		
 		//registerRender(draconium_door);
 		//registerRender(velious_door);
 		//registerRender(arcanite_door);

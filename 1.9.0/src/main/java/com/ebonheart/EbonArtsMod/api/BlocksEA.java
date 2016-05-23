@@ -124,6 +124,16 @@ public class BlocksEA {
 	public static Block glowstone_pillar;
 	public static Block ebonheart_pillar;
 	
+	public static Block draconium_trapdoor;
+	public static Block velious_trapdoor;
+	public static Block arcanite_trapdoor;
+	public static Block katcheen_trapdoor;
+	public static Block necrocite_trapdoor;
+	public static Block soularite_trapdoor;
+	public static Block obsidian_trapdoor;
+	public static Block glowstone_trapdoor;
+	public static Block ebonheart_trapdoor;
+	
 	//public static Block draconium_door;
 	//public static Block velious_door;
 	//public static Block arcanite_door;
