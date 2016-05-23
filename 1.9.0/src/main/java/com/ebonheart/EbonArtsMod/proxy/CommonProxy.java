@@ -1,6 +1,8 @@
 package com.ebonheart.EbonArtsMod.proxy;
 
 import net.minecraft.entity.Entity;
+import net.minecraft.util.EnumParticleTypes;
+import net.minecraft.util.math.BlockPos;
 import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.fml.common.event.FMLInitializationEvent;
 import net.minecraftforge.fml.common.event.FMLPostInitializationEvent;
@@ -68,4 +70,6 @@ public class CommonProxy {
 	public void generateFlightParticles(Entity entity) { }
 	
 	public void generateEnchEbonParticles(Entity entity) { }
+	
+	
 }

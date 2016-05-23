@@ -201,6 +201,16 @@ tile.ea:pillar/obsidian_pillar.name=Purified Obsidian Pillar
 tile.ea:pillar/glowstone_pillar.name=Purified Glowstone Pillar
 tile.ea:pillar/ebonheart_pillar.name=Ebonheart Pillar
 
+tile.ea:door/draconium_trapdoor.name=Draconium Trapdoor
+tile.ea:door/velious_trapdoor.name=Velious Trapdoor
+tile.ea:door/arcanite_trapdoor.name=Arcanite Trapdoor
+tile.ea:door/katcheen_trapdoor.name=Katcheen Trapdoor
+tile.ea:door/necrocite_trapdoor.name=Necrocite Trapdoor
+tile.ea:door/soularite_trapdoor.name=Soularite Trapdoor
+tile.ea:door/obsidian_trapdoor.name=Purified Obsidian Trapdoor
+tile.ea:door/glowstone_trapdoor.name=Purified Glowstone Trapdoor
+tile.ea:door/ebonheart_trapdoor.name=Ebonheart Trapdoor
+
 tile.ea:paper_block.name=Block of Paper
 tile.ea:leather_block.name=Block of Leather
 tile.ea:reed_block.name=Block of Sugar Cane

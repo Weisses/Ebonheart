@@ -3,6 +3,7 @@ package com.ebonheart.EbonArtsMod.proxy;
 import net.minecraft.client.Minecraft;
 import net.minecraft.client.particle.EntityFX;
 import net.minecraft.entity.Entity;
+import net.minecraft.util.math.BlockPos;
 import net.minecraftforge.fml.common.event.FMLInitializationEvent;
 import net.minecraftforge.fml.common.event.FMLPostInitializationEvent;
 import net.minecraftforge.fml.common.event.FMLPreInitializationEvent;
@@ -67,16 +68,13 @@ public class ClientProxy extends CommonProxy {
 	    double motionY = theEntity.worldObj.rand.nextGaussian() * 0.02D;
 	    double motionZ = theEntity.worldObj.rand.nextGaussian() * 0.02D;
 	    EntityFX particleSprint = new EntitySprintFX(
-	          theEntity.worldObj, 
-	          theEntity.posX + theEntity.worldObj.rand.nextFloat() * theEntity.width 
-	                * 2.0F - theEntity.width, 
-	          theEntity.posY + 0.5D + theEntity.worldObj.rand.nextFloat() 
-	                * theEntity.height, 
-	          theEntity.posZ + theEntity.worldObj.rand.nextFloat() * theEntity.width 
-	                * 2.0F - theEntity.width, 
-	          motionX, 
-	          motionY, 
-	          motionZ);
+	    	theEntity.worldObj, 
+	    	theEntity.posX + theEntity.worldObj.rand.nextFloat() * theEntity.width * 2.0F - theEntity.width, 
+	        theEntity.posY + 0.5D + theEntity.worldObj.rand.nextFloat() * theEntity.height, 
+	        theEntity.posZ + theEntity.worldObj.rand.nextFloat() * theEntity.width * 2.0F - theEntity.width, 
+	        motionX, 
+	        motionY, 
+	        motionZ);
 	    Minecraft.getMinecraft().effectRenderer.addEffect(particleSprint);        
 	}
 	

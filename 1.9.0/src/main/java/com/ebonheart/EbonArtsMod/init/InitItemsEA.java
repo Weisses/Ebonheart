@@ -120,10 +120,10 @@ public class InitItemsEA extends ItemsEA {
 		
 		hellion_fruit = registerItem(new ItemHellionFruit(3, 0.6F));
 		sacred_fruit = registerItem(new ItemSacredFruit(3, 0.6F));
-		dragon_fruit = //(ItemFood) 
-				registerItem(new ItemDragonFruit(3, 0.6F//, InitBlocksEA.dragon_fruit, 
-						//Blocks.farmland
-						));
+		dragon_fruit = registerItem(new ItemDragonFruit(3, 0.6F));
+				//, InitBlocksEA.dragon_fruit//, Blocks.farmland
+				//));
+						
 		
 		vengeance_helmet = registerItem(new ItemVengeanceArmor("armor/vengeance_helmet", 0, EntityEquipmentSlot.HEAD));
 		vengeance_chestplate = registerItem(new ItemVengeanceArmor("armor/vengeance_chestplate", 0, EntityEquipmentSlot.CHEST));

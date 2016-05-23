@@ -7,6 +7,7 @@ import com.ebonheart.EbonArtsMod.common.items.ItemHelper;
 import com.ebonheart.EbonArtsMod.init.InitBlocksEA;
 
 import net.minecraft.block.Block;
+import net.minecraft.block.material.Material;
 import net.minecraft.block.state.IBlockState;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.item.EnumRarity;
@@ -17,6 +18,7 @@ import net.minecraft.item.ItemStack;
 import net.minecraft.util.EnumActionResult;
 import net.minecraft.util.EnumFacing;
 import net.minecraft.util.EnumHand;
+import net.minecraft.util.EnumParticleTypes;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.util.text.TextFormatting;
 import net.minecraft.world.IBlockAccess;
@@ -28,22 +30,10 @@ import net.minecraftforge.fml.relauncher.SideOnly;
 
 public class ItemDragonFruit extends ItemFood implements IPlantable {
 	
-	//private Block crop;
-    /** Block ID of the soil this seed food should be planted on. */
-    //private Block soilId;
-	
-	public ItemDragonFruit(int healAmount, float saturation
-			//,
-			//Block crops, 
-			//Block soil
-			) 
+	public ItemDragonFruit(int healAmount, float saturation) 
 	{
-		super(healAmount, saturation, false);
+		super(healAmount, saturation, true);
 		ItemHelper.setItemName(this, "plant/dragon_fruit");
-		
-		
-        //this.crop = crops;
-        //this.soilId = soil;
 		
 	}
 	/**
@@ -54,10 +44,20 @@ public class ItemDragonFruit extends ItemFood implements IPlantable {
         net.minecraft.block.state.IBlockState state = worldIn.getBlockState(pos);
         if (facing == EnumFacing.UP && playerIn.canPlayerEdit(pos.offset(facing), facing, stack) && state.getBlock().canSustainPlant(state, worldIn, pos, EnumFacing.UP, this) && worldIn.isAirBlock(pos.up()))
         {
-            worldIn.setBlockState(pos.up(), //this.crop.
-            		InitBlocksEA.dragon_fruit.
-            		getDefaultState() 
-            		,11);
+        	if(worldIn.isRemote)
+        	{
+        		int amount = 20;
+
+        		for (int i = 0; i < amount; ++i)
+                {
+                    double d0 = itemRand.nextGaussian() * 0.02D;
+                    double d1 = itemRand.nextGaussian() * 0.02D;
+                    double d2 = itemRand.nextGaussian() * 0.02D;
+                    worldIn.spawnParticle(EnumParticleTypes.PORTAL, (double)((float)pos.getX() + itemRand.nextFloat()), (double)pos.getY() + (double)itemRand.nextFloat()  + 0.75, (double)((float)pos.getZ() + itemRand.nextFloat()), d0, d1, d2, new int[0]);
+                }
+        	}
+        	
+            worldIn.setBlockState(pos.up(), InitBlocksEA.dragon_fruit.getDefaultState(), 11);
             --stack.stackSize;
             return EnumActionResult.SUCCESS;
         }
@@ -76,9 +76,9 @@ public class ItemDragonFruit extends ItemFood implements IPlantable {
 	@Override
 	public IBlockState getPlant(IBlockAccess world, BlockPos pos)
 	{
-	    //return this.crop.getDefaultState();
-		return InitBlocksEA.dragon_fruit.getDefaultState();
+	    return InitBlocksEA.dragon_fruit.getDefaultState();
 	}
+	
 	
 	
 	
@@ -100,7 +100,7 @@ public class ItemDragonFruit extends ItemFood implements IPlantable {
     
 	public EnumRarity getRarity(ItemStack stack)
     {
-        return EnumRarity.UNCOMMON;
+        return EnumRarity.EPIC;
     }
 	
 }
