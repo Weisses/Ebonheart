@@ -53,7 +53,11 @@ public class ItemDragonFruit extends ItemFood implements IPlantable {
                     double d0 = itemRand.nextGaussian() * 0.02D;
                     double d1 = itemRand.nextGaussian() * 0.02D;
                     double d2 = itemRand.nextGaussian() * 0.02D;
-                    worldIn.spawnParticle(EnumParticleTypes.PORTAL, (double)((float)pos.getX() + itemRand.nextFloat()), (double)pos.getY() + (double)itemRand.nextFloat()  + 0.75, (double)((float)pos.getZ() + itemRand.nextFloat()), d0, d1, d2, new int[0]);
+                    worldIn.spawnParticle(EnumParticleTypes.PORTAL, 
+                    		(double)((float)pos.getX() + itemRand.nextFloat()), 
+                    		(double)pos.getY() + (double)itemRand.nextFloat()  + 0.75, 
+                    		(double)((float)pos.getZ() + itemRand.nextFloat()), 
+                    		d0, d1, d2, new int[0]);
                 }
         	}
         	

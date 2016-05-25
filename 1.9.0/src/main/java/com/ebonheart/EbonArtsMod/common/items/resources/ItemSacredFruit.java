@@ -17,6 +17,7 @@ import net.minecraft.item.ItemStack;
 import net.minecraft.util.EnumActionResult;
 import net.minecraft.util.EnumFacing;
 import net.minecraft.util.EnumHand;
+import net.minecraft.util.EnumParticleTypes;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.util.text.TextFormatting;
 import net.minecraft.world.IBlockAccess;
@@ -40,7 +41,25 @@ public class ItemSacredFruit extends ItemFood implements IPlantable {
         net.minecraft.block.state.IBlockState state = worldIn.getBlockState(pos);
         if (facing == EnumFacing.UP && playerIn.canPlayerEdit(pos.offset(facing), facing, stack) && state.getBlock().canSustainPlant(state, worldIn, pos, EnumFacing.UP, this) && worldIn.isAirBlock(pos.up()))
         {
-            worldIn.setBlockState(pos.up(), InitBlocksEA.sacred_fruit.getDefaultState(), 11);
+        	if(worldIn.isRemote)
+        	{
+        		int amount = 10;
+
+        		for (int i = 0; i < amount; ++i)
+                {
+                    double d0 = itemRand.nextGaussian() * 0.02D;
+                    double d1 = itemRand.nextGaussian() * 0.02D;
+                    double d2 = itemRand.nextGaussian() * 0.02D;
+                    worldIn.spawnParticle(EnumParticleTypes.REDSTONE, 
+                    		(double)((float)pos.getX() + itemRand.nextFloat()), 
+                    		(double)pos.getY() + (double)itemRand.nextFloat()  + 0.75, 
+                    		(double)((float)pos.getZ() + itemRand.nextFloat()), 
+                    		1D, 3D, 4D, new int[0]);
+                }
+        	}
+        	
+        	
+        	worldIn.setBlockState(pos.up(), InitBlocksEA.sacred_fruit.getDefaultState(), 11);
             --stack.stackSize;
             return EnumActionResult.SUCCESS;
         }

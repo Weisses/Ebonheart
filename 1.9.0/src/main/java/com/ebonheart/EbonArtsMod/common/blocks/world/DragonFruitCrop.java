@@ -57,39 +57,29 @@ public class DragonFruitCrop extends BlockCrops {
     	{
     	
     	
-    	//int d = random.nextInt(100) + 1;
+    		int d = rand.nextInt(100) + 1;
     	
     	
-    	//if(oldage != currentage)
-    	//{
-    		//EnumParticleTypes test = EbonArtsMod.proxy.generateSprintParticles(entity);
-    		
-    		int amount = 20;
+    		if(d < 2)
+    		{
+    			//int amount = 20;
 
-    		for (int i = 0; i < amount; ++i)
-            {
-    			int j = rand.nextInt(2) * 2 - 1;
-				int k = rand.nextInt(2) * 2 - 1;
-				double d0 = (double)pos.getX() + 0.5D + 0.25D * (double)j;
-				double d1 = (double)((float)pos.getY() + rand.nextFloat());
-				double d2 = (double)pos.getZ() + 0.5D + 0.25D * (double)k;
-                double d3 = (double)(rand.nextFloat() * (float)j);
-				double d4 = ((double)rand.nextFloat() - 0.5D) * 0.125D;
-				double d5 = (double)(rand.nextFloat() * (float)k);
-				worldIn.spawnParticle(
+    			for (int i = 0; i < 8; ++i)
+    			{
+    				int j = rand.nextInt(2) * 2 - 1;
+    				int k = rand.nextInt(2) * 2 - 1;
+    				double d0 = (double)pos.getX() + 0.5D + 0.25D * (double)j;
+    				double d1 = (double)((float)pos.getY() + (rand.nextFloat() * 0.25));
+    				double d2 = (double)pos.getZ() + 0.5D + 0.25D * (double)k;
+    				double d3 = (double)(rand.nextFloat() * (float)j);
+    				double d4 = ((double)rand.nextFloat() - 0.5D) * 0.125D;
+    				double d5 = (double)(rand.nextFloat() * (float)k);
+    				worldIn.spawnParticle(
 						EnumParticleTypes.PORTAL
-						, d0, d1, d2, d3, d4, d5, new int[0]);
+						, d0, d1, d2, 0, 0, 0, new int[0]);
 				
-            }
-    		
-    		
+    			}
+    		}
     	}
-    	
-    		
-    	
-		
     }
-
-    
-    
 }

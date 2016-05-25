@@ -45,6 +45,37 @@ public class HellionFruitCrop extends BlockCrops{
         return HELLIONFRUIT_AABB[((Integer)state.getValue(this.getAge())).intValue()];
     }
     
-    
-    
+    @SideOnly(Side.CLIENT)
+    public void randomDisplayTick(IBlockState state, World worldIn, BlockPos pos, Random rand)
+    {
+    	
+    	if(worldIn.getLight(pos) >= 8 || worldIn.canSeeSky(pos))
+    	{
+    	
+    	
+    		int d = rand.nextInt(100) + 1;
+    	
+    	
+    		if(d < 2)
+    		{	
+    			//int amount = 20;
+
+    			for (int i = 0; i < 2; ++i)
+    			{
+    				int j = rand.nextInt(2) * 2 - 1;
+    				int k = rand.nextInt(2) * 2 - 1;
+    				double d0 = (double)pos.getX() + 0.5D + 0.25D * (double)j;
+    				double d1 = (double)((float)pos.getY() + (rand.nextFloat() * 0.5));
+    				double d2 = (double)pos.getZ() + 0.5D + 0.25D * (double)k;
+    				double d3 = (double)(rand.nextFloat() - (float)j);
+    				double d4 = ((double)rand.nextFloat() - 0.5D) * 0.125D;
+    				double d5 = (double)(rand.nextFloat() - (float)k);
+    				worldIn.spawnParticle(
+						EnumParticleTypes.FLAME
+						, d0, d1, d2, 0, 0, 0, new int[0]);
+				
+    			}
+    		}
+    	}
+    }
 }
