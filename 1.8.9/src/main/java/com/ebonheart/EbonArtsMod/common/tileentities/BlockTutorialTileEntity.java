@@ -10,7 +10,7 @@ import net.minecraft.world.World;
 public class BlockTutorialTileEntity extends BlockContainer {
 
 	public BlockTutorialTileEntity() {
-		super(Material.rock);
+		super(Material.ROCK);
 		this.setUnlocalizedName("tutorial_tile_entity");
 	}
 
@@ -19,12 +19,12 @@ public class BlockTutorialTileEntity extends BlockContainer {
 		return new TileEntityTutorial();
 	}
 
-	@Override
+	//@Override
 	public boolean isOpaqueCube() {
 		return false;
 	}
 
-	@Override
+	//@Override
 	public int getRenderType() {
 		return -1;
 	}

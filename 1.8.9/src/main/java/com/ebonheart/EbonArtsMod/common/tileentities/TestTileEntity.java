@@ -9,6 +9,12 @@ import net.minecraft.tileentity.TileEntity;
 import net.minecraft.util.ChatComponentText;
 import net.minecraft.util.ChatComponentTranslation;
 import net.minecraft.util.IChatComponent;
+import net.minecraft.util.text.ITextComponent;
+import net.minecraft.util.text.TextComponentString;
+import net.minecraft.util.text.TextComponentTranslation;
+//import net.minecraft.util.ChatComponentText;
+//import net.minecraft.util.ChatComponentTranslation;
+//import net.minecraft.util.IChatComponent;
 
 public class TestTileEntity extends TileEntity implements IInventory{
 
@@ -177,6 +183,7 @@ public class TestTileEntity extends TileEntity implements IInventory{
 		if (this.hasCustomName()) {
 			nbt.setString("CustomName", this.getCustomName());
 		}
+		
 	}
 
 	@Override

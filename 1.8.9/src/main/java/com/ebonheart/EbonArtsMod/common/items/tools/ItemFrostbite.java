@@ -5,6 +5,7 @@ import java.util.Random;
 
 import com.ebonheart.EbonArtsMod.EbonArtsMod;
 import com.ebonheart.EbonArtsMod.common.items.ItemHelper;
+import com.ebonheart.EbonArtsMod.common.items.WeaponHelper;
 
 import net.minecraft.entity.EntityLivingBase;
 import net.minecraft.entity.player.EntityPlayer;
@@ -12,18 +13,17 @@ import net.minecraft.item.EnumRarity;
 import net.minecraft.item.ItemStack;
 import net.minecraft.item.ItemSword;
 import net.minecraft.potion.Potion;
-import net.minecraft.util.EnumChatFormatting;
+import net.minecraft.util.text.TextFormatting;
 import net.minecraft.world.World;
 import net.minecraftforge.fml.relauncher.Side;
 import net.minecraftforge.fml.relauncher.SideOnly;
 
 public class ItemFrostbite extends ItemSword {
 
-	public ItemFrostbite(String unlocalizedName, ToolMaterial material) 
+	public ItemFrostbite(ToolMaterial material) 
 	{
 		super(material);
-		this.setUnlocalizedName(unlocalizedName);
-		this.setCreativeTab(EbonArtsMod.tabEbonArtsItems);
+		ItemHelper.setItemName(this, "tool/frostbite");
 	}
 	
 	public boolean hitEntity(ItemStack stack, EntityLivingBase target, EntityLivingBase attacker)
@@ -33,11 +33,13 @@ public class ItemFrostbite extends ItemSword {
 		
 		if (d < 38)
 		{
-			Potion potion1 = Potion.moveSlowdown;
-			Potion potion2 = Potion.weakness;
+			Potion potion1 = Potion.getPotionById(2);
+					//.moveSlowdown;
+			Potion potion2 = Potion.getPotionById(18);
+					//.weakness;
 			EntityPlayer playerIn = attacker.getEntityWorld().getPlayerEntityByUUID(attacker.getUniqueID());
-			ItemHelper.addPotionEffectToTarget(target, potion1, 3, 2);
-			ItemHelper.addPotionEffectToTarget(target, potion2, 5, 2);
+			WeaponHelper.addPotionEffectToTarget(target, potion1, 3, 2);
+			WeaponHelper.addPotionEffectToTarget(target, potion2, 5, 2);
 			stack.damageItem(1, playerIn);
 		}
         return true;
@@ -45,12 +47,12 @@ public class ItemFrostbite extends ItemSword {
 	
 	@SideOnly(Side.CLIENT)
     public void addInformation(ItemStack stack, EntityPlayer playerIn, List toolTip, boolean advanced) {
-		toolTip.add(EnumChatFormatting.DARK_PURPLE + "\"The grip of frost weakens");
-		toolTip.add(EnumChatFormatting.DARK_PURPLE + "and chills all before it.\"");
+		toolTip.add(TextFormatting.DARK_PURPLE + "\"The grip of frost weakens");
+		toolTip.add(TextFormatting.DARK_PURPLE + "and chills all before it.\"");
 		toolTip.add(" ");
-		toolTip.add(EnumChatFormatting.GOLD + "38% chance on hit:");
-		toolTip.add(EnumChatFormatting.RED + "Target - Weakness for 5 seconds.");
-		toolTip.add(EnumChatFormatting.RED + "Target - Slow for 3 seconds.");
+		toolTip.add(TextFormatting.GOLD + "38% chance on hit:");
+		toolTip.add(TextFormatting.RED + "Target - Weakness for 5 seconds.");
+		toolTip.add(TextFormatting.RED + "Target - Slow for 3 seconds.");
 	}
 	
 	public EnumRarity getRarity(ItemStack stack)

@@ -1,30 +1,28 @@
 package com.ebonheart.EbonArtsMod.common.blocks.basic.bricks;
 
 import com.ebonheart.EbonArtsMod.EbonArtsMod;
+import com.ebonheart.EbonArtsMod.common.blocks.BlockHelper;
+import com.ebonheart.EbonArtsMod.common.blocks.basic.BlockRockEA;
 
 import net.minecraft.block.Block;
 import net.minecraft.block.BlockLog;
 import net.minecraft.block.BlockRotatedPillar;
 import net.minecraft.block.material.Material;
-import net.minecraft.util.AxisAlignedBB;
-import net.minecraft.util.BlockPos;
+import net.minecraft.block.state.IBlockState;
 import net.minecraft.util.EnumFacing;
-import net.minecraft.util.EnumWorldBlockLayer;
 import net.minecraft.world.IBlockAccess;
 import net.minecraft.world.World;
 import net.minecraftforge.fml.relauncher.Side;
 import net.minecraftforge.fml.relauncher.SideOnly;
 
 
-public class BlockBrickEbonheart extends Block {
+public class BlockBrickEbonheart extends BlockRockEA {
 
-	public BlockBrickEbonheart(String unlocalizedName) 
+	public BlockBrickEbonheart() 
 	{
-		super(Material.rock);
-		this.setUnlocalizedName(unlocalizedName);
-		this.setCreativeTab(EbonArtsMod.tabEbonArtsBlocks);
-		this.setHarvestLevel("pickaxe", 2);
-		this.setStepSound(soundTypeStone);
+		super();
+		BlockHelper.setBlockName(this, "gem/ebonheart/ebonheart_block_brick");
+		
 		this.useNeighborBrightness=true;
 	}
 	

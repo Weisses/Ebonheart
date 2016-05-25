@@ -1,20 +1,24 @@
 package com.ebonheart.EbonArtsMod.common.items;
 
-import net.minecraft.entity.EntityLivingBase;
-import net.minecraft.entity.player.EntityPlayer;
-import net.minecraft.potion.Potion;
-import net.minecraft.potion.PotionEffect;
+import com.ebonheart.EbonArtsMod.EbonArtsMod;
 
-public class ItemHelper {
+import net.minecraft.item.Item;
 
-	public static void addPotionEffectToPlayer(EntityPlayer player, Potion potion , int seconds, int strength)
+public class ItemHelper extends Item {
+
+	public ItemHelper(String itemName) 
 	{
-		int a = 20 * seconds;
-		player.addPotionEffect(new PotionEffect(potion.getId(), a, strength));
+		setItemName(this, itemName);
+		
 	}
-	public static void addPotionEffectToTarget(EntityLivingBase target, Potion potion , int seconds, int strength)
+
+	//Set the registry name of {@code block} to {@code blockName} 
+	//and the unlocalised name to the full registry name.
+	public static void setItemName(Item item, String itemName) 
 	{
-		int a = 20 * seconds;
-		target.addPotionEffect(new PotionEffect(potion.getId(), a, strength));
+		item.setRegistryName(itemName);
+		item.setUnlocalizedName(item.getRegistryName().toString());
+		item.setCreativeTab(EbonArtsMod.tabEbonArtsItems);
 	}
+	
 }

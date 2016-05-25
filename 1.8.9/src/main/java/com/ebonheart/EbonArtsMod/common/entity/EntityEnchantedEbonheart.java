@@ -1,20 +1,20 @@
 package com.ebonheart.EbonArtsMod.common.entity;
 
+import com.ebonheart.EbonArtsMod.EbonArtsMod;
+
 import net.minecraft.client.Minecraft;
-import net.minecraft.client.resources.model.ModelResourceLocation;
 import net.minecraft.entity.EntityLivingBase;
 import net.minecraft.entity.item.EntityXPOrb;
 import net.minecraft.entity.projectile.EntityThrowable;
-import net.minecraft.util.BlockPos;
+import net.minecraft.util.math.BlockPos;
+import net.minecraft.util.math.RayTraceResult;
 import net.minecraft.util.EnumParticleTypes;
-import net.minecraft.util.MovingObjectPosition;
 import net.minecraft.world.World;
 import net.minecraftforge.fml.relauncher.Side;
 import net.minecraftforge.fml.relauncher.SideOnly;
 
-public class EntityEnchantedEbonheart extends EntityThrowable
-{
-    
+public class EntityEnchantedEbonheart extends EntityThrowable {
+	
     public EntityEnchantedEbonheart(World worldIn)
     {
         super(worldIn);
@@ -23,7 +23,6 @@ public class EntityEnchantedEbonheart extends EntityThrowable
     public EntityEnchantedEbonheart(World worldIn, EntityLivingBase entity)
     {
         super(worldIn, entity);
-        
     }
 
     public EntityEnchantedEbonheart(World worldIn, double x, double y, double z)
@@ -52,13 +51,20 @@ public class EntityEnchantedEbonheart extends EntityThrowable
     /** 
      * Called when this EntityThrowable hits a block or entity.
      */
-    protected void onImpact(MovingObjectPosition p_70184_1_)
+    protected void onImpact(RayTraceResult result)
     {
+    	if (this.worldObj.isRemote)
+    	{
+    		for (int ii = 0; ii < 6; ++ii)
+            {
+            	EbonArtsMod.proxy.generateEnchEbonParticles(this);
+            }
+    	}
         if (!this.worldObj.isRemote)
         {
-            this.worldObj.playAuxSFX(2002, new BlockPos(this), 0);
+        	this.worldObj.playEvent(2002, new BlockPos(this), 0);
             int i = 3 + this.worldObj.rand.nextInt(15) + this.worldObj.rand.nextInt(15);
-
+            
             while (i > 0)
             {
                 int j = EntityXPOrb.getXPSplit(i);
@@ -66,11 +72,12 @@ public class EntityEnchantedEbonheart extends EntityThrowable
                 this.worldObj.spawnEntityInWorld(new EntityXPOrb(this.worldObj, this.posX, this.posY, this.posZ, j));
                 
                 
-                //this.worldObj.spawnParticle(EnumParticleTypes.PORTAL, this.posX, this.posY, this.posZ, 2.0D, 5.0D, 2.0D, new int[0]);
+                    
             }
 
             this.setDead();
         }
+        
     }
     
 }

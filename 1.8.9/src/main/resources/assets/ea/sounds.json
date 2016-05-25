@@ -1,5 +1,5 @@
 {
-    "records.glowing_disc": {
+    "record.glowing_disc": {
         "category": "record",
         "sounds": [
             {
@@ -8,7 +8,7 @@
             }
         ]
     },
-    "records.shimmering_disc": {
+    "record.shimmering_disc": {
         "category": "record",
         "sounds": [
             {
@@ -17,7 +17,7 @@
             }
         ]
     },
-    "records.laminate_disc": {
+    "record.laminate_disc": {
         "category": "record",
         "sounds": [
             {
@@ -26,7 +26,7 @@
             }
         ]
     },
-    "records.resilient_disc": {
+    "record.resilient_disc": {
         "category": "record",
         "sounds": [
             {
@@ -35,7 +35,7 @@
             }
         ]
     },
-    "records.dismal_disc": {
+    "record.dismal_disc": {
         "category": "record",
         "sounds": [
             {
@@ -44,7 +44,7 @@
             }
         ]
     },
-    "records.ethereal_disc": {
+    "record.ethereal_disc": {
         "category": "record",
         "sounds": [
             {
@@ -53,16 +53,7 @@
             }
         ]
     },
-    "records.chrono_disc": {
-        "category": "record",
-        "sounds": [
-            {
-            "name": "ea:records/chrono_disc",
-            "stream": true
-            }
-        ]
-    },
-    "records.mirroring_disc": {
+    "record.mirroring_disc": {
         "category": "record",
         "sounds": [
             {

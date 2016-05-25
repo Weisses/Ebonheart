@@ -2,64 +2,20 @@ package com.ebonheart.EbonArtsMod.client;
 
 import net.minecraft.block.Block;
 import net.minecraft.client.Minecraft;
-import net.minecraft.client.resources.model.ModelBakery;
 import net.minecraft.client.resources.model.ModelResourceLocation;
+//import net.minecraft.client.resources.model.ModelBakery;
+//import net.minecraft.client.resources.model.ModelResourceLocation;
 import net.minecraft.item.Item;
 import net.minecraft.util.ResourceLocation;
 import net.minecraftforge.fml.client.registry.ClientRegistry;
 
-import com.ebonheart.EbonArtsMod.client.render.projectile.RenderEnchantedEbonheart;
+import com.ebonheart.EbonArtsMod.api.BlocksEA;
+import com.ebonheart.EbonArtsMod.api.Reference;
+import com.ebonheart.EbonArtsMod.client.projectile.RenderEnchantedEbonheart;
 import com.ebonheart.EbonArtsMod.common.entity.tile.TileEntityTutorial;
 import com.ebonheart.EbonArtsMod.init.InitBlocksEA;
-import com.ebonheart.EbonArtsMod.references.BlocksEA;
-import com.ebonheart.EbonArtsMod.references.Reference;
 
 public final class InitBlocksEARender extends BlocksEA {
-	
-	public static void preInit() 
-	{
-		
-		
-		ModelBakery.registerItemVariants(Item.getItemFromBlock(InitBlocksEA.cobble_mystic_block), 
-				new ResourceLocation(Reference.MOD_ID + ":gem/mystic/cobble_mystic_block_white"),
-				new ResourceLocation(Reference.MOD_ID + ":gem/mystic/cobble_mystic_block_orange"),
-				new ResourceLocation(Reference.MOD_ID + ":gem/mystic/cobble_mystic_block_magenta"),
-				new ResourceLocation(Reference.MOD_ID + ":gem/mystic/cobble_mystic_block_lightblue"),
-				new ResourceLocation(Reference.MOD_ID + ":gem/mystic/cobble_mystic_block_yellow"),
-				new ResourceLocation(Reference.MOD_ID + ":gem/mystic/cobble_mystic_block_lime"),
-				new ResourceLocation(Reference.MOD_ID + ":gem/mystic/cobble_mystic_block_pink"),
-				new ResourceLocation(Reference.MOD_ID + ":gem/mystic/cobble_mystic_block_gray"),
-				new ResourceLocation(Reference.MOD_ID + ":gem/mystic/cobble_mystic_block_lightgray"),
-				new ResourceLocation(Reference.MOD_ID + ":gem/mystic/cobble_mystic_block_cyan"),
-				new ResourceLocation(Reference.MOD_ID + ":gem/mystic/cobble_mystic_block_purple"),
-				new ResourceLocation(Reference.MOD_ID + ":gem/mystic/cobble_mystic_block_blue"),
-				new ResourceLocation(Reference.MOD_ID + ":gem/mystic/cobble_mystic_block_brown"),
-				new ResourceLocation(Reference.MOD_ID + ":gem/mystic/cobble_mystic_block_green"),
-				new ResourceLocation(Reference.MOD_ID + ":gem/mystic/cobble_mystic_block_red"),
-				new ResourceLocation(Reference.MOD_ID + ":gem/mystic/cobble_mystic_block_black"));
-				
-		
-		ModelBakery.registerItemVariants(Item.getItemFromBlock(InitBlocksEA.mystic_block), 
-				new ResourceLocation(Reference.MOD_ID + ":gem/mystic/mystic_block_white"),
-				new ResourceLocation(Reference.MOD_ID + ":gem/mystic/mystic_block_orange"),
-				new ResourceLocation(Reference.MOD_ID + ":gem/mystic/mystic_block_magenta"),
-				new ResourceLocation(Reference.MOD_ID + ":gem/mystic/mystic_block_lightblue"),
-				new ResourceLocation(Reference.MOD_ID + ":gem/mystic/mystic_block_yellow"),
-				new ResourceLocation(Reference.MOD_ID + ":gem/mystic/mystic_block_lime"),
-				new ResourceLocation(Reference.MOD_ID + ":gem/mystic/mystic_block_pink"),
-				new ResourceLocation(Reference.MOD_ID + ":gem/mystic/mystic_block_gray"),
-				new ResourceLocation(Reference.MOD_ID + ":gem/mystic/mystic_block_lightgray"),
-				new ResourceLocation(Reference.MOD_ID + ":gem/mystic/mystic_block_cyan"),
-				new ResourceLocation(Reference.MOD_ID + ":gem/mystic/mystic_block_purple"),
-				new ResourceLocation(Reference.MOD_ID + ":gem/mystic/mystic_block_blue"),
-				new ResourceLocation(Reference.MOD_ID + ":gem/mystic/mystic_block_brown"),
-				new ResourceLocation(Reference.MOD_ID + ":gem/mystic/mystic_block_green"),
-				new ResourceLocation(Reference.MOD_ID + ":gem/mystic/mystic_block_red"),
-				new ResourceLocation(Reference.MOD_ID + ":gem/mystic/mystic_block_black"));
-		
-		
-		
-	}
 	
 	public static void registerRenders()
 	{
@@ -73,43 +29,62 @@ public final class InitBlocksEARender extends BlocksEA {
 		registerRender(ebon_ore);
 		registerRender(ebon_ore_nether);
 		
-		registerRender(mystic_block_normal);
-		registerRender(mystic_block);
-		registerRender(InitBlocksEA.mystic_block, 0, "gem/mystic/mystic_block_white");
-		registerRender(InitBlocksEA.mystic_block, 1, "gem/mystic/mystic_block_orange");
-		registerRender(InitBlocksEA.mystic_block, 2, "gem/mystic/mystic_block_magenta");
-		registerRender(InitBlocksEA.mystic_block, 3, "gem/mystic/mystic_block_lightblue");
-		registerRender(InitBlocksEA.mystic_block, 4, "gem/mystic/mystic_block_yellow");
-		registerRender(InitBlocksEA.mystic_block, 5, "gem/mystic/mystic_block_lime");
-		registerRender(InitBlocksEA.mystic_block, 6, "gem/mystic/mystic_block_pink");
-		registerRender(InitBlocksEA.mystic_block, 7, "gem/mystic/mystic_block_gray");
-		registerRender(InitBlocksEA.mystic_block, 8, "gem/mystic/mystic_block_lightgray");
-		registerRender(InitBlocksEA.mystic_block, 9, "gem/mystic/mystic_block_cyan");
-		registerRender(InitBlocksEA.mystic_block, 10, "gem/mystic/mystic_block_purple");
-		registerRender(InitBlocksEA.mystic_block, 11, "gem/mystic/mystic_block_blue");
-		registerRender(InitBlocksEA.mystic_block, 12, "gem/mystic/mystic_block_brown");
-		registerRender(InitBlocksEA.mystic_block, 13, "gem/mystic/mystic_block_green");
-		registerRender(InitBlocksEA.mystic_block, 14, "gem/mystic/mystic_block_red");
-		registerRender(InitBlocksEA.mystic_block, 15, "gem/mystic/mystic_block_black");
-		
 		registerRender(cobble_mystic_block_normal);
-		registerRender(cobble_mystic_block);
-		registerRender(InitBlocksEA.cobble_mystic_block, 0, "gem/mystic/cobble_mystic_block_white");
-		registerRender(InitBlocksEA.cobble_mystic_block, 1, "gem/mystic/cobble_mystic_block_orange");
-		registerRender(InitBlocksEA.cobble_mystic_block, 2, "gem/mystic/cobble_mystic_block_magenta");
-		registerRender(InitBlocksEA.cobble_mystic_block, 3, "gem/mystic/cobble_mystic_block_lightblue");
-		registerRender(InitBlocksEA.cobble_mystic_block, 4, "gem/mystic/cobble_mystic_block_yellow");
-		registerRender(InitBlocksEA.cobble_mystic_block, 5, "gem/mystic/cobble_mystic_block_lime");
-		registerRender(InitBlocksEA.cobble_mystic_block, 6, "gem/mystic/cobble_mystic_block_pink");
-		registerRender(InitBlocksEA.cobble_mystic_block, 7, "gem/mystic/cobble_mystic_block_gray");
-		registerRender(InitBlocksEA.cobble_mystic_block, 8, "gem/mystic/cobble_mystic_block_lightgray");
-		registerRender(InitBlocksEA.cobble_mystic_block, 9, "gem/mystic/cobble_mystic_block_cyan");
-		registerRender(InitBlocksEA.cobble_mystic_block, 10, "gem/mystic/cobble_mystic_block_purple");
-		registerRender(InitBlocksEA.cobble_mystic_block, 11, "gem/mystic/cobble_mystic_block_blue");
-		registerRender(InitBlocksEA.cobble_mystic_block, 12, "gem/mystic/cobble_mystic_block_brown");
-		registerRender(InitBlocksEA.cobble_mystic_block, 13, "gem/mystic/cobble_mystic_block_green");
-		registerRender(InitBlocksEA.cobble_mystic_block, 14, "gem/mystic/cobble_mystic_block_red");
-		registerRender(InitBlocksEA.cobble_mystic_block, 15, "gem/mystic/cobble_mystic_block_black");
+		registerRender(cobble_mystic_block_glass);
+		registerRender(cobble_mystic_block_white);
+		registerRender(cobble_mystic_block_orange);
+		registerRender(cobble_mystic_block_magenta);
+		registerRender(cobble_mystic_block_lightblue);
+		registerRender(cobble_mystic_block_yellow);
+		registerRender(cobble_mystic_block_lime);
+		registerRender(cobble_mystic_block_pink);
+		registerRender(cobble_mystic_block_gray);
+		registerRender(cobble_mystic_block_lightgray);
+		registerRender(cobble_mystic_block_cyan);
+		registerRender(cobble_mystic_block_purple);
+		registerRender(cobble_mystic_block_blue);
+		registerRender(cobble_mystic_block_brown);
+		registerRender(cobble_mystic_block_green);
+		registerRender(cobble_mystic_block_red);
+		registerRender(cobble_mystic_block_black);
+		
+		registerRender(mystic_block_normal);
+		registerRender(mystic_block_glass);
+		registerRender(mystic_block_white);
+		registerRender(mystic_block_orange);
+		registerRender(mystic_block_magenta);
+		registerRender(mystic_block_lightblue);
+		registerRender(mystic_block_yellow);
+		registerRender(mystic_block_lime);
+		registerRender(mystic_block_pink);
+		registerRender(mystic_block_gray);
+		registerRender(mystic_block_lightgray);
+		registerRender(mystic_block_cyan);
+		registerRender(mystic_block_purple);
+		registerRender(mystic_block_blue);
+		registerRender(mystic_block_brown);
+		registerRender(mystic_block_green);
+		registerRender(mystic_block_red);
+		registerRender(mystic_block_black);
+		
+		registerRender(wood_mystic_block_normal);
+		registerRender(wood_mystic_block_glass);
+		registerRender(wood_mystic_block_white);
+		registerRender(wood_mystic_block_orange);
+		registerRender(wood_mystic_block_magenta);
+		registerRender(wood_mystic_block_lightblue);
+		registerRender(wood_mystic_block_yellow);
+		registerRender(wood_mystic_block_lime);
+		registerRender(wood_mystic_block_pink);
+		registerRender(wood_mystic_block_gray);
+		registerRender(wood_mystic_block_lightgray);
+		registerRender(wood_mystic_block_cyan);
+		registerRender(wood_mystic_block_purple);
+		registerRender(wood_mystic_block_blue);
+		registerRender(wood_mystic_block_brown);
+		registerRender(wood_mystic_block_green);
+		registerRender(wood_mystic_block_red);
+		registerRender(wood_mystic_block_black);
 		
 		registerRender(draconium_block);
 		registerRender(velious_block);
@@ -201,6 +176,16 @@ public final class InitBlocksEARender extends BlocksEA {
 		registerRender(glowstone_torch);
 		registerRender(ebonheart_torch);
 		
+		registerRender(draconium_trapdoor);
+		registerRender(velious_trapdoor);
+		registerRender(arcanite_trapdoor);
+		registerRender(katcheen_trapdoor);
+		registerRender(necrocite_trapdoor);
+		registerRender(soularite_trapdoor);
+		registerRender(ebonheart_trapdoor);
+		registerRender(obsidian_trapdoor);
+		registerRender(glowstone_trapdoor);
+		
 		//registerRender(draconium_door);
 		//registerRender(velious_door);
 		//registerRender(arcanite_door);
@@ -231,6 +216,11 @@ public final class InitBlocksEARender extends BlocksEA {
 		registerRender(paper_block);
 		registerRender(leather_block);
 		registerRender(reed_block);
+		
+		registerRender(hellion_fruit);
+		registerRender(sacred_fruit);
+		registerRender(dragon_fruit);
+		
 	}
 	
 	public static void registerSpecialRenders()
@@ -244,7 +234,7 @@ public final class InitBlocksEARender extends BlocksEA {
 	public static void registerRender(Block block)
 	{
 		Item item = Item.getItemFromBlock(block);
-		Minecraft.getMinecraft().getRenderItem().getItemModelMesher().register(item, 0, new ModelResourceLocation(Reference.MOD_ID + ":" + item.getUnlocalizedName().substring(5), "inventory"));
+		Minecraft.getMinecraft().getRenderItem().getItemModelMesher().register(item, 0, new ModelResourceLocation(block.getRegistryName().toString(), "inventory"));
 	}
 	
 	public static void registerRender(Block block, int meta, String file) 

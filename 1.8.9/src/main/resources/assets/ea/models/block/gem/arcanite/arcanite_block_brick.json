@@ -1,4 +1,5 @@
 {
+    "parent": "block/cube_all",
     "ambientocclusion": false,
     "textures": {
         "particle": "ea:blocks/gems/arcanite/arcanite_block_brick",

@@ -1,0 +1,12 @@
+{
+    "parent": "block/cube",
+    "textures": {
+        "particle": "ea:blocks/gems/mystic/wood/wood_mystic_block_top_white",
+        "down": "ea:blocks/gems/mystic/wood/wood_mystic_block_top_white",
+        "up": "ea:blocks/gems/mystic/wood/wood_mystic_block_top_white",
+        "north": "ea:blocks/gems/mystic/wood/wood_mystic_block_back_white",
+        "east": "ea:blocks/gems/mystic/wood/wood_mystic_block_side_white",
+        "south": "ea:blocks/gems/mystic/wood/wood_mystic_block_front_white",
+        "west": "ea:blocks/gems/mystic/wood/wood_mystic_block_side_white"
+    }
+}

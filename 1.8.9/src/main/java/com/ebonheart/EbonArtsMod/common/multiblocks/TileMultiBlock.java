@@ -3,9 +3,7 @@ package com.ebonheart.EbonArtsMod.common.multiblocks;
 import net.minecraft.nbt.NBTTagCompound;
 import net.minecraft.tileentity.TileEntity;
 
-public class TileMultiBlock extends TileEntity 
-{
-	
+public class TileMultiBlock extends TileEntity {
 	
 	private boolean hasMaster, isMaster;
     private int masterX, masterY, masterZ;
@@ -18,7 +16,7 @@ public class TileMultiBlock extends TileEntity
     }
 
     @Override
-    public void writeToNBT(NBTTagCompound data) 
+    public NBTTagCompound writeToNBT(NBTTagCompound data) 
     {
         super.writeToNBT(data);
         data.setInteger("masterX", masterX);
@@ -30,6 +28,7 @@ public class TileMultiBlock extends TileEntity
         {
             // Any other values should ONLY BE SAVED TO THE MASTER
         }
+		return data;
     }
 
     @Override

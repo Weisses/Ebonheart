@@ -1,8 +1,6 @@
 {
     "variants": {
-        "half=bottom,variant=false": { "model": "ea:slab/katcheen/half_katcheen_slab" },
-        "half=top,variant=false": { "model": "ea:slab/katcheen/upper_katcheen_slab" },
-        "half=bottom,variant=true": { "model": "ea:slab/katcheen/half_katcheen_slab" },
-        "half=top,variant=true": { "model": "ea:slab/katcheen/upper_katcheen_slab" }
+        "half=bottom,variant=stone": { "model": "ea:slab/katcheen/half_katcheen_slab" },
+        "half=top,variant=stone": { "model": "ea:slab/katcheen/upper_katcheen_slab" }
     }
 }

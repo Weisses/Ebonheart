@@ -53,14 +53,14 @@ public class ItemDoor extends Item
             }
             else
             {
-                placeDoor(worldIn, pos, EnumFacing.fromAngle((double)playerIn.rotationYaw), this.block);
+                placeDoor(worldIn, pos, EnumFacing.fromAngle((double)playerIn.rotationYaw), this.block, iblockstate);
                 --stack.stackSize;
                 return true;
             }
         }
     }
 
-    public static void placeDoor(World worldIn, BlockPos pos, EnumFacing facing, Block door)
+    public static void placeDoor(World worldIn, BlockPos pos, EnumFacing facing, Block door, IBlockState state)
     {
         BlockPos blockpos1 = pos.offset(facing.rotateY());
         BlockPos blockpos2 = pos.offset(facing.rotateYCCW());

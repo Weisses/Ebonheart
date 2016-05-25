@@ -5,6 +5,7 @@ import java.util.Random;
 
 import com.ebonheart.EbonArtsMod.EbonArtsMod;
 import com.ebonheart.EbonArtsMod.common.items.ItemHelper;
+import com.ebonheart.EbonArtsMod.common.items.WeaponHelper;
 import com.ebonheart.EbonArtsMod.init.InitItemsEA;
 
 import net.minecraft.entity.EntityLivingBase;
@@ -13,18 +14,17 @@ import net.minecraft.item.EnumRarity;
 import net.minecraft.item.ItemStack;
 import net.minecraft.item.ItemSword;
 import net.minecraft.potion.Potion;
-import net.minecraft.util.EnumChatFormatting;
+import net.minecraft.util.text.TextFormatting;
 import net.minecraft.world.World;
 import net.minecraftforge.fml.relauncher.Side;
 import net.minecraftforge.fml.relauncher.SideOnly;
 
 public class ItemSouleater extends ItemSword {
 
-	public ItemSouleater(String unlocalizedName, ToolMaterial material) 
+	public ItemSouleater(ToolMaterial material) 
 	{
 		super(material);
-		this.setUnlocalizedName(unlocalizedName);
-		this.setCreativeTab(EbonArtsMod.tabEbonArtsItems);
+		ItemHelper.setItemName(this, "tool/souleater");
 	}
 	
 	public boolean hitEntity(ItemStack stack, EntityLivingBase target, EntityLivingBase attacker)
@@ -37,8 +37,9 @@ public class ItemSouleater extends ItemSword {
 			EntityPlayer playerIn = attacker.getEntityWorld().getPlayerEntityByUUID(attacker.getUniqueID());
 			int heal = rand.nextInt(3) + 1;
 			attacker.heal(heal);
-			Potion potion = Potion.absorption;
-			ItemHelper.addPotionEffectToTarget(playerIn, potion, 4, 0);
+			Potion potion = Potion.getPotionById(22);
+					//.absorption;
+			WeaponHelper.addPotionEffectToTarget(playerIn, potion, 4, 0);
 		
 			if(!playerIn.capabilities.isCreativeMode)
 			{
@@ -50,12 +51,12 @@ public class ItemSouleater extends ItemSword {
 	
 	@SideOnly(Side.CLIENT)
     public void addInformation(ItemStack stack, EntityPlayer playerIn, List toolTip, boolean advanced) {
-		toolTip.add(EnumChatFormatting.DARK_PURPLE + "\"Pain and suffering can");
-		toolTip.add(EnumChatFormatting.DARK_PURPLE + "heal all wounds.\"");
+		toolTip.add(TextFormatting.DARK_PURPLE + "\"Pain and suffering can");
+		toolTip.add(TextFormatting.DARK_PURPLE + "heal all wounds.\"");
 		toolTip.add(" ");
-		toolTip.add(EnumChatFormatting.GOLD + "25% chance on hit:");
-		toolTip.add(EnumChatFormatting.GREEN + "Self - Heal for 1/2 to 1 1/2 hearts.");
-		toolTip.add(EnumChatFormatting.GREEN + "Self - Absorption for 4 seconds.");
+		toolTip.add(TextFormatting.GOLD + "25% chance on hit:");
+		toolTip.add(TextFormatting.GREEN + "Self - Heal for 1/2 to 1 1/2 hearts.");
+		toolTip.add(TextFormatting.GREEN + "Self - Absorption for 4 seconds.");
 	}
 	
 	public EnumRarity getRarity(ItemStack stack)

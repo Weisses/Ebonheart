@@ -1,7 +1,7 @@
 package com.ebonheart.EbonArtsMod.common.tileentities;
 
 import com.ebonheart.EbonArtsMod.EbonArtsMod;
-import com.ebonheart.EbonArtsMod.api.GuiHandler;
+import com.ebonheart.EbonArtsMod.common.utils.gui.GuiHandler;
 
 import net.minecraft.block.BlockContainer;
 import net.minecraft.block.material.Material;
@@ -11,14 +11,14 @@ import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.inventory.InventoryHelper;
 import net.minecraft.item.ItemStack;
 import net.minecraft.tileentity.TileEntity;
-import net.minecraft.util.BlockPos;
+import net.minecraft.util.math.BlockPos;
 import net.minecraft.util.EnumFacing;
 import net.minecraft.world.World;
 
 public class TestBlockTileEntity extends BlockContainer {
 
 	public TestBlockTileEntity(String unlocalizedName) {
-		super(Material.iron);
+		super(Material.IRON);
 		this.setUnlocalizedName(unlocalizedName);
 		this.setCreativeTab(EbonArtsMod.tabEbonArtsBlocks);
 		this.setHardness(2.0f);
@@ -46,7 +46,7 @@ public class TestBlockTileEntity extends BlockContainer {
 		}
 	}
 	
-	@Override
+	//@Override
 	public boolean onBlockActivated(World world, BlockPos pos, IBlockState state, EntityPlayer player, EnumFacing side, float hitX, float hitY, float hitZ) {
 		if (!world.isRemote) {
 			player.openGui(EbonArtsMod.instance, GuiHandler.TEST_TILE_ENTITY_GUI, world, pos.getX(), pos.getY(), pos.getZ());
@@ -54,7 +54,7 @@ public class TestBlockTileEntity extends BlockContainer {
 		return true;
 	}
 
-	@Override
+	//@Override
 	public int getRenderType() {
 		return 3;
 	}

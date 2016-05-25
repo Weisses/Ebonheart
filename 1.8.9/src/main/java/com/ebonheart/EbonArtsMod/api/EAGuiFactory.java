@@ -2,6 +2,8 @@ package com.ebonheart.EbonArtsMod.api;
 
 import java.util.Set;
 
+import com.ebonheart.EbonArtsMod.common.utils.gui.ConfigGui;
+
 import net.minecraft.client.Minecraft;
 import net.minecraft.client.gui.GuiScreen;
 import net.minecraftforge.fml.client.IModGuiFactory;

@@ -1,6 +1,6 @@
 {
     "variants": {
-        "variant=false": { "model": "ea:slab/ebonheart/full_ebonheart_slab" },
-        "variant=true":    { "model": "ea:slab/ebonheart/full_ebonheart_slab" }
+        "seamless=false,variant=stone": { "model": "ea:slab/ebonheart/full_ebonheart_slab" },
+        "seamless=true,variant=stone":    { "model": "ea:slab/ebonheart/full_ebonheart_slab" }
     }
 }
