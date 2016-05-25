@@ -1,0 +1,12 @@
+{
+    "parent": "block/cube",
+    "textures": {
+        "particle": "ea:blocks/gems/mystic/cobblestone/cobble_mystic_block_top_normal",
+        "down": "ea:blocks/gems/mystic/cobblestone/cobble_mystic_block_top_normal",
+        "up": "ea:blocks/gems/mystic/cobblestone/cobble_mystic_block_top_normal",
+        "north": "ea:blocks/gems/mystic/cobblestone/cobble_mystic_block_side_normal",
+        "east": "ea:blocks/gems/mystic/cobblestone/cobble_mystic_block_side_normal",
+        "south": "ea:blocks/gems/mystic/cobblestone/cobble_mystic_block_side_normal",
+        "west": "ea:blocks/gems/mystic/cobblestone/cobble_mystic_block_side_normal"
+    }
+}
