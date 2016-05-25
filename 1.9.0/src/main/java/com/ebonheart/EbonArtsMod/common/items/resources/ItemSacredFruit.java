@@ -89,8 +89,8 @@ public class ItemSacredFruit extends ItemFood implements IPlantable {
     @SideOnly(Side.CLIENT)
     public void addInformation(ItemStack stack, EntityPlayer playerIn, List toolTip, boolean advanced) 
 	{
-		toolTip.add(TextFormatting.GOLD + "A sacred fruit that");
-		toolTip.add(TextFormatting.GOLD + "makes a healthy meal.");
+    	toolTip.add(TextFormatting.DARK_AQUA + "A divine fruit that");
+		toolTip.add(TextFormatting.DARK_AQUA + "keeps you going.");
 	}
 	
     //@SideOnly(Side.CLIENT)
@@ -101,7 +101,7 @@ public class ItemSacredFruit extends ItemFood implements IPlantable {
     
 	public EnumRarity getRarity(ItemStack stack)
     {
-        return EnumRarity.UNCOMMON;
+        return EnumRarity.RARE;
     }
 	
 }

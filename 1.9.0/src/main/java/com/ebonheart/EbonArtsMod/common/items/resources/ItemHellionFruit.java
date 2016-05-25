@@ -99,8 +99,8 @@ public class ItemHellionFruit extends ItemFood implements IPlantable {
     @SideOnly(Side.CLIENT)
     public void addInformation(ItemStack stack, EntityPlayer playerIn, List toolTip, boolean advanced) 
 	{
-		toolTip.add(TextFormatting.GOLD + "A hellish fruit that");
-		toolTip.add(TextFormatting.GOLD + "makes a healthy meal.");
+		toolTip.add(TextFormatting.DARK_AQUA + "An unholy fruit that");
+		toolTip.add(TextFormatting.DARK_AQUA + "fortifies you.");
 	}
 	
     //@SideOnly(Side.CLIENT)
@@ -111,7 +111,7 @@ public class ItemHellionFruit extends ItemFood implements IPlantable {
     
 	public EnumRarity getRarity(ItemStack stack)
     {
-        return EnumRarity.UNCOMMON;
+        return EnumRarity.RARE;
     }
 	
 }
