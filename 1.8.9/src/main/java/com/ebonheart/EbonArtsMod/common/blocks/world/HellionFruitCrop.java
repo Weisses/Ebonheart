@@ -46,8 +46,11 @@ public class HellionFruitCrop extends BlockCrops{
     //}
     
     @SideOnly(Side.CLIENT)
-    public void randomDisplayTick(IBlockState state, World worldIn, BlockPos pos, Random rand)
+    public void randomDisplayTick(World worldIn, BlockPos pos, IBlockState state, Random rand)
     {
+    //@SideOnly(Side.CLIENT)
+    //public void randomDisplayTick(IBlockState state, World worldIn, BlockPos pos, Random rand)
+    //{
     	
     	if(worldIn.getLight(pos) >= 8 || worldIn.canSeeSky(pos))
     	{
