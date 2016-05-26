@@ -7,6 +7,7 @@ import com.ebonheart.EbonArtsMod.EbonArtsMod;
 import com.ebonheart.EbonArtsMod.common.items.ItemHelper;
 import com.ebonheart.EbonArtsMod.common.items.WeaponHelper;
 import com.ebonheart.EbonArtsMod.init.InitItemsEA;
+import com.mojang.realmsclient.gui.ChatFormatting;
 
 import net.minecraft.entity.EntityLivingBase;
 import net.minecraft.entity.player.EntityPlayer;
@@ -14,7 +15,6 @@ import net.minecraft.item.EnumRarity;
 import net.minecraft.item.ItemStack;
 import net.minecraft.item.ItemSword;
 import net.minecraft.potion.Potion;
-import net.minecraft.util.text.TextFormatting;
 import net.minecraft.world.World;
 import net.minecraftforge.fml.relauncher.Side;
 import net.minecraftforge.fml.relauncher.SideOnly;
@@ -37,7 +37,7 @@ public class ItemSouleater extends ItemSword {
 			EntityPlayer playerIn = attacker.getEntityWorld().getPlayerEntityByUUID(attacker.getUniqueID());
 			int heal = rand.nextInt(3) + 1;
 			attacker.heal(heal);
-			Potion potion = Potion.getPotionById(22);
+			Potion potion = Potion.absorption;
 					//.absorption;
 			WeaponHelper.addPotionEffectToTarget(playerIn, potion, 4, 0);
 		
@@ -51,12 +51,12 @@ public class ItemSouleater extends ItemSword {
 	
 	@SideOnly(Side.CLIENT)
     public void addInformation(ItemStack stack, EntityPlayer playerIn, List toolTip, boolean advanced) {
-		toolTip.add(TextFormatting.DARK_PURPLE + "\"Pain and suffering can");
-		toolTip.add(TextFormatting.DARK_PURPLE + "heal all wounds.\"");
+		toolTip.add(ChatFormatting.DARK_PURPLE + "\"Pain and suffering can");
+		toolTip.add(ChatFormatting.DARK_PURPLE + "heal all wounds.\"");
 		toolTip.add(" ");
-		toolTip.add(TextFormatting.GOLD + "25% chance on hit:");
-		toolTip.add(TextFormatting.GREEN + "Self - Heal for 1/2 to 1 1/2 hearts.");
-		toolTip.add(TextFormatting.GREEN + "Self - Absorption for 4 seconds.");
+		toolTip.add(ChatFormatting.GOLD + "25% chance on hit:");
+		toolTip.add(ChatFormatting.GREEN + "Self - Heal for 1/2 to 1 1/2 hearts.");
+		toolTip.add(ChatFormatting.GREEN + "Self - Absorption for 4 seconds.");
 	}
 	
 	public EnumRarity getRarity(ItemStack stack)

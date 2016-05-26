@@ -7,7 +7,6 @@ import com.ebonheart.EbonArtsMod.init.InitItemsEA;
 import net.minecraft.entity.SharedMonsterAttributes;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.init.Items;
-import net.minecraft.inventory.EntityEquipmentSlot;
 import net.minecraft.item.ItemStack;
 import net.minecraft.util.EnumParticleTypes;
 import net.minecraftforge.fml.common.eventhandler.SubscribeEvent;

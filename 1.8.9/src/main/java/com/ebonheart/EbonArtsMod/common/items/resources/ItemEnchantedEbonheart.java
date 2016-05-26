@@ -5,24 +5,18 @@ import java.util.List;
 import com.ebonheart.EbonArtsMod.EbonArtsMod;
 import com.ebonheart.EbonArtsMod.common.entity.EntityEnchantedEbonheart;
 import com.ebonheart.EbonArtsMod.common.items.ItemHelper;
+import com.mojang.realmsclient.gui.ChatFormatting;
 
 import net.minecraft.block.BlockJukebox;
 import net.minecraft.block.state.IBlockState;
 import net.minecraft.entity.item.EntityExpBottle;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.init.Blocks;
-import net.minecraft.init.SoundEvents;
 import net.minecraft.item.EnumRarity;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
 import net.minecraft.stats.StatList;
-import net.minecraft.util.ActionResult;
-import net.minecraft.util.EnumActionResult;
 import net.minecraft.util.EnumFacing;
-import net.minecraft.util.EnumHand;
-import net.minecraft.util.SoundCategory;
-import net.minecraft.util.math.BlockPos;
-import net.minecraft.util.text.TextFormatting;
 import net.minecraft.world.World;
 import net.minecraftforge.fml.relauncher.Side;
 import net.minecraftforge.fml.relauncher.SideOnly;
@@ -38,9 +32,9 @@ public class ItemEnchantedEbonheart extends Item {
 	@SideOnly(Side.CLIENT)
     public void addInformation(ItemStack stack, EntityPlayer playerIn, List toolTip, boolean advanced) 
 	{
-		toolTip.add(TextFormatting.DARK_AQUA + "A powerful item containing ancient knowledge.");
-		toolTip.add(TextFormatting.DARK_AQUA + "Hold " + TextFormatting.WHITE + "[Shift + Right-Click]" + TextFormatting.DARK_AQUA + " to throw this");
-		toolTip.add(TextFormatting.DARK_AQUA + "item and unleash the experience within.");
+		toolTip.add(ChatFormatting.DARK_AQUA + "A powerful item containing ancient knowledge.");
+		toolTip.add(ChatFormatting.DARK_AQUA + "Hold " + ChatFormatting.WHITE + "[Shift + Right-Click]" + ChatFormatting.DARK_AQUA + " to throw this");
+		toolTip.add(ChatFormatting.DARK_AQUA + "item and unleash the experience within.");
 	}
 	
 	@SideOnly(Side.CLIENT)
@@ -50,7 +44,7 @@ public class ItemEnchantedEbonheart extends Item {
     }
 	
 	
-	public ActionResult<ItemStack> onItemRightClick(ItemStack itemStackIn, World worldIn, EntityPlayer playerIn, EnumHand hand)
+	public ItemStack onItemRightClick(ItemStack itemStackIn, World worldIn, EntityPlayer playerIn)
     {
 		if(playerIn.isSneaking())
 		{
@@ -59,25 +53,27 @@ public class ItemEnchantedEbonheart extends Item {
 				--itemStackIn.stackSize;
 			}
 
-			worldIn.playSound((EntityPlayer)null, playerIn.posX, playerIn.posY, playerIn.posZ, SoundEvents.ENTITY_EXPERIENCE_BOTTLE_THROW, SoundCategory.NEUTRAL, 0.5F, 0.4F / (itemRand.nextFloat() * 0.4F + 0.8F));
+			worldIn.playSoundAtEntity(playerIn, "random.bow", 0.5F, 0.4F / (itemRand.nextFloat() * 0.4F + 0.8F));
 
 			if (!worldIn.isRemote)
 			{
 				//EntityEnchantedEbonheart
         	
-				EntityEnchantedEbonheart entityenchantedebonheart = new EntityEnchantedEbonheart(worldIn, playerIn);
-				entityenchantedebonheart.setHeadingFromThrower(playerIn, playerIn.rotationPitch, playerIn.rotationYaw, -20.0F, 0.7F, 1.0F);
-				worldIn.spawnEntityInWorld(entityenchantedebonheart);
+				worldIn.spawnEntityInWorld(new EntityEnchantedEbonheart(worldIn, playerIn));
+				
+				//EntityEnchantedEbonheart entityenchantedebonheart = new EntityEnchantedEbonheart(worldIn, playerIn);
+				//entityenchantedebonheart.setHeadingFromThrower(playerIn, playerIn.rotationPitch, playerIn.rotationYaw, -20.0F, 0.7F, 1.0F);
+				//worldIn.spawnEntityInWorld(entityenchantedebonheart);
         	
         	//EntityExpBottle entityexpbottle = new EntityExpBottle(worldIn, playerIn);
             //entityexpbottle.func_184538_a(playerIn, playerIn.rotationPitch, playerIn.rotationYaw, -20.0F, 0.7F, 1.0F);
             //worldIn.spawnEntityInWorld(entityexpbottle);
 			}
 
-			playerIn.addStat(StatList.getObjectUseStats(this));
-			return new ActionResult(EnumActionResult.SUCCESS, itemStackIn);
+			playerIn.triggerAchievement(StatList.objectUseStats[Item.getIdFromItem(this)]);
+			return itemStackIn;
 		}
-		return new ActionResult(EnumActionResult.SUCCESS, itemStackIn);
+		return itemStackIn;
     }
 	
 	//@Override

@@ -1,5 +1,4 @@
 {
-    "parent": "block/cube_all",
     "ambientocclusion": false,
     "textures": {
         "particle": "ea:blocks/gems/katcheen/katcheen_block_brick",

@@ -347,13 +347,13 @@ achievement.ea:consecration.desc=Craft the legendary tool, Consecration.
 
 
 //-----Music Discs-----
-item.record.ea:disc/glowing_disc.desc=Island
-item.record.ea:disc/shimmering_disc.desc=Dire
-item.record.ea:disc/laminate_disc.desc=Marble
-item.record.ea:disc/resilient_disc.desc=Strength
-item.record.ea:disc/dismal_disc.desc=Castle
-item.record.ea:disc/ethereal_disc.desc=Timescar
-item.record.ea:disc/mirroring_disc.desc=Lost Woods
+item.ea:disc/glowing_disc.desc=Island
+item.ea:disc/shimmering_disc.desc=Dire
+item.ea:disc/laminate_disc.desc=Marble
+item.ea:disc/resilient_disc.desc=Strength
+item.ea:disc/dismal_disc.desc=Castle
+item.ea:disc/ethereal_disc.desc=Timescar
+item.ea:disc/mirroring_disc.desc=Lost Woods
 
 
 

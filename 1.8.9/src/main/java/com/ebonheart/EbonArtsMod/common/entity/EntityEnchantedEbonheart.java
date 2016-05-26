@@ -6,9 +6,9 @@ import net.minecraft.client.Minecraft;
 import net.minecraft.entity.EntityLivingBase;
 import net.minecraft.entity.item.EntityXPOrb;
 import net.minecraft.entity.projectile.EntityThrowable;
-import net.minecraft.util.math.BlockPos;
-import net.minecraft.util.math.RayTraceResult;
+import net.minecraft.util.BlockPos;
 import net.minecraft.util.EnumParticleTypes;
+import net.minecraft.util.MovingObjectPosition;
 import net.minecraft.world.World;
 import net.minecraftforge.fml.relauncher.Side;
 import net.minecraftforge.fml.relauncher.SideOnly;
@@ -51,7 +51,7 @@ public class EntityEnchantedEbonheart extends EntityThrowable {
     /** 
      * Called when this EntityThrowable hits a block or entity.
      */
-    protected void onImpact(RayTraceResult result)
+    protected void onImpact(MovingObjectPosition result)
     {
     	if (this.worldObj.isRemote)
     	{
@@ -62,7 +62,7 @@ public class EntityEnchantedEbonheart extends EntityThrowable {
     	}
         if (!this.worldObj.isRemote)
         {
-        	this.worldObj.playEvent(2002, new BlockPos(this), 0);
+        	this.worldObj.playAuxSFX(2002, new BlockPos(this), 0);
             int i = 3 + this.worldObj.rand.nextInt(15) + this.worldObj.rand.nextInt(15);
             
             while (i > 0)

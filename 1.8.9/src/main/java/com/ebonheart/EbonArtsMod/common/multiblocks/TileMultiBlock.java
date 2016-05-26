@@ -16,7 +16,7 @@ public class TileMultiBlock extends TileEntity {
     }
 
     @Override
-    public NBTTagCompound writeToNBT(NBTTagCompound data) 
+    public void writeToNBT(NBTTagCompound data) 
     {
         super.writeToNBT(data);
         data.setInteger("masterX", masterX);
@@ -28,7 +28,7 @@ public class TileMultiBlock extends TileEntity {
         {
             // Any other values should ONLY BE SAVED TO THE MASTER
         }
-		return data;
+		
     }
 
     @Override

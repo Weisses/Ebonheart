@@ -1,6 +1,6 @@
 {
     "variants": {
-        "seamless=false,variant=stone": { "model": "ea:slab/draconium/full_draconium_slab" },
-        "seamless=true,variant=stone":    { "model": "ea:slab/draconium/full_draconium_slab" }
+        "variant=false": { "model": "ea:slab/draconium/full_draconium_slab" },
+        "variant=true":    { "model": "ea:slab/draconium/full_draconium_slab" }
     }
 }

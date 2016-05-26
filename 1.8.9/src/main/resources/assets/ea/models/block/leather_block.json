@@ -1,5 +1,4 @@
 {
-    "parent": "block/cube_all",
     "ambientocclusion": false,
     "textures": {
         "particle": "ea:blocks/leather_block_top",

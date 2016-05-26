@@ -39,7 +39,10 @@ public class EABlockTorchArcanite extends BlockTorch {
 	    }
 	    
 	    @SideOnly(Side.CLIENT)
-	    public void randomDisplayTick(IBlockState worldIn, World pos, BlockPos state, Random rand)
+	    public void randomDisplayTick(
+	    		//IBlockState worldIn, World pos, BlockPos state, Random rand
+	    		World pos, BlockPos state, IBlockState worldIn, Random rand
+	    		)
 	    {
 	        EnumFacing enumfacing = (EnumFacing)worldIn.getValue(FACING);
 	        double d0 = (double)state.getX() + 0.5D;

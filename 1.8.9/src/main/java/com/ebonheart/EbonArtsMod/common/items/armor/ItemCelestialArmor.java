@@ -9,14 +9,12 @@ import com.ebonheart.EbonArtsMod.common.items.MaterialHelper;
 import com.ebonheart.EbonArtsMod.common.items.ItemHelper;
 import com.ebonheart.EbonArtsMod.configs.EbonArtsConfiguration;
 import com.ebonheart.EbonArtsMod.init.InitItemsEA;
+import com.mojang.realmsclient.gui.ChatFormatting;
 
 import net.minecraft.client.Minecraft;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.entity.player.PlayerCapabilities;
 import net.minecraft.init.Items;
-import net.minecraft.init.MobEffects;
-import net.minecraft.init.SoundEvents;
-import net.minecraft.inventory.EntityEquipmentSlot;
 import net.minecraft.item.EnumRarity;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemArmor;
@@ -26,12 +24,7 @@ import net.minecraft.entity.SharedMonsterAttributes;
 import net.minecraft.item.ItemStack;
 import net.minecraft.potion.Potion;
 import net.minecraft.potion.PotionEffect;
-import net.minecraft.util.ActionResult;
-import net.minecraft.util.EnumActionResult;
-import net.minecraft.util.EnumHand;
 import net.minecraft.util.EnumParticleTypes;
-import net.minecraft.util.SoundEvent;
-import net.minecraft.util.text.TextFormatting;
 import net.minecraft.world.World;
 import net.minecraftforge.client.ForgeHooksClient;
 import net.minecraftforge.fml.relauncher.Side;
@@ -46,7 +39,7 @@ public class ItemCelestialArmor extends ItemArmor {
 	
 	Random random = new Random();
 	
-	public ItemCelestialArmor(String unlocalizedName, int renderIndexIn, EntityEquipmentSlot equipmentSlotIn)
+	public ItemCelestialArmor(String unlocalizedName, int renderIndexIn, int equipmentSlotIn)
 	{
 		super(MaterialHelper.CELESTIAL, renderIndexIn, equipmentSlotIn);
 		
@@ -62,12 +55,12 @@ public class ItemCelestialArmor extends ItemArmor {
 	@SideOnly(Side.CLIENT)
     public void addInformation(ItemStack stack, EntityPlayer playerIn, List toolTip, boolean advanced) 
 	{
-		toolTip.add(TextFormatting.DARK_PURPLE + "Divine armor with the soul");
-		toolTip.add(TextFormatting.DARK_PURPLE + "of an Archangel.");
+		toolTip.add(ChatFormatting.DARK_PURPLE + "Divine armor with the soul");
+		toolTip.add(ChatFormatting.DARK_PURPLE + "of an Archangel.");
 		toolTip.add(" ");
-		toolTip.add(TextFormatting.WHITE + "Set Bonus:");
-		toolTip.add(TextFormatting.GREEN + "Ability - Flight.");
-		toolTip.add(TextFormatting.GREEN + "Ability - Safe Fall.");
+		toolTip.add(ChatFormatting.WHITE + "Set Bonus:");
+		toolTip.add(ChatFormatting.GREEN + "Ability - Flight.");
+		toolTip.add(ChatFormatting.GREEN + "Ability - Safe Fall.");
 		//toolTip.add(TextFormatting.GREEN + "Speed increased by 120%");
 	}
 	
@@ -79,10 +72,10 @@ public class ItemCelestialArmor extends ItemArmor {
 	@Override
 	public void onArmorTick(World world, EntityPlayer player, ItemStack itemStack) 
 	{
-		if (player.getItemStackFromSlot(EntityEquipmentSlot.HEAD) != null && player.getItemStackFromSlot(EntityEquipmentSlot.HEAD).getItem() == InitItemsEA.celestial_helmet
-			&& player.getItemStackFromSlot(EntityEquipmentSlot.CHEST) != null && player.getItemStackFromSlot(EntityEquipmentSlot.CHEST).getItem() == InitItemsEA.celestial_chestplate
-			&& player.getItemStackFromSlot(EntityEquipmentSlot.LEGS) != null && player.getItemStackFromSlot(EntityEquipmentSlot.LEGS).getItem() == InitItemsEA.celestial_leggings
-			&& player.getItemStackFromSlot(EntityEquipmentSlot.FEET) != null && player.getItemStackFromSlot(EntityEquipmentSlot.FEET).getItem() == InitItemsEA.celestial_boots) 
+		if (player.inventory.armorItemInSlot(3) != null && player.inventory.armorItemInSlot(3).getItem() == InitItemsEA.celestial_helmet
+			&& player.inventory.armorItemInSlot(2) != null && player.inventory.armorItemInSlot(2).getItem() == InitItemsEA.celestial_chestplate
+			&& player.inventory.armorItemInSlot(1) != null && player.inventory.armorItemInSlot(1).getItem() == InitItemsEA.celestial_leggings
+			&& player.inventory.armorItemInSlot(0) != null && player.inventory.armorItemInSlot(0).getItem() == InitItemsEA.celestial_boots) 
 		{
 			
 			if (!player.capabilities.isCreativeMode)

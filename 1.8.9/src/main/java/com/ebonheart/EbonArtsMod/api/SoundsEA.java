@@ -1,6 +1,8 @@
 package com.ebonheart.EbonArtsMod.api;
 
-import net.minecraft.util.SoundEvent;
+import net.minecraftforge.client.event.sound.SoundEvent;
+
+
 
 public class SoundsEA {
 	

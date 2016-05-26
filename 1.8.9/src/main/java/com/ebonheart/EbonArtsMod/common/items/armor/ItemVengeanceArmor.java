@@ -12,14 +12,13 @@ import com.ebonheart.EbonArtsMod.common.utils.LogHelper;
 import com.ebonheart.EbonArtsMod.common.utils.damagesources.EntityDamageSourceElectric;
 import com.ebonheart.EbonArtsMod.configs.EbonArtsConfiguration;
 import com.ebonheart.EbonArtsMod.init.InitItemsEA;
+import com.mojang.realmsclient.gui.ChatFormatting;
 
 import net.minecraft.enchantment.Enchantment;
 import net.minecraft.enchantment.EnumEnchantmentType;
 import net.minecraft.entity.ai.attributes.AttributeModifier;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.init.Items;
-import net.minecraft.init.SoundEvents;
-import net.minecraft.inventory.EntityEquipmentSlot;
 import net.minecraft.item.EnumRarity;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemArmor;
@@ -30,13 +29,8 @@ import net.minecraft.entity.SharedMonsterAttributes;
 import net.minecraft.item.ItemStack;
 import net.minecraft.potion.Potion;
 import net.minecraft.potion.PotionEffect;
-import net.minecraft.util.ActionResult;
 import net.minecraft.util.DamageSource;
-import net.minecraft.util.EnumActionResult;
-import net.minecraft.util.EnumHand;
 import net.minecraft.util.EnumParticleTypes;
-import net.minecraft.util.SoundEvent;
-import net.minecraft.util.text.TextFormatting;
 import net.minecraft.world.World;
 import net.minecraftforge.fml.relauncher.Side;
 import net.minecraftforge.fml.relauncher.SideOnly;
@@ -50,7 +44,7 @@ public class ItemVengeanceArmor extends ItemArmor {
 	
 	Random random = new Random();
 	
-	public ItemVengeanceArmor(String unlocalizedName, int renderIndexIn, EntityEquipmentSlot equipmentSlotIn)
+	public ItemVengeanceArmor(String unlocalizedName, int renderIndexIn, int equipmentSlotIn)
 	{
 		super(MaterialHelper.VENGEANCE, renderIndexIn, equipmentSlotIn);
 		
@@ -67,13 +61,13 @@ public class ItemVengeanceArmor extends ItemArmor {
 	@SideOnly(Side.CLIENT)
     public void addInformation(ItemStack stack, EntityPlayer playerIn, List toolTip, boolean advanced) 
 	{
-		toolTip.add(TextFormatting.DARK_PURPLE + "Unholy power courses through");
-		toolTip.add(TextFormatting.DARK_PURPLE + "this cursed armor.");
+		toolTip.add(ChatFormatting.DARK_PURPLE + "Unholy power courses through");
+		toolTip.add(ChatFormatting.DARK_PURPLE + "this cursed armor.");
 		toolTip.add(" ");
-		toolTip.add(TextFormatting.WHITE + "Set Bonus:");
-		toolTip.add(TextFormatting.GREEN + "Max Health increased by +4.");
-		toolTip.add(TextFormatting.GREEN + "All Attacks increased by +1.");
-		toolTip.add(TextFormatting.GREEN + "Speed increased by 110%");
+		toolTip.add(ChatFormatting.WHITE + "Set Bonus:");
+		toolTip.add(ChatFormatting.GREEN + "Max Health increased by +4.");
+		toolTip.add(ChatFormatting.GREEN + "All Attacks increased by +1.");
+		toolTip.add(ChatFormatting.GREEN + "Speed increased by 110%");
 		
 	}
 	
@@ -85,25 +79,25 @@ public class ItemVengeanceArmor extends ItemArmor {
 	@Override
 	public void onArmorTick(World world, EntityPlayer player, ItemStack itemStack) 
 	{
-		if (player.getItemStackFromSlot(EntityEquipmentSlot.HEAD) != null && player.getItemStackFromSlot(EntityEquipmentSlot.HEAD).getItem() == InitItemsEA.vengeance_helmet
-			&& player.getItemStackFromSlot(EntityEquipmentSlot.CHEST) != null && player.getItemStackFromSlot(EntityEquipmentSlot.CHEST).getItem() == InitItemsEA.vengeance_chestplate
-			&& player.getItemStackFromSlot(EntityEquipmentSlot.LEGS) != null && player.getItemStackFromSlot(EntityEquipmentSlot.LEGS).getItem() == InitItemsEA.vengeance_leggings
-			&& player.getItemStackFromSlot(EntityEquipmentSlot.FEET) != null && player.getItemStackFromSlot(EntityEquipmentSlot.FEET).getItem() == InitItemsEA.vengeance_boots) 
+		if (player.inventory.armorItemInSlot(3) != null && player.inventory.armorItemInSlot(3).getItem() == InitItemsEA.vengeance_helmet
+			&& player.inventory.armorItemInSlot(2) != null && player.inventory.armorItemInSlot(2).getItem() == InitItemsEA.vengeance_chestplate
+			&& player.inventory.armorItemInSlot(1) != null && player.inventory.armorItemInSlot(1).getItem() == InitItemsEA.vengeance_leggings
+			&& player.inventory.armorItemInSlot(0) != null && player.inventory.armorItemInSlot(0).getItem() == InitItemsEA.vengeance_boots) 
 		{
 			
-			if(!player.getEntityAttribute(SharedMonsterAttributes.MOVEMENT_SPEED).hasModifier(EAAttributeModifier.VENGEANCE_SPEED_BONUS))
+			if(!player.getEntityAttribute(SharedMonsterAttributes.movementSpeed).hasModifier(EAAttributeModifier.VENGEANCE_SPEED_BONUS))
 			{
-				player.getEntityAttribute(SharedMonsterAttributes.MOVEMENT_SPEED).applyModifier(EAAttributeModifier.VENGEANCE_SPEED_BONUS);
+				player.getEntityAttribute(SharedMonsterAttributes.movementSpeed).applyModifier(EAAttributeModifier.VENGEANCE_SPEED_BONUS);
 			}
 			
-			if(!player.getEntityAttribute(SharedMonsterAttributes.MAX_HEALTH).hasModifier(EAAttributeModifier.VENGEANCE_HP_BONUS))
+			if(!player.getEntityAttribute(SharedMonsterAttributes.maxHealth).hasModifier(EAAttributeModifier.VENGEANCE_HP_BONUS))
 			{
-				player.getEntityAttribute(SharedMonsterAttributes.MAX_HEALTH).applyModifier(EAAttributeModifier.VENGEANCE_HP_BONUS);
+				player.getEntityAttribute(SharedMonsterAttributes.maxHealth).applyModifier(EAAttributeModifier.VENGEANCE_HP_BONUS);
 			}
 			
-			if(!player.getEntityAttribute(SharedMonsterAttributes.ATTACK_DAMAGE).hasModifier(EAAttributeModifier.VENGEANCE_ATTACK_BONUS))
+			if(!player.getEntityAttribute(SharedMonsterAttributes.attackDamage).hasModifier(EAAttributeModifier.VENGEANCE_ATTACK_BONUS))
 			{
-				player.getEntityAttribute(SharedMonsterAttributes.ATTACK_DAMAGE).applyModifier(EAAttributeModifier.VENGEANCE_ATTACK_BONUS);
+				player.getEntityAttribute(SharedMonsterAttributes.attackDamage).applyModifier(EAAttributeModifier.VENGEANCE_ATTACK_BONUS);
 			}
 			
 			if(!EbonArtsConfiguration.armorParticle)
@@ -111,7 +105,7 @@ public class ItemVengeanceArmor extends ItemArmor {
 				if(world.isRemote)
 				{
 					
-					if(player.getItemStackFromSlot(EntityEquipmentSlot.MAINHAND) != null)
+					if(player.getHeldItem() != null)
 					{
 						
 						int d = random.nextInt(100) + 1;
@@ -124,23 +118,23 @@ public class ItemVengeanceArmor extends ItemArmor {
 					}
 					
 					//Blocking with shield
-					if (player.isHandActive())
-					{
+					//if (player.isHandActive())
+					//{
 						
-						int d = random.nextInt(100) + 1;
+					//	int d = random.nextInt(100) + 1;
 						
-						if (d <= 25)
-						{
+					//	if (d <= 25)
+					//	{
 							
-							playerPosX = player.getPositionVector().xCoord;
-							playerPosY = player.getPositionVector().yCoord;
-							playerPosZ = player.getPositionVector().zCoord;
+					//		playerPosX = player.getPositionVector().xCoord;
+					//		playerPosY = player.getPositionVector().yCoord;
+					//		playerPosZ = player.getPositionVector().zCoord;
 							
-							world.spawnParticle(EnumParticleTypes.SPELL_WITCH, playerPosX, playerPosY, playerPosZ, (double)((random.nextFloat() - 0.5F) * 0.2F), (double)((random.nextFloat() - 0.5F) * 0.2F), (double)((random.nextFloat() - 0.5F) * 0.2F), new int[0]);
+					//		world.spawnParticle(EnumParticleTypes.SPELL_WITCH, playerPosX, playerPosY, playerPosZ, (double)((random.nextFloat() - 0.5F) * 0.2F), (double)((random.nextFloat() - 0.5F) * 0.2F), (double)((random.nextFloat() - 0.5F) * 0.2F), new int[0]);
 							
-						}
+					//	}
 					
-					}
+					//}
 				
 				}
 				

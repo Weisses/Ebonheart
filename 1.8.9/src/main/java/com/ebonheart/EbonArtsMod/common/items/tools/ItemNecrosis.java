@@ -14,8 +14,7 @@ import net.minecraft.item.EnumRarity;
 import net.minecraft.item.ItemStack;
 import net.minecraft.item.ItemTool;
 import net.minecraft.item.Item.ToolMaterial;
-import net.minecraft.util.math.BlockPos;
-import net.minecraft.util.text.TextFormatting;
+import net.minecraft.util.BlockPos;
 import net.minecraft.world.IBlockAccess;
 import net.minecraft.world.World;
 import net.minecraftforge.common.ForgeHooks;
@@ -25,6 +24,7 @@ import net.minecraftforge.fml.relauncher.SideOnly;
 import com.ebonheart.EbonArtsMod.EbonArtsMod;
 import com.ebonheart.EbonArtsMod.common.items.ItemHelper;
 import com.google.common.collect.ImmutableSet;
+import com.mojang.realmsclient.gui.ChatFormatting;
 
 public class ItemNecrosis extends ItemTool {
 	
@@ -34,9 +34,9 @@ public class ItemNecrosis extends ItemTool {
 	private static final float BASE_DAMAGE = 3.0f;
 	private static final float ATTACK_SPEED = -2.4f;
 	
-	public ItemNecrosis(ToolMaterial material) 
+	public ItemNecrosis(float damageVsEntity, ToolMaterial material, Set<Block> effectiveBlocks) 
 	{
-		super(BASE_DAMAGE, ATTACK_SPEED, material, Collections.emptySet());
+		super(damageVsEntity, material, effectiveBlocks);
 		ItemHelper.setItemName(this, "tool/necrosis");
 		
 		setHarvestLevel("axe", material.getHarvestLevel());
@@ -50,12 +50,12 @@ public class ItemNecrosis extends ItemTool {
 	@SideOnly(Side.CLIENT)
     public void addInformation(ItemStack stack, EntityPlayer playerIn, List toolTip, boolean advanced) 
 	{
-		toolTip.add(TextFormatting.DARK_PURPLE + "\"Organic matter must yield");
-		toolTip.add(TextFormatting.DARK_PURPLE + "to darkness.\"");
+		toolTip.add(ChatFormatting.DARK_PURPLE + "\"Organic matter must yield");
+		toolTip.add(ChatFormatting.DARK_PURPLE + "to darkness.\"");
 		toolTip.add(" ");
-		toolTip.add(TextFormatting.GOLD + "Multi-Tool");
-		toolTip.add(TextFormatting.GREEN + "Axe");
-		toolTip.add(TextFormatting.GREEN + "Shears");
+		toolTip.add(ChatFormatting.GOLD + "Multi-Tool");
+		toolTip.add(ChatFormatting.GREEN + "Axe");
+		toolTip.add(ChatFormatting.GREEN + "Shears");
 	}
 	
 	public EnumRarity getRarity(ItemStack stack)
@@ -66,25 +66,25 @@ public class ItemNecrosis extends ItemTool {
 	private static final Set<Material> EFFECTIVE_MATERIALS = ImmutableSet.of(
 			
 			// Axe
-			Material.WOOD, Material.GOURD, Material.PLANTS, Material.VINE
+			Material.wood, Material.gourd, Material.plants, Material.vine
 			
 	);
 	
 	private static final Set<Material> SWORD_MATERIALS = ImmutableSet.of(
-			Material.PLANTS, Material.VINE, Material.CORAL, Material.LEAVES, Material.GOURD
+			Material.plants, Material.vine, Material.coral, Material.leaves, Material.gourd
 	);
 	
 	@Override
-	public float getStrVsBlock(ItemStack stack, IBlockState state) 
+	public float getStrVsBlock(ItemStack stack, Block state) 
 	{
-		if (state.getBlock() == Blocks.WEB) 
+		if (state.getBlockState().getBlock() == Blocks.web) 
 		{
 			return DIG_SPEED_WEB;
 		}
 
 		for (String type : getToolClasses(stack)) 
 		{
-			if (state.getBlock().isToolEffective(type, state))
+			//if (state.getBlock().isToolEffective(type, state))
 				return efficiencyOnProperMaterial;
 		}
 
@@ -103,23 +103,23 @@ public class ItemNecrosis extends ItemTool {
 	}
 	
 	@Override
-    public boolean onBlockDestroyed(ItemStack stack, World worldIn, IBlockState blockIn, BlockPos pos, EntityLivingBase entityLiving)
+    public boolean onBlockDestroyed(ItemStack stack, World worldIn, Block blockIn, BlockPos pos, EntityLivingBase entityLiving)
     {
         stack.damageItem(1, entityLiving);
-        Block block = blockIn.getBlock();
-        return blockIn.getMaterial() != Material.LEAVES && block != Blocks.WEB && block != Blocks.TALLGRASS && block != Blocks.VINE && block != Blocks.TRIPWIRE && block != Blocks.WOOL && !(blockIn instanceof net.minecraftforge.common.IShearable) ? super.onBlockDestroyed(stack, worldIn, blockIn, pos, entityLiving) : true;
+        Block block = blockIn.getBlockState().getBlock();
+        return blockIn.getMaterial() != Material.leaves && block != Blocks.web && block != Blocks.tallgrass && block != Blocks.vine && block != Blocks.tripwire && block != Blocks.wool && !(blockIn instanceof net.minecraftforge.common.IShearable) ? super.onBlockDestroyed(stack, worldIn, blockIn, pos, entityLiving) : true;
     }
 	
     public boolean canHarvestBlock(IBlockState blockIn)
     {
         Block block = blockIn.getBlock();
-        return block == Blocks.WEB || block == Blocks.REDSTONE_WIRE || block == Blocks.TRIPWIRE;
+        return block == Blocks.web || block == Blocks.redstone_wire || block == Blocks.tripwire;
     }
     
     
     
     @Override
-    public boolean itemInteractionForEntity(ItemStack itemstack, net.minecraft.entity.player.EntityPlayer player, EntityLivingBase entity, net.minecraft.util.EnumHand hand)
+    public boolean itemInteractionForEntity(ItemStack itemstack, net.minecraft.entity.player.EntityPlayer player, EntityLivingBase entity)
     {
         if (entity.worldObj.isRemote)
         {
@@ -132,7 +132,7 @@ public class ItemNecrosis extends ItemTool {
             if (target.isShearable(itemstack, entity.worldObj, pos))
             {
                 java.util.List<ItemStack> drops = target.onSheared(itemstack, entity.worldObj, pos,
-                        net.minecraft.enchantment.EnchantmentHelper.getEnchantmentLevel(net.minecraft.init.Enchantments.FORTUNE, itemstack));
+                        net.minecraft.enchantment.EnchantmentHelper.getEnchantmentLevel(net.minecraft.enchantment.Enchantment.fortune.effectId, itemstack));
 
                 java.util.Random rand = new java.util.Random();
                 for(ItemStack stack : drops)
@@ -163,7 +163,7 @@ public class ItemNecrosis extends ItemTool {
             if (target.isShearable(itemstack, player.worldObj, pos))
             {
                 java.util.List<ItemStack> drops = target.onSheared(itemstack, player.worldObj, pos,
-                        net.minecraft.enchantment.EnchantmentHelper.getEnchantmentLevel(net.minecraft.init.Enchantments.FORTUNE, itemstack));
+                        net.minecraft.enchantment.EnchantmentHelper.getEnchantmentLevel(net.minecraft.enchantment.Enchantment.fortune.effectId, itemstack));
                 java.util.Random rand = new java.util.Random();
 
                 for(ItemStack stack : drops)
@@ -178,7 +178,7 @@ public class ItemNecrosis extends ItemTool {
                 }
 
                 itemstack.damageItem(1, player);
-                player.addStat(net.minecraft.stats.StatList.getBlockStats(block));
+                player.addStat(net.minecraft.stats.StatList.mineBlockStatArray[Block.getIdFromBlock(block)], 1);
             }
         }
         return false;

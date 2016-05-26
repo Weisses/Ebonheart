@@ -9,13 +9,11 @@ import com.ebonheart.EbonArtsMod.common.items.MaterialHelper;
 import com.ebonheart.EbonArtsMod.common.items.ItemHelper;
 import com.ebonheart.EbonArtsMod.configs.EbonArtsConfiguration;
 import com.ebonheart.EbonArtsMod.init.InitItemsEA;
+import com.mojang.realmsclient.gui.ChatFormatting;
 
 import net.minecraft.client.Minecraft;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.init.Items;
-import net.minecraft.init.MobEffects;
-import net.minecraft.init.SoundEvents;
-import net.minecraft.inventory.EntityEquipmentSlot;
 import net.minecraft.item.EnumRarity;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemArmor;
@@ -24,12 +22,7 @@ import net.minecraft.entity.SharedMonsterAttributes;
 import net.minecraft.item.ItemStack;
 import net.minecraft.potion.Potion;
 import net.minecraft.potion.PotionEffect;
-import net.minecraft.util.ActionResult;
-import net.minecraft.util.EnumActionResult;
-import net.minecraft.util.EnumHand;
 import net.minecraft.util.EnumParticleTypes;
-import net.minecraft.util.SoundEvent;
-import net.minecraft.util.text.TextFormatting;
 import net.minecraft.world.World;
 import net.minecraftforge.fml.relauncher.Side;
 import net.minecraftforge.fml.relauncher.SideOnly;
@@ -45,7 +38,7 @@ public class ItemScalemailArmor extends ItemArmor {
 	
 	Random random = new Random();
 	
-	public ItemScalemailArmor(String unlocalizedName, int renderIndexIn, EntityEquipmentSlot equipmentSlotIn)
+	public ItemScalemailArmor(String unlocalizedName, int renderIndexIn, int equipmentSlotIn)
 	{
 		super(MaterialHelper.SCALEMAIL, renderIndexIn, equipmentSlotIn);
 		
@@ -61,13 +54,13 @@ public class ItemScalemailArmor extends ItemArmor {
 	@SideOnly(Side.CLIENT)
     public void addInformation(ItemStack stack, EntityPlayer playerIn, List toolTip, boolean advanced) 
 	{
-		toolTip.add(TextFormatting.DARK_AQUA + "Strong scales are woven in a flexible");
-		toolTip.add(TextFormatting.DARK_AQUA + "mesh, enhancing acrobatics.");
+		toolTip.add(ChatFormatting.DARK_AQUA + "Strong scales are woven in a flexible");
+		toolTip.add(ChatFormatting.DARK_AQUA + "mesh, enhancing acrobatics.");
 		toolTip.add(" ");
-		toolTip.add(TextFormatting.WHITE + "Set Bonus:");
-		toolTip.add(TextFormatting.GREEN + "Ability - Double Jump.");
-		toolTip.add(TextFormatting.GREEN + "Ability - Safe Fall.");
-		//toolTip.add(TextFormatting.GREEN + "Speed increased by 110%");
+		toolTip.add(ChatFormatting.WHITE + "Set Bonus:");
+		toolTip.add(ChatFormatting.GREEN + "Ability - Double Jump.");
+		toolTip.add(ChatFormatting.GREEN + "Ability - Safe Fall.");
+		//toolTip.add(ChatFormatting.GREEN + "Speed increased by 110%");
 	}
 	
 	public EnumRarity getRarity(ItemStack stack)
@@ -78,10 +71,10 @@ public class ItemScalemailArmor extends ItemArmor {
 	@Override
 	public void onArmorTick(World world, EntityPlayer player, ItemStack itemStack) 
 	{
-		if (player.getItemStackFromSlot(EntityEquipmentSlot.HEAD) != null && player.getItemStackFromSlot(EntityEquipmentSlot.HEAD).getItem() == InitItemsEA.scalemail_helmet
-			&& player.getItemStackFromSlot(EntityEquipmentSlot.CHEST) != null && player.getItemStackFromSlot(EntityEquipmentSlot.CHEST).getItem() == InitItemsEA.scalemail_chestplate
-			&& player.getItemStackFromSlot(EntityEquipmentSlot.LEGS) != null && player.getItemStackFromSlot(EntityEquipmentSlot.LEGS).getItem() == InitItemsEA.scalemail_leggings
-			&& player.getItemStackFromSlot(EntityEquipmentSlot.FEET) != null && player.getItemStackFromSlot(EntityEquipmentSlot.FEET).getItem() == InitItemsEA.scalemail_boots) 
+		if (player.inventory.armorItemInSlot(3) != null && player.inventory.armorItemInSlot(3).getItem() == InitItemsEA.scalemail_helmet
+			&& player.inventory.armorItemInSlot(2) != null && player.inventory.armorItemInSlot(2).getItem() == InitItemsEA.scalemail_chestplate
+			&& player.inventory.armorItemInSlot(1) != null && player.inventory.armorItemInSlot(1).getItem() == InitItemsEA.scalemail_leggings
+			&& player.inventory.armorItemInSlot(0) != null && player.inventory.armorItemInSlot(0).getItem() == InitItemsEA.scalemail_boots) 
 		{
 			if(player.fallDistance >= 2)
 			{

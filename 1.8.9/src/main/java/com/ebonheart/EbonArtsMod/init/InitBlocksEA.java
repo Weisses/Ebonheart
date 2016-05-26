@@ -9,7 +9,6 @@ import javax.annotation.Nullable;
 
 import net.minecraft.block.Block;
 //import net.minecraft.block.BlockPurpurSlab;
-import net.minecraft.block.SoundType;
 import net.minecraft.block.material.Material;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemBlock;
@@ -107,7 +106,7 @@ import com.google.common.collect.ObjectArrays;
 
 public class InitBlocksEA extends BlocksEA {
 	
-	public static final Set<Block> blocks = new HashSet<>();
+	public static final Set<Block> blocks = new HashSet<Block>();
 	
 	public static void preInit()
 	{
@@ -362,7 +361,7 @@ public class InitBlocksEA extends BlocksEA {
 		if (itemFactory != null) {
 			final ItemBlock itemBlock = itemFactory.apply(block);
 
-			GameRegistry.registerBlock(itemBlock.setRegistryName(block.getRegistryName()));
+			//GameRegistry.registerBlock(itemBlock.setRegistryName(block.getRegistryName()));
 		}
 
 		blocks.add(block);

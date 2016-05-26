@@ -7,6 +7,7 @@ import com.ebonheart.EbonArtsMod.EbonArtsMod;
 import com.ebonheart.EbonArtsMod.common.items.ItemHelper;
 import com.ebonheart.EbonArtsMod.common.items.WeaponHelper;
 import com.ebonheart.EbonArtsMod.init.InitItemsEA;
+import com.mojang.realmsclient.gui.ChatFormatting;
 
 import net.minecraft.entity.EntityLivingBase;
 import net.minecraft.entity.player.EntityPlayer;
@@ -14,7 +15,6 @@ import net.minecraft.item.EnumRarity;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
 import net.minecraft.potion.Potion;
-import net.minecraft.util.text.TextFormatting;
 import net.minecraft.world.World;
 import net.minecraftforge.fml.relauncher.Side;
 import net.minecraftforge.fml.relauncher.SideOnly;
@@ -29,8 +29,8 @@ public class ItemEmpoweredBlade extends Item {
 	@SideOnly(Side.CLIENT)
     public void addInformation(ItemStack stack, EntityPlayer playerIn, List toolTip, boolean advanced) 
 	{
-		toolTip.add(TextFormatting.DARK_AQUA + "This sword blade radiates");
-		toolTip.add(TextFormatting.DARK_AQUA + "with unknown potential.");
+		toolTip.add(ChatFormatting.DARK_AQUA + "This sword blade radiates");
+		toolTip.add(ChatFormatting.DARK_AQUA + "with unknown potential.");
 	}
 	
 	@SideOnly(Side.CLIENT)

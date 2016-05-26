@@ -1,5 +1,7 @@
 {
     "variants": {
+    "normal":  { "model": "ea:pillar/draconium_pillar" },
+        
         "axis=none":  { "model": "ea:pillar/draconium_pillar" },
         "axis=y":   { "model": "ea:pillar/draconium_pillar" },
         "axis=z":   { "model": "ea:pillar/draconium_pillar", "x": 90 },

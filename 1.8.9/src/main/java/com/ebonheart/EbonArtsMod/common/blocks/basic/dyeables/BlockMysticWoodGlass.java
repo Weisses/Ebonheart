@@ -9,6 +9,7 @@ import net.minecraft.block.BlockRotatedPillar;
 import net.minecraft.block.material.Material;
 import net.minecraft.block.state.IBlockState;
 import net.minecraft.init.Blocks;
+import net.minecraft.util.BlockPos;
 import net.minecraft.util.EnumFacing;
 import net.minecraft.util.EnumWorldBlockLayer;
 import net.minecraft.world.IBlockAccess;
@@ -69,7 +70,7 @@ public class BlockMysticWoodGlass extends BlockMysticWood {
             }
         }
 
-        return !this.ignoreSimilarity && block == this ? false : super.shouldSideBeRendered(blockState, blockAccess, pos, side);
+        return !this.ignoreSimilarity && block == this ? false : super.shouldSideBeRendered(blockAccess, pos, side);
     }
     
 }

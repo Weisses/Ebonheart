@@ -6,6 +6,7 @@ import java.util.Random;
 import com.ebonheart.EbonArtsMod.EbonArtsMod;
 import com.ebonheart.EbonArtsMod.common.items.ItemHelper;
 import com.ebonheart.EbonArtsMod.common.items.WeaponHelper;
+import com.mojang.realmsclient.gui.ChatFormatting;
 
 import net.minecraft.entity.EntityLivingBase;
 import net.minecraft.entity.player.EntityPlayer;
@@ -15,7 +16,6 @@ import net.minecraft.item.ItemSword;
 import net.minecraft.potion.Potion;
 import net.minecraft.potion.PotionEffect;
 import net.minecraft.util.EnumParticleTypes;
-import net.minecraft.util.text.TextFormatting;
 import net.minecraft.world.World;
 import net.minecraftforge.fml.relauncher.Side;
 import net.minecraftforge.fml.relauncher.SideOnly;
@@ -35,7 +35,7 @@ public class ItemBlazefury extends ItemSword {
 		
 		if (d < 30)
 		{
-			Potion potion = Potion.getPotionById(12);
+			Potion potion = Potion.fireResistance;
 					//.fireResistance;
 			EntityPlayer playerIn = attacker.getEntityWorld().getPlayerEntityByUUID(attacker.getUniqueID());
 			target.setFire(4);
@@ -47,12 +47,12 @@ public class ItemBlazefury extends ItemSword {
 	
 	@SideOnly(Side.CLIENT)
     public void addInformation(ItemStack stack, EntityPlayer playerIn, List toolTip, boolean advanced) {
-		toolTip.add(TextFormatting.DARK_PURPLE + "\"Let the flames consume all");
-		toolTip.add(TextFormatting.DARK_PURPLE + "that stand before you.\"");
+		toolTip.add(ChatFormatting.DARK_PURPLE + "\"Let the flames consume all");
+		toolTip.add(ChatFormatting.DARK_PURPLE + "that stand before you.\"");
 		toolTip.add(" ");
-		toolTip.add(TextFormatting.GOLD + "30% chance on hit:");
-		toolTip.add(TextFormatting.RED + "Target - Set on fire for 4 seconds.");
-		toolTip.add(TextFormatting.GREEN + "Self - Fire Resistance for 5 seconds.");
+		toolTip.add(ChatFormatting.GOLD + "30% chance on hit:");
+		toolTip.add(ChatFormatting.RED + "Target - Set on fire for 4 seconds.");
+		toolTip.add(ChatFormatting.GREEN + "Self - Fire Resistance for 5 seconds.");
 	}
 	
 	public EnumRarity getRarity(ItemStack stack)

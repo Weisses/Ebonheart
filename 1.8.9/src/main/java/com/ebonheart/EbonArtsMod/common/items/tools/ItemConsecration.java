@@ -14,8 +14,6 @@ import net.minecraft.item.EnumRarity;
 import net.minecraft.item.ItemStack;
 import net.minecraft.item.ItemTool;
 import net.minecraft.item.Item.ToolMaterial;
-import net.minecraft.util.math.BlockPos;
-import net.minecraft.util.text.TextFormatting;
 import net.minecraft.world.IBlockAccess;
 import net.minecraft.world.World;
 import net.minecraftforge.common.ForgeHooks;
@@ -25,6 +23,7 @@ import net.minecraftforge.fml.relauncher.SideOnly;
 import com.ebonheart.EbonArtsMod.EbonArtsMod;
 import com.ebonheart.EbonArtsMod.common.items.ItemHelper;
 import com.google.common.collect.ImmutableSet;
+import com.mojang.realmsclient.gui.ChatFormatting;
 
 
 public class ItemConsecration extends ItemTool {
@@ -35,9 +34,10 @@ public class ItemConsecration extends ItemTool {
 	private static final float BASE_DAMAGE = 3.0f;
 	private static final float ATTACK_SPEED = -2.4f;
 	
-	public ItemConsecration(ToolMaterial material) 
+	public ItemConsecration(float damageVsEntity, ToolMaterial material, Set<Block> effectiveBlocks) 
 	{
-		super(BASE_DAMAGE, ATTACK_SPEED, material, Collections.emptySet());
+		super(damageVsEntity, material, effectiveBlocks);
+		//super(BASE_DAMAGE, ATTACK_SPEED, material, Collections.emptySet());
 		ItemHelper.setItemName(this, "tool/consecration");
 
 		setHarvestLevel("pickaxe", material.getHarvestLevel());
@@ -48,12 +48,12 @@ public class ItemConsecration extends ItemTool {
 	@SideOnly(Side.CLIENT)
     public void addInformation(ItemStack stack, EntityPlayer playerIn, List toolTip, boolean advanced) 
 	{
-		toolTip.add(TextFormatting.DARK_PURPLE + "\"Divine might rules over");
-		toolTip.add(TextFormatting.DARK_PURPLE + "all of creation.\"");
+		toolTip.add(ChatFormatting.DARK_PURPLE + "\"Divine might rules over");
+		toolTip.add(ChatFormatting.DARK_PURPLE + "all of creation.\"");
 		toolTip.add(" ");
-		toolTip.add(TextFormatting.GOLD + "Multi-Tool");
-		toolTip.add(TextFormatting.GREEN + "Pickaxe");
-		toolTip.add(TextFormatting.GREEN + "Shovel");
+		toolTip.add(ChatFormatting.GOLD + "Multi-Tool");
+		toolTip.add(ChatFormatting.GREEN + "Pickaxe");
+		toolTip.add(ChatFormatting.GREEN + "Shovel");
 	}
 	
 	public EnumRarity getRarity(ItemStack stack)
@@ -63,17 +63,17 @@ public class ItemConsecration extends ItemTool {
 	
 	private static final Set<Material> EFFECTIVE_MATERIALS = ImmutableSet.of(
 			// Pickaxe
-			Material.ROCK, Material.IRON, Material.ICE, Material.GLASS, Material.PISTON, Material.ANVIL, Material.CIRCUITS,
+			Material.rock, Material.iron, Material.ice, Material.glass, Material.piston, Material.anvil, Material.circuits,
 			
 			// Shovel
-			Material.GRASS, Material.GROUND, Material.SAND, Material.SNOW, Material.CRAFTED_SNOW, Material.CLAY
+			Material.grass, Material.ground, Material.sand, Material.snow, Material.craftedSnow, Material.clay
 	);
 	
 	@Override
-	public float getStrVsBlock(ItemStack stack, IBlockState state) 
+	public float getStrVsBlock(ItemStack stack, Block state) 
 	{
 		for (String type : getToolClasses(stack)) {
-			if (state.getBlock().isToolEffective(type, state))
+			//if (state.getBlockState().getBlock().isToolEffective(type, state))
 				return efficiencyOnProperMaterial;
 		}
 

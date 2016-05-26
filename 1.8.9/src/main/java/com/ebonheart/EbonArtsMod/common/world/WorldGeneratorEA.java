@@ -4,11 +4,10 @@ import java.util.Random;
 
 import com.ebonheart.EbonArtsMod.init.InitBlocksEA;
 
-import net.minecraft.block.state.pattern.BlockMatcher;
+import net.minecraft.block.state.pattern.BlockHelper;
 import net.minecraft.init.Blocks;
-import net.minecraft.util.math.BlockPos;
+import net.minecraft.util.BlockPos;
 import net.minecraft.world.World;
-import net.minecraft.world.chunk.IChunkGenerator;
 import net.minecraft.world.chunk.IChunkProvider;
 import net.minecraft.world.gen.feature.WorldGenMinable;
 import net.minecraft.world.gen.feature.WorldGenerator;
@@ -33,26 +32,26 @@ public class WorldGeneratorEA implements IWorldGenerator
 	public WorldGeneratorEA() 
 	{
 	    //for multi ore gens
-		this.gen_draconium_ore = new WorldGenMinable(InitBlocksEA.draconium_ore.getDefaultState(), 8, BlockMatcher.forBlock(Blocks.STONE)); //the 8 is the max vein size
-		this.gen_velious_ore = new WorldGenMinable(InitBlocksEA.velious_ore.getDefaultState(), 6, BlockMatcher.forBlock(Blocks.STONE));
-		this.gen_arcanite_ore = new WorldGenMinable(InitBlocksEA.arcanite_ore.getDefaultState(), 5, BlockMatcher.forBlock(Blocks.STONE));
-		this.gen_katcheen_ore = new WorldGenMinable(InitBlocksEA.katcheen_ore.getDefaultState(), 4, BlockMatcher.forBlock(Blocks.STONE));
-		this.gen_necrocite_ore = new WorldGenMinable(InitBlocksEA.necrocite_ore.getDefaultState(), 3, BlockMatcher.forBlock(Blocks.NETHERRACK));
-		this.gen_soularite_ore = new WorldGenMinable(InitBlocksEA.soularite_ore.getDefaultState(), 3, BlockMatcher.forBlock(Blocks.NETHERRACK));
-		this.gen_ebonheart_ore = new WorldGenMinable(InitBlocksEA.ebonheart_ore.getDefaultState(), 3, BlockMatcher.forBlock(Blocks.NETHERRACK));
+		this.gen_draconium_ore = new WorldGenMinable(InitBlocksEA.draconium_ore.getDefaultState(), 8, BlockHelper.forBlock(Blocks.stone)); //the 8 is the max vein size
+		this.gen_velious_ore = new WorldGenMinable(InitBlocksEA.velious_ore.getDefaultState(), 6, BlockHelper.forBlock(Blocks.stone));
+		this.gen_arcanite_ore = new WorldGenMinable(InitBlocksEA.arcanite_ore.getDefaultState(), 5, BlockHelper.forBlock(Blocks.stone));
+		this.gen_katcheen_ore = new WorldGenMinable(InitBlocksEA.katcheen_ore.getDefaultState(), 4, BlockHelper.forBlock(Blocks.stone));
+		this.gen_necrocite_ore = new WorldGenMinable(InitBlocksEA.necrocite_ore.getDefaultState(), 3, BlockHelper.forBlock(Blocks.netherrack));
+		this.gen_soularite_ore = new WorldGenMinable(InitBlocksEA.soularite_ore.getDefaultState(), 3, BlockHelper.forBlock(Blocks.netherrack));
+		this.gen_ebonheart_ore = new WorldGenMinable(InitBlocksEA.ebonheart_ore.getDefaultState(), 3, BlockHelper.forBlock(Blocks.netherrack));
 		
 		//for single ore gens
-		this.gen_ebon_ore = new WorldGenSingleMinable(InitBlocksEA.ebon_ore.getDefaultState(), BlockMatcher.forBlock(Blocks.STONE));
-		this.gen_ebon_ore_nether = new WorldGenSingleMinable(InitBlocksEA.ebon_ore_nether.getDefaultState(), BlockMatcher.forBlock(Blocks.NETHERRACK));
+		this.gen_ebon_ore = new WorldGenSingleMinable(InitBlocksEA.ebon_ore.getDefaultState(), BlockHelper.forBlock(Blocks.stone));
+		this.gen_ebon_ore_nether = new WorldGenSingleMinable(InitBlocksEA.ebon_ore_nether.getDefaultState(), BlockHelper.forBlock(Blocks.netherrack));
 		
 	}
 	
 	
 
 	@Override
-	public void generate(Random random, int chunkX, int chunkZ, World world, IChunkGenerator chunkGenerator, IChunkProvider chunkProvider) 
+	public void generate(Random random, int chunkX, int chunkZ, World world, IChunkProvider chunkGenerator, IChunkProvider chunkProvider) 
 	{
-		switch (world.provider.getDimension()) 
+		switch (world.provider.getDimensionId()) 
 		{
 		//Overworld
 		case 0: 

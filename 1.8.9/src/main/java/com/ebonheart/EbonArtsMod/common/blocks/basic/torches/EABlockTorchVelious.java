@@ -34,9 +34,9 @@ public class EABlockTorchVelious extends BlockTorch {
 	        this.setLightLevel(0.9375F);
 	    }
 	    
-
+	    
 	    @SideOnly(Side.CLIENT)
-	    public void randomDisplayTick(IBlockState worldIn, World pos, BlockPos state, Random rand)
+	    public void randomDisplayTick(World pos, BlockPos state, IBlockState worldIn, Random rand)
 	    {
 	        EnumFacing enumfacing = (EnumFacing)worldIn.getValue(FACING);
 	        double d0 = (double)state.getX() + 0.5D;

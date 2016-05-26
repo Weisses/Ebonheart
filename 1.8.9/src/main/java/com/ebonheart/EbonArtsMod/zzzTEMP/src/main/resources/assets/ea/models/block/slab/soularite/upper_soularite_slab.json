@@ -1,8 +1,0 @@
-{
-    "parent": "block/upper_slab",
-    "textures": {
-        "bottom": "ea:blocks/gems/soularite/soularite_block_bottom",
-        "top": "ea:blocks/gems/soularite/soularite_block_top",
-        "side": "ea:blocks/gems/soularite/soularite_block_slab"
-    }
-}

@@ -10,7 +10,7 @@ import net.minecraft.world.World;
 public class BlockTutorialTileEntity extends BlockContainer {
 
 	public BlockTutorialTileEntity() {
-		super(Material.ROCK);
+		super(Material.rock);
 		this.setUnlocalizedName("tutorial_tile_entity");
 	}
 

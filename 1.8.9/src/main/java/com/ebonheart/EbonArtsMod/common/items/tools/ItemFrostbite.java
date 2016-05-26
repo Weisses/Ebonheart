@@ -6,6 +6,7 @@ import java.util.Random;
 import com.ebonheart.EbonArtsMod.EbonArtsMod;
 import com.ebonheart.EbonArtsMod.common.items.ItemHelper;
 import com.ebonheart.EbonArtsMod.common.items.WeaponHelper;
+import com.mojang.realmsclient.gui.ChatFormatting;
 
 import net.minecraft.entity.EntityLivingBase;
 import net.minecraft.entity.player.EntityPlayer;
@@ -13,7 +14,6 @@ import net.minecraft.item.EnumRarity;
 import net.minecraft.item.ItemStack;
 import net.minecraft.item.ItemSword;
 import net.minecraft.potion.Potion;
-import net.minecraft.util.text.TextFormatting;
 import net.minecraft.world.World;
 import net.minecraftforge.fml.relauncher.Side;
 import net.minecraftforge.fml.relauncher.SideOnly;
@@ -33,9 +33,9 @@ public class ItemFrostbite extends ItemSword {
 		
 		if (d < 38)
 		{
-			Potion potion1 = Potion.getPotionById(2);
+			Potion potion1 = Potion.moveSlowdown;
 					//.moveSlowdown;
-			Potion potion2 = Potion.getPotionById(18);
+			Potion potion2 = Potion.weakness;
 					//.weakness;
 			EntityPlayer playerIn = attacker.getEntityWorld().getPlayerEntityByUUID(attacker.getUniqueID());
 			WeaponHelper.addPotionEffectToTarget(target, potion1, 3, 2);
@@ -47,12 +47,12 @@ public class ItemFrostbite extends ItemSword {
 	
 	@SideOnly(Side.CLIENT)
     public void addInformation(ItemStack stack, EntityPlayer playerIn, List toolTip, boolean advanced) {
-		toolTip.add(TextFormatting.DARK_PURPLE + "\"The grip of frost weakens");
-		toolTip.add(TextFormatting.DARK_PURPLE + "and chills all before it.\"");
+		toolTip.add(ChatFormatting.DARK_PURPLE + "\"The grip of frost weakens");
+		toolTip.add(ChatFormatting.DARK_PURPLE + "and chills all before it.\"");
 		toolTip.add(" ");
-		toolTip.add(TextFormatting.GOLD + "38% chance on hit:");
-		toolTip.add(TextFormatting.RED + "Target - Weakness for 5 seconds.");
-		toolTip.add(TextFormatting.RED + "Target - Slow for 3 seconds.");
+		toolTip.add(ChatFormatting.GOLD + "38% chance on hit:");
+		toolTip.add(ChatFormatting.RED + "Target - Weakness for 5 seconds.");
+		toolTip.add(ChatFormatting.RED + "Target - Slow for 3 seconds.");
 	}
 	
 	public EnumRarity getRarity(ItemStack stack)

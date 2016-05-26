@@ -5,6 +5,7 @@ import java.util.List;
 import com.ebonheart.EbonArtsMod.EbonArtsMod;
 import com.ebonheart.EbonArtsMod.common.items.ItemHelper;
 import com.ebonheart.EbonArtsMod.init.InitBlocksEA;
+import com.mojang.realmsclient.gui.ChatFormatting;
 
 import net.minecraft.block.Block;
 import net.minecraft.block.material.Material;
@@ -15,12 +16,9 @@ import net.minecraft.item.Item;
 import net.minecraft.item.ItemFood;
 import net.minecraft.item.ItemSeedFood;
 import net.minecraft.item.ItemStack;
-import net.minecraft.util.EnumActionResult;
+import net.minecraft.util.BlockPos;
 import net.minecraft.util.EnumFacing;
-import net.minecraft.util.EnumHand;
 import net.minecraft.util.EnumParticleTypes;
-import net.minecraft.util.math.BlockPos;
-import net.minecraft.util.text.TextFormatting;
 import net.minecraft.world.IBlockAccess;
 import net.minecraft.world.World;
 import net.minecraftforge.common.EnumPlantType;
@@ -39,10 +37,12 @@ public class ItemDragonFruit extends ItemFood implements IPlantable {
 	/**
      * Called when a Block is right-clicked with this Item
      */
-    public EnumActionResult onItemUse(ItemStack stack, EntityPlayer playerIn, World worldIn, BlockPos pos, EnumHand hand, EnumFacing facing, float hitX, float hitY, float hitZ)
+	public boolean onItemUse(ItemStack stack, EntityPlayer playerIn, World worldIn, BlockPos pos, EnumFacing side, float hitX, float hitY, float hitZ)
     {
+    //public EnumActionResult onItemUse(ItemStack stack, EntityPlayer playerIn, World worldIn, BlockPos pos, EnumHand hand, EnumFacing facing, float hitX, float hitY, float hitZ)
+    //{
         net.minecraft.block.state.IBlockState state = worldIn.getBlockState(pos);
-        if (facing == EnumFacing.UP && playerIn.canPlayerEdit(pos.offset(facing), facing, stack) && state.getBlock().canSustainPlant(state, worldIn, pos, EnumFacing.UP, this) && worldIn.isAirBlock(pos.up()))
+        if (side == EnumFacing.UP && playerIn.canPlayerEdit(pos.offset(side), side, stack) && state.getBlock().canSustainPlant(worldIn, pos, EnumFacing.UP, this) && worldIn.isAirBlock(pos.up()))
         {
         	if(worldIn.isRemote)
         	{
@@ -63,11 +63,11 @@ public class ItemDragonFruit extends ItemFood implements IPlantable {
         	
             worldIn.setBlockState(pos.up(), InitBlocksEA.dragon_fruit.getDefaultState(), 11);
             --stack.stackSize;
-            return EnumActionResult.SUCCESS;
+            return true;
         }
         else
         {
-            return EnumActionResult.FAIL;
+            return false;
         }
     }
     
@@ -92,8 +92,8 @@ public class ItemDragonFruit extends ItemFood implements IPlantable {
     @SideOnly(Side.CLIENT)
     public void addInformation(ItemStack stack, EntityPlayer playerIn, List toolTip, boolean advanced) 
 	{
-		toolTip.add(TextFormatting.GOLD + "An ancient fruit that");
-		toolTip.add(TextFormatting.GOLD + "makes a healthy meal.");
+		toolTip.add(ChatFormatting.GOLD + "An ancient fruit that");
+		toolTip.add(ChatFormatting.GOLD + "makes a healthy meal.");
 	}
 	
     //@SideOnly(Side.CLIENT)

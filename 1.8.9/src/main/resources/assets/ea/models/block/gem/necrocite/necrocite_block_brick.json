@@ -1,5 +1,4 @@
 {
-    "parent": "block/cube_all",
     "ambientocclusion": false,
     "textures": {
         "particle": "ea:blocks/gems/necrocite/necrocite_block_brick",

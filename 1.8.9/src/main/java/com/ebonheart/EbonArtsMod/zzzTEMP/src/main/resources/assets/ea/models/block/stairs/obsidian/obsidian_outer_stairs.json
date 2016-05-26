@@ -1,8 +1,0 @@
-{
-    "parent": "block/outer_stairs",
-    "textures": {
-        "bottom": "ea:blocks/gems/obsidian/obsidian_block_stairs",
-        "top": "ea:blocks/gems/obsidian/obsidian_block_stairs",
-        "side": "ea:blocks/gems/obsidian/obsidian_block_stairs"
-    }
-}

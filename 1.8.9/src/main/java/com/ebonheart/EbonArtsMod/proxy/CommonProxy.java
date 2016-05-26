@@ -26,7 +26,7 @@ public class CommonProxy {
 	
 	public void preInit(FMLPreInitializationEvent event) 
 	{
-		SoundEventsEA.registerSounds();
+		//SoundEventsEA.registerSounds();
 		
 		InitItemsEA.preInit();
 		InitBlocksEA.preInit();

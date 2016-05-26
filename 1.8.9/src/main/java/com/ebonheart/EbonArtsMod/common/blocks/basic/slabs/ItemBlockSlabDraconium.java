@@ -1,7 +1,6 @@
 package com.ebonheart.EbonArtsMod.common.blocks.basic.slabs;
 
 import net.minecraft.block.Block;
-import net.minecraft.creativetab.CreativeTabs;
 import net.minecraft.item.ItemSlab;
 
 //Wrapper around ItemSlab to allow init from GameRegistry.

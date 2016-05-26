@@ -10,6 +10,7 @@ import com.ebonheart.EbonArtsMod.common.items.MaterialHelper;
 import com.ebonheart.EbonArtsMod.common.items.ItemHelper;
 import com.ebonheart.EbonArtsMod.configs.EbonArtsConfiguration;
 import com.ebonheart.EbonArtsMod.init.InitItemsEA;
+import com.mojang.realmsclient.gui.ChatFormatting;
 
 import net.minecraft.client.Minecraft;
 import net.minecraft.entity.ai.attributes.AttributeModifier;
@@ -18,9 +19,6 @@ import net.minecraft.entity.ai.attributes.IAttributeInstance;
 import net.minecraft.entity.ai.attributes.RangedAttribute;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.init.Items;
-import net.minecraft.init.MobEffects;
-import net.minecraft.init.SoundEvents;
-import net.minecraft.inventory.EntityEquipmentSlot;
 import net.minecraft.item.EnumRarity;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemArmor;
@@ -30,13 +28,7 @@ import net.minecraft.entity.SharedMonsterAttributes;
 import net.minecraft.item.ItemStack;
 import net.minecraft.potion.Potion;
 import net.minecraft.potion.PotionEffect;
-import net.minecraft.util.ActionResult;
-import net.minecraft.util.EnumActionResult;
-import net.minecraft.util.EnumHand;
 import net.minecraft.util.EnumParticleTypes;
-import net.minecraft.util.SoundEvent;
-import net.minecraft.util.math.MathHelper;
-import net.minecraft.util.text.TextFormatting;
 import net.minecraft.world.World;
 import net.minecraftforge.fml.common.eventhandler.SubscribeEvent;
 import net.minecraftforge.fml.relauncher.Side;
@@ -51,7 +43,7 @@ public class ItemBurnishedArmor extends ItemArmor {
 	
 	Random random = new Random();
 	
-	public ItemBurnishedArmor(String unlocalizedName, int renderIndexIn, EntityEquipmentSlot equipmentSlotIn)
+	public ItemBurnishedArmor(String unlocalizedName, int renderIndexIn, int equipmentSlotIn)
 	{
 		super(MaterialHelper.BURNISHED, renderIndexIn, equipmentSlotIn);
 		
@@ -67,12 +59,12 @@ public class ItemBurnishedArmor extends ItemArmor {
 	@SideOnly(Side.CLIENT)
     public void addInformation(ItemStack stack, EntityPlayer playerIn, List toolTip, boolean advanced) 
 	{
-		toolTip.add(TextFormatting.GOLD + "Polished armor stacked in layers");
-		toolTip.add(TextFormatting.GOLD + "for stealthy speed.");
+		toolTip.add(ChatFormatting.GOLD + "Polished armor stacked in layers");
+		toolTip.add(ChatFormatting.GOLD + "for stealthy speed.");
 		toolTip.add(" ");
-		toolTip.add(TextFormatting.WHITE + "Set Bonus:");
-		toolTip.add(TextFormatting.GREEN + "Ability - Sprint Stealth.");
-		toolTip.add(TextFormatting.GREEN + "Speed increased by 120%");
+		toolTip.add(ChatFormatting.WHITE + "Set Bonus:");
+		toolTip.add(ChatFormatting.GREEN + "Ability - Sprint Stealth.");
+		toolTip.add(ChatFormatting.GREEN + "Speed increased by 120%");
 	}
 	
 	public EnumRarity getRarity(ItemStack stack)
@@ -83,15 +75,15 @@ public class ItemBurnishedArmor extends ItemArmor {
 	@Override
 	public void onArmorTick(World world, EntityPlayer player, ItemStack itemStack) 
 	{
-		if (player.getItemStackFromSlot(EntityEquipmentSlot.HEAD) != null && player.getItemStackFromSlot(EntityEquipmentSlot.HEAD).getItem() == InitItemsEA.burnished_helmet
-			&& player.getItemStackFromSlot(EntityEquipmentSlot.CHEST) != null && player.getItemStackFromSlot(EntityEquipmentSlot.CHEST).getItem() == InitItemsEA.burnished_chestplate
-			&& player.getItemStackFromSlot(EntityEquipmentSlot.LEGS) != null && player.getItemStackFromSlot(EntityEquipmentSlot.LEGS).getItem() == InitItemsEA.burnished_leggings
-			&& player.getItemStackFromSlot(EntityEquipmentSlot.FEET) != null && player.getItemStackFromSlot(EntityEquipmentSlot.FEET).getItem() == InitItemsEA.burnished_boots) 
+		if (player.inventory.armorItemInSlot(3) != null && player.inventory.armorItemInSlot(3).getItem() == InitItemsEA.burnished_helmet
+			&& player.inventory.armorItemInSlot(2) != null && player.inventory.armorItemInSlot(2).getItem() == InitItemsEA.burnished_chestplate
+			&& player.inventory.armorItemInSlot(1) != null && player.inventory.armorItemInSlot(1).getItem() == InitItemsEA.burnished_leggings
+			&& player.inventory.armorItemInSlot(0) != null && player.inventory.armorItemInSlot(0).getItem() == InitItemsEA.burnished_boots) 
 		{
 			
-			if(!player.getEntityAttribute(SharedMonsterAttributes.MOVEMENT_SPEED).hasModifier(EAAttributeModifier.BURNISHED_SPEED_BONUS))
+			if(!player.getEntityAttribute(SharedMonsterAttributes.movementSpeed).hasModifier(EAAttributeModifier.BURNISHED_SPEED_BONUS))
 			{
-				player.getEntityAttribute(SharedMonsterAttributes.MOVEMENT_SPEED).applyModifier(EAAttributeModifier.BURNISHED_SPEED_BONUS);
+				player.getEntityAttribute(SharedMonsterAttributes.movementSpeed).applyModifier(EAAttributeModifier.BURNISHED_SPEED_BONUS);
 			}
 			
 			if(player.isSprinting())
