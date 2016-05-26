@@ -24,6 +24,9 @@ version = "v2.3.4a-mc1.8.9"
 group= "com.ebonheart.EbonArtsMod" // http://maven.apache.org/guides/mini/guide-naming-conventions.html
 archivesBaseName = "EbonArts"
 
+sourceCompatibility = 1.7
+targetCompatibility = 1.7
+
 minecraft {
     version = "1.8.9-11.15.1.1722"
     runDir = "run"
