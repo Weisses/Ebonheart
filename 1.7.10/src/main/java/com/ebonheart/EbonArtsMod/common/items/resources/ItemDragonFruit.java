@@ -2,6 +2,7 @@ package com.ebonheart.EbonArtsMod.common.items.resources;
 
 import java.util.List;
 
+import net.minecraft.block.Block;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.item.EnumRarity;
 import net.minecraft.item.ItemFood;
@@ -9,8 +10,10 @@ import net.minecraft.item.ItemStack;
 import net.minecraft.util.EnumFacing;
 import net.minecraft.world.IBlockAccess;
 import net.minecraft.world.World;
+import net.minecraftforge.common.EnumPlantType;
 import net.minecraftforge.common.IPlantable;
 
+import com.ebonheart.EbonArtsMod.EbonArtsMod;
 import com.ebonheart.EbonArtsMod.common.items.ItemHelper;
 import com.ebonheart.EbonArtsMod.init.InitBlocksEA;
 import com.mojang.realmsclient.gui.ChatFormatting;
@@ -23,14 +26,18 @@ public class ItemDragonFruit extends ItemFood implements IPlantable {
 	public ItemDragonFruit(int healAmount, float saturation) 
 	{
 		super(healAmount, saturation, true);
-		ItemHelper.setItemName(this, "plant/dragon_fruit");
+		//ItemHelper.setItemName(this, "plant/dragon_fruit");
+		this.setUnlocalizedName("plants/dragon_fruit");
+		this.setCreativeTab(EbonArtsMod.tabEbonArtsItems);
 		
 	}
 	/**
      * Called when a Block is right-clicked with this Item
      */
-	public boolean onItemUse(ItemStack stack, EntityPlayer playerIn, World worldIn, BlockPos pos, EnumFacing side, float hitX, float hitY, float hitZ)
+	public boolean onItemUse(ItemStack p_77648_1_, EntityPlayer p_77648_2_, World p_77648_3_, int p_77648_4_, int p_77648_5_, int p_77648_6_, int p_77648_7_, float p_77648_8_, float p_77648_9_, float p_77648_10_)
     {
+	//public boolean onItemUse(ItemStack stack, EntityPlayer playerIn, World worldIn, BlockPos pos, EnumFacing side, float hitX, float hitY, float hitZ)
+    //{
     //public EnumActionResult onItemUse(ItemStack stack, EntityPlayer playerIn, World worldIn, BlockPos pos, EnumHand hand, EnumFacing facing, float hitX, float hitY, float hitZ)
     //{
         net.minecraft.block.state.IBlockState state = worldIn.getBlockState(pos);
@@ -53,7 +60,7 @@ public class ItemDragonFruit extends ItemFood implements IPlantable {
                 }
         	}
         	
-            worldIn.setBlockState(pos.up(), InitBlocksEA.dragon_fruit.getDefaultState(), 11);
+            worldIn.setBlockState(pos.up(), InitBlocksEA.dragon_fruit, 11);
             --stack.stackSize;
             return true;
         }
@@ -63,17 +70,17 @@ public class ItemDragonFruit extends ItemFood implements IPlantable {
         }
     }
     
-    @Override
-    public net.minecraftforge.common.EnumPlantType getPlantType(net.minecraft.world.IBlockAccess world, BlockPos pos)
-    {
-        return net.minecraftforge.common.EnumPlantType.Crop;
-    }
+    //@Override
+    //public net.minecraftforge.common.EnumPlantType getPlantType(net.minecraft.world.IBlockAccess world, BlockPos pos)
+    //{
+    //    return net.minecraftforge.common.EnumPlantType.Crop;
+    //}
     
-	@Override
-	public IBlockState getPlant(IBlockAccess world, BlockPos pos)
-	{
-	    return InitBlocksEA.dragon_fruit.getDefaultState();
-	}
+	//@Override
+	//public IBlockState getPlant(IBlockAccess world, BlockPos pos)
+	//{
+	//    return InitBlocksEA.dragon_fruit.getDefaultState();
+	//}
 	
 	
 	
@@ -96,7 +103,22 @@ public class ItemDragonFruit extends ItemFood implements IPlantable {
     
 	public EnumRarity getRarity(ItemStack stack)
     {
-        return EnumRarity.EPIC;
+        return EnumRarity.epic;
     }
+	@Override
+	public EnumPlantType getPlantType(IBlockAccess world, int x, int y, int z) {
+		// TODO Auto-generated method stub
+		return net.minecraftforge.common.EnumPlantType.Crop;
+	}
+	@Override
+	public Block getPlant(IBlockAccess world, int x, int y, int z) {
+		// TODO Auto-generated method stub
+		return InitBlocksEA.dragon_fruit;
+	}
+	@Override
+	public int getPlantMetadata(IBlockAccess world, int x, int y, int z) {
+		// TODO Auto-generated method stub
+		return 0;
+	}
 	
 }

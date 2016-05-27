@@ -2,11 +2,6 @@ package com.ebonheart.EbonArtsMod.common.utils.gui;
 
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.world.World;
-
-import com.ebonheart.EbonArtsMod.client.gui.GuiCompendium;
-import com.ebonheart.EbonArtsMod.client.gui.GuiTestTileEntity;
-import com.ebonheart.EbonArtsMod.client.gui.container.ContainerTestTileEntity;
-
 import cpw.mods.fml.common.network.IGuiHandler;
 
 public class GuiHandler implements IGuiHandler {
@@ -32,7 +27,7 @@ public class GuiHandler implements IGuiHandler {
 	{
 		if (ID == 0)
 		{
-			return new GuiCompendium();
+			return null;//new GuiCompendium();
 		}
 		else if (ID == 1)
 		{

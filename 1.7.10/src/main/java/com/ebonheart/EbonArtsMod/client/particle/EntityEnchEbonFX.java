@@ -18,12 +18,15 @@ public class EntityEnchEbonFX extends EntityFlameFX {
     {
         super(parWorld, parX, parY, parZ, parMotionX, parMotionY, parMotionZ);
         
-        int d1 = random.nextInt(250) + 1;
-        int d2 = random.nextInt(250) + 1;
-        int d3 = random.nextInt(250) + 1;
+        float d1 = random.nextFloat();
+        float d2 = random.nextFloat();
+        float d3 = random.nextFloat();
         
         particleScale = 0.7F;
-        setRBGColorF(d1, d2, d3);
+        //setRBGColorF(d1, d2, d3);
+        this.particleRed = d1;
+        this.particleGreen = d2;
+        this.particleBlue = d3;
         
     }
     

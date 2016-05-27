@@ -34,9 +34,9 @@ public class ItemMusicDiscEA extends ItemRecord {
     	super(
     			//Reference.MOD_ID + ":" + 
     			soundIn);
-    	ItemHelper.setItemName(this, unlocalizedName);
-    	
-    	this.setCreativeTab(EbonArtsMod.tabEbonArtsItems);
+    	//ItemHelper.setItemName(this, unlocalizedName);
+    	this.setUnlocalizedName(unlocalizedName);
+		this.setCreativeTab(EbonArtsMod.tabEbonArtsItems);
     	this.music = soundIn;
         RECORDS.put("records." + soundIn, this);
     }

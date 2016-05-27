@@ -24,7 +24,8 @@ public class ItemSacredFruit extends ItemFood implements IPlantable {
 	public ItemSacredFruit(int healAmount, float saturation) 
 	{
 		super(healAmount, saturation, false);
-		ItemHelper.setItemName(this, "plant/sacred_fruit");
+		//ItemHelper.setItemName(this, "plant/sacred_fruit");
+		this.setUnlocalizedName("plants/sacred_fruit");
 		this.setCreativeTab(EbonArtsMod.tabEbonArtsItems);
 	}
 	

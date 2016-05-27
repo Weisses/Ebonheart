@@ -18,8 +18,8 @@ public class ItemEmpoweredBlade extends Item {
 
 	public ItemEmpoweredBlade() 
 	{
-		ItemHelper.setItemName(this, "tool/empowered_blade");
-		
+		//ItemHelper.setItemName(this, "tool/empowered_blade");
+		this.setUnlocalizedName("tools/empowered_blade");
 		this.setCreativeTab(EbonArtsMod.tabEbonArtsItems);
 	}
 	
@@ -38,7 +38,7 @@ public class ItemEmpoweredBlade extends Item {
 	
 	public EnumRarity getRarity(ItemStack stack)
     {
-        return EnumRarity.RARE;
+        return EnumRarity.rare;
     }
 	
 }

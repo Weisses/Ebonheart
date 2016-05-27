@@ -24,7 +24,8 @@ public class ItemHellionFruit extends ItemFood implements IPlantable {
 	public ItemHellionFruit(int healAmount, float saturation) 
 	{
 		super(healAmount, saturation, false);
-		ItemHelper.setItemName(this, "plant/hellion_fruit");
+		//ItemHelper.setItemName(this, "plant/hellion_fruit");
+		this.setUnlocalizedName("plants/hellion_fruit");
 		this.setCreativeTab(EbonArtsMod.tabEbonArtsItems);
 	}
 	

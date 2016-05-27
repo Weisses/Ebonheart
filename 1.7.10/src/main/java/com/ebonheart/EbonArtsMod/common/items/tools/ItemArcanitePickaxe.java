@@ -4,6 +4,7 @@ import net.minecraft.item.EnumRarity;
 import net.minecraft.item.ItemPickaxe;
 import net.minecraft.item.ItemStack;
 
+import com.ebonheart.EbonArtsMod.EbonArtsMod;
 import com.ebonheart.EbonArtsMod.common.items.ItemHelper;
 import com.ebonheart.EbonArtsMod.init.InitItemsEA;
 
@@ -12,7 +13,9 @@ public class ItemArcanitePickaxe extends ItemPickaxe {
 	public ItemArcanitePickaxe(ToolMaterial material) 
 	{
 		super(material);
-		ItemHelper.setItemName(this, "tool/arcanite_pickaxe");
+		//ItemHelper.setItemName(this, "tool/arcanite_pickaxe");
+		this.setUnlocalizedName("tools/arcanite_pickaxe");
+		this.setCreativeTab(EbonArtsMod.tabEbonArtsItems);
 	}
 	
 	public boolean getIsRepairable(ItemStack par1ItemStack, ItemStack par2ItemStack)
@@ -22,7 +25,7 @@ public class ItemArcanitePickaxe extends ItemPickaxe {
 	
 	public EnumRarity getRarity(ItemStack stack)
     {
-        return EnumRarity.UNCOMMON;
+        return EnumRarity.uncommon;
     }
 	
 }

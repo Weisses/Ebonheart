@@ -17,6 +17,7 @@ public class ItemMirroringDisc extends ItemMusicDiscEA {
 	public ItemMirroringDisc(String unlocalizedName, String soundIn) 
 	{
 		super(unlocalizedName, soundIn);
+		this.setUnlocalizedName(unlocalizedName);
 		this.setCreativeTab(EbonArtsMod.tabEbonArtsItems);
 	}
 	
@@ -31,7 +32,7 @@ public class ItemMirroringDisc extends ItemMusicDiscEA {
 	
 	public EnumRarity getRarity(ItemStack stack)
     {
-        return EnumRarity.RARE;
+        return EnumRarity.rare;
     }
 	
 }

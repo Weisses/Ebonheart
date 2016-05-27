@@ -33,20 +33,21 @@ public class EntityEnchantedEbonheart extends EntityThrowable {
         return 0.07F;
     }
 
-    protected float getVelocity()
+    protected float func_70182_d()
     {
         return 0.7F;
     }
 
-    protected float getInaccuracy()
+    protected float func_70183_g()
     {
         return -20.0F;
     }
 
-    /** 
+    
+    /**
      * Called when this EntityThrowable hits a block or entity.
      */
-    protected void onImpact(MovingObjectPosition result)
+    protected void onImpact(MovingObjectPosition p_70184_1_)
     {
     	if (this.worldObj.isRemote)
     	{
@@ -57,22 +58,18 @@ public class EntityEnchantedEbonheart extends EntityThrowable {
     	}
         if (!this.worldObj.isRemote)
         {
-        	this.worldObj.playAuxSFX(2002, new BlockPos(this), 0);
-            int i = 3 + this.worldObj.rand.nextInt(15) + this.worldObj.rand.nextInt(15);
-            
+            this.worldObj.playAuxSFX(2002, (int)Math.round(this.posX), (int)Math.round(this.posY), (int)Math.round(this.posZ), 0);
+            int i = 3 + this.worldObj.rand.nextInt(5) + this.worldObj.rand.nextInt(5);
+
             while (i > 0)
             {
                 int j = EntityXPOrb.getXPSplit(i);
                 i -= j;
                 this.worldObj.spawnEntityInWorld(new EntityXPOrb(this.worldObj, this.posX, this.posY, this.posZ, j));
-                
-                
-                    
             }
 
             this.setDead();
         }
-        
     }
     
 }

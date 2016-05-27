@@ -1,5 +1,8 @@
 package com.ebonheart.EbonArtsMod.client.projectile;
 
+import org.lwjgl.opengl.GL11;
+import org.lwjgl.opengl.GL12;
+
 import net.minecraft.client.Minecraft;
 import net.minecraft.client.renderer.Tessellator;
 import net.minecraft.client.renderer.WorldRenderer;
@@ -7,7 +10,10 @@ import net.minecraft.client.renderer.entity.Render;
 import net.minecraft.client.renderer.entity.RenderManager;
 import net.minecraft.client.renderer.texture.TextureAtlasSprite;
 import net.minecraft.client.renderer.texture.TextureMap;
+import net.minecraft.client.resources.IResourceManager;
 import net.minecraft.entity.Entity;
+import net.minecraft.init.Items;
+import net.minecraft.util.IIcon;
 import net.minecraft.util.ResourceLocation;
 
 import com.ebonheart.EbonArtsMod.api.Reference;
@@ -20,78 +26,75 @@ import cpw.mods.fml.relauncher.SideOnly;
 @SideOnly(Side.CLIENT)
 public class RenderEnchantedEbonheart extends Render
 {
-	
-	public static final ResourceLocation ENTITY_TEXTURE = new ResourceLocation(Reference.MOD_ID, "textures/items/gems/enchanted_ebonheart.png");
-    private float scale;
-    
-    public RenderEnchantedEbonheart(RenderManager renderManagerIn)
+    private float field_77002_a;
+    private static final String __OBFID = "CL_00000995";
+
+    public RenderEnchantedEbonheart(IResourceManager eARender)
     {
-        super();
-        this.scale = 0.5f;
-        
-        this.shadowSize = 0.15F;
-        this.shadowOpaque = 0.75F;
-        
+        //this.field_77002_a = eARender;
+        this.field_77002_a = 0.5F;
     }
 
     /**
      * Actually renders the given argument. This is a synthetic bridge method, always casting down its argument and then
      * handing it off to a worker function which does the actual work. In all probabilty, the class Render is generic
-     * (Render<T extends Entity>) and this method has signature public void func_76986_a(T entity, double d, double d1,
-     * double d2, float f, float f1). But JAD is pre 1.5 so doe
+     * (Render<T extends Entity) and this method has signature public void func_76986_a(T entity, double d, double d1,
+     * double d2, float f, float f1). But JAD is pre 1.5 so doesn't do that.
      */
-    public void doRender(EntityEnchantedEbonheart entity, double x, double y, double z, float entityYaw, float partialTicks)
+    public void doRender(EntityEnchantedEbonheart p_76986_1_, double p_76986_2_, double p_76986_4_, double p_76986_6_, float p_76986_8_, float p_76986_9_)
     {
-        GlStateManager.pushMatrix();
-        this.bindEntityTexture(entity);
-        GlStateManager.translate((float)x, (float)y, (float)z);
-        GlStateManager.enableRescaleNormal();
-        GlStateManager.scale(this.scale, this.scale, this.scale);
-        TextureAtlasSprite textureatlassprite = Minecraft.getMinecraft().getRenderItem().getItemModelMesher().getParticleIcon(InitItemsEA.enchanted_ebonheart);
-        Tessellator tessellator = Tessellator.getInstance();
-        WorldRenderer vertexbuffer = tessellator.getWorldRenderer();
-        //WorldRenderer worldrenderer = tessellator.getWorldRenderer();
-        float f = textureatlassprite.getMinU();
-        float f1 = textureatlassprite.getMaxU();
-        float f2 = textureatlassprite.getMinV();
-        float f3 = textureatlassprite.getMaxV();
-        float f4 = 1.0F;
-        float f5 = 0.5F;
-        float f6 = 0.25F;
-        GlStateManager.rotate(180.0F - this.renderManager.playerViewY, 0.0F, 1.0F, 0.0F);
-        GlStateManager.rotate(-this.renderManager.playerViewX, 1.0F, 0.0F, 0.0F);
-        vertexbuffer.begin(7, DefaultVertexFormats.POSITION_TEX_NORMAL);
-        vertexbuffer.pos(-0.5D, -0.25D, 0.0D).tex((double)f, (double)f3).normal(0.0F, 1.0F, 0.0F).endVertex();
-        vertexbuffer.pos(0.5D, -0.25D, 0.0D).tex((double)f1, (double)f3).normal(0.0F, 1.0F, 0.0F).endVertex();
-        vertexbuffer.pos(0.5D, 0.75D, 0.0D).tex((double)f1, (double)f2).normal(0.0F, 1.0F, 0.0F).endVertex();
-        vertexbuffer.pos(-0.5D, 0.75D, 0.0D).tex((double)f, (double)f2).normal(0.0F, 1.0F, 0.0F).endVertex();
+        GL11.glPushMatrix();
+        this.bindEntityTexture(p_76986_1_);
+        GL11.glTranslatef((float)p_76986_2_, (float)p_76986_4_, (float)p_76986_6_);
+        GL11.glEnable(GL12.GL_RESCALE_NORMAL);
+        float f2 = this.field_77002_a;
+        GL11.glScalef(f2 / 1.0F, f2 / 1.0F, f2 / 1.0F);
+        IIcon iicon = InitItemsEA.enchanted_ebonheart.getIconFromDamage(0);
+        Tessellator tessellator = Tessellator.instance;
+        float f3 = iicon.getMinU();
+        float f4 = iicon.getMaxU();
+        float f5 = iicon.getMinV();
+        float f6 = iicon.getMaxV();
+        float f7 = 1.0F;
+        float f8 = 0.5F;
+        float f9 = 0.25F;
+        GL11.glRotatef(180.0F - this.renderManager.playerViewY, 0.0F, 1.0F, 0.0F);
+        GL11.glRotatef(-this.renderManager.playerViewX, 1.0F, 0.0F, 0.0F);
+        tessellator.startDrawingQuads();
+        tessellator.setNormal(0.0F, 1.0F, 0.0F);
+        tessellator.addVertexWithUV((double)(0.0F - f8), (double)(0.0F - f9), 0.0D, (double)f3, (double)f6);
+        tessellator.addVertexWithUV((double)(f7 - f8), (double)(0.0F - f9), 0.0D, (double)f4, (double)f6);
+        tessellator.addVertexWithUV((double)(f7 - f8), (double)(1.0F - f9), 0.0D, (double)f4, (double)f5);
+        tessellator.addVertexWithUV((double)(0.0F - f8), (double)(1.0F - f9), 0.0D, (double)f3, (double)f5);
         tessellator.draw();
-        GlStateManager.disableRescaleNormal();
-        GlStateManager.popMatrix();
-        super.doRender(entity, x, y, z, entityYaw, partialTicks);
+        GL11.glDisable(GL12.GL_RESCALE_NORMAL);
+        GL11.glPopMatrix();
     }
 
     /**
      * Returns the location of an entity's texture. Doesn't seem to be called unless you call Render.bindEntityTexture.
      */
-    //@Override
-    //protected ResourceLocation getEntityTexture(EntityEnchantedEbonheart entity)
-    //{
-     //   return //ENTITY_TEXTURE;
-    //    		TextureMap.locationBlocksTexture;
-    //}
+    protected ResourceLocation getEntityTexture(EntityEnchantedEbonheart p_110775_1_)
+    {
+        return TextureMap.locationItemsTexture;
+    }
 
-	@Override
-	public void doRender(Entity p_76986_1_, double p_76986_2_,
-			double p_76986_4_, double p_76986_6_, float p_76986_8_,
-			float p_76986_9_) {
-		// TODO Auto-generated method stub
-		
-	}
+    /**
+     * Returns the location of an entity's texture. Doesn't seem to be called unless you call Render.bindEntityTexture.
+     */
+    protected ResourceLocation getEntityTexture(Entity p_110775_1_)
+    {
+        return this.getEntityTexture((EntityEnchantedEbonheart)p_110775_1_);
+    }
 
-	@Override
-	protected ResourceLocation getEntityTexture(Entity p_110775_1_) {
-		// TODO Auto-generated method stub
-		return TextureMap.locationBlocksTexture;
-	}
+    /**
+     * Actually renders the given argument. This is a synthetic bridge method, always casting down its argument and then
+     * handing it off to a worker function which does the actual work. In all probabilty, the class Render is generic
+     * (Render<T extends Entity) and this method has signature public void func_76986_a(T entity, double d, double d1,
+     * double d2, float f, float f1). But JAD is pre 1.5 so doesn't do that.
+     */
+    public void doRender(Entity p_76986_1_, double p_76986_2_, double p_76986_4_, double p_76986_6_, float p_76986_8_, float p_76986_9_)
+    {
+        this.doRender((EntityEnchantedEbonheart)p_76986_1_, p_76986_2_, p_76986_4_, p_76986_6_, p_76986_8_, p_76986_9_);
+    }
 }

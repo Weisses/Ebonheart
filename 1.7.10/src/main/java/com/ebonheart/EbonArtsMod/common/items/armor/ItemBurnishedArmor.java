@@ -24,9 +24,9 @@ import cpw.mods.fml.relauncher.SideOnly;
 //Arcanite
 public class ItemBurnishedArmor extends ItemArmor {
 	
-	int playerPosX;
-	int playerPosY;
-	int playerPosZ;
+	double playerPosX;
+	double playerPosY;
+	double playerPosZ;
 	
 	Random random = new Random();
 	
@@ -34,7 +34,10 @@ public class ItemBurnishedArmor extends ItemArmor {
 	{
 		super(MaterialHelper.BURNISHED, renderIndexIn, equipmentSlotIn);
 		
-		ItemHelper.setItemName(this, unlocalizedName);
+		//ItemHelper.setItemName(this, unlocalizedName);
+		
+		
+		this.setUnlocalizedName(unlocalizedName);
 		this.setCreativeTab(EbonArtsMod.tabEbonArtsItems);
 	}
 	
@@ -56,7 +59,7 @@ public class ItemBurnishedArmor extends ItemArmor {
 	
 	public EnumRarity getRarity(ItemStack stack)
     {
-        return EnumRarity.UNCOMMON;
+        return EnumRarity.uncommon;
     }
 	
 	@Override
@@ -68,7 +71,7 @@ public class ItemBurnishedArmor extends ItemArmor {
 			&& player.inventory.armorItemInSlot(0) != null && player.inventory.armorItemInSlot(0).getItem() == InitItemsEA.burnished_boots) 
 		{
 			
-			if(!player.getEntityAttribute(SharedMonsterAttributes.movementSpeed).hasModifier(EAAttributeModifier.BURNISHED_SPEED_BONUS))
+			if(player.getEntityAttribute(SharedMonsterAttributes.movementSpeed) == null)//.hasModifier(EAAttributeModifier.BURNISHED_SPEED_BONUS))
 			{
 				player.getEntityAttribute(SharedMonsterAttributes.movementSpeed).applyModifier(EAAttributeModifier.BURNISHED_SPEED_BONUS);
 			}
@@ -87,9 +90,9 @@ public class ItemBurnishedArmor extends ItemArmor {
 					if(world.isRemote)
 					{
 						
-						playerPosX = player.getPosition().getX();
-						playerPosY = player.getPosition().getY();
-						playerPosZ = player.getPosition().getZ();
+						playerPosX = player.posX;//.getPosition().getX();
+						playerPosY = player.posY;
+						playerPosZ = player.posZ;
 						
 						int d = random.nextInt(100) + 1;
 						
@@ -100,7 +103,7 @@ public class ItemBurnishedArmor extends ItemArmor {
 						
 						if (d <= 50)
 						{
-							world.spawnParticle(EnumParticleTypes.CLOUD, playerPosX, playerPosY, playerPosZ, (double)((random.nextFloat() - 0.5F) * 0.2F), (double)((random.nextFloat() - 0.5F) * 0.2F), (double)((random.nextFloat() - 0.5F) * 0.2F), new int[0]);
+							//world.spawnParticle(EnumParticleTypes.CLOUD, playerPosX, playerPosY, playerPosZ, (double)((random.nextFloat() - 0.5F) * 0.2F), (double)((random.nextFloat() - 0.5F) * 0.2F), (double)((random.nextFloat() - 0.5F) * 0.2F), new int[0]);
 						}
 						
 					}

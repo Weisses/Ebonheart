@@ -4,6 +4,7 @@ import net.minecraft.item.EnumRarity;
 import net.minecraft.item.ItemStack;
 import net.minecraft.item.ItemSword;
 
+import com.ebonheart.EbonArtsMod.EbonArtsMod;
 import com.ebonheart.EbonArtsMod.common.items.ItemHelper;
 import com.ebonheart.EbonArtsMod.init.InitItemsEA;
 
@@ -12,7 +13,9 @@ public class ItemArcaniteSword extends ItemSword {
 	public ItemArcaniteSword(ToolMaterial material) 
 	{
 		super(material);
-		ItemHelper.setItemName(this, "tool/arcanite_sword");
+		//ItemHelper.setItemName(this, "tool/arcanite_sword");
+		this.setUnlocalizedName("tools/arcanite_sword");
+		this.setCreativeTab(EbonArtsMod.tabEbonArtsItems);
 	}
 	
 	public boolean getIsRepairable(ItemStack par1ItemStack, ItemStack par2ItemStack)
@@ -22,7 +25,7 @@ public class ItemArcaniteSword extends ItemSword {
 	
 	public EnumRarity getRarity(ItemStack stack)
 	{
-		return EnumRarity.UNCOMMON;
+		return EnumRarity.uncommon;
 	}
 	
 	//entity.attackEntityFrom(DamageSource source, float damage)

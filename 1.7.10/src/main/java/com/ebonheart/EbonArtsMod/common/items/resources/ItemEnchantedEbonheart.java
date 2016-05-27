@@ -21,9 +21,11 @@ public class ItemEnchantedEbonheart extends Item {
 	
 	public ItemEnchantedEbonheart() 
 	{
-		ItemHelper.setItemName(this, "gem/enchanted_ebonheart");
-		this.setMaxStackSize(16);
+		//ItemHelper.setItemName(this, "gem/enchanted_ebonheart");
+		this.setUnlocalizedName("gems/enchanted_ebonheart");
 		this.setCreativeTab(EbonArtsMod.tabEbonArtsItems);
+		this.setMaxStackSize(16);
+		//this.setCreativeTab(EbonArtsMod.tabEbonArtsItems);
 	}
 	
 	@SideOnly(Side.CLIENT)
@@ -120,7 +122,7 @@ public class ItemEnchantedEbonheart extends Item {
 	
 	public EnumRarity getRarity(ItemStack stack)
     {
-        return EnumRarity.RARE;
+        return EnumRarity.rare;
     }
 	
 }

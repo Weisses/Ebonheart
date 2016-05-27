@@ -10,6 +10,7 @@ import net.minecraft.item.ItemStack;
 import net.minecraft.item.ItemSword;
 import net.minecraft.potion.Potion;
 
+import com.ebonheart.EbonArtsMod.EbonArtsMod;
 import com.ebonheart.EbonArtsMod.common.items.ItemHelper;
 import com.ebonheart.EbonArtsMod.common.items.WeaponHelper;
 import com.mojang.realmsclient.gui.ChatFormatting;
@@ -22,7 +23,9 @@ public class ItemBlazefury extends ItemSword {
 	public ItemBlazefury(ToolMaterial material) 
 	{
 		super(material);
-		ItemHelper.setItemName(this, "tool/blazefury");
+		//ItemHelper.setItemName(this, "tool/blazefury");
+		this.setUnlocalizedName("tools/blazefury");
+		this.setCreativeTab(EbonArtsMod.tabEbonArtsItems);
 	}
 	
 	public boolean hitEntity(ItemStack stack, EntityLivingBase target, EntityLivingBase attacker)
@@ -34,7 +37,9 @@ public class ItemBlazefury extends ItemSword {
 		{
 			Potion potion = Potion.fireResistance;
 					//.fireResistance;
-			EntityPlayer playerIn = attacker.getEntityWorld().getPlayerEntityByUUID(attacker.getUniqueID());
+			//EntityPlayer playerIn = attacker;
+			
+			//EntityPlayer playerIn = attacker.getEntityWorld().getPlayerEntityByUUID(attacker.getUniqueID());
 			target.setFire(4);
 			WeaponHelper.addPotionEffectToTarget(playerIn, potion, 5, 0);
 			stack.damageItem(1, playerIn);
@@ -54,7 +59,7 @@ public class ItemBlazefury extends ItemSword {
 	
 	public EnumRarity getRarity(ItemStack stack)
     {
-        return EnumRarity.EPIC;
+        return EnumRarity.epic;
     }
 	
 }

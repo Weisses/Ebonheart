@@ -2,6 +2,7 @@ package com.ebonheart.EbonArtsMod.client;
 
 import net.minecraft.client.Minecraft;
 import net.minecraft.client.renderer.entity.RenderManager;
+import net.minecraft.client.resources.IResourceManager;
 import net.minecraft.entity.Entity;
 
 import com.ebonheart.EbonArtsMod.api.ItemsEA;
@@ -12,7 +13,7 @@ import cpw.mods.fml.client.registry.RenderingRegistry;
 
 public final class InitEntityEARender extends ItemsEA {
 	
-	public static RenderManager EARender;
+	public static IResourceManager EARender;
 	
 	public static void registerRenders()
 	{
@@ -28,13 +29,13 @@ public final class InitEntityEARender extends ItemsEA {
 			)
 	{
 		
-		//EARender = Minecraft.getMinecraft().getRenderManager(); 
+		EARender = Minecraft.getMinecraft().getResourceManager(); 
 		
 		//RenderingRegistry.registerEntityRenderingHandler(classIn, renderFactory);
 		
-		//RenderingRegistry//.registerEntityRenderingHandler(entityClass, renderFactory);
-		//.registerEntityRenderingHandler
-		//(classIn, new RenderEnchantedEbonheart(EARender));
+		RenderingRegistry//.registerEntityRenderingHandler(entityClass, renderFactory);
+		.registerEntityRenderingHandler
+		(classIn, new RenderEnchantedEbonheart(EARender));
 		
 		
 		

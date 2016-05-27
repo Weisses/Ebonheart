@@ -32,7 +32,7 @@ public class ItemCelestialArmor extends ItemArmor {
 	{
 		super(MaterialHelper.CELESTIAL, renderIndexIn, equipmentSlotIn);
 		
-		ItemHelper.setItemName(this, unlocalizedName);
+		this.setUnlocalizedName(unlocalizedName);
 		this.setCreativeTab(EbonArtsMod.tabEbonArtsItems);
 	}
 	
@@ -55,7 +55,7 @@ public class ItemCelestialArmor extends ItemArmor {
 	
 	public EnumRarity getRarity(ItemStack stack)
     {
-        return EnumRarity.EPIC;
+        return EnumRarity.epic;
     }
 	
 	@Override

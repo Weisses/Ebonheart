@@ -35,7 +35,7 @@ public class ItemScalemailArmor extends ItemArmor {
 	{
 		super(MaterialHelper.SCALEMAIL, renderIndexIn, equipmentSlotIn);
 		
-		ItemHelper.setItemName(this, unlocalizedName);
+		this.setUnlocalizedName(unlocalizedName);
 		this.setCreativeTab(EbonArtsMod.tabEbonArtsItems);
 	}
 	
@@ -58,7 +58,7 @@ public class ItemScalemailArmor extends ItemArmor {
 	
 	public EnumRarity getRarity(ItemStack stack)
     {
-        return EnumRarity.RARE;
+        return EnumRarity.rare;
     }
 	
 	@Override
@@ -91,16 +91,16 @@ public class ItemScalemailArmor extends ItemArmor {
 						if(world.isRemote)
 						{
 							
-							playerPosX = player.getPositionVector().xCoord;
-							playerPosY = player.getPositionVector().yCoord;
-							playerPosZ = player.getPositionVector().zCoord;
+							playerPosX = player.posX;
+							playerPosY = player.posY;
+							playerPosZ = player.posZ;
 							
 							int d = random.nextInt(100) + 1;
 							
 							if (d <= 25)
 							{
 								
-								world.spawnParticle(EnumParticleTypes.FIREWORKS_SPARK, playerPosX, playerPosY, playerPosZ, (double)((random.nextFloat() - 0.5F) * 0.2F), (double)((random.nextFloat() - 0.5F) * 0.2F), (double)((random.nextFloat() - 0.5F) * 0.2F), new int[0]);
+								//world.spawnParticle(EnumParticleTypes.FIREWORKS_SPARK, playerPosX, playerPosY, playerPosZ, (double)((random.nextFloat() - 0.5F) * 0.2F), (double)((random.nextFloat() - 0.5F) * 0.2F), (double)((random.nextFloat() - 0.5F) * 0.2F), new int[0]);
 								
 							}
 							

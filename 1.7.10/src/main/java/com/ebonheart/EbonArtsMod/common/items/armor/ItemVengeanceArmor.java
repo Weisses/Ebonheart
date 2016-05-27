@@ -34,7 +34,7 @@ public class ItemVengeanceArmor extends ItemArmor {
 	{
 		super(MaterialHelper.VENGEANCE, renderIndexIn, equipmentSlotIn);
 		
-		ItemHelper.setItemName(this, unlocalizedName);
+		this.setUnlocalizedName(unlocalizedName);
 		this.setCreativeTab(EbonArtsMod.tabEbonArtsItems);
 		
 	}
@@ -59,7 +59,7 @@ public class ItemVengeanceArmor extends ItemArmor {
 	
 	public EnumRarity getRarity(ItemStack stack)
     {
-        return EnumRarity.EPIC;
+        return EnumRarity.epic;
     }
 	
 	@Override
@@ -70,18 +70,17 @@ public class ItemVengeanceArmor extends ItemArmor {
 			&& player.inventory.armorItemInSlot(1) != null && player.inventory.armorItemInSlot(1).getItem() == InitItemsEA.vengeance_leggings
 			&& player.inventory.armorItemInSlot(0) != null && player.inventory.armorItemInSlot(0).getItem() == InitItemsEA.vengeance_boots) 
 		{
-			
-			if(!player.getEntityAttribute(SharedMonsterAttributes.movementSpeed).hasModifier(EAAttributeModifier.VENGEANCE_SPEED_BONUS))
+			if(player.getEntityAttribute(SharedMonsterAttributes.movementSpeed) == null)
 			{
 				player.getEntityAttribute(SharedMonsterAttributes.movementSpeed).applyModifier(EAAttributeModifier.VENGEANCE_SPEED_BONUS);
 			}
 			
-			if(!player.getEntityAttribute(SharedMonsterAttributes.maxHealth).hasModifier(EAAttributeModifier.VENGEANCE_HP_BONUS))
+			if(player.getEntityAttribute(SharedMonsterAttributes.maxHealth) == null)
 			{
 				player.getEntityAttribute(SharedMonsterAttributes.maxHealth).applyModifier(EAAttributeModifier.VENGEANCE_HP_BONUS);
 			}
 			
-			if(!player.getEntityAttribute(SharedMonsterAttributes.attackDamage).hasModifier(EAAttributeModifier.VENGEANCE_ATTACK_BONUS))
+			if(player.getEntityAttribute(SharedMonsterAttributes.attackDamage) == null)
 			{
 				player.getEntityAttribute(SharedMonsterAttributes.attackDamage).applyModifier(EAAttributeModifier.VENGEANCE_ATTACK_BONUS);
 			}

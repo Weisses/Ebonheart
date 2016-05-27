@@ -18,12 +18,16 @@ public class EntityFlightFX extends EntityEnchantmentTableParticleFX {
     {
         super(parWorld, parX, parY, parZ, parMotionX, parMotionY, parMotionZ);
         
-        int d1 = random.nextInt(150) + 1;
-        int d2 = random.nextInt(150) + 1;
-        int d3 = random.nextInt(150) + 1;
+        float d1 = random.nextFloat() - (random.nextFloat() * .25F);
+        float d2 = random.nextFloat() - (random.nextFloat() * .25F);
+        float d3 = random.nextFloat() - (random.nextFloat() * .25F);
+        
         
         particleScale = 0.5F;
-        setRBGColorF(d1, d2, d3);
+        //setRBGColorF(d1, d2, d3);
+        this.particleRed = d1;
+        this.particleGreen = d2;
+        this.particleBlue = d3;
         
     }
     
