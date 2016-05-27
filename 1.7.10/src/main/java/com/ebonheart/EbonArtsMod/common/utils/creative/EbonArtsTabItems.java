@@ -10,7 +10,7 @@ public class EbonArtsTabItems extends CreativeTabs {
 	public EbonArtsTabItems(String label) 
 	{
 		super(label);
-		this.setBackgroundImageName("ebonarts.png");
+		//this.setBackgroundImageName("ebonarts.png");
 	}
 
 	@Override

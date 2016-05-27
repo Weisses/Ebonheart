@@ -9,6 +9,7 @@ import net.minecraft.item.ItemStack;
 import net.minecraft.stats.StatList;
 import net.minecraft.world.World;
 
+import com.ebonheart.EbonArtsMod.EbonArtsMod;
 import com.ebonheart.EbonArtsMod.common.entity.EntityEnchantedEbonheart;
 import com.ebonheart.EbonArtsMod.common.items.ItemHelper;
 import com.mojang.realmsclient.gui.ChatFormatting;
@@ -22,6 +23,7 @@ public class ItemEnchantedEbonheart extends Item {
 	{
 		ItemHelper.setItemName(this, "gem/enchanted_ebonheart");
 		this.setMaxStackSize(16);
+		this.setCreativeTab(EbonArtsMod.tabEbonArtsItems);
 	}
 	
 	@SideOnly(Side.CLIENT)

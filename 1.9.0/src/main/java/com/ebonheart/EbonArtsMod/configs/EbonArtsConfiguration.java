@@ -17,6 +17,7 @@ public class EbonArtsConfiguration
 	public static boolean armorRecipe;
 	public static boolean armorParticle;
 	public static boolean musicRecipe;
+	public static boolean plantParticle;
 	public static boolean decraftRecipe1;
 	//public static boolean decraftRecipe2;
 	public static final boolean HORSERECIPE_DEFAULT = false;
@@ -33,6 +34,8 @@ public class EbonArtsConfiguration
 	public static final String ARMORANIMATION_NAME = "Disable Mod Armor Particles?";
 	public static final boolean MUSICRECIPE_DEFAULT = false;
 	public static final String MUSICRECIPE_NAME = "Disable crafting Music Discs?";
+	public static final boolean PLANTANIMATION_DEFAULT = false;
+	public static final String PLANTANIMATION_NAME = "Disable Mod Crop Particles?";
 	public static final boolean DECRAFTRECIPE1_DEFAULT = false;
 	public static final String DECRAFTRECIPE1_NAME = "Disable decrafting Mod Items?";
 	
@@ -66,6 +69,7 @@ public class EbonArtsConfiguration
 		
 		EbonArtsMod.config.addCustomCategoryComment(PARTICLES, "Enable or disable mod armor animations.");
 		armorParticle = EbonArtsMod.config.get(PARTICLES, TextFormatting.YELLOW + ARMORANIMATION_NAME, ARMORANIMATION_DEFAULT).getBoolean(ARMORANIMATION_DEFAULT);
+		plantParticle = EbonArtsMod.config.get(PARTICLES, TextFormatting.YELLOW + PLANTANIMATION_NAME, PLANTANIMATION_DEFAULT).getBoolean(PLANTANIMATION_DEFAULT);
 		
 		//saves the config
 		if(EbonArtsMod.config.hasChanged())

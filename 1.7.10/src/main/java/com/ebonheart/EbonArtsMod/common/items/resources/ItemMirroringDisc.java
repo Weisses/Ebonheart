@@ -6,6 +6,7 @@ import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.item.EnumRarity;
 import net.minecraft.item.ItemStack;
 
+import com.ebonheart.EbonArtsMod.EbonArtsMod;
 import com.mojang.realmsclient.gui.ChatFormatting;
 
 import cpw.mods.fml.relauncher.Side;
@@ -16,7 +17,7 @@ public class ItemMirroringDisc extends ItemMusicDiscEA {
 	public ItemMirroringDisc(String unlocalizedName, String soundIn) 
 	{
 		super(unlocalizedName, soundIn);
-
+		this.setCreativeTab(EbonArtsMod.tabEbonArtsItems);
 	}
 	
 	@Override

@@ -2,22 +2,19 @@ package com.ebonheart.EbonArtsMod.common.blocks.world;
 
 import java.util.Random;
 
-import com.ebonheart.EbonArtsMod.common.blocks.BlockHelper;
-import com.ebonheart.EbonArtsMod.init.InitBlocksEA;
-import com.ebonheart.EbonArtsMod.init.InitItemsEA;
-
 import net.minecraft.block.BlockCrops;
-import net.minecraft.block.BlockFlower;
 import net.minecraft.block.properties.PropertyInteger;
 import net.minecraft.block.state.IBlockState;
-import net.minecraft.init.Items;
 import net.minecraft.item.Item;
 import net.minecraft.util.BlockPos;
 import net.minecraft.util.EnumParticleTypes;
-import net.minecraft.world.IBlockAccess;
 import net.minecraft.world.World;
 import net.minecraftforge.fml.relauncher.Side;
 import net.minecraftforge.fml.relauncher.SideOnly;
+
+import com.ebonheart.EbonArtsMod.common.blocks.BlockHelper;
+import com.ebonheart.EbonArtsMod.configs.EbonArtsConfiguration;
+import com.ebonheart.EbonArtsMod.init.InitItemsEA;
 
 public class HellionFruitCrop extends BlockCrops{
 	
@@ -51,7 +48,8 @@ public class HellionFruitCrop extends BlockCrops{
     //@SideOnly(Side.CLIENT)
     //public void randomDisplayTick(IBlockState state, World worldIn, BlockPos pos, Random rand)
     //{
-    	
+    	if(!EbonArtsConfiguration.plantParticle)
+		{
     	if(worldIn.getLight(pos) >= 8 || worldIn.canSeeSky(pos))
     	{
     	
@@ -80,5 +78,6 @@ public class HellionFruitCrop extends BlockCrops{
     			}
     		}
     	}
+		}
     }
 }

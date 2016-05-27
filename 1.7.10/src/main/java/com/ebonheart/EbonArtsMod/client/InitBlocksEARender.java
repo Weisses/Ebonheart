@@ -22,7 +22,7 @@ public final class InitBlocksEARender extends BlocksEA {
 		registerRender(ebonheart_ore);
 		registerRender(ebon_ore);
 		registerRender(ebon_ore_nether);
-		
+		/**
 		registerRender(cobble_mystic_block_normal);
 		registerRender(cobble_mystic_block_glass);
 		registerRender(cobble_mystic_block_white);
@@ -79,7 +79,7 @@ public final class InitBlocksEARender extends BlocksEA {
 		registerRender(wood_mystic_block_green);
 		registerRender(wood_mystic_block_red);
 		registerRender(wood_mystic_block_black);
-		
+		*/
 		registerRender(draconium_block);
 		registerRender(velious_block);
 		registerRender(arcanite_block);
@@ -89,7 +89,7 @@ public final class InitBlocksEARender extends BlocksEA {
 		registerRender(obsidian_block);
 		registerRender(glowstone_block);
 		registerRender(ebonheart_block);
-		
+		/**
 		registerRender(draconium_block_brick);
 		registerRender(velious_block_brick);
 		registerRender(arcanite_block_brick);
@@ -222,16 +222,16 @@ public final class InitBlocksEARender extends BlocksEA {
 		
 		//registerRender(tutorialTileEntity);
 		//ClientRegistry.bindTileEntitySpecialRenderer(TileEntityTutorial.class, new RenderEbonheart());
-		
+		**/
 	}
 	
 	public static void registerRender(Block block)
 	{
 		
-		Item item = Item.getItemFromBlock(block);
+		//Item item = Item.getItemFromBlock(block);
 		
-		item.setTextureName(Reference.MOD_ID + item.getUnlocalizedName());
-		block.setBlockTextureName(Reference.MOD_ID + block.getUnlocalizedName());
+		//item.setTextureName(Reference.MOD_ID + item.getUnlocalizedName());
+		block.setBlockTextureName(Reference.MOD_ID + ":" + block.getUnlocalizedName().substring(5));
 		
 		//Minecraft.getMinecraft().getRenderItem().getItemModelMesher().register(item, 0, new ModelResourceLocation(block.getRegistryName().toString(), "inventory"));
 	}

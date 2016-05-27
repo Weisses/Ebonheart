@@ -7,6 +7,7 @@ import net.minecraft.item.EnumRarity;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
 
+import com.ebonheart.EbonArtsMod.EbonArtsMod;
 import com.ebonheart.EbonArtsMod.common.items.ItemHelper;
 import com.mojang.realmsclient.gui.ChatFormatting;
 
@@ -18,6 +19,7 @@ public class ItemArcanite extends Item {
 	public ItemArcanite() 
 	{
 		this.setUnlocalizedName("gems/arcanite");
+		this.setCreativeTab(EbonArtsMod.tabEbonArtsItems);
 		
 	}
 	

@@ -84,8 +84,64 @@ public class ItemCelestialArmor extends ItemArmor {
 			&& player.getItemStackFromSlot(EntityEquipmentSlot.LEGS) != null && player.getItemStackFromSlot(EntityEquipmentSlot.LEGS).getItem() == InitItemsEA.celestial_leggings
 			&& player.getItemStackFromSlot(EntityEquipmentSlot.FEET) != null && player.getItemStackFromSlot(EntityEquipmentSlot.FEET).getItem() == InitItemsEA.celestial_boots) 
 		{
+			if(!player.getEntityAttribute(SharedMonsterAttributes.MOVEMENT_SPEED).hasModifier(EAAttributeModifier.CELESTIAL_SPEED_BONUS))
+			{
+				player.getEntityAttribute(SharedMonsterAttributes.MOVEMENT_SPEED).applyModifier(EAAttributeModifier.CELESTIAL_SPEED_BONUS);
+			}
+			
+			
 			
 			if (!player.capabilities.isCreativeMode)
+			{
+				
+				if (player.getEntityAttribute(SharedMonsterAttributes.MOVEMENT_SPEED).hasModifier(EAAttributeModifier.CELESTIAL_SPEED_BONUS) 
+					&& !player.capabilities.allowFlying)
+				
+				{
+					player.capabilities.allowFlying = true;
+				}
+				
+				
+				if (world.isRemote)
+				{
+					if (player.capabilities.isFlying)
+					{
+						
+						player.addVelocity(-(player.motionX * .1), -(player.motionY * .15), -(player.motionZ * .1));
+						
+					}
+					
+				}
+				
+			}
+			
+			if(!EbonArtsConfiguration.armorParticle)
+			{
+				if (world.isRemote)
+				{
+					if (player.capabilities.isFlying)
+					{
+						if(player.motionX != 0 || player.motionY != 0 || player.motionX != 0)
+						{
+							int d = random.nextInt(100) + 1;
+							
+							if (d <= 25)
+							{
+									
+								EbonArtsMod.proxy.generateFlightParticles(player);
+									
+							}
+								
+						}
+							
+					}
+						
+				}
+					
+			}
+			
+		}
+		/**	if (!player.capabilities.isCreativeMode)
 			{
 				
 				if (!player.capabilities.allowFlying)
@@ -140,5 +196,7 @@ public class ItemCelestialArmor extends ItemArmor {
 				player.capabilities.allowFlying = false;
 			}
 		}
+		
+		*/
 	}
 }

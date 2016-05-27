@@ -15,7 +15,9 @@ public class BlockSoularite extends BlockRockEA {
 	public BlockSoularite() 
 	{
 		super();
-		BlockHelper.setBlockName(this, "gem/soularite/soularite_block");
+		//BlockHelper.setBlockName(this, "gem/soularite/soularite_block");
+		this.setBlockName("gems/soularite/soularite_block");
+		this.setCreativeTab(EbonArtsMod.tabEbonArtsBlocks);
 		
 		this.useNeighborBrightness=true;
 	}

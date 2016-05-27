@@ -15,7 +15,9 @@ public class BlockVelious extends BlockRockEA {
 	public BlockVelious() 
 	{
 		super();
-		BlockHelper.setBlockName(this, "gem/velious/velious_block");
+		//BlockHelper.setBlockName(this, "gem/velious/velious_block");
+		this.setBlockName("gems/velious/velious_block");
+		this.setCreativeTab(EbonArtsMod.tabEbonArtsBlocks);
 		
 		this.useNeighborBrightness=true;
 	}

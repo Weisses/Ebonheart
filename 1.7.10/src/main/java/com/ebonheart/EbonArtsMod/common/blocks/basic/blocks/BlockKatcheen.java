@@ -15,7 +15,9 @@ public class BlockKatcheen extends BlockRockEA {
 	public BlockKatcheen() 
 	{
 		super();
-		BlockHelper.setBlockName(this, "gem/katcheen/katcheen_block");
+		//BlockHelper.setBlockName(this, "gem/katcheen/katcheen_block");
+		this.setBlockName("gems/katcheen/katcheen_block");
+		this.setCreativeTab(EbonArtsMod.tabEbonArtsBlocks);
 		
 		this.useNeighborBrightness=true;
 	}

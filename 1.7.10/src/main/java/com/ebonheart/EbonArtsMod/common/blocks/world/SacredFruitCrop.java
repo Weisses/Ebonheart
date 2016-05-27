@@ -6,6 +6,7 @@ import net.minecraft.block.BlockCrops;
 import net.minecraft.item.Item;
 import net.minecraft.world.World;
 
+import com.ebonheart.EbonArtsMod.EbonArtsMod;
 import com.ebonheart.EbonArtsMod.common.blocks.BlockHelper;
 import com.ebonheart.EbonArtsMod.init.InitItemsEA;
 
@@ -20,6 +21,8 @@ public class SacredFruitCrop extends BlockCrops {
 	{
 		BlockHelper.setBlockName(this, "plant/sacred_fruit_crop");
 		setCreativeTab(null);
+		this.setBlockName("ores/draconium_ore");
+		//this.setCreativeTab(EbonArtsMod.tabEbonArtsBlocks);
 	}
 	protected Item getSeed()
     {

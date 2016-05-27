@@ -7,6 +7,7 @@ import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
 
+import com.ebonheart.EbonArtsMod.EbonArtsMod;
 import com.ebonheart.EbonArtsMod.common.items.ItemHelper;
 
 import cpw.mods.fml.relauncher.Side;
@@ -17,7 +18,7 @@ public class ItemDraconiumDust extends Item {
 	public ItemDraconiumDust() 
 	{
 		this.setUnlocalizedName("gems/draconium_dust");
-		this.setCreativeTab(CreativeTabs.tabMisc);
+		this.setCreativeTab(EbonArtsMod.tabEbonArtsItems);
 		//ItemHelper.setItemName(this, "gem/draconium_dust");
 	}
 	

@@ -55,12 +55,12 @@ public class ItemCelestialArmor extends ItemArmor {
 	}
 	
 	public boolean getIsRepairable(ItemStack toRepair, ItemStack repair)
-    {
-        return InitItemsEA.soularite == repair.getItem() ? true : super.getIsRepairable(toRepair, repair);
-    }
+  {
+      return InitItemsEA.soularite == repair.getItem() ? true : super.getIsRepairable(toRepair, repair);
+  }
 	
 	@SideOnly(Side.CLIENT)
-    public void addInformation(ItemStack stack, EntityPlayer playerIn, List toolTip, boolean advanced) 
+  public void addInformation(ItemStack stack, EntityPlayer playerIn, List toolTip, boolean advanced) 
 	{
 		toolTip.add(TextFormatting.DARK_PURPLE + "Divine armor with the soul");
 		toolTip.add(TextFormatting.DARK_PURPLE + "of an Archangel.");
@@ -72,9 +72,9 @@ public class ItemCelestialArmor extends ItemArmor {
 	}
 	
 	public EnumRarity getRarity(ItemStack stack)
-    {
-        return EnumRarity.EPIC;
-    }
+  {
+      return EnumRarity.EPIC;
+  }
 	
 	@Override
 	public void onArmorTick(World world, EntityPlayer player, ItemStack itemStack) 
@@ -84,8 +84,64 @@ public class ItemCelestialArmor extends ItemArmor {
 			&& player.getItemStackFromSlot(EntityEquipmentSlot.LEGS) != null && player.getItemStackFromSlot(EntityEquipmentSlot.LEGS).getItem() == InitItemsEA.celestial_leggings
 			&& player.getItemStackFromSlot(EntityEquipmentSlot.FEET) != null && player.getItemStackFromSlot(EntityEquipmentSlot.FEET).getItem() == InitItemsEA.celestial_boots) 
 		{
+			if(!player.getEntityAttribute(SharedMonsterAttributes.MOVEMENT_SPEED).hasModifier(EAAttributeModifier.CELESTIAL_SPEED_BONUS))
+			{
+				player.getEntityAttribute(SharedMonsterAttributes.MOVEMENT_SPEED).applyModifier(EAAttributeModifier.CELESTIAL_SPEED_BONUS);
+			}
+			
+			
 			
 			if (!player.capabilities.isCreativeMode)
+			{
+				
+				if (player.getEntityAttribute(SharedMonsterAttributes.MOVEMENT_SPEED).hasModifier(EAAttributeModifier.CELESTIAL_SPEED_BONUS) 
+					&& !player.capabilities.allowFlying)
+				
+				{
+					player.capabilities.allowFlying = true;
+				}
+				
+				
+				if (world.isRemote)
+				{
+					if (player.capabilities.isFlying)
+					{
+						
+						player.addVelocity(-(player.motionX * .1), -(player.motionY * .15), -(player.motionZ * .1));
+						
+					}
+					
+				}
+				
+			}
+			
+			if(!EbonArtsConfiguration.armorParticle)
+			{
+				if (world.isRemote)
+				{
+					if (player.capabilities.isFlying)
+					{
+						if(player.motionX != 0 || player.motionY != 0 || player.motionX != 0)
+						{
+							int d = random.nextInt(100) + 1;
+							
+							if (d <= 25)
+							{
+									
+								EbonArtsMod.proxy.generateFlightParticles(player);
+									
+							}
+								
+						}
+							
+					}
+						
+				}
+					
+			}
+			
+		}
+		/**	if (!player.capabilities.isCreativeMode)
 			{
 				
 				if (!player.capabilities.allowFlying)
@@ -140,5 +196,7 @@ public class ItemCelestialArmor extends ItemArmor {
 				player.capabilities.allowFlying = false;
 			}
 		}
+		
+		*/
 	}
 }

@@ -15,7 +15,9 @@ public class BlockGlowstone extends BlockRockEA {
 	public BlockGlowstone() 
 	{
 		super();
-		BlockHelper.setBlockName(this, "gem/glowstone/glowstone_block");
+		//BlockHelper.setBlockName(this, "gem/glowstone/glowstone_block");
+		this.setBlockName("gems/glowstone/glowstone_block");
+		this.setCreativeTab(EbonArtsMod.tabEbonArtsBlocks);
 		
 		this.useNeighborBrightness=true;
 	}

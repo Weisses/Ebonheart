@@ -27,7 +27,7 @@ public class EbonArtsMod {
 	public static CommonProxy proxy;
 	public static Configuration config = null;
 	
-	//public static final EbonArtsTabBlocks tabEbonArtsBlocks = new EbonArtsTabBlocks("tabEbonArtsBlocks");
+	public static final EbonArtsTabBlocks tabEbonArtsBlocks = new EbonArtsTabBlocks("tabEbonArtsBlocks");
 	public static final EbonArtsTabItems tabEbonArtsItems = new EbonArtsTabItems("tabEbonArtsItems");
 	//public static final EbonArtsTabDyeables tabEbonArtsDyeables = new EbonArtsTabDyeables("tabEbonArtsDyeables");
 	

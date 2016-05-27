@@ -18,6 +18,9 @@ public final class InitItemsEARender extends ItemsEA {
 		registerRender(necrocite);
 		registerRender(soularite);
 		registerRender(ebonheart);
+		
+		registerRender(obsidian_shards);
+		registerRender(glowstone_shards);
 		/**	
 		registerRender(enchanted_ebonheart);
 		registerRender(empowered_blade);
@@ -82,8 +85,7 @@ public final class InitItemsEARender extends ItemsEA {
 		registerRender(despair);
 		registerRender(souleater);
 		
-		registerRender(obsidian_shards);
-		registerRender(glowstone_shards);
+		
 		
 		
 		

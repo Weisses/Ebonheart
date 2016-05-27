@@ -7,6 +7,7 @@ import net.minecraft.item.EnumRarity;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
 
+import com.ebonheart.EbonArtsMod.EbonArtsMod;
 import com.ebonheart.EbonArtsMod.common.items.ItemHelper;
 import com.mojang.realmsclient.gui.ChatFormatting;
 
@@ -18,6 +19,8 @@ public class ItemEmpoweredBlade extends Item {
 	public ItemEmpoweredBlade() 
 	{
 		ItemHelper.setItemName(this, "tool/empowered_blade");
+		
+		this.setCreativeTab(EbonArtsMod.tabEbonArtsItems);
 	}
 	
 	@SideOnly(Side.CLIENT)

@@ -16,6 +16,7 @@ import net.minecraft.util.ResourceLocation;
 import net.minecraft.util.StatCollector;
 import net.minecraft.world.World;
 
+import com.ebonheart.EbonArtsMod.EbonArtsMod;
 import com.ebonheart.EbonArtsMod.api.Reference;
 import com.ebonheart.EbonArtsMod.common.items.ItemHelper;
 import com.mojang.realmsclient.gui.ChatFormatting;
@@ -35,7 +36,7 @@ public class ItemMusicDiscEA extends ItemRecord {
     			soundIn);
     	ItemHelper.setItemName(this, unlocalizedName);
     	
-    	
+    	this.setCreativeTab(EbonArtsMod.tabEbonArtsItems);
     	this.music = soundIn;
         RECORDS.put("records." + soundIn, this);
     }

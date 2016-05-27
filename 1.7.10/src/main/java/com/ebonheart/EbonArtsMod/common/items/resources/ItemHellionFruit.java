@@ -11,6 +11,7 @@ import net.minecraft.world.IBlockAccess;
 import net.minecraft.world.World;
 import net.minecraftforge.common.IPlantable;
 
+import com.ebonheart.EbonArtsMod.EbonArtsMod;
 import com.ebonheart.EbonArtsMod.common.items.ItemHelper;
 import com.ebonheart.EbonArtsMod.init.InitBlocksEA;
 import com.mojang.realmsclient.gui.ChatFormatting;
@@ -24,7 +25,7 @@ public class ItemHellionFruit extends ItemFood implements IPlantable {
 	{
 		super(healAmount, saturation, false);
 		ItemHelper.setItemName(this, "plant/hellion_fruit");
-		
+		this.setCreativeTab(EbonArtsMod.tabEbonArtsItems);
 	}
 	
 	public boolean onItemUse(ItemStack stack, EntityPlayer playerIn, World worldIn, BlockPos pos, EnumFacing side, float hitX, float hitY, float hitZ)

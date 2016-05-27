@@ -24,8 +24,8 @@ public class BlockHelper extends Block {
 	//and the unlocalised name to the full registry name.
 	public static void setBlockName(Block block, String blockName) 
 	{
-		block.setRegistryName(blockName);
-		block.setUnlocalizedName(block.getRegistryName().toString());
-		block.setCreativeTab(EbonArtsMod.tabEbonArtsBlocks);
+		//block.setRegistryName(blockName);
+		//block.setUnlocalizedName(block.getRegistryName().toString());
+		//block.setCreativeTab(EbonArtsMod.tabEbonArtsBlocks);
 	}
 }

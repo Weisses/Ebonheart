@@ -77,14 +77,24 @@ public class ItemCelestialArmor extends ItemArmor {
 			&& player.inventory.armorItemInSlot(1) != null && player.inventory.armorItemInSlot(1).getItem() == InitItemsEA.celestial_leggings
 			&& player.inventory.armorItemInSlot(0) != null && player.inventory.armorItemInSlot(0).getItem() == InitItemsEA.celestial_boots) 
 		{
+		
+			if(!player.getEntityAttribute(SharedMonsterAttributes.movementSpeed).hasModifier(EAAttributeModifier.CELESTIAL_SPEED_BONUS))
+			{
+				player.getEntityAttribute(SharedMonsterAttributes.movementSpeed).applyModifier(EAAttributeModifier.CELESTIAL_SPEED_BONUS);
+			}
+			
+			
 			
 			if (!player.capabilities.isCreativeMode)
 			{
 				
-				if (!player.capabilities.allowFlying)
+				if (player.getEntityAttribute(SharedMonsterAttributes.movementSpeed).hasModifier(EAAttributeModifier.CELESTIAL_SPEED_BONUS) 
+					&& !player.capabilities.allowFlying)
+				
 				{
 					player.capabilities.allowFlying = true;
 				}
+				
 				
 				if (world.isRemote)
 				{
@@ -122,15 +132,6 @@ public class ItemCelestialArmor extends ItemArmor {
 						
 				}
 					
-			}
-				
-		}
-		else
-		{
-			if (!player.capabilities.isCreativeMode)
-			{
-				player.capabilities.isFlying = false;
-				player.capabilities.allowFlying = false;
 			}
 		}
 	}

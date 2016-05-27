@@ -36,7 +36,7 @@ public class ClientProxy extends CommonProxy {
 		InitItemsEARender.registerRenders();
 		
 		//InitItemsEARender.registerRenders();
-		//InitBlocksEARender.registerRenders();
+		InitBlocksEARender.registerRenders();
 		//InitEntityEARender.registerRenders();
 		
 		

@@ -15,7 +15,9 @@ public class BlockObsidian extends BlockRockEA {
 	public BlockObsidian() 
 	{
 		super();
-		BlockHelper.setBlockName(this, "gem/obsidian/obsidian_block");
+		//BlockHelper.setBlockName(this, "gem/obsidian/obsidian_block");
+		this.setBlockName("gems/obsidian/obsidian_block");
+		this.setCreativeTab(EbonArtsMod.tabEbonArtsBlocks);
 		
 		this.useNeighborBrightness=true;
 	}

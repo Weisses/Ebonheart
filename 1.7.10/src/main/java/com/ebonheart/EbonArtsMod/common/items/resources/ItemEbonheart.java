@@ -7,6 +7,7 @@ import net.minecraft.item.EnumRarity;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
 
+import com.ebonheart.EbonArtsMod.EbonArtsMod;
 import com.ebonheart.EbonArtsMod.common.items.ItemHelper;
 import com.mojang.realmsclient.gui.ChatFormatting;
 
@@ -18,7 +19,7 @@ public class ItemEbonheart extends Item {
 	public ItemEbonheart() 
 	{
 		this.setUnlocalizedName("gems/ebonheart");
-		
+		this.setCreativeTab(EbonArtsMod.tabEbonArtsItems);
 	}
 	
 	@SideOnly(Side.CLIENT)

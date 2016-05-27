@@ -15,7 +15,9 @@ public class BlockArcanite extends BlockRockEA {
 	public BlockArcanite() 
 	{
 		super();
-		BlockHelper.setBlockName(this, "gem/arcanite/arcanite_block");
+		//BlockHelper.setBlockName(this, "gem/arcanite/arcanite_block");
+		this.setBlockName("gems/arcanite/arcanite_block");
+		this.setCreativeTab(EbonArtsMod.tabEbonArtsBlocks);
 		
 		this.useNeighborBrightness=true;
 	}

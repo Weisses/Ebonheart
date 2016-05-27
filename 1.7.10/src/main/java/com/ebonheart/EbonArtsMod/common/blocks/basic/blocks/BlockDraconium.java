@@ -15,7 +15,9 @@ public class BlockDraconium extends BlockRockEA {
 	public BlockDraconium() 
 	{
 		super();
-		BlockHelper.setBlockName(this, "gem/draconium/draconium_block");
+		//BlockHelper.setBlockName(this, "gem/draconium/draconium_block");
+		this.setBlockName("gems/draconium/draconium_block");
+		this.setCreativeTab(EbonArtsMod.tabEbonArtsBlocks);
 		
 		this.useNeighborBrightness=true;
 	}

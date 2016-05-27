@@ -3,6 +3,7 @@ package com.ebonheart.EbonArtsMod.common.blocks.world;
 import java.util.Random;
 
 import com.ebonheart.EbonArtsMod.common.blocks.BlockHelper;
+import com.ebonheart.EbonArtsMod.configs.EbonArtsConfiguration;
 import com.ebonheart.EbonArtsMod.init.InitBlocksEA;
 import com.ebonheart.EbonArtsMod.init.InitItemsEA;
 
@@ -48,7 +49,8 @@ public class HellionFruitCrop extends BlockCrops{
     @SideOnly(Side.CLIENT)
     public void randomDisplayTick(IBlockState state, World worldIn, BlockPos pos, Random rand)
     {
-    	
+    	if(!EbonArtsConfiguration.plantParticle)
+		{
     	if(worldIn.getLight(pos) >= 8 || worldIn.canSeeSky(pos))
     	{
     	
@@ -77,5 +79,6 @@ public class HellionFruitCrop extends BlockCrops{
     			}
     		}
     	}
+		}
     }
 }

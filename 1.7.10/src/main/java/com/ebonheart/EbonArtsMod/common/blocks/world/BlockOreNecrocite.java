@@ -11,6 +11,7 @@ import net.minecraft.item.ItemStack;
 import net.minecraft.world.IBlockAccess;
 import net.minecraft.world.World;
 
+import com.ebonheart.EbonArtsMod.EbonArtsMod;
 import com.ebonheart.EbonArtsMod.common.blocks.BlockHelper;
 import com.ebonheart.EbonArtsMod.init.InitItemsEA;
 
@@ -20,7 +21,8 @@ public class BlockOreNecrocite extends Block {
 	{
 		super(Material.rock);
 		BlockHelper.setBlockName(this, "ore/necrocite_ore");
-		
+		this.setBlockName("ores/necrocite_ore");
+		this.setCreativeTab(EbonArtsMod.tabEbonArtsBlocks);
 		this.setHarvestLevel("pickaxe", harvestlevel); //("pickaxe", 2) is iron
 		this.setHardness(hardness);
 		this.setResistance(5f);
@@ -28,8 +30,8 @@ public class BlockOreNecrocite extends Block {
 	}
 
 	@Override
-	public ArrayList<ItemStack> getDrops(IBlockAccess world, BlockPos pos, IBlockState blockstate, int fortune) 
-	{
+	public ArrayList <ItemStack> getDrops(World world, int x, int y, int z, int metadata, int fortune) 
+    {
 		Random rand = new Random();
 		int d = rand.nextInt(100) + 1;
 		
@@ -40,26 +42,22 @@ public class BlockOreNecrocite extends Block {
 		return drops;
 	}
     
-    public int quantityDroppedWithBonus(int fortune, Random random)
+	public int quantityDroppedWithBonus(int p_149679_1_, Random p_149679_2_)
     {
-        if (fortune > 0 && Item.getItemFromBlock(this) != this.getItemDropped((IBlockState)this.getBlockState().getValidStates().iterator().next(), random, fortune))
+        if (p_149679_1_ > 0 && Item.getItemFromBlock(this) != this.getItemDropped(0, p_149679_2_, p_149679_1_))
         {
-            int j = random.nextInt(fortune + 2) - 1;
+            int j = p_149679_2_.nextInt(p_149679_1_ + 2) - 1;
 
             if (j < 0)
             {
                 j = 0;
             }
-            return this.quantityDropped(random) * (j + 1);
+
+            return this.quantityDropped(p_149679_2_) * (j + 1);
         }
         else
         {
-            return this.quantityDropped(random);
+            return this.quantityDropped(p_149679_2_);
         }
-    }
-
-    public boolean canSilkHarvest(World world, BlockPos pos, IBlockState state, EntityPlayer player) 
-    {
-		return true;
     }
 }

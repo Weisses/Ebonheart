@@ -13,7 +13,7 @@ import net.minecraftforge.fml.common.gameevent.TickEvent;
 
 public class ArmorBuffHandler {
 	
-    @SubscribeEvent
+	@SubscribeEvent
     public void onPlayerTick(TickEvent.PlayerTickEvent event) 
     {
     	
@@ -24,6 +24,7 @@ public class ArmorBuffHandler {
 		
     	boolean burnishedBuff = false;
     	boolean vengeanceBuff = false;
+    	boolean celestialBuff = false;
     	
     	if(event.player.getEntityAttribute(SharedMonsterAttributes.MOVEMENT_SPEED).hasModifier(EAAttributeModifier.BURNISHED_SPEED_BONUS))
         {
@@ -36,6 +37,11 @@ public class ArmorBuffHandler {
 		{
     		vengeanceBuff = true;
 		}
+    	
+    	if(event.player.getEntityAttribute(SharedMonsterAttributes.MOVEMENT_SPEED).hasModifier(EAAttributeModifier.CELESTIAL_SPEED_BONUS))
+        {
+    		celestialBuff = true;
+        }
 		
     	//===================================================================
     	
@@ -72,6 +78,24 @@ public class ArmorBuffHandler {
     	    }
     		
         }
+    	
+    	if (celestialBuff) 
+    	{
+    		//LogHelper.info("Has Burnished buff.");
+    		if (event.player.getItemStackFromSlot(EntityEquipmentSlot.HEAD) == null || event.player.getItemStackFromSlot(EntityEquipmentSlot.HEAD).getItem() != InitItemsEA.celestial_helmet
+    			|| event.player.getItemStackFromSlot(EntityEquipmentSlot.CHEST) == null || event.player.getItemStackFromSlot(EntityEquipmentSlot.CHEST).getItem() != InitItemsEA.celestial_chestplate
+    			|| event.player.getItemStackFromSlot(EntityEquipmentSlot.LEGS) == null || event.player.getItemStackFromSlot(EntityEquipmentSlot.LEGS).getItem() != InitItemsEA.celestial_leggings
+    			|| event.player.getItemStackFromSlot(EntityEquipmentSlot.FEET) == null || event.player.getItemStackFromSlot(EntityEquipmentSlot.FEET).getItem() != InitItemsEA.celestial_boots) 
+    		{
+    			event.player.capabilities.allowFlying = false;
+    			event.player.capabilities.isFlying = false;
+    			
+    			event.player.getEntityAttribute(SharedMonsterAttributes.MOVEMENT_SPEED).removeModifier(EAAttributeModifier.CELESTIAL_SPEED_BONUS);
+    			//LogHelper.info("Burnished buff removed!");
+    			
+    	    }
+    		
+        } 
     	
     }
     

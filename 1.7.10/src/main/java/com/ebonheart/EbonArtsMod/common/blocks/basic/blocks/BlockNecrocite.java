@@ -15,7 +15,9 @@ public class BlockNecrocite extends BlockRockEA {
 	public BlockNecrocite() 
 	{
 		super();
-		BlockHelper.setBlockName(this, "gem/necrocite/necrocite_block");
+		//BlockHelper.setBlockName(this, "gem/necrocite/necrocite_block");
+		this.setBlockName("gems/necrocite/necrocite_block");
+		this.setCreativeTab(EbonArtsMod.tabEbonArtsBlocks);
 		
 		this.useNeighborBrightness=true;
 	}
