@@ -12,7 +12,7 @@ import net.minecraft.world.IBlockAccess;
 import net.minecraft.world.World;
 
 import com.ebonheart.EbonArtsMod.EbonArtsMod;
-import com.ebonheart.EbonArtsMod.common.blocks.BlockHelper;
+import com.ebonheart.EbonArtsMod.common.blocks.BlockHelperOLDOLDOLD;
 import com.ebonheart.EbonArtsMod.init.InitItemsEA;
 
 public class BlockOreVelious extends Block {
@@ -20,7 +20,7 @@ public class BlockOreVelious extends Block {
 	public BlockOreVelious(int harvestlevel, float hardness) 
 	{
 		super(Material.rock);
-		BlockHelper.setBlockName(this, "ore/velious_ore");
+		BlockHelperOLDOLDOLD.setBlockName(this, "ore/velious_ore");
 		this.setBlockName("ores/velious_ore");
 		this.setCreativeTab(EbonArtsMod.tabEbonArtsBlocks);
 		this.setHarvestLevel("pickaxe", harvestlevel); //("pickaxe", 2) is iron

@@ -4,14 +4,14 @@ import net.minecraft.block.Block;
 import net.minecraft.block.material.Material;
 
 import com.ebonheart.EbonArtsMod.EbonArtsMod;
-import com.ebonheart.EbonArtsMod.common.blocks.BlockHelper;
+import com.ebonheart.EbonArtsMod.common.blocks.BlockHelperOLDOLDOLD;
 
 public class BlockMysticStone extends Block {
 	
 	public BlockMysticStone(String unlocalizedName) 
 	{
 		super(Material.rock);
-		BlockHelper.setBlockName(this, unlocalizedName);
+		BlockHelperOLDOLDOLD.setBlockName(this, unlocalizedName);
 		
 		this.setCreativeTab(EbonArtsMod.tabEbonArtsDyeables);
 		this.setHarvestLevel("pickaxe", 2);

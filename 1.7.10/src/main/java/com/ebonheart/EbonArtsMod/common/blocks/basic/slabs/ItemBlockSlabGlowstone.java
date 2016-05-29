@@ -14,6 +14,6 @@ public class ItemBlockSlabGlowstone extends ItemSlab {
      */
     public ItemBlockSlabGlowstone(final Block block, final BlockHalfSlabGlowstone slab, final BlockDoubleSlabGlowstone doubleSlab, final Boolean stacked) 
     {
-        super(block, slab, doubleSlab);
+        super(block, slab, doubleSlab, stacked);
     }
 }

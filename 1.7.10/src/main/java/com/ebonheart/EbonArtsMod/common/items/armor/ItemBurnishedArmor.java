@@ -14,6 +14,7 @@ import com.ebonheart.EbonArtsMod.EbonArtsMod;
 import com.ebonheart.EbonArtsMod.common.entity.modifiers.EAAttributeModifier;
 import com.ebonheart.EbonArtsMod.common.items.ItemHelper;
 import com.ebonheart.EbonArtsMod.common.items.MaterialHelper;
+import com.ebonheart.EbonArtsMod.common.utils.LogHelper;
 import com.ebonheart.EbonArtsMod.configs.EbonArtsConfiguration;
 import com.ebonheart.EbonArtsMod.init.InitItemsEA;
 import com.mojang.realmsclient.gui.ChatFormatting;
@@ -33,9 +34,6 @@ public class ItemBurnishedArmor extends ItemArmor {
 	public ItemBurnishedArmor(String unlocalizedName, int renderIndexIn, int equipmentSlotIn)
 	{
 		super(MaterialHelper.BURNISHED, renderIndexIn, equipmentSlotIn);
-		
-		//ItemHelper.setItemName(this, unlocalizedName);
-		
 		
 		this.setUnlocalizedName(unlocalizedName);
 		this.setCreativeTab(EbonArtsMod.tabEbonArtsItems);
@@ -71,8 +69,9 @@ public class ItemBurnishedArmor extends ItemArmor {
 			&& player.inventory.armorItemInSlot(0) != null && player.inventory.armorItemInSlot(0).getItem() == InitItemsEA.burnished_boots) 
 		{
 			
-			if(player.getEntityAttribute(SharedMonsterAttributes.movementSpeed) == null)//.hasModifier(EAAttributeModifier.BURNISHED_SPEED_BONUS))
+			if(player.getEntityAttribute(SharedMonsterAttributes.movementSpeed).getModifier(EAAttributeModifier.BURNISHED_SPEED_BONUS.getID()) == null)// == null)//.hasModifier(EAAttributeModifier.BURNISHED_SPEED_BONUS))
 			{
+				//LogHelper.info("Burnished buff applied.");
 				player.getEntityAttribute(SharedMonsterAttributes.movementSpeed).applyModifier(EAAttributeModifier.BURNISHED_SPEED_BONUS);
 			}
 			
@@ -117,6 +116,14 @@ public class ItemBurnishedArmor extends ItemArmor {
 			}
 			
 		}
+		//else
+		//{
+			//if(player.getEntityAttribute(SharedMonsterAttributes.movementSpeed).getModifier(EAAttributeModifier.BURNISHED_SPEED_BONUS.getID()) != null)// == null)//.hasModifier(EAAttributeModifier.BURNISHED_SPEED_BONUS))
+			//{
+			//	LogHelper.info("Burnished buff REMOVED FROM ITEMARMOR.");
+			//	player.getEntityAttribute(SharedMonsterAttributes.movementSpeed).removeModifier(EAAttributeModifier.BURNISHED_SPEED_BONUS);
+			//}
+		//}
 		
 	}
 	

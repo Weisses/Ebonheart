@@ -14,6 +14,6 @@ public class ItemBlockSlabVelious extends ItemSlab {
      */
     public ItemBlockSlabVelious(final Block block, final BlockHalfSlabVelious slab, final BlockDoubleSlabVelious doubleSlab, final Boolean stacked) 
     {
-        super(block, slab, doubleSlab);
+        super(block, slab, doubleSlab, stacked);
     }
 }

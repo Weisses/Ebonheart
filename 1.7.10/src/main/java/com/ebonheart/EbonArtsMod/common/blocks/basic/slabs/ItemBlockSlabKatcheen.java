@@ -14,6 +14,6 @@ public class ItemBlockSlabKatcheen extends ItemSlab {
      */
     public ItemBlockSlabKatcheen(final Block block, final BlockHalfSlabKatcheen slab, final BlockDoubleSlabKatcheen doubleSlab, final Boolean stacked) 
     {
-        super(block, slab, doubleSlab);
+        super(block, slab, doubleSlab, stacked);
     }
 }

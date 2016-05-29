@@ -10,7 +10,8 @@ public class EAAttributeModifier {
 
 	public static EntityPlayer player;
 	
-	public static AttributeModifier BURNISHED_SPEED_BONUS = new AttributeModifier(UUID.fromString("d607b1a8-a17e-4ffd-b346-0d5f00000101"), "Burnished Speed Boost", 0.20, 2);
+	public static AttributeModifier BURNISHED_SPEED_BONUS = new AttributeModifier(UUID.fromString("d607b1a8-a17e-4ffd-b346-0d5f00000101"), 
+			"Burnished Speed Boost", 0.20, 2);
 	//public static AttributeModifier BURNISHED_LOOT_BONUS = new AttributeModifier(UUID.fromString("d607b1a8-a17e-4ffd-b346-0d5f00000102"), "Burnished Loot Boost", 5.00, 0);
 	
 	

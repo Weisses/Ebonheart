@@ -89,7 +89,7 @@ public final class InitBlocksEARender extends BlocksEA {
 		registerRender(obsidian_block);
 		registerRender(glowstone_block);
 		registerRender(ebonheart_block);
-		/**
+		
 		registerRender(draconium_block_brick);
 		registerRender(velious_block_brick);
 		registerRender(arcanite_block_brick);
@@ -216,14 +216,14 @@ public final class InitBlocksEARender extends BlocksEA {
 		registerRender(dragon_fruit);
 		
 	}
-	
+	/**
 	public static void registerSpecialRenders()
 	{
 		
 		//registerRender(tutorialTileEntity);
 		//ClientRegistry.bindTileEntitySpecialRenderer(TileEntityTutorial.class, new RenderEbonheart());
 		**/
-	}
+	//}
 	
 	public static void registerRender(Block block)
 	{

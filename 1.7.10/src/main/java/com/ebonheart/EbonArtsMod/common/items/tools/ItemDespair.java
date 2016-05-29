@@ -10,6 +10,7 @@ import net.minecraft.item.ItemStack;
 import net.minecraft.item.ItemSword;
 import net.minecraft.potion.Potion;
 
+import com.ebonheart.EbonArtsMod.EbonArtsMod;
 import com.ebonheart.EbonArtsMod.common.items.ItemHelper;
 import com.ebonheart.EbonArtsMod.common.items.WeaponHelper;
 import com.mojang.realmsclient.gui.ChatFormatting;
@@ -22,7 +23,9 @@ public class ItemDespair extends ItemSword {
 	public ItemDespair(ToolMaterial material) 
 	{
 		super(material);
-		ItemHelper.setItemName(this, "tool/despair");
+		//ItemHelper.setItemName(this, "tool/despair");
+		this.setUnlocalizedName("tools/despair");
+		this.setCreativeTab(EbonArtsMod.tabEbonArtsItems);
 	}
 	
 	public boolean hitEntity(ItemStack stack, EntityLivingBase target, EntityLivingBase attacker)
@@ -36,10 +39,10 @@ public class ItemDespair extends ItemSword {
 					//.wither;
 			Potion potion2 = Potion.confusion;
 					//.confusion;
-			EntityPlayer playerIn = attacker.getEntityWorld().getPlayerEntityByUUID(attacker.getUniqueID());
-			WeaponHelper.addPotionEffectToTarget(target, potion, 4, 1);
-			WeaponHelper.addPotionEffectToTarget(target, potion2, 3, 1);
-			stack.damageItem(1, playerIn);
+			//EntityPlayer playerIn = attacker.getEntityWorld().getPlayerEntityByUUID(attacker.getUniqueID());
+			//WeaponHelper.addPotionEffectToTarget(target, potion, 4, 1);
+			//WeaponHelper.addPotionEffectToTarget(target, potion2, 3, 1);
+			//stack.damageItem(1, playerIn);
 		}
         return true;
     }
@@ -56,7 +59,7 @@ public class ItemDespair extends ItemSword {
 	
 	public EnumRarity getRarity(ItemStack stack)
     {
-        return EnumRarity.EPIC;
+        return EnumRarity.epic;
     }
 
 }

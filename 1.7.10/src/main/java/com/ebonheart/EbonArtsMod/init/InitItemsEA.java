@@ -72,9 +72,9 @@ public class InitItemsEA extends ItemsEA {
 		register(ebonheart = new ItemEbonheart());
 		register(obsidian_shards = new ItemObsidianShard());
 		register(glowstone_shards = new ItemGlowstoneShard());
-		/**	
-		glowing_disc = new ItemMusicDiscEA("disc/glowing_disc", "records.glowing_disc"));
-		shimmering_disc = new ItemMusicDiscEA("disc/shimmering_disc", "records.shimmering_disc"));
+			
+		register(glowing_disc = new ItemMusicDiscEA("discs/glowing_disc"));
+		/**shimmering_disc = new ItemMusicDiscEA("disc/shimmering_disc", "records.shimmering_disc"));
 		laminate_disc = new ItemMusicDiscEA("disc/laminate_disc", "records.laminate_disc"));
 		resilient_disc = new ItemMusicDiscEA("disc/resilient_disc", "records.resilient_disc"));
 		dismal_disc = new ItemMusicDiscEA("disc/dismal_disc", "records.dismal_disc"));
@@ -106,14 +106,14 @@ public class InitItemsEA extends ItemsEA {
 		register(scalemail_chestplate = new ItemScalemailArmor("armor/scalemail_chestplate", 0, 1));
 		register(scalemail_leggings = new ItemScalemailArmor("armor/scalemail_leggings", 0, 2));
 		register(scalemail_boots = new ItemScalemailArmor("armor/scalemail_boots", 0, 3));
-		/**
-		hellion_fruit = new ItemHellionFruit(6, 0.6F));
-		sacred_fruit = new ItemSacredFruit(3, 0.8F));
-		dragon_fruit = new ItemDragonFruit(6, 0.8F));
+		
+		register(hellion_fruit = new ItemHellionFruit(6, 0.6F));
+		register(sacred_fruit = new ItemSacredFruit(3, 0.8F));
+		register(dragon_fruit = new ItemDragonFruit(6, 0.8F, InitBlocksEA.dragon_fruit));
 				//, InitBlocksEA.dragon_fruit//, Blocks.farmland
 				//));
 						
-		*/
+		
 		register(vengeance_helmet = new ItemVengeanceArmor("armor/vengeance_helmet", 0, 0));
 		register(vengeance_chestplate = new ItemVengeanceArmor("armor/vengeance_chestplate", 0, 1));
 		register(vengeance_leggings = new ItemVengeanceArmor("armor/vengeance_leggings", 0, 2));

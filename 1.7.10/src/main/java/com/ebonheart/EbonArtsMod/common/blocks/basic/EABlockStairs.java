@@ -1,17 +1,20 @@
 package com.ebonheart.EbonArtsMod.common.blocks.basic;
 
+import net.minecraft.block.Block;
 import net.minecraft.block.BlockStairs;
 import net.minecraft.init.Blocks;
 
-import com.ebonheart.EbonArtsMod.common.blocks.BlockHelper;
+import com.ebonheart.EbonArtsMod.EbonArtsMod;
+import com.ebonheart.EbonArtsMod.common.blocks.BlockHelperOLDOLDOLD;
 
 
 public class EABlockStairs extends BlockStairs {
 	
-	public EABlockStairs(String unlocalizedName) 
+	public EABlockStairs(Block block, String unlocalizedName) 
 	{
-		super(Blocks.oak_stairs.getStateFromMeta(0));
-		BlockHelper.setBlockName(this, unlocalizedName);
+		super(block, 0);
+		this.setBlockName(unlocalizedName);
+		this.setCreativeTab(EbonArtsMod.tabEbonArtsBlocks);
 		
 		this.useNeighborBrightness = true;
 		this.setHarvestLevel("pickaxe", 2);

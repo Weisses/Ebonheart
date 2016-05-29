@@ -37,12 +37,12 @@ public class ItemBlazefury extends ItemSword {
 		{
 			Potion potion = Potion.fireResistance;
 					//.fireResistance;
-			//EntityPlayer playerIn = attacker;
+			//EntityPlayer playerIn = attacker.;
 			
-			//EntityPlayer playerIn = attacker.getEntityWorld().getPlayerEntityByUUID(attacker.getUniqueID());
+			//EntityPlayer playerIn = attacker.getEntity;//;.getPlayerEntityByUUID(attacker.getUniqueID());
 			target.setFire(4);
-			WeaponHelper.addPotionEffectToTarget(playerIn, potion, 5, 0);
-			stack.damageItem(1, playerIn);
+			//WeaponHelper.addPotionEffectToTarget(playerIn, potion, 5, 0);
+			//stack.damageItem(1, playerIn);
 		}
         return true;
     }

@@ -14,6 +14,7 @@ import com.ebonheart.EbonArtsMod.init.InitEntityEA;
 import com.ebonheart.EbonArtsMod.init.InitItemsEA;
 import com.ebonheart.EbonArtsMod.init.InitRecipesEA;
 
+import cpw.mods.fml.common.FMLCommonHandler;
 import cpw.mods.fml.common.event.FMLInitializationEvent;
 import cpw.mods.fml.common.event.FMLPostInitializationEvent;
 import cpw.mods.fml.common.event.FMLPreInitializationEvent;
@@ -44,15 +45,17 @@ public class CommonProxy {
 		//InitRecipesEA.initShapedRecipe();
 		//InitRecipesEA.initShapelessRecipe();
 		//InitRecipesEA.initSmeltingRecipe();
-		//InitAchievementsEA.init();
+		InitAchievementsEA.init();
 		
 		//WorldChestHooks.init();
 		
 		//MinecraftForge.EVENT_BUS.register(new AchievementTriggersEA());
+		FMLCommonHandler.instance().bus().register(new AchievementTriggersEA());
 		//MinecraftForge.EVENT_BUS.register(new ArmorBuffHandler());
-	    
+		FMLCommonHandler.instance().bus().register(new ArmorBuffHandler());
 		
-		//GameRegistry.registerWorldGenerator(new WorldGeneratorEA(), 0);
+		
+		GameRegistry.registerWorldGenerator(new WorldGeneratorEA(), 0);
 		//.registerWorldGenerator(new WorldGeneratorEA(), 0);
 		NetworkRegistry.INSTANCE.registerGuiHandler(EbonArtsMod.instance, new GuiHandler());
 	}

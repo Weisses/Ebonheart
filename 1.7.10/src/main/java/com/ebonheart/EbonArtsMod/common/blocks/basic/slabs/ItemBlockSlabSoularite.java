@@ -14,6 +14,6 @@ public class ItemBlockSlabSoularite extends ItemSlab {
      */
     public ItemBlockSlabSoularite(final Block block, final BlockHalfSlabSoularite slab, final BlockDoubleSlabSoularite doubleSlab, final Boolean stacked) 
     {
-        super(block, slab, doubleSlab);
+        super(block, slab, doubleSlab, stacked);
     }
 }

@@ -5,15 +5,12 @@ import net.minecraft.item.Item;
 //Double slab.
 public class BlockDoubleSlabSoularite extends EABlockSlabSoularite {
 	
-    public BlockDoubleSlabSoularite(String setUnlocalizedName) 
+    public BlockDoubleSlabSoularite(boolean bool, String setUnlocalizedName) 
     {
-        super();
-        this.setUnlocalizedName(setUnlocalizedName);
+        super(bool);
+        
+        this.setBlockName(setUnlocalizedName);
     }
 
-	@Override
-	public boolean isDouble() 
-	{
-		return true;
-	}
+	
 }

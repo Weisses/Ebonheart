@@ -31,11 +31,11 @@ public class ItemConsecration extends ItemTool {
 	{
 		super(damageVsEntity, material, effectiveBlocks);
 		//super(BASE_DAMAGE, ATTACK_SPEED, material, Collections.emptySet());
-		ItemHelper.setItemName(this, "tool/consecration");
-
+		//ItemHelper.setItemName(this, "tool/consecration");
+		this.setUnlocalizedName("tools/consecration");
+		this.setCreativeTab(EbonArtsMod.tabEbonArtsItems);
 		setHarvestLevel("pickaxe", material.getHarvestLevel());
 		setHarvestLevel("shovel", material.getHarvestLevel());
-		setCreativeTab(EbonArtsMod.tabEbonArtsItems);
 	}
 	
 	@SideOnly(Side.CLIENT)
@@ -51,8 +51,15 @@ public class ItemConsecration extends ItemTool {
 	
 	public EnumRarity getRarity(ItemStack stack)
     {
-        return EnumRarity.EPIC;
+        return EnumRarity.epic;
     }
+	
+	
+	@Override
+	public Set<String> getToolClasses(ItemStack stack) {
+	    return ImmutableSet.of("pickaxe", "spade");
+	}
+	
 	
 	private static final Set<Material> EFFECTIVE_MATERIALS = ImmutableSet.of(
 			// Pickaxe

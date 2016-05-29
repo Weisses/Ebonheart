@@ -5,15 +5,12 @@ import net.minecraft.item.Item;
 //Double slab.
 public class BlockDoubleSlabKatcheen extends EABlockSlabKatcheen {
 	
-    public BlockDoubleSlabKatcheen(String setUnlocalizedName) 
+    public BlockDoubleSlabKatcheen(boolean bool, String setUnlocalizedName) 
     {
-        super();
-        this.setUnlocalizedName(setUnlocalizedName);
+        super(bool);
+        
+        this.setBlockName(setUnlocalizedName);
     }
 
-	@Override
-	public boolean isDouble() 
-	{
-		return true;
-	}
+	
 }

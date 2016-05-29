@@ -1,176 +1,105 @@
 package com.ebonheart.EbonArtsMod.common.blocks.basic.slabs;
 
+import java.util.List;
 import java.util.Random;
 
-import com.ebonheart.EbonArtsMod.EbonArtsMod;
-import com.ebonheart.EbonArtsMod.init.InitBlocksEA;
-import com.ebonheart.EbonArtsMod.init.InitItemsEA;
-
-import net.minecraft.block.Block;
 import net.minecraft.block.BlockSlab;
 import net.minecraft.block.material.Material;
-import net.minecraft.block.properties.IProperty;
-import net.minecraft.block.properties.PropertyBool;
-import net.minecraft.block.state.BlockState;
-import net.minecraft.block.state.IBlockState;
+import net.minecraft.client.renderer.texture.IIconRegister;
 import net.minecraft.creativetab.CreativeTabs;
-import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.init.Blocks;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
-import net.minecraft.util.BlockPos;
-import net.minecraft.util.EnumFacing;
-import net.minecraft.util.MovingObjectPosition;
-import net.minecraft.world.World;
-import net.minecraftforge.fml.common.registry.GameRegistry;
-import net.minecraftforge.fml.relauncher.Side;
-import net.minecraftforge.fml.relauncher.SideOnly;
+import net.minecraft.util.IIcon;
+
+import com.ebonheart.EbonArtsMod.init.InitBlocksEA;
+
+import cpw.mods.fml.relauncher.Side;
+import cpw.mods.fml.relauncher.SideOnly;
 
 //Draconium slab/double slab main class.
 public abstract class EABlockSlabNecrocite extends BlockSlab {
-	
-	//The property used for the variant. Needed for interactions with ItemSlab.
-	private static final PropertyBool VARIANT_PROPERTY = PropertyBool.create("variant");
-	
-	//The bit in metadata used by the half property.
-	private static final int HALF_META_BIT = 8;
-	
-	public EABlockSlabNecrocite() 
+	public static final String[] field_150006_b = new String[] {"ea"
+		//, "sand", "wood", "cobble", "brick", "smoothStoneBrick", "netherBrick", "quartz"
+		};
+    @SideOnly(Side.CLIENT)
+    private IIcon field_150007_M;
+    private static final String __OBFID = "CL_00000320";
+
+	public EABlockSlabNecrocite(boolean p_i45410_1_) 
 	{
-		super(Material.rock);
-		this.useNeighborBrightness = !this.isDouble();
+		super(p_i45410_1_, Material.rock);
 		this.setHarvestLevel("pickaxe", 2);
 		this.setStepSound(soundTypePiston);
 		
-		if (!this.isDouble()) 
-		{
-			setCreativeTab(EbonArtsMod.tabEbonArtsBlocks);
-		}
 		
-		IBlockState blockState = this.blockState.getBaseState();
-		blockState = blockState.withProperty(VARIANT_PROPERTY, false);
-		
-		if (!this.isDouble()) 
-		{
-			blockState = blockState.withProperty(HALF, EnumBlockHalf.BOTTOM);
-		}
-		this.setDefaultState(blockState);
 	}
 	
-	public static Item getItemFromBlock(final String name) 
-	{
-		return GameRegistry.findItem("ea", name);
-	}
 	
-	//Gets the unlocalized name based on metadata/damage
-	@Override
-	public final String getUnlocalizedName(final int metadata) 
-	{
-		return this.getUnlocalizedName();
-	}
-	
-	//Gets the value of the variant property based on the item
-	@Override
-	public final Object getVariant(final ItemStack itemStack) 
-	{
-		return false;
-	}
-	
-	//Gets the variant property
-	@Override
-	public final IProperty getVariantProperty() 
-	{
-		return VARIANT_PROPERTY;
-	}
-	
-	//Gets a block state from metadata
-	@Override
-	public final IBlockState getStateFromMeta(final int meta) 
-	{
-		IBlockState blockState = this.getDefaultState();
-		blockState = blockState.withProperty(VARIANT_PROPERTY, false);
-		
-		if (!this.isDouble())
-		{
-			EnumBlockHalf value = EnumBlockHalf.BOTTOM;
-			
-			if ((meta & HALF_META_BIT) != 0) 
-			{
-				value = EnumBlockHalf.TOP;
-			}
-			blockState = blockState.withProperty(HALF, value);
-		}
-		return blockState;
-	}
-	
-	//Gets the metadata value from a block state
-	@Override
-	public final int getMetaFromState(final IBlockState state) 
-	{
-		if (this.isDouble()) 
-		{
-			return 0;
-		}
-		
-		if ((EnumBlockHalf) state.getValue(HALF) == EnumBlockHalf.TOP) 
-		{
-			return HALF_META_BIT;
-		} 
-		else 
-		{
-			return 0;
-		}
-	}
-	
-	//Gets the damage for the block's item when dropped
-	@Override
-	public final int damageDropped(final IBlockState state) 
-	{
-		return 0;
-	}
-	
-	//Gets the item dropped when the block is broken
-	@Override
-	public Item getItemDropped(IBlockState state, Random rand, int fortune)
-	{
-		return Item.getItemFromBlock(InitBlocksEA.necrocite_slab);
-	}
-    
-	@SideOnly(Side.CLIENT)
-	public Item getItem(World worldIn, BlockPos pos)
-	{
-		return Item.getItemFromBlock(InitBlocksEA.necrocite_slab);
-	}
-	
-	//Picks the right item with mmb
-	public ItemStack getPickBlock(MovingObjectPosition target, World world, BlockPos pos, EntityPlayer player)
-	{
-		return new ItemStack(InitBlocksEA.necrocite_slab);
-	}
-	
-	//Creates the block state object
-	@Override
-	protected final BlockState createBlockState() 
-	{
-		if (this.isDouble()) 
-		{
-			return new BlockState(this, new IProperty[] {VARIANT_PROPERTY});
-		} 
-		else 
-		{
-			return new BlockState(this, new IProperty[] {VARIANT_PROPERTY, HALF});
-		}
-	}
-	
-	//Gets the ID of the block
-	private String innerGetId(final boolean isDoubleStacked) 
-	{
-		String result = "";
-		
-		if (isDoubleStacked) 
-		{
-			result = "double_";
-		}
-		return result + "slab";
-	}
+	 @SideOnly(Side.CLIENT)
+	    public IIcon getIcon(int p_149691_1_, int p_149691_2_)
+	    {
+		 
+		 return InitBlocksEA.necrocite_block.getBlockTextureFromSide(p_149691_1_);
+	     //   int k = p_149691_2_ & 7;
+
+	     //   if (this.field_150004_a && (p_149691_2_ & 8) != 0)
+	     //   {
+	     //       p_149691_1_ = 1;
+	     //   }
+
+	     //   return k == 0 ? (p_149691_1_ != 1 && p_149691_1_ != 0 ? this.field_150007_M : this.blockIcon) : (k == 1 ? Blocks.sandstone.getBlockTextureFromSide(p_149691_1_) : (k == 2 ? Blocks.planks.getBlockTextureFromSide(p_149691_1_) : (k == 3 ? Blocks.cobblestone.getBlockTextureFromSide(p_149691_1_) : (k == 4 ? Blocks.brick_block.getBlockTextureFromSide(p_149691_1_) : (k == 5 ? Blocks.stonebrick.getIcon(p_149691_1_, 0) : (k == 6 ? Blocks.nether_brick.getBlockTextureFromSide(1) : (k == 7 ? Blocks.quartz_block.getBlockTextureFromSide(p_149691_1_) : this.blockIcon)))))));
+	    }
+
+	    @SideOnly(Side.CLIENT)
+	    public void registerBlockIcons(IIconRegister p_149651_1_)
+	    {
+	        this.blockIcon = p_149651_1_.registerIcon("stone_slab_top");
+	        this.field_150007_M = p_149651_1_.registerIcon("stone_slab_side");
+	    }
+
+	    public Item getItemDropped(int p_149650_1_, Random p_149650_2_, int p_149650_3_)
+	    {
+	        return Item.getItemFromBlock(InitBlocksEA.necrocite_slab);
+	    }
+
+	    /**
+	     * Returns an item stack containing a single instance of the current block type. 'i' is the block's subtype/damage
+	     * and is ignored for blocks which do not support subtypes. Blocks which cannot be harvested should return null.
+	     */
+	    protected ItemStack createStackedBlock(int p_149644_1_)
+	    {
+			return new ItemStack(InitBlocksEA.necrocite_block);
+	        //return new ItemStack(Item.getItemFromBlock(Blocks.stone_slab), 2, p_149644_1_ & 7);
+	    }
+
+	    public String func_150002_b(int p_150002_1_)
+	    {
+	        //if (p_150002_1_ < 0 || p_150002_1_ >= field_150006_b.length)
+	        //{
+	        //    p_150002_1_ = 0;
+	        //}
+
+	        return super.getUnlocalizedName();// + "." + field_150006_b[p_150002_1_];
+	    }
+
+	    /**
+	     * returns a list of blocks with the same ID, but different meta (eg: wood returns 4 blocks)
+	     */
+	    @SideOnly(Side.CLIENT)
+	    public void getSubBlocks(Item p_149666_1_, CreativeTabs p_149666_2_, List p_149666_3_)
+	    {
+	    	
+	    	p_149666_3_.add(new ItemStack(p_149666_1_));
+	        //if (p_149666_1_ != Item.getItemFromBlock(Blocks.double_stone_slab))
+	        //{
+	        //    for (int i = 0; i <= 7; ++i)
+	        //    {
+	        //        if (i != 2)
+	        //        {
+	        //            p_149666_3_.add(new ItemStack(p_149666_1_, 1, i));
+	        //        }
+	        //    }
+	        //}
+	    }
 }

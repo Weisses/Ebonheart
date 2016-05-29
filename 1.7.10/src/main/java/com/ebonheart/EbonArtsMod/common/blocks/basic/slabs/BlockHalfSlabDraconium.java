@@ -1,27 +1,22 @@
 package com.ebonheart.EbonArtsMod.common.blocks.basic.slabs;
 
-import com.ebonheart.EbonArtsMod.init.InitBlocksEA;
+import com.ebonheart.EbonArtsMod.EbonArtsMod;
 
-import net.minecraft.block.Block;
-import net.minecraft.entity.player.EntityPlayer;
-import net.minecraft.item.Item;
-import net.minecraft.item.ItemStack;
-import net.minecraft.util.BlockPos;
-import net.minecraft.util.MovingObjectPosition;
-import net.minecraft.world.World;
 
 //Regular slab.
 public class BlockHalfSlabDraconium extends EABlockSlabDraconium {
 	
-    public BlockHalfSlabDraconium(String unlocalizedName) 
+    public BlockHalfSlabDraconium(boolean bool, String unlocalizedName) 
     {
-        super();
-        this.setUnlocalizedName(unlocalizedName);
+        super(bool);
+        this.setBlockName(unlocalizedName);
+        this.setCreativeTab(EbonArtsMod.tabEbonArtsBlocks);
     }
 
-    @Override
-    public final boolean isDouble() 
-    {
-        return false;
-    }
+    //@Override
+    //public final boolean isDouble() 
+    //{
+    //    return false;
+    //}
+
 }

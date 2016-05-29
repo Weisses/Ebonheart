@@ -14,6 +14,6 @@ public class ItemBlockSlabArcanite extends ItemSlab {
      */
     public ItemBlockSlabArcanite(final Block block, final BlockHalfSlabArcanite slab, final BlockDoubleSlabArcanite doubleSlab, final Boolean stacked) 
     {
-        super(block, slab, doubleSlab);
+        super(block, slab, doubleSlab, stacked);
     }
 }

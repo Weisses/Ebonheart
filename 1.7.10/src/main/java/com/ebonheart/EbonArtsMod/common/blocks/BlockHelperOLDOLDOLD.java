@@ -6,16 +6,16 @@ import net.minecraft.block.material.Material;
 
 import com.ebonheart.EbonArtsMod.EbonArtsMod;
 
-public class BlockHelper extends Block {
+public class BlockHelperOLDOLDOLD extends Block {
 	
-	public BlockHelper(Material material, MapColor mapColor, String blockName) 
+	public BlockHelperOLDOLDOLD(Material material, MapColor mapColor, String blockName) 
 	{
 		super(material);
 		setBlockName(this, blockName);
 		
 	}
 
-	public BlockHelper(Material materialIn, String blockName) 
+	public BlockHelperOLDOLDOLD(Material materialIn, String blockName) 
 	{
 		this(materialIn, materialIn.getMaterialMapColor(), blockName);
 	}

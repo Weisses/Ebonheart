@@ -7,7 +7,7 @@ import net.minecraft.util.EnumFacing;
 import net.minecraft.world.World;
 
 import com.ebonheart.EbonArtsMod.EbonArtsMod;
-import com.ebonheart.EbonArtsMod.common.blocks.BlockHelper;
+import com.ebonheart.EbonArtsMod.common.blocks.BlockHelperOLDOLDOLD;
 
 public class BlockMysticCobblestone extends BlockRotatedPillar {
 	
@@ -16,7 +16,7 @@ public class BlockMysticCobblestone extends BlockRotatedPillar {
 	public BlockMysticCobblestone(String unlocalizedName) 
 	{
 		super(Material.rock);
-		BlockHelper.setBlockName(this, unlocalizedName);
+		BlockHelperOLDOLDOLD.setBlockName(this, unlocalizedName);
 		
 		this.setCreativeTab(EbonArtsMod.tabEbonArtsDyeables);
 		this.setHarvestLevel("pickaxe", 2);

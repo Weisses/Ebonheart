@@ -8,9 +8,12 @@ import net.minecraft.init.Blocks;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
 import net.minecraft.util.EnumFacing;
+import net.minecraft.util.IIcon;
 import net.minecraft.world.IBlockAccess;
 
-import com.ebonheart.EbonArtsMod.common.blocks.BlockHelper;
+import com.ebonheart.EbonArtsMod.EbonArtsMod;
+import com.ebonheart.EbonArtsMod.common.blocks.BlockHelperOLDOLDOLD;
+import com.ebonheart.EbonArtsMod.init.InitBlocksEA;
 
 import cpw.mods.fml.relauncher.Side;
 import cpw.mods.fml.relauncher.SideOnly;
@@ -21,32 +24,29 @@ public class EABlockWall extends BlockWall {
 	public EABlockWall(String unlocalizedName) 
     {
 		super(Blocks.stonebrick);
-		BlockHelper.setBlockName(this, unlocalizedName);
+		this.setBlockName(unlocalizedName);
+		this.setCreativeTab(EbonArtsMod.tabEbonArtsBlocks);
 		
 		this.setHarvestLevel("pickaxe", 2);
 		this.setHardness(5.0F);
 		this.setStepSound(soundTypeStone);
 	}
 	
-	
-	
-	@SideOnly(Side.CLIENT)
-    public void getSubBlocks(Item itemIn, CreativeTabs tab, List<ItemStack> list)
-    {
-		list.add(new ItemStack(itemIn, 1));
-    }
-
 	@Override
-	public boolean canPlaceTorchOnTop(IBlockAccess world, BlockPos pos)
+	@SideOnly(Side.CLIENT)
+    public void getSubBlocks(Item p_149666_1_, CreativeTabs p_149666_2_, List p_149666_3_)
     {
-        if (isSideSolid(world, pos, EnumFacing.UP))
-        {
-            return true;
-        }
-        else
-        {
-            return this instanceof EABlockWall || this == net.minecraft.init.Blocks.glass || this == net.minecraft.init.Blocks.cobblestone_wall;
-        }
-		
+        p_149666_3_.add(new ItemStack(p_149666_1_, 1, 0));
+        //p_149666_3_.add(new ItemStack(p_149666_1_, 1, 1));
+    }
+	
+	/**
+     * Gets the block's texture. Args: side, meta
+     */
+    @SideOnly(Side.CLIENT)
+    public IIcon getIcon(int p_149691_1_, int p_149691_2_)
+    {
+    	return InitBlocksEA.necrocite_block.getBlockTextureFromSide(p_149691_1_);
+    	//return //p_149691_2_ == 1 ? Blocks.mossy_cobblestone.getBlockTextureFromSide(p_149691_1_) : Blocks.cobblestone.getBlockTextureFromSide(p_149691_1_);
     }
 }

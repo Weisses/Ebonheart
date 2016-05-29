@@ -2,21 +2,30 @@ package com.ebonheart.EbonArtsMod.common.blocks.basic;
 
 import net.minecraft.block.BlockRotatedPillar;
 import net.minecraft.block.material.Material;
+import net.minecraft.client.renderer.texture.IIconRegister;
 import net.minecraft.entity.EntityLivingBase;
 import net.minecraft.util.EnumFacing;
+import net.minecraft.util.IIcon;
 import net.minecraft.world.World;
 
-import com.ebonheart.EbonArtsMod.common.blocks.BlockHelper;
+import com.ebonheart.EbonArtsMod.EbonArtsMod;
+import com.ebonheart.EbonArtsMod.api.Reference;
+import com.ebonheart.EbonArtsMod.common.blocks.BlockHelperOLDOLDOLD;
+import com.ebonheart.EbonArtsMod.init.InitBlocksEA;
+
+import cpw.mods.fml.relauncher.Side;
+import cpw.mods.fml.relauncher.SideOnly;
 
 public class EABlockPillar extends BlockRotatedPillar {
 	
-	public static final PropertyEnum LOG_AXIS = PropertyEnum.create("axis", EABlockPillar.EnumAxis.class);
-    
+	//public static final PropertyEnum LOG_AXIS = PropertyEnum.create("axis", EABlockPillar.EnumAxis.class);
+	public IIcon[] icons = new IIcon[6];
 	public EABlockPillar(String unlocalizedName)
 	{
 		super(Material.rock);
-		BlockHelper.setBlockName(this, unlocalizedName);
-		
+		this.setBlockName(unlocalizedName);
+		this.setCreativeTab(EbonArtsMod.tabEbonArtsBlocks);
+		this.setBlockTextureName(Reference.MOD_ID + ":" + unlocalizedName);
 		this.setHarvestLevel("pickaxe", 2);
 		this.setHardness(5.0F);
 		this.setStepSound(soundTypeStone);
@@ -32,181 +41,39 @@ public class EABlockPillar extends BlockRotatedPillar {
 	{
 		return true;
 	}
+
+	//@Override
+	//public void registerBlockIcons(IIconRegister reg) {
+	//    for (int i = 0; i < 6; i ++) {
+	//        this.icons[i] = reg.registerIcon(this.textureName + "_" + i);
+	//    }
+	//}
 	
-	public IBlockState getStateFromMeta(int meta)
+	@Override
+	protected IIcon getSideIcon(int p_150163_1_) {
+		// TODO Auto-generated method stub
+		return InitBlocksEA.velious_block.getBlockTextureFromSide(p_150163_1_);
+	}
+	
+    @SideOnly(Side.CLIENT)
+    protected IIcon getTopIcon(int p_150161_1_)
     {
-        IBlockState iblockstate = this.getDefaultState();
-
-        switch (meta & 12)
-        {
-            case 0:
-                iblockstate = iblockstate.withProperty(LOG_AXIS, EABlockPillar.EnumAxis.Y);
-                break;
-            case 4:
-                iblockstate = iblockstate.withProperty(LOG_AXIS, EABlockPillar.EnumAxis.X);
-                break;
-            case 8:
-                iblockstate = iblockstate.withProperty(LOG_AXIS, EABlockPillar.EnumAxis.Z);
-                break;
-            default:
-                iblockstate = iblockstate.withProperty(LOG_AXIS, EABlockPillar.EnumAxis.NONE);
-        }
-
-        return iblockstate;
-    }
-
-    /**
-     * Convert the BlockState into the correct metadata value
-     */
-    public int getMetaFromState(IBlockState state)
-    {
-        int i = 0;
-        
-        switch (EABlockPillar.SwitchEnumAxis.AXIS_LOOKUP[((EABlockPillar.EnumAxis)state.getValue(LOG_AXIS)).ordinal()])
-        {
-            case 1:
-                i |= 4;
-                break;
-            case 2:
-                i |= 8;
-                break;
-            case 3:
-                i |= 12;
-        }
-        return i;
-    }
-
-    public IBlockState onBlockPlaced(World worldIn, BlockPos pos, EnumFacing facing, float hitX, float hitY, float hitZ, int meta, EntityLivingBase placer)
-    {
-        return super.onBlockPlaced(worldIn, pos, facing, hitX, hitY, hitZ, meta, placer).withProperty(LOG_AXIS, EABlockPillar.EnumAxis.fromFacingAxis(facing.getAxis()));
+    	return  InitBlocksEA.draconium_block_brick.getBlockTextureFromSide(p_150161_1_);
+    	//return this.field_150164_N;
     }
     
-    protected BlockState createBlockState()
-    {
-        return new BlockState(this, new IProperty[] {LOG_AXIS});
-    }
-
-    /**
-     * Get the damage value that this Block should drop
-     */
-    //public int damageDropped(IBlockState state)
-    //{
-	     //return ((BlockPlanks.EnumType)state.getValue(VARIANT)).getMetadata();
+    @Override
+    //public IIcon getIcon(int side, int meta) {
+    //    return this.icons[side];
     //}
-
-    
-    public static enum EnumAxis implements IStringSerializable
+    @SideOnly(Side.CLIENT)
+    public IIcon getIcon(int p_149691_1_, int p_149691_2_)
     {
-        X("x"),
-        Y("y"),
-        Z("z"),
-        NONE("none");
-        private final String name;
-
-        private static final String __OBFID = "CL_00002100";
-
-        private EnumAxis(String name)
-        {
-            this.name = name;
-        }
-
-        public String toString()
-        {
-            return this.name;
-        }
-
-        public static EABlockPillar.EnumAxis fromFacingAxis(EnumFacing.Axis axis)
-        {
-            switch (EABlockPillar.SwitchAxis.AXIS_LOOKUP[axis.ordinal()])
-            {
-                case 1:
-                    return X;
-                case 2:
-                    return Y;
-                case 3:
-                    return Z;
-                default:
-                    return NONE;
-            }
-        }
-
-        public String getName()
-        {
-            return this.name;
-        }
+        int k = p_149691_2_ & 12;
+        int l = p_149691_2_ & 3;
+        return k == 0 && (p_149691_1_ == 1 || p_149691_1_ == 0) ? this.getTopIcon(l) : (k == 4 && (p_149691_1_ == 5 || p_149691_1_ == 4) ? this.getTopIcon(l) : (k == 8 && (p_149691_1_ == 2 || p_149691_1_ == 3) ? this.getTopIcon(l) : this.getSideIcon(l)));
     }
-
-    static final class SwitchAxis
-        {
-            static final int[] AXIS_LOOKUP = new int[EnumFacing.Axis.values().length];
-            private static final String __OBFID = "CL_00002101";
-
-            static
-            {
-                try
-                {
-                    AXIS_LOOKUP[EnumFacing.Axis.X.ordinal()] = 1;
-                }
-                catch (NoSuchFieldError var3)
-                {
-                    ;
-                }
-
-                try
-                {
-                    AXIS_LOOKUP[EnumFacing.Axis.Y.ordinal()] = 2;
-                }
-                catch (NoSuchFieldError var2)
-                {
-                    ;
-                }
-
-                try
-                {
-                    AXIS_LOOKUP[EnumFacing.Axis.Z.ordinal()] = 3;
-                }
-                catch (NoSuchFieldError var1)
-                {
-                    ;
-                }
-            }
-        }
-    
-    
-    
-    static final class SwitchEnumAxis
-        {
-            static final int[] AXIS_LOOKUP = new int[EABlockPillar.EnumAxis.values().length];
-            
-            static
-            {
-                try
-                {
-                    AXIS_LOOKUP[EABlockPillar.EnumAxis.X.ordinal()] = 1;
-                }
-                catch (NoSuchFieldError var3)
-                {
-                    ;
-                }
-
-                try
-                {
-                    AXIS_LOOKUP[EABlockPillar.EnumAxis.Z.ordinal()] = 2;
-                }
-                catch (NoSuchFieldError var2)
-                {
-                    ;
-                }
-
-                try
-                {
-                    AXIS_LOOKUP[EABlockPillar.EnumAxis.NONE.ordinal()] = 3;
-                }
-                catch (NoSuchFieldError var1)
-                {
-                    ;
-                }
-            }
-        }
+	
+	
+	
 }
-

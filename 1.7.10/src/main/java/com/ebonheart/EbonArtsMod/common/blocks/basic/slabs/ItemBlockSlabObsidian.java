@@ -14,6 +14,6 @@ public class ItemBlockSlabObsidian extends ItemSlab {
      */
     public ItemBlockSlabObsidian(final Block block, final BlockHalfSlabObsidian slab, final BlockDoubleSlabObsidian doubleSlab, final Boolean stacked) 
     {
-        super(block, slab, doubleSlab);
+        super(block, slab, doubleSlab, stacked);
     }
 }

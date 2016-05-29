@@ -4,7 +4,7 @@ import net.minecraft.world.IBlockAccess;
 import net.minecraft.world.World;
 
 import com.ebonheart.EbonArtsMod.EbonArtsMod;
-import com.ebonheart.EbonArtsMod.common.blocks.BlockHelper;
+import com.ebonheart.EbonArtsMod.common.blocks.BlockHelperOLDOLDOLD;
 import com.ebonheart.EbonArtsMod.common.blocks.basic.BlockRockEA;
 import com.ebonheart.EbonArtsMod.init.InitBlocksEA;
 

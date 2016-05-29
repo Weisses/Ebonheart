@@ -14,6 +14,6 @@ public class ItemBlockSlabDraconium extends ItemSlab {
      */
     public ItemBlockSlabDraconium(final Block block, final BlockHalfSlabDraconium slab, final BlockDoubleSlabDraconium doubleSlab, final Boolean stacked) 
     {
-        super(block, slab, doubleSlab);
+        super(block, slab, doubleSlab, stacked);
     }
 }

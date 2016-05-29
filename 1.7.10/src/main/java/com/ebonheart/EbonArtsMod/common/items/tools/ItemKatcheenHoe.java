@@ -4,6 +4,7 @@ import net.minecraft.item.EnumRarity;
 import net.minecraft.item.ItemHoe;
 import net.minecraft.item.ItemStack;
 
+import com.ebonheart.EbonArtsMod.EbonArtsMod;
 import com.ebonheart.EbonArtsMod.common.items.ItemHelper;
 import com.ebonheart.EbonArtsMod.init.InitItemsEA;
 
@@ -12,7 +13,9 @@ public class ItemKatcheenHoe extends ItemHoe {
 	public ItemKatcheenHoe(ToolMaterial material) 
 	{
 		super(material);
-		ItemHelper.setItemName(this, "tool/katcheen_hoe");
+		//ItemHelper.setItemName(this, "tool/katcheen_hoe");
+		this.setUnlocalizedName("tools/katcheen_hoe");
+		this.setCreativeTab(EbonArtsMod.tabEbonArtsItems);
 	}
 
 	public boolean getIsRepairable(ItemStack par1ItemStack, ItemStack par2ItemStack)
@@ -22,7 +25,7 @@ public class ItemKatcheenHoe extends ItemHoe {
 	
 	public EnumRarity getRarity(ItemStack stack)
     {
-        return EnumRarity.RARE;
+        return EnumRarity.rare;
     }
 	
 }

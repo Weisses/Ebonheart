@@ -9,6 +9,7 @@ import net.minecraft.entity.EntityLivingBase;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.init.Blocks;
 import net.minecraft.item.EnumRarity;
+import net.minecraft.item.ItemPickaxe;
 import net.minecraft.item.ItemStack;
 import net.minecraft.item.ItemTool;
 import net.minecraft.world.World;
@@ -21,7 +22,7 @@ import com.mojang.realmsclient.gui.ChatFormatting;
 import cpw.mods.fml.relauncher.Side;
 import cpw.mods.fml.relauncher.SideOnly;
 
-public class ItemNecrosis extends ItemTool {
+public class ItemNecrosis  extends ItemPickaxe  {
 	
 	private static final float DIG_SPEED_WEB = 15.0f;
 	private static final float DIG_SPEED_SWORD = 1.5f;
@@ -29,13 +30,14 @@ public class ItemNecrosis extends ItemTool {
 	private static final float BASE_DAMAGE = 3.0f;
 	private static final float ATTACK_SPEED = -2.4f;
 	
-	public ItemNecrosis(float damageVsEntity, ToolMaterial material, Set<Block> effectiveBlocks) 
+	public ItemNecrosis(ToolMaterial material) 
 	{
-		super(damageVsEntity, material, effectiveBlocks);
-		ItemHelper.setItemName(this, "tool/necrosis");
-		
+		super(material);
+		//ItemHelper.setItemName(this, "tool/necrosis");
+		this.setUnlocalizedName("tools/necrosis");
+		this.setCreativeTab(EbonArtsMod.tabEbonArtsItems);
 		setHarvestLevel("axe", material.getHarvestLevel());
-		setCreativeTab(EbonArtsMod.tabEbonArtsItems);
+		//setCreativeTab(EbonArtsMod.tabEbonArtsItems);
 		
 		// Waila Harvestability sets the harvest tool of Cobwebs to "sword"
 		setHarvestLevel("sword", material.getHarvestLevel());
@@ -55,9 +57,13 @@ public class ItemNecrosis extends ItemTool {
 	
 	public EnumRarity getRarity(ItemStack stack)
     {
-        return EnumRarity.EPIC;
+        return EnumRarity.epic;
     }
 	
+	@Override
+	public Set<String> getToolClasses(ItemStack stack) {
+	    return ImmutableSet.of("pickaxe", "spade");
+	}
 	private static final Set<Material> EFFECTIVE_MATERIALS = ImmutableSet.of(
 			
 			// Axe

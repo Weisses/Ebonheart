@@ -5,15 +5,12 @@ import net.minecraft.item.Item;
 //Double slab.
 public class BlockDoubleSlabVelious extends EABlockSlabVelious {
 	
-    public BlockDoubleSlabVelious(String setUnlocalizedName) 
+    public BlockDoubleSlabVelious(boolean bool, String setUnlocalizedName) 
     {
-        super();
-        this.setUnlocalizedName(setUnlocalizedName);
+        super(bool);
+        
+        this.setBlockName(setUnlocalizedName);
     }
 
-	@Override
-	public boolean isDouble() 
-	{
-		return true;
-	}
+	
 }

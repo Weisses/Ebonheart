@@ -23,10 +23,10 @@ public final class InitItemsEARender extends ItemsEA {
 		registerRender(glowstone_shards);
 			
 		registerRender(enchanted_ebonheart);
-		/**	registerRender(empowered_blade);
+		//	registerRender(empowered_blade);
 		
 		registerRender(glowing_disc);
-		registerRender(shimmering_disc);
+		/**	registerRender(shimmering_disc);
 		registerRender(laminate_disc);
 		registerRender(resilient_disc);
 		registerRender(dismal_disc);
@@ -88,13 +88,13 @@ public final class InitItemsEARender extends ItemsEA {
 		
 		
 		
-		
+		*/
 		registerRender(hellion_fruit);
 		registerRender(sacred_fruit);
 		registerRender(dragon_fruit);
 		
 		//registerRender(test_shield);
-		**/
+		
 	}
 	
 	public static void registerRender(Item item)

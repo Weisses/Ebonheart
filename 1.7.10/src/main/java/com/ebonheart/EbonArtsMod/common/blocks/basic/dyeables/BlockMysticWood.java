@@ -7,14 +7,14 @@ import net.minecraft.util.EnumFacing;
 import net.minecraft.world.World;
 
 import com.ebonheart.EbonArtsMod.EbonArtsMod;
-import com.ebonheart.EbonArtsMod.common.blocks.BlockHelper;
+import com.ebonheart.EbonArtsMod.common.blocks.BlockHelperOLDOLDOLD;
 
 public class BlockMysticWood extends BlockDirectional {
 	
 	public BlockMysticWood(String unlocalizedName) 
 	{
 		super(Material.wood);
-		BlockHelper.setBlockName(this, unlocalizedName);
+		BlockHelperOLDOLDOLD.setBlockName(this, unlocalizedName);
 		
 		this.setCreativeTab(EbonArtsMod.tabEbonArtsDyeables);
 		this.setHarvestLevel("axe", 2);

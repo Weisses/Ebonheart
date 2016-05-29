@@ -1,7 +1,7 @@
 package com.ebonheart.EbonArtsMod.common.blocks.basic.dyeables;
 
 import com.ebonheart.EbonArtsMod.EbonArtsMod;
-import com.ebonheart.EbonArtsMod.common.blocks.BlockHelper;
+import com.ebonheart.EbonArtsMod.common.blocks.BlockHelperOLDOLDOLD;
 import com.ebonheart.EbonArtsMod.init.InitBlocksEA;
 
 import net.minecraft.block.Block;
@@ -31,7 +31,7 @@ public class BlockMysticCobblestoneGlass extends BlockRotatedPillar {
 	public BlockMysticCobblestoneGlass(String unlocalizedName) 
 	{
 		super(Material.rock);
-		BlockHelper.setBlockName(this, unlocalizedName);
+		BlockHelperOLDOLDOLD.setBlockName(this, unlocalizedName);
 		
 		this.setCreativeTab(EbonArtsMod.tabEbonArtsDyeables);
 		this.setHarvestLevel("pickaxe", 2);

@@ -14,6 +14,6 @@ public class ItemBlockSlabNecrocite extends ItemSlab {
      */
     public ItemBlockSlabNecrocite(final Block block, final BlockHalfSlabNecrocite slab, final BlockDoubleSlabNecrocite doubleSlab, final Boolean stacked) 
     {
-        super(block, slab, doubleSlab);
+        super(block, slab, doubleSlab, stacked);
     }
 }

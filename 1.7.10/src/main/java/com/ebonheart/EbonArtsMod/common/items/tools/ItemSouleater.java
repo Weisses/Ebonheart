@@ -10,6 +10,7 @@ import net.minecraft.item.ItemStack;
 import net.minecraft.item.ItemSword;
 import net.minecraft.potion.Potion;
 
+import com.ebonheart.EbonArtsMod.EbonArtsMod;
 import com.ebonheart.EbonArtsMod.common.items.ItemHelper;
 import com.ebonheart.EbonArtsMod.common.items.WeaponHelper;
 import com.mojang.realmsclient.gui.ChatFormatting;
@@ -22,7 +23,9 @@ public class ItemSouleater extends ItemSword {
 	public ItemSouleater(ToolMaterial material) 
 	{
 		super(material);
-		ItemHelper.setItemName(this, "tool/souleater");
+		//ItemHelper.setItemName(this, "tool/souleater");
+		this.setUnlocalizedName("tool/souleater");
+		this.setCreativeTab(EbonArtsMod.tabEbonArtsItems);
 	}
 	
 	public boolean hitEntity(ItemStack stack, EntityLivingBase target, EntityLivingBase attacker)
@@ -32,17 +35,17 @@ public class ItemSouleater extends ItemSword {
 		
 		if (d < 25)
 		{
-			EntityPlayer playerIn = attacker.getEntityWorld().getPlayerEntityByUUID(attacker.getUniqueID());
+			//EntityPlayer playerIn = attacker.getEntityWorld().getPlayerEntityByUUID(attacker.getUniqueID());
 			int heal = rand.nextInt(3) + 1;
 			attacker.heal(heal);
-			Potion potion = Potion.absorption;
+			//Potion potion = Potion.absorption;
 					//.absorption;
-			WeaponHelper.addPotionEffectToTarget(playerIn, potion, 4, 0);
+			//WeaponHelper.addPotionEffectToTarget(playerIn, potion, 4, 0);
 		
-			if(!playerIn.capabilities.isCreativeMode)
-			{
-				stack.damageItem(1, playerIn);
-			}
+			//if(!playerIn.capabilities.isCreativeMode)
+			//{
+			//	stack.damageItem(1, playerIn);
+			//}
 		}
 		return true;
     }
@@ -59,7 +62,7 @@ public class ItemSouleater extends ItemSword {
 	
 	public EnumRarity getRarity(ItemStack stack)
     {
-        return EnumRarity.EPIC;
+        return EnumRarity.epic;
     }
 	
 }

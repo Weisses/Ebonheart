@@ -16,7 +16,7 @@ public class ItemMirroringDisc extends ItemMusicDiscEA {
 	
 	public ItemMirroringDisc(String unlocalizedName, String soundIn) 
 	{
-		super(unlocalizedName, soundIn);
+		super(unlocalizedName);
 		this.setUnlocalizedName(unlocalizedName);
 		this.setCreativeTab(EbonArtsMod.tabEbonArtsItems);
 	}

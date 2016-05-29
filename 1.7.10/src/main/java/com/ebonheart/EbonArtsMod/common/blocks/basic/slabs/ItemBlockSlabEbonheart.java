@@ -14,6 +14,6 @@ public class ItemBlockSlabEbonheart extends ItemSlab {
      */
     public ItemBlockSlabEbonheart(final Block block, final BlockHalfSlabEbonheart slab, final BlockDoubleSlabEbonheart doubleSlab, final Boolean stacked) 
     {
-        super(block, slab, doubleSlab);
+        super(block, slab, doubleSlab, stacked);
     }
 }
