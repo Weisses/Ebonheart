@@ -1,8 +1,5 @@
 package com.ebonheart.EbonArtsMod.init;
 
-import java.util.HashSet;
-import java.util.Set;
-
 import net.minecraft.item.Item;
 import net.minecraft.item.Item.ToolMaterial;
 import net.minecraftforge.common.util.EnumHelper;
@@ -52,13 +49,10 @@ import cpw.mods.fml.common.registry.GameRegistry;
 //@SuppressWarnings("WeakerAccess")
 public class InitItemsEA extends ItemsEA {
 	
-	//public static final Set<Item> items = new HashSet<Item>();
-	
 	public static final Item.ToolMaterial arcaniteToolMaterial = EnumHelper.addToolMaterial("arcaniteToolMaterial", 2, 315, 6.5F, 2.5F, 15);
 	public static final Item.ToolMaterial katcheenToolMaterial = EnumHelper.addToolMaterial("katcheenToolMaterial", 3, 1400, 8.5F, 4.0F, 20);
 	public static final Item.ToolMaterial legendaryWeaponMaterial = EnumHelper.addToolMaterial("legendaryWeaponMaterial", 3, 1661, 9.5F, 6.0F, 30);
 	public static final Item.ToolMaterial legendaryToolMaterial = EnumHelper.addToolMaterial("legendaryToolMaterial", 4, 1500, 9.5F, 2.5F, 30);
-	
 	
 	public static void preInit()
 	{
@@ -73,35 +67,35 @@ public class InitItemsEA extends ItemsEA {
 		register(obsidian_shards = new ItemObsidianShard());
 		register(glowstone_shards = new ItemGlowstoneShard());
 			
-		register(glowing_disc = new ItemMusicDiscEA("discs/glowing_disc"));
-		/**shimmering_disc = new ItemMusicDiscEA("disc/shimmering_disc", "records.shimmering_disc"));
-		laminate_disc = new ItemMusicDiscEA("disc/laminate_disc", "records.laminate_disc"));
-		resilient_disc = new ItemMusicDiscEA("disc/resilient_disc", "records.resilient_disc"));
-		dismal_disc = new ItemMusicDiscEA("disc/dismal_disc", "records.dismal_disc"));
-		ethereal_disc = new ItemMusicDiscEA("disc/ethereal_disc", "records.ethereal_disc"));
-		mirroring_disc = new ItemMirroringDisc("disc/mirroring_disc", "records.mirroring_disc"));
+		register(glowing_disc = new ItemMusicDiscEA("discs/glowing_disc", "records.glowing_disc"));
+		register(shimmering_disc = new ItemMusicDiscEA("discs/shimmering_disc", "records.shimmering_disc"));
+		register(laminate_disc = new ItemMusicDiscEA("discs/laminate_disc", "records.laminate_disc"));
+		register(resilient_disc = new ItemMusicDiscEA("discs/resilient_disc", "records.resilient_disc"));
+		register(dismal_disc = new ItemMusicDiscEA("discs/dismal_disc", "records.dismal_disc"));
+		register(ethereal_disc = new ItemMusicDiscEA("discs/ethereal_disc", "records.ethereal_disc"));
+		register(mirroring_disc = new ItemMirroringDisc("discs/mirroring_disc", "records.mirroring_disc"));
 		
-		empowered_blade = new ItemEmpoweredBlade());
-		*/
+		register(empowered_blade = new ItemEmpoweredBlade());
+		
 		register(enchanted_ebonheart = new ItemEnchantedEbonheart());
-		/**
-		arcanite_pickaxe = new ItemArcanitePickaxe(arcaniteToolMaterial));
-		arcanite_axe = new ItemArcaniteAxe(ToolMaterial.IRON));
-		arcanite_shovel = new ItemArcaniteShovel(arcaniteToolMaterial));
-		arcanite_hoe = new ItemArcaniteHoe(arcaniteToolMaterial));
-		arcanite_sword = new ItemArcaniteSword(arcaniteToolMaterial));
-		*/
+		
+		register(arcanite_pickaxe = new ItemArcanitePickaxe(arcaniteToolMaterial));
+		register(arcanite_axe = new ItemArcaniteAxe(ToolMaterial.IRON));
+		register(arcanite_shovel = new ItemArcaniteShovel(arcaniteToolMaterial));
+		register(arcanite_hoe = new ItemArcaniteHoe(arcaniteToolMaterial));
+		register(arcanite_sword = new ItemArcaniteSword(arcaniteToolMaterial));
+		
 		register(burnished_helmet = new ItemBurnishedArmor("armor/burnished_helmet", 0, 0));
 		register(burnished_chestplate = new ItemBurnishedArmor("armor/burnished_chestplate", 0, 1));
 		register(burnished_leggings = new ItemBurnishedArmor("armor/burnished_leggings", 0, 2));
 		register(burnished_boots = new ItemBurnishedArmor("armor/burnished_boots", 0, 3));
-		/**
-		katcheen_pickaxe = new ItemKatcheenPickaxe(katcheenToolMaterial));
-		katcheen_axe = new ItemKatcheenAxe(katcheenToolMaterial));
-		katcheen_shovel = new ItemKatcheenShovel(katcheenToolMaterial));
-		katcheen_hoe = new ItemKatcheenHoe(katcheenToolMaterial));
-		katcheen_sword = new ItemKatcheenSword(katcheenToolMaterial));
-		*/
+		
+		register(katcheen_pickaxe = new ItemKatcheenPickaxe(katcheenToolMaterial));
+		register(katcheen_axe = new ItemKatcheenAxe(katcheenToolMaterial));
+		register(katcheen_shovel = new ItemKatcheenShovel(katcheenToolMaterial));
+		register(katcheen_hoe = new ItemKatcheenHoe(katcheenToolMaterial));
+		register(katcheen_sword = new ItemKatcheenSword(katcheenToolMaterial));
+		
 		register(scalemail_helmet = new ItemScalemailArmor("armor/scalemail_helmet", 0, 0));
 		register(scalemail_chestplate = new ItemScalemailArmor("armor/scalemail_chestplate", 0, 1));
 		register(scalemail_leggings = new ItemScalemailArmor("armor/scalemail_leggings", 0, 2));
@@ -134,34 +128,34 @@ public class InitItemsEA extends ItemsEA {
 		//infernal_leggings = new ItemInfernalArmor("armor/infernal_leggings", 0, EntityEquipmentSlot.LEGS));
 		//infernal_boots = new ItemInfernalArmor("armor/infernal_boots", 0, EntityEquipmentSlot.FEET));
 		
+		*/
 		
-		
-		deception = new ItemDeception(legendaryWeaponMaterial));
-		frostbite = new ItemFrostbite(legendaryWeaponMaterial));
-		massacre = new ItemMassacre(legendaryWeaponMaterial));
-		blazefury = new ItemBlazefury(legendaryWeaponMaterial));
-		despair = new ItemDespair(legendaryWeaponMaterial));
-		souleater = new ItemSouleater(legendaryWeaponMaterial));
+		register(deception = new ItemDeception(legendaryWeaponMaterial));
+		register(frostbite = new ItemFrostbite(legendaryWeaponMaterial));
+		register(massacre = new ItemMassacre(legendaryWeaponMaterial));
+		register(blazefury = new ItemBlazefury(legendaryWeaponMaterial));
+		register(despair = new ItemDespair(legendaryWeaponMaterial));
+		register(souleater = new ItemSouleater(legendaryWeaponMaterial));
 		
 		//test_shield = new ItemTestShield());
 		//omniplex = new Omniplex().setUnlocalizedName("omniplex");
 		//banana = (ItemFood) new ItemFood(3, 0.3F, false).setUnlocalizedName("banana");
 		
-		consecration = new ItemConsecration(0, legendaryToolMaterial, null));
-		necrosis = new ItemNecrosis(0, legendaryToolMaterial, null));
+		register(consecration = new ItemConsecration(0, legendaryToolMaterial, null));
+		register(necrosis = new ItemNecrosis(legendaryToolMaterial));
 		
 	}
 	
-	private static <V extends Item> V registerItem(V item) 
-	{
-		GameRegistry.registerItem(item, item.getUnlocalizedName());
-		items.add(item);
+	//private static <V extends Item> V registerItem(V item) 
+	//{
+	//	GameRegistry.registerItem(item, item.getUnlocalizedName());
+	//	items.add(item);
 
-		return item;
-		*/
+	//	return item;
+	//	*/
 		
 		//GameRegistry.registerItem(draconium_dust, "gem/draconium_dust");
-	}
+	//}
 	
 	public static void register(Item item)
 	{

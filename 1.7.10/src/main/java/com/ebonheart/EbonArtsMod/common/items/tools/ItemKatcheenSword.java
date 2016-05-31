@@ -14,7 +14,7 @@ public class ItemKatcheenSword extends ItemSword {
 	{
 		super(material);
 		//ItemHelper.setItemName(this, "tool/katcheen_sword");
-		this.setUnlocalizedName("tools/blazefury");
+		this.setUnlocalizedName("tools/katcheen_sword");
 		this.setCreativeTab(EbonArtsMod.tabEbonArtsItems);
 	}
 	

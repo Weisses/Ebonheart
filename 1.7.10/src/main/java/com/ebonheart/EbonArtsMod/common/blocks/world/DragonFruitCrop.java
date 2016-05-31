@@ -25,16 +25,22 @@ public class DragonFruitCrop extends BlockCrops {
 		this.setBlockName("plants/dragon_fruit_crop");
 		//this.setCreativeTab(EbonArtsMod.tabEbonArtsBlocks);
 	}
-	protected Item getSeed()
+	
+	@Override
+	protected Item func_149866_i()
+	//protected Item getSeed()
     {
         return InitItemsEA.dragon_fruit;
     }
 
-    protected Item getCrop()
+	@Override
+	protected Item func_149865_P()
+    //protected Item getCrop()
     {
         return InitItemsEA.dragon_fruit;
     }
 
+	
     //public AxisAlignedBB getBoundingBox(IBlockState state, IBlockAccess source, BlockPos pos)
     ///{
     //	return DRAGONFRUIT_AABB[((Integer)state.getValue(this.getAgeProperty())).intValue()];

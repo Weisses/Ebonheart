@@ -23,16 +23,16 @@ public final class InitItemsEARender extends ItemsEA {
 		registerRender(glowstone_shards);
 			
 		registerRender(enchanted_ebonheart);
-		//	registerRender(empowered_blade);
+		registerRender(empowered_blade);
 		
 		registerRender(glowing_disc);
-		/**	registerRender(shimmering_disc);
+		registerRender(shimmering_disc);
 		registerRender(laminate_disc);
 		registerRender(resilient_disc);
 		registerRender(dismal_disc);
 		registerRender(ethereal_disc);
 		registerRender(mirroring_disc);
-		*/
+		
 		registerRender(burnished_helmet);
 		registerRender(burnished_chestplate);
 		registerRender(burnished_leggings);
@@ -52,7 +52,7 @@ public final class InitItemsEARender extends ItemsEA {
 		registerRender(celestial_chestplate);
 		registerRender(celestial_leggings);
 		registerRender(celestial_boots);
-		/**
+		
 		//registerRender(void_helmet);
 		//registerRender(void_chestplate);
 		//registerRender(void_leggings);
@@ -88,7 +88,7 @@ public final class InitItemsEARender extends ItemsEA {
 		
 		
 		
-		*/
+		
 		registerRender(hellion_fruit);
 		registerRender(sacred_fruit);
 		registerRender(dragon_fruit);

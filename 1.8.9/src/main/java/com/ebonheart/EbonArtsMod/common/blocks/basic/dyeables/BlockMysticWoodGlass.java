@@ -40,26 +40,22 @@ public class BlockMysticWoodGlass extends BlockMysticWood {
     /**
      * Used to determine ambient occlusion and culling when rebuilding chunks for render
      */
-    public boolean isOpaqueCube(IBlockState state)
+    public boolean isOpaqueCube()
     {
         return false;
     }
 
     @SideOnly(Side.CLIENT)
-    public boolean shouldSideBeRendered(IBlockState blockState, IBlockAccess blockAccess, BlockPos pos, EnumFacing side)
+    public boolean shouldSideBeRendered(IBlockAccess worldIn, BlockPos pos, EnumFacing side)
     {
-        IBlockState iblockstate = blockAccess.getBlockState(pos.offset(side));
+        IBlockState iblockstate = worldIn.getBlockState(pos);
         Block block = iblockstate.getBlock();
-        
-        IBlockState test = blockAccess.getBlockState(pos.offset(side));
-        Block test1 = iblockstate.getBlock();
 
-        if (this == InitBlocksEA.cobble_mystic_block_glass
-                || this == InitBlocksEA.mystic_block_glass
-                || this == InitBlocksEA.wood_mystic_block_glass)
+        if (this == Blocks.glass || this == InitBlocksEA.cobble_mystic_block_glass
+        		|| this == InitBlocksEA.mystic_block_glass || this == InitBlocksEA.wood_mystic_block_glass
+        		)
         {
-        	
-            if (blockState != iblockstate)
+            if (worldIn.getBlockState(pos.offset(side.getOpposite())) != iblockstate)
             {
                 return true;
             }
@@ -70,7 +66,7 @@ public class BlockMysticWoodGlass extends BlockMysticWood {
             }
         }
 
-        return !this.ignoreSimilarity && block == this ? false : super.shouldSideBeRendered(blockAccess, pos, side);
+        return !this.ignoreSimilarity && block == this ? false : super.shouldSideBeRendered(worldIn, pos, side);
     }
     
 }

@@ -23,6 +23,8 @@ public class ItemBlazefury extends ItemSword {
 	public ItemBlazefury(ToolMaterial material) 
 	{
 		super(material);
+		
+		
 		//ItemHelper.setItemName(this, "tool/blazefury");
 		this.setUnlocalizedName("tools/blazefury");
 		this.setCreativeTab(EbonArtsMod.tabEbonArtsItems);
@@ -37,12 +39,12 @@ public class ItemBlazefury extends ItemSword {
 		{
 			Potion potion = Potion.fireResistance;
 					//.fireResistance;
-			//EntityPlayer playerIn = attacker.;
+			//EntityPlayer playerIn = (EntityPlayer) attacker;
 			
-			//EntityPlayer playerIn = attacker.getEntity;//;.getPlayerEntityByUUID(attacker.getUniqueID());
+			//EntityPlayer playerIn = (EntityPlayer) attacker.get//;.getPlayerEntityByUUID(attacker.getUniqueID());
 			target.setFire(4);
-			//WeaponHelper.addPotionEffectToTarget(playerIn, potion, 5, 0);
-			//stack.damageItem(1, playerIn);
+			WeaponHelper.addPotionEffectToTarget(attacker, potion, 5, 0);
+			stack.damageItem(1, attacker);
 		}
         return true;
     }

@@ -3,6 +3,7 @@ package com.ebonheart.EbonArtsMod.common.items.armor;
 import java.util.List;
 import java.util.Random;
 
+import net.minecraft.entity.Entity;
 import net.minecraft.entity.SharedMonsterAttributes;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.item.EnumRarity;
@@ -11,6 +12,7 @@ import net.minecraft.item.ItemStack;
 import net.minecraft.world.World;
 
 import com.ebonheart.EbonArtsMod.EbonArtsMod;
+import com.ebonheart.EbonArtsMod.api.Reference;
 import com.ebonheart.EbonArtsMod.common.entity.modifiers.EAAttributeModifier;
 import com.ebonheart.EbonArtsMod.common.items.ItemHelper;
 import com.ebonheart.EbonArtsMod.common.items.MaterialHelper;
@@ -28,13 +30,14 @@ public class ItemBurnishedArmor extends ItemArmor {
 	double playerPosX;
 	double playerPosY;
 	double playerPosZ;
-	
+	public String textureName;
 	Random random = new Random();
 	
 	public ItemBurnishedArmor(String unlocalizedName, int renderIndexIn, int equipmentSlotIn)
 	{
 		super(MaterialHelper.BURNISHED, renderIndexIn, equipmentSlotIn);
 		
+		this.textureName = "burnished_layer";
 		this.setUnlocalizedName(unlocalizedName);
 		this.setCreativeTab(EbonArtsMod.tabEbonArtsItems);
 	}
@@ -63,12 +66,12 @@ public class ItemBurnishedArmor extends ItemArmor {
 	@Override
 	public void onArmorTick(World world, EntityPlayer player, ItemStack itemStack) 
 	{
-		if (player.inventory.armorItemInSlot(3) != null && player.inventory.armorItemInSlot(3).getItem() == InitItemsEA.burnished_helmet
-			&& player.inventory.armorItemInSlot(2) != null && player.inventory.armorItemInSlot(2).getItem() == InitItemsEA.burnished_chestplate
-			&& player.inventory.armorItemInSlot(1) != null && player.inventory.armorItemInSlot(1).getItem() == InitItemsEA.burnished_leggings
-			&& player.inventory.armorItemInSlot(0) != null && player.inventory.armorItemInSlot(0).getItem() == InitItemsEA.burnished_boots) 
+		if (player.getCurrentArmor(3) != null && player.getCurrentArmor(3).getItem().equals(InitItemsEA.burnished_helmet)
+			&& player.getCurrentArmor(2) != null && player.getCurrentArmor(2).getItem().equals(InitItemsEA.burnished_chestplate)
+			&& player.getCurrentArmor(1) != null && player.getCurrentArmor(1).getItem().equals(InitItemsEA.burnished_leggings)
+			&& player.getCurrentArmor(0) != null && player.getCurrentArmor(0).getItem().equals(InitItemsEA.burnished_boots)) 
 		{
-			
+			//LogHelper.info("Burnished armor active.");
 			if(player.getEntityAttribute(SharedMonsterAttributes.movementSpeed).getModifier(EAAttributeModifier.BURNISHED_SPEED_BONUS.getID()) == null)// == null)//.hasModifier(EAAttributeModifier.BURNISHED_SPEED_BONUS))
 			{
 				//LogHelper.info("Burnished buff applied.");
@@ -102,7 +105,7 @@ public class ItemBurnishedArmor extends ItemArmor {
 						
 						if (d <= 50)
 						{
-							//world.spawnParticle(EnumParticleTypes.CLOUD, playerPosX, playerPosY, playerPosZ, (double)((random.nextFloat() - 0.5F) * 0.2F), (double)((random.nextFloat() - 0.5F) * 0.2F), (double)((random.nextFloat() - 0.5F) * 0.2F), new int[0]);
+							world.spawnParticle("cloud", playerPosX, playerPosY - 1.4F, playerPosZ, (double)((random.nextFloat() - 0.5F) * 0.2F), (double)((random.nextFloat() - 0.5F) * 0.2F), (double)((random.nextFloat() - 0.5F) * 0.2F));
 						}
 						
 					}
@@ -127,6 +130,10 @@ public class ItemBurnishedArmor extends ItemArmor {
 		
 	}
 	
-	
+	@Override
+	public String getArmorTexture(ItemStack stack, Entity entity, int slot, String type)
+	{
+	    return Reference.MOD_ID + ":textures/models/armor/" + this.textureName + "_" + (this.armorType == 2 ? "2" : "1") + ".png";
+	}
 	
 }

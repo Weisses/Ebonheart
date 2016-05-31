@@ -25,12 +25,13 @@ public class HellionFruitCrop extends BlockCrops{
 		this.setBlockName("plants/hellion_fruit_crop");
 		//this.setCreativeTab(EbonArtsMod.tabEbonArtsBlocks);
 	}
-	protected Item getSeed()
-    {
+	@Override
+	protected Item func_149866_i()
+	{
         return InitItemsEA.hellion_fruit;
     }
-
-    protected Item getCrop()
+	@Override
+	protected Item func_149865_P()
     {
         return InitItemsEA.hellion_fruit;
     }

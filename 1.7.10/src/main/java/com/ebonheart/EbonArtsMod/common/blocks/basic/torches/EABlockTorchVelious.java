@@ -41,28 +41,28 @@ public class EABlockTorchVelious extends BlockTorch {
 
 	        if (l == 1)
 	        {
-	            p_149734_1_.spawnParticle("spellMobAmbient", d0 - d4, d1 + d3, d2, 0.0D, 0.0D, 0.0D);
-	            p_149734_1_.spawnParticle("reddust", d0 - d4, d1 + d3, d2, 0.0D, 0.0D, 0.0D);
+	            p_149734_1_.spawnParticle("mobSpell", d0 - d4, d1 + d3, d2, -1.0D, -5.0D, 1.0D);
+	            p_149734_1_.spawnParticle("reddust", d0 - d4, d1 + d3, d2, -1.1D, -5.8D, 9.0D);
 	        }
 	        else if (l == 2)
 	        {
-	            p_149734_1_.spawnParticle("spellMobAmbient", d0 + d4, d1 + d3, d2, 0.0D, 0.0D, 0.0D);
-	            p_149734_1_.spawnParticle("reddust", d0 + d4, d1 + d3, d2, 0.0D, 0.0D, 0.0D);
+	            p_149734_1_.spawnParticle("mobSpell", d0 + d4, d1 + d3, d2, -1.0D, -5.0D, 1.0D);
+	            p_149734_1_.spawnParticle("reddust", d0 + d4, d1 + d3, d2, -1.1D, -5.8D, 9.0D);
 	        }
 	        else if (l == 3)
 	        {
-	            p_149734_1_.spawnParticle("spellMobAmbient", d0, d1 + d3, d2 - d4, 0.0D, 0.0D, 0.0D);
-	            p_149734_1_.spawnParticle("reddust", d0, d1 + d3, d2 - d4, 0.0D, 0.0D, 0.0D);
+	            p_149734_1_.spawnParticle("mobSpell", d0, d1 + d3, d2 - d4, -1.0D, -5.0D, 1.0D);
+	            p_149734_1_.spawnParticle("reddust", d0, d1 + d3, d2 - d4, -1.1D, -5.8D, 9.0D);
 	        }
 	        else if (l == 4)
 	        {
-	            p_149734_1_.spawnParticle("spellMobAmbient", d0, d1 + d3, d2 + d4, 0.0D, 0.0D, 0.0D);
-	            p_149734_1_.spawnParticle("reddust", d0, d1 + d3, d2 + d4, 0.0D, 0.0D, 0.0D);
+	            p_149734_1_.spawnParticle("mobSpell", d0, d1 + d3, d2 + d4, -1.0D, -5.0D, 1.0D);
+	            p_149734_1_.spawnParticle("reddust", d0, d1 + d3, d2 + d4, -1.1D, -5.8D, 9.0D);
 	        }
 	        else
 	        {
-	            p_149734_1_.spawnParticle("spellMobAmbient", d0, d1, d2, 0.0D, 0.0D, 0.0D);
-	            p_149734_1_.spawnParticle("reddust", d0, d1, d2, 0.0D, 0.0D, 0.0D);
+	            p_149734_1_.spawnParticle("mobSpell", d0, d1, d2, -1.0D, -5.0D, 1.0D);
+	            p_149734_1_.spawnParticle("reddust", d0, d1, d2, -1.1D, -5.8D, 9.0D);
 	        }
 	    }
 	}

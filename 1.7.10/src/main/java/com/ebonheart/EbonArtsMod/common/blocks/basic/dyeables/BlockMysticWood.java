@@ -1,21 +1,34 @@
 package com.ebonheart.EbonArtsMod.common.blocks.basic.dyeables;
 
+import net.minecraft.block.Block;
 import net.minecraft.block.BlockDirectional;
+import net.minecraft.block.BlockRotatedPillar;
 import net.minecraft.block.material.Material;
+import net.minecraft.client.renderer.texture.IIconRegister;
 import net.minecraft.entity.EntityLivingBase;
 import net.minecraft.util.EnumFacing;
+import net.minecraft.util.IIcon;
 import net.minecraft.world.World;
 
 import com.ebonheart.EbonArtsMod.EbonArtsMod;
+import com.ebonheart.EbonArtsMod.api.Reference;
 import com.ebonheart.EbonArtsMod.common.blocks.BlockHelperOLDOLDOLD;
 
-public class BlockMysticWood extends BlockDirectional {
+import cpw.mods.fml.relauncher.Side;
+import cpw.mods.fml.relauncher.SideOnly;
+
+public class BlockMysticWood extends Block {
 	
+	private IIcon backEA;
+	private IIcon frontEA;
+    private IIcon sideEA;
+    private IIcon topEA;
+    
 	public BlockMysticWood(String unlocalizedName) 
 	{
 		super(Material.wood);
-		BlockHelperOLDOLDOLD.setBlockName(this, unlocalizedName);
 		
+		this.setBlockName(unlocalizedName);
 		this.setCreativeTab(EbonArtsMod.tabEbonArtsDyeables);
 		this.setHarvestLevel("axe", 2);
 		this.setHardness(5.0F);
@@ -23,40 +36,35 @@ public class BlockMysticWood extends BlockDirectional {
 		this.setStepSound(soundTypeStone);
 	}
 	
-	public boolean isOpaqueCube(IBlockState state)
+	@Override
+	@SideOnly(Side.CLIENT)
+    public void registerBlockIcons(IIconRegister p_149651_1_)
     {
-        return false;
+		this.backEA = p_149651_1_.registerIcon(Reference.MOD_ID + ":" + this.getUnlocalizedName().substring(5) + "_back");
+		this.frontEA = p_149651_1_.registerIcon(Reference.MOD_ID + ":" + this.getUnlocalizedName().substring(5) + "_front");
+		this.sideEA = p_149651_1_.registerIcon(Reference.MOD_ID + ":" + this.getUnlocalizedName().substring(5) + "_side");
+		this.topEA = p_149651_1_.registerIcon(Reference.MOD_ID + ":" + this.getUnlocalizedName().substring(5) + "_top");
+    }
+	
+	@Override
+	@SideOnly(Side.CLIENT)
+    public IIcon getIcon(int p_149691_1_, int p_149691_2_)
+    {
+        
+        switch(p_149691_1_)
+        {
+        	case 0: return this.topEA;
+        	case 1: return this.topEA;
+        	case 2: return this.backEA;
+        	case 3: return this.frontEA;
+        	case 4: return this.sideEA;
+        	case 5: return this.sideEA;
+        }
+		return sideEA;
     }
 	
 	
 
-    /**
-     * Called by ItemBlocks just before a block is actually set in the world, to allow for adjustments to the
-     * IBlockstate
-     */
-    public IBlockState onBlockPlaced(World worldIn, BlockPos pos, EnumFacing facing, float hitX, float hitY, float hitZ, int meta, EntityLivingBase placer)
-    {
-        return this.getDefaultState().withProperty(FACING, placer.getHorizontalFacing().getOpposite());
-    }
-
-    /**
-     * Convert the given metadata into a BlockState for this Block
-     */
-    public IBlockState getStateFromMeta(int meta)
-    {
-        return this.getDefaultState().withProperty(FACING, EnumFacing.getHorizontal(meta));
-    }
-
-    /**
-     * Convert the BlockState into the correct metadata value
-     */
-    public int getMetaFromState(IBlockState state)
-    {
-        return ((EnumFacing)state.getValue(FACING)).getHorizontalIndex();
-    }
-
-    protected BlockState createBlockState()
-    {
-        return new BlockState(this, new IProperty[] {FACING});
-    }
+	
+	
 }

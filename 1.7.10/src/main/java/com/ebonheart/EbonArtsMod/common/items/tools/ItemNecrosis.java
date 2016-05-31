@@ -1,28 +1,37 @@
 package com.ebonheart.EbonArtsMod.common.items.tools;
 
+import java.util.ArrayList;
 import java.util.List;
+import java.util.Random;
 import java.util.Set;
 
 import net.minecraft.block.Block;
 import net.minecraft.block.material.Material;
+import net.minecraft.enchantment.Enchantment;
+import net.minecraft.enchantment.EnchantmentHelper;
 import net.minecraft.entity.EntityLivingBase;
+import net.minecraft.entity.item.EntityItem;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.init.Blocks;
 import net.minecraft.item.EnumRarity;
+import net.minecraft.item.ItemAxe;
 import net.minecraft.item.ItemPickaxe;
 import net.minecraft.item.ItemStack;
 import net.minecraft.item.ItemTool;
+import net.minecraft.stats.StatList;
 import net.minecraft.world.World;
+import net.minecraftforge.common.IShearable;
 
 import com.ebonheart.EbonArtsMod.EbonArtsMod;
 import com.ebonheart.EbonArtsMod.common.items.ItemHelper;
 import com.google.common.collect.ImmutableSet;
+import com.google.common.collect.Sets;
 import com.mojang.realmsclient.gui.ChatFormatting;
 
 import cpw.mods.fml.relauncher.Side;
 import cpw.mods.fml.relauncher.SideOnly;
 
-public class ItemNecrosis  extends ItemPickaxe  {
+public class ItemNecrosis  extends ItemAxe  {
 	
 	private static final float DIG_SPEED_WEB = 15.0f;
 	private static final float DIG_SPEED_SWORD = 1.5f;
@@ -33,11 +42,11 @@ public class ItemNecrosis  extends ItemPickaxe  {
 	public ItemNecrosis(ToolMaterial material) 
 	{
 		super(material);
-		//ItemHelper.setItemName(this, "tool/necrosis");
+		
 		this.setUnlocalizedName("tools/necrosis");
 		this.setCreativeTab(EbonArtsMod.tabEbonArtsItems);
 		setHarvestLevel("axe", material.getHarvestLevel());
-		//setCreativeTab(EbonArtsMod.tabEbonArtsItems);
+		
 		
 		// Waila Harvestability sets the harvest tool of Cobwebs to "sword"
 		setHarvestLevel("sword", material.getHarvestLevel());
@@ -62,83 +71,53 @@ public class ItemNecrosis  extends ItemPickaxe  {
 	
 	@Override
 	public Set<String> getToolClasses(ItemStack stack) {
-	    return ImmutableSet.of("pickaxe", "spade");
-	}
-	private static final Set<Material> EFFECTIVE_MATERIALS = ImmutableSet.of(
-			
-			// Axe
-			Material.wood, Material.gourd, Material.plants, Material.vine
-			
-	);
-	
-	private static final Set<Material> SWORD_MATERIALS = ImmutableSet.of(
-			Material.plants, Material.vine, Material.coral, Material.leaves, Material.gourd
-	);
-	
-	@Override
-	public float getStrVsBlock(ItemStack stack, Block state) 
-	{
-		if (state.getBlockState().getBlock() == Blocks.web) 
-		{
-			return DIG_SPEED_WEB;
-		}
-
-		for (String type : getToolClasses(stack)) 
-		{
-			//if (state.getBlock().isToolEffective(type, state))
-				return efficiencyOnProperMaterial;
-		}
-
-		// Not all blocks have a harvest tool/level set, so we need to fall back to checking the Material like the vanilla tools do
-		if (EFFECTIVE_MATERIALS.contains(state.getMaterial())) 
-		{
-			return efficiencyOnProperMaterial;
-		}
-
-		if (SWORD_MATERIALS.contains(state.getMaterial())) 
-		{
-			return DIG_SPEED_SWORD;
-		}
-
-		return DIG_SPEED_DEFAULT;
+	    return ImmutableSet.of("axe");
 	}
 	
+	private static Set effectiveAgainst = Sets.newHashSet(new Block[] {
+		    Blocks.web, Blocks.leaves, Blocks.tallgrass, Blocks.vine, 
+		    Blocks.tripwire, Blocks.wool, Blocks.redstone_wire}
+	
+			);
+	
+	//@Override
+	//public float func_150893_a(ItemStack stack, Block block) {
+	//    if (block.getMaterial() == Material.plants || block.getMaterial() == Material.vine || block.getMaterial() == Material.coral	
+	//    ||	block.getMaterial() == Material.leaves || block.getMaterial() == Material.gourd || block.getMaterial() == Material.wood
+	//    		)
+	//        return this.efficiencyOnProperMaterial;
+	//    return effectiveAgainst.contains(block) ? this.efficiencyOnProperMaterial : super.func_150893_a(stack, block);
+	//}
 	@Override
-    public boolean onBlockDestroyed(ItemStack stack, World worldIn, Block blockIn, BlockPos pos, EntityLivingBase entityLiving)
+	public boolean func_150897_b(Block p_150897_1_)
     {
-        stack.damageItem(1, entityLiving);
-        Block block = blockIn.getBlockState().getBlock();
-        return blockIn.getMaterial() != Material.leaves && block != Blocks.web && block != Blocks.tallgrass && block != Blocks.vine && block != Blocks.tripwire && block != Blocks.wool && !(blockIn instanceof net.minecraftforge.common.IShearable) ? super.onBlockDestroyed(stack, worldIn, blockIn, pos, entityLiving) : true;
+        return p_150897_1_ == Blocks.web || p_150897_1_ == Blocks.redstone_wire || p_150897_1_ == Blocks.tripwire;
+    }
+	@Override
+    public float func_150893_a(ItemStack p_150893_1_, Block p_150893_2_)
+    {
+        return p_150893_2_ != Blocks.web && p_150893_2_.getMaterial() != Material.leaves ? (p_150893_2_ == Blocks.wool ? 5.0F : super.func_150893_a(p_150893_1_, p_150893_2_)) : 15.0F;
     }
 	
-    public boolean canHarvestBlock(IBlockState blockIn)
-    {
-        Block block = blockIn.getBlock();
-        return block == Blocks.web || block == Blocks.redstone_wire || block == Blocks.tripwire;
-    }
-    
-    
-    
-    @Override
-    public boolean itemInteractionForEntity(ItemStack itemstack, net.minecraft.entity.player.EntityPlayer player, EntityLivingBase entity)
+	@Override
+    public boolean itemInteractionForEntity(ItemStack itemstack, EntityPlayer player, EntityLivingBase entity)
     {
         if (entity.worldObj.isRemote)
         {
             return false;
         }
-        if (entity instanceof net.minecraftforge.common.IShearable)
+        if (entity instanceof IShearable)
         {
-            net.minecraftforge.common.IShearable target = (net.minecraftforge.common.IShearable)entity;
-            BlockPos pos = new BlockPos(entity.posX, entity.posY, entity.posZ);
-            if (target.isShearable(itemstack, entity.worldObj, pos))
+            IShearable target = (IShearable)entity;
+            if (target.isShearable(itemstack, entity.worldObj, (int)entity.posX, (int)entity.posY, (int)entity.posZ))
             {
-                java.util.List<ItemStack> drops = target.onSheared(itemstack, entity.worldObj, pos,
-                        net.minecraft.enchantment.EnchantmentHelper.getEnchantmentLevel(net.minecraft.enchantment.Enchantment.fortune.effectId, itemstack));
+                ArrayList<ItemStack> drops = target.onSheared(itemstack, entity.worldObj, (int)entity.posX, (int)entity.posY, (int)entity.posZ,
+                        EnchantmentHelper.getEnchantmentLevel(Enchantment.fortune.effectId, itemstack));
 
-                java.util.Random rand = new java.util.Random();
+                Random rand = new Random();
                 for(ItemStack stack : drops)
                 {
-                    net.minecraft.entity.item.EntityItem ent = entity.entityDropItem(stack, 1.0F);
+                    EntityItem ent = entity.entityDropItem(stack, 1.0F);
                     ent.motionY += rand.nextFloat() * 0.05F;
                     ent.motionX += (rand.nextFloat() - rand.nextFloat()) * 0.1F;
                     ent.motionZ += (rand.nextFloat() - rand.nextFloat()) * 0.1F;
@@ -151,21 +130,21 @@ public class ItemNecrosis  extends ItemPickaxe  {
     }
 
     @Override
-    public boolean onBlockStartBreak(ItemStack itemstack, BlockPos pos, net.minecraft.entity.player.EntityPlayer player)
+    public boolean onBlockStartBreak(ItemStack itemstack, int x, int y, int z, EntityPlayer player)
     {
-        if (player.worldObj.isRemote || player.capabilities.isCreativeMode)
+        if (player.worldObj.isRemote)
         {
             return false;
         }
-        Block block = player.worldObj.getBlockState(pos).getBlock();
-        if (block instanceof net.minecraftforge.common.IShearable)
+        Block block = player.worldObj.getBlock(x, y, z);
+        if (block instanceof IShearable)
         {
-            net.minecraftforge.common.IShearable target = (net.minecraftforge.common.IShearable)block;
-            if (target.isShearable(itemstack, player.worldObj, pos))
+            IShearable target = (IShearable)block;
+            if (target.isShearable(itemstack, player.worldObj, x, y, z))
             {
-                java.util.List<ItemStack> drops = target.onSheared(itemstack, player.worldObj, pos,
-                        net.minecraft.enchantment.EnchantmentHelper.getEnchantmentLevel(net.minecraft.enchantment.Enchantment.fortune.effectId, itemstack));
-                java.util.Random rand = new java.util.Random();
+                ArrayList<ItemStack> drops = target.onSheared(itemstack, player.worldObj, x, y, z,
+                        EnchantmentHelper.getEnchantmentLevel(Enchantment.fortune.effectId, itemstack));
+                Random rand = new Random();
 
                 for(ItemStack stack : drops)
                 {
@@ -173,16 +152,15 @@ public class ItemNecrosis  extends ItemPickaxe  {
                     double d  = (double)(rand.nextFloat() * f) + (double)(1.0F - f) * 0.5D;
                     double d1 = (double)(rand.nextFloat() * f) + (double)(1.0F - f) * 0.5D;
                     double d2 = (double)(rand.nextFloat() * f) + (double)(1.0F - f) * 0.5D;
-                    net.minecraft.entity.item.EntityItem entityitem = new net.minecraft.entity.item.EntityItem(player.worldObj, (double)pos.getX() + d, (double)pos.getY() + d1, (double)pos.getZ() + d2, stack);
-                    entityitem.setDefaultPickupDelay();
+                    EntityItem entityitem = new EntityItem(player.worldObj, (double)x + d, (double)y + d1, (double)z + d2, stack);
+                    entityitem.delayBeforeCanPickup = 10;
                     player.worldObj.spawnEntityInWorld(entityitem);
                 }
 
                 itemstack.damageItem(1, player);
-                player.addStat(net.minecraft.stats.StatList.mineBlockStatArray[Block.getIdFromBlock(block)], 1);
+                player.addStat(StatList.mineBlockStatArray[Block.getIdFromBlock(block)], 1);
             }
         }
         return false;
     }
-	
 }

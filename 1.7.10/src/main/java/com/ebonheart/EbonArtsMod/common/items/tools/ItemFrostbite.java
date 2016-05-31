@@ -40,9 +40,9 @@ public class ItemFrostbite extends ItemSword {
 			Potion potion2 = Potion.weakness;
 					//.weakness;
 			//EntityPlayer playerIn = attacker.getEntityWorld().getPlayerEntityByUUID(attacker.getUniqueID());
-			//WeaponHelper.addPotionEffectToTarget(target, potion1, 3, 2);
-			//WeaponHelper.addPotionEffectToTarget(target, potion2, 5, 2);
-			//stack.damageItem(1, playerIn);
+			WeaponHelper.addPotionEffectToTarget(target, potion1, 3, 2);
+			WeaponHelper.addPotionEffectToTarget(target, potion2, 5, 2);
+			stack.damageItem(1, attacker);
 		}
         return true;
     }

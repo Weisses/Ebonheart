@@ -42,9 +42,9 @@ public class CommonProxy {
 	
 	public void init(FMLInitializationEvent event) 
 	{
-		//InitRecipesEA.initShapedRecipe();
-		//InitRecipesEA.initShapelessRecipe();
-		//InitRecipesEA.initSmeltingRecipe();
+		InitRecipesEA.initShapedRecipe();
+		InitRecipesEA.initShapelessRecipe();
+		InitRecipesEA.initSmeltingRecipe();
 		InitAchievementsEA.init();
 		
 		//WorldChestHooks.init();

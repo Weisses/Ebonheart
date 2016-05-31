@@ -32,9 +32,10 @@ public class ItemMusicDiscEA extends ItemRecord {
 	private static final Map field_150928_b = new HashMap();
     /** The name of the record. */
     public final String recordName;
+    public String music;
     private static final String __OBFID = "CL_00000057";
 
-    public ItemMusicDiscEA(String unlocalizedName)
+    public ItemMusicDiscEA(String unlocalizedName, String soundIn)
     {
     	super(unlocalizedName
     			//Reference.MOD_ID + ":" + 
@@ -44,8 +45,9 @@ public class ItemMusicDiscEA extends ItemRecord {
     	//ItemHelper.setItemName(this, unlocalizedName);
     	this.setUnlocalizedName(unlocalizedName);
 		this.setCreativeTab(EbonArtsMod.tabEbonArtsItems);
-
-		field_150928_b.put("records." + unlocalizedName, this);
+		this.music = soundIn;
+		//RECORDS.put("records." + soundIn, this);
+		field_150928_b.put("records." + soundIn, this);
     }
     
     @SideOnly(Side.CLIENT)
@@ -95,7 +97,9 @@ public class ItemMusicDiscEA extends ItemRecord {
     @SideOnly(Side.CLIENT)
     public String getRecordNameLocal()
     {
-        return StatCollector.translateToLocal("item.record." + this.recordName + ".desc");
+        return StatCollector.translateToLocal(this.getUnlocalizedName() + ".desc"
+        		//"item.record." + this.recordName + ".desc"
+        		);
     }
 
     
@@ -104,9 +108,9 @@ public class ItemMusicDiscEA extends ItemRecord {
      * Return the record item corresponding to the given name.
      */
     @SideOnly(Side.CLIENT)
-    public static ItemRecord getRecord(String p_150926_0_)
+    public static ItemMusicDiscEA getRecord(String p_150926_0_)
     {
-        return (ItemRecord)field_150928_b.get(p_150926_0_);
+        return (ItemMusicDiscEA)field_150928_b.get(p_150926_0_);
     }
 
     /**
@@ -115,10 +119,15 @@ public class ItemMusicDiscEA extends ItemRecord {
      * @param name The name of the record to play
      * @return The resource location for the audio, null to use default.
      */
-    public ResourceLocation getRecordResource(String name)
-    {
-        return new ResourceLocation(name);
-    }
+    @Override
+	public ResourceLocation getRecordResource(String record) {
+		ResourceLocation location = super.getRecordResource(Reference.MOD_ID + ":" + this.music);
+		return location;
+	}
+    //public ResourceLocation getRecordResource(String name)
+    //{
+    //    return new ResourceLocation(name);
+    //}
 
 	public EnumRarity getRarity(ItemStack stack)
 	    {

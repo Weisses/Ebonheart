@@ -33,7 +33,7 @@ public class EAArcaniteFenceGate extends BlockFenceGate {
 	@SideOnly(Side.CLIENT)
     public IIcon getIcon(int p_149691_1_, int p_149691_2_)
     {
-        return InitBlocksEA.velious_block.getBlockTextureFromSide(p_149691_1_);
+        return InitBlocksEA.arcanite_block.getBlockTextureFromSide(p_149691_1_);
     }
 	
 }

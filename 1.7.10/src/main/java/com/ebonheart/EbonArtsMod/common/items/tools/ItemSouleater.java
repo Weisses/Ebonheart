@@ -24,7 +24,7 @@ public class ItemSouleater extends ItemSword {
 	{
 		super(material);
 		//ItemHelper.setItemName(this, "tool/souleater");
-		this.setUnlocalizedName("tool/souleater");
+		this.setUnlocalizedName("tools/souleater");
 		this.setCreativeTab(EbonArtsMod.tabEbonArtsItems);
 	}
 	
@@ -38,14 +38,13 @@ public class ItemSouleater extends ItemSword {
 			//EntityPlayer playerIn = attacker.getEntityWorld().getPlayerEntityByUUID(attacker.getUniqueID());
 			int heal = rand.nextInt(3) + 1;
 			attacker.heal(heal);
-			//Potion potion = Potion.absorption;
+			Potion potion = Potion.field_76444_x;
 					//.absorption;
-			//WeaponHelper.addPotionEffectToTarget(playerIn, potion, 4, 0);
+			WeaponHelper.addPotionEffectToTarget(attacker, potion, 4, 0);
 		
-			//if(!playerIn.capabilities.isCreativeMode)
-			//{
-			//	stack.damageItem(1, playerIn);
-			//}
+			
+			stack.damageItem(1, attacker);
+			
 		}
 		return true;
     }

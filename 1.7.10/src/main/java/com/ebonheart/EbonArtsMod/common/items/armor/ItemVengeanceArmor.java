@@ -3,6 +3,7 @@ package com.ebonheart.EbonArtsMod.common.items.armor;
 import java.util.List;
 import java.util.Random;
 
+import net.minecraft.entity.Entity;
 import net.minecraft.entity.SharedMonsterAttributes;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.item.EnumRarity;
@@ -11,6 +12,7 @@ import net.minecraft.item.ItemStack;
 import net.minecraft.world.World;
 
 import com.ebonheart.EbonArtsMod.EbonArtsMod;
+import com.ebonheart.EbonArtsMod.api.Reference;
 import com.ebonheart.EbonArtsMod.common.entity.modifiers.EAAttributeModifier;
 import com.ebonheart.EbonArtsMod.common.items.ItemHelper;
 import com.ebonheart.EbonArtsMod.common.items.MaterialHelper;
@@ -27,13 +29,13 @@ public class ItemVengeanceArmor extends ItemArmor {
 	double playerPosX;
 	double playerPosY;
 	double playerPosZ;
-	
+	public String textureName;
 	Random random = new Random();
 	
 	public ItemVengeanceArmor(String unlocalizedName, int renderIndexIn, int equipmentSlotIn)
 	{
 		super(MaterialHelper.VENGEANCE, renderIndexIn, equipmentSlotIn);
-		
+		this.textureName = "vengeance_layer";
 		this.setUnlocalizedName(unlocalizedName);
 		this.setCreativeTab(EbonArtsMod.tabEbonArtsItems);
 		
@@ -65,22 +67,28 @@ public class ItemVengeanceArmor extends ItemArmor {
 	@Override
 	public void onArmorTick(World world, EntityPlayer player, ItemStack itemStack) 
 	{
-		if (player.inventory.armorItemInSlot(3) != null && player.inventory.armorItemInSlot(3).getItem() == InitItemsEA.vengeance_helmet
-			&& player.inventory.armorItemInSlot(2) != null && player.inventory.armorItemInSlot(2).getItem() == InitItemsEA.vengeance_chestplate
-			&& player.inventory.armorItemInSlot(1) != null && player.inventory.armorItemInSlot(1).getItem() == InitItemsEA.vengeance_leggings
-			&& player.inventory.armorItemInSlot(0) != null && player.inventory.armorItemInSlot(0).getItem() == InitItemsEA.vengeance_boots) 
-		{
-			if(player.getEntityAttribute(SharedMonsterAttributes.movementSpeed) == null)
+		if (player.getCurrentArmor(3) != null && player.getCurrentArmor(3).getItem().equals(InitItemsEA.vengeance_helmet)
+				&& player.getCurrentArmor(2) != null && player.getCurrentArmor(2).getItem().equals(InitItemsEA.vengeance_chestplate)
+				&& player.getCurrentArmor(1) != null && player.getCurrentArmor(1).getItem().equals(InitItemsEA.vengeance_leggings)
+				&& player.getCurrentArmor(0) != null && player.getCurrentArmor(0).getItem().equals(InitItemsEA.vengeance_boots)) 
+			{
+				
+		//		player.inventory.armorItemInSlot(0) != null && player.inventory.armorItemInSlot(0).getItem() == InitItemsEA.vengeance_helmet
+		//	&& player.inventory.armorItemInSlot(1) != null && player.inventory.armorItemInSlot(1).getItem() == InitItemsEA.vengeance_chestplate
+		//	&& player.inventory.armorItemInSlot(2) != null && player.inventory.armorItemInSlot(2).getItem() == InitItemsEA.vengeance_leggings
+		//	&& player.inventory.armorItemInSlot(3) != null && player.inventory.armorItemInSlot(3).getItem() == InitItemsEA.vengeance_boots) 
+		//{
+			if(player.getEntityAttribute(SharedMonsterAttributes.movementSpeed).getModifier(EAAttributeModifier.VENGEANCE_SPEED_BONUS.getID()) == null)
 			{
 				player.getEntityAttribute(SharedMonsterAttributes.movementSpeed).applyModifier(EAAttributeModifier.VENGEANCE_SPEED_BONUS);
 			}
 			
-			if(player.getEntityAttribute(SharedMonsterAttributes.maxHealth) == null)
+			if(player.getEntityAttribute(SharedMonsterAttributes.maxHealth).getModifier(EAAttributeModifier.VENGEANCE_HP_BONUS.getID()) == null)
 			{
 				player.getEntityAttribute(SharedMonsterAttributes.maxHealth).applyModifier(EAAttributeModifier.VENGEANCE_HP_BONUS);
 			}
 			
-			if(player.getEntityAttribute(SharedMonsterAttributes.attackDamage) == null)
+			if(player.getEntityAttribute(SharedMonsterAttributes.attackDamage).getModifier(EAAttributeModifier.VENGEANCE_ATTACK_BONUS.getID()) == null)
 			{
 				player.getEntityAttribute(SharedMonsterAttributes.attackDamage).applyModifier(EAAttributeModifier.VENGEANCE_ATTACK_BONUS);
 			}
@@ -127,6 +135,13 @@ public class ItemVengeanceArmor extends ItemArmor {
 			
 		}
 		
+	}
+	
+
+	@Override
+	public String getArmorTexture(ItemStack stack, Entity entity, int slot, String type)
+	{
+	    return Reference.MOD_ID + ":textures/models/armor/" + this.textureName + "_" + (this.armorType == 2 ? "2" : "1") + ".png";
 	}
 	
 }

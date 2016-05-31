@@ -56,7 +56,7 @@ public class ItemSacredFruit extends ItemFood implements IPlantable {
                         		(double)((float)p_77648_4_ + itemRand.nextFloat()), 
                         		(double)p_77648_5_ + (double)itemRand.nextFloat()  + 0.75, 
                         		(double)((float)p_77648_6_ + itemRand.nextFloat()), 
-                        		d0, d1, d2);
+                        		1.0D, 5.0D, 0.0D);
                         
                     }
             	}

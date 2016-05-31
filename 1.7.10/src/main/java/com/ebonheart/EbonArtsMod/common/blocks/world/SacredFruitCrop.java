@@ -23,12 +23,14 @@ public class SacredFruitCrop extends BlockCrops {
 		this.setBlockName("plants/sacred_fruit_crop");
 		//this.setCreativeTab(EbonArtsMod.tabEbonArtsBlocks);
 	}
-	protected Item getSeed()
+	@Override
+	protected Item func_149866_i()
     {
         return InitItemsEA.sacred_fruit;
     }
 
-    protected Item getCrop()
+	@Override
+	protected Item func_149865_P()
     {
         return InitItemsEA.sacred_fruit;
     }
@@ -70,7 +72,7 @@ public class SacredFruitCrop extends BlockCrops {
     				double d5 = (double)(p_149734_5_.nextFloat() * (float)k);
     				p_149734_1_.spawnParticle("reddust"
 						//EnumParticleTypes.REDSTONE
-						, d0, d1, d2, 1D, 3D, 4D);
+						, d0, d1, d2, 1.0D, 5.0D, 0.0D);
 				
     			}
     		}

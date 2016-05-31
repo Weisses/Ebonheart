@@ -5,22 +5,22 @@ import com.ebonheart.EbonArtsMod.common.blocks.BlockHelperOLDOLDOLD;
 import com.ebonheart.EbonArtsMod.common.blocks.basic.BlockRockEA;
 
 
-public class BlockBrickGlowstone extends BlockRockEA {
+public class EABlockBrick extends BlockRockEA {
 
-	public BlockBrickGlowstone() 
+	public EABlockBrick(String unlocalizedName) 
 	{
 		super();
-		//BlockHelperOLDOLDOLD.setBlockName(this, "gem/glowstone/glowstone_block_brick");
-		this.setBlockName("gems/glowstone/glowstone_block_brick");
+		
+		this.setBlockName(unlocalizedName);
 		this.setCreativeTab(EbonArtsMod.tabEbonArtsBlocks);
 		this.useNeighborBrightness=true;
 	}
     
-    public boolean isOpaqueCube()
+	public boolean isOpaqueCube()
     {
-    	return false;
+        return false;
     }
-    
+	
     public boolean isFullCube()
     {
         return true;

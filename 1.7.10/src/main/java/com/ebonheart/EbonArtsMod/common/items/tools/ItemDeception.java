@@ -40,9 +40,9 @@ public class ItemDeception extends ItemSword {
 			Potion potion2 = Potion.invisibility;
 					//.invisibility;
 			//EntityPlayer playerIn = attacker.getEntityWorld().getPlayerEntityByUUID(attacker.getUniqueID());
-			//WeaponHelper.addPotionEffectToTarget(target, potion1, 3, 0);
-			//WeaponHelper.addPotionEffectToTarget(playerIn, potion2, 5, 0);
-			//stack.damageItem(1, playerIn);
+			WeaponHelper.addPotionEffectToTarget(target, potion1, 3, 0);
+			WeaponHelper.addPotionEffectToTarget(attacker, potion2, 5, 0);
+			stack.damageItem(1, attacker);
 		}
         return true;
     }

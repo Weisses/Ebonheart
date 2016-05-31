@@ -36,28 +36,33 @@ public class EABlockTorchGlowstone extends BlockTorch {
 
 	        if (l == 1)
 	        {
-	            p_149734_1_.spawnParticle("spellMobAmbient", d0 - d4, d1 + d3, d2, 0.0D, 0.0D, 0.0D);
-	            p_149734_1_.spawnParticle("reddust", d0 - d4, d1 + d3, d2, 0.0D, 0.0D, 0.0D);
+	        	p_149734_1_.spawnParticle("witchMagic", d0 - d4, d1 + d3, d2, 0.0D, 0.0D, 0.0D);
+	            p_149734_1_.spawnParticle("mobSpell", d0 - d4, d1 + d3, d2, 2.0D, 10.0D, 0.0D);
+	            p_149734_1_.spawnParticle("portal", d0 - d4, d1 + d3, d2, 0.0D, 0.0D, 0.0D);
 	        }
 	        else if (l == 2)
 	        {
-	            p_149734_1_.spawnParticle("spellMobAmbient", d0 + d4, d1 + d3, d2, 0.0D, 0.0D, 0.0D);
-	            p_149734_1_.spawnParticle("reddust", d0 + d4, d1 + d3, d2, 0.0D, 0.0D, 0.0D);
+	        	p_149734_1_.spawnParticle("witchMagic", d0 + d4, d1 + d3, d2, 0.0D, 0.0D, 0.0D);
+	            p_149734_1_.spawnParticle("mobSpell", d0 + d4, d1 + d3, d2, 2.0D, 10.0D, 0.0D);
+	            p_149734_1_.spawnParticle("portal", d0 + d4, d1 + d3, d2, 0.0D, 0.0D, 0.0D);
 	        }
 	        else if (l == 3)
 	        {
-	            p_149734_1_.spawnParticle("spellMobAmbient", d0, d1 + d3, d2 - d4, 0.0D, 0.0D, 0.0D);
-	            p_149734_1_.spawnParticle("reddust", d0, d1 + d3, d2 - d4, 0.0D, 0.0D, 0.0D);
+	        	p_149734_1_.spawnParticle("witchMagic", d0, d1 + d3, d2 - d4, 0.0D, 0.0D, 0.0D);
+	            p_149734_1_.spawnParticle("mobSpell", d0, d1 + d3, d2 - d4, 2.0D, 10.0D, 0.0D);
+	            p_149734_1_.spawnParticle("portal", d0, d1 + d3, d2 - d4, 0.0D, 0.0D, 0.0D);
 	        }
 	        else if (l == 4)
 	        {
-	            p_149734_1_.spawnParticle("spellMobAmbient", d0, d1 + d3, d2 + d4, 0.0D, 0.0D, 0.0D);
-	            p_149734_1_.spawnParticle("reddust", d0, d1 + d3, d2 + d4, 0.0D, 0.0D, 0.0D);
+	        	p_149734_1_.spawnParticle("witchMagic", d0, d1 + d3, d2 + d4, 0.0D, 0.0D, 0.0D);
+	            p_149734_1_.spawnParticle("mobSpell", d0, d1 + d3, d2 + d4, 2.0D, 10.0D, 0.0D);
+	            p_149734_1_.spawnParticle("portal", d0, d1 + d3, d2 + d4, 0.0D, 0.0D, 0.0D);
 	        }
 	        else
 	        {
-	            p_149734_1_.spawnParticle("spellMobAmbient", d0, d1, d2, 0.0D, 0.0D, 0.0D);
-	            p_149734_1_.spawnParticle("reddust", d0, d1, d2, 0.0D, 0.0D, 0.0D);
+	        	p_149734_1_.spawnParticle("witchMagic", d0, d1, d2, 0.0D, 0.0D, 0.0D);
+	            p_149734_1_.spawnParticle("mobSpell", d0, d1, d2, 2.0D, 10.0D, 0.0D);
+	            p_149734_1_.spawnParticle("portal", d0, d1, d2, 0.0D, 0.0D, 0.0D);
 	        }
 	    }
 	        

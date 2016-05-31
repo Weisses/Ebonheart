@@ -40,9 +40,9 @@ public class ItemMassacre extends ItemSword {
 			Potion potion2 = Potion.moveSpeed;
 					//.moveSpeed;
 			//EntityPlayer playerIn = attacker.getEntityWorld().getPlayerEntityByUUID(attacker.getUniqueID());
-			//WeaponHelper.addPotionEffectToTarget(playerIn, potion, 5, 0);
-			//WeaponHelper.addPotionEffectToTarget(playerIn, potion2, 3, 0);
-			//stack.damageItem(1, playerIn);
+			WeaponHelper.addPotionEffectToTarget(attacker, potion, 5, 0);
+			WeaponHelper.addPotionEffectToTarget(attacker, potion2, 3, 0);
+			stack.damageItem(1, attacker);
 		}
 		return true;
     }

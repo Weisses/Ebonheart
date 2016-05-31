@@ -22,7 +22,9 @@ public final class InitBlocksEARender extends BlocksEA {
 		registerRender(ebonheart_ore);
 		registerRender(ebon_ore);
 		registerRender(ebon_ore_nether);
-		/**
+		
+		
+		
 		registerRender(cobble_mystic_block_normal);
 		registerRender(cobble_mystic_block_glass);
 		registerRender(cobble_mystic_block_white);
@@ -79,7 +81,9 @@ public final class InitBlocksEARender extends BlocksEA {
 		registerRender(wood_mystic_block_green);
 		registerRender(wood_mystic_block_red);
 		registerRender(wood_mystic_block_black);
-		*/
+		
+		
+		
 		registerRender(draconium_block);
 		registerRender(velious_block);
 		registerRender(arcanite_block);

@@ -4,6 +4,7 @@ import java.util.List;
 import java.util.Random;
 
 import net.minecraft.client.Minecraft;
+import net.minecraft.entity.Entity;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.item.EnumRarity;
 import net.minecraft.item.ItemArmor;
@@ -11,6 +12,7 @@ import net.minecraft.item.ItemStack;
 import net.minecraft.world.World;
 
 import com.ebonheart.EbonArtsMod.EbonArtsMod;
+import com.ebonheart.EbonArtsMod.api.Reference;
 import com.ebonheart.EbonArtsMod.common.items.ItemHelper;
 import com.ebonheart.EbonArtsMod.common.items.MaterialHelper;
 import com.ebonheart.EbonArtsMod.configs.EbonArtsConfiguration;
@@ -24,7 +26,7 @@ import cpw.mods.fml.relauncher.SideOnly;
 public class ItemScalemailArmor extends ItemArmor {
 	
 	public static boolean isDoubleJumping;
-	
+	public String textureName;
 	double playerPosX;
 	double playerPosY;
 	double playerPosZ;
@@ -34,7 +36,7 @@ public class ItemScalemailArmor extends ItemArmor {
 	public ItemScalemailArmor(String unlocalizedName, int renderIndexIn, int equipmentSlotIn)
 	{
 		super(MaterialHelper.SCALEMAIL, renderIndexIn, equipmentSlotIn);
-		
+		this.textureName = "scalemail_layer";
 		this.setUnlocalizedName(unlocalizedName);
 		this.setCreativeTab(EbonArtsMod.tabEbonArtsItems);
 	}
@@ -100,7 +102,7 @@ public class ItemScalemailArmor extends ItemArmor {
 							if (d <= 25)
 							{
 								
-								//world.spawnParticle(EnumParticleTypes.FIREWORKS_SPARK, playerPosX, playerPosY, playerPosZ, (double)((random.nextFloat() - 0.5F) * 0.2F), (double)((random.nextFloat() - 0.5F) * 0.2F), (double)((random.nextFloat() - 0.5F) * 0.2F), new int[0]);
+								world.spawnParticle("fireworksSpark", playerPosX, playerPosY - 1.4F, playerPosZ, (double)((random.nextFloat() - 0.5F) * 0.2F), (double)((random.nextFloat() - 0.5F) * 0.2F), (double)((random.nextFloat() - 0.5F) * 0.2F));
 								
 							}
 							
@@ -126,5 +128,13 @@ public class ItemScalemailArmor extends ItemArmor {
 		}
 		
 	}
+	
+
+	@Override
+	public String getArmorTexture(ItemStack stack, Entity entity, int slot, String type)
+	{
+	    return Reference.MOD_ID + ":textures/models/armor/" + this.textureName + "_" + (this.armorType == 2 ? "2" : "1") + ".png";
+	}
+	
 	
 }

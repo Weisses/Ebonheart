@@ -13,7 +13,7 @@ public class EbonArtsTabDyeables extends CreativeTabs {
 	public EbonArtsTabDyeables(String label) 
 	{
 		super(label);
-		this.setBackgroundImageName("ebonarts.png");
+		//this.setBackgroundImageName("ebonarts.png");
 	}
 
 	@Override

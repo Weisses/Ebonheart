@@ -4,7 +4,7 @@ import net.minecraft.block.Block;
 import net.minecraft.item.ItemSlab;
 
 //Wrapper around ItemSlab to allow init from GameRegistry.
-public class ItemBlockSlabKatcheen extends ItemSlab {
+public class ItemBlockSlab extends ItemSlab {
     /**
      * Initializes a new instance of the ItemBlockSlab class.
      * @param block the block behind the item.
@@ -12,7 +12,7 @@ public class ItemBlockSlabKatcheen extends ItemSlab {
      * @param doubleSlab the full height slab.
      * @param stacked whether or not the block is the stacked version.
      */
-    public ItemBlockSlabKatcheen(final Block block, final BlockHalfSlabKatcheen slab, final BlockDoubleSlabKatcheen doubleSlab, final Boolean stacked) 
+    public ItemBlockSlab(final Block block, final BlockHalfSlab slab, final BlockDoubleSlab doubleSlab, final Boolean stacked) 
     {
         super(block, slab, doubleSlab, stacked);
     }

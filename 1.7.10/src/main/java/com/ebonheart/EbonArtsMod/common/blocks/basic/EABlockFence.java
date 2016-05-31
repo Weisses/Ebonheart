@@ -40,17 +40,22 @@ public class EABlockFence extends BlockFence {
        // this.blockIcon = p_149651_1_.registerIcon(this.field_149827_a);
     //}
 	@Override
-	 public boolean canConnectFenceTo(IBlockAccess p_149826_1_, int p_149826_2_, int p_149826_3_, int p_149826_4_)
-	    {
-	        Block block = p_149826_1_.getBlock(p_149826_2_, p_149826_3_, p_149826_4_);
-	        return null != null;
-	        		//block != this && block != Blocks.fence_gate ? (block.blockMaterial.isOpaque() && block.renderAsNormalBlock() ? block.blockMaterial != Material.gourd : false) : true;
-	    }
+	public boolean canConnectFenceTo(IBlockAccess p_149826_1_, int p_149826_2_, int p_149826_3_, int p_149826_4_)
+	{
+		Block block = p_149826_1_.getBlock(p_149826_2_, p_149826_3_, p_149826_4_);
+        return block != this && block != Blocks.fence_gate ? (block.renderAsNormalBlock() == false) : true;
+	}
 	
 	@Override
 	@SideOnly(Side.CLIENT)
     public IIcon getIcon(int p_149691_1_, int p_149691_2_)
     {
         return InitBlocksEA.draconium_block.getBlockTextureFromSide(p_149691_1_);
+    }
+
+	@Override
+    public boolean canPlaceTorchOnTop(World world, int x, int y, int z)
+    {
+            return true;
     }
 }

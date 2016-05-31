@@ -2,6 +2,7 @@ package com.ebonheart.EbonArtsMod.common.blocks.basic;
 
 import java.util.List;
 
+import net.minecraft.block.Block;
 import net.minecraft.block.BlockWall;
 import net.minecraft.creativetab.CreativeTabs;
 import net.minecraft.init.Blocks;
@@ -10,6 +11,7 @@ import net.minecraft.item.ItemStack;
 import net.minecraft.util.EnumFacing;
 import net.minecraft.util.IIcon;
 import net.minecraft.world.IBlockAccess;
+import net.minecraft.world.World;
 
 import com.ebonheart.EbonArtsMod.EbonArtsMod;
 import com.ebonheart.EbonArtsMod.common.blocks.BlockHelperOLDOLDOLD;
@@ -49,4 +51,17 @@ public class EASoulariteWall extends BlockWall {
     	return InitBlocksEA.soularite_block.getBlockTextureFromSide(p_149691_1_);
     	//return //p_149691_2_ == 1 ? Blocks.mossy_cobblestone.getBlockTextureFromSide(p_149691_1_) : Blocks.cobblestone.getBlockTextureFromSide(p_149691_1_);
     }
+
+	@Override
+    public boolean canPlaceTorchOnTop(World world, int x, int y, int z)
+    {
+            return true;
+    }
+
+	@Override
+	public boolean canConnectWallTo(IBlockAccess p_149826_1_, int p_149826_2_, int p_149826_3_, int p_149826_4_)
+	{
+		Block block = p_149826_1_.getBlock(p_149826_2_, p_149826_3_, p_149826_4_);
+        return block != this && block != Blocks.fence_gate ? (block.renderAsNormalBlock() == false) : true;
+	}
 }

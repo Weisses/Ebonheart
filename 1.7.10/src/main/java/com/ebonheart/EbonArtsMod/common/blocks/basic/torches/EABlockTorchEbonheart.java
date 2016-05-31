@@ -11,7 +11,7 @@ import cpw.mods.fml.relauncher.Side;
 import cpw.mods.fml.relauncher.SideOnly;
 
 public class EABlockTorchEbonheart extends BlockTorch {
-		
+	Random random = new Random();
 	    public EABlockTorchEbonheart()
 	    {
 	        super();
@@ -32,31 +32,39 @@ public class EABlockTorchEbonheart extends BlockTorch {
 	        double d2 = (double)((float)p_149734_4_ + 0.5F);
 	        double d3 = 0.2199999988079071D;
 	        double d4 = 0.27000001072883606D;
+	        double d6 = 0;
+	        double d7 = 0;
+	        double d8 = 0;
 
 	        if (l == 1)
 	        {
-	            p_149734_1_.spawnParticle("spellMobAmbient", d0 - d4, d1 + d3, d2, 0.0D, 0.0D, 0.0D);
-	            p_149734_1_.spawnParticle("reddust", d0 - d4, d1 + d3, d2, 0.0D, 0.0D, 0.0D);
+	        	p_149734_1_.spawnParticle("instantSpell", d0 - d4, d1 + d3, d2, d6, d7, d8);
+	            p_149734_1_.spawnParticle("portal", d0 - d4, d1 + d3, d2, 0.0D, 0.0D, 0.0D);
+	            p_149734_1_.spawnParticle("reddust", d0 - d4, d1 + d3, d2, 1.0D, -1.0D, 1.0D);
 	        }
 	        else if (l == 2)
 	        {
-	            p_149734_1_.spawnParticle("spellMobAmbient", d0 + d4, d1 + d3, d2, 0.0D, 0.0D, 0.0D);
-	            p_149734_1_.spawnParticle("reddust", d0 + d4, d1 + d3, d2, 0.0D, 0.0D, 0.0D);
+	        	p_149734_1_.spawnParticle("instantSpell", d0 + d4, d1 + d3, d2, d6, d7, d8);
+	            p_149734_1_.spawnParticle("portal", d0 + d4, d1 + d3, d2, 0.0D, 0.0D, 0.0D);
+	            p_149734_1_.spawnParticle("reddust", d0 + d4, d1 + d3, d2, 1.0D, -1.0D, 1.0D);
 	        }
 	        else if (l == 3)
 	        {
-	            p_149734_1_.spawnParticle("spellMobAmbient", d0, d1 + d3, d2 - d4, 0.0D, 0.0D, 0.0D);
-	            p_149734_1_.spawnParticle("reddust", d0, d1 + d3, d2 - d4, 0.0D, 0.0D, 0.0D);
+	        	p_149734_1_.spawnParticle("instantSpell", d0, d1 + d3, d2 - d4, d6, d7, d8);
+	            p_149734_1_.spawnParticle("portal", d0, d1 + d3, d2 - d4, 0.0D, 0.0D, 0.0D);
+	            p_149734_1_.spawnParticle("reddust", d0, d1 + d3, d2 - d4, 1.0D, -1.0D, 1.0D);
 	        }
 	        else if (l == 4)
 	        {
-	            p_149734_1_.spawnParticle("spellMobAmbient", d0, d1 + d3, d2 + d4, 0.0D, 0.0D, 0.0D);
-	            p_149734_1_.spawnParticle("reddust", d0, d1 + d3, d2 + d4, 0.0D, 0.0D, 0.0D);
+	        	p_149734_1_.spawnParticle("instantSpell", d0, d1 + d3, d2 + d4, d6, d7, d8);
+	            p_149734_1_.spawnParticle("portal", d0, d1 + d3, d2 + d4, 0.0D, 0.0D, 0.0D);
+	            p_149734_1_.spawnParticle("reddust", d0, d1 + d3, d2 + d4, 1.0D, -1.0D, 1.0D);
 	        }
 	        else
 	        {
-	            p_149734_1_.spawnParticle("spellMobAmbient", d0, d1, d2, 0.0D, 0.0D, 0.0D);
-	            p_149734_1_.spawnParticle("reddust", d0, d1, d2, 0.0D, 0.0D, 0.0D);
+	        	p_149734_1_.spawnParticle("instantSpell", d0, d1, d2, d6, d7, d8);
+	            p_149734_1_.spawnParticle("portal", d0, d1, d2, 0.0D, 0.0D, 0.0D);
+	            p_149734_1_.spawnParticle("reddust", d0, d1, d2, 1.0D, -1.0D, 1.0D);
 	        }
 	    }
 	            //pos.spawnParticle(EnumParticleTypes.reddust, d0, d1, d2, 1.0D, -1.0D, 1.0D, new int[0]);

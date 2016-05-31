@@ -39,28 +39,28 @@ public class EABlockTorchArcanite extends BlockTorch {
 
 	        if (l == 1)
 	        {
-	            p_149734_1_.spawnParticle("spellMobAmbient", d0 - d4, d1 + d3, d2, 0.0D, 0.0D, 0.0D);
-	            p_149734_1_.spawnParticle("reddust", d0 - d4, d1 + d3, d2, 0.0D, 0.0D, 0.0D);
+	            p_149734_1_.spawnParticle("mobSpell", d0 - d4, d1 + d3, d2, 0.0D, 5.0D, 2.0D);
+	            p_149734_1_.spawnParticle("reddust", d0 - d4, d1 + d3, d2, 0.0D, 5.1D, 3.4D);
 	        }
 	        else if (l == 2)
 	        {
-	            p_149734_1_.spawnParticle("spellMobAmbient", d0 + d4, d1 + d3, d2, 0.0D, 0.0D, 0.0D);
-	            p_149734_1_.spawnParticle("reddust", d0 + d4, d1 + d3, d2, 0.0D, 0.0D, 0.0D);
+	            p_149734_1_.spawnParticle("mobSpell", d0 + d4, d1 + d3, d2, 0.0D, 5.0D, 2.0D);
+	            p_149734_1_.spawnParticle("reddust", d0 + d4, d1 + d3, d2, 0.0D, 5.1D, 3.4D);
 	        }
 	        else if (l == 3)
 	        {
-	            p_149734_1_.spawnParticle("spellMobAmbient", d0, d1 + d3, d2 - d4, 0.0D, 0.0D, 0.0D);
-	            p_149734_1_.spawnParticle("reddust", d0, d1 + d3, d2 - d4, 0.0D, 0.0D, 0.0D);
+	            p_149734_1_.spawnParticle("mobSpell", d0, d1 + d3, d2 - d4, 0.0D, 5.0D, 2.0D);
+	            p_149734_1_.spawnParticle("reddust", d0, d1 + d3, d2 - d4, 0.0D, 5.1D, 3.4D);
 	        }
 	        else if (l == 4)
 	        {
-	            p_149734_1_.spawnParticle("spellMobAmbient", d0, d1 + d3, d2 + d4, 0.0D, 0.0D, 0.0D);
-	            p_149734_1_.spawnParticle("reddust", d0, d1 + d3, d2 + d4, 0.0D, 0.0D, 0.0D);
+	            p_149734_1_.spawnParticle("mobSpell", d0, d1 + d3, d2 + d4, 0.0D, 5.0D, 2.0D);
+	            p_149734_1_.spawnParticle("reddust", d0, d1 + d3, d2 + d4, 0.0D, 5.1D, 3.4D);
 	        }
 	        else
 	        {
-	            p_149734_1_.spawnParticle("spellMobAmbient", d0, d1, d2, 0.0D, 0.0D, 0.0D);
-	            p_149734_1_.spawnParticle("reddust", d0, d1, d2, 0.0D, 0.0D, 0.0D);
+	            p_149734_1_.spawnParticle("mobSpell", d0, d1, d2, 0.0D, 5.0D, 2.0D);
+	            p_149734_1_.spawnParticle("reddust", d0, d1, d2, 0.0D, 5.1D, 3.4D);
 	        }
 	    }
 	           // pos.spawnParticle(EnumParticleTypes.SPELL_MOB_AMBIENT, d0, d1, d2, 0.0D, 5.0D, 2.0D, new int[0]);

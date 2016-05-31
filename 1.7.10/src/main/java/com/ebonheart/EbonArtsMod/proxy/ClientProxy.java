@@ -65,7 +65,7 @@ public class ClientProxy extends CommonProxy {
 	    EntityFX particleSprint = new EntitySprintFX(
 	    	theEntity.worldObj, 
 	    	theEntity.posX + theEntity.worldObj.rand.nextFloat() * theEntity.width * 2.0F - theEntity.width, 
-	        theEntity.posY + 0.5D + theEntity.worldObj.rand.nextFloat() * theEntity.height, 
+	        theEntity.posY - theEntity.worldObj.rand.nextFloat() * theEntity.height, 
 	        theEntity.posZ + theEntity.worldObj.rand.nextFloat() * theEntity.width * 2.0F - theEntity.width, 
 	        motionX, 
 	        motionY, 
@@ -83,7 +83,7 @@ public class ClientProxy extends CommonProxy {
 	          theEntity.worldObj, 
 	          theEntity.posX + theEntity.worldObj.rand.nextFloat() * theEntity.width 
 	                * 2.0F - theEntity.width, 
-	          theEntity.posY + 0.5D + theEntity.worldObj.rand.nextFloat() 
+	          theEntity.posY - theEntity.worldObj.rand.nextFloat() 
 	                * theEntity.height, 
 	          theEntity.posZ + theEntity.worldObj.rand.nextFloat() * theEntity.width 
 	                * 2.0F - theEntity.width, 
@@ -103,7 +103,7 @@ public class ClientProxy extends CommonProxy {
 	          theEntity.worldObj, 
 	          theEntity.posX + theEntity.worldObj.rand.nextFloat() * theEntity.width 
 	                * 2.0F - theEntity.width, 
-	          theEntity.posY + 0.5D + theEntity.worldObj.rand.nextFloat() 
+	          theEntity.posY - theEntity.worldObj.rand.nextFloat() 
 	                * theEntity.height, 
 	          theEntity.posZ + theEntity.worldObj.rand.nextFloat() * theEntity.width 
 	                * 2.0F - theEntity.width, 

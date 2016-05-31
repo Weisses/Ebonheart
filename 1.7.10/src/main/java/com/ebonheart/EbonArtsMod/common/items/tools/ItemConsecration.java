@@ -6,20 +6,27 @@ import java.util.Set;
 import net.minecraft.block.Block;
 import net.minecraft.block.material.Material;
 import net.minecraft.entity.player.EntityPlayer;
+import net.minecraft.init.Blocks;
 import net.minecraft.item.EnumRarity;
+import net.minecraft.item.ItemPickaxe;
 import net.minecraft.item.ItemStack;
 import net.minecraft.item.ItemTool;
+import net.minecraft.world.World;
+import net.minecraftforge.common.MinecraftForge;
+import net.minecraftforge.event.entity.player.UseHoeEvent;
 
 import com.ebonheart.EbonArtsMod.EbonArtsMod;
 import com.ebonheart.EbonArtsMod.common.items.ItemHelper;
 import com.google.common.collect.ImmutableSet;
+import com.google.common.collect.Sets;
 import com.mojang.realmsclient.gui.ChatFormatting;
 
+import cpw.mods.fml.common.eventhandler.Event.Result;
 import cpw.mods.fml.relauncher.Side;
 import cpw.mods.fml.relauncher.SideOnly;
 
 
-public class ItemConsecration extends ItemTool {
+public class ItemConsecration extends ItemPickaxe {
 	
 	private static final float DIG_SPEED_WEB = 15.0f;
 	private static final float DIG_SPEED_SWORD = 1.5f;
@@ -29,9 +36,8 @@ public class ItemConsecration extends ItemTool {
 	
 	public ItemConsecration(float damageVsEntity, ToolMaterial material, Set<Block> effectiveBlocks) 
 	{
-		super(damageVsEntity, material, effectiveBlocks);
-		//super(BASE_DAMAGE, ATTACK_SPEED, material, Collections.emptySet());
-		//ItemHelper.setItemName(this, "tool/consecration");
+		super(material);
+		
 		this.setUnlocalizedName("tools/consecration");
 		this.setCreativeTab(EbonArtsMod.tabEbonArtsItems);
 		setHarvestLevel("pickaxe", material.getHarvestLevel());
@@ -54,35 +60,32 @@ public class ItemConsecration extends ItemTool {
         return EnumRarity.epic;
     }
 	
-	
 	@Override
 	public Set<String> getToolClasses(ItemStack stack) {
 	    return ImmutableSet.of("pickaxe", "spade");
 	}
 	
+	private static Set effectiveAgainst = Sets.newHashSet(new Block[] {
+		    Blocks.grass, Blocks.dirt, Blocks.sand, Blocks.gravel, 
+		    Blocks.snow_layer, Blocks.snow, Blocks.clay, Blocks.farmland, 
+		    Blocks.soul_sand, Blocks.mycelium}
 	
-	private static final Set<Material> EFFECTIVE_MATERIALS = ImmutableSet.of(
-			// Pickaxe
-			Material.rock, Material.iron, Material.ice, Material.glass, Material.piston, Material.anvil, Material.circuits,
-			
-			// Shovel
-			Material.grass, Material.ground, Material.sand, Material.snow, Material.craftedSnow, Material.clay
-	);
+			);
 	
 	@Override
-	public float getStrVsBlock(ItemStack stack, Block state) 
-	{
-		for (String type : getToolClasses(stack)) {
-			//if (state.getBlockState().getBlock().isToolEffective(type, state))
-				return efficiencyOnProperMaterial;
-		}
-
-		// Not all blocks have a harvest tool/level set, so we need to fall back to checking the Material like the vanilla tools do
-		if (EFFECTIVE_MATERIALS.contains(state.getMaterial())) {
-			return efficiencyOnProperMaterial;
-		}
-
-		return DIG_SPEED_DEFAULT;
+	public boolean func_150897_b(Block block) {
+	    return effectiveAgainst.contains(block) ? true : super.func_150897_b(block);
+	}
+	
+	@Override
+	public float func_150893_a(ItemStack stack, Block block) {
+	    if (block.getMaterial() == Material.rock || block.getMaterial() == Material.iron || block.getMaterial() == Material.ice	
+	    ||	block.getMaterial() == Material.glass || block.getMaterial() == Material.piston || block.getMaterial() == Material.anvil || block.getMaterial() == Material.circuits
+	    ||	block.getMaterial() == Material.grass || block.getMaterial() == Material.ground || block.getMaterial() == Material.sand
+	    ||	block.getMaterial() == Material.snow || block.getMaterial() == Material.craftedSnow || block.getMaterial() == Material.clay	
+	    		)
+	        return this.efficiencyOnProperMaterial;
+	    return effectiveAgainst.contains(block) ? this.efficiencyOnProperMaterial : super.func_150893_a(stack, block);
 	}
 	
 }

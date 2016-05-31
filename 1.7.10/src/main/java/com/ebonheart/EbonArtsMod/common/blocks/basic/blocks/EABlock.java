@@ -10,13 +10,13 @@ import net.minecraft.block.BlockRotatedPillar;
 import net.minecraft.block.material.Material;
 
 
-public class BlockDraconium extends BlockRockEA {
+public class EABlock extends BlockRockEA {
 
-	public BlockDraconium() 
+	public EABlock(String unlocalizedName) 
 	{
 		super();
 		//BlockHelper.setBlockName(this, "gem/draconium/draconium_block");
-		this.setBlockName("gems/draconium/draconium_block");
+		this.setBlockName(unlocalizedName);
 		this.setCreativeTab(EbonArtsMod.tabEbonArtsBlocks);
 		
 		this.useNeighborBrightness=true;

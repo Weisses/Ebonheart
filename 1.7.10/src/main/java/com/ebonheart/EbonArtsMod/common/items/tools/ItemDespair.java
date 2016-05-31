@@ -40,9 +40,9 @@ public class ItemDespair extends ItemSword {
 			Potion potion2 = Potion.confusion;
 					//.confusion;
 			//EntityPlayer playerIn = attacker.getEntityWorld().getPlayerEntityByUUID(attacker.getUniqueID());
-			//WeaponHelper.addPotionEffectToTarget(target, potion, 4, 1);
-			//WeaponHelper.addPotionEffectToTarget(target, potion2, 3, 1);
-			//stack.damageItem(1, playerIn);
+			WeaponHelper.addPotionEffectToTarget(target, potion, 4, 1);
+			WeaponHelper.addPotionEffectToTarget(target, potion2, 3, 1);
+			stack.damageItem(1, attacker);
 		}
         return true;
     }

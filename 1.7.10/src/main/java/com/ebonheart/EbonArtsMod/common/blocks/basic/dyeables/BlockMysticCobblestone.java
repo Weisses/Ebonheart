@@ -2,28 +2,75 @@ package com.ebonheart.EbonArtsMod.common.blocks.basic.dyeables;
 
 import net.minecraft.block.BlockRotatedPillar;
 import net.minecraft.block.material.Material;
+import net.minecraft.client.renderer.texture.IIconRegister;
 import net.minecraft.entity.EntityLivingBase;
+import net.minecraft.item.Item;
+import net.minecraft.item.ItemStack;
 import net.minecraft.util.EnumFacing;
+import net.minecraft.util.IIcon;
 import net.minecraft.world.World;
 
 import com.ebonheart.EbonArtsMod.EbonArtsMod;
+import com.ebonheart.EbonArtsMod.api.Reference;
 import com.ebonheart.EbonArtsMod.common.blocks.BlockHelperOLDOLDOLD;
+
+import cpw.mods.fml.relauncher.Side;
+import cpw.mods.fml.relauncher.SideOnly;
 
 public class BlockMysticCobblestone extends BlockRotatedPillar {
 	
-	public static final PropertyEnum LOG_AXIS = PropertyEnum.create("axis", BlockMysticCobblestone.EnumAxis.class);
+	private IIcon bottomEA;
+    private IIcon sideEA;
+    private IIcon topEA;
     
 	public BlockMysticCobblestone(String unlocalizedName) 
 	{
 		super(Material.rock);
-		BlockHelperOLDOLDOLD.setBlockName(this, unlocalizedName);
 		
+		this.setBlockName(unlocalizedName);
 		this.setCreativeTab(EbonArtsMod.tabEbonArtsDyeables);
 		this.setHarvestLevel("pickaxe", 2);
 		this.setHardness(5.0F);
 		this.setResistance(100.0F);
 		this.setStepSound(soundTypeStone);
 	}
+	
+	@Override
+	@SideOnly(Side.CLIENT)
+    public void registerBlockIcons(IIconRegister p_149651_1_)
+    {
+		//this.bottomEA = p_149651_1_.registerIcon(Reference.MOD_ID + ":" + this.getUnlocalizedName().substring(5) + "_bottom");
+		this.sideEA = p_149651_1_.registerIcon(Reference.MOD_ID + ":" + this.getUnlocalizedName().substring(5) + "_side");
+		this.topEA = p_149651_1_.registerIcon(Reference.MOD_ID + ":" + this.getUnlocalizedName().substring(5) + "_top");
+    }
+	
+	@SideOnly(Side.CLIENT)
+    protected IIcon getTopIcon(int p_150161_1_)
+    {
+        return this.topEA;
+    }
+	
+	@Override
+	protected IIcon getSideIcon(int p_150163_1_) {
+		// TODO Auto-generated method stub
+		return this.sideEA;
+	}
+	//@Override
+	//@SideOnly(Side.CLIENT)
+    //public IIcon getIcon(int p_149691_1_, int p_149691_2_)
+    //{
+        
+    //    switch(p_149691_1_)
+    //    {
+    //    	case 0: return this.bottomEA;
+    //    	case 1: return this.topEA;
+    //    	case 2: return this.sideEA;
+    ////    	case 3: return this.sideEA;
+    //    	case 4: return this.sideEA;
+    //    	case 5: return this.sideEA;
+    //    }
+	//	return sideEA;
+    //}
 	
 	public boolean isOpaqueCube()
 	{
@@ -34,181 +81,67 @@ public class BlockMysticCobblestone extends BlockRotatedPillar {
 	{
 		return true;
 	}
-	
-	public IBlockState getStateFromMeta(int meta)
+	/**
+     * Called when a block is placed using its ItemBlock. Args: World, X, Y, Z, side, hitX, hitY, hitZ, block metadata
+     */
+    public int onBlockPlaced(World p_149660_1_, int p_149660_2_, int p_149660_3_, int p_149660_4_, int p_149660_5_, float p_149660_6_, float p_149660_7_, float p_149660_8_, int p_149660_9_)
     {
-        IBlockState iblockstate = this.getDefaultState();
+        int j1 = p_149660_9_ & 3;
+        byte b0 = 0;
 
-        switch (meta & 12)
+        switch (p_149660_5_)
         {
             case 0:
-                iblockstate = iblockstate.withProperty(LOG_AXIS, BlockMysticCobblestone.EnumAxis.Y);
-                break;
-            case 4:
-                iblockstate = iblockstate.withProperty(LOG_AXIS, BlockMysticCobblestone.EnumAxis.X);
-                break;
-            case 8:
-                iblockstate = iblockstate.withProperty(LOG_AXIS, BlockMysticCobblestone.EnumAxis.Z);
-                break;
-            default:
-                iblockstate = iblockstate.withProperty(LOG_AXIS, BlockMysticCobblestone.EnumAxis.NONE);
-        }
-
-        return iblockstate;
-    }
-
-    /**
-     * Convert the BlockState into the correct metadata value
-     */
-    public int getMetaFromState(IBlockState state)
-    {
-        int i = 0;
-        
-        switch (BlockMysticCobblestone.SwitchEnumAxis.AXIS_LOOKUP[((BlockMysticCobblestone.EnumAxis)state.getValue(LOG_AXIS)).ordinal()])
-        {
             case 1:
-                i |= 4;
+                b0 = 0;
                 break;
             case 2:
-                i |= 8;
-                break;
             case 3:
-                i |= 12;
+                b0 = 8;
+                break;
+            case 4:
+            case 5:
+                b0 = 4;
         }
-        return i;
-    }
 
-    public IBlockState onBlockPlaced(World worldIn, BlockPos pos, EnumFacing facing, float hitX, float hitY, float hitZ, int meta, EntityLivingBase placer)
-    {
-        return super.onBlockPlaced(worldIn, pos, facing, hitX, hitY, hitZ, meta, placer).withProperty(LOG_AXIS, BlockMysticCobblestone.EnumAxis.fromFacingAxis(facing.getAxis()));
-    }
-    
-    protected BlockState createBlockState()
-    {
-        return new BlockState(this, new IProperty[] {LOG_AXIS});
+        return j1 | b0;
     }
 
     /**
-     * Get the damage value that this Block should drop
+     * Gets the block's texture. Args: side, meta
      */
-    //public int damageDropped(IBlockState state)
-    //{
-	     //return ((BlockPlanks.EnumType)state.getValue(VARIANT)).getMetadata();
-    //}
-
-    
-    public static enum EnumAxis implements IStringSerializable
+    @SideOnly(Side.CLIENT)
+    public IIcon getIcon(int p_149691_1_, int p_149691_2_)
     {
-        X("x"),
-        Y("y"),
-        Z("z"),
-        NONE("none");
-        private final String name;
-
-        private static final String __OBFID = "CL_00002100";
-
-        private EnumAxis(String name)
-        {
-            this.name = name;
-        }
-
-        public String toString()
-        {
-            return this.name;
-        }
-
-        public static BlockMysticCobblestone.EnumAxis fromFacingAxis(EnumFacing.Axis axis)
-        {
-            switch (BlockMysticCobblestone.SwitchAxis.AXIS_LOOKUP[axis.ordinal()])
-            {
-                case 1:
-                    return X;
-                case 2:
-                    return Y;
-                case 3:
-                    return Z;
-                default:
-                    return NONE;
-            }
-        }
-
-        public String getName()
-        {
-            return this.name;
-        }
+        int k = p_149691_2_ & 12;
+        int l = p_149691_2_ & 3;
+        return k == 0 && (p_149691_1_ == 1 || p_149691_1_ == 0) ? this.getTopIcon(l) : (k == 4 && (p_149691_1_ == 5 || p_149691_1_ == 4) ? this.getTopIcon(l) : (k == 8 && (p_149691_1_ == 2 || p_149691_1_ == 3) ? this.getTopIcon(l) : this.getSideIcon(l)));
     }
 
-    static final class SwitchAxis
-        {
-            static final int[] AXIS_LOOKUP = new int[EnumFacing.Axis.values().length];
-            private static final String __OBFID = "CL_00002101";
+    /**
+     * Determines the damage on the item the block drops. Used in cloth and wood.
+     */
+    public int damageDropped(int p_149692_1_)
+    {
+        return p_149692_1_ & 3;
+    }
 
-            static
-            {
-                try
-                {
-                    AXIS_LOOKUP[EnumFacing.Axis.X.ordinal()] = 1;
-                }
-                catch (NoSuchFieldError var3)
-                {
-                    ;
-                }
-
-                try
-                {
-                    AXIS_LOOKUP[EnumFacing.Axis.Y.ordinal()] = 2;
-                }
-                catch (NoSuchFieldError var2)
-                {
-                    ;
-                }
-
-                try
-                {
-                    AXIS_LOOKUP[EnumFacing.Axis.Z.ordinal()] = 3;
-                }
-                catch (NoSuchFieldError var1)
-                {
-                    ;
-                }
-            }
-        }
     
     
-    
-    static final class SwitchEnumAxis
-        {
-            static final int[] AXIS_LOOKUP = new int[BlockMysticCobblestone.EnumAxis.values().length];
-            
-            static
-            {
-                try
-                {
-                    AXIS_LOOKUP[BlockMysticCobblestone.EnumAxis.X.ordinal()] = 1;
-                }
-                catch (NoSuchFieldError var3)
-                {
-                    ;
-                }
+    public int func_150162_k(int p_150162_1_)
+    {
+        return p_150162_1_ & 3;
+    }
 
-                try
-                {
-                    AXIS_LOOKUP[BlockMysticCobblestone.EnumAxis.Z.ordinal()] = 2;
-                }
-                catch (NoSuchFieldError var2)
-                {
-                    ;
-                }
+    /**
+     * Returns an item stack containing a single instance of the current block type. 'i' is the block's subtype/damage
+     * and is ignored for blocks which do not support subtypes. Blocks which cannot be harvested should return null.
+     */
+    protected ItemStack createStackedBlock(int p_149644_1_)
+    {
+        return new ItemStack(Item.getItemFromBlock(this), 1, this.func_150162_k(p_149644_1_));
+    }
 
-                try
-                {
-                    AXIS_LOOKUP[BlockMysticCobblestone.EnumAxis.NONE.ordinal()] = 3;
-                }
-                catch (NoSuchFieldError var1)
-                {
-                    ;
-                }
-            }
-        }
+	
 	
 }
