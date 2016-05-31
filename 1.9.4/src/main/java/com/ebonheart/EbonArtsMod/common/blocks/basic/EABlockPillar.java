@@ -44,15 +44,10 @@ public class EABlockPillar extends BlockRotatedPillar {
 		this.useNeighborBrightness = true;
 	}
 	
+	@Override
 	public boolean isOpaqueCube(IBlockState state)
 	{
 		return false;
 	}
-	
-	public boolean isFullCube()
-	{
-		return true;
-	}
-	
 }
 

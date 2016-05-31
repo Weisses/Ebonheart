@@ -40,9 +40,5 @@ public class EABlockFence extends BlockFence {
 		this.setSoundType(SoundType.STONE);
 	}
 	
-	public void isFlamable(World worldIn, BlockPos posIn, EnumFacing face)
-	{
-		this.isFlammable(worldIn, posIn, face);
-	}
 	
 }

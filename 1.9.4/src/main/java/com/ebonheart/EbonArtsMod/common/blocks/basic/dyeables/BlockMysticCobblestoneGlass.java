@@ -2,6 +2,7 @@ package com.ebonheart.EbonArtsMod.common.blocks.basic.dyeables;
 
 import com.ebonheart.EbonArtsMod.EbonArtsMod;
 import com.ebonheart.EbonArtsMod.common.blocks.BlockHelper;
+import com.ebonheart.EbonArtsMod.common.blocks.basic.EABlockPillar;
 import com.ebonheart.EbonArtsMod.init.InitBlocksEA;
 
 import net.minecraft.block.Block;
@@ -17,21 +18,19 @@ import net.minecraft.world.IBlockAccess;
 import net.minecraftforge.fml.relauncher.Side;
 import net.minecraftforge.fml.relauncher.SideOnly;
 
-public class BlockMysticCobblestoneGlass extends BlockRotatedPillar {
+public class BlockMysticCobblestoneGlass extends EABlockPillar {
 	
 	private boolean ignoreSimilarity = true;
 	
 	public BlockMysticCobblestoneGlass(String unlocalizedName) 
 	{
-		super(Material.ROCK);
-		BlockHelper.setBlockName(this, unlocalizedName);
+		super(unlocalizedName);
 		
 		this.setCreativeTab(EbonArtsMod.tabEbonArtsDyeables);
 		this.setHarvestLevel("pickaxe", 2);
 		this.setHardness(5.0F);
 		this.setSoundType(SoundType.STONE);
 	}
-	
 	
 	@SideOnly(Side.CLIENT)
     public BlockRenderLayer getBlockLayer()

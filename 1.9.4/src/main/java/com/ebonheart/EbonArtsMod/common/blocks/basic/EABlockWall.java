@@ -29,9 +29,9 @@ import com.ebonheart.EbonArtsMod.proxy.CommonProxy;
 
 public class EABlockWall extends BlockWall {
 	
-	public EABlockWall(String unlocalizedName) 
+	public EABlockWall(String unlocalizedName, Block block) 
     {
-		super(Blocks.STONEBRICK);
+		super(block);
 		BlockHelper.setBlockName(this, unlocalizedName);
 		
 		this.setHarvestLevel("pickaxe", 2);

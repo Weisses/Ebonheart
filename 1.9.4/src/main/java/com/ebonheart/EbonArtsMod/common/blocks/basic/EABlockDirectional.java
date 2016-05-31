@@ -1,34 +1,42 @@
-package com.ebonheart.EbonArtsMod.common.blocks.basic.dyeables;
+package com.ebonheart.EbonArtsMod.common.blocks.basic;
 
 import com.ebonheart.EbonArtsMod.EbonArtsMod;
 import com.ebonheart.EbonArtsMod.common.blocks.BlockHelper;
 
 import net.minecraft.block.Block;
+import net.minecraft.block.BlockDirectional;
 import net.minecraft.block.BlockHorizontal;
 import net.minecraft.block.SoundType;
 import net.minecraft.block.material.Material;
 import net.minecraft.block.properties.IProperty;
+import net.minecraft.util.math.BlockPos;
 import net.minecraft.block.state.BlockStateContainer;
+import net.minecraft.block.state.BlockWorldState;
 import net.minecraft.block.state.IBlockState;
+import net.minecraft.block.state.pattern.BlockPattern;
+import net.minecraft.block.state.pattern.FactoryBlockPattern;
 import net.minecraft.entity.EntityLivingBase;
+import net.minecraft.entity.monster.EntityIronGolem;
+import net.minecraft.entity.monster.EntitySnowman;
+import net.minecraft.init.Blocks;
+import net.minecraft.util.math.BlockPos;
 import net.minecraft.util.EnumFacing;
+import net.minecraft.util.EnumParticleTypes;
 import net.minecraft.util.Mirror;
 import net.minecraft.util.Rotation;
-import net.minecraft.util.math.BlockPos;
 import net.minecraft.world.World;
 
-public class BlockMysticWood extends BlockHorizontal {
-	
-	public BlockMysticWood(String unlocalizedName) 
+public class EABlockDirectional extends BlockHorizontal {
+
+	public EABlockDirectional(String unlocalizedName) 
 	{
-		super(Material.WOOD);
+		super(Material.CLOTH);
 		BlockHelper.setBlockName(this, unlocalizedName);
 		
-		this.setCreativeTab(EbonArtsMod.tabEbonArtsDyeables);
-		this.setHarvestLevel("axe", 2);
-		this.setHardness(5.0F);
-		this.setResistance(100.0F);
-		this.setSoundType(SoundType.WOOD);
+		this.setDefaultState(this.blockState.getBaseState().withProperty(FACING, EnumFacing.NORTH));
+		this.setHardness(1.0F);
+		this.setSoundType(SoundType.STONE);
+		this.useNeighborBrightness=true;
 	}
 	
 	@Override

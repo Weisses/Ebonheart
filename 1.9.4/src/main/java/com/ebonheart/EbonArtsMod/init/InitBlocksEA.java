@@ -1,6 +1,5 @@
 package com.ebonheart.EbonArtsMod.init;
 
-import java.lang.reflect.Constructor;
 import java.util.HashSet;
 import java.util.Set;
 import java.util.function.Function;
@@ -8,18 +7,14 @@ import java.util.function.Function;
 import javax.annotation.Nullable;
 
 import net.minecraft.block.Block;
-//import net.minecraft.block.BlockPurpurSlab;
-import net.minecraft.block.SoundType;
-import net.minecraft.block.material.Material;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemBlock;
 import net.minecraft.item.ItemSlab;
-import net.minecraft.util.IStringSerializable;
 import net.minecraftforge.fml.common.registry.GameRegistry;
 
-import com.ebonheart.EbonArtsMod.EbonArtsMod;
 import com.ebonheart.EbonArtsMod.api.BlocksEA;
-import com.ebonheart.EbonArtsMod.api.Reference;
+import com.ebonheart.EbonArtsMod.common.blocks.basic.BlockEA;
+import com.ebonheart.EbonArtsMod.common.blocks.basic.EABlockDirectional;
 import com.ebonheart.EbonArtsMod.common.blocks.basic.EABlockFence;
 import com.ebonheart.EbonArtsMod.common.blocks.basic.EABlockFenceGate;
 import com.ebonheart.EbonArtsMod.common.blocks.basic.EABlockLadder;
@@ -27,31 +22,12 @@ import com.ebonheart.EbonArtsMod.common.blocks.basic.EABlockPillar;
 import com.ebonheart.EbonArtsMod.common.blocks.basic.EABlockStairs;
 import com.ebonheart.EbonArtsMod.common.blocks.basic.EABlockTrapDoor;
 import com.ebonheart.EbonArtsMod.common.blocks.basic.EABlockWall;
-import com.ebonheart.EbonArtsMod.common.blocks.basic.blocks.BlockArcanite;
-import com.ebonheart.EbonArtsMod.common.blocks.basic.blocks.BlockDraconium;
-import com.ebonheart.EbonArtsMod.common.blocks.basic.blocks.BlockEbonheart;
-import com.ebonheart.EbonArtsMod.common.blocks.basic.blocks.BlockGlowstone;
-import com.ebonheart.EbonArtsMod.common.blocks.basic.blocks.BlockKatcheen;
-import com.ebonheart.EbonArtsMod.common.blocks.basic.blocks.BlockNecrocite;
-import com.ebonheart.EbonArtsMod.common.blocks.basic.blocks.BlockObsidian;
-import com.ebonheart.EbonArtsMod.common.blocks.basic.blocks.BlockSoularite;
-import com.ebonheart.EbonArtsMod.common.blocks.basic.blocks.BlockVelious;
-import com.ebonheart.EbonArtsMod.common.blocks.basic.bricks.BlockBrickArcanite;
-import com.ebonheart.EbonArtsMod.common.blocks.basic.bricks.BlockBrickDraconium;
-import com.ebonheart.EbonArtsMod.common.blocks.basic.bricks.BlockBrickEbonheart;
-import com.ebonheart.EbonArtsMod.common.blocks.basic.bricks.BlockBrickGlowstone;
-import com.ebonheart.EbonArtsMod.common.blocks.basic.bricks.BlockBrickKatcheen;
-import com.ebonheart.EbonArtsMod.common.blocks.basic.bricks.BlockBrickNecrocite;
-import com.ebonheart.EbonArtsMod.common.blocks.basic.bricks.BlockBrickObsidian;
-import com.ebonheart.EbonArtsMod.common.blocks.basic.bricks.BlockBrickSoularite;
-import com.ebonheart.EbonArtsMod.common.blocks.basic.bricks.BlockBrickVelious;
 import com.ebonheart.EbonArtsMod.common.blocks.basic.dyeables.BlockMysticCobblestone;
 import com.ebonheart.EbonArtsMod.common.blocks.basic.dyeables.BlockMysticCobblestoneGlass;
 import com.ebonheart.EbonArtsMod.common.blocks.basic.dyeables.BlockMysticStone;
 import com.ebonheart.EbonArtsMod.common.blocks.basic.dyeables.BlockMysticStoneGlass;
 import com.ebonheart.EbonArtsMod.common.blocks.basic.dyeables.BlockMysticWood;
 import com.ebonheart.EbonArtsMod.common.blocks.basic.dyeables.BlockMysticWoodGlass;
-import com.ebonheart.EbonArtsMod.common.blocks.basic.dyeables.EABlockMeta;
 import com.ebonheart.EbonArtsMod.common.blocks.basic.slabs.BlockDoubleSlabArcanite;
 import com.ebonheart.EbonArtsMod.common.blocks.basic.slabs.BlockDoubleSlabDraconium;
 import com.ebonheart.EbonArtsMod.common.blocks.basic.slabs.BlockDoubleSlabEbonheart;
@@ -70,6 +46,7 @@ import com.ebonheart.EbonArtsMod.common.blocks.basic.slabs.BlockHalfSlabNecrocit
 import com.ebonheart.EbonArtsMod.common.blocks.basic.slabs.BlockHalfSlabObsidian;
 import com.ebonheart.EbonArtsMod.common.blocks.basic.slabs.BlockHalfSlabSoularite;
 import com.ebonheart.EbonArtsMod.common.blocks.basic.slabs.BlockHalfSlabVelious;
+import com.ebonheart.EbonArtsMod.common.blocks.basic.slabs.EABlockSlab;
 import com.ebonheart.EbonArtsMod.common.blocks.basic.slabs.ItemBlockSlabArcanite;
 import com.ebonheart.EbonArtsMod.common.blocks.basic.slabs.ItemBlockSlabDraconium;
 import com.ebonheart.EbonArtsMod.common.blocks.basic.slabs.ItemBlockSlabEbonheart;
@@ -79,9 +56,6 @@ import com.ebonheart.EbonArtsMod.common.blocks.basic.slabs.ItemBlockSlabNecrocit
 import com.ebonheart.EbonArtsMod.common.blocks.basic.slabs.ItemBlockSlabObsidian;
 import com.ebonheart.EbonArtsMod.common.blocks.basic.slabs.ItemBlockSlabSoularite;
 import com.ebonheart.EbonArtsMod.common.blocks.basic.slabs.ItemBlockSlabVelious;
-import com.ebonheart.EbonArtsMod.common.blocks.basic.storage.BlockLeather;
-import com.ebonheart.EbonArtsMod.common.blocks.basic.storage.BlockPaper;
-import com.ebonheart.EbonArtsMod.common.blocks.basic.storage.BlockReed;
 import com.ebonheart.EbonArtsMod.common.blocks.basic.torches.EABlockTorchArcanite;
 import com.ebonheart.EbonArtsMod.common.blocks.basic.torches.EABlockTorchDraconium;
 import com.ebonheart.EbonArtsMod.common.blocks.basic.torches.EABlockTorchEbonheart;
@@ -102,8 +76,7 @@ import com.ebonheart.EbonArtsMod.common.blocks.world.BlockOreVelious;
 import com.ebonheart.EbonArtsMod.common.blocks.world.DragonFruitCrop;
 import com.ebonheart.EbonArtsMod.common.blocks.world.HellionFruitCrop;
 import com.ebonheart.EbonArtsMod.common.blocks.world.SacredFruitCrop;
-import com.ebonheart.EbonArtsMod.common.utils.meta.ItemBlockMeta;
-import com.google.common.collect.ObjectArrays;
+//import net.minecraft.block.BlockPurpurSlab;
 
 public class InitBlocksEA extends BlocksEA {
 	
@@ -121,25 +94,25 @@ public class InitBlocksEA extends BlocksEA {
 		ebon_ore = registerBlock(new BlockMultiOre("ore/ebon_ore"));
 		ebon_ore_nether = registerBlock(new BlockMultiOre("ore/ebon_ore_nether"));
 		
-		draconium_block = registerBlock(new BlockDraconium().setResistance(4.0F));
-		velious_block = registerBlock(new BlockVelious().setResistance(15.0F));
-		arcanite_block = registerBlock(new BlockArcanite().setResistance(30.0F));
-		katcheen_block = registerBlock(new BlockKatcheen().setResistance(100.0F));
-		necrocite_block = registerBlock(new BlockNecrocite().setResistance(45.0F));
-		soularite_block = registerBlock(new BlockSoularite().setResistance(45.0F));
-		ebonheart_block = registerBlock(new BlockEbonheart().setResistance(2000.0F));
-		obsidian_block = registerBlock(new BlockObsidian().setResistance(2000.0F));
-		glowstone_block = registerBlock(new BlockGlowstone().setResistance(45.0F).setLightLevel(1.0f));
+		draconium_block = registerBlock(new BlockEA("gem/draconium/draconium_block").setResistance(4.0F));
+		velious_block = registerBlock(new BlockEA("gem/velious/velious_block").setResistance(15.0F));
+		arcanite_block = registerBlock(new BlockEA("gem/arcanite/arcanite_block").setResistance(30.0F));
+		katcheen_block = registerBlock(new BlockEA("gem/katcheen/katcheen_block").setResistance(100.0F));
+		necrocite_block = registerBlock(new BlockEA("gem/necrocite/necrocite_block").setResistance(45.0F));
+		soularite_block = registerBlock(new BlockEA("gem/soularite/soularite_block").setResistance(45.0F));
+		ebonheart_block = registerBlock(new BlockEA("gem/ebonheart/ebonheart_block").setResistance(2000.0F));
+		obsidian_block = registerBlock(new BlockEA("gem/obsidian/obsidian_block").setResistance(2000.0F));
+		glowstone_block = registerBlock(new BlockEA("gem/glowstone/glowstone_block").setResistance(45.0F).setLightLevel(1.0f));
 		
-		draconium_block_brick = registerBlock(new BlockBrickDraconium().setResistance(4.0F));
-		velious_block_brick = registerBlock(new BlockBrickVelious().setResistance(15.0F));
-		arcanite_block_brick = registerBlock(new BlockBrickArcanite().setResistance(30.0F));
-		katcheen_block_brick = registerBlock(new BlockBrickKatcheen().setResistance(100.0F));
-		necrocite_block_brick = registerBlock(new BlockBrickNecrocite().setResistance(45.0F));
-		soularite_block_brick = registerBlock(new BlockBrickSoularite().setResistance(45.0F));
-		ebonheart_block_brick = registerBlock(new BlockBrickEbonheart().setResistance(2000.0F));
-		obsidian_block_brick = registerBlock(new BlockBrickObsidian().setResistance(2000.0F));
-		glowstone_block_brick = registerBlock(new BlockBrickGlowstone().setResistance(45.0F).setLightLevel(1.0f));
+		draconium_block_brick = registerBlock(new BlockEA("gem/draconium/draconium_block_brick").setResistance(4.0F));
+		velious_block_brick = registerBlock(new BlockEA("gem/velious/velious_block_brick").setResistance(15.0F));
+		arcanite_block_brick = registerBlock(new BlockEA("gem/arcanite/arcanite_block_brick").setResistance(30.0F));
+		katcheen_block_brick = registerBlock(new BlockEA("gem/katcheen/katcheen_block_brick").setResistance(100.0F));
+		necrocite_block_brick = registerBlock(new BlockEA("gem/necrocite/necrocite_block_brick").setResistance(45.0F));
+		soularite_block_brick = registerBlock(new BlockEA("gem/soularite/soularite_block_brick").setResistance(45.0F));
+		ebonheart_block_brick = registerBlock(new BlockEA("gem/ebonheart/ebonheart_block_brick").setResistance(2000.0F));
+		obsidian_block_brick = registerBlock(new BlockEA("gem/obsidian/obsidian_block_brick").setResistance(2000.0F));
+		glowstone_block_brick = registerBlock(new BlockEA("gem/glowstone/glowstone_block_brick").setResistance(45.0F).setLightLevel(1.0f));
 		
 		
 		//testSlabs = new BlockColouredSlab.ColouredSlabGroup("stainedClaySlab", Material.rock);
@@ -165,15 +138,15 @@ public class InitBlocksEA extends BlocksEA {
 		obsidian_slab = new BlockHalfSlabObsidian("slab/obsidian/obsidian_slab").setResistance(2000.0F);
 		glowstone_slab = new BlockHalfSlabGlowstone("slab/glowstone/glowstone_slab").setResistance(45.0F).setLightLevel(1.0f);
 		
-		draconium_stairs = registerBlock(new EABlockStairs("stairs/draconium_stairs").setResistance(4.0F));
-		velious_stairs = registerBlock(new EABlockStairs("stairs/velious_stairs").setResistance(15.0F));
-		arcanite_stairs = registerBlock(new EABlockStairs("stairs/arcanite_stairs").setResistance(30.0F));
-		katcheen_stairs = registerBlock(new EABlockStairs("stairs/katcheen_stairs").setResistance(100.0F));
-		necrocite_stairs = registerBlock(new EABlockStairs("stairs/necrocite_stairs").setResistance(45.0F));
-		soularite_stairs = registerBlock(new EABlockStairs("stairs/soularite_stairs").setResistance(45.0F));
-		ebonheart_stairs = registerBlock(new EABlockStairs("stairs/ebonheart_stairs").setResistance(2000.0F));
-		obsidian_stairs = registerBlock(new EABlockStairs("stairs/obsidian_stairs").setResistance(2000.0F));
-		glowstone_stairs = registerBlock(new EABlockStairs("stairs/glowstone_stairs").setResistance(45.0F).setLightLevel(1.0f));
+		draconium_stairs = registerBlock(new EABlockStairs("stairs/draconium_stairs", draconium_block).setResistance(4.0F));
+		velious_stairs = registerBlock(new EABlockStairs("stairs/velious_stairs", velious_block).setResistance(15.0F));
+		arcanite_stairs = registerBlock(new EABlockStairs("stairs/arcanite_stairs", arcanite_block).setResistance(30.0F));
+		katcheen_stairs = registerBlock(new EABlockStairs("stairs/katcheen_stairs", katcheen_block).setResistance(100.0F));
+		necrocite_stairs = registerBlock(new EABlockStairs("stairs/necrocite_stairs", necrocite_block).setResistance(45.0F));
+		soularite_stairs = registerBlock(new EABlockStairs("stairs/soularite_stairs", soularite_block).setResistance(45.0F));
+		ebonheart_stairs = registerBlock(new EABlockStairs("stairs/ebonheart_stairs", ebonheart_block).setResistance(2000.0F));
+		obsidian_stairs = registerBlock(new EABlockStairs("stairs/obsidian_stairs", obsidian_block).setResistance(2000.0F));
+		glowstone_stairs = registerBlock(new EABlockStairs("stairs/glowstone_stairs", glowstone_block).setResistance(45.0F).setLightLevel(1.0f));
 		
 		draconium_fence = registerBlock(new EABlockFence("fence/draconium_fence").setResistance(4.0F));
 		velious_fence = registerBlock(new EABlockFence("fence/velious_fence").setResistance(15.0F));
@@ -195,15 +168,15 @@ public class InitBlocksEA extends BlocksEA {
 		obsidian_fence_gate = registerBlock(new EABlockFenceGate("fence/obsidian_fence_gate").setResistance(2000.0F));
 		glowstone_fence_gate = registerBlock(new EABlockFenceGate("fence/glowstone_fence_gate").setResistance(45.0F).setLightLevel(1.0f));
 		
-		draconium_wall = registerBlock(new EABlockWall("wall/draconium_wall").setResistance(4.0F));
-		velious_wall = registerBlock(new EABlockWall("wall/velious_wall").setResistance(15.0F));
-		arcanite_wall = registerBlock(new EABlockWall("wall/arcanite_wall").setResistance(30.0F));
-		katcheen_wall = registerBlock(new EABlockWall("wall/katcheen_wall").setResistance(100.0F));
-		necrocite_wall = registerBlock(new EABlockWall("wall/necrocite_wall").setResistance(45.0F));
-		soularite_wall = registerBlock(new EABlockWall("wall/soularite_wall").setResistance(45.0F));
-		ebonheart_wall = registerBlock(new EABlockWall("wall/ebonheart_wall").setResistance(2000.0F));
-		obsidian_wall = registerBlock(new EABlockWall("wall/obsidian_wall").setResistance(2000.0F));
-		glowstone_wall = registerBlock(new EABlockWall("wall/glowstone_wall").setResistance(45.0F).setLightLevel(1.0f));
+		draconium_wall = registerBlock(new EABlockWall("wall/draconium_wall", draconium_block).setResistance(4.0F));
+		velious_wall = registerBlock(new EABlockWall("wall/velious_wall", velious_block).setResistance(15.0F));
+		arcanite_wall = registerBlock(new EABlockWall("wall/arcanite_wall", arcanite_block).setResistance(30.0F));
+		katcheen_wall = registerBlock(new EABlockWall("wall/katcheen_wall", katcheen_block).setResistance(100.0F));
+		necrocite_wall = registerBlock(new EABlockWall("wall/necrocite_wall", necrocite_block).setResistance(45.0F));
+		soularite_wall = registerBlock(new EABlockWall("wall/soularite_wall", soularite_block).setResistance(45.0F));
+		ebonheart_wall = registerBlock(new EABlockWall("wall/ebonheart_wall", ebonheart_block).setResistance(2000.0F));
+		obsidian_wall = registerBlock(new EABlockWall("wall/obsidian_wall", obsidian_block).setResistance(2000.0F));
+		glowstone_wall = registerBlock(new EABlockWall("wall/glowstone_wall", glowstone_block).setResistance(45.0F).setLightLevel(1.0f));
 		
 		draconium_torch = registerBlock(new EABlockTorchDraconium().setResistance(4.0F));
 		velious_torch = registerBlock(new EABlockTorchVelious().setResistance(15.0F));
@@ -309,9 +282,9 @@ public class InitBlocksEA extends BlocksEA {
 		wood_mystic_block_red = registerBlock(new BlockMysticWood("gem/mystic/wood/wood_mystic_block_red"));
 		wood_mystic_block_black = registerBlock(new BlockMysticWood("gem/mystic/wood/wood_mystic_block_black"));
 		
-		paper_block = registerBlock(new BlockPaper().setResistance(4.0F));
-		leather_block = registerBlock(new BlockLeather().setResistance(4.0F));
-		reed_block = registerBlock(new BlockReed().setResistance(4.0F));
+		paper_block = registerBlock(new EABlockDirectional("paper_block").setResistance(4.0F));
+		leather_block = registerBlock(new EABlockDirectional("leather_block").setResistance(4.0F));
+		reed_block = registerBlock(new EABlockDirectional("reed_block").setResistance(4.0F));
 		
 		//mystic_furnace = new TestBlockFurnaceEA(false).setUnlocalizedName("machine/mystic_furnace").setCreativeTab(EbonArtsMod.tabEbonArtsBlocks);
 		//lit_mystic_furnace = new TestBlockFurnaceEA(true).setUnlocalizedName("machine/lit_mystic_furnace").setCreativeTab(EbonArtsMod.tabEbonArtsBlocks);
@@ -369,11 +342,20 @@ public class InitBlocksEA extends BlocksEA {
 		return block;
 	}
 	
-	
+	@SuppressWarnings("unchecked")
+	private static <
+			//VARIANT extends Enum<VARIANT> & IStringSerializable,
+			//VARIANTS extends Iterable<VARIANT> & IStringSerializable,
+			SLAB extends EABlockSlab
+			> void registerSlabGroup(BlockSlabTestMod3.SlabGroup<VARIANT, VARIANTS, SLAB> slabGroup) {
+		registerBlock(slabGroup.singleSlab, slab -> new ItemSlab(slab, slabGroup.singleSlab, slabGroup.doubleSlab));
+		registerBlock(slabGroup.doubleSlab, null); // No item form for the double slab
+		slabGroup.setItem((ItemSlab) Item.getItemFromBlock(slabGroup.singleSlab));
+	}
 	
 	public static void register()
 	{
-		
+		//GameRegistry.register(null);
 		GameRegistry.registerBlock(double_draconium_slab, ItemBlockSlabDraconium.class, "slab/draconium/double_draconium_slab", draconium_slab, double_draconium_slab, true);
 		GameRegistry.registerBlock(double_velious_slab, ItemBlockSlabVelious.class, "slab/velious/double_velious_slab", velious_slab, double_velious_slab, true);
 		GameRegistry.registerBlock(double_arcanite_slab, ItemBlockSlabArcanite.class, "slab/arcanite/double_arcanite_slab", arcanite_slab, double_arcanite_slab, true);
