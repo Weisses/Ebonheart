@@ -15,18 +15,19 @@ import net.minecraft.item.ItemStack;
 import net.minecraft.world.World;
 
 //Regular slab.
-public class BlockHalfSlab extends EABlockSlabDraconium {
+public class BlockHalfSlab extends EABlockSlab {
 	
     public BlockHalfSlab(String unlocalizedName) 
     {
         super();
+        //setRegistryName(unlocalizedName);
         //BlockHelper.setBlockName(this, unlocalizedName);
-        
         this.setUnlocalizedName(unlocalizedName);
+        this.setCreativeTab(EbonArtsMod.tabEbonArtsBlocks);
     }
 
     @Override
-    public final boolean isDouble() 
+    public boolean isDouble() 
     {
         return false;
     }

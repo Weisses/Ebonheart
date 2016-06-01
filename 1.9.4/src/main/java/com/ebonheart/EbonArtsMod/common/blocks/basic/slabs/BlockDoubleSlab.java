@@ -12,11 +12,12 @@ import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
 
 //Double slab.
-public class BlockDoubleSlab extends EABlockSlabDraconium {
+public class BlockDoubleSlab extends EABlockSlab {
 	
     public BlockDoubleSlab(String unlocalizedName) 
     {
         super();
+        //setRegistryName(unlocalizedName);
         //BlockHelper.setBlockName(this, unlocalizedName);
         this.setUnlocalizedName(unlocalizedName);
     }

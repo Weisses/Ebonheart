@@ -109,8 +109,8 @@ public final class InitBlocksEARender extends BlocksEA {
 		
 		
 		
-		registerRender(double_test_slab);
-		registerRender(test_slab);
+		//registerRender(double_test_slab);
+		//registerRender(test_slab);
 		
 		
 		
