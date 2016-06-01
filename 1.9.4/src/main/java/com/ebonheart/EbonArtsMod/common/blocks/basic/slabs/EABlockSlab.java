@@ -75,7 +75,7 @@ public abstract class EABlockSlab extends BlockSlab
   public ItemStack getItem(World worldIn, BlockPos pos, IBlockState state)
   {
       
-	  return this == InitBlocksEA.double_arcanite_slab ? new ItemStack(InitBlocksEA.arcanite_block) 
+	  return this == InitBlocksEA.double_draconium_slab ? new ItemStack(InitBlocksEA.arcanite_block) 
 	  : (this == Blocks.DIAMOND_ORE ? new ItemStack(InitBlocksEA.arcanite_block)
 			  : (this == Blocks.LAPIS_ORE ? new ItemStack(InitBlocksEA.arcanite_block)
 					  : (this == Blocks.EMERALD_ORE ? new ItemStack(InitBlocksEA.arcanite_block)
