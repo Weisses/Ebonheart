@@ -34,6 +34,11 @@ public class BlocksEA {
 	public static Block glowstone_block_brick;
 	public static Block ebonheart_block_brick;
 	
+	
+	public static Block test_slab;
+	public static Block double_test_slab;
+	
+	
 	public static Block double_draconium_slab;
 	public static Block double_velious_slab;
 	public static Block double_arcanite_slab;

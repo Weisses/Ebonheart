@@ -7,9 +7,7 @@ import java.util.function.Function;
 import javax.annotation.Nullable;
 
 import net.minecraft.block.Block;
-import net.minecraft.item.Item;
 import net.minecraft.item.ItemBlock;
-import net.minecraft.item.ItemSlab;
 import net.minecraftforge.fml.common.registry.GameRegistry;
 
 import com.ebonheart.EbonArtsMod.api.BlocksEA;
@@ -28,6 +26,7 @@ import com.ebonheart.EbonArtsMod.common.blocks.basic.dyeables.BlockMysticStone;
 import com.ebonheart.EbonArtsMod.common.blocks.basic.dyeables.BlockMysticStoneGlass;
 import com.ebonheart.EbonArtsMod.common.blocks.basic.dyeables.BlockMysticWood;
 import com.ebonheart.EbonArtsMod.common.blocks.basic.dyeables.BlockMysticWoodGlass;
+import com.ebonheart.EbonArtsMod.common.blocks.basic.slabs.BlockDoubleSlab;
 import com.ebonheart.EbonArtsMod.common.blocks.basic.slabs.BlockDoubleSlabArcanite;
 import com.ebonheart.EbonArtsMod.common.blocks.basic.slabs.BlockDoubleSlabDraconium;
 import com.ebonheart.EbonArtsMod.common.blocks.basic.slabs.BlockDoubleSlabEbonheart;
@@ -37,6 +36,7 @@ import com.ebonheart.EbonArtsMod.common.blocks.basic.slabs.BlockDoubleSlabNecroc
 import com.ebonheart.EbonArtsMod.common.blocks.basic.slabs.BlockDoubleSlabObsidian;
 import com.ebonheart.EbonArtsMod.common.blocks.basic.slabs.BlockDoubleSlabSoularite;
 import com.ebonheart.EbonArtsMod.common.blocks.basic.slabs.BlockDoubleSlabVelious;
+import com.ebonheart.EbonArtsMod.common.blocks.basic.slabs.BlockHalfSlab;
 import com.ebonheart.EbonArtsMod.common.blocks.basic.slabs.BlockHalfSlabArcanite;
 import com.ebonheart.EbonArtsMod.common.blocks.basic.slabs.BlockHalfSlabDraconium;
 import com.ebonheart.EbonArtsMod.common.blocks.basic.slabs.BlockHalfSlabEbonheart;
@@ -116,7 +116,8 @@ public class InitBlocksEA extends BlocksEA {
 		
 		
 		//testSlabs = new BlockColouredSlab.ColouredSlabGroup("stainedClaySlab", Material.rock);
-		
+		double_test_slab = new BlockDoubleSlab("slab/double_test_slab").setResistance(4.0F);
+		test_slab = new BlockHalfSlab("slab/test_slab").setResistance(4.0F);
 		
 		double_draconium_slab = new BlockDoubleSlabDraconium("slab/draconium/double_draconium_slab").setResistance(4.0F);
 		double_velious_slab = new BlockDoubleSlabVelious("slab/velious/double_velious_slab").setResistance(15.0F);
@@ -344,15 +345,26 @@ public class InitBlocksEA extends BlocksEA {
 	
 	@SuppressWarnings("unchecked")
 	private static <
-			//VARIANT extends Enum<VARIANT> & IStringSerializable,
-			//VARIANTS extends Iterable<VARIANT> & IStringSerializable,
+			
 			SLAB extends EABlockSlab
 			> void registerSlabGroup(BlockSlabTestMod3.SlabGroup<VARIANT, VARIANTS, SLAB> slabGroup) {
 		registerBlock(slabGroup.singleSlab, slab -> new ItemSlab(slab, slabGroup.singleSlab, slabGroup.doubleSlab));
 		registerBlock(slabGroup.doubleSlab, null); // No item form for the double slab
 		slabGroup.setItem((ItemSlab) Item.getItemFromBlock(slabGroup.singleSlab));
 	}
-	
+	/**
+	@SuppressWarnings("unchecked")
+	private static <
+			//VARIANT extends Enum<VARIANT> & IStringSerializable,
+			//VARIANTS extends Iterable<VARIANT> & IStringSerializable,
+			SLAB extends EABlockSlab
+			> void registerSlabGroup(EABlockSlab
+					slabGroup) {
+		registerBlock(slabGroup.singleSlab, slab -> new ItemSlab(slab, slabGroup.singleSlab, slabGroup.doubleSlab));
+		registerBlock(slabGroup.doubleSlab, null); // No item form for the double slab
+		slabGroup.setItem((ItemSlab) Item.getItemFromBlock(slabGroup.singleSlab));
+	}
+	*/
 	public static void register()
 	{
 		//GameRegistry.register(null);

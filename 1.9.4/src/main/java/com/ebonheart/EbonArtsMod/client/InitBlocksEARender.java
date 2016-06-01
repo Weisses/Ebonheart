@@ -107,6 +107,13 @@ public final class InitBlocksEARender extends BlocksEA {
 		registerRender(glowstone_block_brick);
 		registerRender(ebonheart_block_brick);
 		
+		
+		
+		registerRender(double_test_slab);
+		registerRender(test_slab);
+		
+		
+		
 		registerRender(double_draconium_slab);
 		registerRender(double_velious_slab);
 		registerRender(double_arcanite_slab);
