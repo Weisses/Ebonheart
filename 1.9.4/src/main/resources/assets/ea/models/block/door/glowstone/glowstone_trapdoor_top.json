@@ -1,6 +1,6 @@
 {
     "parent": "block/trapdoor_top",
     "textures": {
-        "texture": "ea:blocks/gems/glowstone/glowstone_trapdoor"
+        "texture": "ea:blocks/door/glowstone_trapdoor"
     }
 }

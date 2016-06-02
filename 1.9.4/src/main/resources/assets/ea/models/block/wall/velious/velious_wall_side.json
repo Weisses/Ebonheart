@@ -1,6 +1,6 @@
 {
     "parent": "block/wall_side",
     "textures": {
-        "wall": "ea:blocks/gems/velious/velious_block_brick_base"
+        "wall": "ea:blocks/block/velious_brick_base"
     }
 }

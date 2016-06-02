@@ -107,13 +107,6 @@ public final class InitBlocksEARender extends BlocksEA {
 		registerRender(glowstone_block_brick);
 		registerRender(ebonheart_block_brick);
 		
-		
-		
-		//registerRender(double_test_slab);
-		//registerRender(test_slab);
-		
-		
-		
 		registerRender(double_draconium_slab);
 		registerRender(double_velious_slab);
 		registerRender(double_arcanite_slab);
@@ -194,13 +187,6 @@ public final class InitBlocksEARender extends BlocksEA {
 		registerRender(obsidian_trapdoor);
 		registerRender(glowstone_trapdoor);
 		
-		//registerRender(draconium_door);
-		//registerRender(velious_door);
-		//registerRender(arcanite_door);
-		//registerRender(katcheen_door);
-		//registerRender(necrocite_door);
-		//registerRender(soularite_door);
-		
 		registerRender(draconium_ladder);
 		registerRender(velious_ladder);
 		registerRender(arcanite_ladder);
@@ -228,6 +214,18 @@ public final class InitBlocksEARender extends BlocksEA {
 		registerRender(hellion_fruit);
 		registerRender(sacred_fruit);
 		registerRender(dragon_fruit);
+		
+		
+		
+		registerRender(cryptic_draconium_block);
+		registerRender(cryptic_velious_block);
+		registerRender(cryptic_arcanite_block);
+		registerRender(cryptic_katcheen_block);
+		registerRender(cryptic_necrocite_block);
+		registerRender(cryptic_soularite_block);
+		registerRender(cryptic_obsidian_block);
+		registerRender(cryptic_glowstone_block);
+		registerRender(cryptic_ebonheart_block);
 		
 	}
 	

@@ -2,9 +2,9 @@
     "parent": "block/cube_all",
     "ambientocclusion": false,
     "textures": {
-        "particle": "ea:blocks/gems/necrocite/necrocite_block_brick",
-        "0": "ea:blocks/gems/necrocite/necrocite_block_brick",
-        "1": "ea:blocks/gems/necrocite/necrocite_block_brick_base"
+        "particle": "ea:blocks/block/necrocite_brick",
+        "0": "ea:blocks/block/necrocite_brick",
+        "1": "ea:blocks/block/necrocite_brick_base"
     },
     "elements": [
         {

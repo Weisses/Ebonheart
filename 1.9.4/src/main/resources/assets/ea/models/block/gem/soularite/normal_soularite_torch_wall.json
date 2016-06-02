@@ -2,8 +2,8 @@
     "parent": "block/cube_all",
     "ambientocclusion": false,
     "textures": {
-        "particle": "ea:blocks/gems/soularite/soularite_block_side",
-        "0": "ea:blocks/gems/soularite/soularite_block_side",
+        "particle": "ea:blocks/block/soularite_block",
+        "0": "ea:blocks/block/soularite_block",
         "1": "blocks/torch_on"
     },
     "elements": [

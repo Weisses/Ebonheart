@@ -25,7 +25,6 @@ public class ItemsEA {
 	public static Item resilient_disc;
 	public static Item dismal_disc;
 	public static Item ethereal_disc;
-	//public static Item chrono_disc;
 	
 	public static Item burnished_helmet;
 	public static Item burnished_chestplate;
@@ -57,11 +56,6 @@ public class ItemsEA {
 	public static Item infernal_leggings;
 	public static Item infernal_boots;
 	
-	//public static Item ebonheart_helmet;
-	//public static Item ebonheart_chestplate;
-	//public static Item ebonheart_leggings;
-	//public static Item ebonheart_boots;
-	
 	public static Item arcanite_pickaxe;
 	public static Item arcanite_axe;
 	public static Item arcanite_shovel;
@@ -90,6 +84,8 @@ public class ItemsEA {
 	public static ItemFood dragon_fruit;
 	
 	public static Item test_shield;
+	
+	public static Item test_door;
 	
 	
 	//Diablo

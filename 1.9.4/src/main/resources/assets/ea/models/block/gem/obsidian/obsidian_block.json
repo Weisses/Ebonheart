@@ -1,12 +1,12 @@
 {
     "parent": "block/cube",
     "textures": {
-        "particle": "ea:blocks/gems/obsidian/obsidian_block_side",
-        "down": "ea:blocks/gems/obsidian/obsidian_block_side",
-        "up": "ea:blocks/gems/obsidian/obsidian_block_side",
-        "north": "ea:blocks/gems/obsidian/obsidian_block_side",
-        "east": "ea:blocks/gems/obsidian/obsidian_block_side",
-        "south": "ea:blocks/gems/obsidian/obsidian_block_side",
-        "west": "ea:blocks/gems/obsidian/obsidian_block_side"
+        "particle": "ea:blocks/block/obsidian_block",
+        "down": "ea:blocks/block/obsidian_block",
+        "up": "ea:blocks/block/obsidian_block",
+        "north": "ea:blocks/block/obsidian_block",
+        "east": "ea:blocks/block/obsidian_block",
+        "south": "ea:blocks/block/obsidian_block",
+        "west": "ea:blocks/block/obsidian_block"
     }
 }

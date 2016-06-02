@@ -34,11 +34,6 @@ public class BlocksEA {
 	public static Block glowstone_block_brick;
 	public static Block ebonheart_block_brick;
 	
-	
-	public static Block test_slab;
-	public static Block double_test_slab;
-	
-	
 	public static Block double_draconium_slab;
 	public static Block double_velious_slab;
 	public static Block double_arcanite_slab;
@@ -139,13 +134,6 @@ public class BlocksEA {
 	public static Block glowstone_trapdoor;
 	public static Block ebonheart_trapdoor;
 	
-	//public static Block draconium_door;
-	//public static Block velious_door;
-	//public static Block arcanite_door;
-	//public static Block katcheen_door;
-	//public static Block necrocite_door;
-	//public static Block soularite_door;
-	
 	///public static Block cobble_mystic_block;
 	public static Block cobble_mystic_block_normal;
 	public static Block cobble_mystic_block_white;
@@ -216,19 +204,17 @@ public class BlocksEA {
 	
 	
 	
-	//public static Block purified_mystic_block;
+	public static Block cryptic_draconium_block;
+	public static Block cryptic_velious_block;
+	public static Block cryptic_arcanite_block;
+	public static Block cryptic_katcheen_block;
+	public static Block cryptic_necrocite_block;
+	public static Block cryptic_soularite_block;
+	public static Block cryptic_obsidian_block;
+	public static Block cryptic_glowstone_block;
+	public static Block cryptic_ebonheart_block;
 	
-	//public static Block test_liquid;
-	//public static Block flowing_test_liquid;
 	
-	//public static Block mystic_furnace;
-	//public static Block lit_mystic_furnace;
-	
-	//public static Block color_atrium;
-	//public static Block lit_color_atrium;
-
-	//public static Block double_test_slab;
-	//public static Block test_slab;
 	
 	//public static Block tutorialTileEntity;
 	

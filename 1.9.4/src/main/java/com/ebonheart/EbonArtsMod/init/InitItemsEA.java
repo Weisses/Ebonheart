@@ -16,6 +16,7 @@ import net.minecraftforge.fml.common.registry.GameRegistry;
 
 import com.ebonheart.EbonArtsMod.EbonArtsMod;
 import com.ebonheart.EbonArtsMod.api.ItemsEA;
+import com.ebonheart.EbonArtsMod.common.blocks.basic.EAItemDoor;
 import com.ebonheart.EbonArtsMod.common.items.MaterialHelper;
 import com.ebonheart.EbonArtsMod.common.items.armor.ItemBurnishedArmor;
 import com.ebonheart.EbonArtsMod.common.items.armor.ItemCelestialArmor;
@@ -160,6 +161,8 @@ public class InitItemsEA extends ItemsEA {
 		
 		consecration = registerItem(new ItemConsecration(legendaryToolMaterial));
 		necrosis = registerItem(new ItemNecrosis(legendaryToolMaterial));
+		
+		//test_door = registerItem(new EAItemDoor(InitBlocksEA.test_door));
 		
 	}
 	

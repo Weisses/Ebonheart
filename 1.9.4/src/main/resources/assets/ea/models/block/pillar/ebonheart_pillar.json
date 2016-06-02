@@ -1,9 +1,9 @@
 {
     "parent": "block/cube_all",
     "textures": {
-        "particle": "ea:blocks/gems/ebonheart/ebonheart_pillar_side",
-        "0": "ea:blocks/gems/ebonheart/ebonheart_pillar_side",
-        "1": "ea:blocks/gems/ebonheart/ebonheart_pillar_top"
+        "particle": "ea:blocks/pillar/ebonheart_pillar_side",
+        "0": "ea:blocks/pillar/ebonheart_pillar_side",
+        "1": "ea:blocks/pillar/ebonheart_pillar_top"
     },
     "elements": [
         {

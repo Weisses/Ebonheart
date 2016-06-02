@@ -1,6 +1,6 @@
 {
     "parent": "block/wall_gate_open",
     "textures": {
-        "texture": "ea:blocks/gems/ebonheart_block_side"
+        "texture": "ea:blocks/block/ebonheart_block"
     }
 }

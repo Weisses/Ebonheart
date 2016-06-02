@@ -1,12 +1,12 @@
 {
     "parent": "block/cube",
     "textures": {
-        "particle": "ea:blocks/gems/ebonheart/ebonheart_block_side",
-        "down": "ea:blocks/gems/ebonheart/ebonheart_block_side",
-        "up": "ea:blocks/gems/ebonheart/ebonheart_block_side",
-        "north": "ea:blocks/gems/ebonheart/ebonheart_block_side",
-        "east": "ea:blocks/gems/ebonheart/ebonheart_block_side",
-        "south": "ea:blocks/gems/ebonheart/ebonheart_block_side",
-        "west": "ea:blocks/gems/ebonheart/ebonheart_block_side"
+        "particle": "ea:blocks/block/ebonheart_block",
+        "down": "ea:blocks/block/ebonheart_block",
+        "up": "ea:blocks/block/ebonheart_block",
+        "north": "ea:blocks/block/ebonheart_block",
+        "east": "ea:blocks/block/ebonheart_block",
+        "south": "ea:blocks/block/ebonheart_block",
+        "west": "ea:blocks/block/ebonheart_block"
     }
 }

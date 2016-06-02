@@ -1,6 +1,6 @@
 {
     "parent": "block/trapdoor_top",
     "textures": {
-        "texture": "ea:blocks/gems/ebonheart/ebonheart_trapdoor"
+        "texture": "ea:blocks/door/ebonheart_trapdoor"
     }
 }

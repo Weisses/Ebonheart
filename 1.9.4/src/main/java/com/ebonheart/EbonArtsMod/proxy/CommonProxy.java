@@ -31,9 +31,8 @@ public class CommonProxy {
 		
 		InitItemsEA.preInit();
 		InitBlocksEA.preInit();
-		InitBlocksEA.register();
 		InitEntityEA.preInit();
-		InitEntityEA.preInit();
+		
 		
 		
 		//=======================================//

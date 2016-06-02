@@ -1,6 +1,6 @@
 {
     "parent": "block/wall_inventory",
     "textures": {
-        "wall": "ea:blocks/gems/obsidian/obsidian_block_side"
+        "wall": "ea:blocks/block/obsidian_block"
     }
 }

@@ -93,8 +93,6 @@ public final class InitItemsEARender extends ItemsEA {
 		registerRender(obsidian_shards);
 		registerRender(glowstone_shards);
 		
-		
-		
 		registerRender(hellion_fruit);
 		registerRender(sacred_fruit);
 		registerRender(dragon_fruit);

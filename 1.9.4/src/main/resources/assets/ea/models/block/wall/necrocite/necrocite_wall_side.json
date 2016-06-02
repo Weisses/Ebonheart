@@ -1,6 +1,6 @@
 {
     "parent": "block/wall_side",
     "textures": {
-        "wall": "ea:blocks/gems/necrocite/necrocite_block_brick_base"
+        "wall": "ea:blocks/block/necrocite_brick_base"
     }
 }

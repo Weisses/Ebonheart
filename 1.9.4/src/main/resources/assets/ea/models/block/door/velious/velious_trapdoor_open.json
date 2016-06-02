@@ -1,6 +1,6 @@
 {
     "parent": "block/trapdoor_open",
     "textures": {
-        "texture": "ea:blocks/gems/velious/velious_trapdoor"
+        "texture": "ea:blocks/door/velious_trapdoor"
     }
 }

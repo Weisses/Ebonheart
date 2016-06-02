@@ -1,9 +1,9 @@
 {
     "ambientocclusion": false,
     "textures": {
-        "particle": "ea:blocks/gems/arcanite/arcanite_block_side",
-        "0": "ea:blocks/gems/arcanite/arcanite_block_brick_base",
-        "1": "ea:blocks/gems/arcanite/arcanite_block_side"
+        "particle": "ea:blocks/block/arcanite_block",
+        "0": "ea:blocks/block/arcanite_brick_base",
+        "1": "ea:blocks/block/arcanite_block"
     },
     "elements": [
         {
