@@ -1,15 +1,10 @@
 package com.ebonheart.EbonArtsMod.init;
 
-import net.minecraft.block.BlockRedSandstone.EnumType;
 import net.minecraft.init.Blocks;
 import net.minecraft.init.Items;
-import net.minecraft.item.EnumDyeColor;
-import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
-import net.minecraft.item.crafting.CraftingManager;
 import net.minecraftforge.fml.common.registry.GameRegistry;
 
-import com.ebonheart.EbonArtsMod.EbonArtsMod;
 import com.ebonheart.EbonArtsMod.configs.EbonArtsConfiguration;
 
 public class InitRecipesEA {

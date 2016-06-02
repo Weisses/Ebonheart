@@ -3,7 +3,6 @@ package com.ebonheart.EbonArtsMod;
 import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.common.config.Configuration;
 import net.minecraftforge.fml.client.event.ConfigChangedEvent;
-import net.minecraftforge.fml.common.FMLCommonHandler;
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.common.Mod.EventHandler;
 import net.minecraftforge.fml.common.SidedProxy;
@@ -30,6 +29,7 @@ public class EbonArtsMod {
 	public static final EbonArtsTabBlocks tabEbonArtsBlocks = new EbonArtsTabBlocks("tabEbonArtsBlocks");
 	public static final EbonArtsTabItems tabEbonArtsItems = new EbonArtsTabItems("tabEbonArtsItems");
 	public static final EbonArtsTabDyeables tabEbonArtsDyeables = new EbonArtsTabDyeables("tabEbonArtsDyeables");
+	//public static final EbonArtsTabCryptic tabEbonArtsCryptic = new EbonArtsTabCryptic("tabEbonArtsCryptic");
 	
 	@Mod.Instance(Reference.MOD_ID)
 	public static EbonArtsMod instance;

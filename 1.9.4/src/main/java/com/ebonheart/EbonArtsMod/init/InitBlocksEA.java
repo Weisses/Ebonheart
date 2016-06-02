@@ -276,7 +276,7 @@ public class InitBlocksEA extends BlocksEA {
 		dragon_fruit = registerBlock(new DragonFruitCrop());
 		
 		
-		
+		/**
 		cryptic_draconium_block = registerBlock(new BlockEA("gem/draconium/cryptic_draconium_block").setResistance(4.0F));
 		cryptic_velious_block = registerBlock(new BlockEA("gem/velious/cryptic_velious_block").setResistance(15.0F));
 		cryptic_arcanite_block = registerBlock(new BlockEA("gem/arcanite/cryptic_arcanite_block").setResistance(30.0F));
@@ -286,7 +286,7 @@ public class InitBlocksEA extends BlocksEA {
 		cryptic_ebonheart_block = registerBlock(new BlockEA("gem/ebonheart/cryptic_ebonheart_block").setResistance(2000.0F));
 		cryptic_obsidian_block = registerBlock(new BlockEA("gem/obsidian/cryptic_obsidian_block").setResistance(2000.0F));
 		cryptic_glowstone_block = registerBlock(new BlockEA("gem/glowstone/cryptic_glowstone_block").setResistance(45.0F).setLightLevel(1.0f));
-		
+		*/
 		
 	}
 	

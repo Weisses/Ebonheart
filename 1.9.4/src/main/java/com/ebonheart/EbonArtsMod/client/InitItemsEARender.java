@@ -19,6 +19,7 @@ public final class InitItemsEARender extends ItemsEA {
 	
 	public static void registerRenders()
 	{
+		//registerRender(test_book);
 		registerRender(draconium_dust);
 		registerRender(velious);
 		registerRender(arcanite);

@@ -216,7 +216,7 @@ public final class InitBlocksEARender extends BlocksEA {
 		registerRender(dragon_fruit);
 		
 		
-		
+		/**
 		registerRender(cryptic_draconium_block);
 		registerRender(cryptic_velious_block);
 		registerRender(cryptic_arcanite_block);
@@ -226,7 +226,7 @@ public final class InitBlocksEARender extends BlocksEA {
 		registerRender(cryptic_obsidian_block);
 		registerRender(cryptic_glowstone_block);
 		registerRender(cryptic_ebonheart_block);
-		
+		*/
 	}
 	
 	public static void registerSpecialRenders()

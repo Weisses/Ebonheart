@@ -1,13 +1,11 @@
 package com.ebonheart.EbonArtsMod.init;
 
-import com.ebonheart.EbonArtsMod.api.AchievementsEA;
-import com.ebonheart.EbonArtsMod.api.Reference;
-
-import net.minecraft.init.Blocks;
-import net.minecraft.init.Items;
 import net.minecraft.item.ItemStack;
 import net.minecraft.stats.Achievement;
 import net.minecraftforge.common.AchievementPage;
+
+import com.ebonheart.EbonArtsMod.api.AchievementsEA;
+import com.ebonheart.EbonArtsMod.api.Reference;
 
 public class InitAchievementsEA extends AchievementsEA {
 	

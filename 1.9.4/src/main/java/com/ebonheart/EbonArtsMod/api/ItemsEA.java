@@ -7,6 +7,7 @@ import net.minecraft.item.ItemFood;
 
 public class ItemsEA {
 	
+	//public static Item test_book;
 	public static Item draconium_dust;
 	public static Item velious;
 	public static Item arcanite;

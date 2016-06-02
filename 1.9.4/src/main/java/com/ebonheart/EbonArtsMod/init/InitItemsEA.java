@@ -3,33 +3,23 @@ package com.ebonheart.EbonArtsMod.init;
 import java.util.HashSet;
 import java.util.Set;
 
-import net.minecraft.init.Blocks;
-import net.minecraft.init.SoundEvents;
 import net.minecraft.inventory.EntityEquipmentSlot;
 import net.minecraft.item.Item;
 import net.minecraft.item.Item.ToolMaterial;
-import net.minecraft.item.ItemArmor;
-import net.minecraft.item.ItemFood;
-import net.minecraft.item.ItemShield;
 import net.minecraftforge.common.util.EnumHelper;
 import net.minecraftforge.fml.common.registry.GameRegistry;
 
-import com.ebonheart.EbonArtsMod.EbonArtsMod;
 import com.ebonheart.EbonArtsMod.api.ItemsEA;
-import com.ebonheart.EbonArtsMod.common.blocks.basic.EAItemDoor;
-import com.ebonheart.EbonArtsMod.common.items.MaterialHelper;
 import com.ebonheart.EbonArtsMod.common.items.armor.ItemBurnishedArmor;
 import com.ebonheart.EbonArtsMod.common.items.armor.ItemCelestialArmor;
-import com.ebonheart.EbonArtsMod.common.items.armor.ItemInfernalArmor;
 import com.ebonheart.EbonArtsMod.common.items.armor.ItemScalemailArmor;
 import com.ebonheart.EbonArtsMod.common.items.armor.ItemVengeanceArmor;
-import com.ebonheart.EbonArtsMod.common.items.armor.ItemVoidArmor;
 import com.ebonheart.EbonArtsMod.common.items.resources.ItemArcanite;
 import com.ebonheart.EbonArtsMod.common.items.resources.ItemDraconiumDust;
 import com.ebonheart.EbonArtsMod.common.items.resources.ItemDragonFruit;
 import com.ebonheart.EbonArtsMod.common.items.resources.ItemEbonheart;
-import com.ebonheart.EbonArtsMod.common.items.resources.ItemEnchantedEbonheart;
 import com.ebonheart.EbonArtsMod.common.items.resources.ItemEmpoweredBlade;
+import com.ebonheart.EbonArtsMod.common.items.resources.ItemEnchantedEbonheart;
 import com.ebonheart.EbonArtsMod.common.items.resources.ItemGlowstoneShard;
 import com.ebonheart.EbonArtsMod.common.items.resources.ItemHellionFruit;
 import com.ebonheart.EbonArtsMod.common.items.resources.ItemKatcheen;
@@ -58,7 +48,6 @@ import com.ebonheart.EbonArtsMod.common.items.tools.ItemKatcheenSword;
 import com.ebonheart.EbonArtsMod.common.items.tools.ItemMassacre;
 import com.ebonheart.EbonArtsMod.common.items.tools.ItemNecrosis;
 import com.ebonheart.EbonArtsMod.common.items.tools.ItemSouleater;
-import com.ebonheart.EbonArtsMod.common.items.tools.ItemTestShield;
 import com.ebonheart.EbonArtsMod.common.utils.SoundEventsEA;
 
 //@SuppressWarnings("WeakerAccess")
@@ -74,7 +63,7 @@ public class InitItemsEA extends ItemsEA {
 	
 	public static void preInit()
 	{
-		
+		//test_book = registerItem(new ItemGuideEA());
 		draconium_dust = registerItem(new ItemDraconiumDust());
 		velious = registerItem(new ItemVelious());
 		arcanite = registerItem(new ItemArcanite());

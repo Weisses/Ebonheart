@@ -1,0 +1,387 @@
+< de_DE.lang - German localization file for the Ebon Arts Mod >
+
+//-----Creative Tabs-----
+itemGroup.tabEbonArtsBlocks=Ebon Arts Blocks
+itemGroup.tabEbonArtsItems=Ebon Arts Artikel
+itemGroup.tabEbonArtsDyeables=Ebon Arts Färbbaren
+
+//-----Items-----
+item.ea:gem/draconium_dust.name=Draconium Staub
+item.ea:gem/velious.name=Velious
+item.ea:gem/arcanite.name=Arcanite
+item.ea:gem/katcheen.name=Katcheen
+item.ea:gem/necrocite.name=Necrocite
+item.ea:gem/soularite.name=Soularite
+item.ea:gem/ebonheart.name=Ebonheart
+item.ea:gem/enchanted_ebonheart.name=Enchanted Ebonheart
+item.ea:gem/obsidian_shard.name=Obsidian Scherbe
+item.ea:gem/glowstone_shard.name=Glowstone Scherbe
+item.ea:tool/empowered_blade.name=Empowered Klinge
+item.ea:plant/hellion_fruit.name=Hellion Frucht
+item.ea:plant/sacred_fruit.name=Heilige Frucht
+item.ea:plant/dragon_fruit.name=Drachenfrucht
+
+item.ea:disc/glowing_disc.name=Glowing Disc
+item.ea:disc/shimmering_disc.name=Shimmering Disc
+item.ea:disc/laminate_disc.name=Laminate Disc
+item.ea:disc/resilient_disc.name=Resilient Disc
+item.ea:disc/dismal_disc.name=Dismal Disc
+item.ea:disc/ethereal_disc.name=Ethereal Disc
+item.ea:disc/mirroring_disc.name=Mirroring Disc
+
+//-----Ores-----
+tile.ea:ore/draconium_ore.name=Draconium-Erz
+tile.ea:ore/velious_ore.name=Velious-Erz
+tile.ea:ore/arcanite_ore.name=Arcanite-Erz
+tile.ea:ore/katcheen_ore.name=Katcheen-Erz
+tile.ea:ore/ebon_ore.name=Ebon-Erz
+tile.ea:ore/necrocite_ore.name=Necrocite-Erz
+tile.ea:ore/soularite_ore.name=Soularite-Erz
+tile.ea:ore/ebonheart_ore.name=Ebonheart-Erz
+tile.ea:ore/ebon_ore_nether.name=Ebon-Erz
+
+//-----Blocks-----
+tile.ea:plant/hellion_fruit_crop.name=Hellion Fruit Plant
+tile.ea:plant/sacred_fruit_crop.name=Sacred Fruit Plant
+tile.ea:plant/dragon_fruit_crop.name=Dragon Fruit Plant
+tile.ea:gem/mystic/stone/mystic_block_normal.name=Mystic Stone
+tile.ea:gem/mystic/stone/mystic_block_white.name=White Mystic Stone
+tile.ea:gem/mystic/stone/mystic_block_orange.name=Orange Mystic Stone
+tile.ea:gem/mystic/stone/mystic_block_magenta.name=Magenta Mystic Stone
+tile.ea:gem/mystic/stone/mystic_block_lightblue.name=Light Blue Mystic Stone
+tile.ea:gem/mystic/stone/mystic_block_yellow.name=Yellow Mystic Stone
+tile.ea:gem/mystic/stone/mystic_block_lime.name=Lime Mystic Stone
+tile.ea:gem/mystic/stone/mystic_block_pink.name=Pink Mystic Stone
+tile.ea:gem/mystic/stone/mystic_block_gray.name=Gray Mystic Stone
+tile.ea:gem/mystic/stone/mystic_block_lightgray.name=Light Gray Mystic Stone
+tile.ea:gem/mystic/stone/mystic_block_cyan.name=Cyan Mystic Stone
+tile.ea:gem/mystic/stone/mystic_block_purple.name=Purple Mystic Stone
+tile.ea:gem/mystic/stone/mystic_block_blue.name=Blue Mystic Stone
+tile.ea:gem/mystic/stone/mystic_block_brown.name=Brown Mystic Stone
+tile.ea:gem/mystic/stone/mystic_block_green.name=Green Mystic Stone
+tile.ea:gem/mystic/stone/mystic_block_red.name=Red Mystic Stone
+tile.ea:gem/mystic/stone/mystic_block_black.name=Black Mystic Stone
+tile.ea:gem/mystic/stone/mystic_block_glass.name=Clear Mystic Stone
+
+tile.ea:gem/mystic/cobblestone/cobble_mystic_block_normal.name=Mystic Cobblestone
+tile.ea:gem/mystic/cobblestone/cobble_mystic_block_white.name=White Mystic Cobblestone
+tile.ea:gem/mystic/cobblestone/cobble_mystic_block_orange.name=Orange Mystic Cobblestone
+tile.ea:gem/mystic/cobblestone/cobble_mystic_block_magenta.name=Magenta Mystic Cobblestone
+tile.ea:gem/mystic/cobblestone/cobble_mystic_block_lightblue.name=Light Blue Mystic Cobblestone
+tile.ea:gem/mystic/cobblestone/cobble_mystic_block_yellow.name=Yellow Mystic Cobblestone
+tile.ea:gem/mystic/cobblestone/cobble_mystic_block_lime.name=Lime Mystic Cobblestone
+tile.ea:gem/mystic/cobblestone/cobble_mystic_block_pink.name=Pink Mystic Cobblestone
+tile.ea:gem/mystic/cobblestone/cobble_mystic_block_gray.name=Gray Mystic Cobblestone
+tile.ea:gem/mystic/cobblestone/cobble_mystic_block_lightgray.name=Light Gray Mystic Cobblestone
+tile.ea:gem/mystic/cobblestone/cobble_mystic_block_cyan.name=Cyan Mystic Cobblestone
+tile.ea:gem/mystic/cobblestone/cobble_mystic_block_purple.name=Purple Mystic Cobblestone
+tile.ea:gem/mystic/cobblestone/cobble_mystic_block_blue.name=Blue Mystic Cobblestone
+tile.ea:gem/mystic/cobblestone/cobble_mystic_block_brown.name=Brown Mystic Cobblestone
+tile.ea:gem/mystic/cobblestone/cobble_mystic_block_green.name=Green Mystic Cobblestone
+tile.ea:gem/mystic/cobblestone/cobble_mystic_block_red.name=Red Mystic Cobblestone
+tile.ea:gem/mystic/cobblestone/cobble_mystic_block_black.name=Black Mystic Cobblestone
+tile.ea:gem/mystic/cobblestone/cobble_mystic_block_glass.name=Clear Mystic Cobblestone
+
+tile.ea:gem/mystic/wood/wood_mystic_block_normal.name=Mystic Wood Planks
+tile.ea:gem/mystic/wood/wood_mystic_block_white.name=White Mystic Wood Planks
+tile.ea:gem/mystic/wood/wood_mystic_block_orange.name=Orange Mystic Wood Planks
+tile.ea:gem/mystic/wood/wood_mystic_block_magenta.name=Magenta Mystic Wood Planks
+tile.ea:gem/mystic/wood/wood_mystic_block_lightblue.name=Light Blue Mystic Wood Planks
+tile.ea:gem/mystic/wood/wood_mystic_block_yellow.name=Yellow Mystic Wood Planks
+tile.ea:gem/mystic/wood/wood_mystic_block_lime.name=Lime Mystic Wood Planks
+tile.ea:gem/mystic/wood/wood_mystic_block_pink.name=Pink Mystic Wood Planks
+tile.ea:gem/mystic/wood/wood_mystic_block_gray.name=Gray Mystic Wood Planks
+tile.ea:gem/mystic/wood/wood_mystic_block_lightgray.name=Light Gray Mystic Wood Planks
+tile.ea:gem/mystic/wood/wood_mystic_block_cyan.name=Cyan Mystic Wood Planks
+tile.ea:gem/mystic/wood/wood_mystic_block_purple.name=Purple Mystic Wood Planks
+tile.ea:gem/mystic/wood/wood_mystic_block_blue.name=Blue Mystic Wood Planks
+tile.ea:gem/mystic/wood/wood_mystic_block_brown.name=Brown Mystic Wood Planks
+tile.ea:gem/mystic/wood/wood_mystic_block_green.name=Green Mystic Wood Planks
+tile.ea:gem/mystic/wood/wood_mystic_block_red.name=Red Mystic Wood Planks
+tile.ea:gem/mystic/wood/wood_mystic_block_black.name=Black Mystic Wood Planks
+tile.ea:gem/mystic/wood/wood_mystic_block_glass.name=Clear Mystic Wood Planks
+
+tile.ea:gem/draconium/draconium_block.name=Block of Draconium
+tile.ea:gem/velious/velious_block.name=Block of Velious
+tile.ea:gem/arcanite/arcanite_block.name=Block of Arcanite
+tile.ea:gem/katcheen/katcheen_block.name=Block of Katcheen
+tile.ea:gem/necrocite/necrocite_block.name=Block of Necrocite
+tile.ea:gem/soularite/soularite_block.name=Block of Soularite
+tile.ea:gem/obsidian/obsidian_block.name=Block of Purified Obsidian
+tile.ea:gem/glowstone/glowstone_block.name=Block of Purified Glowstone
+tile.ea:gem/ebonheart/ebonheart_block.name=Block of Ebonheart
+
+tile.ea:gem/draconium/draconium_block_brick.name=Draconium Brick
+tile.ea:gem/velious/velious_block_brick.name=Velious Brick
+tile.ea:gem/arcanite/arcanite_block_brick.name=Arcanite Brick
+tile.ea:gem/katcheen/katcheen_block_brick.name=Katcheen Brick
+tile.ea:gem/necrocite/necrocite_block_brick.name=Necrocite Brick
+tile.ea:gem/soularite/soularite_block_brick.name=Soularite Brick
+tile.ea:gem/obsidian/obsidian_block_brick.name=Purified Obsidian Brick
+tile.ea:gem/glowstone/glowstone_block_brick.name=Purified Glowstone Brick
+tile.ea:gem/ebonheart/ebonheart_block_brick.name=Ebonheart Brick
+
+tile.ea:fence/draconium_fence.name=Draconium Fence
+tile.ea:fence/velious_fence.name=Velious Fence
+tile.ea:fence/arcanite_fence.name=Arcanite Fence
+tile.ea:fence/katcheen_fence.name=Katcheen Fence
+tile.ea:fence/necrocite_fence.name=Necrocite Fence
+tile.ea:fence/soularite_fence.name=Soularite Fence
+tile.ea:fence/obsidian_fence.name=Purified Obsidian Fence
+tile.ea:fence/glowstone_fence.name=Purified Glowstone Fence
+tile.ea:fence/ebonheart_fence.name=Ebonheart Fence
+
+tile.ea:fence/draconium_fence_gate.name=Draconium Gate
+tile.ea:fence/velious_fence_gate.name=Velious Gate
+tile.ea:fence/arcanite_fence_gate.name=Arcanite Gate
+tile.ea:fence/katcheen_fence_gate.name=Katcheen Gate
+tile.ea:fence/necrocite_fence_gate.name=Necrocite Gate
+tile.ea:fence/soularite_fence_gate.name=Soularite Gate
+tile.ea:fence/obsidian_fence_gate.name=Purified Obsidian Gate
+tile.ea:fence/glowstone_fence_gate.name=Purified Glowstone Gate
+tile.ea:fence/ebonheart_fence_gate.name=Ebonheart Gate
+
+tile.ea:wall/draconium_wall.name=Draconium Wall
+tile.ea:wall/velious_wall.name=Velious Wall
+tile.ea:wall/arcanite_wall.name=Arcanite Wall
+tile.ea:wall/katcheen_wall.name=Katcheen Wall
+tile.ea:wall/necrocite_wall.name=Necrocite Wall
+tile.ea:wall/soularite_wall.name=Soularite Wall
+tile.ea:wall/obsidian_wall.name=Purified Obsidian Wall
+tile.ea:wall/glowstone_wall.name=Purified Glowstone Wall
+tile.ea:wall/ebonheart_wall.name=Ebonheart Wall
+
+tile.ea:stairs/draconium_stairs.name=Draconium Stairs
+tile.ea:stairs/velious_stairs.name=Velious Stairs
+tile.ea:stairs/arcanite_stairs.name=Arcanite Stairs
+tile.ea:stairs/katcheen_stairs.name=Katcheen Stairs
+tile.ea:stairs/necrocite_stairs.name=Necrocite Stairs
+tile.ea:stairs/soularite_stairs.name=Soularite Stairs
+tile.ea:stairs/obsidian_stairs.name=Purified Obsidian Stairs
+tile.ea:stairs/glowstone_stairs.name=Purified Glowstone Stairs
+tile.ea:stairs/ebonheart_stairs.name=Ebonheart Stairs
+
+tile.slab/draconium/draconium_slab.name=Draconium Slab
+tile.slab/velious/velious_slab.name=Velious Slab
+tile.slab/arcanite/arcanite_slab.name=Arcanite Slab
+tile.slab/katcheen/katcheen_slab.name=Katcheen Slab
+tile.slab/necrocite/necrocite_slab.name=Necrocite Slab
+tile.slab/soularite/soularite_slab.name=Soularite Slab
+tile.slab/obsidian/obsidian_slab.name=Purified Obsidian Slab
+tile.slab/glowstone/glowstone_slab.name=Purified Glowstone Slab
+tile.slab/ebonheart/ebonheart_slab.name=Ebonheart Slab
+
+tile.ea:gem/draconium/draconium_torch.name=Draconium Torch
+tile.ea:gem/velious/velious_torch.name=Velious Torch
+tile.ea:gem/arcanite/arcanite_torch.name=Arcanite Torch
+tile.ea:gem/katcheen/katcheen_torch.name=Katcheen Torch
+tile.ea:gem/necrocite/necrocite_torch.name=Necrocite Torch
+tile.ea:gem/soularite/soularite_torch.name=Soularite Torch
+tile.ea:gem/obsidian/obsidian_torch.name=Purified Obsidian Torch
+tile.ea:gem/glowstone/glowstone_torch.name=Purified Glowstone Torch
+tile.ea:gem/ebonheart/ebonheart_torch.name=Ebonheart Torch
+
+tile.ea:ladder/draconium_ladder.name=Draconium Ladder
+tile.ea:ladder/velious_ladder.name=Velious Ladder
+tile.ea:ladder/arcanite_ladder.name=Arcanite Ladder
+tile.ea:ladder/katcheen_ladder.name=Katcheen Ladder
+tile.ea:ladder/necrocite_ladder.name=Necrocite Ladder
+tile.ea:ladder/soularite_ladder.name=Soularite Ladder
+tile.ea:ladder/obsidian_ladder.name=Purified Obsidian Ladder
+tile.ea:ladder/glowstone_ladder.name=Purified Glowstone Ladder
+tile.ea:ladder/ebonheart_ladder.name=Ebonheart Ladder
+
+tile.ea:pillar/draconium_pillar.name=Draconium Pillar
+tile.ea:pillar/velious_pillar.name=Velious Pillar
+tile.ea:pillar/arcanite_pillar.name=Arcanite Pillar
+tile.ea:pillar/katcheen_pillar.name=Katcheen Pillar
+tile.ea:pillar/necrocite_pillar.name=Necrocite Pillar
+tile.ea:pillar/soularite_pillar.name=Soularite Pillar
+tile.ea:pillar/obsidian_pillar.name=Purified Obsidian Pillar
+tile.ea:pillar/glowstone_pillar.name=Purified Glowstone Pillar
+tile.ea:pillar/ebonheart_pillar.name=Ebonheart Pillar
+
+tile.ea:door/draconium_trapdoor.name=Draconium Trapdoor
+tile.ea:door/velious_trapdoor.name=Velious Trapdoor
+tile.ea:door/arcanite_trapdoor.name=Arcanite Trapdoor
+tile.ea:door/katcheen_trapdoor.name=Katcheen Trapdoor
+tile.ea:door/necrocite_trapdoor.name=Necrocite Trapdoor
+tile.ea:door/soularite_trapdoor.name=Soularite Trapdoor
+tile.ea:door/obsidian_trapdoor.name=Purified Obsidian Trapdoor
+tile.ea:door/glowstone_trapdoor.name=Purified Glowstone Trapdoor
+tile.ea:door/ebonheart_trapdoor.name=Ebonheart Trapdoor
+
+tile.ea:paper_block.name=Block of Paper
+tile.ea:leather_block.name=Block of Leather
+tile.ea:reed_block.name=Block of Sugar Cane
+
+//-----Tools-----
+item.ea:tool/arcanite_pickaxe.name=Arcanite Pickaxe
+item.ea:tool/arcanite_axe.name=Arcanite Axe
+item.ea:tool/arcanite_shovel.name=Arcanite Shovel
+item.ea:tool/arcanite_hoe.name=Arcanite Hoe
+item.ea:tool/arcanite_sword.name=Arcanite Sword
+
+item.ea:tool/katcheen_pickaxe.name=Katcheen Pickaxe
+item.ea:tool/katcheen_axe.name=Katcheen Axe
+item.ea:tool/katcheen_shovel.name=Katcheen Shovel
+item.ea:tool/katcheen_hoe.name=Katcheen Hoe
+item.ea:tool/katcheen_sword.name=Katcheen Sword
+
+item.ea:tool/necrosis.name=Necrosis
+item.ea:tool/consecration.name=Consecration
+
+item.ea:tool/deception.name=Deception
+item.ea:tool/frostbite.name=Frostbite
+item.ea:tool/massacre.name=Massacre
+item.ea:tool/blazefury.name=Blazefury
+item.ea:tool/despair.name=Despair
+item.ea:tool/souleater.name=Souleater
+
+//-----Armor-----
+item.ea:armor/burnished_helmet.name=Burnished Helmet
+item.ea:armor/burnished_chestplate.name=Burnished Chestplate
+item.ea:armor/burnished_leggings.name=Burnished Leggings
+item.ea:armor/burnished_boots.name=Burnished Boots
+
+item.ea:armor/scalemail_helmet.name=Scalemail Helmet
+item.ea:armor/scalemail_chestplate.name=Scalemail Chestplate
+item.ea:armor/scalemail_leggings.name=Scalemail Leggings
+item.ea:armor/scalemail_boots.name=Scalemail Boots
+
+item.ea:armor/vengeance_helmet.name=Vengeance Helmet
+item.ea:armor/vengeance_chestplate.name=Vengeance Chestplate
+item.ea:armor/vengeance_leggings.name=Vengeance Leggings
+item.ea:armor/vengeance_boots.name=Vengeance Boots
+
+item.ea:armor/celestial_helmet.name=Celestial Helmet
+item.ea:armor/celestial_chestplate.name=Celestial Chestplate
+item.ea:armor/celestial_leggings.name=Celestial Leggings
+item.ea:armor/celestial_boots.name=Celestial Boots
+
+//-----Achievements-----
+achievement.ea:alchemical_compendium=And so it begins!
+achievement.ea:alchemical_compendium.desc=Obtain an Alchemical Compendium.
+
+achievement.ea:mine_draconium_ore=A touch of Dragon!
+achievement.ea:mine_draconium_ore.desc=Mine some Draconium Ore.
+achievement.ea:glowing_disc=Chant of Dragons!
+achievement.ea:glowing_disc.desc=Craft a Glowing Disc.
+
+achievement.ea:mine_velious_ore=Discovery of Velious!
+achievement.ea:mine_velious_ore.desc=Mine some Velious Ore.
+achievement.ea:shimmering_disc=Melody of Ice!
+achievement.ea:shimmering_disc.desc=Craft a Shimmering Disc.
+
+achievement.ea:mine_arcanite_ore=Might of Arcanite!
+achievement.ea:mine_arcanite_ore.desc=Mine some Arcanite Ore.
+achievement.ea:laminate_disc=Song of Gaia!
+achievement.ea:laminate_disc.desc=Craft a Laminate Disc.
+
+achievement.ea:mine_katcheen_ore=What Diamonds should be!
+achievement.ea:mine_katcheen_ore.desc=Mine some Katcheen Ore.
+achievement.ea:resilient_disc=Chorus of Strength!
+achievement.ea:resilient_disc.desc=Craft a Resilient Disc.
+
+achievement.ea:mine_necrocite_ore=Blight of Necrocite!
+achievement.ea:mine_necrocite_ore.desc=Mine some Necrocite Ore.
+achievement.ea:dismal_disc=Symphony of the Night!
+achievement.ea:dismal_disc.desc=Craft a Dismal Disc.
+
+achievement.ea:mine_soularite_ore=Reap the Soularite!
+achievement.ea:mine_soularite_ore.desc=Mine some Soularite Ore.
+achievement.ea:ethereal_disc=Harmony of Light!
+achievement.ea:ethereal_disc.desc=Craft an Ethereal Disc.
+
+achievement.ea:ebonheart=Power level's over 9000!
+achievement.ea:ebonheart.desc=Obtain an Ebonheart Gemstone.
+
+achievement.ea:empowered_blade=One step closer!
+achievement.ea:empowered_blade.desc=Craft an Empowered Blade.
+
+achievement.ea:deception=Illusion of truth!
+achievement.ea:deception.desc=Craft the legendary weapon, Deception.
+
+achievement.ea:frostbite=Icebound doom!
+achievement.ea:frostbite.desc=Craft the legendary weapon, Frostbite.
+
+achievement.ea:massacre=Leave no survivors!
+achievement.ea:massacre.desc=Craft the legendary weapon, Massacre.
+
+achievement.ea:blazefury=Let the world burn!
+achievement.ea:blazefury.desc=Craft the legendary weapon, Blazefury.
+
+achievement.ea:despair=Abandon all hope!
+achievement.ea:despair.desc=Craft the legendary weapon, Despair.
+
+achievement.ea:souleater=From death to life!
+achievement.ea:souleater.desc=Craft the legendary weapon, Souleater.
+
+achievement.ea:enchanted_ebonheart=Powering up!
+achievement.ea:enchanted_ebonheart.desc=Craft an Enchanted Ebonheart.
+
+achievement.ea:nether_bound=Nether bound!
+achievement.ea:nether_bound.desc=Craft an Obsidian Shard.
+
+achievement.ea:nether_doomed=Nether doomed!
+achievement.ea:nether_doomed.desc=Craft a Glowstone Shard.
+
+achievement.ea:burnished_armor=Stealthy velocity!
+achievement.ea:burnished_armor.desc=Craft any piece of the Burnished Armor set.
+
+achievement.ea:scalemail_armor=Athletic prowess!
+achievement.ea:scalemail_armor.desc=Craft any piece of the Scalemail Armor set.
+
+achievement.ea:vengeance_armor=Shadowy catastrophe!
+achievement.ea:vengeance_armor.desc=Craft any piece of the Vengeance Armor set.
+
+achievement.ea:celestial_armor=Hallowed light!
+achievement.ea:celestial_armor.desc=Craft any piece of the Celestial Armor set.
+
+achievement.ea:necrosis=Corruption of Life!
+achievement.ea:necrosis.desc=Craft the legendary tool, Necrosis.
+
+achievement.ea:consecration=Divination of Tera!
+achievement.ea:consecration.desc=Craft the legendary tool, Consecration.
+
+
+
+//-----Music Discs-----
+item.record.ea:disc/glowing_disc.desc=Island
+item.record.ea:disc/shimmering_disc.desc=Dire
+item.record.ea:disc/laminate_disc.desc=Marble
+item.record.ea:disc/resilient_disc.desc=Strength
+item.record.ea:disc/dismal_disc.desc=Castle
+item.record.ea:disc/ethereal_disc.desc=Timescar
+item.record.ea:disc/mirroring_disc.desc=Lost Woods
+
+
+
+//-----Archived-----
+item.mystic_dust.name=Mystic Dust
+item.purified_mystic_dust.name=Purified Mystic Dust
+item.tier_1_catalyst.name=Catalyst (Tier 1)
+item.tier_2_catalyst.name=Catalyst (Tier 2)
+item.tier_3_catalyst.name=Catalyst (Tier 3)
+item.tier_4_catalyst.name=Catalyst (Tier 4)
+item.gem/arcanite_shard.name=Arcanite Shard
+item.ebon_sigil.name=Ebon Sigil
+item.gem/innate_arcanite.name=Innate Arcanite
+tile.dragonwoodplant.name=Dragonwood Sapling
+tile.purified_mystic_block.name=Purified Mystic Block
+tile.ebon_alter.name=Ebon Alter
+death.attack.electric=%1$s was roasted by electric current.
+death.attack.electric.player=%1$s was roasted by electric current while fighting %2$s.
+tile.fence/innate_arcanite_fence_normal.name=Innate Arcanite Fence
+item.banana.name=Banana
+item.ea:armor/arcanite_helmet.name=Arcanite Helmet
+item.ea:armor/arcanite_chestplate.name=Arcanite Chestplate
+item.ea:armor/arcanite_leggings.name=Arcanite Leggings
+item.ea:armor/arcanite_boots.name=Arcanite Boots
+item.ea:armor/katcheen_helmet.name=Katcheen Helmet
+item.ea:armor/katcheen_chestplate.name=Katcheen Chestplate
+item.ea:armor/katcheen_leggings.name=Katcheen Leggings
+item.ea:armor/katcheen_boots.name=Katcheen Boots
+
+item.ebon_tome.name=Ebon Tome-WIP
+item.disc/chrono_disc.name=Chrono Disc - WIP

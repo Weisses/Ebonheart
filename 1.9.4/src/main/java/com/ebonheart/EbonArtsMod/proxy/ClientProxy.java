@@ -27,8 +27,6 @@ public class ClientProxy extends CommonProxy {
 	{
 		super.preInit(event);
 		
-		
-		
 		//---------------------------
 		//InitTileEntitiesEA.registerRenders();
 	}
@@ -41,7 +39,6 @@ public class ClientProxy extends CommonProxy {
 		InitItemsEARender.registerRenders();
 		InitBlocksEARender.registerRenders();
 		InitEntityEARender.registerRenders();
-		
 		
 		//---------------------------
 		//InitEntityEARender.registerParticle(null, null);
