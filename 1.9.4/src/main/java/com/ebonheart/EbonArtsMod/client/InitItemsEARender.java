@@ -28,6 +28,16 @@ public final class InitItemsEARender extends ItemsEA {
 		registerRender(soularite);
 		registerRender(ebonheart);
 		
+		registerRender(cryptic_draconium_dust);
+		registerRender(cryptic_velious);
+		registerRender(cryptic_arcanite);
+		registerRender(cryptic_katcheen);
+		registerRender(cryptic_necrocite);
+		registerRender(cryptic_soularite);
+		registerRender(cryptic_ebonheart);
+		registerRender(cryptic_obsidian_shards);
+		registerRender(cryptic_glowstone_shards);
+		
 		registerRender(enchanted_ebonheart);
 		registerRender(empowered_blade);
 		

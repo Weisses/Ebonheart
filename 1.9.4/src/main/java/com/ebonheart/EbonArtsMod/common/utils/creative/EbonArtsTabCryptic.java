@@ -19,6 +19,6 @@ public class EbonArtsTabCryptic extends CreativeTabs {
 	@Override
 	public Item getTabIconItem() 
 	{
-		return Item.getItemFromBlock(BlocksEA.mystic_block_glass);
+		return Item.getItemFromBlock(BlocksEA.cryptic_necrocite_block);
 	}
 }

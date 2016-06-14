@@ -14,6 +14,7 @@ import net.minecraftforge.fml.common.eventhandler.SubscribeEvent;
 import com.ebonheart.EbonArtsMod.api.Reference;
 import com.ebonheart.EbonArtsMod.common.utils.LogHelper;
 import com.ebonheart.EbonArtsMod.common.utils.creative.EbonArtsTabBlocks;
+import com.ebonheart.EbonArtsMod.common.utils.creative.EbonArtsTabCryptic;
 import com.ebonheart.EbonArtsMod.common.utils.creative.EbonArtsTabDyeables;
 import com.ebonheart.EbonArtsMod.common.utils.creative.EbonArtsTabItems;
 import com.ebonheart.EbonArtsMod.configs.EbonArtsConfiguration;
@@ -29,7 +30,7 @@ public class EbonArtsMod {
 	public static final EbonArtsTabBlocks tabEbonArtsBlocks = new EbonArtsTabBlocks("tabEbonArtsBlocks");
 	public static final EbonArtsTabItems tabEbonArtsItems = new EbonArtsTabItems("tabEbonArtsItems");
 	public static final EbonArtsTabDyeables tabEbonArtsDyeables = new EbonArtsTabDyeables("tabEbonArtsDyeables");
-	//public static final EbonArtsTabCryptic tabEbonArtsCryptic = new EbonArtsTabCryptic("tabEbonArtsCryptic");
+	public static final EbonArtsTabCryptic tabEbonArtsCryptic = new EbonArtsTabCryptic("tabEbonArtsCryptic");
 	
 	@Mod.Instance(Reference.MOD_ID)
 	public static EbonArtsMod instance;

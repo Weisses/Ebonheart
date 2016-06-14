@@ -15,6 +15,7 @@ import com.ebonheart.EbonArtsMod.common.items.armor.ItemCelestialArmor;
 import com.ebonheart.EbonArtsMod.common.items.armor.ItemScalemailArmor;
 import com.ebonheart.EbonArtsMod.common.items.armor.ItemVengeanceArmor;
 import com.ebonheart.EbonArtsMod.common.items.resources.ItemArcanite;
+import com.ebonheart.EbonArtsMod.common.items.resources.ItemCryptic;
 import com.ebonheart.EbonArtsMod.common.items.resources.ItemDraconiumDust;
 import com.ebonheart.EbonArtsMod.common.items.resources.ItemDragonFruit;
 import com.ebonheart.EbonArtsMod.common.items.resources.ItemEbonheart;
@@ -73,6 +74,16 @@ public class InitItemsEA extends ItemsEA {
 		ebonheart = registerItem(new ItemEbonheart());
 		obsidian_shards = registerItem(new ItemObsidianShard());
 		glowstone_shards = registerItem(new ItemGlowstoneShard());
+		
+		cryptic_draconium_dust = registerItem(new ItemCryptic("gem/cryptic_draconium_dust"));
+		cryptic_velious = registerItem(new ItemCryptic("gem/cryptic_velious"));
+		cryptic_arcanite = registerItem(new ItemCryptic("gem/cryptic_arcanite"));
+		cryptic_katcheen = registerItem(new ItemCryptic("gem/cryptic_katcheen"));
+		cryptic_necrocite = registerItem(new ItemCryptic("gem/cryptic_necrocite"));
+		cryptic_soularite = registerItem(new ItemCryptic("gem/cryptic_soularite"));
+		cryptic_ebonheart = registerItem(new ItemCryptic("gem/cryptic_ebonheart"));
+		cryptic_obsidian_shards = registerItem(new ItemCryptic("gem/cryptic_obsidian_shard"));
+		cryptic_glowstone_shards = registerItem(new ItemCryptic("gem/cryptic_glowstone_shard"));
 		
 		glowing_disc = registerItem(new ItemMusicDiscEA("disc/glowing_disc", SoundEventsEA.island));
 		shimmering_disc = registerItem(new ItemMusicDiscEA("disc/shimmering_disc", SoundEventsEA.dire));

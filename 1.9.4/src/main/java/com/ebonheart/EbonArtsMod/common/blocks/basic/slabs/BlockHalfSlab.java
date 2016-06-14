@@ -23,7 +23,7 @@ public class BlockHalfSlab extends EABlockSlab {
         //setRegistryName(unlocalizedName);
         //BlockHelper.setBlockName(this, unlocalizedName);
         this.setUnlocalizedName(unlocalizedName);
-        this.setCreativeTab(EbonArtsMod.tabEbonArtsBlocks);
+        //this.setCreativeTab(EbonArtsMod.tabEbonArtsBlocks);
     }
 
     @Override
