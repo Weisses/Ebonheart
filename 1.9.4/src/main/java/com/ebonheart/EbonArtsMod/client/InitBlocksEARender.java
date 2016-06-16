@@ -207,6 +207,16 @@ public final class InitBlocksEARender extends BlocksEA {
 		registerRender(glowstone_pillar);
 		registerRender(ebonheart_pillar);
 		
+		registerRender(draconium_block_fancybrick);
+		registerRender(velious_block_fancybrick);
+		registerRender(arcanite_block_fancybrick);
+		registerRender(katcheen_block_fancybrick);
+		registerRender(necrocite_block_fancybrick);
+		registerRender(soularite_block_fancybrick);
+		registerRender(obsidian_block_fancybrick);
+		registerRender(glowstone_block_fancybrick);
+		registerRender(ebonheart_block_fancybrick);
+		
 		registerRender(paper_block);
 		registerRender(leather_block);
 		registerRender(reed_block);
@@ -336,6 +346,16 @@ public final class InitBlocksEARender extends BlocksEA {
 		registerRender(cryptic_obsidian_pillar);
 		registerRender(cryptic_glowstone_pillar);
 		registerRender(cryptic_ebonheart_pillar);
+		
+		registerRender(cryptic_draconium_block_fancybrick);
+		registerRender(cryptic_velious_block_fancybrick);
+		registerRender(cryptic_arcanite_block_fancybrick);
+		registerRender(cryptic_katcheen_block_fancybrick);
+		registerRender(cryptic_necrocite_block_fancybrick);
+		registerRender(cryptic_soularite_block_fancybrick);
+		registerRender(cryptic_obsidian_block_fancybrick);
+		registerRender(cryptic_glowstone_block_fancybrick);
+		registerRender(cryptic_ebonheart_block_fancybrick);
 		
 		
 	}

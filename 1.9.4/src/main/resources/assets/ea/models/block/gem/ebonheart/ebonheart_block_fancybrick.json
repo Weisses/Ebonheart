@@ -2,9 +2,9 @@
     "parent": "block/cube_all",
     "ambientocclusion": false,
     "textures": {
-        "particle": "ea:blocks/block/arcanite_block",
-        "0": "ea:blocks/block/arcanite_brick_base",
-        "1": "ea:blocks/block/arcanite_block"
+        "particle": "ea:blocks/block/ebonheart_block",
+        "0": "ea:blocks/block/ebonheart_brick_base",
+        "1": "ea:blocks/block/ebonheart_block"
     },
     "elements": [
         {

@@ -134,6 +134,16 @@ public class BlocksEA {
 	public static Block glowstone_trapdoor;
 	public static Block ebonheart_trapdoor;
 	
+	public static Block draconium_block_fancybrick;
+	public static Block velious_block_fancybrick;
+	public static Block arcanite_block_fancybrick;
+	public static Block katcheen_block_fancybrick;
+	public static Block necrocite_block_fancybrick;
+	public static Block soularite_block_fancybrick;
+	public static Block obsidian_block_fancybrick;
+	public static Block glowstone_block_fancybrick;
+	public static Block ebonheart_block_fancybrick;
+	
 	///public static Block cobble_mystic_block;
 	public static Block cobble_mystic_block_normal;
 	public static Block cobble_mystic_block_white;
@@ -337,4 +347,15 @@ public class BlocksEA {
 	public static Block cryptic_obsidian_trapdoor;
 	public static Block cryptic_glowstone_trapdoor;
 	public static Block cryptic_ebonheart_trapdoor;
+	
+	public static Block cryptic_draconium_block_fancybrick;
+	public static Block cryptic_velious_block_fancybrick;
+	public static Block cryptic_arcanite_block_fancybrick;
+	public static Block cryptic_katcheen_block_fancybrick;
+	public static Block cryptic_necrocite_block_fancybrick;
+	public static Block cryptic_soularite_block_fancybrick;
+	public static Block cryptic_obsidian_block_fancybrick;
+	public static Block cryptic_glowstone_block_fancybrick;
+	public static Block cryptic_ebonheart_block_fancybrick;
+	
 }
