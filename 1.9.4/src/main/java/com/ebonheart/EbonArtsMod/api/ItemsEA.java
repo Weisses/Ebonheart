@@ -98,6 +98,7 @@ public class ItemsEA {
 	
 	public static Item test_door;
 	
+	public static Item ebon_airship;
 	
 	//Diablo
 	

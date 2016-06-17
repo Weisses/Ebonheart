@@ -108,6 +108,10 @@ public final class InitItemsEARender extends ItemsEA {
 		registerRender(sacred_fruit);
 		registerRender(dragon_fruit);
 		
+		
+		
+		
+		registerRender(ebon_airship);
 		//registerRender(test_shield);
 		
 	}

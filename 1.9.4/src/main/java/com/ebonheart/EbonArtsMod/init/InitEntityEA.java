@@ -4,17 +4,19 @@ import net.minecraft.entity.Entity;
 import net.minecraftforge.fml.common.registry.EntityRegistry;
 
 import com.ebonheart.EbonArtsMod.EbonArtsMod;
+import com.ebonheart.EbonArtsMod.common.entity.EntityAirship;
 import com.ebonheart.EbonArtsMod.common.entity.EntityEnchantedEbonheart;
 
 public class InitEntityEA {
 	
-	private static int entityID = 0;
+	private static int entityID = 1;
 	
 	public static void preInit()
 	{
 
 		//throwingRock = new ItemThrowingRock().setUnlocalizedName("throwingRock");
 		register(EntityEnchantedEbonheart.class, "Enchanted Ebonheart", 64, 20, true);
+		register(EntityAirship.class, "Airship Ebonheart", 64, 20, true);
 		
 	}
 	

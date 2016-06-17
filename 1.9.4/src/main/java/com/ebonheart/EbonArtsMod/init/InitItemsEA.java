@@ -3,13 +3,16 @@ package com.ebonheart.EbonArtsMod.init;
 import java.util.HashSet;
 import java.util.Set;
 
+import net.minecraft.entity.item.EntityBoat;
 import net.minecraft.inventory.EntityEquipmentSlot;
 import net.minecraft.item.Item;
 import net.minecraft.item.Item.ToolMaterial;
+import net.minecraft.item.ItemBoat;
 import net.minecraftforge.common.util.EnumHelper;
 import net.minecraftforge.fml.common.registry.GameRegistry;
 
 import com.ebonheart.EbonArtsMod.api.ItemsEA;
+import com.ebonheart.EbonArtsMod.common.entity.EntityAirship;
 import com.ebonheart.EbonArtsMod.common.items.armor.ItemBurnishedArmor;
 import com.ebonheart.EbonArtsMod.common.items.armor.ItemCelestialArmor;
 import com.ebonheart.EbonArtsMod.common.items.armor.ItemScalemailArmor;
@@ -31,6 +34,8 @@ import com.ebonheart.EbonArtsMod.common.items.resources.ItemObsidianShard;
 import com.ebonheart.EbonArtsMod.common.items.resources.ItemSacredFruit;
 import com.ebonheart.EbonArtsMod.common.items.resources.ItemSoularite;
 import com.ebonheart.EbonArtsMod.common.items.resources.ItemVelious;
+import com.ebonheart.EbonArtsMod.common.items.tools.ItemAirship;
+import com.ebonheart.EbonArtsMod.common.items.tools.ItemAirshiptest;
 import com.ebonheart.EbonArtsMod.common.items.tools.ItemArcaniteAxe;
 import com.ebonheart.EbonArtsMod.common.items.tools.ItemArcaniteHoe;
 import com.ebonheart.EbonArtsMod.common.items.tools.ItemArcanitePickaxe;
@@ -162,6 +167,15 @@ public class InitItemsEA extends ItemsEA {
 		consecration = registerItem(new ItemConsecration(legendaryToolMaterial));
 		necrosis = registerItem(new ItemNecrosis(legendaryToolMaterial));
 		
+		
+		ebon_airship = //registerItem(
+				//new ItemBoat(EntityBoat.Type.OAK);
+				new ItemAirshiptest(
+						EntityBoat.Type.OAK
+						//EntityAirship.Type.OAK
+						);
+		
+		
 		//test_door = registerItem(new EAItemDoor(InitBlocksEA.test_door));
 		
 	}
@@ -174,4 +188,11 @@ public class InitItemsEA extends ItemsEA {
 		return item;
 	}
 	
+	
+	public static void register()
+	{
+		
+		GameRegistry.registerItem(ebon_airship, ebon_airship.getUnlocalizedName().substring(5));
+		
+	}
 }

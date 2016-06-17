@@ -223,6 +223,16 @@ tile.ea:door/obsidian_trapdoor.name=Purified Obsidian Trapdoor
 tile.ea:door/glowstone_trapdoor.name=Purified Glowstone Trapdoor
 tile.ea:door/ebonheart_trapdoor.name=Ebonheart Trapdoor
 
+tile.ea:gem/draconium/draconium_block_fancybrick.name=Draconium Fancy Brick
+tile.ea:gem/velious/velious_block_fancybrick.name=Velious Fancy Brick
+tile.ea:gem/arcanite/arcanite_block_fancybrick.name=Arcanite Fancy Brick
+tile.ea:gem/katcheen/katcheen_block_fancybrick.name=Katcheen Fancy Brick
+tile.ea:gem/necrocite/necrocite_block_fancybrick.name=Necrocite Fancy Brick
+tile.ea:gem/soularite/soularite_block_fancybrick.name=Soularite Fancy Brick
+tile.ea:gem/obsidian/obsidian_block_fancybrick.name=Purified Obsidian Fancy Brick
+tile.ea:gem/glowstone/glowstone_block_fancybrick.name=Purified Glowstone Fancy Brick
+tile.ea:gem/ebonheart/ebonheart_block_fancybrick.name=Ebonheart Fancy Brick
+
 tile.ea:paper_block.name=Block of Paper
 tile.ea:leather_block.name=Block of Leather
 tile.ea:reed_block.name=Block of Sugar Cane
@@ -337,6 +347,18 @@ tile.ea:cryptic/door/cryptic_soularite_trapdoor.name=Cryptic Soularite Trapdoor
 tile.ea:cryptic/door/cryptic_obsidian_trapdoor.name=Purified Cryptic Obsidian Trapdoor
 tile.ea:cryptic/door/cryptic_glowstone_trapdoor.name=Purified Cryptic Glowstone Trapdoor
 tile.ea:cryptic/door/cryptic_ebonheart_trapdoor.name=Cryptic Ebonheart Trapdoor
+
+tile.ea:cryptic/block/cryptic_draconium_block_fancybrick.name=Cryptic Draconium Fancy Brick
+tile.ea:cryptic/block/cryptic_velious_block_fancybrick.name=Cryptic Velious Fancy Brick
+tile.ea:cryptic/block/cryptic_arcanite_block_fancybrick.name=Cryptic Arcanite Fancy Brick
+tile.ea:cryptic/block/cryptic_katcheen_block_fancybrick.name=Cryptic Katcheen Fancy Brick
+tile.ea:cryptic/block/cryptic_necrocite_block_fancybrick.name=Cryptic Necrocite Fancy Brick
+tile.ea:cryptic/block/cryptic_soularite_block_fancybrick.name=Cryptic Soularite Fancy Brick
+tile.ea:cryptic/block/cryptic_obsidian_block_fancybrick.name=Purified Cryptic Obsidian Fancy Brick
+tile.ea:cryptic/block/cryptic_glowstone_block_fancybrick.name=Purified Cryptic Glowstone Fancy Brick
+tile.ea:cryptic/block/cryptic_ebonheart_block_fancybrick.name=Cryptic Ebonheart Fancy Brick
+
+
 
 //-----Tools-----
 item.ea:tool/arcanite_pickaxe.name=Arcanite Pickaxe
