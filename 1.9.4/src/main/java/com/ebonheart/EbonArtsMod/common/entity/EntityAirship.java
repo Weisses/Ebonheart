@@ -8,14 +8,19 @@ import net.minecraft.block.BlockLiquid;
 import net.minecraft.block.BlockPlanks;
 import net.minecraft.block.material.Material;
 import net.minecraft.block.state.IBlockState;
+import net.minecraft.client.Minecraft;
 import net.minecraft.entity.Entity;
 import net.minecraft.entity.EntityLivingBase;
 import net.minecraft.entity.item.EntityBoat;
+import net.minecraft.entity.item.EntityMinecart;
 import net.minecraft.entity.passive.EntityAnimal;
+import net.minecraft.entity.passive.EntityHorse;
+import net.minecraft.entity.passive.EntityPig;
 import net.minecraft.entity.passive.EntityWaterMob;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.init.Blocks;
 import net.minecraft.init.Items;
+import net.minecraft.inventory.IInventory;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
 import net.minecraft.nbt.NBTTagCompound;
@@ -23,6 +28,9 @@ import net.minecraft.network.datasync.DataParameter;
 import net.minecraft.network.datasync.DataSerializers;
 import net.minecraft.network.datasync.EntityDataManager;
 import net.minecraft.network.play.client.CPacketSteerBoat;
+import net.minecraft.stats.AchievementList;
+import net.minecraft.stats.StatBase;
+import net.minecraft.stats.StatList;
 import net.minecraft.util.DamageSource;
 import net.minecraft.util.EntityDamageSourceIndirect;
 import net.minecraft.util.EntitySelectors;
@@ -37,9 +45,11 @@ import net.minecraft.world.World;
 import net.minecraftforge.fml.relauncher.Side;
 import net.minecraftforge.fml.relauncher.SideOnly;
 
+import com.ebonheart.EbonArtsMod.common.utils.EntityPlayerEA;
+import com.ebonheart.EbonArtsMod.init.InitItemsEA;
 import com.google.common.collect.Lists;
 
-public class EntityAirship extends Entity {
+public class EntityAirship extends EntityBoat implements IInventory {
 
 	
 	private static final DataParameter<Integer> TIME_SINCE_HIT = EntityDataManager.<Integer>createKey(EntityAirship.class, DataSerializers.VARINT);
@@ -62,6 +72,8 @@ public class EntityAirship extends Entity {
     private boolean rightInputDown;
     private boolean forwardInputDown;
     private boolean backInputDown;
+    private boolean upInputDown;
+    private boolean downInputDown;
     private double waterLevel;
     /**
      * How much the boat should glide given the slippery blocks it's currently gliding over.
@@ -92,6 +104,8 @@ public class EntityAirship extends Entity {
         this.prevPosZ = z;
     }
 
+    
+    
     /**
      * returns if this entity triggers Block.onEntityWalking on the blocks they walk on. used for spiders and wolves to
      * prevent them from trampling crops
@@ -324,6 +338,21 @@ public class EntityAirship extends Entity {
                 this.worldObj.sendPacketToServer(new CPacketSteerBoat(this.getPaddleState(0), this.getPaddleState(1)));
             }
 
+            if(Minecraft.getMinecraft().gameSettings.keyBindJump.isPressed())
+			{
+            	
+            	this.motionY = 0.05f;
+            	
+			}
+            
+            if(Minecraft.getMinecraft().gameSettings.keyBindForward.isPressed())
+			{
+            	
+            	//this.
+            	//this.getLookVec();
+            	
+			}
+            
             this.moveEntity(this.motionX, this.motionY, this.motionZ);
         }
         else
@@ -404,7 +433,7 @@ public class EntityAirship extends Entity {
      */
     private EntityAirship.Status getBoatStatus()
     {
-    	EntityAirship.Status entityboat$status = this.getUnderwaterStatus();
+        EntityAirship.Status entityboat$status = this.getUnderwaterStatus();
 
         if (entityboat$status != null)
         {
@@ -624,7 +653,7 @@ public class EntityAirship extends Entity {
                         {
                             if (((Integer)iblockstate.getValue(BlockLiquid.LEVEL)).intValue() != 0)
                             {
-                            	EntityAirship.Status entityboat$status = EntityAirship.Status.UNDER_FLOWING_WATER;
+                                EntityAirship.Status entityboat$status = EntityAirship.Status.UNDER_FLOWING_WATER;
                                 return entityboat$status;
                             }
 
@@ -746,6 +775,16 @@ public class EntityAirship extends Entity {
             }
 
             if (this.backInputDown)
+            {
+                f -= 0.005F;
+            }
+            
+            if (this.upInputDown)
+            {
+                f += 0.04F;
+            }
+            
+            if (this.downInputDown)
             {
                 f -= 0.005F;
             }
@@ -1050,6 +1089,101 @@ public class EntityAirship extends Entity {
             return values()[0];
         }
     }
+
+    
+    //============================================================
+    
+    
+	@Override
+	public int getSizeInventory() {
+		// TODO Auto-generated method stub
+		return 0;
+	}
+
+	@Override
+	public ItemStack getStackInSlot(int index) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public ItemStack decrStackSize(int index, int count) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public ItemStack removeStackFromSlot(int index) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public void setInventorySlotContents(int index, ItemStack stack) {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public int getInventoryStackLimit() {
+		// TODO Auto-generated method stub
+		return 0;
+	}
+
+	@Override
+	public void markDirty() {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public boolean isUseableByPlayer(EntityPlayer player) {
+		// TODO Auto-generated method stub
+		return false;
+	}
+
+	@Override
+	public void openInventory(EntityPlayer player) {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public void closeInventory(EntityPlayer player) {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public boolean isItemValidForSlot(int index, ItemStack stack) {
+		// TODO Auto-generated method stub
+		return false;
+	}
+
+	@Override
+	public int getField(int id) {
+		// TODO Auto-generated method stub
+		return 0;
+	}
+
+	@Override
+	public void setField(int id, int value) {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public int getFieldCount() {
+		// TODO Auto-generated method stub
+		return 0;
+	}
+
+	@Override
+	public void clear() {
+		// TODO Auto-generated method stub
+		
+	}
+	
 	
 	
 }

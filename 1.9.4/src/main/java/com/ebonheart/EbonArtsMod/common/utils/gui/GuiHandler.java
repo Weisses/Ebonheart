@@ -1,12 +1,6 @@
 package com.ebonheart.EbonArtsMod.common.utils.gui;
 
-import com.ebonheart.EbonArtsMod.client.gui.GuiCompendium;
-import com.ebonheart.EbonArtsMod.client.gui.GuiTestTileEntity;
-import com.ebonheart.EbonArtsMod.client.gui.container.ContainerTestTileEntity;
-import com.ebonheart.EbonArtsMod.common.tileentities.TestTileEntity;
-
 import net.minecraft.entity.player.EntityPlayer;
-import net.minecraft.util.math.BlockPos;
 import net.minecraft.world.World;
 import net.minecraftforge.fml.common.network.IGuiHandler;
 
@@ -20,7 +14,7 @@ public class GuiHandler implements IGuiHandler {
 	{
 		if (ID == 1)
 		{
-			return new ContainerTestTileEntity(player.inventory, (TestTileEntity) world.getTileEntity(new BlockPos(x, y, z)));
+			return z; //new ContainerTestTileEntity(player.inventory, (TestTileEntity) world.getTileEntity(new BlockPos(x, y, z)));
 		}
 		else 
 		{
@@ -33,15 +27,16 @@ public class GuiHandler implements IGuiHandler {
 	{
 		if (ID == 0)
 		{
-			return new GuiCompendium();
+			//return new GuiCompendium();
 		}
 		else if (ID == 1)
 		{
-			return new GuiTestTileEntity(player.inventory, (TestTileEntity) world.getTileEntity(new BlockPos(x, y, z)));
+			return z; //new GuiTestTileEntity(player.inventory, (TestTileEntity) world.getTileEntity(new BlockPos(x, y, z)));
 		}
 		else
 		{
 			return null;
 		}
+		return z;
 	}
 }

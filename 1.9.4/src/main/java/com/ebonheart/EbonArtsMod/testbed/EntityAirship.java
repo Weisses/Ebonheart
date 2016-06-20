@@ -38,7 +38,7 @@ public class EntityAirship extends Entity implements IInventory {
 		field_808_c = 1;
 		preventEntitySpawning = true;
 		setSize(1.5F, 1.7F);
-		yOffset = height / 2.0F;
+		this.setRenderYawOffset( height / 2.0F);
 
 		cargoItems = new ItemStack[36];
 		mc = ModLoader.getMinecraftInstance();

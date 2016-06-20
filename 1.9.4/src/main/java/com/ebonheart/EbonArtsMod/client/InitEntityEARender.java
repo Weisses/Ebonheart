@@ -11,6 +11,7 @@ import net.minecraftforge.fml.client.registry.RenderingRegistry;
 import com.ebonheart.EbonArtsMod.api.ItemsEA;
 import com.ebonheart.EbonArtsMod.client.projectile.RenderEnchantedEbonheart;
 import com.ebonheart.EbonArtsMod.common.entity.EntityAirship;
+import com.ebonheart.EbonArtsMod.common.entity.EntityAirshipEA;
 import com.ebonheart.EbonArtsMod.common.entity.EntityEnchantedEbonheart;
 
 public final class InitEntityEARender extends ItemsEA {
@@ -37,7 +38,7 @@ public final class InitEntityEARender extends ItemsEA {
 		
 		RenderingRegistry.registerEntityRenderingHandler(classIn, new RenderEnchantedEbonheart(EARender));
 		
-		//RenderingRegistry.registerEntityRenderingHandler(EntityAirship.class, new RenderEnchantedEbonheart(EARender));
+		//RenderingRegistry.registerEntityRenderingHandler(EntityAirshipEA.class, new RenderEnchantedEbonheart(EARender));
 		
 	}
 }
