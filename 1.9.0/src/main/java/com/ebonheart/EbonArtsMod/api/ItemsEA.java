@@ -7,6 +7,7 @@ import net.minecraft.item.ItemFood;
 
 public class ItemsEA {
 	
+	//public static Item test_book;
 	public static Item draconium_dust;
 	public static Item velious;
 	public static Item arcanite;
@@ -18,6 +19,23 @@ public class ItemsEA {
 	public static Item obsidian_shards;
 	public static Item glowstone_shards;
 	
+	public static Item cryptic_draconium_dust;
+	public static Item cryptic_velious;
+	public static Item cryptic_arcanite;
+	public static Item cryptic_katcheen;
+	public static Item cryptic_necrocite;
+	public static Item cryptic_soularite;
+	public static Item cryptic_ebonheart;
+	public static Item cryptic_obsidian_shards;
+	public static Item cryptic_glowstone_shards;
+	
+	public static Item dense_draconium_dust;
+	public static Item dense_velious;
+	public static Item dense_arcanite;
+	public static Item dense_katcheen;
+	public static Item dense_necrocite;
+	public static Item dense_soularite;
+	
 	public static Item mirroring_disc;
 	public static Item glowing_disc;
 	public static Item shimmering_disc;
@@ -25,7 +43,6 @@ public class ItemsEA {
 	public static Item resilient_disc;
 	public static Item dismal_disc;
 	public static Item ethereal_disc;
-	//public static Item chrono_disc;
 	
 	public static Item burnished_helmet;
 	public static Item burnished_chestplate;
@@ -57,11 +74,6 @@ public class ItemsEA {
 	public static Item infernal_leggings;
 	public static Item infernal_boots;
 	
-	//public static Item ebonheart_helmet;
-	//public static Item ebonheart_chestplate;
-	//public static Item ebonheart_leggings;
-	//public static Item ebonheart_boots;
-	
 	public static Item arcanite_pickaxe;
 	public static Item arcanite_axe;
 	public static Item arcanite_shovel;
@@ -91,6 +103,9 @@ public class ItemsEA {
 	
 	public static Item test_shield;
 	
+	public static Item test_door;
+	
+	public static Item ebon_airship;
 	
 	//Diablo
 	

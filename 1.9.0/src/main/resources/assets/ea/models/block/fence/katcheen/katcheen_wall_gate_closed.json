@@ -1,6 +1,6 @@
 {
     "parent": "block/wall_gate_closed",
     "textures": {
-        "texture": "ea:blocks/gems/katcheen/katcheen_block_side"
+        "texture": "ea:blocks/block/katcheen_block"
     }
 }

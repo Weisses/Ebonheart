@@ -1,12 +1,6 @@
 package com.ebonheart.EbonArtsMod.common.blocks.basic.dyeables;
 
-import com.ebonheart.EbonArtsMod.EbonArtsMod;
-import com.ebonheart.EbonArtsMod.common.blocks.BlockHelper;
-import com.ebonheart.EbonArtsMod.init.InitBlocksEA;
-
 import net.minecraft.block.Block;
-import net.minecraft.block.BlockRotatedPillar;
-import net.minecraft.block.material.Material;
 import net.minecraft.block.properties.IProperty;
 import net.minecraft.block.properties.PropertyEnum;
 import net.minecraft.block.state.BlockState;
@@ -22,7 +16,11 @@ import net.minecraft.world.World;
 import net.minecraftforge.fml.relauncher.Side;
 import net.minecraftforge.fml.relauncher.SideOnly;
 
-public class BlockMysticCobblestoneGlass extends BlockRotatedPillar {
+import com.ebonheart.EbonArtsMod.EbonArtsMod;
+import com.ebonheart.EbonArtsMod.common.blocks.basic.EABlockPillar;
+import com.ebonheart.EbonArtsMod.init.InitBlocksEA;
+
+public class BlockMysticCobblestoneGlass extends EABlockPillar {
 	
 	public static final PropertyEnum LOG_AXIS = PropertyEnum.create("axis", BlockMysticCobblestoneGlass.EnumAxis.class);
     
@@ -30,8 +28,7 @@ public class BlockMysticCobblestoneGlass extends BlockRotatedPillar {
 	
 	public BlockMysticCobblestoneGlass(String unlocalizedName) 
 	{
-		super(Material.rock);
-		BlockHelper.setBlockName(this, unlocalizedName);
+		super(unlocalizedName);
 		
 		this.setCreativeTab(EbonArtsMod.tabEbonArtsDyeables);
 		this.setHarvestLevel("pickaxe", 2);
@@ -39,19 +36,21 @@ public class BlockMysticCobblestoneGlass extends BlockRotatedPillar {
 		this.setStepSound(soundTypeStone);
 	}
 	
-	
 	@SideOnly(Side.CLIENT)
     public EnumWorldBlockLayer getBlockLayer()
     {
         return EnumWorldBlockLayer.CUTOUT;
     }
 
-    public boolean isFullCube()
+    public boolean isFullCube(IBlockState state)
     {
         return false;
     }
     
-    public boolean isOpaqueCube()
+    /**
+     * Used to determine ambient occlusion and culling when rebuilding chunks for render
+     */
+    public boolean isOpaqueCube(IBlockState state)
     {
         return false;
     }

@@ -1,6 +1,6 @@
 {
 	"parent": "block/fence_inventory",
 	"textures": {
-		"texture": "ea:blocks/gems/ebonheart/ebonheart_block_side"
+		"texture": "ea:blocks/block/ebonheart_block"
 	}
 }

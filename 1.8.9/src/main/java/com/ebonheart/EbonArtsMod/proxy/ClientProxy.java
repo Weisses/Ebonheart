@@ -14,10 +14,6 @@ import com.ebonheart.EbonArtsMod.client.particle.EntityEnchEbonFX;
 import com.ebonheart.EbonArtsMod.client.particle.EntityFlightFX;
 import com.ebonheart.EbonArtsMod.client.particle.EntitySprintFX;
 import com.ebonheart.EbonArtsMod.client.particle.EntityUnholyFX;
-import com.ebonheart.EbonArtsMod.common.utils.SoundEventsEA;
-import com.ebonheart.EbonArtsMod.init.InitEntityEA;
-import com.ebonheart.EbonArtsMod.init.InitTileEntitiesEA;
-import com.ebonheart.EbonArtsMod.init.InitAchievementsEA;
 
 public class ClientProxy extends CommonProxy {
 	
@@ -25,8 +21,6 @@ public class ClientProxy extends CommonProxy {
 	public void preInit(FMLPreInitializationEvent event) 
 	{
 		super.preInit(event);
-		
-		
 		
 		//---------------------------
 		//InitTileEntitiesEA.registerRenders();
@@ -40,7 +34,6 @@ public class ClientProxy extends CommonProxy {
 		InitItemsEARender.registerRenders();
 		InitBlocksEARender.registerRenders();
 		InitEntityEARender.registerRenders();
-		
 		
 		//---------------------------
 		//InitEntityEARender.registerParticle(null, null);

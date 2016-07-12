@@ -2,10 +2,12 @@ package com.ebonheart.EbonArtsMod.common.blocks.basic.dyeables;
 
 import com.ebonheart.EbonArtsMod.EbonArtsMod;
 import com.ebonheart.EbonArtsMod.common.blocks.BlockHelper;
+import com.ebonheart.EbonArtsMod.common.blocks.basic.EABlockPillar;
 import com.ebonheart.EbonArtsMod.init.InitBlocksEA;
 
 import net.minecraft.block.Block;
 import net.minecraft.block.BlockRotatedPillar;
+import net.minecraft.block.SoundType;
 import net.minecraft.block.material.Material;
 import net.minecraft.block.state.IBlockState;
 import net.minecraft.init.Blocks;
@@ -16,21 +18,19 @@ import net.minecraft.world.IBlockAccess;
 import net.minecraftforge.fml.relauncher.Side;
 import net.minecraftforge.fml.relauncher.SideOnly;
 
-public class BlockMysticCobblestoneGlass extends BlockRotatedPillar {
+public class BlockMysticCobblestoneGlass extends EABlockPillar {
 	
 	private boolean ignoreSimilarity = true;
 	
 	public BlockMysticCobblestoneGlass(String unlocalizedName) 
 	{
-		super(Material.rock);
-		BlockHelper.setBlockName(this, unlocalizedName);
+		super(unlocalizedName);
 		
 		this.setCreativeTab(EbonArtsMod.tabEbonArtsDyeables);
 		this.setHarvestLevel("pickaxe", 2);
 		this.setHardness(5.0F);
 		this.setStepSound(stepSound.STONE);
 	}
-	
 	
 	@SideOnly(Side.CLIENT)
     public BlockRenderLayer getBlockLayer()

@@ -6,20 +6,18 @@ import net.minecraft.client.resources.model.ModelResourceLocation;
 //import net.minecraft.client.resources.model.ModelBakery;
 //import net.minecraft.client.resources.model.ModelResourceLocation;
 import net.minecraft.item.Item;
-import net.minecraft.util.ResourceLocation;
-import net.minecraftforge.fml.client.registry.ClientRegistry;
 
 import com.ebonheart.EbonArtsMod.api.BlocksEA;
 import com.ebonheart.EbonArtsMod.api.Reference;
-import com.ebonheart.EbonArtsMod.client.projectile.RenderEnchantedEbonheart;
-import com.ebonheart.EbonArtsMod.common.entity.tile.TileEntityTutorial;
-import com.ebonheart.EbonArtsMod.init.InitBlocksEA;
 
 public final class InitBlocksEARender extends BlocksEA {
 	
 	public static void registerRenders()
 	{
-		registerRender(draconium_ore);
+		
+		
+		
+	/**	registerRender(draconium_ore);
 		registerRender(velious_ore);
 		registerRender(arcanite_ore);
 		registerRender(katcheen_ore);
@@ -186,13 +184,6 @@ public final class InitBlocksEARender extends BlocksEA {
 		registerRender(obsidian_trapdoor);
 		registerRender(glowstone_trapdoor);
 		
-		//registerRender(draconium_door);
-		//registerRender(velious_door);
-		//registerRender(arcanite_door);
-		//registerRender(katcheen_door);
-		//registerRender(necrocite_door);
-		//registerRender(soularite_door);
-		
 		registerRender(draconium_ladder);
 		registerRender(velious_ladder);
 		registerRender(arcanite_ladder);
@@ -213,6 +204,16 @@ public final class InitBlocksEARender extends BlocksEA {
 		registerRender(glowstone_pillar);
 		registerRender(ebonheart_pillar);
 		
+		registerRender(draconium_block_fancybrick);
+		registerRender(velious_block_fancybrick);
+		registerRender(arcanite_block_fancybrick);
+		registerRender(katcheen_block_fancybrick);
+		registerRender(necrocite_block_fancybrick);
+		registerRender(soularite_block_fancybrick);
+		registerRender(obsidian_block_fancybrick);
+		registerRender(glowstone_block_fancybrick);
+		registerRender(ebonheart_block_fancybrick);
+		
 		registerRender(paper_block);
 		registerRender(leather_block);
 		registerRender(reed_block);
@@ -220,6 +221,140 @@ public final class InitBlocksEARender extends BlocksEA {
 		registerRender(hellion_fruit);
 		registerRender(sacred_fruit);
 		registerRender(dragon_fruit);
+
+		
+		
+		registerRender(cryptic_draconium_block);
+		registerRender(cryptic_velious_block);
+		registerRender(cryptic_arcanite_block);
+		registerRender(cryptic_katcheen_block);
+		registerRender(cryptic_necrocite_block);
+		registerRender(cryptic_soularite_block);
+		registerRender(cryptic_obsidian_block);
+		registerRender(cryptic_glowstone_block);
+		registerRender(cryptic_ebonheart_block);
+		
+		registerRender(cryptic_draconium_block_brick);
+		registerRender(cryptic_velious_block_brick);
+		registerRender(cryptic_arcanite_block_brick);
+		registerRender(cryptic_katcheen_block_brick);
+		registerRender(cryptic_necrocite_block_brick);
+		registerRender(cryptic_soularite_block_brick);
+		registerRender(cryptic_obsidian_block_brick);
+		registerRender(cryptic_glowstone_block_brick);
+		registerRender(cryptic_ebonheart_block_brick);
+		
+		registerRender(double_cryptic_draconium_slab);
+		registerRender(double_cryptic_velious_slab);
+		registerRender(double_cryptic_arcanite_slab);
+		registerRender(double_cryptic_katcheen_slab);
+		registerRender(double_cryptic_necrocite_slab);
+		registerRender(double_cryptic_soularite_slab);
+		registerRender(double_cryptic_obsidian_slab);
+		registerRender(double_cryptic_glowstone_slab);
+		registerRender(double_cryptic_ebonheart_slab);
+		
+		registerRender(cryptic_draconium_slab);
+		registerRender(cryptic_velious_slab);
+		registerRender(cryptic_arcanite_slab);
+		registerRender(cryptic_katcheen_slab);
+		registerRender(cryptic_necrocite_slab);
+		registerRender(cryptic_soularite_slab);
+		registerRender(cryptic_obsidian_slab);
+		registerRender(cryptic_glowstone_slab);
+		registerRender(cryptic_ebonheart_slab);
+		
+		registerRender(cryptic_draconium_stairs);
+		registerRender(cryptic_velious_stairs);
+		registerRender(cryptic_arcanite_stairs);
+		registerRender(cryptic_katcheen_stairs);
+		registerRender(cryptic_necrocite_stairs);
+		registerRender(cryptic_soularite_stairs);
+		registerRender(cryptic_obsidian_stairs);
+		registerRender(cryptic_glowstone_stairs);
+		registerRender(cryptic_ebonheart_stairs);
+		
+		registerRender(cryptic_draconium_fence);
+		registerRender(cryptic_velious_fence);
+		registerRender(cryptic_arcanite_fence);
+		registerRender(cryptic_katcheen_fence);
+		registerRender(cryptic_necrocite_fence);
+		registerRender(cryptic_soularite_fence);
+		registerRender(cryptic_obsidian_fence);
+		registerRender(cryptic_glowstone_fence);
+		registerRender(cryptic_ebonheart_fence);
+		
+		registerRender(cryptic_draconium_fence_gate);
+		registerRender(cryptic_velious_fence_gate);
+		registerRender(cryptic_arcanite_fence_gate);
+		registerRender(cryptic_katcheen_fence_gate);
+		registerRender(cryptic_necrocite_fence_gate);
+		registerRender(cryptic_soularite_fence_gate);
+		registerRender(cryptic_obsidian_fence_gate);
+		registerRender(cryptic_glowstone_fence_gate);
+		registerRender(cryptic_ebonheart_fence_gate);
+		
+		registerRender(cryptic_draconium_wall);
+		registerRender(cryptic_velious_wall);
+		registerRender(cryptic_arcanite_wall);
+		registerRender(cryptic_katcheen_wall);
+		registerRender(cryptic_necrocite_wall);
+		registerRender(cryptic_soularite_wall);
+		registerRender(cryptic_obsidian_wall);
+		registerRender(cryptic_glowstone_wall);
+		registerRender(cryptic_ebonheart_wall);
+		
+		//registerRender(cryptic_draconium_torch);
+		//registerRender(cryptic_velious_torch);
+		//registerRender(cryptic_arcanite_torch);
+		//registerRender(cryptic_katcheen_torch);
+		//registerRender(cryptic_necrocite_torch);
+		//registerRender(cryptic_soularite_torch);
+		//registerRender(cryptic_obsidian_torch);
+		//registerRender(cryptic_glowstone_torch);
+		//registerRender(cryptic_ebonheart_torch);
+		
+		registerRender(cryptic_draconium_trapdoor);
+		registerRender(cryptic_velious_trapdoor);
+		registerRender(cryptic_arcanite_trapdoor);
+		registerRender(cryptic_katcheen_trapdoor);
+		registerRender(cryptic_necrocite_trapdoor);
+		registerRender(cryptic_soularite_trapdoor);
+		registerRender(cryptic_ebonheart_trapdoor);
+		registerRender(cryptic_obsidian_trapdoor);
+		registerRender(cryptic_glowstone_trapdoor);
+		
+		registerRender(cryptic_draconium_ladder);
+		registerRender(cryptic_velious_ladder);
+		registerRender(cryptic_arcanite_ladder);
+		registerRender(cryptic_katcheen_ladder);
+		registerRender(cryptic_necrocite_ladder);
+		registerRender(cryptic_soularite_ladder);
+		registerRender(cryptic_obsidian_ladder);
+		registerRender(cryptic_glowstone_ladder);
+		registerRender(cryptic_ebonheart_ladder);
+		
+		registerRender(cryptic_draconium_pillar);
+		registerRender(cryptic_velious_pillar);
+		registerRender(cryptic_arcanite_pillar);
+		registerRender(cryptic_katcheen_pillar);
+		registerRender(cryptic_necrocite_pillar);
+		registerRender(cryptic_soularite_pillar);
+		registerRender(cryptic_obsidian_pillar);
+		registerRender(cryptic_glowstone_pillar);
+		registerRender(cryptic_ebonheart_pillar);
+		
+		registerRender(cryptic_draconium_block_fancybrick);
+		registerRender(cryptic_velious_block_fancybrick);
+		registerRender(cryptic_arcanite_block_fancybrick);
+		registerRender(cryptic_katcheen_block_fancybrick);
+		registerRender(cryptic_necrocite_block_fancybrick);
+		registerRender(cryptic_soularite_block_fancybrick);
+		registerRender(cryptic_obsidian_block_fancybrick);
+		registerRender(cryptic_glowstone_block_fancybrick);
+		registerRender(cryptic_ebonheart_block_fancybrick);
+		
+		*/
 		
 	}
 	

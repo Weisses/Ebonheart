@@ -1,12 +1,12 @@
 {
     "parent": "block/cube",
     "textures": {
-        "particle": "ea:blocks/gems/mystic/stone/mystic_block_bottom_magenta",
-        "down": "ea:blocks/gems/mystic/stone/mystic_block_bottom_magenta",
-        "up": "ea:blocks/gems/mystic/stone/mystic_block_top_magenta",
-        "north": "ea:blocks/gems/mystic/stone/mystic_block_side_magenta",
-        "east": "ea:blocks/gems/mystic/stone/mystic_block_side_magenta",
-        "south": "ea:blocks/gems/mystic/stone/mystic_block_side_magenta",
-        "west": "ea:blocks/gems/mystic/stone/mystic_block_side_magenta"
+        "particle": "ea:blocks/dyeable/stone/mystic_block_magenta_bottom",
+        "down": "ea:blocks/dyeable/stone/mystic_block_magenta_bottom",
+        "up": "ea:blocks/dyeable/stone/mystic_block_magenta_top",
+        "north": "ea:blocks/dyeable/stone/mystic_block_magenta_side",
+        "east": "ea:blocks/dyeable/stone/mystic_block_magenta_side",
+        "south": "ea:blocks/dyeable/stone/mystic_block_magenta_side",
+        "west": "ea:blocks/dyeable/stone/mystic_block_magenta_side"
     }
 }

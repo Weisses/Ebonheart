@@ -1,6 +1,6 @@
 {
     "parent": "block/wall_gate_open",
     "textures": {
-        "texture": "ea:blocks/gems/arcanite/arcanite_block_side"
+        "texture": "ea:blocks/block/arcanite_block"
     }
 }

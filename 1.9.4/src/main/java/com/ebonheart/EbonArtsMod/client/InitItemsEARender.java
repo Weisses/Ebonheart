@@ -38,6 +38,11 @@ public final class InitItemsEARender extends ItemsEA {
 		registerRender(cryptic_obsidian_shards);
 		registerRender(cryptic_glowstone_shards);
 		
+		
+		
+		
+		
+		
 		registerRender(enchanted_ebonheart);
 		registerRender(empowered_blade);
 		
@@ -104,6 +109,13 @@ public final class InitItemsEARender extends ItemsEA {
 		registerRender(obsidian_shards);
 		registerRender(glowstone_shards);
 		
+		registerRender(dense_draconium_dust);
+		registerRender(dense_velious);
+		registerRender(dense_arcanite);
+		registerRender(dense_katcheen);
+		registerRender(dense_necrocite);
+		registerRender(dense_soularite);
+		
 		registerRender(hellion_fruit);
 		registerRender(sacred_fruit);
 		registerRender(dragon_fruit);
@@ -111,7 +123,7 @@ public final class InitItemsEARender extends ItemsEA {
 		
 		
 		
-		registerRender(ebon_airship);
+		//registerRender(ebon_airship);
 		//registerRender(test_shield);
 		
 	}

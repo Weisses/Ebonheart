@@ -20,7 +20,7 @@ plugins {
     id "net.minecraftforge.gradle.forge" version "2.0.2"
 }
 */
-version = "v2.3.4c-mc1.9.0"
+version = "v2.4.2b-mc1.9.0"
 group= "com.ebonheart.EbonArtsMod" // http://maven.apache.org/guides/mini/guide-naming-conventions.html
 archivesBaseName = "EbonArts"
 

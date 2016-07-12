@@ -4,6 +4,7 @@
 itemGroup.tabEbonArtsBlocks=Ebon Arts Blocks
 itemGroup.tabEbonArtsItems=Ebon Arts Items
 itemGroup.tabEbonArtsDyeables=Ebon Arts Dyeables
+itemGroup.tabEbonArtsCryptic=Ebon Arts Cryptic
 
 //-----Items-----
 item.ea:gem/draconium_dust.name=Draconium Dust
@@ -20,6 +21,24 @@ item.ea:tool/empowered_blade.name=Empowered Blade
 item.ea:plant/hellion_fruit.name=Hellion Fruit
 item.ea:plant/sacred_fruit.name=Sacred Fruit
 item.ea:plant/dragon_fruit.name=Dragon Fruit
+
+item.ea:gem/cryptic_draconium_dust.name=Cryptic Draconium Dust
+item.ea:gem/cryptic_draconium_dust.desc=Cryptic Draconium Dust TEST!
+item.ea:gem/cryptic_velious.name=Cryptic Velious
+item.ea:gem/cryptic_arcanite.name=Cryptic Arcanite
+item.ea:gem/cryptic_katcheen.name=Cryptic Katcheen
+item.ea:gem/cryptic_necrocite.name=Cryptic Necrocite
+item.ea:gem/cryptic_soularite.name=Cryptic Soularite
+item.ea:gem/cryptic_ebonheart.name=Cryptic Ebonheart
+item.ea:gem/cryptic_obsidian_shard.name=Cryptic Obsidian Shard
+item.ea:gem/cryptic_glowstone_shard.name=Cryptic Glowstone Shard
+
+item.ea:gem/dense_draconium_dust.name=Dense Draconium Dust
+item.ea:gem/dense_velious.name=Dense Velious
+item.ea:gem/dense_arcanite.name=Dense Arcanite
+item.ea:gem/dense_katcheen.name=Dense Katcheen
+item.ea:gem/dense_necrocite.name=Dense Necrocite
+item.ea:gem/dense_soularite.name=Dense Soularite
 
 item.ea:disc/glowing_disc.name=Glowing Disc
 item.ea:disc/shimmering_disc.name=Shimmering Disc
@@ -101,15 +120,15 @@ tile.ea:gem/mystic/wood/wood_mystic_block_red.name=Red Mystic Wood Planks
 tile.ea:gem/mystic/wood/wood_mystic_block_black.name=Black Mystic Wood Planks
 tile.ea:gem/mystic/wood/wood_mystic_block_glass.name=Clear Mystic Wood Planks
 
-tile.ea:gem/draconium/draconium_block.name=Block of Draconium
-tile.ea:gem/velious/velious_block.name=Block of Velious
-tile.ea:gem/arcanite/arcanite_block.name=Block of Arcanite
-tile.ea:gem/katcheen/katcheen_block.name=Block of Katcheen
-tile.ea:gem/necrocite/necrocite_block.name=Block of Necrocite
-tile.ea:gem/soularite/soularite_block.name=Block of Soularite
-tile.ea:gem/obsidian/obsidian_block.name=Block of Purified Obsidian
-tile.ea:gem/glowstone/glowstone_block.name=Block of Purified Glowstone
-tile.ea:gem/ebonheart/ebonheart_block.name=Block of Ebonheart
+tile.ea:gem/draconium/draconium_block.name=Draconium Block
+tile.ea:gem/velious/velious_block.name=Velious Block
+tile.ea:gem/arcanite/arcanite_block.name=Arcanite Block
+tile.ea:gem/katcheen/katcheen_block.name=Katcheen Block
+tile.ea:gem/necrocite/necrocite_block.name=Necrocite Block
+tile.ea:gem/soularite/soularite_block.name=Soularite Block
+tile.ea:gem/obsidian/obsidian_block.name=Purified Obsidian Block
+tile.ea:gem/glowstone/glowstone_block.name=Purified Glowstone Block
+tile.ea:gem/ebonheart/ebonheart_block.name=Ebonheart Block
 
 tile.ea:gem/draconium/draconium_block_brick.name=Draconium Brick
 tile.ea:gem/velious/velious_block_brick.name=Velious Brick
@@ -211,9 +230,142 @@ tile.ea:door/obsidian_trapdoor.name=Purified Obsidian Trapdoor
 tile.ea:door/glowstone_trapdoor.name=Purified Glowstone Trapdoor
 tile.ea:door/ebonheart_trapdoor.name=Ebonheart Trapdoor
 
+tile.ea:gem/draconium/draconium_block_fancybrick.name=Draconium Fancy Brick
+tile.ea:gem/velious/velious_block_fancybrick.name=Velious Fancy Brick
+tile.ea:gem/arcanite/arcanite_block_fancybrick.name=Arcanite Fancy Brick
+tile.ea:gem/katcheen/katcheen_block_fancybrick.name=Katcheen Fancy Brick
+tile.ea:gem/necrocite/necrocite_block_fancybrick.name=Necrocite Fancy Brick
+tile.ea:gem/soularite/soularite_block_fancybrick.name=Soularite Fancy Brick
+tile.ea:gem/obsidian/obsidian_block_fancybrick.name=Purified Obsidian Fancy Brick
+tile.ea:gem/glowstone/glowstone_block_fancybrick.name=Purified Glowstone Fancy Brick
+tile.ea:gem/ebonheart/ebonheart_block_fancybrick.name=Ebonheart Fancy Brick
+
 tile.ea:paper_block.name=Block of Paper
 tile.ea:leather_block.name=Block of Leather
 tile.ea:reed_block.name=Block of Sugar Cane
+
+//-----Cryptic-----
+tile.ea:cryptic/block/cryptic_draconium_block.name=Cryptic Draconium Block
+tile.ea:cryptic/block/cryptic_velious_block.name=Cryptic Velious Block
+tile.ea:cryptic/block/cryptic_arcanite_block.name=Cryptic Arcanite Block
+tile.ea:cryptic/block/cryptic_katcheen_block.name=Cryptic Katcheen Block
+tile.ea:cryptic/block/cryptic_necrocite_block.name=Cryptic Necrocite Block
+tile.ea:cryptic/block/cryptic_soularite_block.name=Cryptic Soularite Block
+tile.ea:cryptic/block/cryptic_obsidian_block.name=Purified Cryptic Obsidian Block
+tile.ea:cryptic/block/cryptic_glowstone_block.name=Purified Cryptic Glowstone Block
+tile.ea:cryptic/block/cryptic_ebonheart_block.name=Cryptic Ebonheart Block
+
+tile.ea:cryptic/block/cryptic_draconium_block_brick.name=Cryptic Draconium Brick
+tile.ea:cryptic/block/cryptic_velious_block_brick.name=Cryptic Velious Brick
+tile.ea:cryptic/block/cryptic_arcanite_block_brick.name=Cryptic Arcanite Brick
+tile.ea:cryptic/block/cryptic_katcheen_block_brick.name=Cryptic Katcheen Brick
+tile.ea:cryptic/block/cryptic_necrocite_block_brick.name=Cryptic Necrocite Brick
+tile.ea:cryptic/block/cryptic_soularite_block_brick.name=Cryptic Soularite Brick
+tile.ea:cryptic/block/cryptic_obsidian_block_brick.name=Purified Cryptic Obsidian Brick
+tile.ea:cryptic/block/cryptic_glowstone_block_brick.name=Purified Cryptic Glowstone Brick
+tile.ea:cryptic/block/cryptic_ebonheart_block_brick.name=Cryptic Ebonheart Brick
+
+tile.ea:cryptic/fence/cryptic_draconium_fence.name=Cryptic Draconium Fence
+tile.ea:cryptic/fence/cryptic_velious_fence.name=Cryptic Velious Fence
+tile.ea:cryptic/fence/cryptic_arcanite_fence.name=Cryptic Arcanite Fence
+tile.ea:cryptic/fence/cryptic_katcheen_fence.name=Cryptic Katcheen Fence
+tile.ea:cryptic/fence/cryptic_necrocite_fence.name=Cryptic Necrocite Fence
+tile.ea:cryptic/fence/cryptic_soularite_fence.name=Cryptic Soularite Fence
+tile.ea:cryptic/fence/cryptic_obsidian_fence.name=Purified Cryptic Obsidian Fence
+tile.ea:cryptic/fence/cryptic_glowstone_fence.name=Purified Cryptic Glowstone Fence
+tile.ea:cryptic/fence/cryptic_ebonheart_fence.name=Cryptic Ebonheart Fence
+
+tile.ea:cryptic/fence/cryptic_draconium_fence_gate.name=Cryptic Draconium Gate
+tile.ea:cryptic/fence/cryptic_velious_fence_gate.name=Cryptic Velious Gate
+tile.ea:cryptic/fence/cryptic_arcanite_fence_gate.name=Cryptic Arcanite Gate
+tile.ea:cryptic/fence/cryptic_katcheen_fence_gate.name=Cryptic Katcheen Gate
+tile.ea:cryptic/fence/cryptic_necrocite_fence_gate.name=Cryptic Necrocite Gate
+tile.ea:cryptic/fence/cryptic_soularite_fence_gate.name=Cryptic Soularite Gate
+tile.ea:cryptic/fence/cryptic_obsidian_fence_gate.name=Purified Cryptic Obsidian Gate
+tile.ea:cryptic/fence/cryptic_glowstone_fence_gate.name=Purified Cryptic Glowstone Gate
+tile.ea:cryptic/fence/cryptic_ebonheart_fence_gate.name=Cryptic Ebonheart Gate
+
+tile.ea:cryptic/wall/cryptic_draconium_wall.name=Cryptic Draconium Wall
+tile.ea:cryptic/wall/cryptic_velious_wall.name=Cryptic Velious Wall
+tile.ea:cryptic/wall/cryptic_arcanite_wall.name=Cryptic Arcanite Wall
+tile.ea:cryptic/wall/cryptic_katcheen_wall.name=Cryptic Katcheen Wall
+tile.ea:cryptic/wall/cryptic_necrocite_wall.name=Cryptic Necrocite Wall
+tile.ea:cryptic/wall/cryptic_soularite_wall.name=Cryptic Soularite Wall
+tile.ea:cryptic/wall/cryptic_obsidian_wall.name=Purified Cryptic Obsidian Wall
+tile.ea:cryptic/wall/cryptic_glowstone_wall.name=Purified Cryptic Glowstone Wall
+tile.ea:cryptic/wall/cryptic_ebonheart_wall.name=Cryptic Ebonheart Wall
+
+tile.ea:cryptic/stairs/cryptic_draconium_stairs.name=Cryptic Draconium Stairs
+tile.ea:cryptic/stairs/cryptic_velious_stairs.name=Cryptic Velious Stairs
+tile.ea:cryptic/stairs/cryptic_arcanite_stairs.name=Cryptic Arcanite Stairs
+tile.ea:cryptic/stairs/cryptic_katcheen_stairs.name=Cryptic Katcheen Stairs
+tile.ea:cryptic/stairs/cryptic_necrocite_stairs.name=Cryptic Necrocite Stairs
+tile.ea:cryptic/stairs/cryptic_soularite_stairs.name=Cryptic Soularite Stairs
+tile.ea:cryptic/stairs/cryptic_obsidian_stairs.name=Purified Cryptic Obsidian Stairs
+tile.ea:cryptic/stairs/cryptic_glowstone_stairs.name=Purified Cryptic Glowstone Stairs
+tile.ea:cryptic/stairs/cryptic_ebonheart_stairs.name=Cryptic Ebonheart Stairs
+
+tile.cryptic/slab/cryptic_draconium_slab.name=Cryptic Draconium Slab
+tile.cryptic/slab/cryptic_velious_slab.name=Cryptic Velious Slab
+tile.cryptic/slab/cryptic_arcanite_slab.name=Cryptic Arcanite Slab
+tile.cryptic/slab/cryptic_katcheen_slab.name=Cryptic Katcheen Slab
+tile.cryptic/slab/cryptic_necrocite_slab.name=Cryptic Necrocite Slab
+tile.cryptic/slab/cryptic_soularite_slab.name=Cryptic Soularite Slab
+tile.cryptic/slab/cryptic_obsidian_slab.name=Purified Cryptic Obsidian Slab
+tile.cryptic/slab/cryptic_glowstone_slab.name=Purified Cryptic Glowstone Slab
+tile.cryptic/slab/cryptic_ebonheart_slab.name=Cryptic Ebonheart Slab
+
+tile.ea:111gem/draconium/draconium_torch.name=Cryptic Draconium Torch
+tile.ea:111gem/velious/velious_torch.name=Cryptic Velious Torch
+tile.ea:11gem/arcanite/arcanite_torch.name=Cryptic Arcanite Torch
+tile.ea:11gem/katcheen/katcheen_torch.name=Cryptic Katcheen Torch
+tile.ea:11gem/necrocite/necrocite_torch.name=Cryptic Necrocite Torch
+tile.ea:11gem/soularite/soularite_torch.name=Cryptic Soularite Torch
+tile.ea:11gem/obsidian/obsidian_torch.name=Purified Cryptic Obsidian Torch
+tile.ea:11gem/glowstone/glowstone_torch.name=Purified Cryptic Glowstone Torch
+tile.ea:11gem/ebonheart/ebonheart_torch.name=Cryptic Ebonheart Torch
+
+tile.ea:cryptic/ladder/cryptic_draconium_ladder.name=Cryptic Draconium Ladder
+tile.ea:cryptic/ladder/cryptic_velious_ladder.name=Cryptic Velious Ladder
+tile.ea:cryptic/ladder/cryptic_arcanite_ladder.name=Cryptic Arcanite Ladder
+tile.ea:cryptic/ladder/cryptic_katcheen_ladder.name=Cryptic Katcheen Ladder
+tile.ea:cryptic/ladder/cryptic_necrocite_ladder.name=Cryptic Necrocite Ladder
+tile.ea:cryptic/ladder/cryptic_soularite_ladder.name=Cryptic Soularite Ladder
+tile.ea:cryptic/ladder/cryptic_obsidian_ladder.name=Purified Cryptic Obsidian Ladder
+tile.ea:cryptic/ladder/cryptic_glowstone_ladder.name=Purified Cryptic Glowstone Ladder
+tile.ea:cryptic/ladder/cryptic_ebonheart_ladder.name=Cryptic Ebonheart Ladder
+
+tile.ea:cryptic/pillar/cryptic_draconium_pillar.name=Cryptic Draconium Pillar
+tile.ea:cryptic/pillar/cryptic_velious_pillar.name=Cryptic Velious Pillar
+tile.ea:cryptic/pillar/cryptic_arcanite_pillar.name=Cryptic Arcanite Pillar
+tile.ea:cryptic/pillar/cryptic_katcheen_pillar.name=Cryptic Katcheen Pillar
+tile.ea:cryptic/pillar/cryptic_necrocite_pillar.name=Cryptic Necrocite Pillar
+tile.ea:cryptic/pillar/cryptic_soularite_pillar.name=Cryptic Soularite Pillar
+tile.ea:cryptic/pillar/cryptic_obsidian_pillar.name=Purified Cryptic Obsidian Pillar
+tile.ea:cryptic/pillar/cryptic_glowstone_pillar.name=Purified Cryptic Glowstone Pillar
+tile.ea:cryptic/pillar/cryptic_ebonheart_pillar.name=Cryptic Ebonheart Pillar
+
+tile.ea:cryptic/door/cryptic_draconium_trapdoor.name=Cryptic Draconium Trapdoor
+tile.ea:cryptic/door/cryptic_velious_trapdoor.name=Cryptic Velious Trapdoor
+tile.ea:cryptic/door/cryptic_arcanite_trapdoor.name=Cryptic Arcanite Trapdoor
+tile.ea:cryptic/door/cryptic_katcheen_trapdoor.name=Cryptic Katcheen Trapdoor
+tile.ea:cryptic/door/cryptic_necrocite_trapdoor.name=Cryptic Necrocite Trapdoor
+tile.ea:cryptic/door/cryptic_soularite_trapdoor.name=Cryptic Soularite Trapdoor
+tile.ea:cryptic/door/cryptic_obsidian_trapdoor.name=Purified Cryptic Obsidian Trapdoor
+tile.ea:cryptic/door/cryptic_glowstone_trapdoor.name=Purified Cryptic Glowstone Trapdoor
+tile.ea:cryptic/door/cryptic_ebonheart_trapdoor.name=Cryptic Ebonheart Trapdoor
+
+tile.ea:cryptic/block/cryptic_draconium_block_fancybrick.name=Cryptic Draconium Fancy Brick
+tile.ea:cryptic/block/cryptic_velious_block_fancybrick.name=Cryptic Velious Fancy Brick
+tile.ea:cryptic/block/cryptic_arcanite_block_fancybrick.name=Cryptic Arcanite Fancy Brick
+tile.ea:cryptic/block/cryptic_katcheen_block_fancybrick.name=Cryptic Katcheen Fancy Brick
+tile.ea:cryptic/block/cryptic_necrocite_block_fancybrick.name=Cryptic Necrocite Fancy Brick
+tile.ea:cryptic/block/cryptic_soularite_block_fancybrick.name=Cryptic Soularite Fancy Brick
+tile.ea:cryptic/block/cryptic_obsidian_block_fancybrick.name=Purified Cryptic Obsidian Fancy Brick
+tile.ea:cryptic/block/cryptic_glowstone_block_fancybrick.name=Purified Cryptic Glowstone Fancy Brick
+tile.ea:cryptic/block/cryptic_ebonheart_block_fancybrick.name=Cryptic Ebonheart Fancy Brick
+
+
 
 //-----Tools-----
 item.ea:tool/arcanite_pickaxe.name=Arcanite Pickaxe

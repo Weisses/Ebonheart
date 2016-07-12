@@ -1,0 +1,6 @@
+{
+    "parent": "block/wall_side",
+    "textures": {
+        "wall": "ea:blocks/gems/arcanite/arcanite_block_brick_base"
+    }
+}

@@ -1,22 +1,16 @@
 package com.ebonheart.EbonArtsMod.common.items.tools;
 
-import java.util.Collections;
 import java.util.List;
 import java.util.Set;
 
 import net.minecraft.block.Block;
 import net.minecraft.block.material.Material;
 import net.minecraft.block.state.IBlockState;
-import net.minecraft.entity.EntityLivingBase;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.init.Blocks;
 import net.minecraft.item.EnumRarity;
 import net.minecraft.item.ItemStack;
 import net.minecraft.item.ItemTool;
-import net.minecraft.item.Item.ToolMaterial;
-import net.minecraft.world.IBlockAccess;
-import net.minecraft.world.World;
-import net.minecraftforge.common.ForgeHooks;
 import net.minecraftforge.fml.relauncher.Side;
 import net.minecraftforge.fml.relauncher.SideOnly;
 
@@ -63,7 +57,7 @@ public class ItemConsecration extends ItemTool {
 	
 	private static final Set<Material> EFFECTIVE_MATERIALS = ImmutableSet.of(
 			// Pickaxe
-			Material.rock, Material.iron, Material.ice, Material.glass, Material.piston, Material.anvil, Material.circuits,
+			Material.rock, Material.iron, Material.ice, Material.glass, Material.piston, Material.anvil, Material.circuits, //Material., 
 			
 			// Shovel
 			Material.grass, Material.ground, Material.sand, Material.snow, Material.craftedSnow, Material.clay
@@ -84,5 +78,12 @@ public class ItemConsecration extends ItemTool {
 
 		return DIG_SPEED_DEFAULT;
 	}
+	
+	public boolean canHarvestBlock(IBlockState blockIn)
+    {
+        Block block = blockIn.getBlock();
+        return //block == Blocks.field_189877_df || block == Blocks.field_189879_dh || block == Blocks.field_189880_di || 
+        		block == Blocks.stained_hardened_clay || block == Blocks.hardened_clay;
+    }
 	
 }

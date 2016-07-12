@@ -2,8 +2,6 @@ package com.ebonheart.EbonArtsMod.api;
 
 import net.minecraftforge.client.event.sound.SoundEvent;
 
-
-
 public class SoundsEA {
 	
 	public static SoundEvent island;

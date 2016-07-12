@@ -13,12 +13,9 @@ import net.minecraft.init.Blocks;
 import net.minecraft.item.EnumRarity;
 import net.minecraft.item.ItemStack;
 import net.minecraft.item.ItemTool;
-import net.minecraft.item.Item.ToolMaterial;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.util.text.TextFormatting;
-import net.minecraft.world.IBlockAccess;
 import net.minecraft.world.World;
-import net.minecraftforge.common.ForgeHooks;
 import net.minecraftforge.fml.relauncher.Side;
 import net.minecraftforge.fml.relauncher.SideOnly;
 
@@ -33,6 +30,7 @@ public class ItemNecrosis extends ItemTool {
 	private static final float DIG_SPEED_DEFAULT = 1.0f;
 	private static final float BASE_DAMAGE = 3.0f;
 	private static final float ATTACK_SPEED = -2.4f;
+	
 	
 	public ItemNecrosis(ToolMaterial material) 
 	{

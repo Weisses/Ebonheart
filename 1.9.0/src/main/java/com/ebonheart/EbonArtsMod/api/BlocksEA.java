@@ -134,12 +134,15 @@ public class BlocksEA {
 	public static Block glowstone_trapdoor;
 	public static Block ebonheart_trapdoor;
 	
-	//public static Block draconium_door;
-	//public static Block velious_door;
-	//public static Block arcanite_door;
-	//public static Block katcheen_door;
-	//public static Block necrocite_door;
-	//public static Block soularite_door;
+	public static Block draconium_block_fancybrick;
+	public static Block velious_block_fancybrick;
+	public static Block arcanite_block_fancybrick;
+	public static Block katcheen_block_fancybrick;
+	public static Block necrocite_block_fancybrick;
+	public static Block soularite_block_fancybrick;
+	public static Block obsidian_block_fancybrick;
+	public static Block glowstone_block_fancybrick;
+	public static Block ebonheart_block_fancybrick;
 	
 	///public static Block cobble_mystic_block;
 	public static Block cobble_mystic_block_normal;
@@ -211,20 +214,6 @@ public class BlocksEA {
 	
 	
 	
-	//public static Block purified_mystic_block;
-	
-	//public static Block test_liquid;
-	//public static Block flowing_test_liquid;
-	
-	//public static Block mystic_furnace;
-	//public static Block lit_mystic_furnace;
-	
-	//public static Block color_atrium;
-	//public static Block lit_color_atrium;
-
-	//public static Block double_test_slab;
-	//public static Block test_slab;
-	
 	//public static Block tutorialTileEntity;
 	
 	//public static Block onyxius_ore;
@@ -236,5 +225,137 @@ public class BlocksEA {
 	//public static Block infernus_ore;
 	//public static Block norn_stone;
 	//public static Block mystalite_ore;
+
+	
+	
+	public static Block cryptic_draconium_block;
+	public static Block cryptic_velious_block;
+	public static Block cryptic_arcanite_block;
+	public static Block cryptic_katcheen_block;
+	public static Block cryptic_necrocite_block;
+	public static Block cryptic_soularite_block;
+	public static Block cryptic_obsidian_block;
+	public static Block cryptic_glowstone_block;
+	public static Block cryptic_ebonheart_block;
+	
+	public static Block cryptic_draconium_block_brick;
+	public static Block cryptic_velious_block_brick;
+	public static Block cryptic_arcanite_block_brick;
+	public static Block cryptic_katcheen_block_brick;
+	public static Block cryptic_necrocite_block_brick;
+	public static Block cryptic_soularite_block_brick;
+	public static Block cryptic_obsidian_block_brick;
+	public static Block cryptic_glowstone_block_brick;
+	public static Block cryptic_ebonheart_block_brick;
+	
+	public static Block double_cryptic_draconium_slab;
+	public static Block double_cryptic_velious_slab;
+	public static Block double_cryptic_arcanite_slab;
+	public static Block double_cryptic_katcheen_slab;
+	public static Block double_cryptic_necrocite_slab;
+	public static Block double_cryptic_soularite_slab;
+	public static Block double_cryptic_obsidian_slab;
+	public static Block double_cryptic_glowstone_slab;
+	public static Block double_cryptic_ebonheart_slab;
+	
+	public static Block cryptic_draconium_slab;
+	public static Block cryptic_velious_slab;
+	public static Block cryptic_arcanite_slab;
+	public static Block cryptic_katcheen_slab;
+	public static Block cryptic_necrocite_slab;
+	public static Block cryptic_soularite_slab;
+	public static Block cryptic_obsidian_slab;
+	public static Block cryptic_glowstone_slab;
+	public static Block cryptic_ebonheart_slab;
+	
+	public static Block cryptic_draconium_stairs;
+	public static Block cryptic_velious_stairs;
+	public static Block cryptic_arcanite_stairs;
+	public static Block cryptic_katcheen_stairs;
+	public static Block cryptic_necrocite_stairs;
+	public static Block cryptic_soularite_stairs;
+	public static Block cryptic_obsidian_stairs;
+	public static Block cryptic_glowstone_stairs;
+	public static Block cryptic_ebonheart_stairs;
+	
+	public static Block cryptic_draconium_fence;
+	public static Block cryptic_velious_fence;
+	public static Block cryptic_arcanite_fence;
+	public static Block cryptic_katcheen_fence;
+	public static Block cryptic_necrocite_fence;
+	public static Block cryptic_soularite_fence;
+	public static Block cryptic_obsidian_fence;
+	public static Block cryptic_glowstone_fence;
+	public static Block cryptic_ebonheart_fence;
+	
+	public static Block cryptic_draconium_fence_gate;
+	public static Block cryptic_velious_fence_gate;
+	public static Block cryptic_arcanite_fence_gate;
+	public static Block cryptic_katcheen_fence_gate;
+	public static Block cryptic_necrocite_fence_gate;
+	public static Block cryptic_soularite_fence_gate;
+	public static Block cryptic_obsidian_fence_gate;
+	public static Block cryptic_glowstone_fence_gate;
+	public static Block cryptic_ebonheart_fence_gate;
+	
+	public static Block cryptic_draconium_wall;
+	public static Block cryptic_velious_wall;
+	public static Block cryptic_arcanite_wall;
+	public static Block cryptic_katcheen_wall;
+	public static Block cryptic_necrocite_wall;
+	public static Block cryptic_soularite_wall;
+	public static Block cryptic_obsidian_wall;
+	public static Block cryptic_glowstone_wall;
+	public static Block cryptic_ebonheart_wall;
+	
+	public static Block cryptic_draconium_torch;
+	public static Block cryptic_velious_torch;
+	public static Block cryptic_arcanite_torch;
+	public static Block cryptic_katcheen_torch;
+	public static Block cryptic_necrocite_torch;
+	public static Block cryptic_soularite_torch;
+	public static Block cryptic_obsidian_torch;
+	public static Block cryptic_glowstone_torch;
+	public static Block cryptic_ebonheart_torch;
+	
+	public static Block cryptic_draconium_ladder;
+	public static Block cryptic_velious_ladder;
+	public static Block cryptic_arcanite_ladder;
+	public static Block cryptic_katcheen_ladder;
+	public static Block cryptic_necrocite_ladder;
+	public static Block cryptic_soularite_ladder;
+	public static Block cryptic_obsidian_ladder;
+	public static Block cryptic_glowstone_ladder;
+	public static Block cryptic_ebonheart_ladder;
+	
+	public static Block cryptic_draconium_pillar;
+	public static Block cryptic_velious_pillar;
+	public static Block cryptic_arcanite_pillar;
+	public static Block cryptic_katcheen_pillar;
+	public static Block cryptic_necrocite_pillar;
+	public static Block cryptic_soularite_pillar;
+	public static Block cryptic_obsidian_pillar;
+	public static Block cryptic_glowstone_pillar;
+	public static Block cryptic_ebonheart_pillar;
+	
+	public static Block cryptic_draconium_trapdoor;
+	public static Block cryptic_velious_trapdoor;
+	public static Block cryptic_arcanite_trapdoor;
+	public static Block cryptic_katcheen_trapdoor;
+	public static Block cryptic_necrocite_trapdoor;
+	public static Block cryptic_soularite_trapdoor;
+	public static Block cryptic_obsidian_trapdoor;
+	public static Block cryptic_glowstone_trapdoor;
+	public static Block cryptic_ebonheart_trapdoor;
+	
+	public static Block cryptic_draconium_block_fancybrick;
+	public static Block cryptic_velious_block_fancybrick;
+	public static Block cryptic_arcanite_block_fancybrick;
+	public static Block cryptic_katcheen_block_fancybrick;
+	public static Block cryptic_necrocite_block_fancybrick;
+	public static Block cryptic_soularite_block_fancybrick;
+	public static Block cryptic_obsidian_block_fancybrick;
+	public static Block cryptic_glowstone_block_fancybrick;
+	public static Block cryptic_ebonheart_block_fancybrick;
 	
 }

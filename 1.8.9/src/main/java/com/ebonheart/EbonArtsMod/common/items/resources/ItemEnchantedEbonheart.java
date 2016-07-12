@@ -2,29 +2,25 @@ package com.ebonheart.EbonArtsMod.common.items.resources;
 
 import java.util.List;
 
-import com.ebonheart.EbonArtsMod.EbonArtsMod;
-import com.ebonheart.EbonArtsMod.common.entity.EntityEnchantedEbonheart;
-import com.ebonheart.EbonArtsMod.common.items.ItemHelper;
-import com.mojang.realmsclient.gui.ChatFormatting;
-
-import net.minecraft.block.BlockJukebox;
-import net.minecraft.block.state.IBlockState;
-import net.minecraft.entity.item.EntityExpBottle;
+import net.minecraft.client.audio.SoundCategory;
 import net.minecraft.entity.player.EntityPlayer;
-import net.minecraft.init.Blocks;
 import net.minecraft.item.EnumRarity;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
 import net.minecraft.stats.StatList;
-import net.minecraft.util.EnumFacing;
 import net.minecraft.world.World;
 import net.minecraftforge.fml.relauncher.Side;
 import net.minecraftforge.fml.relauncher.SideOnly;
+
+import com.ebonheart.EbonArtsMod.common.entity.EntityEnchantedEbonheart;
+import com.ebonheart.EbonArtsMod.common.items.ItemHelper;
+import com.mojang.realmsclient.gui.ChatFormatting;
 
 public class ItemEnchantedEbonheart extends Item {
 	
 	public ItemEnchantedEbonheart() 
 	{
+		
 		ItemHelper.setItemName(this, "gem/enchanted_ebonheart");
 		this.setMaxStackSize(16);
 	}

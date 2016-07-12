@@ -1,0 +1,6 @@
+{
+    "parent": "block/wall_nsew",
+    "textures": {
+        "wall": "ea:blocks/gems/draconium/draconium_block_brick_base"
+    }
+}

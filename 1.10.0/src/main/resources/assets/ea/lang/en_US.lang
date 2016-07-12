@@ -33,6 +33,13 @@ item.ea:gem/cryptic_ebonheart.name=Cryptic Ebonheart
 item.ea:gem/cryptic_obsidian_shard.name=Cryptic Obsidian Shard
 item.ea:gem/cryptic_glowstone_shard.name=Cryptic Glowstone Shard
 
+item.ea:gem/dense_draconium_dust.name=Dense Draconium Dust
+item.ea:gem/dense_velious.name=Dense Velious
+item.ea:gem/dense_arcanite.name=Dense Arcanite
+item.ea:gem/dense_katcheen.name=Dense Katcheen
+item.ea:gem/dense_necrocite.name=Dense Necrocite
+item.ea:gem/dense_soularite.name=Dense Soularite
+
 item.ea:disc/glowing_disc.name=Glowing Disc
 item.ea:disc/shimmering_disc.name=Shimmering Disc
 item.ea:disc/laminate_disc.name=Laminate Disc

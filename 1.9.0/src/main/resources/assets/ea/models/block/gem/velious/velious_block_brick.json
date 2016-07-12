@@ -2,9 +2,9 @@
     "parent": "block/cube_all",
     "ambientocclusion": false,
     "textures": {
-        "particle": "ea:blocks/gems/velious/velious_block_brick",
-        "0": "ea:blocks/gems/velious/velious_block_brick",
-        "1": "ea:blocks/gems/velious/velious_block_brick_base"
+        "particle": "ea:blocks/block/velious_brick",
+        "0": "ea:blocks/block/velious_brick",
+        "1": "ea:blocks/block/velious_brick_base"
     },
     "elements": [
         {

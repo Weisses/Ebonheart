@@ -2,8 +2,8 @@
     "parent": "block/cube_all",
     "ambientocclusion": false,
     "textures": {
-        "particle": "ea:blocks/gems/katcheen/katcheen_block_side",
-        "0": "ea:blocks/gems/katcheen/katcheen_block_side",
+        "particle": "ea:blocks/block/katcheen_block",
+        "0": "ea:blocks/block/katcheen_block",
         "1": "blocks/torch_on"
     },
     "elements": [

@@ -1,14 +1,5 @@
 package com.ebonheart.EbonArtsMod.common.utils.events;
 
-import com.ebonheart.EbonArtsMod.common.entity.modifiers.EAAttributeModifier;
-import com.ebonheart.EbonArtsMod.init.InitBlocksEA;
-import com.ebonheart.EbonArtsMod.init.InitItemsEA;
-
-import net.minecraft.entity.SharedMonsterAttributes;
-import net.minecraft.entity.player.EntityPlayer;
-import net.minecraft.init.Items;
-import net.minecraft.item.ItemStack;
-import net.minecraft.util.EnumParticleTypes;
 import net.minecraftforge.fml.common.eventhandler.SubscribeEvent;
 import net.minecraftforge.fml.common.gameevent.TickEvent;
 

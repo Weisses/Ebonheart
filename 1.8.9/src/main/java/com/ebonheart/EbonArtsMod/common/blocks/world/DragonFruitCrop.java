@@ -6,8 +6,10 @@ import net.minecraft.block.BlockCrops;
 import net.minecraft.block.properties.PropertyInteger;
 import net.minecraft.block.state.IBlockState;
 import net.minecraft.item.Item;
+import net.minecraft.util.AxisAlignedBB;
 import net.minecraft.util.BlockPos;
 import net.minecraft.util.EnumParticleTypes;
+import net.minecraft.world.IBlockAccess;
 import net.minecraft.world.World;
 import net.minecraftforge.fml.relauncher.Side;
 import net.minecraftforge.fml.relauncher.SideOnly;
@@ -20,7 +22,8 @@ public class DragonFruitCrop extends BlockCrops {
 	
 	
 	private static Random random = new Random();
-	public static final PropertyInteger DRAGONFRUITAGE = PropertyInteger.create("age", 0, 7);
+	public static final PropertyInteger AGE = PropertyInteger.create("age", 0, 7);
+	
 	public DragonFruitCrop()
 	{
 		BlockHelper.setBlockName(this, "plant/dragon_fruit_crop");
@@ -36,18 +39,11 @@ public class DragonFruitCrop extends BlockCrops {
         return InitItemsEA.dragon_fruit;
     }
 
-    //public AxisAlignedBB getBoundingBox(IBlockState state, IBlockAccess source, BlockPos pos)
-    ///{
-    //	return DRAGONFRUIT_AABB[((Integer)state.getValue(this.getAgeProperty())).intValue()];
-    //}
+    
     
     @SideOnly(Side.CLIENT)
-    public void randomDisplayTick(World worldIn, BlockPos pos, IBlockState state, Random rand)
+    public void randomDisplayTick(IBlockState state, World worldIn, BlockPos pos, Random rand)
     {
-    
-    //@SideOnly(Side.CLIENT)
-    //public void randomDisplayTick(IBlockState state, World worldIn, BlockPos pos, Random rand)
-    //{
     	if(!EbonArtsConfiguration.plantParticle)
 		{
     	if(worldIn.getLight(pos) >= 8 || worldIn.canSeeSky(pos))

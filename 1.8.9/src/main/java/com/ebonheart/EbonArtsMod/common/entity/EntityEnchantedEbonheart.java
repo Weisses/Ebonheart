@@ -1,17 +1,13 @@
 package com.ebonheart.EbonArtsMod.common.entity;
 
-import com.ebonheart.EbonArtsMod.EbonArtsMod;
-
-import net.minecraft.client.Minecraft;
 import net.minecraft.entity.EntityLivingBase;
 import net.minecraft.entity.item.EntityXPOrb;
 import net.minecraft.entity.projectile.EntityThrowable;
 import net.minecraft.util.BlockPos;
-import net.minecraft.util.EnumParticleTypes;
 import net.minecraft.util.MovingObjectPosition;
 import net.minecraft.world.World;
-import net.minecraftforge.fml.relauncher.Side;
-import net.minecraftforge.fml.relauncher.SideOnly;
+
+import com.ebonheart.EbonArtsMod.EbonArtsMod;
 
 public class EntityEnchantedEbonheart extends EntityThrowable {
 	

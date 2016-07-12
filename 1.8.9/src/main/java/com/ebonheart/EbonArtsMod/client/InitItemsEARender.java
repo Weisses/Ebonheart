@@ -1,23 +1,17 @@
 package com.ebonheart.EbonArtsMod.client;
 
-import java.util.HashSet;
-import java.util.Set;
-
-import com.ebonheart.EbonArtsMod.api.ItemsEA;
-import com.ebonheart.EbonArtsMod.api.Reference;
-import com.ebonheart.EbonArtsMod.init.InitItemsEA;
-
 import net.minecraft.client.Minecraft;
-import net.minecraft.client.renderer.ItemMeshDefinition;
 import net.minecraft.client.resources.model.ModelResourceLocation;
 //import net.minecraft.client.resources.model.ModelResourceLocation;
 import net.minecraft.item.Item;
-import net.minecraftforge.client.model.ModelLoader;
+
+import com.ebonheart.EbonArtsMod.api.ItemsEA;
 
 public final class InitItemsEARender extends ItemsEA {
 	
 	public static void registerRenders()
 	{
+		//registerRender(test_book);
 		registerRender(draconium_dust);
 		registerRender(velious);
 		registerRender(arcanite);
@@ -25,6 +19,21 @@ public final class InitItemsEARender extends ItemsEA {
 		registerRender(necrocite);
 		registerRender(soularite);
 		registerRender(ebonheart);
+		
+		registerRender(cryptic_draconium_dust);
+		registerRender(cryptic_velious);
+		registerRender(cryptic_arcanite);
+		registerRender(cryptic_katcheen);
+		registerRender(cryptic_necrocite);
+		registerRender(cryptic_soularite);
+		registerRender(cryptic_ebonheart);
+		registerRender(cryptic_obsidian_shards);
+		registerRender(cryptic_glowstone_shards);
+		
+		
+		
+		
+		
 		
 		registerRender(enchanted_ebonheart);
 		registerRender(empowered_blade);
@@ -92,12 +101,21 @@ public final class InitItemsEARender extends ItemsEA {
 		registerRender(obsidian_shards);
 		registerRender(glowstone_shards);
 		
-		
+		registerRender(dense_draconium_dust);
+		registerRender(dense_velious);
+		registerRender(dense_arcanite);
+		registerRender(dense_katcheen);
+		registerRender(dense_necrocite);
+		registerRender(dense_soularite);
 		
 		registerRender(hellion_fruit);
 		registerRender(sacred_fruit);
 		registerRender(dragon_fruit);
 		
+		
+		
+		
+		//registerRender(ebon_airship);
 		//registerRender(test_shield);
 		
 	}

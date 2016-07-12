@@ -1,12 +1,6 @@
 package com.ebonheart.EbonArtsMod.common.blocks.basic.dyeables;
 
-import com.ebonheart.EbonArtsMod.EbonArtsMod;
-import com.ebonheart.EbonArtsMod.common.blocks.BlockHelper;
-import com.ebonheart.EbonArtsMod.init.InitBlocksEA;
-
 import net.minecraft.block.Block;
-import net.minecraft.block.BlockRotatedPillar;
-import net.minecraft.block.material.Material;
 import net.minecraft.block.state.IBlockState;
 import net.minecraft.init.Blocks;
 import net.minecraft.util.BlockPos;
@@ -15,6 +9,8 @@ import net.minecraft.util.EnumWorldBlockLayer;
 import net.minecraft.world.IBlockAccess;
 import net.minecraftforge.fml.relauncher.Side;
 import net.minecraftforge.fml.relauncher.SideOnly;
+
+import com.ebonheart.EbonArtsMod.init.InitBlocksEA;
 
 public class BlockMysticStoneGlass extends BlockMysticStone {
 	
@@ -40,7 +36,7 @@ public class BlockMysticStoneGlass extends BlockMysticStone {
     /**
      * Used to determine ambient occlusion and culling when rebuilding chunks for render
      */
-    public boolean isOpaqueCube()
+    public boolean isOpaqueCube(IBlockState state)
     {
         return false;
     }

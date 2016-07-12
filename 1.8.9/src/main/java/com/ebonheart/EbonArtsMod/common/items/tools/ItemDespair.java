@@ -3,20 +3,18 @@ package com.ebonheart.EbonArtsMod.common.items.tools;
 import java.util.List;
 import java.util.Random;
 
-import com.ebonheart.EbonArtsMod.EbonArtsMod;
-import com.ebonheart.EbonArtsMod.common.items.ItemHelper;
-import com.ebonheart.EbonArtsMod.common.items.WeaponHelper;
-import com.mojang.realmsclient.gui.ChatFormatting;
-
 import net.minecraft.entity.EntityLivingBase;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.item.EnumRarity;
 import net.minecraft.item.ItemStack;
 import net.minecraft.item.ItemSword;
 import net.minecraft.potion.Potion;
-import net.minecraft.world.World;
 import net.minecraftforge.fml.relauncher.Side;
 import net.minecraftforge.fml.relauncher.SideOnly;
+
+import com.ebonheart.EbonArtsMod.common.items.ItemHelper;
+import com.ebonheart.EbonArtsMod.common.items.WeaponHelper;
+import com.mojang.realmsclient.gui.ChatFormatting;
 
 public class ItemDespair extends ItemSword {
 
@@ -34,9 +32,9 @@ public class ItemDespair extends ItemSword {
 		if (d < 30)
 		{
 			Potion potion = Potion.wither;
-					//.wither;
+			//.wither;
 			Potion potion2 = Potion.confusion;
-					//.confusion;
+			//.confusion;
 			EntityPlayer playerIn = attacker.getEntityWorld().getPlayerEntityByUUID(attacker.getUniqueID());
 			WeaponHelper.addPotionEffectToTarget(target, potion, 4, 1);
 			WeaponHelper.addPotionEffectToTarget(target, potion2, 3, 1);

@@ -9,6 +9,7 @@ import net.minecraft.block.BlockDirectional;
 import net.minecraft.block.BlockFence;
 import net.minecraft.block.BlockFenceGate;
 import net.minecraft.block.BlockPlanks;
+import net.minecraft.block.SoundType;
 import net.minecraft.block.material.Material;
 import net.minecraft.block.properties.IProperty;
 import net.minecraft.block.properties.PropertyBool;
@@ -18,6 +19,7 @@ import net.minecraft.entity.EntityLivingBase;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.init.Blocks;
 import net.minecraft.util.EnumFacing;
+import net.minecraft.util.math.BlockPos;
 import net.minecraft.world.IBlockAccess;
 import net.minecraft.world.World;
 import net.minecraftforge.fml.relauncher.Side;
@@ -37,6 +39,11 @@ public class EABlockFenceGate extends BlockFenceGate {
         this.setStepSound(stepSound.STONE);
 	}
 	
+	@Override
+	public boolean isFlammable(IBlockAccess world, BlockPos pos, EnumFacing face)
+    {
+        return false;
+    }
 	
 	
 }

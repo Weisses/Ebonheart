@@ -20,7 +20,7 @@ plugins {
     id "net.minecraftforge.gradle.forge" version "2.0.2"
 }
 */
-version = "v2.3.9a-mc1.9.4"
+version = "v2.4.2b-mc1.9.4"
 group= "com.ebonheart.EbonArtsMod" // http://maven.apache.org/guides/mini/guide-naming-conventions.html
 archivesBaseName = "EbonArts"
 
@@ -28,7 +28,7 @@ sourceCompatibility = 1.8
 targetCompatibility = 1.8
 
 minecraft {
-    version = "1.9.4-12.17.0.1963"
+    version = "1.9.4-12.17.0.1976"
     runDir = "run"
     
     // the mappings can be changed at any time, and must be in the following format.

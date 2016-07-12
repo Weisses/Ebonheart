@@ -17,6 +17,7 @@ public class ItemDraconiumDust extends Item {
 	
 	public ItemDraconiumDust() 
 	{
+		
 		ItemHelper.setItemName(this, "gem/draconium_dust");
 	}
 	

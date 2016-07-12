@@ -63,7 +63,7 @@ public class ItemConsecration extends ItemTool {
 	
 	private static final Set<Material> EFFECTIVE_MATERIALS = ImmutableSet.of(
 			// Pickaxe
-			Material.rock, Material.iron, Material.ice, Material.glass, Material.piston, Material.anvil, Material.circuits,
+			Material.rock, Material.iron, Material.ice, Material.glass, Material.piston, Material.anvil, Material.circuits, //Material., 
 			
 			// Shovel
 			Material.grass, Material.ground, Material.sand, Material.snow, Material.craftedSnow, Material.clay
@@ -84,5 +84,12 @@ public class ItemConsecration extends ItemTool {
 
 		return DIG_SPEED_DEFAULT;
 	}
+	
+	public boolean canHarvestBlock(IBlockState blockIn)
+    {
+        Block block = blockIn.getBlock();
+        return //block == Blocks.field_189877_df || block == Blocks.field_189879_dh || block == Blocks.field_189880_di || 
+        		block == Blocks.stained_hardened_clay || block == Blocks.hardened_clay;
+    }
 	
 }

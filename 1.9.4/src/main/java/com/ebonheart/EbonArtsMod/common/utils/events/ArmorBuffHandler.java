@@ -1,6 +1,7 @@
 package com.ebonheart.EbonArtsMod.common.utils.events;
 
 import com.ebonheart.EbonArtsMod.common.entity.modifiers.EAAttributeModifier;
+import com.ebonheart.EbonArtsMod.common.utils.LogHelper;
 import com.ebonheart.EbonArtsMod.init.InitItemsEA;
 
 import net.minecraft.entity.SharedMonsterAttributes;
@@ -81,18 +82,25 @@ public class ArmorBuffHandler {
     	
     	if (celestialBuff) 
     	{
-    		//LogHelper.info("Has Burnished buff.");
+    		//LogHelper.info("Has Celestial buff.");
     		if (event.player.getItemStackFromSlot(EntityEquipmentSlot.HEAD) == null || event.player.getItemStackFromSlot(EntityEquipmentSlot.HEAD).getItem() != InitItemsEA.celestial_helmet
     			|| event.player.getItemStackFromSlot(EntityEquipmentSlot.CHEST) == null || event.player.getItemStackFromSlot(EntityEquipmentSlot.CHEST).getItem() != InitItemsEA.celestial_chestplate
     			|| event.player.getItemStackFromSlot(EntityEquipmentSlot.LEGS) == null || event.player.getItemStackFromSlot(EntityEquipmentSlot.LEGS).getItem() != InitItemsEA.celestial_leggings
     			|| event.player.getItemStackFromSlot(EntityEquipmentSlot.FEET) == null || event.player.getItemStackFromSlot(EntityEquipmentSlot.FEET).getItem() != InitItemsEA.celestial_boots) 
     		{
-    			event.player.capabilities.allowFlying = false;
-    			event.player.capabilities.isFlying = false;
+    			
+    			
+    			
+    			if (!event.player.capabilities.isCreativeMode)
+    			{
+    				event.player.capabilities.allowFlying = false;
+    				event.player.capabilities.isFlying = false;
+    				
+    				//LogHelper.info("Removed Celestial Flight. - Survival");
+    			}
     			
     			event.player.getEntityAttribute(SharedMonsterAttributes.MOVEMENT_SPEED).removeModifier(EAAttributeModifier.CELESTIAL_SPEED_BONUS);
-    			//LogHelper.info("Burnished buff removed!");
-    			
+    			//LogHelper.info("Removed Celestial buff.");
     	    }
     		
         } 

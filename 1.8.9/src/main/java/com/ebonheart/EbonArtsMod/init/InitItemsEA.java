@@ -1,29 +1,23 @@
 package com.ebonheart.EbonArtsMod.init;
 
-import java.util.HashSet;
-import java.util.Set;
-
-import net.minecraft.init.Blocks;
 import net.minecraft.item.Item;
 import net.minecraft.item.Item.ToolMaterial;
-import net.minecraft.item.ItemArmor;
-import net.minecraft.item.ItemFood;
 import net.minecraftforge.common.util.EnumHelper;
 import net.minecraftforge.fml.common.registry.GameRegistry;
 
-import com.ebonheart.EbonArtsMod.EbonArtsMod;
 import com.ebonheart.EbonArtsMod.api.ItemsEA;
-import com.ebonheart.EbonArtsMod.common.items.MaterialHelper;
 import com.ebonheart.EbonArtsMod.common.items.armor.ItemBurnishedArmor;
 import com.ebonheart.EbonArtsMod.common.items.armor.ItemCelestialArmor;
 import com.ebonheart.EbonArtsMod.common.items.armor.ItemScalemailArmor;
 import com.ebonheart.EbonArtsMod.common.items.armor.ItemVengeanceArmor;
 import com.ebonheart.EbonArtsMod.common.items.resources.ItemArcanite;
+import com.ebonheart.EbonArtsMod.common.items.resources.ItemCryptic;
+import com.ebonheart.EbonArtsMod.common.items.resources.ItemDense;
 import com.ebonheart.EbonArtsMod.common.items.resources.ItemDraconiumDust;
 import com.ebonheart.EbonArtsMod.common.items.resources.ItemDragonFruit;
 import com.ebonheart.EbonArtsMod.common.items.resources.ItemEbonheart;
-import com.ebonheart.EbonArtsMod.common.items.resources.ItemEnchantedEbonheart;
 import com.ebonheart.EbonArtsMod.common.items.resources.ItemEmpoweredBlade;
+import com.ebonheart.EbonArtsMod.common.items.resources.ItemEnchantedEbonheart;
 import com.ebonheart.EbonArtsMod.common.items.resources.ItemGlowstoneShard;
 import com.ebonheart.EbonArtsMod.common.items.resources.ItemHellionFruit;
 import com.ebonheart.EbonArtsMod.common.items.resources.ItemKatcheen;
@@ -52,7 +46,6 @@ import com.ebonheart.EbonArtsMod.common.items.tools.ItemKatcheenSword;
 import com.ebonheart.EbonArtsMod.common.items.tools.ItemMassacre;
 import com.ebonheart.EbonArtsMod.common.items.tools.ItemNecrosis;
 import com.ebonheart.EbonArtsMod.common.items.tools.ItemSouleater;
-import com.ebonheart.EbonArtsMod.common.utils.SoundEventsEA;
 
 //@SuppressWarnings("WeakerAccess")
 public class InitItemsEA extends ItemsEA {
@@ -78,6 +71,17 @@ public class InitItemsEA extends ItemsEA {
 		registerItem(obsidian_shards = new ItemObsidianShard());
 		registerItem(glowstone_shards = new ItemGlowstoneShard());
 		
+		registerItem(cryptic_draconium_dust = new ItemCryptic("gem/cryptic_draconium_dust"));
+		registerItem(cryptic_velious = new ItemCryptic("gem/cryptic_velious"));
+		registerItem(cryptic_arcanite = new ItemCryptic("gem/cryptic_arcanite"));
+		registerItem(cryptic_katcheen = new ItemCryptic("gem/cryptic_katcheen"));
+		registerItem(cryptic_necrocite = new ItemCryptic("gem/cryptic_necrocite"));
+		registerItem(cryptic_soularite = new ItemCryptic("gem/cryptic_soularite"));
+		registerItem(cryptic_ebonheart = new ItemCryptic("gem/cryptic_ebonheart"));
+		registerItem(cryptic_obsidian_shards = new ItemCryptic("gem/cryptic_obsidian_shard"));
+		registerItem(cryptic_glowstone_shards = new ItemCryptic("gem/cryptic_glowstone_shard"));
+		
+		
 		registerItem(glowing_disc = new ItemMusicDiscEA("disc/glowing_disc", "records.glowing_disc"));
 		registerItem(shimmering_disc = new ItemMusicDiscEA("disc/shimmering_disc", "records.shimmering_disc"));
 		registerItem(laminate_disc = new ItemMusicDiscEA("disc/laminate_disc", "records.laminate_disc"));
@@ -89,6 +93,23 @@ public class InitItemsEA extends ItemsEA {
 		registerItem(empowered_blade = new ItemEmpoweredBlade());
 		
 		registerItem(enchanted_ebonheart = new ItemEnchantedEbonheart());
+		
+		
+		
+		registerItem(dense_draconium_dust = new ItemDense("gem/dense_draconium_dust"));
+		registerItem(dense_velious = new ItemDense("gem/dense_velious"));
+		registerItem(dense_arcanite = new ItemDense("gem/dense_arcanite"));
+		registerItem(dense_katcheen = new ItemDense("gem/dense_katcheen"));
+		registerItem(dense_necrocite = new ItemDense("gem/dense_necrocite"));
+		registerItem(dense_soularite = new ItemDense("gem/dense_soularite"));
+		
+		
+		//registerItem(hellion_fruit = new ItemHellionFruit(6, 0.6F));
+		//registerItem(sacred_fruit = new ItemSacredFruit(3, 0.8F));
+		//registerItem(dragon_fruit = new ItemDragonFruit(6, 0.8F));
+		
+		
+		
 		
 		registerItem(arcanite_pickaxe = new ItemArcanitePickaxe(arcaniteToolMaterial));
 		registerItem(arcanite_axe = new ItemArcaniteAxe(ToolMaterial.IRON));
@@ -115,9 +136,6 @@ public class InitItemsEA extends ItemsEA {
 		registerItem(hellion_fruit = new ItemHellionFruit(6, 0.6F));
 		registerItem(sacred_fruit = new ItemSacredFruit(3, 0.8F));
 		registerItem(dragon_fruit = new ItemDragonFruit(6, 0.8F));
-				//, InitBlocksEA.dragon_fruit//, Blocks.farmland
-				//));
-						
 		
 		registerItem(vengeance_helmet = new ItemVengeanceArmor("armor/vengeance_helmet", 0, 0));
 		registerItem(vengeance_chestplate = new ItemVengeanceArmor("armor/vengeance_chestplate", 0, 1));
@@ -129,28 +147,12 @@ public class InitItemsEA extends ItemsEA {
 		registerItem(celestial_leggings = new ItemCelestialArmor("armor/celestial_leggings", 0, 2));
 		registerItem(celestial_boots = new ItemCelestialArmor("armor/celestial_boots", 0, 3));
 		
-		//void_helmet = new ItemVoidArmor("armor/void_helmet", 0, EntityEquipmentSlot.HEAD));
-		//void_chestplate = new ItemVoidArmor("armor/void_chestplate", 0, EntityEquipmentSlot.CHEST));
-		//void_leggings = new ItemVoidArmor("armor/void_leggings", 0, EntityEquipmentSlot.LEGS));
-		//void_boots = new ItemVoidArmor("armor/void_boots", 0, EntityEquipmentSlot.FEET));
-		
-		//infernal_helmet = new ItemInfernalArmor("armor/infernal_helmet", 0, EntityEquipmentSlot.HEAD));
-		//infernal_chestplate = new ItemInfernalArmor("armor/infernal_chestplate", 0, EntityEquipmentSlot.CHEST));
-		//infernal_leggings = new ItemInfernalArmor("armor/infernal_leggings", 0, EntityEquipmentSlot.LEGS));
-		//infernal_boots = new ItemInfernalArmor("armor/infernal_boots", 0, EntityEquipmentSlot.FEET));
-		
-		
-		
 		registerItem(deception = new ItemDeception(legendaryWeaponMaterial));
 		registerItem(frostbite = new ItemFrostbite(legendaryWeaponMaterial));
 		registerItem(massacre = new ItemMassacre(legendaryWeaponMaterial));
 		registerItem(blazefury = new ItemBlazefury(legendaryWeaponMaterial));
 		registerItem(despair = new ItemDespair(legendaryWeaponMaterial));
 		registerItem(souleater = new ItemSouleater(legendaryWeaponMaterial));
-		
-		//test_shield = new ItemTestShield());
-		//omniplex = new Omniplex().setUnlocalizedName("omniplex");
-		//banana = (ItemFood) new ItemFood(3, 0.3F, false).setUnlocalizedName("banana");
 		
 		registerItem(consecration = new ItemConsecration(0, legendaryToolMaterial, null));
 		registerItem(necrosis = new ItemNecrosis(0, legendaryToolMaterial, null));
@@ -170,3 +172,54 @@ public class InitItemsEA extends ItemsEA {
 	//}
 	
 }
+
+
+/**
+		arcanite_pickaxe = registerItem(new ItemArcanitePickaxe(arcaniteToolMaterial));
+		arcanite_axe = registerItem(new ItemArcaniteAxe(ToolMaterial.IRON));
+		arcanite_shovel = registerItem(new ItemArcaniteShovel(arcaniteToolMaterial));
+		arcanite_hoe = registerItem(new ItemArcaniteHoe(arcaniteToolMaterial));
+		arcanite_sword = registerItem(new ItemArcaniteSword(arcaniteToolMaterial));
+		
+		burnished_helmet = registerItem(new ItemBurnishedArmor("armor/burnished_helmet", 0, EntityEquipmentSlot.HEAD));
+		burnished_chestplate = registerItem(new ItemBurnishedArmor("armor/burnished_chestplate", 0, EntityEquipmentSlot.CHEST));
+		burnished_leggings = registerItem(new ItemBurnishedArmor("armor/burnished_leggings", 0, EntityEquipmentSlot.LEGS));
+		burnished_boots = registerItem(new ItemBurnishedArmor("armor/burnished_boots", 0, EntityEquipmentSlot.FEET));
+		
+		katcheen_pickaxe = registerItem(new ItemKatcheenPickaxe(katcheenToolMaterial));
+		katcheen_axe = registerItem(new ItemKatcheenAxe(ToolMaterial.DIAMOND));
+		katcheen_shovel = registerItem(new ItemKatcheenShovel(katcheenToolMaterial));
+		katcheen_hoe = registerItem(new ItemKatcheenHoe(katcheenToolMaterial));
+		katcheen_sword = registerItem(new ItemKatcheenSword(katcheenToolMaterial));
+		
+		scalemail_helmet = registerItem(new ItemScalemailArmor("armor/scalemail_helmet", 0, EntityEquipmentSlot.HEAD));
+		scalemail_chestplate = registerItem(new ItemScalemailArmor("armor/scalemail_chestplate", 0, EntityEquipmentSlot.CHEST));
+		scalemail_leggings = registerItem(new ItemScalemailArmor("armor/scalemail_leggings", 0, EntityEquipmentSlot.LEGS));
+		scalemail_boots = registerItem(new ItemScalemailArmor("armor/scalemail_boots", 0, EntityEquipmentSlot.FEET));
+		
+		
+		vengeance_helmet = registerItem(new ItemVengeanceArmor("armor/vengeance_helmet", 0, EntityEquipmentSlot.HEAD));
+		vengeance_chestplate = registerItem(new ItemVengeanceArmor("armor/vengeance_chestplate", 0, EntityEquipmentSlot.CHEST));
+		vengeance_leggings = registerItem(new ItemVengeanceArmor("armor/vengeance_leggings", 0, EntityEquipmentSlot.LEGS));
+		vengeance_boots = registerItem(new ItemVengeanceArmor("armor/vengeance_boots", 0, EntityEquipmentSlot.FEET));
+		
+		celestial_helmet = registerItem(new ItemCelestialArmor("armor/celestial_helmet", 0, EntityEquipmentSlot.HEAD));
+		celestial_chestplate = registerItem(new ItemCelestialArmor("armor/celestial_chestplate", 0, EntityEquipmentSlot.CHEST));
+		celestial_leggings = registerItem(new ItemCelestialArmor("armor/celestial_leggings", 0, EntityEquipmentSlot.LEGS));
+		celestial_boots = registerItem(new ItemCelestialArmor("armor/celestial_boots", 0, EntityEquipmentSlot.FEET));
+		*/
+/**		deception = registerItem(new ItemDeception(legendaryWeaponMaterial));
+		frostbite = registerItem(new ItemFrostbite(legendaryWeaponMaterial));
+		massacre = registerItem(new ItemMassacre(legendaryWeaponMaterial));
+		blazefury = registerItem(new ItemBlazefury(legendaryWeaponMaterial));
+		despair = registerItem(new ItemDespair(legendaryWeaponMaterial));
+		souleater = registerItem(new ItemSouleater(legendaryWeaponMaterial));
+		
+		consecration = registerItem(new ItemConsecration(legendaryToolMaterial));
+		necrosis = registerItem(new ItemNecrosis(legendaryToolMaterial));
+		
+		
+	}
+	
+}
+*/

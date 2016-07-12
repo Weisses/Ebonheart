@@ -1,10 +1,10 @@
 package com.ebonheart.EbonArtsMod.common.blocks.basic.dyeables;
 
-import com.ebonheart.EbonArtsMod.EbonArtsMod;
-import com.ebonheart.EbonArtsMod.common.blocks.BlockHelper;
-
 import net.minecraft.block.Block;
 import net.minecraft.block.material.Material;
+
+import com.ebonheart.EbonArtsMod.EbonArtsMod;
+import com.ebonheart.EbonArtsMod.common.blocks.BlockHelper;
 
 public class BlockMysticStone extends Block {
 	

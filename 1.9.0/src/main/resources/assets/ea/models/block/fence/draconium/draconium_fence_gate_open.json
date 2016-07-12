@@ -1,6 +1,6 @@
 {
     "parent": "block/fence_gate_open",
     "textures": {
-        "texture": "ea:blocks/gems/draconium/draconium_block_side"
+        "texture": "ea:blocks/block/draconium_block"
     }
 }

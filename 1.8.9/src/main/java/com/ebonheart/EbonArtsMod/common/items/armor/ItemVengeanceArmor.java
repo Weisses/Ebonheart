@@ -2,38 +2,23 @@ package com.ebonheart.EbonArtsMod.common.items.armor;
 
 import java.util.List;
 import java.util.Random;
-import java.util.UUID;
 
-import com.ebonheart.EbonArtsMod.EbonArtsMod;
-import com.ebonheart.EbonArtsMod.common.entity.modifiers.EAAttributeModifier;
-import com.ebonheart.EbonArtsMod.common.items.MaterialHelper;
-import com.ebonheart.EbonArtsMod.common.items.ItemHelper;
-import com.ebonheart.EbonArtsMod.common.utils.LogHelper;
-import com.ebonheart.EbonArtsMod.common.utils.damagesources.EntityDamageSourceElectric;
-import com.ebonheart.EbonArtsMod.configs.EbonArtsConfiguration;
-import com.ebonheart.EbonArtsMod.init.InitItemsEA;
-import com.mojang.realmsclient.gui.ChatFormatting;
-
-import net.minecraft.enchantment.Enchantment;
-import net.minecraft.enchantment.EnumEnchantmentType;
-import net.minecraft.entity.ai.attributes.AttributeModifier;
-import net.minecraft.entity.player.EntityPlayer;
-import net.minecraft.init.Items;
-import net.minecraft.item.EnumRarity;
-import net.minecraft.item.Item;
-import net.minecraft.item.ItemArmor;
-import net.minecraft.entity.Entity;
-import net.minecraft.entity.EntityLiving;
-import net.minecraft.entity.EntityLivingBase;
 import net.minecraft.entity.SharedMonsterAttributes;
+import net.minecraft.entity.player.EntityPlayer;
+import net.minecraft.item.EnumRarity;
+import net.minecraft.item.ItemArmor;
 import net.minecraft.item.ItemStack;
-import net.minecraft.potion.Potion;
-import net.minecraft.potion.PotionEffect;
-import net.minecraft.util.DamageSource;
-import net.minecraft.util.EnumParticleTypes;
 import net.minecraft.world.World;
 import net.minecraftforge.fml.relauncher.Side;
 import net.minecraftforge.fml.relauncher.SideOnly;
+
+import com.ebonheart.EbonArtsMod.EbonArtsMod;
+import com.ebonheart.EbonArtsMod.common.entity.modifiers.EAAttributeModifier;
+import com.ebonheart.EbonArtsMod.common.items.ItemHelper;
+import com.ebonheart.EbonArtsMod.common.items.MaterialHelper;
+import com.ebonheart.EbonArtsMod.configs.EbonArtsConfiguration;
+import com.ebonheart.EbonArtsMod.init.InitItemsEA;
+import com.mojang.realmsclient.gui.ChatFormatting;
 
 //Necrocite
 public class ItemVengeanceArmor extends ItemArmor {

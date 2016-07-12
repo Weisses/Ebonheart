@@ -1,12 +1,6 @@
 package com.ebonheart.EbonArtsMod.client.projectile;
 
-import com.ebonheart.EbonArtsMod.api.Reference;
-import com.ebonheart.EbonArtsMod.common.entity.EntityEnchantedEbonheart;
-import com.ebonheart.EbonArtsMod.init.InitItemsEA;
-
 import net.minecraft.client.Minecraft;
-import net.minecraft.client.model.ModelBase;
-import net.minecraft.client.model.ModelRenderer;
 import net.minecraft.client.renderer.GlStateManager;
 import net.minecraft.client.renderer.Tessellator;
 import net.minecraft.client.renderer.WorldRenderer;
@@ -15,12 +9,13 @@ import net.minecraft.client.renderer.entity.RenderManager;
 import net.minecraft.client.renderer.texture.TextureAtlasSprite;
 import net.minecraft.client.renderer.texture.TextureMap;
 import net.minecraft.client.renderer.vertex.DefaultVertexFormats;
-import net.minecraft.entity.Entity;
-import net.minecraft.entity.projectile.EntityFireball;
-import net.minecraft.init.Items;
 import net.minecraft.util.ResourceLocation;
 import net.minecraftforge.fml.relauncher.Side;
 import net.minecraftforge.fml.relauncher.SideOnly;
+
+import com.ebonheart.EbonArtsMod.api.Reference;
+import com.ebonheart.EbonArtsMod.common.entity.EntityEnchantedEbonheart;
+import com.ebonheart.EbonArtsMod.init.InitItemsEA;
 
 @SideOnly(Side.CLIENT)
 public class RenderEnchantedEbonheart extends Render<EntityEnchantedEbonheart>

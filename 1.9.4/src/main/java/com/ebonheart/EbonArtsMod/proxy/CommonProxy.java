@@ -1,8 +1,6 @@
 package com.ebonheart.EbonArtsMod.proxy;
 
 import net.minecraft.entity.Entity;
-import net.minecraft.util.EnumParticleTypes;
-import net.minecraft.util.math.BlockPos;
 import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.fml.common.event.FMLInitializationEvent;
 import net.minecraftforge.fml.common.event.FMLPostInitializationEvent;
@@ -12,17 +10,15 @@ import net.minecraftforge.fml.common.registry.GameRegistry;
 
 import com.ebonheart.EbonArtsMod.EbonArtsMod;
 import com.ebonheart.EbonArtsMod.common.AchievementTriggersEA;
-import com.ebonheart.EbonArtsMod.common.utils.EntityPlayerEA;
 import com.ebonheart.EbonArtsMod.common.utils.SoundEventsEA;
 import com.ebonheart.EbonArtsMod.common.utils.events.ArmorBuffHandler;
 import com.ebonheart.EbonArtsMod.common.utils.gui.GuiHandler;
-import com.ebonheart.EbonArtsMod.common.world.WorldChestHooks;
 import com.ebonheart.EbonArtsMod.common.world.WorldGeneratorEA;
+import com.ebonheart.EbonArtsMod.init.InitAchievementsEA;
 import com.ebonheart.EbonArtsMod.init.InitBlocksEA;
 import com.ebonheart.EbonArtsMod.init.InitEntityEA;
 import com.ebonheart.EbonArtsMod.init.InitItemsEA;
 import com.ebonheart.EbonArtsMod.init.InitRecipesEA;
-import com.ebonheart.EbonArtsMod.init.InitAchievementsEA;
 
 public class CommonProxy {
 	

@@ -4,7 +4,7 @@ public class Reference {
 	
 	public static final String MOD_ID = "ea";
 	public static final String MOD_NAME = "Ebon Arts";
-	public static final String MOD_VERSION = "v2.4.0b-mc1.10.0";
+	public static final String MOD_VERSION = "v2.4.2b-mc1.10.0";
 	public static final String CONFIG_GUI = "com.ebonheart.EbonArtsMod.api.EAGuiFactory";
 	public static final String CLIENT_PROXY_CLASS = "com.ebonheart.EbonArtsMod.proxy.ClientProxy";
 	public static final String SERVER_PROXY_CLASS = "com.ebonheart.EbonArtsMod.proxy.ServerProxy";

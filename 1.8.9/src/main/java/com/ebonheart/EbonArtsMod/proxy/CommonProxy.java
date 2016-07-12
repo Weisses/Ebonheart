@@ -1,7 +1,6 @@
 package com.ebonheart.EbonArtsMod.proxy;
 
 import net.minecraft.entity.Entity;
-import net.minecraft.util.EnumParticleTypes;
 import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.fml.common.event.FMLInitializationEvent;
 import net.minecraftforge.fml.common.event.FMLPostInitializationEvent;
@@ -14,13 +13,12 @@ import com.ebonheart.EbonArtsMod.common.AchievementTriggersEA;
 import com.ebonheart.EbonArtsMod.common.utils.SoundEventsEA;
 import com.ebonheart.EbonArtsMod.common.utils.events.ArmorBuffHandler;
 import com.ebonheart.EbonArtsMod.common.utils.gui.GuiHandler;
-import com.ebonheart.EbonArtsMod.common.world.WorldChestHooks;
 import com.ebonheart.EbonArtsMod.common.world.WorldGeneratorEA;
+import com.ebonheart.EbonArtsMod.init.InitAchievementsEA;
 import com.ebonheart.EbonArtsMod.init.InitBlocksEA;
 import com.ebonheart.EbonArtsMod.init.InitEntityEA;
 import com.ebonheart.EbonArtsMod.init.InitItemsEA;
 import com.ebonheart.EbonArtsMod.init.InitRecipesEA;
-import com.ebonheart.EbonArtsMod.init.InitAchievementsEA;
 
 public class CommonProxy {
 	
@@ -29,9 +27,8 @@ public class CommonProxy {
 		//SoundEventsEA.registerSounds();
 		
 		InitItemsEA.preInit();
+		//InitItemsEA.register();
 		InitBlocksEA.preInit();
-		InitBlocksEA.register();
-		InitEntityEA.preInit();
 		InitEntityEA.preInit();
 		
 		
@@ -43,8 +40,8 @@ public class CommonProxy {
 	public void init(FMLInitializationEvent event) 
 	{
 		InitRecipesEA.initShapedRecipe();
-		InitRecipesEA.initShapelessRecipe();
-		InitRecipesEA.initSmeltingRecipe();
+		//InitRecipesEA.initShapelessRecipe();
+		//InitRecipesEA.initSmeltingRecipe();
 		InitAchievementsEA.init();
 		
 		//WorldChestHooks.init();
@@ -53,7 +50,7 @@ public class CommonProxy {
 		MinecraftForge.EVENT_BUS.register(new ArmorBuffHandler());
 	    
 		
-		GameRegistry.registerWorldGenerator(new WorldGeneratorEA(), 0);
+		//GameRegistry.registerWorldGenerator(new WorldGeneratorEA(), 0);
 		NetworkRegistry.INSTANCE.registerGuiHandler(EbonArtsMod.instance, new GuiHandler());
 	}
 	

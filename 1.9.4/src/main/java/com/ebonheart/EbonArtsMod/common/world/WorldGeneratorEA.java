@@ -2,6 +2,7 @@ package com.ebonheart.EbonArtsMod.common.world;
 
 import java.util.Random;
 
+import com.ebonheart.EbonArtsMod.configs.EbonArtsConfiguration;
 import com.ebonheart.EbonArtsMod.init.InitBlocksEA;
 
 import net.minecraft.block.state.pattern.BlockMatcher;
@@ -33,13 +34,27 @@ public class WorldGeneratorEA implements IWorldGenerator
 	public WorldGeneratorEA() 
 	{
 	    //for multi ore gens
-		this.gen_draconium_ore = new WorldGenMinable(InitBlocksEA.draconium_ore.getDefaultState(), 8, BlockMatcher.forBlock(Blocks.STONE)); //the 8 is the max vein size
-		this.gen_velious_ore = new WorldGenMinable(InitBlocksEA.velious_ore.getDefaultState(), 6, BlockMatcher.forBlock(Blocks.STONE));
-		this.gen_arcanite_ore = new WorldGenMinable(InitBlocksEA.arcanite_ore.getDefaultState(), 5, BlockMatcher.forBlock(Blocks.STONE));
-		this.gen_katcheen_ore = new WorldGenMinable(InitBlocksEA.katcheen_ore.getDefaultState(), 4, BlockMatcher.forBlock(Blocks.STONE));
-		this.gen_necrocite_ore = new WorldGenMinable(InitBlocksEA.necrocite_ore.getDefaultState(), 3, BlockMatcher.forBlock(Blocks.NETHERRACK));
-		this.gen_soularite_ore = new WorldGenMinable(InitBlocksEA.soularite_ore.getDefaultState(), 3, BlockMatcher.forBlock(Blocks.NETHERRACK));
-		this.gen_ebonheart_ore = new WorldGenMinable(InitBlocksEA.ebonheart_ore.getDefaultState(), 3, BlockMatcher.forBlock(Blocks.NETHERRACK));
+		this.gen_draconium_ore = new WorldGenMinable(InitBlocksEA.draconium_ore.getDefaultState(), 
+				//EbonArtsConfiguration.draconiumValueVein
+				8, BlockMatcher.forBlock(Blocks.STONE)); //the 8 is the max vein size
+		this.gen_velious_ore = new WorldGenMinable(InitBlocksEA.velious_ore.getDefaultState(), 
+				//EbonArtsConfiguration.veliousValueVein
+				6, BlockMatcher.forBlock(Blocks.STONE));
+		this.gen_arcanite_ore = new WorldGenMinable(InitBlocksEA.arcanite_ore.getDefaultState(), 
+				//EbonArtsConfiguration.arcaniteValueVein
+				5, BlockMatcher.forBlock(Blocks.STONE));
+		this.gen_katcheen_ore = new WorldGenMinable(InitBlocksEA.katcheen_ore.getDefaultState(), 
+				//EbonArtsConfiguration.katcheenValueVein
+				4, BlockMatcher.forBlock(Blocks.STONE));
+		this.gen_necrocite_ore = new WorldGenMinable(InitBlocksEA.necrocite_ore.getDefaultState(), 
+				//EbonArtsConfiguration.necrociteValueVein
+				3, BlockMatcher.forBlock(Blocks.NETHERRACK));
+		this.gen_soularite_ore = new WorldGenMinable(InitBlocksEA.soularite_ore.getDefaultState(), 
+				//EbonArtsConfiguration.soulariteValueVein
+				3, BlockMatcher.forBlock(Blocks.NETHERRACK));
+		this.gen_ebonheart_ore = new WorldGenMinable(InitBlocksEA.ebonheart_ore.getDefaultState(), 
+				//EbonArtsConfiguration.ebonheartValueVein
+				3, BlockMatcher.forBlock(Blocks.NETHERRACK));
 		
 		//for single ore gens
 		this.gen_ebon_ore = new WorldGenSingleMinable(InitBlocksEA.ebon_ore.getDefaultState(), BlockMatcher.forBlock(Blocks.STONE));
@@ -57,24 +72,24 @@ public class WorldGeneratorEA implements IWorldGenerator
 		//Overworld
 		case 0: 
 			//for multi ore gen
-			this.runGenerator(this.gen_draconium_ore, world, random, chunkX, chunkZ, 16, 32, 128);//# of veins per chunk; height min; height max
-			this.runGenerator(this.gen_velious_ore, world, random, chunkX, chunkZ, 8, 24, 128);
-			this.runGenerator(this.gen_arcanite_ore, world, random, chunkX, chunkZ, 6, 5, 48);
-			this.runGenerator(this.gen_katcheen_ore, world, random, chunkX, chunkZ, 3, 5, 16);
+			this.runGenerator(this.gen_draconium_ore, world, random, chunkX, chunkZ, EbonArtsConfiguration.draconiumValueChunk, 32, 128);//16 //# of veins per chunk; height min; height max
+			this.runGenerator(this.gen_velious_ore, world, random, chunkX, chunkZ, EbonArtsConfiguration.veliousValueChunk, 24, 128);//8
+			this.runGenerator(this.gen_arcanite_ore, world, random, chunkX, chunkZ, EbonArtsConfiguration.arcaniteValueChunk, 5, 48);//6
+			this.runGenerator(this.gen_katcheen_ore, world, random, chunkX, chunkZ, EbonArtsConfiguration.katcheenValueChunk, 5, 16);//3
 			
 			//for single ore gen
-			this.runGenerator(this.gen_ebon_ore, world, random, chunkX, chunkZ, 1, 5, 16);
+			this.runGenerator(this.gen_ebon_ore, world, random, chunkX, chunkZ, 1, 5, 16);//1
 			break;
 	        
 	    //Nether
 		case -1: 
 			//for multi ore gen
-			this.runGenerator(this.gen_necrocite_ore, world, random, chunkX, chunkZ, 32, 15, 125);
-			this.runGenerator(this.gen_soularite_ore, world, random, chunkX, chunkZ, 32, 15, 125);
-			this.runGenerator(this.gen_ebonheart_ore, world, random, chunkX, chunkZ, 32, 15, 125);
+			this.runGenerator(this.gen_necrocite_ore, world, random, chunkX, chunkZ, EbonArtsConfiguration.necrociteValueChunk, 15, 125);//32
+			this.runGenerator(this.gen_soularite_ore, world, random, chunkX, chunkZ, EbonArtsConfiguration.soulariteValueChunk, 15, 125);//32
+			this.runGenerator(this.gen_ebonheart_ore, world, random, chunkX, chunkZ, EbonArtsConfiguration.ebonheartValueChunk, 15, 125);//32
 			
 			//for single ore gen
-			this.runGenerator(this.gen_ebon_ore_nether, world, random, chunkX, chunkZ, 8, 15, 125);
+			this.runGenerator(this.gen_ebon_ore_nether, world, random, chunkX, chunkZ, 8, 15, 125);//8
 			
 	        break;
 	        

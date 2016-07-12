@@ -16,6 +16,7 @@ import com.ebonheart.EbonArtsMod.common.items.armor.ItemScalemailArmor;
 import com.ebonheart.EbonArtsMod.common.items.armor.ItemVengeanceArmor;
 import com.ebonheart.EbonArtsMod.common.items.resources.ItemArcanite;
 import com.ebonheart.EbonArtsMod.common.items.resources.ItemCryptic;
+import com.ebonheart.EbonArtsMod.common.items.resources.ItemDense;
 import com.ebonheart.EbonArtsMod.common.items.resources.ItemDraconiumDust;
 import com.ebonheart.EbonArtsMod.common.items.resources.ItemDragonFruit;
 import com.ebonheart.EbonArtsMod.common.items.resources.ItemEbonheart;
@@ -31,7 +32,6 @@ import com.ebonheart.EbonArtsMod.common.items.resources.ItemObsidianShard;
 import com.ebonheart.EbonArtsMod.common.items.resources.ItemSacredFruit;
 import com.ebonheart.EbonArtsMod.common.items.resources.ItemSoularite;
 import com.ebonheart.EbonArtsMod.common.items.resources.ItemVelious;
-import com.ebonheart.EbonArtsMod.common.items.tools.ItemAirship;
 import com.ebonheart.EbonArtsMod.common.items.tools.ItemArcaniteAxe;
 import com.ebonheart.EbonArtsMod.common.items.tools.ItemArcaniteHoe;
 import com.ebonheart.EbonArtsMod.common.items.tools.ItemArcanitePickaxe;
@@ -98,6 +98,22 @@ public class InitItemsEA extends ItemsEA {
 		
 		enchanted_ebonheart = registerItem(new ItemEnchantedEbonheart());
 		
+		
+
+		dense_draconium_dust = registerItem(new ItemDense("gem/dense_draconium_dust"));
+		dense_velious = registerItem(new ItemDense("gem/dense_velious"));
+		dense_arcanite = registerItem(new ItemDense("gem/dense_arcanite"));
+		dense_katcheen = registerItem(new ItemDense("gem/dense_katcheen"));
+		dense_necrocite = registerItem(new ItemDense("gem/dense_necrocite"));
+		dense_soularite = registerItem(new ItemDense("gem/dense_soularite"));
+		
+		
+		hellion_fruit = registerItem(new ItemHellionFruit(6, 0.6F));
+		sacred_fruit = registerItem(new ItemSacredFruit(3, 0.8F));
+		dragon_fruit = registerItem(new ItemDragonFruit(6, 0.8F));
+				//, InitBlocksEA.dragon_fruit//, Blocks.farmland
+				//));
+		
 		arcanite_pickaxe = registerItem(new ItemArcanitePickaxe(arcaniteToolMaterial));
 		arcanite_axe = registerItem(new ItemArcaniteAxe(ToolMaterial.IRON));
 		arcanite_shovel = registerItem(new ItemArcaniteShovel(arcaniteToolMaterial));
@@ -120,12 +136,6 @@ public class InitItemsEA extends ItemsEA {
 		scalemail_leggings = registerItem(new ItemScalemailArmor("armor/scalemail_leggings", 0, EntityEquipmentSlot.LEGS));
 		scalemail_boots = registerItem(new ItemScalemailArmor("armor/scalemail_boots", 0, EntityEquipmentSlot.FEET));
 		
-		hellion_fruit = registerItem(new ItemHellionFruit(6, 0.6F));
-		sacred_fruit = registerItem(new ItemSacredFruit(3, 0.8F));
-		dragon_fruit = registerItem(new ItemDragonFruit(6, 0.8F));
-				//, InitBlocksEA.dragon_fruit//, Blocks.farmland
-				//));
-						
 		
 		vengeance_helmet = registerItem(new ItemVengeanceArmor("armor/vengeance_helmet", 0, EntityEquipmentSlot.HEAD));
 		vengeance_chestplate = registerItem(new ItemVengeanceArmor("armor/vengeance_chestplate", 0, EntityEquipmentSlot.CHEST));
@@ -164,13 +174,13 @@ public class InitItemsEA extends ItemsEA {
 		necrosis = registerItem(new ItemNecrosis(legendaryToolMaterial));
 		
 		
-		ebon_airship = //registerItem(
+		//ebon_airship = //registerItem(
 				//new ItemBoat(EntityBoat.Type.OAK);
-				new ItemAirship
-				(
+		//		new ItemAirship
+		//		(
 						//EntityBoat.Type.OAK
 						//EntityAirship.Type.OAK
-						);
+		//				);
 		
 		
 		//test_door = registerItem(new EAItemDoor(InitBlocksEA.test_door));
@@ -189,7 +199,7 @@ public class InitItemsEA extends ItemsEA {
 	public static void register()
 	{
 		
-		GameRegistry.registerItem(ebon_airship, ebon_airship.getUnlocalizedName().substring(5));
+		//GameRegistry.registerItem(ebon_airship, ebon_airship.getUnlocalizedName().substring(5));
 		
 	}
 }

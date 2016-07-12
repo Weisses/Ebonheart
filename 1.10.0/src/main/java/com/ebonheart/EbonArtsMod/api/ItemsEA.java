@@ -29,6 +29,13 @@ public class ItemsEA {
 	public static Item cryptic_obsidian_shards;
 	public static Item cryptic_glowstone_shards;
 	
+	public static Item dense_draconium_dust;
+	public static Item dense_velious;
+	public static Item dense_arcanite;
+	public static Item dense_katcheen;
+	public static Item dense_necrocite;
+	public static Item dense_soularite;
+	
 	public static Item mirroring_disc;
 	public static Item glowing_disc;
 	public static Item shimmering_disc;

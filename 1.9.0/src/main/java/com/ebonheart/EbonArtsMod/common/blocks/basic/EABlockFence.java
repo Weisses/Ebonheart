@@ -9,6 +9,7 @@ import com.ebonheart.EbonArtsMod.common.blocks.basic.dyeables.EABlockMeta.EnumTy
 import net.minecraft.block.Block;
 import net.minecraft.block.BlockFence;
 import net.minecraft.block.BlockFenceGate;
+import net.minecraft.block.SoundType;
 import net.minecraft.block.material.Material;
 import net.minecraft.block.properties.IProperty;
 import net.minecraft.block.properties.PropertyBool;
@@ -39,9 +40,5 @@ public class EABlockFence extends BlockFence {
 		this.setStepSound(stepSound.STONE);
 	}
 	
-	public void isFlamable(World worldIn, BlockPos posIn, EnumFacing face)
-	{
-		this.isFlammable(worldIn, posIn, face);
-	}
 	
 }

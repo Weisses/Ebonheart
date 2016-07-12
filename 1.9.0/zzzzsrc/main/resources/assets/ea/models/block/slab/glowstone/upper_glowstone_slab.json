@@ -1,0 +1,8 @@
+{
+    "parent": "block/upper_slab",
+    "textures": {
+        "bottom": "ea:blocks/gems/glowstone/glowstone_block_bottom",
+        "top": "ea:blocks/gems/glowstone/glowstone_block_top",
+        "side": "ea:blocks/gems/glowstone/glowstone_block_slab"
+    }
+}

@@ -1,6 +1,5 @@
 package com.ebonheart.EbonArtsMod.common.utils.damagesources;
 
-import net.minecraft.client.resources.I18n;
 import net.minecraft.entity.Entity;
 import net.minecraft.entity.EntityLivingBase;
 import net.minecraft.item.ItemStack;
@@ -30,7 +29,7 @@ public class EntityDamageSourceElectric extends EntityDamageSourceIndirect {
         return this.indirectEntity;
     }
 	
-	public IChatComponent getDeathMessage(EntityLivingBase entityLivingBaseIn)
+    public IChatComponent getDeathMessage(EntityLivingBase entityLivingBaseIn)
     {
         IChatComponent itextcomponent = this.indirectEntity == null ? this.damageSourceEntity.getDisplayName() : this.indirectEntity.getDisplayName();
         ItemStack itemstack = this.indirectEntity instanceof EntityLivingBase ? ((EntityLivingBase)this.indirectEntity).getHeldItem() : null;

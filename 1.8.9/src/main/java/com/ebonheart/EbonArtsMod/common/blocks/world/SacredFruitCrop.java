@@ -3,11 +3,12 @@ package com.ebonheart.EbonArtsMod.common.blocks.world;
 import java.util.Random;
 
 import net.minecraft.block.BlockCrops;
-import net.minecraft.block.properties.PropertyInteger;
 import net.minecraft.block.state.IBlockState;
 import net.minecraft.item.Item;
+import net.minecraft.util.AxisAlignedBB;
 import net.minecraft.util.BlockPos;
 import net.minecraft.util.EnumParticleTypes;
+import net.minecraft.world.IBlockAccess;
 import net.minecraft.world.World;
 import net.minecraftforge.fml.relauncher.Side;
 import net.minecraftforge.fml.relauncher.SideOnly;
@@ -18,8 +19,8 @@ import com.ebonheart.EbonArtsMod.init.InitItemsEA;
 
 public class SacredFruitCrop extends BlockCrops {
 	
-	public static final PropertyInteger SACREDFRUITAGE = PropertyInteger.create("age", 0, 7);
-	
+	private static final AxisAlignedBB[] SACREDFRUIT_AABB = new AxisAlignedBB[] {new AxisAlignedBB(0.0D, 0.0D, 0.0D, 1.0D, 0.125D, 1.0D), new AxisAlignedBB(0.0D, 0.0D, 0.0D, 1.0D, 0.1875D, 1.0D), new AxisAlignedBB(0.0D, 0.0D, 0.0D, 1.0D, 0.25D, 1.0D), new AxisAlignedBB(0.0D, 0.0D, 0.0D, 1.0D, 0.3125D, 1.0D), new AxisAlignedBB(0.0D, 0.0D, 0.0D, 1.0D, 0.375D, 1.0D), new AxisAlignedBB(0.0D, 0.0D, 0.0D, 1.0D, 0.4375D, 1.0D), new AxisAlignedBB(0.0D, 0.0D, 0.0D, 1.0D, 0.5D, 1.0D), new AxisAlignedBB(0.0D, 0.0D, 0.0D, 1.0D, 0.5625D, 1.0D)};
+
 	public SacredFruitCrop()
 	{
 		BlockHelper.setBlockName(this, "plant/sacred_fruit_crop");
@@ -35,17 +36,11 @@ public class SacredFruitCrop extends BlockCrops {
         return InitItemsEA.sacred_fruit;
     }
 
-    //public AxisAlignedBB getBoundingBox(IBlockState state, IBlockAccess source, BlockPos pos)
-    //{
-    //    return SACREDFRUIT_AABB[((Integer)state.getValue(this.getAgeProperty())).intValue()];
-    //}
+    
     
     @SideOnly(Side.CLIENT)
-    public void randomDisplayTick(World worldIn, BlockPos pos, IBlockState state, Random rand)
+    public void randomDisplayTick(IBlockState state, World worldIn, BlockPos pos, Random rand)
     {
-    //@SideOnly(Side.CLIENT)
-    //public void randomDisplayTick(IBlockState state, World worldIn, BlockPos pos, Random rand)
-    //{
     	if(!EbonArtsConfiguration.plantParticle)
 		{
     	if(worldIn.getLight(pos) >= 8 || worldIn.canSeeSky(pos))

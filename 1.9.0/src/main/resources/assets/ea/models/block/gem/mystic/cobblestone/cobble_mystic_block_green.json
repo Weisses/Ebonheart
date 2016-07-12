@@ -1,12 +1,12 @@
 {
     "parent": "block/cube",
     "textures": {
-        "particle": "ea:blocks/gems/mystic/cobblestone/cobble_mystic_block_top_green",
-        "down": "ea:blocks/gems/mystic/cobblestone/cobble_mystic_block_top_green",
-        "up": "ea:blocks/gems/mystic/cobblestone/cobble_mystic_block_top_green",
-        "north": "ea:blocks/gems/mystic/cobblestone/cobble_mystic_block_side_green",
-        "east": "ea:blocks/gems/mystic/cobblestone/cobble_mystic_block_side_green",
-        "south": "ea:blocks/gems/mystic/cobblestone/cobble_mystic_block_side_green",
-        "west": "ea:blocks/gems/mystic/cobblestone/cobble_mystic_block_side_green"
+        "particle": "ea:blocks/dyeable/cobblestone/cobble_mystic_block_green_top",
+        "down": "ea:blocks/dyeable/cobblestone/cobble_mystic_block_green_top",
+        "up": "ea:blocks/dyeable/cobblestone/cobble_mystic_block_green_top",
+        "north": "ea:blocks/dyeable/cobblestone/cobble_mystic_block_green_side",
+        "east": "ea:blocks/dyeable/cobblestone/cobble_mystic_block_green_side",
+        "south": "ea:blocks/dyeable/cobblestone/cobble_mystic_block_green_side",
+        "west": "ea:blocks/dyeable/cobblestone/cobble_mystic_block_green_side"
     }
 }

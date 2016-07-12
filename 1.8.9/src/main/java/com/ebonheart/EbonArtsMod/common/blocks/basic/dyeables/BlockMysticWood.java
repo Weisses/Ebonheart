@@ -1,9 +1,5 @@
 package com.ebonheart.EbonArtsMod.common.blocks.basic.dyeables;
 
-import com.ebonheart.EbonArtsMod.EbonArtsMod;
-import com.ebonheart.EbonArtsMod.common.blocks.BlockHelper;
-
-import net.minecraft.block.Block;
 import net.minecraft.block.BlockDirectional;
 import net.minecraft.block.material.Material;
 import net.minecraft.block.properties.IProperty;
@@ -13,6 +9,10 @@ import net.minecraft.entity.EntityLivingBase;
 import net.minecraft.util.BlockPos;
 import net.minecraft.util.EnumFacing;
 import net.minecraft.world.World;
+import scala.reflect.api.Mirror;
+
+import com.ebonheart.EbonArtsMod.EbonArtsMod;
+import com.ebonheart.EbonArtsMod.common.blocks.BlockHelper;
 
 public class BlockMysticWood extends BlockDirectional {
 	
@@ -33,6 +33,7 @@ public class BlockMysticWood extends BlockDirectional {
         return false;
     }
 	
+
 	
 
     /**

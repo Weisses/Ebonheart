@@ -1,19 +1,15 @@
 package com.ebonheart.EbonArtsMod.init;
 
-import com.ebonheart.EbonArtsMod.api.AchievementsEA;
-import com.ebonheart.EbonArtsMod.api.Reference;
-
-import net.minecraft.init.Blocks;
-import net.minecraft.init.Items;
 import net.minecraft.item.ItemStack;
 import net.minecraft.stats.Achievement;
 import net.minecraftforge.common.AchievementPage;
 
+import com.ebonheart.EbonArtsMod.api.AchievementsEA;
+import com.ebonheart.EbonArtsMod.api.Reference;
+
 public class InitAchievementsEA extends AchievementsEA {
-	//public static int pageIndex;
-	//public static AchievementPage ebon_arts_page;
+	
 	public static final AchievementPage achievementPageEA = new AchievementPage(Reference.MOD_NAME);
-	//public static Achievement obtain_flowers;
 	
     public static void init()
     {
@@ -25,9 +21,7 @@ public class InitAchievementsEA extends AchievementsEA {
     private static void addAchievements()
     {
     	mine_draconium_ore = addAchievement(MINE_DRACONIUM_ORE, "mine_draconium_ore", -1, -1, new ItemStack(InitBlocksEA.draconium_ore), null);
-
-    	//mine_draconium_ore = addAchievement(MINE_DRACONIUM_ORE, "ea", -1, -1, InitBlocksEA.draconium_ore, (Achievement)null);//.func_180788_c();
-		glowing_disc = addAchievement(GLOWING_DISC, "glowing_disc", -3, -2, new ItemStack(InitItemsEA.glowing_disc), mine_draconium_ore);//.func_180788_c();
+    	glowing_disc = addAchievement(GLOWING_DISC, "glowing_disc", -3, -2, new ItemStack(InitItemsEA.glowing_disc), mine_draconium_ore);//.func_180788_c();
 		
 		mine_velious_ore = addAchievement(MINE_VELIOUS_ORE, "mine_velious_ore", -2, 0, new ItemStack(InitBlocksEA.velious_ore), (Achievement)null);//.func_180788_c();
 		shimmering_disc = addAchievement(SHIMMERING_DISC, "shimmering_disc", -4, 0, new ItemStack(InitItemsEA.shimmering_disc), (Achievement)mine_velious_ore);//.func_180788_c();
@@ -65,11 +59,6 @@ public class InitAchievementsEA extends AchievementsEA {
 		vengeance_armor = addAchievement(VENGEANCE_ARMOR, "vengeance_armor", -1, -4, new ItemStack(InitItemsEA.vengeance_chestplate), (Achievement)enchanted_ebonheart).setSpecial();//.func_180788_c();
 		celestial_armor = addAchievement(CELESTIAL_ARMOR, "celestial_armor", 3, -4, new ItemStack(InitItemsEA.celestial_chestplate), (Achievement)enchanted_ebonheart).setSpecial();//.func_180788_c();
 		
-		//necrosis = addAchievement(NECROSIS, -5, 1, InitItemsEA.necrosis, (Achievement)mine_necrocite_ore);//.func_180788_c();
-		
-		//pageIndex = AchievementPage.getAchievementPages().size();
-		//ebon_arts_page = new AchievementPage(Reference.MOD_NAME, AchievementHelper.achievements.toArray(new Achievement[AchievementHelper.achievements.size()]));
-        
     }
     
     private static Achievement addAchievement(String unlocalizedName, String identifier, int column, int row, ItemStack iconStack, Achievement parent)

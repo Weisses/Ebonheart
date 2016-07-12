@@ -62,7 +62,7 @@ public class EntityEnchantedEbonheart extends EntityThrowable {
     	}
         if (!this.worldObj.isRemote)
         {
-            this.worldObj.playAuxSFX(2002, new BlockPos(this), 0);
+        	this.worldObj.playAuxSFX(2002, new BlockPos(this), 0);
             int i = 3 + this.worldObj.rand.nextInt(15) + this.worldObj.rand.nextInt(15);
             
             while (i > 0)

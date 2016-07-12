@@ -1,28 +1,9 @@
 package com.ebonheart.EbonArtsMod.common.blocks.basic;
 
-import java.util.List;
-
-import com.ebonheart.EbonArtsMod.EbonArtsMod;
-import com.ebonheart.EbonArtsMod.common.blocks.BlockHelper;
-import com.ebonheart.EbonArtsMod.common.blocks.basic.dyeables.EABlockMeta.EnumType;
-
-import net.minecraft.block.Block;
 import net.minecraft.block.BlockFence;
-import net.minecraft.block.BlockFenceGate;
 import net.minecraft.block.material.Material;
-import net.minecraft.block.properties.IProperty;
-import net.minecraft.block.properties.PropertyBool;
-import net.minecraft.block.state.IBlockState;
-import net.minecraft.entity.Entity;
-import net.minecraft.entity.player.EntityPlayer;
-import net.minecraft.init.Blocks;
-import net.minecraft.item.ItemLead;
-import net.minecraft.util.BlockPos;
-import net.minecraft.util.EnumFacing;
-import net.minecraft.world.IBlockAccess;
-import net.minecraft.world.World;
-import net.minecraftforge.fml.relauncher.Side;
-import net.minecraftforge.fml.relauncher.SideOnly;
+
+import com.ebonheart.EbonArtsMod.common.blocks.BlockHelper;
 
 
 public class EABlockFence extends BlockFence {
@@ -37,9 +18,5 @@ public class EABlockFence extends BlockFence {
 		this.setStepSound(soundTypeStone);
 	}
 	
-	public void isFlamable(World worldIn, BlockPos posIn, EnumFacing face)
-	{
-		this.isFlammable(worldIn, posIn, face);
-	}
 	
 }

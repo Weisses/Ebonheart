@@ -1,6 +1,6 @@
 {
     "parent": "block/trapdoor_open",
     "textures": {
-        "texture": "ea:blocks/gems/katcheen/katcheen_trapdoor"
+        "texture": "ea:blocks/door/katcheen_trapdoor"
     }
 }

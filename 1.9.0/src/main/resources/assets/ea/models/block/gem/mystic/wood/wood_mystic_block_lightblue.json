@@ -1,12 +1,12 @@
 {
     "parent": "block/cube",
     "textures": {
-        "particle": "ea:blocks/gems/mystic/wood/wood_mystic_block_top_lightblue",
-        "down": "ea:blocks/gems/mystic/wood/wood_mystic_block_top_lightblue",
-        "up": "ea:blocks/gems/mystic/wood/wood_mystic_block_top_lightblue",
-        "north": "ea:blocks/gems/mystic/wood/wood_mystic_block_back_lightblue",
-        "east": "ea:blocks/gems/mystic/wood/wood_mystic_block_side_lightblue",
-        "south": "ea:blocks/gems/mystic/wood/wood_mystic_block_front_lightblue",
-        "west": "ea:blocks/gems/mystic/wood/wood_mystic_block_side_lightblue"
+        "particle": "ea:blocks/dyeable/wood/wood_mystic_block_lightblue_top",
+        "down": "ea:blocks/dyeable/wood/wood_mystic_block_lightblue_top",
+        "up": "ea:blocks/dyeable/wood/wood_mystic_block_lightblue_top",
+        "north": "ea:blocks/dyeable/wood/wood_mystic_block_lightblue_back",
+        "east": "ea:blocks/dyeable/wood/wood_mystic_block_lightblue_side",
+        "south": "ea:blocks/dyeable/wood/wood_mystic_block_lightblue_front",
+        "west": "ea:blocks/dyeable/wood/wood_mystic_block_lightblue_side"
     }
 }

@@ -3,15 +3,10 @@ package com.ebonheart.EbonArtsMod.client;
 import net.minecraft.client.Minecraft;
 import net.minecraft.client.renderer.entity.RenderManager;
 import net.minecraft.entity.Entity;
-import net.minecraft.util.math.BlockPos;
-import net.minecraft.world.World;
-import net.minecraftforge.fml.client.registry.IRenderFactory;
 import net.minecraftforge.fml.client.registry.RenderingRegistry;
 
 import com.ebonheart.EbonArtsMod.api.ItemsEA;
 import com.ebonheart.EbonArtsMod.client.projectile.RenderEnchantedEbonheart;
-import com.ebonheart.EbonArtsMod.common.entity.EntityAirship;
-import com.ebonheart.EbonArtsMod.common.entity.EntityAirshipEA;
 import com.ebonheart.EbonArtsMod.common.entity.EntityEnchantedEbonheart;
 
 public final class InitEntityEARender extends ItemsEA {
