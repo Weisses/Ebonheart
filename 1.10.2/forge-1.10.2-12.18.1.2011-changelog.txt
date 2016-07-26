@@ -1,5 +1,21 @@
 Changelog:
-Build 2006:
+Build 2011:
+	LexManos: Bump version for a RB
+
+Build 1.10.2-12.18.0.2010:
+	bernhard.bonigl:
+		Add an event that allows to modify the looting level based on damage
+		source
+
+Build 1.10.2-12.18.0.2009:
+	williewillus: Add throwable impact event (#3071)
+
+Build 1.10.2-12.18.0.2007-1.10.0:
+	LexManos:
+		Fix hopper extract behavior being broken on edge cases due to
+		IItemHandler capability. Closes #3062
+
+Build 1.10.2-12.18.0.2006-1.10.0:
 	LexManos:
 		Fixed FPS graph and new debug lines not being rendered in Debug screen.
 		Closes #3054

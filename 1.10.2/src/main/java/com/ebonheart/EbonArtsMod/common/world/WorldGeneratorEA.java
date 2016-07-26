@@ -97,7 +97,28 @@ public class WorldGeneratorEA implements IWorldGenerator
 		case 1: 
 			
 	        break;
-	    }
+	    //}
+		
+		//Default Gen
+		default:
+			//Overworld
+			this.runGenerator(this.gen_draconium_ore, world, random, chunkX, chunkZ, EbonArtsConfiguration.draconiumValueChunk, 32, 128);//16 //# of veins per chunk; height min; height max
+			this.runGenerator(this.gen_velious_ore, world, random, chunkX, chunkZ, EbonArtsConfiguration.veliousValueChunk, 24, 128);//8
+			this.runGenerator(this.gen_arcanite_ore, world, random, chunkX, chunkZ, EbonArtsConfiguration.arcaniteValueChunk, 5, 48);//6
+			this.runGenerator(this.gen_katcheen_ore, world, random, chunkX, chunkZ, EbonArtsConfiguration.katcheenValueChunk, 5, 16);//3
+			
+			//nether
+			this.runGenerator(this.gen_necrocite_ore, world, random, chunkX, chunkZ, EbonArtsConfiguration.necrociteValueChunk, 15, 125);//32
+			this.runGenerator(this.gen_soularite_ore, world, random, chunkX, chunkZ, EbonArtsConfiguration.soulariteValueChunk, 15, 125);//32
+			this.runGenerator(this.gen_ebonheart_ore, world, random, chunkX, chunkZ, EbonArtsConfiguration.ebonheartValueChunk, 15, 125);//32
+			
+			//for single ore gen
+			this.runGenerator(this.gen_ebon_ore, world, random, chunkX, chunkZ, 1, 5, 16);//1
+			this.runGenerator(this.gen_ebon_ore_nether, world, random, chunkX, chunkZ, 8, 15, 125);//8
+			
+		 //break;
+		}
+		
 	}
 
 	
