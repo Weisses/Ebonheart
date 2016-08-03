@@ -116,7 +116,7 @@ public class WorldGeneratorEA implements IWorldGenerator
 			this.runGenerator(this.gen_ebon_ore, world, random, chunkX, chunkZ, 1, 5, 16);//1
 			this.runGenerator(this.gen_ebon_ore_nether, world, random, chunkX, chunkZ, 8, 15, 125);//8
 			
-		 //break;
+		 break;
 		}
 		
 	}
