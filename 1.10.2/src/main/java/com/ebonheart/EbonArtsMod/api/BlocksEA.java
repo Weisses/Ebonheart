@@ -13,6 +13,11 @@ public class BlocksEA {
 	public static Block ebonheart_ore;
 	public static Block ebon_ore;
 	public static Block ebon_ore_nether;
+	public static Block ebon_ore_end;
+	
+	public static Block necrocite_ore_end;
+	public static Block soularite_ore_end;
+	public static Block ebonheart_ore_end;
 	
 	public static Block draconium_block;
 	public static Block velious_block;

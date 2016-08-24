@@ -39,6 +39,9 @@ import com.ebonheart.EbonArtsMod.common.blocks.basic.torches.EABlockTorchNecroci
 import com.ebonheart.EbonArtsMod.common.blocks.basic.torches.EABlockTorchObsidian;
 import com.ebonheart.EbonArtsMod.common.blocks.basic.torches.EABlockTorchSoularite;
 import com.ebonheart.EbonArtsMod.common.blocks.basic.torches.EABlockTorchVelious;
+import com.ebonheart.EbonArtsMod.common.blocks.world.BlockEndOreEbonheart;
+import com.ebonheart.EbonArtsMod.common.blocks.world.BlockEndOreNecrocite;
+import com.ebonheart.EbonArtsMod.common.blocks.world.BlockEndOreSoularite;
 import com.ebonheart.EbonArtsMod.common.blocks.world.BlockMultiOre;
 import com.ebonheart.EbonArtsMod.common.blocks.world.BlockOreArcanite;
 import com.ebonheart.EbonArtsMod.common.blocks.world.BlockOreDraconium;
@@ -67,7 +70,8 @@ public class InitBlocksEA extends BlocksEA {
 		ebon_ore = registerBlock(new BlockMultiOre("ore/ebon_ore"));
 		ebon_ore_nether = registerBlock(new BlockMultiOre("ore/ebon_ore_nether"));
 		
-		draconium_block = registerBlock(new BlockEA("gem/draconium/draconium_block").setResistance(4.0F));
+		
+		draconium_block = registerBlock(new BlockEA("gem/draconium/draconium_block").setResistance(4.0F).setLightLevel(0.4f));
 		velious_block = registerBlock(new BlockEA("gem/velious/velious_block").setResistance(15.0F));
 		arcanite_block = registerBlock(new BlockEA("gem/arcanite/arcanite_block").setResistance(30.0F));
 		katcheen_block = registerBlock(new BlockEA("gem/katcheen/katcheen_block").setResistance(100.0F));
@@ -77,7 +81,7 @@ public class InitBlocksEA extends BlocksEA {
 		obsidian_block = registerBlock(new BlockEA("gem/obsidian/obsidian_block").setResistance(2000.0F));
 		glowstone_block = registerBlock(new BlockEA("gem/glowstone/glowstone_block").setResistance(45.0F).setLightLevel(1.0f));
 		
-		draconium_block_brick = registerBlock(new BlockEA("gem/draconium/draconium_block_brick").setResistance(4.0F));
+		draconium_block_brick = registerBlock(new BlockEA("gem/draconium/draconium_block_brick").setResistance(4.0F).setLightLevel(0.4f));
 		velious_block_brick = registerBlock(new BlockEA("gem/velious/velious_block_brick").setResistance(15.0F));
 		arcanite_block_brick = registerBlock(new BlockEA("gem/arcanite/arcanite_block_brick").setResistance(30.0F));
 		katcheen_block_brick = registerBlock(new BlockEA("gem/katcheen/katcheen_block_brick").setResistance(100.0F));
@@ -87,7 +91,7 @@ public class InitBlocksEA extends BlocksEA {
 		obsidian_block_brick = registerBlock(new BlockEA("gem/obsidian/obsidian_block_brick").setResistance(2000.0F));
 		glowstone_block_brick = registerBlock(new BlockEA("gem/glowstone/glowstone_block_brick").setResistance(45.0F).setLightLevel(1.0f));
 		
-		double_draconium_slab = new BlockDoubleSlab("slab/draconium/double_draconium_slab").setResistance(4.0F);
+		double_draconium_slab = new BlockDoubleSlab("slab/draconium/double_draconium_slab").setResistance(4.0F).setLightLevel(0.4f);
 		double_velious_slab = new BlockDoubleSlab("slab/velious/double_velious_slab").setResistance(15.0F);
 		double_arcanite_slab = new BlockDoubleSlab("slab/arcanite/double_arcanite_slab").setResistance(30.0F);
 		double_katcheen_slab = new BlockDoubleSlab("slab/katcheen/double_katcheen_slab").setResistance(100.0F);
@@ -97,7 +101,7 @@ public class InitBlocksEA extends BlocksEA {
 		double_obsidian_slab = new BlockDoubleSlab("slab/obsidian/double_obsidian_slab").setResistance(2000.0F);
 		double_glowstone_slab = new BlockDoubleSlab("slab/glowstone/double_glowstone_slab").setResistance(45.0F).setLightLevel(1.0f);
 		
-		draconium_slab = new BlockHalfSlab("slab/draconium/draconium_slab").setResistance(4.0F).setCreativeTab(EbonArtsMod.tabEbonArtsBlocks);
+		draconium_slab = new BlockHalfSlab("slab/draconium/draconium_slab").setResistance(4.0F).setLightLevel(0.4f).setCreativeTab(EbonArtsMod.tabEbonArtsBlocks);
 		velious_slab = new BlockHalfSlab("slab/velious/velious_slab").setResistance(15.0F).setCreativeTab(EbonArtsMod.tabEbonArtsBlocks);
 		arcanite_slab = new BlockHalfSlab("slab/arcanite/arcanite_slab").setResistance(30.0F).setCreativeTab(EbonArtsMod.tabEbonArtsBlocks);
 		katcheen_slab = new BlockHalfSlab("slab/katcheen/katcheen_slab").setResistance(100.0F).setCreativeTab(EbonArtsMod.tabEbonArtsBlocks);
@@ -131,7 +135,7 @@ public class InitBlocksEA extends BlocksEA {
 		
 		
 		
-		draconium_stairs = registerBlock(new EABlockStairs("stairs/draconium_stairs", draconium_block).setResistance(4.0F));
+		draconium_stairs = registerBlock(new EABlockStairs("stairs/draconium_stairs", draconium_block).setResistance(4.0F).setLightLevel(0.4f));
 		velious_stairs = registerBlock(new EABlockStairs("stairs/velious_stairs", velious_block).setResistance(15.0F));
 		arcanite_stairs = registerBlock(new EABlockStairs("stairs/arcanite_stairs", arcanite_block).setResistance(30.0F));
 		katcheen_stairs = registerBlock(new EABlockStairs("stairs/katcheen_stairs", katcheen_block).setResistance(100.0F));
@@ -141,7 +145,7 @@ public class InitBlocksEA extends BlocksEA {
 		obsidian_stairs = registerBlock(new EABlockStairs("stairs/obsidian_stairs", obsidian_block).setResistance(2000.0F));
 		glowstone_stairs = registerBlock(new EABlockStairs("stairs/glowstone_stairs", glowstone_block).setResistance(45.0F).setLightLevel(1.0f));
 		
-		draconium_fence = registerBlock(new EABlockFence("fence/draconium_fence").setResistance(4.0F));
+		draconium_fence = registerBlock(new EABlockFence("fence/draconium_fence").setResistance(4.0F).setLightLevel(0.4f));
 		velious_fence = registerBlock(new EABlockFence("fence/velious_fence").setResistance(15.0F));
 		arcanite_fence = registerBlock(new EABlockFence("fence/arcanite_fence").setResistance(30.0F));
 		katcheen_fence = registerBlock(new EABlockFence("fence/katcheen_fence").setResistance(100.0F));
@@ -151,7 +155,7 @@ public class InitBlocksEA extends BlocksEA {
 		obsidian_fence = registerBlock(new EABlockFence("fence/obsidian_fence").setResistance(2000.0F));
 		glowstone_fence = registerBlock(new EABlockFence("fence/glowstone_fence").setResistance(45.0F).setLightLevel(1.0f));
 		
-		draconium_fence_gate = registerBlock(new EABlockFenceGate("fence/draconium_fence_gate").setResistance(4.0F));
+		draconium_fence_gate = registerBlock(new EABlockFenceGate("fence/draconium_fence_gate").setResistance(4.0F).setLightLevel(0.4f));
 		velious_fence_gate = registerBlock(new EABlockFenceGate("fence/velious_fence_gate").setResistance(15.0F));
 		arcanite_fence_gate = registerBlock(new EABlockFenceGate("fence/arcanite_fence_gate").setResistance(30.0F));
 		katcheen_fence_gate = registerBlock(new EABlockFenceGate("fence/katcheen_fence_gate").setResistance(100.0F));
@@ -161,7 +165,7 @@ public class InitBlocksEA extends BlocksEA {
 		obsidian_fence_gate = registerBlock(new EABlockFenceGate("fence/obsidian_fence_gate").setResistance(2000.0F));
 		glowstone_fence_gate = registerBlock(new EABlockFenceGate("fence/glowstone_fence_gate").setResistance(45.0F).setLightLevel(1.0f));
 		
-		draconium_wall = registerBlock(new EABlockWall("wall/draconium_wall", draconium_block).setResistance(4.0F));
+		draconium_wall = registerBlock(new EABlockWall("wall/draconium_wall", draconium_block).setResistance(4.0F).setLightLevel(0.4f));
 		velious_wall = registerBlock(new EABlockWall("wall/velious_wall", velious_block).setResistance(15.0F));
 		arcanite_wall = registerBlock(new EABlockWall("wall/arcanite_wall", arcanite_block).setResistance(30.0F));
 		katcheen_wall = registerBlock(new EABlockWall("wall/katcheen_wall", katcheen_block).setResistance(100.0F));
@@ -181,7 +185,7 @@ public class InitBlocksEA extends BlocksEA {
 		obsidian_torch = registerBlock(new EABlockTorchObsidian().setResistance(2000.0F));
 		glowstone_torch = registerBlock(new EABlockTorchGlowstone().setResistance(45.0F));
 		
-		draconium_trapdoor = registerBlock(new EABlockTrapDoor("door/draconium_trapdoor").setResistance(4.0F));
+		draconium_trapdoor = registerBlock(new EABlockTrapDoor("door/draconium_trapdoor").setResistance(4.0F).setLightLevel(0.4f));
 		velious_trapdoor = registerBlock(new EABlockTrapDoor("door/velious_trapdoor").setResistance(4.0F));
 		arcanite_trapdoor = registerBlock(new EABlockTrapDoor("door/arcanite_trapdoor").setResistance(4.0F));
 		katcheen_trapdoor = registerBlock(new EABlockTrapDoor("door/katcheen_trapdoor").setResistance(4.0F));
@@ -191,7 +195,7 @@ public class InitBlocksEA extends BlocksEA {
 		obsidian_trapdoor = registerBlock(new EABlockTrapDoor("door/obsidian_trapdoor").setResistance(4.0F));
 		glowstone_trapdoor = registerBlock(new EABlockTrapDoor("door/glowstone_trapdoor").setResistance(4.0F));
 		
-		draconium_ladder = registerBlock(new EABlockLadder("ladder/draconium_ladder"));
+		draconium_ladder = registerBlock(new EABlockLadder("ladder/draconium_ladder").setLightLevel(0.4f));
 		velious_ladder = registerBlock(new EABlockLadder("ladder/velious_ladder"));
 		arcanite_ladder = registerBlock(new EABlockLadder("ladder/arcanite_ladder"));
 		katcheen_ladder = registerBlock(new EABlockLadder("ladder/katcheen_ladder"));
@@ -201,7 +205,7 @@ public class InitBlocksEA extends BlocksEA {
 		obsidian_ladder = registerBlock(new EABlockLadder("ladder/obsidian_ladder"));
 		glowstone_ladder = registerBlock(new EABlockLadder("ladder/glowstone_ladder").setLightLevel(1.0f));
 		
-		draconium_pillar = registerBlock(new EABlockPillar("pillar/draconium_pillar").setResistance(4.0F));
+		draconium_pillar = registerBlock(new EABlockPillar("pillar/draconium_pillar").setResistance(4.0F).setLightLevel(0.4f));
 		velious_pillar = registerBlock(new EABlockPillar("pillar/velious_pillar").setResistance(15.0F));
 		arcanite_pillar = registerBlock(new EABlockPillar("pillar/arcanite_pillar").setResistance(30.0F));
 		katcheen_pillar = registerBlock(new EABlockPillar("pillar/katcheen_pillar").setResistance(100.0F));
@@ -211,7 +215,7 @@ public class InitBlocksEA extends BlocksEA {
 		obsidian_pillar = registerBlock(new EABlockPillar("pillar/obsidian_pillar").setResistance(2000.0F));
 		glowstone_pillar = registerBlock(new EABlockPillar("pillar/glowstone_pillar").setResistance(45.0F).setLightLevel(1.0f));
 		
-		draconium_block_fancybrick = registerBlock(new BlockEA("gem/draconium/draconium_block_fancybrick").setResistance(4.0F));
+		draconium_block_fancybrick = registerBlock(new BlockEA("gem/draconium/draconium_block_fancybrick").setResistance(4.0F).setLightLevel(0.4f));
 		velious_block_fancybrick = registerBlock(new BlockEA("gem/velious/velious_block_fancybrick").setResistance(15.0F));
 		arcanite_block_fancybrick = registerBlock(new BlockEA("gem/arcanite/arcanite_block_fancybrick").setResistance(30.0F));
 		katcheen_block_fancybrick = registerBlock(new BlockEA("gem/katcheen/katcheen_block_fancybrick").setResistance(100.0F));
@@ -280,6 +284,12 @@ public class InitBlocksEA extends BlocksEA {
 		wood_mystic_block_red = registerBlock(new BlockMysticWood("gem/mystic/wood/wood_mystic_block_red"));
 		wood_mystic_block_black = registerBlock(new BlockMysticWood("gem/mystic/wood/wood_mystic_block_black"));
 		
+		necrocite_ore_end = registerBlock(new BlockEndOreNecrocite(3, 30f));
+		soularite_ore_end = registerBlock(new BlockEndOreSoularite(3, 30f));
+		ebonheart_ore_end = registerBlock(new BlockEndOreEbonheart(3, 30f));
+		ebon_ore_end = registerBlock(new BlockMultiOre("ore/ebon_ore_end"));
+		
+		
 		paper_block = registerBlock(new EABlockDirectional("paper_block").setResistance(4.0F));
 		leather_block = registerBlock(new EABlockDirectional("leather_block").setResistance(4.0F));
 		reed_block = registerBlock(new EABlockDirectional("reed_block").setResistance(4.0F));
@@ -294,7 +304,7 @@ public class InitBlocksEA extends BlocksEA {
 		
 		
 		
-		cryptic_draconium_block = registerBlock(new BlockEA("cryptic/block/cryptic_draconium_block").setResistance(4.0F).setCreativeTab(EbonArtsMod.tabEbonArtsCryptic));
+		cryptic_draconium_block = registerBlock(new BlockEA("cryptic/block/cryptic_draconium_block").setResistance(4.0F).setLightLevel(0.4f).setCreativeTab(EbonArtsMod.tabEbonArtsCryptic));
 		cryptic_velious_block = registerBlock(new BlockEA("cryptic/block/cryptic_velious_block").setResistance(15.0F).setCreativeTab(EbonArtsMod.tabEbonArtsCryptic));
 		cryptic_arcanite_block = registerBlock(new BlockEA("cryptic/block/cryptic_arcanite_block").setResistance(30.0F).setCreativeTab(EbonArtsMod.tabEbonArtsCryptic));
 		cryptic_katcheen_block = registerBlock(new BlockEA("cryptic/block/cryptic_katcheen_block").setResistance(100.0F).setCreativeTab(EbonArtsMod.tabEbonArtsCryptic));
@@ -304,7 +314,7 @@ public class InitBlocksEA extends BlocksEA {
 		cryptic_obsidian_block = registerBlock(new BlockEA("cryptic/block/cryptic_obsidian_block").setResistance(2000.0F).setCreativeTab(EbonArtsMod.tabEbonArtsCryptic));
 		cryptic_glowstone_block = registerBlock(new BlockEA("cryptic/block/cryptic_glowstone_block").setResistance(45.0F).setLightLevel(1.0f).setCreativeTab(EbonArtsMod.tabEbonArtsCryptic));
 		
-		cryptic_draconium_block_brick = registerBlock(new BlockEA("cryptic/block/cryptic_draconium_block_brick").setResistance(4.0F).setCreativeTab(EbonArtsMod.tabEbonArtsCryptic));
+		cryptic_draconium_block_brick = registerBlock(new BlockEA("cryptic/block/cryptic_draconium_block_brick").setResistance(4.0F).setLightLevel(0.4f).setCreativeTab(EbonArtsMod.tabEbonArtsCryptic));
 		cryptic_velious_block_brick = registerBlock(new BlockEA("cryptic/block/cryptic_velious_block_brick").setResistance(15.0F).setCreativeTab(EbonArtsMod.tabEbonArtsCryptic));
 		cryptic_arcanite_block_brick = registerBlock(new BlockEA("cryptic/block/cryptic_arcanite_block_brick").setResistance(30.0F).setCreativeTab(EbonArtsMod.tabEbonArtsCryptic));
 		cryptic_katcheen_block_brick = registerBlock(new BlockEA("cryptic/block/cryptic_katcheen_block_brick").setResistance(100.0F).setCreativeTab(EbonArtsMod.tabEbonArtsCryptic));
@@ -314,7 +324,7 @@ public class InitBlocksEA extends BlocksEA {
 		cryptic_obsidian_block_brick = registerBlock(new BlockEA("cryptic/block/cryptic_obsidian_block_brick").setResistance(2000.0F).setCreativeTab(EbonArtsMod.tabEbonArtsCryptic));
 		cryptic_glowstone_block_brick = registerBlock(new BlockEA("cryptic/block/cryptic_glowstone_block_brick").setResistance(45.0F).setLightLevel(1.0f).setCreativeTab(EbonArtsMod.tabEbonArtsCryptic));
 		
-		double_cryptic_draconium_slab = new BlockDoubleSlab("cryptic/slab/double_cryptic_draconium_slab").setResistance(4.0F);
+		double_cryptic_draconium_slab = new BlockDoubleSlab("cryptic/slab/double_cryptic_draconium_slab").setResistance(4.0F).setLightLevel(0.4f);
 		double_cryptic_velious_slab = new BlockDoubleSlab("cryptic/slab/double_cryptic_velious_slab").setResistance(15.0F);
 		double_cryptic_arcanite_slab = new BlockDoubleSlab("cryptic/slab/double_cryptic_arcanite_slab").setResistance(30.0F);
 		double_cryptic_katcheen_slab = new BlockDoubleSlab("cryptic/slab/double_cryptic_katcheen_slab").setResistance(100.0F);
@@ -324,7 +334,7 @@ public class InitBlocksEA extends BlocksEA {
 		double_cryptic_obsidian_slab = new BlockDoubleSlab("cryptic/slab/double_cryptic_obsidian_slab").setResistance(2000.0F);
 		double_cryptic_glowstone_slab = new BlockDoubleSlab("cryptic/slab/double_cryptic_glowstone_slab").setResistance(45.0F).setLightLevel(1.0f);
 		
-		cryptic_draconium_slab = new BlockHalfSlab("cryptic/slab/cryptic_draconium_slab").setResistance(4.0F).setCreativeTab(EbonArtsMod.tabEbonArtsCryptic);
+		cryptic_draconium_slab = new BlockHalfSlab("cryptic/slab/cryptic_draconium_slab").setResistance(4.0F).setLightLevel(0.4f).setCreativeTab(EbonArtsMod.tabEbonArtsCryptic);
 		cryptic_velious_slab = new BlockHalfSlab("cryptic/slab/cryptic_velious_slab").setResistance(15.0F).setCreativeTab(EbonArtsMod.tabEbonArtsCryptic);
 		cryptic_arcanite_slab = new BlockHalfSlab("cryptic/slab/cryptic_arcanite_slab").setResistance(30.0F).setCreativeTab(EbonArtsMod.tabEbonArtsCryptic);
 		cryptic_katcheen_slab = new BlockHalfSlab("cryptic/slab/cryptic_katcheen_slab").setResistance(100.0F).setCreativeTab(EbonArtsMod.tabEbonArtsCryptic);
@@ -358,7 +368,7 @@ public class InitBlocksEA extends BlocksEA {
 		
 		
 		
-		cryptic_draconium_stairs = registerBlock(new EABlockStairs("cryptic/stairs/cryptic_draconium_stairs", cryptic_draconium_block).setResistance(4.0F).setCreativeTab(EbonArtsMod.tabEbonArtsCryptic));
+		cryptic_draconium_stairs = registerBlock(new EABlockStairs("cryptic/stairs/cryptic_draconium_stairs", cryptic_draconium_block).setResistance(4.0F).setLightLevel(0.4f).setCreativeTab(EbonArtsMod.tabEbonArtsCryptic));
 		cryptic_velious_stairs = registerBlock(new EABlockStairs("cryptic/stairs/cryptic_velious_stairs", cryptic_velious_block).setResistance(15.0F).setCreativeTab(EbonArtsMod.tabEbonArtsCryptic));
 		cryptic_arcanite_stairs = registerBlock(new EABlockStairs("cryptic/stairs/cryptic_arcanite_stairs", cryptic_arcanite_block).setResistance(30.0F).setCreativeTab(EbonArtsMod.tabEbonArtsCryptic));
 		cryptic_katcheen_stairs = registerBlock(new EABlockStairs("cryptic/stairs/cryptic_katcheen_stairs", cryptic_katcheen_block).setResistance(100.0F).setCreativeTab(EbonArtsMod.tabEbonArtsCryptic));
@@ -368,7 +378,7 @@ public class InitBlocksEA extends BlocksEA {
 		cryptic_obsidian_stairs = registerBlock(new EABlockStairs("cryptic/stairs/cryptic_obsidian_stairs", cryptic_obsidian_block).setResistance(2000.0F).setCreativeTab(EbonArtsMod.tabEbonArtsCryptic));
 		cryptic_glowstone_stairs = registerBlock(new EABlockStairs("cryptic/stairs/cryptic_glowstone_stairs", cryptic_glowstone_block).setResistance(45.0F).setLightLevel(1.0f).setCreativeTab(EbonArtsMod.tabEbonArtsCryptic));
 		
-		cryptic_draconium_fence = registerBlock(new EABlockFence("cryptic/fence/cryptic_draconium_fence").setResistance(4.0F).setCreativeTab(EbonArtsMod.tabEbonArtsCryptic));
+		cryptic_draconium_fence = registerBlock(new EABlockFence("cryptic/fence/cryptic_draconium_fence").setResistance(4.0F).setLightLevel(0.4f).setCreativeTab(EbonArtsMod.tabEbonArtsCryptic));
 		cryptic_velious_fence = registerBlock(new EABlockFence("cryptic/fence/cryptic_velious_fence").setResistance(15.0F).setCreativeTab(EbonArtsMod.tabEbonArtsCryptic));
 		cryptic_arcanite_fence = registerBlock(new EABlockFence("cryptic/fence/cryptic_arcanite_fence").setResistance(30.0F).setCreativeTab(EbonArtsMod.tabEbonArtsCryptic));
 		cryptic_katcheen_fence = registerBlock(new EABlockFence("cryptic/fence/cryptic_katcheen_fence").setResistance(100.0F).setCreativeTab(EbonArtsMod.tabEbonArtsCryptic));
@@ -378,7 +388,7 @@ public class InitBlocksEA extends BlocksEA {
 		cryptic_obsidian_fence = registerBlock(new EABlockFence("cryptic/fence/cryptic_obsidian_fence").setResistance(2000.0F).setCreativeTab(EbonArtsMod.tabEbonArtsCryptic));
 		cryptic_glowstone_fence = registerBlock(new EABlockFence("cryptic/fence/cryptic_glowstone_fence").setResistance(45.0F).setLightLevel(1.0f).setCreativeTab(EbonArtsMod.tabEbonArtsCryptic));
 		
-		cryptic_draconium_fence_gate = registerBlock(new EABlockFenceGate("cryptic/fence/cryptic_draconium_fence_gate").setResistance(4.0F).setCreativeTab(EbonArtsMod.tabEbonArtsCryptic));
+		cryptic_draconium_fence_gate = registerBlock(new EABlockFenceGate("cryptic/fence/cryptic_draconium_fence_gate").setResistance(4.0F).setLightLevel(0.4f).setCreativeTab(EbonArtsMod.tabEbonArtsCryptic));
 		cryptic_velious_fence_gate = registerBlock(new EABlockFenceGate("cryptic/fence/cryptic_velious_fence_gate").setResistance(15.0F).setCreativeTab(EbonArtsMod.tabEbonArtsCryptic));
 		cryptic_arcanite_fence_gate = registerBlock(new EABlockFenceGate("cryptic/fence/cryptic_arcanite_fence_gate").setResistance(30.0F).setCreativeTab(EbonArtsMod.tabEbonArtsCryptic));
 		cryptic_katcheen_fence_gate = registerBlock(new EABlockFenceGate("cryptic/fence/cryptic_katcheen_fence_gate").setResistance(100.0F).setCreativeTab(EbonArtsMod.tabEbonArtsCryptic));
@@ -388,7 +398,7 @@ public class InitBlocksEA extends BlocksEA {
 		cryptic_obsidian_fence_gate = registerBlock(new EABlockFenceGate("cryptic/fence/cryptic_obsidian_fence_gate").setResistance(2000.0F).setCreativeTab(EbonArtsMod.tabEbonArtsCryptic));
 		cryptic_glowstone_fence_gate = registerBlock(new EABlockFenceGate("cryptic/fence/cryptic_glowstone_fence_gate").setResistance(45.0F).setLightLevel(1.0f).setCreativeTab(EbonArtsMod.tabEbonArtsCryptic));
 		
-		cryptic_draconium_wall = registerBlock(new EABlockWall("cryptic/wall/cryptic_draconium_wall", cryptic_draconium_block).setResistance(4.0F).setCreativeTab(EbonArtsMod.tabEbonArtsCryptic));
+		cryptic_draconium_wall = registerBlock(new EABlockWall("cryptic/wall/cryptic_draconium_wall", cryptic_draconium_block).setResistance(4.0F).setLightLevel(0.4f).setCreativeTab(EbonArtsMod.tabEbonArtsCryptic));
 		cryptic_velious_wall = registerBlock(new EABlockWall("cryptic/wall/cryptic_velious_wall", cryptic_velious_block).setResistance(15.0F).setCreativeTab(EbonArtsMod.tabEbonArtsCryptic));
 		cryptic_arcanite_wall = registerBlock(new EABlockWall("cryptic/wall/cryptic_arcanite_wall", cryptic_arcanite_block).setResistance(30.0F).setCreativeTab(EbonArtsMod.tabEbonArtsCryptic));
 		cryptic_katcheen_wall = registerBlock(new EABlockWall("cryptic/wall/cryptic_katcheen_wall", cryptic_katcheen_block).setResistance(100.0F).setCreativeTab(EbonArtsMod.tabEbonArtsCryptic));
@@ -408,7 +418,7 @@ public class InitBlocksEA extends BlocksEA {
 		//cryptic_obsidian_torch = registerBlock(new EABlockTorchObsidian().setResistance(2000.0F));
 		//cryptic_glowstone_torch = registerBlock(new EABlockTorchGlowstone().setResistance(45.0F));
 		
-		cryptic_draconium_trapdoor = registerBlock(new EABlockTrapDoor("cryptic/door/cryptic_draconium_trapdoor").setResistance(4.0F).setCreativeTab(EbonArtsMod.tabEbonArtsCryptic));
+		cryptic_draconium_trapdoor = registerBlock(new EABlockTrapDoor("cryptic/door/cryptic_draconium_trapdoor").setResistance(4.0F).setLightLevel(0.4f).setCreativeTab(EbonArtsMod.tabEbonArtsCryptic));
 		cryptic_velious_trapdoor = registerBlock(new EABlockTrapDoor("cryptic/door/cryptic_velious_trapdoor").setResistance(4.0F).setCreativeTab(EbonArtsMod.tabEbonArtsCryptic));
 		cryptic_arcanite_trapdoor = registerBlock(new EABlockTrapDoor("cryptic/door/cryptic_arcanite_trapdoor").setResistance(4.0F).setCreativeTab(EbonArtsMod.tabEbonArtsCryptic));
 		cryptic_katcheen_trapdoor = registerBlock(new EABlockTrapDoor("cryptic/door/cryptic_katcheen_trapdoor").setResistance(4.0F).setCreativeTab(EbonArtsMod.tabEbonArtsCryptic));
@@ -418,7 +428,7 @@ public class InitBlocksEA extends BlocksEA {
 		cryptic_obsidian_trapdoor = registerBlock(new EABlockTrapDoor("cryptic/door/cryptic_obsidian_trapdoor").setResistance(4.0F).setCreativeTab(EbonArtsMod.tabEbonArtsCryptic));
 		cryptic_glowstone_trapdoor = registerBlock(new EABlockTrapDoor("cryptic/door/cryptic_glowstone_trapdoor").setResistance(4.0F).setCreativeTab(EbonArtsMod.tabEbonArtsCryptic));
 		
-		cryptic_draconium_ladder = registerBlock(new EABlockLadder("cryptic/ladder/cryptic_draconium_ladder").setCreativeTab(EbonArtsMod.tabEbonArtsCryptic));
+		cryptic_draconium_ladder = registerBlock(new EABlockLadder("cryptic/ladder/cryptic_draconium_ladder").setLightLevel(0.4f).setCreativeTab(EbonArtsMod.tabEbonArtsCryptic));
 		cryptic_velious_ladder = registerBlock(new EABlockLadder("cryptic/ladder/cryptic_velious_ladder").setCreativeTab(EbonArtsMod.tabEbonArtsCryptic));
 		cryptic_arcanite_ladder = registerBlock(new EABlockLadder("cryptic/ladder/cryptic_arcanite_ladder").setCreativeTab(EbonArtsMod.tabEbonArtsCryptic));
 		cryptic_katcheen_ladder = registerBlock(new EABlockLadder("cryptic/ladder/cryptic_katcheen_ladder").setCreativeTab(EbonArtsMod.tabEbonArtsCryptic));
@@ -428,7 +438,7 @@ public class InitBlocksEA extends BlocksEA {
 		cryptic_obsidian_ladder = registerBlock(new EABlockLadder("cryptic/ladder/cryptic_obsidian_ladder").setCreativeTab(EbonArtsMod.tabEbonArtsCryptic));
 		cryptic_glowstone_ladder = registerBlock(new EABlockLadder("cryptic/ladder/cryptic_glowstone_ladder").setLightLevel(1.0f).setCreativeTab(EbonArtsMod.tabEbonArtsCryptic));
 		
-		cryptic_draconium_pillar = registerBlock(new EABlockPillar("cryptic/pillar/cryptic_draconium_pillar").setResistance(4.0F).setCreativeTab(EbonArtsMod.tabEbonArtsCryptic));
+		cryptic_draconium_pillar = registerBlock(new EABlockPillar("cryptic/pillar/cryptic_draconium_pillar").setResistance(4.0F).setLightLevel(0.4f).setCreativeTab(EbonArtsMod.tabEbonArtsCryptic));
 		cryptic_velious_pillar = registerBlock(new EABlockPillar("cryptic/pillar/cryptic_velious_pillar").setResistance(15.0F).setCreativeTab(EbonArtsMod.tabEbonArtsCryptic));
 		cryptic_arcanite_pillar = registerBlock(new EABlockPillar("cryptic/pillar/cryptic_arcanite_pillar").setResistance(30.0F).setCreativeTab(EbonArtsMod.tabEbonArtsCryptic));
 		cryptic_katcheen_pillar = registerBlock(new EABlockPillar("cryptic/pillar/cryptic_katcheen_pillar").setResistance(100.0F).setCreativeTab(EbonArtsMod.tabEbonArtsCryptic));
@@ -438,7 +448,7 @@ public class InitBlocksEA extends BlocksEA {
 		cryptic_obsidian_pillar = registerBlock(new EABlockPillar("cryptic/pillar/cryptic_obsidian_pillar").setResistance(2000.0F).setCreativeTab(EbonArtsMod.tabEbonArtsCryptic));
 		cryptic_glowstone_pillar = registerBlock(new EABlockPillar("cryptic/pillar/cryptic_glowstone_pillar").setResistance(45.0F).setLightLevel(1.0f).setCreativeTab(EbonArtsMod.tabEbonArtsCryptic));
 		
-		cryptic_draconium_block_fancybrick = registerBlock(new BlockEA("cryptic/block/cryptic_draconium_block_fancybrick").setResistance(4.0F).setCreativeTab(EbonArtsMod.tabEbonArtsCryptic));
+		cryptic_draconium_block_fancybrick = registerBlock(new BlockEA("cryptic/block/cryptic_draconium_block_fancybrick").setResistance(4.0F).setLightLevel(0.4f).setCreativeTab(EbonArtsMod.tabEbonArtsCryptic));
 		cryptic_velious_block_fancybrick = registerBlock(new BlockEA("cryptic/block/cryptic_velious_block_fancybrick").setResistance(15.0F).setCreativeTab(EbonArtsMod.tabEbonArtsCryptic));
 		cryptic_arcanite_block_fancybrick = registerBlock(new BlockEA("cryptic/block/cryptic_arcanite_block_fancybrick").setResistance(30.0F).setCreativeTab(EbonArtsMod.tabEbonArtsCryptic));
 		cryptic_katcheen_block_fancybrick = registerBlock(new BlockEA("cryptic/block/cryptic_katcheen_block_fancybrick").setResistance(100.0F).setCreativeTab(EbonArtsMod.tabEbonArtsCryptic));

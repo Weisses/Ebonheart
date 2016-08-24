@@ -25,7 +25,9 @@ public class EbonArtsConfiguration
 	public static int necrociteValueChunk;
 	public static int soulariteValueChunk;
 	public static int ebonheartValueChunk;
-	
+	public static int necrociteEndValueChunk;
+	public static int soulariteEndValueChunk;
+	public static int ebonheartEndValueChunk;
 	
 	public static boolean armorWeaponDifficult;
 	public static boolean horseRecipe;
@@ -63,25 +65,44 @@ public class EbonArtsConfiguration
 	
 	
 	public static final int DRACONIUMVALUECHUNK_DEFAULT = 16;
-	public static final String DRACONIUMVALUECHUNK_NAME = "Draconium Ore veins per chunk. (1-64)";
+	public static final String DRACONIUMVALUECHUNK_NAME = "01) Draconium Ore density?";
+	public static final String DRACONIUMVALUECHUNK_COMMENT = "Draconium Ore veins per chunk.";
 	
 	public static final int VELIOUSVALUECHUNK_DEFAULT = 8;
-	public static final String VELIOUSVALUECHUNK_NAME = "Velious Ore veins per chunk. (1-64)";
+	public static final String VELIOUSVALUECHUNK_NAME = "02) Velious Ore density?";
+	public static final String VELIOUSVALUECHUNK_COMMENT = "Velious Ore veins per chunk.";
 	
 	public static final int ARCANITEVALUECHUNK_DEFAULT = 6;
-	public static final String ARCANITEVALUECHUNK_NAME = "Arcanite Ore veins per chunk. (1-64)";
+	public static final String ARCANITEVALUECHUNK_NAME = "03) Arcanite Ore density?";
+	public static final String ARCANITEVALUECHUNK_COMMENT = "Arcanite Ore veins per chunk.";
 	
 	public static final int KATCHEENVALUECHUNK_DEFAULT = 3;
-	public static final String KATCHEENVALUECHUNK_NAME = "Katcheen Ore veins per chunk. (1-64)";
+	public static final String KATCHEENVALUECHUNK_NAME = "04) Katcheen Ore density?";
+	public static final String KATCHEENVALUECHUNK_COMMENT = "Katcheen Ore veins per chunk.";
 	
 	public static final int NECROCITEVALUECHUNK_DEFAULT = 32;
-	public static final String NECROCITEVALUECHUNK_NAME = "Necrocite Ore veins per chunk. (1-64)";
+	public static final String NECROCITEVALUECHUNK_NAME = "05) Nether Necrocite Ore density?";
+	public static final String NECROCITEVALUECHUNK_COMMENT = "Necrocite Ore veins per chunk.";
 	
 	public static final int SOULARITEVALUECHUNK_DEFAULT = 32;
-	public static final String SOULARITEVALUECHUNK_NAME = "Soularite Ore veins per chunk. (1-64)";
+	public static final String SOULARITEVALUECHUNK_NAME = "06) Nether Soularite Ore density?";
+	public static final String SOULARITEVALUECHUNK_COMMENT = "Soularite Ore veins per chunk.";
 	
 	public static final int EBONHEARTVALUECHUNK_DEFAULT = 32;
-	public static final String EBONHEARTVALUECHUNK_NAME = "Ebonheart Ore veins per chunk. (1-64)";
+	public static final String EBONHEARTVALUECHUNK_NAME = "07) Nether Ebonheart Ore density?";
+	public static final String EBONHEARTVALUECHUNK_COMMENT = "Ebonheart Ore veins per chunk.";
+	
+	public static final int NECROCITEENDVALUECHUNK_DEFAULT = 32;
+	public static final String NECROCITEENDVALUECHUNK_NAME = "08) End Necrocite Ore density?";
+	public static final String NECROCITEENDVALUECHUNK_COMMENT = "Necrocite End Ore veins per chunk.";
+	
+	public static final int SOULARITEENDVALUECHUNK_DEFAULT = 32;
+	public static final String SOULARITEENDVALUECHUNK_NAME = "09) End Soularite Ore density?";
+	public static final String SOULARITEENDVALUECHUNK_COMMENT = "Soularite End Ore veins per chunk.";
+	
+	public static final int EBONHEARTENDVALUECHUNK_DEFAULT = 32;
+	public static final String EBONHEARTENDVALUECHUNK_NAME = "10) End Ebonheart Ore density?";
+	public static final String EBONHEARTENDVALUECHUNK_COMMENT = "Ebonheart End Ore veins per chunk.";
 	
 	
 	public static final boolean ARMORWEAPONDIFFICULT_DEFAULT = false;
@@ -144,26 +165,36 @@ public class EbonArtsConfiguration
 		EbonArtsMod.config.addCustomCategoryComment(WORLDGEN, "Adjust resource world generation weight.");
 		
 		//draconiumValueVein = EbonArtsMod.config.get(WORLDGEN, TextFormatting.YELLOW + DRACONIUMVALUEVEIN_NAME, DRACONIUMVALUEVEIN_DEFAULT).getInt(DRACONIUMVALUEVEIN_DEFAULT);
-		draconiumValueChunk = EbonArtsMod.config.get(WORLDGEN, TextFormatting.YELLOW + DRACONIUMVALUECHUNK_NAME, DRACONIUMVALUECHUNK_DEFAULT).getInt(DRACONIUMVALUECHUNK_DEFAULT);
+		////draconiumValueChunk = EbonArtsMod.config.get(WORLDGEN, TextFormatting.YELLOW + DRACONIUMVALUECHUNK_NAME, DRACONIUMVALUECHUNK_DEFAULT).getInt(DRACONIUMVALUECHUNK_DEFAULT);
 		
 		//veliousValueVein = EbonArtsMod.config.get(WORLDGEN, TextFormatting.YELLOW + VELIOUSVALUEVEIN_NAME, VELIOUSVALUEVEIN_DEFAULT).getInt(VELIOUSVALUEVEIN_DEFAULT);
-		veliousValueChunk = EbonArtsMod.config.get(WORLDGEN, TextFormatting.YELLOW + VELIOUSVALUECHUNK_NAME, VELIOUSVALUECHUNK_DEFAULT).getInt(VELIOUSVALUECHUNK_DEFAULT);
+		////veliousValueChunk = EbonArtsMod.config.get(WORLDGEN, TextFormatting.YELLOW + VELIOUSVALUECHUNK_NAME, VELIOUSVALUECHUNK_DEFAULT).getInt(VELIOUSVALUECHUNK_DEFAULT);
 		
 		//arcaniteValueVein = EbonArtsMod.config.get(WORLDGEN, TextFormatting.YELLOW + ARCANITEVALUEVEIN_NAME, ARCANITEVALUEVEIN_DEFAULT).getInt(ARCANITEVALUEVEIN_DEFAULT);
-		arcaniteValueChunk = EbonArtsMod.config.get(WORLDGEN, TextFormatting.YELLOW + ARCANITEVALUECHUNK_NAME, ARCANITEVALUECHUNK_DEFAULT).getInt(ARCANITEVALUECHUNK_DEFAULT);
+		////arcaniteValueChunk = EbonArtsMod.config.get(WORLDGEN, TextFormatting.YELLOW + ARCANITEVALUECHUNK_NAME, ARCANITEVALUECHUNK_DEFAULT).getInt(ARCANITEVALUECHUNK_DEFAULT);
 		
 		//katcheenValueVein = EbonArtsMod.config.get(WORLDGEN, TextFormatting.YELLOW + KATCHEENVALUEVEIN_NAME, KATCHEENVALUEVEIN_DEFAULT).getInt(KATCHEENVALUEVEIN_DEFAULT);
-		katcheenValueChunk = EbonArtsMod.config.get(WORLDGEN, TextFormatting.YELLOW + KATCHEENVALUECHUNK_NAME, KATCHEENVALUECHUNK_DEFAULT).getInt(KATCHEENVALUECHUNK_DEFAULT);
+		////katcheenValueChunk = EbonArtsMod.config.get(WORLDGEN, TextFormatting.YELLOW + KATCHEENVALUECHUNK_NAME, KATCHEENVALUECHUNK_DEFAULT).getInt(KATCHEENVALUECHUNK_DEFAULT);
 		
 		//necrociteValueVein = EbonArtsMod.config.get(WORLDGEN, TextFormatting.YELLOW + NECROCITEVALUEVEIN_NAME, NECROCITEVALUEVEIN_DEFAULT).getInt(NECROCITEVALUEVEIN_DEFAULT);
-		necrociteValueChunk = EbonArtsMod.config.get(WORLDGEN, TextFormatting.YELLOW + NECROCITEVALUECHUNK_NAME, NECROCITEVALUECHUNK_DEFAULT).getInt(NECROCITEVALUECHUNK_DEFAULT);
+		////necrociteValueChunk = EbonArtsMod.config.get(WORLDGEN, TextFormatting.YELLOW + NECROCITEVALUECHUNK_NAME, NECROCITEVALUECHUNK_DEFAULT).getInt(NECROCITEVALUECHUNK_DEFAULT);
 		
 		//soulariteValueVein = EbonArtsMod.config.get(WORLDGEN, TextFormatting.YELLOW + SOULARITEVALUEVEIN_NAME, SOULARITEVALUEVEIN_DEFAULT).getInt(SOULARITEVALUEVEIN_DEFAULT);
-		soulariteValueChunk = EbonArtsMod.config.get(WORLDGEN, TextFormatting.YELLOW + SOULARITEVALUECHUNK_NAME, SOULARITEVALUECHUNK_DEFAULT).getInt(SOULARITEVALUECHUNK_DEFAULT);
+		////soulariteValueChunk = EbonArtsMod.config.get(WORLDGEN, TextFormatting.YELLOW + SOULARITEVALUECHUNK_NAME, SOULARITEVALUECHUNK_DEFAULT).getInt(SOULARITEVALUECHUNK_DEFAULT);
 		
 		//ebonheartValueVein = EbonArtsMod.config.get(WORLDGEN, TextFormatting.YELLOW + EBONHEARTVALUEVEIN_NAME, EBONHEARTVALUEVEIN_DEFAULT).getInt(EBONHEARTVALUEVEIN_DEFAULT);
-		ebonheartValueChunk = EbonArtsMod.config.get(WORLDGEN, TextFormatting.YELLOW + EBONHEARTVALUECHUNK_NAME, EBONHEARTVALUECHUNK_DEFAULT).getInt(EBONHEARTVALUECHUNK_DEFAULT);
+		////ebonheartValueChunk = EbonArtsMod.config.get(WORLDGEN, TextFormatting.YELLOW + EBONHEARTVALUECHUNK_NAME, EBONHEARTVALUECHUNK_DEFAULT).getInt(EBONHEARTVALUECHUNK_DEFAULT);
 
+		draconiumValueChunk = EbonArtsMod.config.getInt(TextFormatting.YELLOW + DRACONIUMVALUECHUNK_NAME, WORLDGEN, DRACONIUMVALUECHUNK_DEFAULT, 1, 64, DRACONIUMVALUECHUNK_COMMENT);
+		veliousValueChunk = EbonArtsMod.config.getInt(TextFormatting.YELLOW + VELIOUSVALUECHUNK_NAME, WORLDGEN, VELIOUSVALUECHUNK_DEFAULT, 1, 64, VELIOUSVALUECHUNK_COMMENT);
+		arcaniteValueChunk = EbonArtsMod.config.getInt(TextFormatting.YELLOW + ARCANITEVALUECHUNK_NAME, WORLDGEN, ARCANITEVALUECHUNK_DEFAULT, 1, 64, ARCANITEVALUECHUNK_COMMENT);
+		katcheenValueChunk = EbonArtsMod.config.getInt(TextFormatting.YELLOW + KATCHEENVALUECHUNK_NAME, WORLDGEN, KATCHEENVALUECHUNK_DEFAULT, 1, 64, KATCHEENVALUECHUNK_COMMENT);
+		necrociteValueChunk = EbonArtsMod.config.getInt(TextFormatting.YELLOW + NECROCITEVALUECHUNK_NAME, WORLDGEN, NECROCITEVALUECHUNK_DEFAULT, 1, 64, NECROCITEVALUECHUNK_COMMENT);
+		soulariteValueChunk = EbonArtsMod.config.getInt(TextFormatting.YELLOW + SOULARITEVALUECHUNK_NAME, WORLDGEN, SOULARITEVALUECHUNK_DEFAULT, 1, 64, SOULARITEVALUECHUNK_COMMENT);
+		ebonheartValueChunk = EbonArtsMod.config.getInt(TextFormatting.YELLOW + EBONHEARTVALUECHUNK_NAME, WORLDGEN, EBONHEARTVALUECHUNK_DEFAULT, 1, 64, EBONHEARTVALUECHUNK_COMMENT);
+		necrociteEndValueChunk = EbonArtsMod.config.getInt(TextFormatting.YELLOW + NECROCITEENDVALUECHUNK_NAME, WORLDGEN, NECROCITEENDVALUECHUNK_DEFAULT, 1, 64, NECROCITEENDVALUECHUNK_COMMENT);
+		soulariteEndValueChunk = EbonArtsMod.config.getInt(TextFormatting.YELLOW + SOULARITEENDVALUECHUNK_NAME, WORLDGEN, SOULARITEENDVALUECHUNK_DEFAULT, 1, 64, SOULARITEENDVALUECHUNK_COMMENT);
+		ebonheartEndValueChunk = EbonArtsMod.config.getInt(TextFormatting.YELLOW + EBONHEARTENDVALUECHUNK_NAME, WORLDGEN, EBONHEARTENDVALUECHUNK_DEFAULT, 1, 64, EBONHEARTENDVALUECHUNK_COMMENT);
 		
 		
 		//saves the config
