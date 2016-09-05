@@ -39,6 +39,7 @@ public class EbonArtsConfiguration
 	public static boolean musicRecipe;
 	public static boolean plantParticle;
 	public static boolean decraftRecipe1;
+	public static boolean storageRecipe;
 	//public static boolean decraftRecipe2;
 	/**
 	public static final int DRACONIUMVALUEVEIN_DEFAULT = 8;
@@ -125,6 +126,8 @@ public class EbonArtsConfiguration
 	public static final String PLANTANIMATION_NAME = "Disable Mod Crop Particles?";
 	public static final boolean DECRAFTRECIPE1_DEFAULT = false;
 	public static final String DECRAFTRECIPE1_NAME = "Disable decrafting Mod Items?";
+	public static final boolean STORAGERECIPE_DEFAULT = false;
+	public static final String STORAGERECIPE_NAME = "Disable Storage Mod Items?";
 	
 	//public static final boolean DECRAFTRECIPE2_DEFAULT = false;
 	//public static final String DECRAFTRECIPE2_NAME = "Disable decrafting Vanilla Items?";
@@ -153,6 +156,7 @@ public class EbonArtsConfiguration
 		horseRecipe = EbonArtsMod.config.get(RECIPES, TextFormatting.GREEN + HORSERECIPE_NAME, HORSERECIPE_DEFAULT).getBoolean(HORSERECIPE_DEFAULT);
 		musicRecipe = EbonArtsMod.config.get(RECIPES, TextFormatting.GREEN + MUSICRECIPE_NAME, MUSICRECIPE_DEFAULT).getBoolean(MUSICRECIPE_DEFAULT);
 		
+		storageRecipe = EbonArtsMod.config.get(RECIPES, TextFormatting.GREEN + STORAGERECIPE_NAME, STORAGERECIPE_DEFAULT).getBoolean(STORAGERECIPE_DEFAULT);
 		
 		//decraftRecipe2 = EbonArtsMod.config.get(RECIPES, DECRAFTRECIPE2_NAME, DECRAFTRECIPE2_DEFAULT).getBoolean(DECRAFTRECIPE2_DEFAULT);
 		

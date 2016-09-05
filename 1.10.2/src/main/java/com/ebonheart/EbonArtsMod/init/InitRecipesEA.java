@@ -32,9 +32,12 @@ public class InitRecipesEA {
 		GameRegistry.addShapedRecipe(new ItemStack(InitBlocksEA.mystic_block_normal, 8), new Object[]{"SSS", "SES", "SSS", 'E', InitItemsEA.ebonheart, 'S', Blocks.STONE});
 		GameRegistry.addShapedRecipe(new ItemStack(InitBlocksEA.wood_mystic_block_normal, 8), new Object[]{"WWW", "WEW", "WWW", 'E', InitItemsEA.ebonheart, 'W', Blocks.PLANKS});
 		
-		GameRegistry.addShapedRecipe(new ItemStack(InitBlocksEA.paper_block), new Object[]{"PPP", "PPP", "PPP", 'P', Items.PAPER});
-		GameRegistry.addShapedRecipe(new ItemStack(InitBlocksEA.reed_block), new Object[]{"RRR", "RRR", "RRR", 'R', Items.REEDS});
-		GameRegistry.addShapedRecipe(new ItemStack(InitBlocksEA.leather_block), new Object[]{"LLL", "LLL", "LLL", 'L', Items.LEATHER});
+		if(!EbonArtsConfiguration.storageRecipe)
+		{
+			GameRegistry.addShapedRecipe(new ItemStack(InitBlocksEA.paper_block), new Object[]{"PPP", "PPP", "PPP", 'P', Items.PAPER});
+			GameRegistry.addShapedRecipe(new ItemStack(InitBlocksEA.reed_block), new Object[]{"RRR", "RRR", "RRR", 'R', Items.REEDS});
+			GameRegistry.addShapedRecipe(new ItemStack(InitBlocksEA.leather_block), new Object[]{"LLL", "LLL", "LLL", 'L', Items.LEATHER});
+		}
 		
 		GameRegistry.addShapedRecipe(new ItemStack(InitItemsEA.obsidian_shards), new Object[]{"DGD", "GQG", "DGD", 'D', InitItemsEA.draconium_dust, 'G', Items.GUNPOWDER, 'Q', Items.QUARTZ});
 		GameRegistry.addShapedRecipe(new ItemStack(InitItemsEA.obsidian_shards, 4), new Object[]{"DGD", "GQG", "DGD", 'D', InitItemsEA.draconium_dust, 'G', Items.GUNPOWDER, 'Q', Blocks.OBSIDIAN});
