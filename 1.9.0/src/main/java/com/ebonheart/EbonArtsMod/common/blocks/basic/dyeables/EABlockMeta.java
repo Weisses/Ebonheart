@@ -36,7 +36,7 @@ public class EABlockMeta extends Block implements IMetaBlockName {
 		this.setUnlocalizedName(unlocalizedName);
 		this.setCreativeTab(EbonArtsMod.tabEbonArtsDyeables);
 		this.setHarvestLevel("pickaxe", 2);
-		this.setStepSound(stepSound.STONE);
+		this.setStepSound(SoundType.STONE);
 		this.setDefaultState(this.blockState.getBaseState().withProperty(TYPE, EnumType.WHITE));
 	}
 

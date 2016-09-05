@@ -36,7 +36,7 @@ public class EABlockFenceGate extends BlockFenceGate {
 		this.setDefaultState(this.blockState.getBaseState().withProperty(OPEN, Boolean.valueOf(false)).withProperty(POWERED, Boolean.valueOf(false)).withProperty(IN_WALL, Boolean.valueOf(false)));
         this.setHarvestLevel("pickaxe", 2);
         this.setHardness(5.0F);
-        this.setStepSound(stepSound.STONE);
+        this.setStepSound(SoundType.STONE);
 	}
 	
 	@Override

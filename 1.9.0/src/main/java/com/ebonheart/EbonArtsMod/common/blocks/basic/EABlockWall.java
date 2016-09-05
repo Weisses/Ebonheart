@@ -36,7 +36,7 @@ public class EABlockWall extends BlockWall {
 		
 		this.setHarvestLevel("pickaxe", 2);
 		this.setHardness(5.0F);
-		this.setStepSound(stepSound.STONE);
+		this.setStepSound(SoundType.STONE);
 	}
 	
 	

@@ -35,7 +35,7 @@ public class EABlockDirectional extends BlockHorizontal {
 		
 		this.setDefaultState(this.blockState.getBaseState().withProperty(FACING, EnumFacing.NORTH));
 		this.setHardness(1.0F);
-		this.setStepSound(stepSound.STONE);
+		this.setStepSound(SoundType.STONE);
 		this.useNeighborBrightness=true;
 	}
 	

@@ -38,7 +38,7 @@ public class EABlockDoor extends BlockDoor {
 		//this.setUnlocalizedName(unlocalizedName);
 		this.setHarvestLevel("pickaxe", 2);
 		this.setHardness(5.0F);
-		this.setStepSound(stepSound.STONE);
+		this.setStepSound(SoundType.STONE);
 		this.disableStats();
 	}
 	

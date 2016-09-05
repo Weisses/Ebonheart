@@ -7,7 +7,7 @@ itemGroup.tabEbonArtsDyeables=Ebon Arts Dyeables
 itemGroup.tabEbonArtsCryptic=Ebon Arts Cryptic
 
 //-----Items-----
-item.ea:gem/Draconite_dust.name=Draconite Dust
+item.ea:gem/draconium_dust.name=Draconite Dust
 item.ea:gem/velious.name=Velious
 item.ea:gem/arcanite.name=Arcanite
 item.ea:gem/katcheen.name=Katcheen
@@ -22,8 +22,8 @@ item.ea:plant/hellion_fruit.name=Hellion Fruit
 item.ea:plant/sacred_fruit.name=Sacred Fruit
 item.ea:plant/dragon_fruit.name=Dragon Fruit
 
-item.ea:gem/cryptic_Draconite_dust.name=Cryptic Draconite Dust
-item.ea:gem/cryptic_Draconite_dust.desc=Cryptic Draconite Dust TEST!
+item.ea:gem/cryptic_draconium_dust.name=Cryptic Draconite Dust
+item.ea:gem/cryptic_draconium_dust.desc=Cryptic Draconite Dust TEST!
 item.ea:gem/cryptic_velious.name=Cryptic Velious
 item.ea:gem/cryptic_arcanite.name=Cryptic Arcanite
 item.ea:gem/cryptic_katcheen.name=Cryptic Katcheen
@@ -33,7 +33,7 @@ item.ea:gem/cryptic_ebonheart.name=Cryptic Ebonheart
 item.ea:gem/cryptic_obsidian_shard.name=Cryptic Obsidian Shard
 item.ea:gem/cryptic_glowstone_shard.name=Cryptic Glowstone Shard
 
-item.ea:gem/dense_Draconite_dust.name=Dense Draconite Dust
+item.ea:gem/dense_draconium_dust.name=Dense Draconite Dust
 item.ea:gem/dense_velious.name=Dense Velious
 item.ea:gem/dense_arcanite.name=Dense Arcanite
 item.ea:gem/dense_katcheen.name=Dense Katcheen
@@ -49,7 +49,7 @@ item.ea:disc/ethereal_disc.name=Ethereal Disc
 item.ea:disc/mirroring_disc.name=Mirroring Disc
 
 //-----Ores-----
-tile.ea:ore/Draconite_ore.name=Draconite Ore
+tile.ea:ore/draconium_ore.name=Draconite Ore
 tile.ea:ore/velious_ore.name=Velious Ore
 tile.ea:ore/arcanite_ore.name=Arcanite Ore
 tile.ea:ore/katcheen_ore.name=Katcheen Ore
@@ -124,7 +124,7 @@ tile.ea:gem/mystic/wood/wood_mystic_block_red.name=Red Mystic Wood Planks
 tile.ea:gem/mystic/wood/wood_mystic_block_black.name=Black Mystic Wood Planks
 tile.ea:gem/mystic/wood/wood_mystic_block_glass.name=Clear Mystic Wood Planks
 
-tile.ea:gem/Draconite/Draconite_block.name=Draconite Block
+tile.ea:gem/draconium/draconium_block.name=Draconite Block
 tile.ea:gem/velious/velious_block.name=Velious Block
 tile.ea:gem/arcanite/arcanite_block.name=Arcanite Block
 tile.ea:gem/katcheen/katcheen_block.name=Katcheen Block
@@ -134,7 +134,7 @@ tile.ea:gem/obsidian/obsidian_block.name=Purified Obsidian Block
 tile.ea:gem/glowstone/glowstone_block.name=Purified Glowstone Block
 tile.ea:gem/ebonheart/ebonheart_block.name=Ebonheart Block
 
-tile.ea:gem/Draconite/Draconite_block_brick.name=Draconite Brick
+tile.ea:gem/draconium/draconium_block_brick.name=Draconite Brick
 tile.ea:gem/velious/velious_block_brick.name=Velious Brick
 tile.ea:gem/arcanite/arcanite_block_brick.name=Arcanite Brick
 tile.ea:gem/katcheen/katcheen_block_brick.name=Katcheen Brick
@@ -144,7 +144,7 @@ tile.ea:gem/obsidian/obsidian_block_brick.name=Purified Obsidian Brick
 tile.ea:gem/glowstone/glowstone_block_brick.name=Purified Glowstone Brick
 tile.ea:gem/ebonheart/ebonheart_block_brick.name=Ebonheart Brick
 
-tile.ea:fence/Draconite_fence.name=Draconite Fence
+tile.ea:fence/draconium_fence.name=Draconite Fence
 tile.ea:fence/velious_fence.name=Velious Fence
 tile.ea:fence/arcanite_fence.name=Arcanite Fence
 tile.ea:fence/katcheen_fence.name=Katcheen Fence
@@ -154,7 +154,7 @@ tile.ea:fence/obsidian_fence.name=Purified Obsidian Fence
 tile.ea:fence/glowstone_fence.name=Purified Glowstone Fence
 tile.ea:fence/ebonheart_fence.name=Ebonheart Fence
 
-tile.ea:fence/Draconite_fence_gate.name=Draconite Gate
+tile.ea:fence/draconium_fence_gate.name=Draconite Gate
 tile.ea:fence/velious_fence_gate.name=Velious Gate
 tile.ea:fence/arcanite_fence_gate.name=Arcanite Gate
 tile.ea:fence/katcheen_fence_gate.name=Katcheen Gate
@@ -164,7 +164,7 @@ tile.ea:fence/obsidian_fence_gate.name=Purified Obsidian Gate
 tile.ea:fence/glowstone_fence_gate.name=Purified Glowstone Gate
 tile.ea:fence/ebonheart_fence_gate.name=Ebonheart Gate
 
-tile.ea:wall/Draconite_wall.name=Draconite Wall
+tile.ea:wall/draconium_wall.name=Draconite Wall
 tile.ea:wall/velious_wall.name=Velious Wall
 tile.ea:wall/arcanite_wall.name=Arcanite Wall
 tile.ea:wall/katcheen_wall.name=Katcheen Wall
@@ -174,7 +174,7 @@ tile.ea:wall/obsidian_wall.name=Purified Obsidian Wall
 tile.ea:wall/glowstone_wall.name=Purified Glowstone Wall
 tile.ea:wall/ebonheart_wall.name=Ebonheart Wall
 
-tile.ea:stairs/Draconite_stairs.name=Draconite Stairs
+tile.ea:stairs/draconium_stairs.name=Draconite Stairs
 tile.ea:stairs/velious_stairs.name=Velious Stairs
 tile.ea:stairs/arcanite_stairs.name=Arcanite Stairs
 tile.ea:stairs/katcheen_stairs.name=Katcheen Stairs
@@ -184,7 +184,7 @@ tile.ea:stairs/obsidian_stairs.name=Purified Obsidian Stairs
 tile.ea:stairs/glowstone_stairs.name=Purified Glowstone Stairs
 tile.ea:stairs/ebonheart_stairs.name=Ebonheart Stairs
 
-tile.slab/Draconite/Draconite_slab.name=Draconite Slab
+tile.slab/draconium/draconium_slab.name=Draconite Slab
 tile.slab/velious/velious_slab.name=Velious Slab
 tile.slab/arcanite/arcanite_slab.name=Arcanite Slab
 tile.slab/katcheen/katcheen_slab.name=Katcheen Slab
@@ -194,7 +194,7 @@ tile.slab/obsidian/obsidian_slab.name=Purified Obsidian Slab
 tile.slab/glowstone/glowstone_slab.name=Purified Glowstone Slab
 tile.slab/ebonheart/ebonheart_slab.name=Ebonheart Slab
 
-tile.ea:gem/Draconite/Draconite_torch.name=Draconite Torch
+tile.ea:gem/draconium/draconium_torch.name=Draconite Torch
 tile.ea:gem/velious/velious_torch.name=Velious Torch
 tile.ea:gem/arcanite/arcanite_torch.name=Arcanite Torch
 tile.ea:gem/katcheen/katcheen_torch.name=Katcheen Torch
@@ -204,7 +204,7 @@ tile.ea:gem/obsidian/obsidian_torch.name=Purified Obsidian Torch
 tile.ea:gem/glowstone/glowstone_torch.name=Purified Glowstone Torch
 tile.ea:gem/ebonheart/ebonheart_torch.name=Ebonheart Torch
 
-tile.ea:ladder/Draconite_ladder.name=Draconite Ladder
+tile.ea:ladder/draconium_ladder.name=Draconite Ladder
 tile.ea:ladder/velious_ladder.name=Velious Ladder
 tile.ea:ladder/arcanite_ladder.name=Arcanite Ladder
 tile.ea:ladder/katcheen_ladder.name=Katcheen Ladder
@@ -214,7 +214,7 @@ tile.ea:ladder/obsidian_ladder.name=Purified Obsidian Ladder
 tile.ea:ladder/glowstone_ladder.name=Purified Glowstone Ladder
 tile.ea:ladder/ebonheart_ladder.name=Ebonheart Ladder
 
-tile.ea:pillar/Draconite_pillar.name=Draconite Pillar
+tile.ea:pillar/draconium_pillar.name=Draconite Pillar
 tile.ea:pillar/velious_pillar.name=Velious Pillar
 tile.ea:pillar/arcanite_pillar.name=Arcanite Pillar
 tile.ea:pillar/katcheen_pillar.name=Katcheen Pillar
@@ -224,7 +224,7 @@ tile.ea:pillar/obsidian_pillar.name=Purified Obsidian Pillar
 tile.ea:pillar/glowstone_pillar.name=Purified Glowstone Pillar
 tile.ea:pillar/ebonheart_pillar.name=Ebonheart Pillar
 
-tile.ea:door/Draconite_trapdoor.name=Draconite Trapdoor
+tile.ea:door/draconium_trapdoor.name=Draconite Trapdoor
 tile.ea:door/velious_trapdoor.name=Velious Trapdoor
 tile.ea:door/arcanite_trapdoor.name=Arcanite Trapdoor
 tile.ea:door/katcheen_trapdoor.name=Katcheen Trapdoor
@@ -234,7 +234,7 @@ tile.ea:door/obsidian_trapdoor.name=Purified Obsidian Trapdoor
 tile.ea:door/glowstone_trapdoor.name=Purified Glowstone Trapdoor
 tile.ea:door/ebonheart_trapdoor.name=Ebonheart Trapdoor
 
-tile.ea:gem/Draconite/Draconite_block_fancybrick.name=Draconite Fancy Brick
+tile.ea:gem/draconium/draconium_block_fancybrick.name=Draconite Fancy Brick
 tile.ea:gem/velious/velious_block_fancybrick.name=Velious Fancy Brick
 tile.ea:gem/arcanite/arcanite_block_fancybrick.name=Arcanite Fancy Brick
 tile.ea:gem/katcheen/katcheen_block_fancybrick.name=Katcheen Fancy Brick
@@ -249,7 +249,7 @@ tile.ea:leather_block.name=Block of Leather
 tile.ea:reed_block.name=Block of Sugar Cane
 
 //-----Cryptic-----
-tile.ea:cryptic/block/cryptic_Draconite_block.name=Cryptic Draconite Block
+tile.ea:cryptic/block/cryptic_draconium_block.name=Cryptic Draconite Block
 tile.ea:cryptic/block/cryptic_velious_block.name=Cryptic Velious Block
 tile.ea:cryptic/block/cryptic_arcanite_block.name=Cryptic Arcanite Block
 tile.ea:cryptic/block/cryptic_katcheen_block.name=Cryptic Katcheen Block
@@ -259,7 +259,7 @@ tile.ea:cryptic/block/cryptic_obsidian_block.name=Purified Cryptic Obsidian Bloc
 tile.ea:cryptic/block/cryptic_glowstone_block.name=Purified Cryptic Glowstone Block
 tile.ea:cryptic/block/cryptic_ebonheart_block.name=Cryptic Ebonheart Block
 
-tile.ea:cryptic/block/cryptic_Draconite_block_brick.name=Cryptic Draconite Brick
+tile.ea:cryptic/block/cryptic_draconium_block_brick.name=Cryptic Draconite Brick
 tile.ea:cryptic/block/cryptic_velious_block_brick.name=Cryptic Velious Brick
 tile.ea:cryptic/block/cryptic_arcanite_block_brick.name=Cryptic Arcanite Brick
 tile.ea:cryptic/block/cryptic_katcheen_block_brick.name=Cryptic Katcheen Brick
@@ -269,7 +269,7 @@ tile.ea:cryptic/block/cryptic_obsidian_block_brick.name=Purified Cryptic Obsidia
 tile.ea:cryptic/block/cryptic_glowstone_block_brick.name=Purified Cryptic Glowstone Brick
 tile.ea:cryptic/block/cryptic_ebonheart_block_brick.name=Cryptic Ebonheart Brick
 
-tile.ea:cryptic/fence/cryptic_Draconite_fence.name=Cryptic Draconite Fence
+tile.ea:cryptic/fence/cryptic_draconium_fence.name=Cryptic Draconite Fence
 tile.ea:cryptic/fence/cryptic_velious_fence.name=Cryptic Velious Fence
 tile.ea:cryptic/fence/cryptic_arcanite_fence.name=Cryptic Arcanite Fence
 tile.ea:cryptic/fence/cryptic_katcheen_fence.name=Cryptic Katcheen Fence
@@ -279,7 +279,7 @@ tile.ea:cryptic/fence/cryptic_obsidian_fence.name=Purified Cryptic Obsidian Fenc
 tile.ea:cryptic/fence/cryptic_glowstone_fence.name=Purified Cryptic Glowstone Fence
 tile.ea:cryptic/fence/cryptic_ebonheart_fence.name=Cryptic Ebonheart Fence
 
-tile.ea:cryptic/fence/cryptic_Draconite_fence_gate.name=Cryptic Draconite Gate
+tile.ea:cryptic/fence/cryptic_draconium_fence_gate.name=Cryptic Draconite Gate
 tile.ea:cryptic/fence/cryptic_velious_fence_gate.name=Cryptic Velious Gate
 tile.ea:cryptic/fence/cryptic_arcanite_fence_gate.name=Cryptic Arcanite Gate
 tile.ea:cryptic/fence/cryptic_katcheen_fence_gate.name=Cryptic Katcheen Gate
@@ -289,7 +289,7 @@ tile.ea:cryptic/fence/cryptic_obsidian_fence_gate.name=Purified Cryptic Obsidian
 tile.ea:cryptic/fence/cryptic_glowstone_fence_gate.name=Purified Cryptic Glowstone Gate
 tile.ea:cryptic/fence/cryptic_ebonheart_fence_gate.name=Cryptic Ebonheart Gate
 
-tile.ea:cryptic/wall/cryptic_Draconite_wall.name=Cryptic Draconite Wall
+tile.ea:cryptic/wall/cryptic_draconium_wall.name=Cryptic Draconite Wall
 tile.ea:cryptic/wall/cryptic_velious_wall.name=Cryptic Velious Wall
 tile.ea:cryptic/wall/cryptic_arcanite_wall.name=Cryptic Arcanite Wall
 tile.ea:cryptic/wall/cryptic_katcheen_wall.name=Cryptic Katcheen Wall
@@ -299,7 +299,7 @@ tile.ea:cryptic/wall/cryptic_obsidian_wall.name=Purified Cryptic Obsidian Wall
 tile.ea:cryptic/wall/cryptic_glowstone_wall.name=Purified Cryptic Glowstone Wall
 tile.ea:cryptic/wall/cryptic_ebonheart_wall.name=Cryptic Ebonheart Wall
 
-tile.ea:cryptic/stairs/cryptic_Draconite_stairs.name=Cryptic Draconite Stairs
+tile.ea:cryptic/stairs/cryptic_draconium_stairs.name=Cryptic Draconite Stairs
 tile.ea:cryptic/stairs/cryptic_velious_stairs.name=Cryptic Velious Stairs
 tile.ea:cryptic/stairs/cryptic_arcanite_stairs.name=Cryptic Arcanite Stairs
 tile.ea:cryptic/stairs/cryptic_katcheen_stairs.name=Cryptic Katcheen Stairs
@@ -309,7 +309,7 @@ tile.ea:cryptic/stairs/cryptic_obsidian_stairs.name=Purified Cryptic Obsidian St
 tile.ea:cryptic/stairs/cryptic_glowstone_stairs.name=Purified Cryptic Glowstone Stairs
 tile.ea:cryptic/stairs/cryptic_ebonheart_stairs.name=Cryptic Ebonheart Stairs
 
-tile.cryptic/slab/cryptic_Draconite_slab.name=Cryptic Draconite Slab
+tile.cryptic/slab/cryptic_draconium_slab.name=Cryptic Draconite Slab
 tile.cryptic/slab/cryptic_velious_slab.name=Cryptic Velious Slab
 tile.cryptic/slab/cryptic_arcanite_slab.name=Cryptic Arcanite Slab
 tile.cryptic/slab/cryptic_katcheen_slab.name=Cryptic Katcheen Slab
@@ -319,7 +319,7 @@ tile.cryptic/slab/cryptic_obsidian_slab.name=Purified Cryptic Obsidian Slab
 tile.cryptic/slab/cryptic_glowstone_slab.name=Purified Cryptic Glowstone Slab
 tile.cryptic/slab/cryptic_ebonheart_slab.name=Cryptic Ebonheart Slab
 
-tile.ea:111gem/Draconite/Draconite_torch.name=Cryptic Draconite Torch
+tile.ea:111gem/Draconite/draconium_torch.name=Cryptic Draconite Torch
 tile.ea:111gem/velious/velious_torch.name=Cryptic Velious Torch
 tile.ea:11gem/arcanite/arcanite_torch.name=Cryptic Arcanite Torch
 tile.ea:11gem/katcheen/katcheen_torch.name=Cryptic Katcheen Torch
@@ -329,7 +329,7 @@ tile.ea:11gem/obsidian/obsidian_torch.name=Purified Cryptic Obsidian Torch
 tile.ea:11gem/glowstone/glowstone_torch.name=Purified Cryptic Glowstone Torch
 tile.ea:11gem/ebonheart/ebonheart_torch.name=Cryptic Ebonheart Torch
 
-tile.ea:cryptic/ladder/cryptic_Draconite_ladder.name=Cryptic Draconite Ladder
+tile.ea:cryptic/ladder/cryptic_draconium_ladder.name=Cryptic Draconite Ladder
 tile.ea:cryptic/ladder/cryptic_velious_ladder.name=Cryptic Velious Ladder
 tile.ea:cryptic/ladder/cryptic_arcanite_ladder.name=Cryptic Arcanite Ladder
 tile.ea:cryptic/ladder/cryptic_katcheen_ladder.name=Cryptic Katcheen Ladder
@@ -339,7 +339,7 @@ tile.ea:cryptic/ladder/cryptic_obsidian_ladder.name=Purified Cryptic Obsidian La
 tile.ea:cryptic/ladder/cryptic_glowstone_ladder.name=Purified Cryptic Glowstone Ladder
 tile.ea:cryptic/ladder/cryptic_ebonheart_ladder.name=Cryptic Ebonheart Ladder
 
-tile.ea:cryptic/pillar/cryptic_Draconite_pillar.name=Cryptic Draconite Pillar
+tile.ea:cryptic/pillar/cryptic_draconium_pillar.name=Cryptic Draconite Pillar
 tile.ea:cryptic/pillar/cryptic_velious_pillar.name=Cryptic Velious Pillar
 tile.ea:cryptic/pillar/cryptic_arcanite_pillar.name=Cryptic Arcanite Pillar
 tile.ea:cryptic/pillar/cryptic_katcheen_pillar.name=Cryptic Katcheen Pillar
@@ -349,7 +349,7 @@ tile.ea:cryptic/pillar/cryptic_obsidian_pillar.name=Purified Cryptic Obsidian Pi
 tile.ea:cryptic/pillar/cryptic_glowstone_pillar.name=Purified Cryptic Glowstone Pillar
 tile.ea:cryptic/pillar/cryptic_ebonheart_pillar.name=Cryptic Ebonheart Pillar
 
-tile.ea:cryptic/door/cryptic_Draconite_trapdoor.name=Cryptic Draconite Trapdoor
+tile.ea:cryptic/door/cryptic_draconium_trapdoor.name=Cryptic Draconite Trapdoor
 tile.ea:cryptic/door/cryptic_velious_trapdoor.name=Cryptic Velious Trapdoor
 tile.ea:cryptic/door/cryptic_arcanite_trapdoor.name=Cryptic Arcanite Trapdoor
 tile.ea:cryptic/door/cryptic_katcheen_trapdoor.name=Cryptic Katcheen Trapdoor
@@ -359,7 +359,7 @@ tile.ea:cryptic/door/cryptic_obsidian_trapdoor.name=Purified Cryptic Obsidian Tr
 tile.ea:cryptic/door/cryptic_glowstone_trapdoor.name=Purified Cryptic Glowstone Trapdoor
 tile.ea:cryptic/door/cryptic_ebonheart_trapdoor.name=Cryptic Ebonheart Trapdoor
 
-tile.ea:cryptic/block/cryptic_Draconite_block_fancybrick.name=Cryptic Draconite Fancy Brick
+tile.ea:cryptic/block/cryptic_draconium_block_fancybrick.name=Cryptic Draconite Fancy Brick
 tile.ea:cryptic/block/cryptic_velious_block_fancybrick.name=Cryptic Velious Fancy Brick
 tile.ea:cryptic/block/cryptic_arcanite_block_fancybrick.name=Cryptic Arcanite Fancy Brick
 tile.ea:cryptic/block/cryptic_katcheen_block_fancybrick.name=Cryptic Katcheen Fancy Brick
@@ -419,8 +419,8 @@ item.ea:armor/celestial_boots.name=Celestial Boots
 achievement.ea:alchemical_compendium=And so it begins!
 achievement.ea:alchemical_compendium.desc=Obtain an Alchemical Compendium.
 
-achievement.ea:mine_Draconite_ore=A touch of Dragon!
-achievement.ea:mine_Draconite_ore.desc=Mine some Draconite Ore.
+achievement.ea:mine_draconium_ore=A touch of Dragon!
+achievement.ea:mine_draconium_ore.desc=Mine some Draconite Ore.
 achievement.ea:glowing_disc=Chant of Dragons!
 achievement.ea:glowing_disc.desc=Craft a Glowing Disc.
 

@@ -28,6 +28,11 @@ public class WorldGeneratorEA implements IWorldGenerator
 	private WorldGenerator gen_ebonheart_ore; //Generates Ebonheart Ore (used in Nether)
 	private WorldGenerator gen_ebon_ore_nether; //Generates Ebon Ore (used in Nether)
 	
+	private WorldGenerator gen_ebon_ore_end; //Generates Ebon Ore (used in Overworld)
+	private WorldGenerator gen_necrocite_ore_end; //Generates Necrocite Ore (used in Nether)
+	private WorldGenerator gen_soularite_ore_end; //Generates Soularite Ore (used in Nether)
+	private WorldGenerator gen_ebonheart_ore_end; //Generates Ebonheart Ore (used in Nether)
+	
 	//private WorldGenerator gen_multi_ore; //Generates Multi Ore (used in Overworld)
 	
 	//create a new instance of a WorldGenMinable which can generate a bunch of tutorial ores (up to 8 in one call)
@@ -55,10 +60,20 @@ public class WorldGeneratorEA implements IWorldGenerator
 		this.gen_ebonheart_ore = new WorldGenMinable(InitBlocksEA.ebonheart_ore.getDefaultState(), 
 				//EbonArtsConfiguration.ebonheartValueVein
 				3, BlockMatcher.forBlock(Blocks.netherrack));
+		this.gen_necrocite_ore_end = new WorldGenMinable(InitBlocksEA.necrocite_ore_end.getDefaultState(), 
+				//EbonArtsConfiguration.necrociteValueVein
+				3, BlockMatcher.forBlock(Blocks.end_stone));
+		this.gen_soularite_ore_end = new WorldGenMinable(InitBlocksEA.soularite_ore_end.getDefaultState(), 
+				//EbonArtsConfiguration.soulariteValueVein
+				3, BlockMatcher.forBlock(Blocks.end_stone));
+		this.gen_ebonheart_ore_end = new WorldGenMinable(InitBlocksEA.ebonheart_ore_end.getDefaultState(), 
+				//EbonArtsConfiguration.ebonheartValueVein
+				3, BlockMatcher.forBlock(Blocks.end_stone));
 		
 		//for single ore gens
 		this.gen_ebon_ore = new WorldGenSingleMinable(InitBlocksEA.ebon_ore.getDefaultState(), BlockMatcher.forBlock(Blocks.stone));
 		this.gen_ebon_ore_nether = new WorldGenSingleMinable(InitBlocksEA.ebon_ore_nether.getDefaultState(), BlockMatcher.forBlock(Blocks.netherrack));
+		this.gen_ebon_ore_end = new WorldGenSingleMinable(InitBlocksEA.ebon_ore_end.getDefaultState(), BlockMatcher.forBlock(Blocks.end_stone));
 		
 	}
 	
@@ -95,10 +110,17 @@ public class WorldGeneratorEA implements IWorldGenerator
 	        
 	    //End
 		case 1: 
+			//for multi ore gen
+			this.runGenerator(this.gen_necrocite_ore_end, world, random, chunkX, chunkZ, EbonArtsConfiguration.necrociteEndValueChunk, 5, 125);//32
+			this.runGenerator(this.gen_soularite_ore_end, world, random, chunkX, chunkZ, EbonArtsConfiguration.soulariteEndValueChunk, 5, 125);//32
+			this.runGenerator(this.gen_ebonheart_ore_end, world, random, chunkX, chunkZ, EbonArtsConfiguration.ebonheartEndValueChunk, 5, 125);//32
+			
+			//for single ore gen
+			this.runGenerator(this.gen_ebon_ore_end, world, random, chunkX, chunkZ, 8, 15, 125);//8
 			
 	        break;
 	    //}
-
+		
 		//Default Gen
 		default:
 			//Overworld
@@ -118,6 +140,7 @@ public class WorldGeneratorEA implements IWorldGenerator
 			
 		 break;
 		}
+		
 	}
 
 	

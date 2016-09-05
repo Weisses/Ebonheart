@@ -29,7 +29,7 @@ public class BlockMysticCobblestoneGlass extends EABlockPillar {
 		this.setCreativeTab(EbonArtsMod.tabEbonArtsDyeables);
 		this.setHarvestLevel("pickaxe", 2);
 		this.setHardness(5.0F);
-		this.setStepSound(stepSound.STONE);
+		this.setStepSound(SoundType.STONE);
 	}
 	
 	@SideOnly(Side.CLIENT)

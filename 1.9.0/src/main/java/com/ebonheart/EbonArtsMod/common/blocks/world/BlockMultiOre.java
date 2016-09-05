@@ -22,7 +22,7 @@ public class BlockMultiOre extends Block {
 		super(Material.rock);
 		BlockHelper.setBlockName(this, unlocalizedName);
 		
-		this.setStepSound(stepSound.STONE);
+		this.setStepSound(SoundType.STONE);
 		this.setHardness(40.0f);
 		this.setResistance(2000f);
 		this.setHarvestLevel("pickaxe", 3);

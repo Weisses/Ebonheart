@@ -30,7 +30,7 @@ public class BlockOreEbonheart extends Block {
 		this.setHarvestLevel("pickaxe", harvestlevel); //("pickaxe", 2) is iron
 		this.setHardness(hardness);
 		this.setResistance(5f);
-		this.setStepSound(stepSound.STONE);
+		this.setStepSound(SoundType.STONE);
 	}
 
 	@Override

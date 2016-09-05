@@ -29,6 +29,10 @@ public final class InitBlocksEARender extends BlocksEA {
 		registerRender(ebonheart_ore);
 		registerRender(ebon_ore);
 		registerRender(ebon_ore_nether);
+		registerRender(necrocite_ore_end);
+		registerRender(soularite_ore_end);
+		registerRender(ebonheart_ore_end);
+		registerRender(ebon_ore_end);
 		
 		registerRender(cobble_mystic_block_normal);
 		registerRender(cobble_mystic_block_glass);

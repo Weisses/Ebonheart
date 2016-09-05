@@ -46,7 +46,7 @@ public abstract class EABlockSlab extends BlockSlab {
 		this.useNeighborBrightness = !this.isDouble();
 		this.setHarvestLevel("pickaxe", 2);
 		this.setHardness(5.0F);
-		this.setStepSound(stepSound.STONE);
+		this.setStepSound(SoundType.STONE);
 		
 		IBlockState iblockstate = this.blockState.getBaseState();
       

@@ -28,7 +28,7 @@ public class BlockMysticWood extends BlockHorizontal {
 		this.setHarvestLevel("axe", 2);
 		this.setHardness(5.0F);
 		this.setResistance(100.0F);
-		this.setStepSound(stepSound.STONE);
+		this.setStepSound(SoundType.WOOD);
 	}
 	
 	@Override

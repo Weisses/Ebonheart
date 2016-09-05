@@ -22,6 +22,6 @@ public class EABlockStairs extends BlockStairs {
 		this.useNeighborBrightness = true;
 		this.setHarvestLevel("pickaxe", 2);
 		this.setHardness(5.0F);
-		this.setStepSound(stepSound.STONE);
+		this.setStepSound(SoundType.STONE);
 	}
 }
