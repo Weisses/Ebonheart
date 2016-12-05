@@ -27,10 +27,10 @@ public class EbonArtsMod {
 	public static CommonProxy proxy;
 	public static Configuration config = null;
 	
-	//public static final EbonArtsTabBlocks tabEbonArtsBlocks = new EbonArtsTabBlocks("tabEbonArtsBlocks");
+	public static final EbonArtsTabBlocks tabEbonArtsBlocks = new EbonArtsTabBlocks("tabEbonArtsBlocks");
 	public static final EbonArtsTabItems tabEbonArtsItems = new EbonArtsTabItems("tabEbonArtsItems");
-	//public static final EbonArtsTabDyeables tabEbonArtsDyeables = new EbonArtsTabDyeables("tabEbonArtsDyeables");
-	//public static final EbonArtsTabCryptic tabEbonArtsCryptic = new EbonArtsTabCryptic("tabEbonArtsCryptic");
+	public static final EbonArtsTabDyeables tabEbonArtsDyeables = new EbonArtsTabDyeables("tabEbonArtsDyeables");
+	public static final EbonArtsTabCryptic tabEbonArtsCryptic = new EbonArtsTabCryptic("tabEbonArtsCryptic");
 	
 	@Mod.Instance(Reference.MOD_ID)
 	public static EbonArtsMod instance;

@@ -1,6 +1,5 @@
 {
     "variants": {
-        "seamless=false,variant=stone": { "model": "ea:cryptic/slab/soularite/full_soularite_slab" },
-        "seamless=true,variant=stone":    { "model": "ea:cryptic/slab/soularite/full_soularite_slab" }
+        "type=stone": { "model": "ea:cryptic/slab/soularite/full_soularite_slab" }
     }
 }

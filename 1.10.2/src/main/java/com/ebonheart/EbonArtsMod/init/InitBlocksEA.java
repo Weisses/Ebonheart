@@ -7,7 +7,9 @@ import java.util.function.Function;
 import javax.annotation.Nullable;
 
 import net.minecraft.block.Block;
+import net.minecraft.block.BlockSlab;
 import net.minecraft.item.ItemBlock;
+import net.minecraft.item.ItemSlab;
 import net.minecraftforge.fml.common.registry.GameRegistry;
 
 import com.ebonheart.EbonArtsMod.EbonArtsMod;
@@ -29,7 +31,6 @@ import com.ebonheart.EbonArtsMod.common.blocks.basic.dyeables.BlockMysticWood;
 import com.ebonheart.EbonArtsMod.common.blocks.basic.dyeables.BlockMysticWoodGlass;
 import com.ebonheart.EbonArtsMod.common.blocks.basic.slabs.BlockDoubleSlab;
 import com.ebonheart.EbonArtsMod.common.blocks.basic.slabs.BlockHalfSlab;
-import com.ebonheart.EbonArtsMod.common.blocks.basic.slabs.ItemBlockSlab;
 import com.ebonheart.EbonArtsMod.common.blocks.basic.torches.EABlockTorchArcanite;
 import com.ebonheart.EbonArtsMod.common.blocks.basic.torches.EABlockTorchDraconium;
 import com.ebonheart.EbonArtsMod.common.blocks.basic.torches.EABlockTorchEbonheart;
@@ -91,6 +92,40 @@ public class InitBlocksEA extends BlocksEA {
 		obsidian_block_brick = registerBlock(new BlockEA("gem/obsidian/obsidian_block_brick").setResistance(2000.0F));
 		glowstone_block_brick = registerBlock(new BlockEA("gem/glowstone/glowstone_block_brick").setResistance(45.0F).setLightLevel(1.0f));
 		
+		
+		
+		double_draconium_slab = new BlockDoubleSlab("slab/draconium/double_draconium_slab", "slab/draconium/double_draconium_slab").setResistance(4.0F).setLightLevel(0.4f);
+		double_velious_slab = new BlockDoubleSlab("slab/velious/double_velious_slab", "slab/velious/double_velious_slab").setResistance(15.0F);
+		double_arcanite_slab = new BlockDoubleSlab("slab/arcanite/double_arcanite_slab", "slab/arcanite/double_arcanite_slab").setResistance(30.0F);
+		double_katcheen_slab = new BlockDoubleSlab("slab/katcheen/double_katcheen_slab", "slab/katcheen/double_katcheen_slab").setResistance(100.0F);
+		double_necrocite_slab = new BlockDoubleSlab("slab/necrocite/double_necrocite_slab", "slab/necrocite/double_necrocite_slab").setResistance(45.0F);
+		double_soularite_slab = new BlockDoubleSlab("slab/soularite/double_soularite_slab", "slab/soularite/double_soularite_slab").setResistance(45.0F);
+		double_ebonheart_slab = new BlockDoubleSlab("slab/ebonheart/double_ebonheart_slab", "slab/ebonheart/double_ebonheart_slab").setResistance(2000.0F);
+		double_obsidian_slab = new BlockDoubleSlab("slab/obsidian/double_obsidian_slab", "slab/obsidian/double_obsidian_slab").setResistance(2000.0F);
+		double_glowstone_slab = new BlockDoubleSlab("slab/glowstone/double_glowstone_slab", "slab/glowstone/double_glowstone_slab").setResistance(45.0F).setLightLevel(1.0f);
+		
+		draconium_slab = new BlockHalfSlab("slab/draconium/draconium_slab", "slab/draconium/draconium_slab").setResistance(4.0F).setLightLevel(0.4f).setCreativeTab(EbonArtsMod.tabEbonArtsBlocks);
+		velious_slab = new BlockHalfSlab("slab/velious/velious_slab", "slab/velious/velious_slab").setResistance(15.0F).setCreativeTab(EbonArtsMod.tabEbonArtsBlocks);
+		arcanite_slab = new BlockHalfSlab("slab/arcanite/arcanite_slab", "slab/arcanite/arcanite_slab").setResistance(30.0F).setCreativeTab(EbonArtsMod.tabEbonArtsBlocks);
+		katcheen_slab = new BlockHalfSlab("slab/katcheen/katcheen_slab", "slab/katcheen/katcheen_slab").setResistance(100.0F).setCreativeTab(EbonArtsMod.tabEbonArtsBlocks);
+		necrocite_slab = new BlockHalfSlab("slab/necrocite/necrocite_slab", "slab/necrocite/necrocite_slab").setResistance(45.0F).setCreativeTab(EbonArtsMod.tabEbonArtsBlocks);
+		soularite_slab = new BlockHalfSlab("slab/soularite/soularite_slab", "slab/soularite/soularite_slab").setResistance(45.0F).setCreativeTab(EbonArtsMod.tabEbonArtsBlocks);
+		ebonheart_slab = new BlockHalfSlab("slab/ebonheart/ebonheart_slab", "slab/ebonheart/ebonheart_slab").setResistance(2000.0F).setCreativeTab(EbonArtsMod.tabEbonArtsBlocks);
+		obsidian_slab = new BlockHalfSlab("slab/obsidian/obsidian_slab", "slab/obsidian/obsidian_slab").setResistance(2000.0F).setCreativeTab(EbonArtsMod.tabEbonArtsBlocks);
+		glowstone_slab = new BlockHalfSlab("slab/glowstone/glowstone_slab", "slab/glowstone/glowstone_slab").setResistance(45.0F).setLightLevel(1.0f).setCreativeTab(EbonArtsMod.tabEbonArtsBlocks);
+		
+		registerBlockSlab(draconium_slab, double_draconium_slab);
+		registerBlockSlab(velious_slab, double_velious_slab);
+		registerBlockSlab(arcanite_slab, double_arcanite_slab);
+		registerBlockSlab(katcheen_slab, double_katcheen_slab);
+		registerBlockSlab(necrocite_slab, double_necrocite_slab);
+		registerBlockSlab(soularite_slab, double_soularite_slab);
+		registerBlockSlab(ebonheart_slab, double_ebonheart_slab);
+		registerBlockSlab(obsidian_slab, double_obsidian_slab);
+		registerBlockSlab(glowstone_slab, double_glowstone_slab);
+		
+		
+		/**
 		double_draconium_slab = new BlockDoubleSlab("slab/draconium/double_draconium_slab").setResistance(4.0F).setLightLevel(0.4f);
 		double_velious_slab = new BlockDoubleSlab("slab/velious/double_velious_slab").setResistance(15.0F);
 		double_arcanite_slab = new BlockDoubleSlab("slab/arcanite/double_arcanite_slab").setResistance(30.0F);
@@ -132,7 +167,7 @@ public class InitBlocksEA extends BlocksEA {
 		GameRegistry.registerBlock(ebonheart_slab, ItemBlockSlab.class, "slab/ebonheart/ebonheart_slab", ebonheart_slab, double_ebonheart_slab, false);
 		GameRegistry.registerBlock(obsidian_slab, ItemBlockSlab.class, "slab/obsidian/obsidian_slab", obsidian_slab, double_obsidian_slab, false);
 		GameRegistry.registerBlock(glowstone_slab, ItemBlockSlab.class, "slab/glowstone/glowstone_slab", glowstone_slab, double_glowstone_slab, false);
-		
+		*/
 		
 		
 		draconium_stairs = registerBlock(new EABlockStairs("stairs/draconium_stairs", draconium_block).setResistance(4.0F).setLightLevel(0.4f));
@@ -324,6 +359,40 @@ public class InitBlocksEA extends BlocksEA {
 		cryptic_obsidian_block_brick = registerBlock(new BlockEA("cryptic/block/cryptic_obsidian_block_brick").setResistance(2000.0F).setCreativeTab(EbonArtsMod.tabEbonArtsCryptic));
 		cryptic_glowstone_block_brick = registerBlock(new BlockEA("cryptic/block/cryptic_glowstone_block_brick").setResistance(45.0F).setLightLevel(1.0f).setCreativeTab(EbonArtsMod.tabEbonArtsCryptic));
 		
+		
+		
+		double_cryptic_draconium_slab = new BlockDoubleSlab("cryptic/slab/double_cryptic_draconium_slab", "cryptic/slab/double_cryptic_draconium_slab").setResistance(4.0F).setLightLevel(0.4f);
+		double_cryptic_velious_slab = new BlockDoubleSlab("cryptic/slab/double_cryptic_velious_slab", "cryptic/slab/double_cryptic_velious_slab").setResistance(15.0F);
+		double_cryptic_arcanite_slab = new BlockDoubleSlab("cryptic/slab/double_cryptic_arcanite_slab", "cryptic/slab/double_cryptic_arcanite_slab").setResistance(30.0F);
+		double_cryptic_katcheen_slab = new BlockDoubleSlab("cryptic/slab/double_cryptic_katcheen_slab", "cryptic/slab/double_cryptic_katcheen_slab").setResistance(100.0F);
+		double_cryptic_necrocite_slab = new BlockDoubleSlab("cryptic/slab/double_cryptic_necrocite_slab", "cryptic/slab/double_cryptic_necrocite_slab").setResistance(45.0F);
+		double_cryptic_soularite_slab = new BlockDoubleSlab("cryptic/slab/double_cryptic_soularite_slab", "cryptic/slab/double_cryptic_soularite_slab").setResistance(45.0F);
+		double_cryptic_ebonheart_slab = new BlockDoubleSlab("cryptic/slab/double_cryptic_ebonheart_slab", "cryptic/slab/double_cryptic_ebonheart_slab").setResistance(2000.0F);
+		double_cryptic_obsidian_slab = new BlockDoubleSlab("cryptic/slab/double_cryptic_obsidian_slab", "cryptic/slab/double_cryptic_obsidian_slab").setResistance(2000.0F);
+		double_cryptic_glowstone_slab = new BlockDoubleSlab("cryptic/slab/double_cryptic_glowstone_slab", "cryptic/slab/double_cryptic_glowstone_slab").setResistance(45.0F).setLightLevel(1.0f);
+		
+		cryptic_draconium_slab = new BlockHalfSlab("cryptic/slab/cryptic_draconium_slab", "cryptic/slab/cryptic_draconium_slab").setResistance(4.0F).setLightLevel(0.4f).setCreativeTab(EbonArtsMod.tabEbonArtsCryptic);
+		cryptic_velious_slab = new BlockHalfSlab("cryptic/slab/cryptic_velious_slab", "cryptic/slab/cryptic_velious_slab").setResistance(15.0F).setCreativeTab(EbonArtsMod.tabEbonArtsCryptic);
+		cryptic_arcanite_slab = new BlockHalfSlab("cryptic/slab/cryptic_arcanite_slab", "cryptic/slab/cryptic_arcanite_slab").setResistance(30.0F).setCreativeTab(EbonArtsMod.tabEbonArtsCryptic);
+		cryptic_katcheen_slab = new BlockHalfSlab("cryptic/slab/cryptic_katcheen_slab", "cryptic/slab/cryptic_katcheen_slab").setResistance(100.0F).setCreativeTab(EbonArtsMod.tabEbonArtsCryptic);
+		cryptic_necrocite_slab = new BlockHalfSlab("cryptic/slab/cryptic_necrocite_slab", "cryptic/slab/cryptic_necrocite_slab").setResistance(45.0F).setCreativeTab(EbonArtsMod.tabEbonArtsCryptic);
+		cryptic_soularite_slab = new BlockHalfSlab("cryptic/slab/cryptic_soularite_slab", "cryptic/slab/cryptic_soularite_slab").setResistance(45.0F).setCreativeTab(EbonArtsMod.tabEbonArtsCryptic);
+		cryptic_ebonheart_slab = new BlockHalfSlab("cryptic/slab/cryptic_ebonheart_slab", "cryptic/slab/cryptic_ebonheart_slab").setResistance(2000.0F).setCreativeTab(EbonArtsMod.tabEbonArtsCryptic);
+		cryptic_obsidian_slab = new BlockHalfSlab("cryptic/slab/cryptic_obsidian_slab", "cryptic/slab/cryptic_obsidian_slab").setResistance(2000.0F).setCreativeTab(EbonArtsMod.tabEbonArtsCryptic);
+		cryptic_glowstone_slab = new BlockHalfSlab("cryptic/slab/cryptic_glowstone_slab", "cryptic/slab/cryptic_glowstone_slab").setResistance(45.0F).setLightLevel(1.0f).setCreativeTab(EbonArtsMod.tabEbonArtsCryptic);
+		
+		registerBlockSlab(cryptic_draconium_slab, double_cryptic_draconium_slab);
+		registerBlockSlab(cryptic_velious_slab, double_cryptic_velious_slab);
+		registerBlockSlab(cryptic_arcanite_slab, double_cryptic_arcanite_slab);
+		registerBlockSlab(cryptic_katcheen_slab, double_cryptic_katcheen_slab);
+		registerBlockSlab(cryptic_necrocite_slab, double_cryptic_necrocite_slab);
+		registerBlockSlab(cryptic_soularite_slab, double_cryptic_soularite_slab);
+		registerBlockSlab(cryptic_ebonheart_slab, double_cryptic_ebonheart_slab);
+		registerBlockSlab(cryptic_obsidian_slab, double_cryptic_obsidian_slab);
+		registerBlockSlab(cryptic_glowstone_slab, double_cryptic_glowstone_slab);
+		
+		
+		/**
 		double_cryptic_draconium_slab = new BlockDoubleSlab("cryptic/slab/double_cryptic_draconium_slab").setResistance(4.0F).setLightLevel(0.4f);
 		double_cryptic_velious_slab = new BlockDoubleSlab("cryptic/slab/double_cryptic_velious_slab").setResistance(15.0F);
 		double_cryptic_arcanite_slab = new BlockDoubleSlab("cryptic/slab/double_cryptic_arcanite_slab").setResistance(30.0F);
@@ -365,7 +434,7 @@ public class InitBlocksEA extends BlocksEA {
 		GameRegistry.registerBlock(cryptic_ebonheart_slab, ItemBlockSlab.class, "cryptic/slab/cryptic_ebonheart_slab", cryptic_ebonheart_slab, double_cryptic_ebonheart_slab, false);
 		GameRegistry.registerBlock(cryptic_obsidian_slab, ItemBlockSlab.class, "cryptic/slab/cryptic_obsidian_slab", cryptic_obsidian_slab, double_cryptic_obsidian_slab, false);
 		GameRegistry.registerBlock(cryptic_glowstone_slab, ItemBlockSlab.class, "cryptic/slab/cryptic_glowstone_slab", cryptic_glowstone_slab, double_cryptic_glowstone_slab, false);
-		
+		*/
 		
 		
 		cryptic_draconium_stairs = registerBlock(new EABlockStairs("cryptic/stairs/cryptic_draconium_stairs", cryptic_draconium_block).setResistance(4.0F).setLightLevel(0.4f).setCreativeTab(EbonArtsMod.tabEbonArtsCryptic));
@@ -484,6 +553,14 @@ public class InitBlocksEA extends BlocksEA {
 		}
 		blocks.add(block);
 		return block;
+	}
+	
+	private static void registerBlockSlab(Block slab, Block doubleslab){
+		GameRegistry.register(slab);
+		GameRegistry.register(doubleslab);
+		ItemSlab item = new ItemSlab(slab, (BlockSlab) slab, (BlockSlab) doubleslab);
+		item.setRegistryName(slab.getRegistryName());
+		GameRegistry.register(item);
 	}
 	
 }

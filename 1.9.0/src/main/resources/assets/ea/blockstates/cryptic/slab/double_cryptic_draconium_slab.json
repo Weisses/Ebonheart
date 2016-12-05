@@ -1,6 +1,5 @@
 {
     "variants": {
-        "seamless=false,variant=stone": { "model": "ea:cryptic/slab/draconium/full_draconium_slab" },
-        "seamless=true,variant=stone":    { "model": "ea:cryptic/slab/draconium/full_draconium_slab" }
+        "type=stone": { "model": "ea:cryptic/slab/draconium/full_draconium_slab" }
     }
 }

@@ -34,9 +34,9 @@ public class InitRecipesEA {
 		
 		if(!EbonArtsConfiguration.storageRecipe)
 		{
-			GameRegistry.addShapedRecipe(new ItemStack(InitBlocksEA.paper_block), new Object[]{"PPP", "PPP", "PPP", 'P', Items.paper});
-			GameRegistry.addShapedRecipe(new ItemStack(InitBlocksEA.reed_block), new Object[]{"RRR", "RRR", "RRR", 'R', Items.reeds});
-			GameRegistry.addShapedRecipe(new ItemStack(InitBlocksEA.leather_block), new Object[]{"LLL", "LLL", "LLL", 'L', Items.leather});
+			GameRegistry.addShapedRecipe(new ItemStack(InitBlocksEA.paper_block), new Object[]{"PPP", "P P", "PPP", 'P', Items.paper});
+			GameRegistry.addShapedRecipe(new ItemStack(InitBlocksEA.reed_block), new Object[]{"RRR", "R R", "RRR", 'R', Items.reeds});
+			GameRegistry.addShapedRecipe(new ItemStack(InitBlocksEA.leather_block), new Object[]{"LLL", "L L", "LLL", 'L', Items.leather});
 		}
 		
 		GameRegistry.addShapedRecipe(new ItemStack(InitItemsEA.obsidian_shards), new Object[]{"DGD", "GQG", "DGD", 'D', InitItemsEA.draconium_dust, 'G', Items.gunpowder, 'Q', Items.quartz});
@@ -722,9 +722,9 @@ public class InitRecipesEA {
 		GameRegistry.addShapelessRecipe(new ItemStack(InitItemsEA.sacred_fruit), InitItemsEA.soularite, new ItemStack(Items.nether_wart));
 		GameRegistry.addShapelessRecipe(new ItemStack(InitItemsEA.dragon_fruit), InitItemsEA.ebonheart, new ItemStack(Items.chorus_fruit));
 		
-		GameRegistry.addRecipe(new ItemStack(Items.paper, 9), new Object[]{"P", 'P', InitBlocksEA.paper_block});
-		GameRegistry.addRecipe(new ItemStack(Items.reeds, 9), new Object[]{"R", 'R', InitBlocksEA.reed_block});
-		GameRegistry.addRecipe(new ItemStack(Items.leather, 9), new Object[]{"L", 'L', InitBlocksEA.leather_block});
+		GameRegistry.addRecipe(new ItemStack(Items.paper, 8), new Object[]{"P", 'P', InitBlocksEA.paper_block});
+		GameRegistry.addRecipe(new ItemStack(Items.reeds, 8), new Object[]{"R", 'R', InitBlocksEA.reed_block});
+		GameRegistry.addRecipe(new ItemStack(Items.leather, 8), new Object[]{"L", 'L', InitBlocksEA.leather_block});
 		
 		
 		if(!EbonArtsConfiguration.musicRecipe)

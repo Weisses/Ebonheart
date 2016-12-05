@@ -3,234 +3,184 @@ package com.ebonheart.EbonArtsMod.common.blocks.basic.slabs;
 import java.util.List;
 import java.util.Random;
 
-import com.ebonheart.EbonArtsMod.EbonArtsMod;
-import com.ebonheart.EbonArtsMod.init.InitBlocksEA;
-import com.ebonheart.EbonArtsMod.init.InitItemsEA;
-
-import net.minecraft.block.Block;
 import net.minecraft.block.BlockSlab;
-import net.minecraft.block.BlockSlab.EnumBlockHalf;
-import net.minecraft.block.BlockStoneSlab;
 import net.minecraft.block.SoundType;
-import net.minecraft.block.material.MapColor;
 import net.minecraft.block.material.Material;
 import net.minecraft.block.properties.IProperty;
-import net.minecraft.block.properties.PropertyBool;
 import net.minecraft.block.properties.PropertyEnum;
 import net.minecraft.block.state.BlockStateContainer;
 import net.minecraft.block.state.IBlockState;
 import net.minecraft.creativetab.CreativeTabs;
-import net.minecraft.entity.player.EntityPlayer;
-import net.minecraft.init.Blocks;
-import net.minecraft.init.Items;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
-import net.minecraft.util.math.BlockPos;
-import net.minecraft.util.math.RayTraceResult;
-import net.minecraft.util.EnumFacing;
 import net.minecraft.util.IStringSerializable;
-import net.minecraft.world.World;
-import net.minecraftforge.fml.common.registry.GameRegistry;
 import net.minecraftforge.fml.relauncher.Side;
 import net.minecraftforge.fml.relauncher.SideOnly;
+
+import com.ebonheart.EbonArtsMod.init.InitBlocksEA;
 
 //Slab main class.
 public abstract class EABlockSlab extends BlockSlab {
 	
-	public static final PropertyBool SEAMLESS = PropertyBool.create("seamless");
-	public static final PropertyEnum<EABlockSlab.EnumType> VARIANT = PropertyEnum.<EABlockSlab.EnumType>create("variant", EABlockSlab.EnumType.class);
-	
-	public EABlockSlab()
-	{
+	//private static final PropertyBool VARIANT = PropertyBool.create("variant");
+	public static final PropertyEnum TYPE = PropertyEnum.create("type", EABlockSlab.EnumType.class);
+
+	public EABlockSlab(String unlocalname, String registryname) {
 		super(Material.ROCK);
-		this.useNeighborBrightness = !this.isDouble();
-		this.setHarvestLevel("pickaxe", 2);
-		this.setHardness(5.0F);
-		this.setSoundType(SoundType.STONE);
-		
-		IBlockState iblockstate = this.blockState.getBaseState();
-      
-		if (this.isDouble())
-		{
-			iblockstate = iblockstate.withProperty(SEAMLESS, Boolean.valueOf(false));
+		setUnlocalizedName(unlocalname);
+		setRegistryName(registryname);
+		useNeighborBrightness = true;
+		setHardness(0.8F);
+        setResistance(5.0F);
+        setSoundType(SoundType.STONE);
+        //setCreativeTab(Tem.slabstab);
+		IBlockState state = this.blockState.getBaseState();
+		//state.withProperty(VARIANT, false);
+		state.withProperty(TYPE, EnumType.STONE);
+		if(!this.isDouble()){
+			state.withProperty(HALF, EnumBlockHalf.BOTTOM);
 		}
-		else
-		{
-			iblockstate = iblockstate.withProperty(HALF, EABlockSlab.EnumBlockHalf.BOTTOM);
-		}
-		
-		this.setDefaultState(iblockstate.withProperty(VARIANT, EABlockSlab.EnumType.STONE));
-		
+		setDefaultState(state);
+		// TODO Auto-generated constructor stub
 	}
 	
+	
+	@Override
+	public String getUnlocalizedName(int meta){
+		return this.getUnlocalizedName() //+ "_" + EnumType.values()[meta]
+				;
+	}
+	@Override
+	public Comparable<?> getTypeForItem(ItemStack stack) {
+		// TODO Auto-generated method stub
+		return EABlockSlab.EnumType.byMetadata(stack.getMetadata() & 7);
+	}
+	@Override
+	public IProperty<?> getVariantProperty(){
+		return TYPE;
+	}
+	@Override
 	public Item getItemDropped(IBlockState state, Random rand, int fortune)
-	{
+    {
 		return this == InitBlocksEA.double_draconium_slab ? Item.getItemFromBlock(InitBlocksEA.draconium_slab)
-		: (this == InitBlocksEA.double_velious_slab ? Item.getItemFromBlock(InitBlocksEA.velious_slab) 
-		: (this == InitBlocksEA.double_arcanite_slab ? Item.getItemFromBlock(InitBlocksEA.arcanite_slab) 
-		: (this == InitBlocksEA.double_katcheen_slab ? Item.getItemFromBlock(InitBlocksEA.katcheen_slab) 
-		: (this == InitBlocksEA.double_necrocite_slab ? Item.getItemFromBlock(InitBlocksEA.necrocite_slab) 
-		: (this == InitBlocksEA.double_soularite_slab ? Item.getItemFromBlock(InitBlocksEA.soularite_slab) 
-		: (this == InitBlocksEA.double_ebonheart_slab ? Item.getItemFromBlock(InitBlocksEA.ebonheart_slab) 
-		: (this == InitBlocksEA.double_obsidian_slab ? Item.getItemFromBlock(InitBlocksEA.obsidian_slab) 
-		: (this == InitBlocksEA.double_glowstone_slab ? Item.getItemFromBlock(InitBlocksEA.glowstone_slab) 
-		: Item.getItemFromBlock(this)))))))));
+				: (this == InitBlocksEA.double_velious_slab ? Item.getItemFromBlock(InitBlocksEA.velious_slab) 
+				: (this == InitBlocksEA.double_arcanite_slab ? Item.getItemFromBlock(InitBlocksEA.arcanite_slab) 
+				: (this == InitBlocksEA.double_katcheen_slab ? Item.getItemFromBlock(InitBlocksEA.katcheen_slab) 
+				: (this == InitBlocksEA.double_necrocite_slab ? Item.getItemFromBlock(InitBlocksEA.necrocite_slab) 
+				: (this == InitBlocksEA.double_soularite_slab ? Item.getItemFromBlock(InitBlocksEA.soularite_slab) 
+				: (this == InitBlocksEA.double_ebonheart_slab ? Item.getItemFromBlock(InitBlocksEA.ebonheart_slab) 
+				: (this == InitBlocksEA.double_obsidian_slab ? Item.getItemFromBlock(InitBlocksEA.obsidian_slab) 
+				: (this == InitBlocksEA.double_glowstone_slab ? Item.getItemFromBlock(InitBlocksEA.glowstone_slab)
+						
+				: (this == InitBlocksEA.double_cryptic_draconium_slab ? Item.getItemFromBlock(InitBlocksEA.cryptic_draconium_slab)
+				: (this == InitBlocksEA.double_cryptic_velious_slab ? Item.getItemFromBlock(InitBlocksEA.cryptic_velious_slab) 
+				: (this == InitBlocksEA.double_cryptic_arcanite_slab ? Item.getItemFromBlock(InitBlocksEA.cryptic_arcanite_slab) 
+				: (this == InitBlocksEA.double_cryptic_katcheen_slab ? Item.getItemFromBlock(InitBlocksEA.cryptic_katcheen_slab) 
+				: (this == InitBlocksEA.double_cryptic_necrocite_slab ? Item.getItemFromBlock(InitBlocksEA.cryptic_necrocite_slab) 
+				: (this == InitBlocksEA.double_cryptic_soularite_slab ? Item.getItemFromBlock(InitBlocksEA.cryptic_soularite_slab) 
+				: (this == InitBlocksEA.double_cryptic_ebonheart_slab ? Item.getItemFromBlock(InitBlocksEA.cryptic_ebonheart_slab) 
+				: (this == InitBlocksEA.double_cryptic_obsidian_slab ? Item.getItemFromBlock(InitBlocksEA.cryptic_obsidian_slab) 
+				: (this == InitBlocksEA.double_cryptic_glowstone_slab ? Item.getItemFromBlock(InitBlocksEA.cryptic_glowstone_slab)
+				: Item.getItemFromBlock(this))))))))))))))))));
+		
+		//return Item.getItemFromBlock(InitBlocksEA.draconium_slab);
+    }
+	@Override
+	public int quantityDropped(Random random)
+    {
+        return this.isDouble() ? 2 : 1;
+    }
+	
+	@Override
+	public int damageDropped (IBlockState state){
+		//return ((BlockBrickedClayBlockSlab1.EnumType) state.getValue(TYPE)).getID();
+		return ((EABlockSlab.EnumType)state.getValue(TYPE)).getID();
 	}
 	
-	public ItemStack getItem(World worldIn, BlockPos pos, IBlockState state)
-	{
-		return this == InitBlocksEA.double_draconium_slab ? new ItemStack(InitBlocksEA.draconium_slab) 
-		: (this == InitBlocksEA.double_velious_slab ? new ItemStack(InitBlocksEA.velious_slab) 
-		: (this == InitBlocksEA.double_arcanite_slab ? new ItemStack(InitBlocksEA.arcanite_slab) 
-		: (this == InitBlocksEA.double_katcheen_slab ? new ItemStack(InitBlocksEA.katcheen_slab) 
-		: (this == InitBlocksEA.double_necrocite_slab ? new ItemStack(InitBlocksEA.necrocite_slab) 
-		: (this == InitBlocksEA.double_soularite_slab ? new ItemStack(InitBlocksEA.soularite_slab) 
-		: (this == InitBlocksEA.double_ebonheart_slab ? new ItemStack(InitBlocksEA.ebonheart_slab) 
-		: (this == InitBlocksEA.double_obsidian_slab ? new ItemStack(InitBlocksEA.obsidian_slab) 
-		: (this == InitBlocksEA.double_glowstone_slab ? new ItemStack(InitBlocksEA.glowstone_slab) 
-		: new ItemStack(this)))))))));
+	@Override
+	public final IBlockState getStateFromMeta (int meta){
+		IBlockState blockstate = this.getDefaultState();
+		blockstate = blockstate.withProperty(TYPE,EABlockSlab.EnumType.byMetadata(meta & 7));
+		if(!this.isDouble()){
+			blockstate = blockstate.withProperty(HALF, (meta & 8 ) == 8 ? EnumBlockHalf.BOTTOM : EnumBlockHalf.TOP);
+			}
+		return blockstate;
 	}
 	
-	public String getUnlocalizedName(int meta)
-	{
-		return this.getUnlocalizedName();
+	@Override
+	public final int getMetaFromState(IBlockState state){
+		int meta = ((EABlockSlab.EnumType) state.getValue(TYPE)).getID();
+		if (!this.isDouble() && state.getValue(HALF) == EnumBlockHalf.TOP){
+			meta |=8;
+		}
+		return meta;
 	}
-	
-	public IProperty<?> getVariantProperty()
-	{
-		return VARIANT;
-	}
-	
-	public Comparable<?> getTypeForItem(ItemStack stack)
-	{
-		return EABlockSlab.EnumType.byMetadata(stack.getMetadata() & 0);
+	@Override
+	protected final BlockStateContainer createBlockState(){
+		if (this.isDouble()){
+			return new BlockStateContainer(this, getVariantProperty());
+		}
+		else {
+			return new BlockStateContainer(this, getVariantProperty(), HALF);
+		}
 	}
 	
 	@SideOnly(Side.CLIENT)
 	public void getSubBlocks(Item itemIn, CreativeTabs tab, List<ItemStack> list)
 	{
-		list.add(new ItemStack(itemIn, 1, 0));
+		for (EnumType t : EnumType.values())
+	    list.add(new ItemStack(itemIn, 1, t.ordinal()));  
 	}
 	
-	public IBlockState getStateFromMeta(int meta)
-	{
-		IBlockState iblockstate = this.getDefaultState().withProperty(VARIANT, EABlockSlab.EnumType.byMetadata(meta & 0));
-		
-		if (this.isDouble())
-		{
-			iblockstate = iblockstate.withProperty(SEAMLESS, Boolean.valueOf((meta & 8) != 0));
-		}
-		else
-		{
-			iblockstate = iblockstate.withProperty(HALF, (meta & 8) == 0 ? EABlockSlab.EnumBlockHalf.BOTTOM : EABlockSlab.EnumBlockHalf.TOP);
-     	}
-		
-		return iblockstate;
+	//@Override
+	public String getSpecialName(ItemStack stack) {
+		return EnumType.values()[stack.getItemDamage()].name().toLowerCase();
 	}
 	
-	public int getMetaFromState(IBlockState state)
-	{
-		int i = 0;
-		i = i | ((EABlockSlab.EnumType)state.getValue(VARIANT)).getMetadata();
-		
-		if (this.isDouble())
-		{
-			if (((Boolean)state.getValue(SEAMLESS)).booleanValue())
-			{
-				i |= 8;
-			}
-		}
-		else if (state.getValue(HALF) == EABlockSlab.EnumBlockHalf.TOP)
-		{
-			i |= 8;
-		}
-		
-		return i;
-	}
-	
-	protected BlockStateContainer createBlockState()
-	{
-		return this.isDouble() ? new BlockStateContainer(this, new IProperty[] {SEAMLESS, VARIANT}): new BlockStateContainer(this, new IProperty[] {HALF, VARIANT});
-	}
-	
-	public int damageDropped(IBlockState state)
-	{
-		return ((EABlockSlab.EnumType)state.getValue(VARIANT)).getMetadata();
-	}
-	
-	public static enum EnumType implements IStringSerializable
-	{
-		STONE(0, null, //MapColor.stoneColor, 
-      		"stone");
-      //,
-      //SAND(1, MapColor.sandColor, "sandstone", "sand"),
-      //WOOD(2, MapColor.woodColor, "wood_old", "wood"),
-      //COBBLESTONE(3, MapColor.stoneColor, "cobblestone", "cobble"),
-      //BRICK(4, MapColor.redColor, "brick"),
-      //SMOOTHBRICK(5, MapColor.stoneColor, "stone_brick", "smoothStoneBrick"),
-      //NETHERBRICK(6, MapColor.netherrackColor, "nether_brick", "netherBrick"),
-      //QUARTZ(7, MapColor.quartzColor, "quartz");
+	public enum EnumType implements IStringSerializable{
 
+		STONE(0, "stone")
+		//RAW(0, "raw"),
+		//SMOOTH(1, "smooth"), 
+		//BRICKED(2, "bricked")
+		;
 		private static final EABlockSlab.EnumType[] META_LOOKUP = new EABlockSlab.EnumType[values().length];
-		private final int meta;
-		private final MapColor mapColorIn;
-		private final String name;
-		private final String unlocalizedName;
-		
-		
-		private EnumType(int p_i46381_3_, MapColor p_i46381_4_, String p_i46381_5_)
-		{
-			this(p_i46381_3_, p_i46381_4_, p_i46381_5_, p_i46381_5_);
-		}
-		
-		private EnumType(int p_i46382_3_, MapColor p_i46382_4_, String p_i46382_5_, String p_i46382_6_)
-		{
-			this.meta = p_i46382_3_;
-			this.mapColorIn = p_i46382_4_;
-			this.name = p_i46382_5_;
-			this.unlocalizedName = p_i46382_6_;
-		}
-		
-		public int getMetadata()
-		{
-			return this.meta;
-		}
-		
-		public MapColor func_181074_c()
-		{
-			return this.mapColorIn;
-		}
-		
-		public String toString()
-		{
-			return this.name;
-		}
-		
-		public static EABlockSlab.EnumType byMetadata(int meta)
-		{
-			if (meta < 0 || meta >= META_LOOKUP.length)
-			{
-				meta = 0;
-			}
-     	    return META_LOOKUP[meta];
-		}
-		
-		public String getName()
-		{
-			return this.name;
-		}
-		
-		public String getUnlocalizedName()
-		{
-			return this.unlocalizedName;
-		}
-		
-		static
-		{
-			for (EABlockSlab.EnumType EABlockSlab$enumtype : values())
-			{
-				META_LOOKUP[EABlockSlab$enumtype.getMetadata()] = EABlockSlab$enumtype;
-			}
-		}
+
+	    private int ID;
+	    private String name;
+	   
+	    private EnumType(int ID, String name) {
+	        this.ID = ID;
+	        this.name = name;
+	            
+	    }
+	    @Override
+	    public String getName() {
+	        return name;
+	    }
+	    public int getID() {
+	        return ID;
+	    }
+	    @Override
+	    public String toString() {
+	        return getName();
+	    }
+	    public static EABlockSlab.EnumType byMetadata(int meta)
+        {
+            if (meta < 0 || meta >= META_LOOKUP.length)
+            {
+                meta = 0;
+            }
+
+            return META_LOOKUP[meta];
+        }
+	    static
+        {
+            for (EABlockSlab.EnumType types : values())
+            {
+                META_LOOKUP[types.getID()] = types;
+            }
+        }
 	}
+
 }
